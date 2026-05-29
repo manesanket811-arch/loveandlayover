@@ -81,10 +81,10 @@ output "api_gateway_log_group_name" {
   value       = aws_cloudwatch_log_group.api_gateway_logs.name
 }
 
-# S3 bucket website endpoint (if not using CloudFront)
-output "s3_website_endpoint" {
-  description = "S3 website endpoint (use if CloudFront is disabled)"
-  value       = aws_s3_bucket.website.website_endpoint
+# S3 bucket regional domain (if not using CloudFront)
+output "s3_bucket_domain" {
+  description = "S3 bucket domain name (use if CloudFront is disabled)"
+  value       = aws_s3_bucket.website.bucket_regional_domain_name
 }
 
 output "region" {

@@ -18,12 +18,11 @@ resource "aws_lambda_function" "api" {
 
   environment {
     variables = {
-      SUBSCRIBERS_TABLE = aws_dynamodb_table.subscribers.name
-      CONTACTS_TABLE    = aws_dynamodb_table.contacts.name
-      DOWNLOADS_TABLE   = aws_dynamodb_table.downloads.name
+      SUBSCRIBERS_TABLE  = aws_dynamodb_table.subscribers.name
+      CONTACTS_TABLE     = aws_dynamodb_table.contacts.name
+      DOWNLOADS_TABLE    = aws_dynamodb_table.downloads.name
       ITINERARIES_BUCKET = aws_s3_bucket.itineraries.id
       SES_VERIFIED_EMAIL = var.ses_verified_email
-      AWS_REGION         = var.aws_region
     }
   }
 

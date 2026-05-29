@@ -19,14 +19,14 @@ resource "aws_s3_bucket_versioning" "website" {
   }
 }
 
-# Block all public access to website bucket
+# Remove public access block to allow website hosting
 resource "aws_s3_bucket_public_access_block" "website" {
   bucket = aws_s3_bucket.website.id
 
-  block_public_acls       = true
-  block_public_policy     = true
-  ignore_public_acls      = true
-  restrict_public_buckets = true
+  block_public_acls       = false
+  block_public_policy     = false
+  ignore_public_acls      = false
+  restrict_public_buckets = false
 }
 
 # S3 Bucket for Itineraries (PDFs)
@@ -65,13 +65,20 @@ resource "aws_cloudfront_origin_access_identity" "oai" {
   comment = "OAI for ${var.project_name}"
 }
 
-# S3 Bucket Policy for CloudFront Access
+# S3 Bucket Policy - Allow Public Read Access and CloudFront
 resource "aws_s3_bucket_policy" "website" {
   bucket = aws_s3_bucket.website.id
 
   policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
+      {
+        Sid    = "PublicReadGetObject"
+        Effect = "Allow"
+        Principal = "*"
+        Action   = "s3:GetObject"
+        Resource = "${aws_s3_bucket.website.arn}/*"
+      },
       {
         Sid    = "CloudFrontAccess"
         Effect = "Allow"
@@ -83,6 +90,19 @@ resource "aws_s3_bucket_policy" "website" {
       }
     ]
   })
+}
+
+# S3 Website Hosting Configuration
+resource "aws_s3_bucket_website_configuration" "website" {
+  bucket = aws_s3_bucket.website.id
+
+  index_document {
+    suffix = "index.html"
+  }
+
+  error_document {
+    key = "index.html"
+  }
 }
 
 # Upload index.html to S3 (optional - you can upload manually after)

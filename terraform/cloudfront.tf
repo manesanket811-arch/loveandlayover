@@ -51,7 +51,7 @@ resource "aws_cloudfront_distribution" "cdn" {
   }
 
   # Cache behavior for API Gateway
-  cache_behavior {
+  ordered_cache_behavior {
     allowed_methods  = ["GET", "HEAD", "OPTIONS", "PUT", "POST", "PATCH", "DELETE"]
     cached_methods   = ["GET", "HEAD"]
     target_origin_id = "API-Gateway"
@@ -109,14 +109,4 @@ resource "aws_cloudfront_distribution" "cdn" {
   )
 }
 
-# CloudFront Invalidation (to clear cache on updates)
-resource "aws_cloudfront_invalidation" "cdn" {
-  count           = var.enable_cloudfront ? 1 : 0
-  distribution_id = aws_cloudfront_distribution.cdn[0].id
-  paths           = ["/*"]
-
-  # Only invalidate on initial creation or when index.html changes
-  triggers = {
-    updated = filemd5("${path.module}/../index.html")
-  }
-}
+# CloudFront Invalidation is optional and can be added later if needed

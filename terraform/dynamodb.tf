@@ -3,9 +3,6 @@ resource "aws_dynamodb_table" "subscribers" {
   name           = "${var.project_name}-subscribers"
   billing_mode   = var.dynamodb_billing_mode
   hash_key       = "email"
-  stream_specification {
-    stream_view_type = "NEW_AND_OLD_IMAGES"
-  }
 
   attribute {
     name = "email"
