@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Love and Layovers — Travel Tips & Itineraries</title>
+<meta name="description" content="Real travel tips, honest reviews, and ready-to-use itineraries. Join us as we explore the world, one city at a time.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+<style>
+  :root{
+    --ink:#1a2332;
+    --paper:#fefaf5;
+    --accent:#ff6b35;
+    --secondary:#f7931e;
+    --teal:#0fb6a8;
+    --deep:#0d4f6b;
+    --sky:#ffe9d6;
+    --shadow:rgba(26,35,50,.12);
+    --maxw:1180px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Outfit',sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    overflow-x:hidden;
+    line-height:1.6;
+  }
+  h1,h2,h3{font-family:'Fraunces',serif;line-height:1.05;font-weight:900;letter-spacing:-.02em}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  section{position:relative}
+
+  /* ---------- NAV ---------- */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    transition:.3s ease;
+  }
+  nav{
+    display:flex;align-items:center;justify-content:space-between;
+    max-width:var(--maxw);margin:0 auto;padding:18px 24px;
+  }
+  .logo{
+    font-family:'Fraunces',serif;font-weight:900;font-size:1.45rem;
+    display:flex;align-items:center;gap:9px;color:var(--ink);
+  }
+  .logo .dot{
+    width:34px;height:34px;border-radius:50%;
+    background:radial-gradient(circle at 30% 30%,var(--secondary),var(--accent));
+    display:inline-flex;align-items:center;justify-content:center;
+    font-size:1rem;box-shadow:0 4px 14px rgba(255,93,59,.4);
+  }
+  .nav-links{display:flex;gap:30px;align-items:center}
+  .nav-links a{font-weight:500;font-size:.96rem;position:relative;padding:4px 0}
+  .nav-links a:not(.btn)::after{
+    content:'';position:absolute;left:0;bottom:0;height:2px;width:0;
+    background:var(--accent);transition:.25s;
+  }
+  .nav-links a:not(.btn):hover::after{width:100%}
+  .btn{
+    background:var(--ink);color:var(--paper)!important;
+    padding:11px 22px;border-radius:50px;font-weight:600;font-size:.92rem;
+    transition:.25s;display:inline-block;border:none;cursor:pointer;
+  }
+  .btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px var(--shadow)}
+  .btn.coral{background:var(--accent);color:#fff!important}
+  .scrolled{background:rgba(255,250,242,.92);backdrop-filter:blur(12px);box-shadow:0 2px 24px rgba(13,38,43,.06)}
+  .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none}
+  .burger span{width:26px;height:3px;background:var(--ink);border-radius:3px;transition:.3s}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    min-height:100vh;display:flex;align-items:center;
+    padding:120px 0 60px;
+    background:
+      radial-gradient(circle at 85% 15%,rgba(255,158,27,.22),transparent 45%),
+      radial-gradient(circle at 10% 80%,rgba(15,182,168,.18),transparent 45%),
+      var(--paper);
+    overflow:hidden;
+  }
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    background:#fff;border:1px solid rgba(13,38,43,.08);
+    padding:7px 16px;border-radius:50px;font-weight:600;font-size:.82rem;
+    letter-spacing:.04em;text-transform:uppercase;color:var(--deep);
+    box-shadow:0 4px 14px var(--shadow);margin-bottom:26px;
+  }
+  .eyebrow .pulse{width:9px;height:9px;border-radius:50%;background:var(--accent);animation:pulse 1.8s infinite}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(255,93,59,.5)}50%{box-shadow:0 0 0 7px rgba(255,93,59,0)}}
+  .hero h1{font-size:clamp(2.8rem,6vw,5rem);margin-bottom:22px}
+  .hero h1 .hl{color:var(--accent);position:relative;white-space:nowrap}
+  .hero h1 .hl svg{position:absolute;left:0;bottom:-10px;width:100%;height:14px}
+  .hero p.lead{font-size:1.2rem;max-width:480px;color:#46555c;margin-bottom:34px}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+  .stats{display:flex;gap:34px;margin-top:46px}
+  .stat .n{font-family:'Fraunces',serif;font-size:1.9rem;font-weight:900;color:var(--deep)}
+  .stat .l{font-size:.84rem;color:#6a777c;font-weight:500}
+
+  .hero-visual{position:relative;height:520px}
+  .polaroid{
+    position:absolute;background:#fff;padding:12px 12px 46px;border-radius:6px;
+    box-shadow:0 18px 50px rgba(13,38,43,.22);transition:.4s;
+  }
+  .polaroid .ph{
+    width:100%;height:100%;border-radius:3px;
+    display:flex;align-items:flex-end;padding:14px;color:#fff;font-weight:600;
+    font-size:.9rem;text-shadow:0 1px 6px rgba(0,0,0,.4);
+  }
+  .polaroid .cap{position:absolute;bottom:14px;left:0;right:0;text-align:center;font-family:'Fraunces',serif;font-weight:600;font-size:.95rem;color:var(--ink)}
+  .p1{width:260px;height:330px;top:20px;left:30px;transform:rotate(-6deg);z-index:3}
+  .p1 .ph{height:252px;background:linear-gradient(135deg,#ff9e1b,#ff5d3b)}
+  .p2{width:215px;height:270px;top:200px;right:0;transform:rotate(7deg);z-index:2}
+  .p2 .ph{height:192px;background:linear-gradient(135deg,#0fb6a8,#0d6b78)}
+  .p3{width:175px;height:210px;top:10px;right:20px;transform:rotate(4deg);z-index:1}
+  .p3 .ph{height:132px;background:linear-gradient(135deg,#ffd166,#ff9e1b)}
+  .polaroid:hover{transform:rotate(0) scale(1.04);z-index:5}
+  .float{animation:float 6s ease-in-out infinite}
+  .float.d{animation-delay:-3s}
+  @keyframes float{0%,100%{transform:translateY(0) rotate(var(--r,0))}50%{transform:translateY(-16px) rotate(var(--r,0))}}
+
+  /* ---------- SECTION HEADINGS ---------- */
+  .sec-head{max-width:620px;margin-bottom:48px}
+  .sec-tag{font-weight:700;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;display:block}
+  .sec-head h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:14px}
+  .sec-head p{color:#56646a;font-size:1.08rem}
+
+  /* ---------- VIDEOS ---------- */
+  .videos{padding:110px 0;background:var(--ink);color:var(--paper)}
+  .videos .sec-tag{color:var(--secondary)}
+  .videos .sec-head p{color:#9fb0b5}
+  .video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .vcard{
+    background:#1d3038;border-radius:18px;overflow:hidden;cursor:pointer;
+    transition:.3s;border:1px solid rgba(255,255,255,.06);
+  }
+  .vcard:hover{transform:translateY(-6px);border-color:rgba(255,158,27,.4)}
+  .vthumb{aspect-ratio:16/10;position:relative;display:flex;align-items:center;justify-content:center}
+  .vthumb.a{background:linear-gradient(135deg,#0fb6a8,#0d6b78)}
+  .vthumb.b{background:linear-gradient(135deg,#ff9e1b,#ff5d3b)}
+  .vthumb.c{background:linear-gradient(135deg,#7c5cff,#0fb6a8)}
+  .play{
+    width:62px;height:62px;border-radius:50%;background:rgba(255,255,255,.92);
+    display:flex;align-items:center;justify-content:center;transition:.3s;
+  }
+  .vcard:hover .play{transform:scale(1.12);background:#fff}
+  .play svg{margin-left:4px}
+  .vdur{position:absolute;bottom:12px;right:12px;background:rgba(13,38,43,.8);padding:3px 10px;border-radius:6px;font-size:.78rem;font-weight:600}
+  .vmeta{padding:20px}
+  .vmeta h3{font-size:1.18rem;margin-bottom:8px;color:var(--paper)}
+  .vmeta .info{font-size:.85rem;color:#8fa1a6}
+  .videos .center{text-align:center;margin-top:48px}
+
+  /* ---------- ITINERARIES ---------- */
+  .guides{padding:110px 0}
+  .guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .gcard{
+    background:#fff;border-radius:20px;overflow:hidden;
+    box-shadow:0 10px 40px var(--shadow);transition:.3s;
+    border:1px solid rgba(13,38,43,.05);
+  }
+  .gcard:hover{transform:translateY(-8px);box-shadow:0 22px 55px rgba(13,38,43,.18)}
+  .gtop{height:170px;position:relative;display:flex;align-items:flex-start;padding:18px}
+  .gtop.t1{background:linear-gradient(135deg,#ff9e1b,#ff5d3b)}
+  .gtop.t2{background:linear-gradient(135deg,#0fb6a8,#0d6b78)}
+  .gtop.t3{background:linear-gradient(135deg,#ffd166,#0fb6a8)}
+  .badge{background:rgba(255,255,255,.95);padding:5px 13px;border-radius:50px;font-size:.78rem;font-weight:700;color:var(--ink)}
+  .days{position:absolute;bottom:-22px;right:20px;width:60px;height:60px;border-radius:50%;background:#fff;box-shadow:0 8px 20px var(--shadow);display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1}
+  .days .nn{font-family:'Fraunces',serif;font-weight:900;font-size:1.4rem;color:var(--accent)}
+  .days .dd{font-size:.62rem;font-weight:700;text-transform:uppercase;color:#6a777c}
+  .gbody{padding:30px 22px 24px}
+  .gbody h3{font-size:1.3rem;margin-bottom:10px}
+  .gbody p{font-size:.94rem;color:#56646a;margin-bottom:18px}
+  .gbody .link{font-weight:600;color:var(--accent);display:inline-flex;gap:6px;align-items:center;transition:.2s}
+  .gcard:hover .gbody .link{gap:11px}
+
+  /* ---------- SUBSCRIBE ---------- */
+  .sub{padding:90px 0}
+  .sub-inner{
+    background:
+      radial-gradient(circle at 15% 20%,rgba(255,255,255,.18),transparent 50%),
+      linear-gradient(120deg,var(--accent),var(--secondary));
+    border-radius:32px;padding:64px 56px;color:#fff;position:relative;overflow:hidden;
+    display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;
+  }
+  .sub-inner::before{content:'✈';position:absolute;font-size:16rem;right:-20px;top:-50px;opacity:.1;transform:rotate(-20deg)}
+  .sub-inner h2{font-size:clamp(2rem,3.5vw,2.8rem);color:#fff;margin-bottom:14px}
+  .sub-inner p{font-size:1.08rem;opacity:.94;max-width:420px}
+  .sub-form{display:flex;gap:12px;flex-wrap:wrap}
+  .sub-form input{
+    flex:1;min-width:200px;padding:15px 20px;border-radius:50px;border:none;
+    font-family:inherit;font-size:1rem;outline:none;
+  }
+  .sub-form button{background:var(--ink);color:#fff;border:none;padding:15px 30px;border-radius:50px;font-weight:600;font-family:inherit;font-size:1rem;cursor:pointer;transition:.25s}
+  .sub-form button:hover{transform:translateY(-2px);background:#0a1418}
+  .sub-note{font-size:.82rem;opacity:.85;margin-top:14px}
+
+  /* ---------- CONTACT ---------- */
+  .contact{padding:110px 0 120px}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+  .contact .sec-head{margin-bottom:30px}
+  .channels{display:flex;flex-direction:column;gap:16px;margin-top:30px}
+  .chan{display:flex;align-items:center;gap:16px;padding:18px 22px;background:#fff;border-radius:16px;box-shadow:0 6px 24px var(--shadow);transition:.25s}
+  .chan:hover{transform:translateX(6px)}
+  .chan .ic{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff;font-weight:700}
+  .chan .ic.yt{background:#ff0033}.chan .ic.ig{background:linear-gradient(45deg,#f09433,#dc2743,#bc1888)}.chan .ic.em{background:var(--teal)}
+  .chan .t{font-weight:600}.chan .s{font-size:.85rem;color:#6a777c}
+  form.cform{background:#fff;padding:38px;border-radius:24px;box-shadow:0 12px 44px var(--shadow)}
+  .field{margin-bottom:20px}
+  .field label{display:block;font-weight:600;font-size:.9rem;margin-bottom:7px}
+  .field input,.field textarea{width:100%;padding:13px 16px;border:1.5px solid rgba(13,38,43,.12);border-radius:12px;font-family:inherit;font-size:.98rem;outline:none;transition:.2s;background:var(--paper)}
+  .field input:focus,.field textarea:focus{border-color:var(--accent);background:#fff}
+  .field textarea{resize:vertical;min-height:120px}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--ink);color:#9fb0b5;padding:50px 0 30px}
+  .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+  footer .logo{color:var(--paper)}
+  .foot-links{display:flex;gap:24px;flex-wrap:wrap}
+  .foot-links a:hover{color:var(--secondary)}
+  .copy{text-align:center;margin-top:30px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);font-size:.85rem}
+
+  .reveal{opacity:0;transform:translateY(28px);transition:.7s cubic-bezier(.16,1,.3,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:900px){
+    .hero .wrap{grid-template-columns:1fr;gap:30px}
+    .hero-visual{height:400px;margin-top:10px}
+    .video-grid,.guide-grid{grid-template-columns:1fr 1fr}
+    .sub-inner,.contact-grid{grid-template-columns:1fr;gap:30px}
+    .sub-inner{padding:44px 30px}
+    .nav-links{
+      position:fixed;top:0;right:-100%;height:100vh;width:74%;max-width:320px;
+      background:var(--paper);flex-direction:column;justify-content:center;
+      gap:28px;transition:.35s;box-shadow:-10px 0 40px rgba(0,0,0,.1);z-index:90;
+    }
+    .nav-links.open{right:0}
+    .burger{display:flex;z-index:95}
+  }
+  @media(max-width:560px){
+    .video-grid,.guide-grid{grid-template-columns:1fr}
+    .stats{gap:22px;flex-wrap:wrap}
+    .hero{padding-top:100px}
+  }
+</style>
+</head>
+<body>
+
+<header id="header">
+  <nav>
+    <a href="#" class="logo"><span class="dot">❤️</span>Love and Layovers</a>
+    <div class="nav-links" id="menu">
+      <a href="#videos">Videos</a>
+      <a href="#guides">Itineraries</a>
+      <a href="#subscribe">Subscribe</a>
+      <a href="#contact">Contact</a>
+      <a href="#subscribe" class="btn coral">Join the journey</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-text">
+      <span class="eyebrow"><span class="pulse"></span>New episodes every week · Subscribe now</span>
+      <h1>Real travel stories,<br>honest <span class="hl">tips & tricks<svg viewBox="0 0 200 14" preserveAspectRatio="none"><path d="M2 9 C50 2 150 2 198 8" stroke="#ff6b35" stroke-width="4" fill="none" stroke-linecap="round"/></svg></span></h1>
+      <p class="lead">Join us as we explore the world. We share real travel experiences, insider tips, and ready-to-use itineraries so you can plan your next adventure with confidence.</p>
+      <div class="hero-cta">
+        <a href="#videos" class="btn coral">▶ Watch our videos</a>
+        <a href="#guides" class="btn">Browse itineraries</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="n">25+</div><div class="l">Destinations explored</div></div>
+        <div class="stat"><div class="n">100%</div><div class="l">Free itineraries</div></div>
+        <div class="stat"><div class="n">Real</div><div class="l">Travel experiences</div></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="polaroid p1 float" style="--r:-6deg"><div class="ph">Sunrise hikes</div><div class="cap">Mountain mornings</div></div>
+      <div class="polaroid p2 float d" style="--r:7deg"><div class="ph">Street food</div><div class="cap">Local flavors</div></div>
+      <div class="polaroid p3 float" style="--r:4deg"><div class="ph">Hidden coves</div><div class="cap">Off the map</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section class="videos" id="videos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag">From our channel</span>
+      <h2>Latest adventures, on screen</h2>
+      <p>New episodes every trip. Watch first, then steal our exact routes below.</p>
+    </div>
+    <div class="video-grid">
+      <a class="vcard reveal" href="#" data-yt>
+        <div class="vthumb a"><div class="play"><svg width="20" height="22" viewBox="0 0 20 22"><path d="M0 0 L20 11 L0 22 Z" fill="#16242b"/></svg></div><span class="vdur">14:22</span></div>
+        <div class="vmeta"><h3>48 Hours in a City We'd Never Heard Of</h3><div class="info">New episode · Travel vlog</div></div>
+      </a>
+      <a class="vcard reveal" href="#" data-yt>
+        <div class="vthumb b"><div class="play"><svg width="20" height="22" viewBox="0 0 20 22"><path d="M0 0 L20 11 L0 22 Z" fill="#16242b"/></svg></div><span class="vdur">09:48</span></div>
+        <div class="vmeta"><h3>How We Plan a Trip (Our Full Process)</h3><div class="info">Planning guide · Tips</div></div>
+      </a>
+      <a class="vcard reveal" href="#" data-yt>
+        <div class="vthumb c"><div class="play"><svg width="20" height="22" viewBox="0 0 20 22"><path d="M0 0 L20 11 L0 22 Z" fill="#16242b"/></svg></div><span class="vdur">18:05</span></div>
+        <div class="vmeta"><h3>Budget vs Luxury: Same Trip, Two Ways</h3><div class="info">Comparison · Budget</div></div>
+      </a>
+    </div>
+    <div class="center reveal"><a href="#" class="btn coral" data-channel>Visit our YouTube channel →</a></div>
+  </div>
+</section>
+
+<!-- DESTINATIONS -->
+<section class="guides" id="destinations">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag">Explore with us</span>
+      <h2>Destinations & itineraries</h2>
+      <p>Real itineraries from places we've explored — with timings, costs, tips, and honest reviews.</p>
+    </div>
+    <div class="guide-grid">
+      <a class="gcard reveal" href="#contact" data-destination="singapore" data-itinerary="food-culture">
+        <div class="gtop t1"><span class="badge">🍜 Food & Culture</span><div class="days"><span class="nn">4</span><span class="dd">days</span></div></div>
+        <div class="gbody"><h3>Singapore Food Tour</h3><p>Hawker centers, local food markets, temples & museums. The ultimate food lover's 4-day guide to Singapore's best eats and culture.</p><span class="link">Download itinerary →</span></div>
+      </a>
+      <a class="gcard reveal" href="#contact" data-destination="singapore" data-itinerary="gardens-nature">
+        <div class="gtop t2"><span class="badge">🌿 Nature & Gardens</span><div class="days"><span class="nn">3</span><span class="dd">days</span></div></div>
+        <div class="gbody"><h3>Singapore Gardens & Parks</h3><p>Gardens by the Bay, nature reserves, and botanical gardens. A peaceful escape in Southeast Asia's garden city with insider tips.</p><span class="link">Download itinerary →</span></div>
+      </a>
+      <a class="gcard reveal" href="#contact" data-destination="singapore" data-itinerary="city-explorer">
+        <div class="gtop t3"><span class="badge">🏙 City Explorer</span><div class="days"><span class="nn">5</span><span class="dd">days</span></div></div>
+        <div class="gbody"><h3>Singapore Complete 5-Day Guide</h3><p>Marina Bay, colonial architecture, neighborhoods, shopping & nightlife. Everything you need to experience Singapore like a local.</p><span class="link">Download itinerary →</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SUBSCRIBE -->
+<section class="sub" id="subscribe">
+  <div class="wrap">
+    <div class="sub-inner reveal">
+      <div>
+        <h2>Get our trips before anyone else</h2>
+        <p>Join our travel list for new itineraries, behind-the-scenes notes, and a heads-up when each video drops. No spam — just the good stuff.</p>
+      </div>
+      <div>
+        <div class="sub-form">
+          <input type="email" id="subEmail" placeholder="you@email.com" aria-label="Email">
+          <button id="subBtn">Subscribe</button>
+        </div>
+        <div class="sub-note" id="subNote">Free forever · Unsubscribe anytime</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <div class="sec-head">
+        <span class="sec-tag">Say hello</span>
+        <h2>Planning a trip? Ask us.</h2>
+        <p>Tell us where you're headed and we'll point you to the right itinerary or video — or answer directly. We read every message.</p>
+      </div>
+      <div class="channels">
+        <a class="chan" href="#" data-channel><div class="ic yt">▶</div><div><div class="t">YouTube</div><div class="s">Subscribe & watch our latest adventures</div></div></a>
+        <a class="chan" href="https://www.instagram.com/loveandlayover/" target="_blank" rel="noopener noreferrer"><div class="ic ig">◎</div><div><div class="t">Instagram</div><div class="s">@loveandlayover · Daily travel moments</div></div></a>
+        <a class="chan" href="mailto:hello@loveandlayovers.com"><div class="ic em">✉</div><div><div class="t">Email</div><div class="s">hello@loveandlayovers.com</div></div></a>
+      </div>
+    </div>
+    <form class="cform" id="cform">
+      <div class="field"><label for="name">Your name</label><input type="text" id="name" placeholder="Jane Traveler" required></div>
+      <div class="field"><label for="cemail">Email</label><input type="email" id="cemail" placeholder="you@email.com" required></div>
+      <div class="field"><label for="dest">Where are you going?</label><input type="text" id="dest" placeholder="e.g. Japan in spring"></div>
+      <div class="field"><label for="msg">Your question</label><textarea id="msg" placeholder="What would you like help with?" required></textarea></div>
+      <button type="submit" class="btn coral" style="width:100%;font-size:1rem;padding:15px">Send message</button>
+      <div id="formNote" style="margin-top:14px;font-size:.88rem;color:var(--deep);display:none"></div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a href="#" class="logo"><span class="dot">❤️</span>Love and Layovers</a>
+      <div class="foot-links">
+        <a href="#videos">Videos</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#subscribe">Subscribe</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="copy">© <span id="yr"></span> Love and Layovers · Travel tips with heart ✈</div>
+  </div>
+</footer>
+
+<script>
+  const API_ENDPOINT='YOUR_API_GATEWAY_URL'; // Replace with AWS API Gateway URL
+  const YOUTUBE_CHANNEL_URL='https://www.youtube.com/@LoveAndLayover';
+
+  // Analytics helper
+  function trackEvent(eventName, eventData={}) {
+    if(window.gtag) gtag('event', eventName, eventData);
+    console.log('Event tracked:', eventName, eventData);
+  }
+
+  // Nav scroll state
+  const header=document.getElementById('header');
+  window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>30));
+
+  // Mobile menu
+  const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  burger.addEventListener('click',()=>menu.classList.toggle('open'));
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+
+  // Reveal on scroll
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+  document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3*0.08)+'s';io.observe(el)});
+
+  // YouTube integration
+  document.querySelectorAll('[data-channel]').forEach(a=>a.href=YOUTUBE_CHANNEL_URL);
+  document.querySelectorAll('[data-yt]').forEach(a=>{
+    a.addEventListener('click',e=>{
+      e.preventDefault();
+      trackEvent('youtube_video_click', {video_title: a.querySelector('h3')?.textContent || 'Unknown'});
+      window.open(YOUTUBE_CHANNEL_URL,'_blank');
+    });
+  });
+
+  // Email subscription
+  const subBtn=document.getElementById('subBtn'),subEmail=document.getElementById('subEmail'),subNote=document.getElementById('subNote');
+  subBtn.addEventListener('click',async()=>{
+    const v=subEmail.value.trim();
+    if(!/^[^@]+@[^@]+\.[^@]+$/.test(v)){subNote.textContent='Please enter a valid email.';subNote.style.color='#dc2940';return}
+
+    try{
+      const res=await fetch(`${API_ENDPOINT}/subscribe`,{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({email:v, source:'email_signup'})
+      });
+      const data=await res.json();
+      if(data.success){
+        trackEvent('email_subscription', {email: v});
+        subNote.textContent="You're on the list! Check your email for confirmation.";
+        subNote.style.color='#0fb6a8';
+        subEmail.value='';
+        setTimeout(()=>subNote.textContent='Free forever · Unsubscribe anytime',3000);
+      }else{
+        subNote.textContent=data.message || 'Something went wrong. Try again.';
+        subNote.style.color='#dc2940';
+      }
+    }catch(e){
+      subNote.textContent='Connection error. Please try again.';
+      subNote.style.color='#dc2940';
+    }
+  });
+
+  // Download itinerary (requires email signup)
+  document.querySelectorAll('[data-destination][data-itinerary]').forEach(card=>{
+    card.addEventListener('click',e=>{
+      const destination=card.dataset.destination;
+      const itinerary=card.dataset.itinerary;
+      const userEmail=subEmail?.value?.trim() || '';
+
+      if(!userEmail || !/^[^@]+@[^@]+\.[^@]+$/.test(userEmail)){
+        e.preventDefault();
+        alert('Please enter your email above to download this itinerary!');
+        subEmail?.focus();
+        return;
+      }
+
+      trackEvent('itinerary_download', {destination, itinerary, email: userEmail});
+      // Trigger download
+      downloadItinerary(destination, itinerary, userEmail);
+      e.preventDefault();
+    });
+  });
+
+  async function downloadItinerary(destination, itinerary, email){
+    try{
+      const res=await fetch(`${API_ENDPOINT}/download-itinerary`,{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({destination, itinerary, email})
+      });
+      if(res.ok){
+        const blob=await res.blob();
+        const url=window.URL.createObjectURL(blob);
+        const a=document.createElement('a');
+        a.href=url;
+        a.download=`${destination}-${itinerary}.pdf`;
+        a.click();
+        window.URL.revokeObjectURL(url);
+      }
+    }catch(e){console.error('Download error:',e)}
+  }
+
+  // Contact form with AWS integration
+  const cform=document.getElementById('cform'),formNote=document.getElementById('formNote');
+  cform.addEventListener('submit',async(e)=>{
+    e.preventDefault();
+    const name=document.getElementById('name').value;
+    const email=document.getElementById('cemail').value;
+    const dest=document.getElementById('dest').value;
+    const msg=document.getElementById('msg').value;
+
+    try{
+      const res=await fetch(`${API_ENDPOINT}/contact`,{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({name, email, destination:dest, message:msg})
+      });
+      const data=await res.json();
+      if(data.success){
+        trackEvent('contact_form_submit', {destination: dest});
+        formNote.style.display='block';
+        formNote.style.color='#0fb6a8';
+        formNote.textContent="Got your message! We'll reply soon.";
+        cform.reset();
+        setTimeout(()=>formNote.style.display='none',5000);
+      }else{
+        throw new Error(data.message);
+      }
+    }catch(e){
+      formNote.style.display='block';
+      formNote.style.color='#dc2940';
+      formNote.textContent='Error sending message. Try again.';
+    }
+  });
+
+  document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# AWS
+.aws-sam/
+sam-tests/
+*.samcli
+samconfig.toml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Node (if adding frontend build)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Credentials (IMPORTANT!)
+*.pem
+*.key
+*.pub
+credentials.json
+aws-credentials
+
+# Temporary files
+*.tmp
+*.bak
+*.backup
+*.log
+temp/
+tmp/
+
+# Git
+.git/
+.gitconfig
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Build outputs
+dist/
+build/
+*.zip
+
+# SAM outputs
+.aws-sam/
+samconfig.toml
+
+# Backups
+backups/
+*.sql.bak
+
+# Local testing
+local-test/
+test-data/
