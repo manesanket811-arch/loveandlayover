@@ -256,8 +256,13 @@ footer .logo { color:var(--paper); }
   });
 
   // Form submission
-  document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
+  const contactForm = document.getElementById('contact-form');
+  console.log('Contact form found:', contactForm);
+
+  if(contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      console.log('Form submitted!');
+      e.preventDefault();
 
     const form = this;
     const submitBtn = document.getElementById('submit-btn');
@@ -314,7 +319,9 @@ footer .logo { color:var(--paper); }
       submitBtn.disabled = false;
       submitBtn.textContent = 'Send Message';
     });
-  });
+  } else {
+    console.error('Contact form NOT found!');
+  }
 </script>
 
 </body>
