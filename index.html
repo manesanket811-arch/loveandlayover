@@ -760,11 +760,11 @@
         </div>
         <div id="chat-messages" style="flex:1;overflow-y:auto;padding:15px;display:flex;flex-direction:column;gap:12px;min-height:300px">
           <div style="background:#f0f0f0;padding:12px;border-radius:12px;max-width:85%;border-radius:12px 12px 12px 2px;font-size:.9rem">
-            Hi! 👋 Ask me anything about Singapore itineraries, travel planning, budget tips, or food recommendations!
+            Hi! 👋 Ask me about Singapore, Japan, Vietnam, Bali, or Malaysia! I can help with itineraries, budgets, food, and travel planning.
           </div>
         </div>
         <div style="padding:15px;border-top:1px solid #eee;display:flex;gap:8px">
-          <input type="text" id="chat-input" placeholder="Ask about Singapore..." style="flex:1;padding:10px;border:1px solid #ddd;border-radius:20px;outline:none;font-family:inherit;font-size:.9rem">
+          <input type="text" id="chat-input" placeholder="Ask about any destination..." style="flex:1;padding:10px;border:1px solid #ddd;border-radius:20px;outline:none;font-family:inherit;font-size:.9rem">
           <button id="chat-send" style="background:linear-gradient(135deg,#ff9e1b,#ff5d3b);color:#fff;border:none;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-weight:700">→</button>
         </div>
       </div>
@@ -780,50 +780,65 @@
   const sendBtn = document.getElementById('chat-send');
   const messagesDiv = document.getElementById('chat-messages');
 
-  // Chatbot responses - 50+ keywords
+  // Multi-destination chatbot responses
   const responses = {
-    'singapore 5 day': 'The Singapore 5-Day Explorer covers Marina Bay Sands, Gardens by the Bay, Chinatown, Singapore Flyer, Sentosa Island, Orchard Road, and more. Perfect for first-time visitors!',
-    'food': 'Singapore is a food paradise! Try hawker centers like Maxwell Food Centre, Tiong Bahru, and Newton. Must-try: laksa, chicken rice, char kway teow, and roti prata.',
-    'gardens': 'Gardens by the Bay is incredible! The Supertrees light show is free nightly. Pay for Cloud Forest and Flower Dome ($31-35 SGD each) for stunning indoor gardens.',
-    'marina bay': 'Marina Bay has Marina Bay Sands (observation deck), Gardens by the Bay, Singapore Flyer, and beautiful promenades. The light show at Gardens by the Bay is free every evening.',
-    'sentosa': 'Sentosa Island is perfect for adventure! Visit Universal Studios Singapore, S.E.A Aquarium, beautiful beaches, and Sky Bridge. Take the cable car from the city.',
-    'how many days': 'We have itineraries for 3, 4, and 5 days in Singapore. Which duration interests you? 3 days (nature), 4 days (food), or 5 days (complete)?',
-    'cost': 'Budget travelers can spend $40-60 SGD/day. Mid-range: $100-150 SGD/day. Our itineraries are completely FREE to view and download!',
-    'budget': 'Singapore on a budget is totally doable! Eat at hawker centers ($3-5 SGD), use Tourist Day Pass ($15), visit free attractions, and you\'ll spend $40-50 SGD/day.',
-    'layover': 'Our layover guide covers 6h, 12h, 24h, and 48h stopover options. Even a short layover can maximize your Singapore experience with our tips!',
-    'transport': 'Use the MRT (metro) with a Tourist Day Pass ($15 SGD) for unlimited travel. Or grab Grab (ride-hailing) for convenience. Taxis are also available.',
-    'where to stay': 'Popular areas: Chinatown (culture), Kampong Glam (heritage), Orchard Road (shopping), Marina Bay (modern). Check our blog for hotel recommendations!',
-    'hawker': 'Hawker centers are Singapore\'s food soul! Maxwell Food Centre, Tiong Bahru, Newton, and Lau Pa Sat are must-visits. Food is cheap and authentic!',
-    'culture': 'Chinatown temples, Little India markets, Kampong Glam heritage buildings, and Singapore Botanic Gardens showcase the island\'s diverse culture beautifully.',
-    'safe': 'Yes! Singapore is one of Asia\'s safest cities. Low crime, excellent infrastructure, friendly locals, and great for solo travelers of all types.',
-    'weather': 'Hot and humid year-round (24-32°C). Pack light clothes, sunscreen, and an umbrella. December-January is driest but still warm.',
-    'visa': 'Many nationalities get 90 days visa-free. Check Singapore Immigration website for your country. Most Western tourists don\'t need a visa.',
-    'sim card': 'Get a local SIM at Changi Airport from StarHub, Singtel, or M1. Tourist plans offer unlimited data for 4-7 days ($15-30 SGD).',
-    'currency': '1 SGD ≈ $0.74 USD. Most places accept cards, but carry cash for hawker centers. ATMs everywhere at MRT stations.',
-    'hello': 'Hey there! 👋 I\'m here to help with Singapore travel questions. Ask about itineraries, food, attractions, budget tips, or layovers!',
-    'thanks': 'You\'re welcome! Happy to help! Feel free to ask more questions about Singapore travel. 😊',
-    'best time': 'February-April (Chinese New Year) and June-August are best. Avoid November-January (monsoon). December is good for holidays despite rain.',
-    'beaches': 'East Coast Park is great for beaches near the city. Sentosa has man-made beaches with perfect conditions. Pulau Ubin has quieter, natural beaches.',
-    'nightlife': 'Clarke Quay has bars and clubs. Boat Quay has riverside dining. Orchard Road has shopping and entertainment. Sentosa has evening shows.',
-    'shopping': 'Orchard Road is shopping heaven with malls and boutiques. Bugis Street for affordable fashion. Arab Street for textiles. Lucky Plaza for electronics.',
-    'museums': 'National Museum Singapore, Art & Science Museum (Marina Bay Sands), Peranakan Museum, Singapore Flyer Museum. Many free or pay-what-you-wish options.',
-    'temples': 'Sri Mariamman Temple (Chinatown), Thian Hock Keng (oldest temple), Sultan Mosque (Kampong Glam), Chinese Temple at Bukit Timah.',
-    'day trip': 'Pulau Ubin (kayaking), Sentosa Island, Singapore Zoo, or Jurong Bird Park make great day trips from the city center.',
-    'transportation': 'MRT is the fastest. Tourist Day Pass ($15 SGD) = unlimited metro + buses. Or use Grab for taxis. Bikes available for rent in some areas.',
-    'recommend': 'What\'s your travel style? Are you a budget traveler, mid-range explorer, or luxury adventurer? I can recommend the perfect itinerary for you!',
-    'tipping': 'Tipping is not expected in Singapore. It\'s uncommon, but appreciated for exceptional service (5-10%) at restaurants.',
-    'changi airport': 'Changi is one of the world\'s best airports! Free WiFi, gardens, nap areas. MRT to city center: 45 min, $2.50 SGD. Or taxi: $25-35 SGD.',
-    'little india': 'Little India is vibrant with spice markets, temples, and amazing Indian food. Visit Mustafa Center for shopping. Best for food exploration!',
-    'chinatown': 'Chinatown is historic with temples, street food, and culture. Visit the Buddha Tooth Relic Temple, explore backstreets, eat at hawker centers.',
-    'kampong glam': 'Kampong Glam is the historic Malay quarter. See Arab Street architecture, Sultan Mosque, visit traditional coffee shops, and explore heritage.',
-    'orchard': 'Orchard Road is Singapore\'s shopping belt. Huge malls, boutiques, dining, and nightlife. Great for shopping, eating, and entertainment.',
-    'flyer': 'Singapore Flyer is a giant observation wheel. 30-min ride with 360-degree city views. Worth it for sunset or night rides. $35 SGD entry.',
-    'merlion': 'Merlion Park is iconic! The statue is small but Instagram-worthy. Best visited early morning or evening to avoid crowds. Free to visit!',
-    'zoo': 'Singapore Zoo is world-class with diverse animals and natural habitats. Takes 4 hours to explore. $35 SGD entry. Great for families!',
-    'insurance': 'Travel insurance is recommended for flight cancellations, medical emergencies, and lost luggage. Singapore has great healthcare but it\'s expensive for tourists.',
-    'food tour': 'Our 4-day Food & Culture itinerary covers Chinatown, Little India, Kampong Glam, and hawker centers. Perfect for foodies!',
-    'nature': 'Our 3-day Nature & Gardens itinerary covers Singapore Botanic Gardens, East Coast beaches, and Pulau Ubin. Peaceful and gorgeous!',
-    'default': 'Great question! I have detailed Singapore itineraries for 3, 4, and 5 days. Ask me about specific interests: food, nature, culture, beaches, budget, or layovers!'
+    // JAPAN
+    'japan': 'Japan is amazing! We have 3, 5, and 10-day itineraries covering Tokyo, Mt. Fuji, temples, and incredible food. What interests you most?',
+    'tokyo': 'Tokyo is electric! Shibuya Crossing, Senso-ji Temple, Harajuku fashion, and amazing ramen. We have detailed guides on the blog!',
+    'mt fuji': 'Mt. Fuji is iconic! You can hike the summit (8-12 hours) or do the 5th Station hike (easier, 2-3 hours). Beautiful year-round.',
+    'japan food': 'Japan has incredible food! Ramen, sushi, tempura, yakitori, and donburi. Every meal is an experience. Try local restaurants and street food.',
+    'japan budget': 'Japan is affordable for travelers! Budget: $30-50/day. Eat at convenience stores and ramen shops. Stay in hostels. Great value for money!',
+    'japan visa': 'Most Western tourists get a 90-day tourist visa automatically on arrival in Japan. Check your country\'s specific requirements.',
+
+    // VIETNAM
+    'vietnam': 'Vietnam is magical and super cheap! Hanoi, Halong Bay, Hoi An, Ho Chi Minh City, and Mekong Delta. Budget-friendly and delicious.',
+    'hanoi': 'Hanoi is chaotic and authentic! Old Quarter streets, Hoan Kiem Lake, street food tours, and the legendary egg coffee. It\'s overwhelming in the best way.',
+    'halong bay': 'Halong Bay is UNESCO-listed and stunning! Limestone karsts, kayaking, swimming, and overnight cruises. One of Vietnam\'s must-see attractions.',
+    'hoi an': 'Hoi An is charming and frozen in time. Ancient town, lantern streets at night, tailor shops, and nearby My Khe Beach. Perfect for 2-3 days!',
+    'ho chi minh': 'Ho Chi Minh City is modern and energetic! War museums, street food, rooftop bars, and the Mekong Delta nearby. Vietnam\'s bustling south!',
+    'vietnam food': 'Vietnam has world-class street food! Pho, banh mi, fresh spring rolls, and egg coffee. Food is incredibly cheap and authentic. Eat everywhere!',
+    'vietnam budget': 'Vietnam is SUPER cheap! Budget: $20-30/day easily. A full meal costs $1-3. Hotels $8-15. You can eat like royalty on a budget!',
+    'vietnam visa': 'Vietnam visa on arrival is easy. Get it at the airport or apply online. British/American/Australian citizens can get 90-day visas.',
+
+    // BALI
+    'bali': 'Bali is paradise! Beaches, rice terraces, temples, and amazing food. We have guides for 3, 5, and 10-day trips. Budget-friendly and beautiful.',
+    'bali beach': 'Bali has stunning beaches! Kuta (busy), Seminyak (trendy), Nusa Dua (luxury), Uluwatu (cliffs), and hidden beaches. Each has its own vibe.',
+    'ubud': 'Ubud is Bali\'s cultural heart! Rice terraces, temples, monkey forests, traditional markets, and artist community. Peaceful and spiritual.',
+    'bali temple': 'Tanah Lot, Bali Swing, and countless temples dot the island. Bali Swing is Instagram-famous. Temples are spiritual and free to visit.',
+    'bali food': 'Balinese food is amazing! Nasi Goreng, Satay, Soto Ayam, and fresh tropical fruits. Mix of street food and upscale dining options.',
+    'bali budget': 'Bali is incredibly cheap! Budget: $25-40/day. Food $2-5. Accommodation $10-20. Perfect for budget travelers or luxury seekers alike.',
+
+    // MALAYSIA
+    'malaysia': 'Malaysia is diverse! Kuala Lumpur, Petronas Towers, jungle trekking, and island hopping. We have itineraries for 3, 5, and 10 days.',
+    'kuala lumpur': 'KL is modern and multicultural! Petronas Towers, Chinatown, Batu Caves, shopping, and amazing food. Great as a hub for Malaysia exploration.',
+    'petronas': 'Petronas Twin Towers are iconic! Visit the Skybridge and observation deck. You can book tickets online. Stunning views of KL city!',
+    'penang': 'Penang is a gem! Street art in Georgetown (UNESCO), food paradise, island hopping, and colonial architecture. Don\'t miss this destination!',
+    'malaysia food': 'Malaysian food is a fusion! Nasi Lemak, Laksa, Satay, Roti Canai, and seafood. Mix of Malay, Chinese, and Indian influences. Incredible!',
+    'malaysia budget': 'Malaysia is very affordable! Budget: $25-35/day. Food is cheap and delicious. Transportation is good. Perfect for Southeast Asia travel.',
+
+    // SINGAPORE (existing responses)
+    'singapore': 'Singapore is compact and perfect! Marina Bay, Gardens by the Bay, Sentosa Island, and amazing food. We have 3, 5-day and layover guides.',
+    'singapore food': 'Singapore is a food paradise! Hawker centers, laksa, chicken rice, char kway teow, roti prata. Try Maxwell Food Centre and Tiong Bahru.',
+    'singapore budget': 'Singapore budget: $40-60/day. Eat at hawkers ($3-5), use Tourist Day Pass ($15), visit free attractions. Very doable on budget!',
+    'marina bay': 'Marina Bay has MBS, Gardens by the Bay, Singapore Flyer, and riverside promenades. The free light show at Gardens is incredible every night.',
+    'sentosa': 'Sentosa Island is perfect for fun! Universal Studios, S.E.A Aquarium, beaches, and activities. Take the cable car or walk the bridge from the city.',
+    'gardens by the bay': 'Gardens by the Bay is stunning! The Supertree light show is FREE nightly. Cloud Forest and Flower Dome cost $31-35 SGD each.',
+    'singapore layover': 'Quick layover? We have guides for 6h, 12h, 24h, and 48h. Even a short stop can be amazing with our insider tips!',
+    'singapore visa': 'Most Western tourists get 90 days visa-free. Check your country on the Singapore Immigration website. Super simple!',
+    'singapore transport': 'Use the MRT (metro) with Tourist Day Pass ($15) for unlimited travel. Or use Grab for taxis. Very efficient system!',
+    'singapore shopping': 'Orchard Road is shopping heaven! Bugis Street for fashion, Arab Street for textiles, malls everywhere. Great for bargains!',
+    'singapore weather': 'Hot and humid year-round (24-32°C). December-January is driest. Pack light clothes, sunscreen, and an umbrella always.',
+
+    // GENERAL
+    'destinations': 'We cover Singapore, Japan, Vietnam, Bali, and Malaysia! Each has 3, 5, and 10-day itineraries. Which destination interests you?',
+    'budget': 'All our destinations offer amazing value! Singapore: $40-60/day. Vietnam: $20-30/day. Bali/Malaysia: $25-40/day. We guide you on budgets!',
+    'food': 'Every destination has incredible food! Ask me specifically about Singapore, Japan, Vietnam, Bali, or Malaysia food. All different!',
+    'how many days': 'We have flexible itineraries! Most destinations offer 3-day (quick), 5-day (best value), and 10-day (complete) options. What\'s your timeframe?',
+    'recommend': 'What\'s your travel style? Budget, mid-range, or luxury? And which destination interests you? I\'ll recommend the perfect itinerary!',
+    'hello': 'Hey there! 👋 I help with travel planning for Singapore, Japan, Vietnam, Bali, and Malaysia. Ask about itineraries, budgets, food, or attractions!',
+    'thanks': 'You\'re welcome! Happy to help with your travel planning! Feel free to ask more questions about any destination. 😊',
+    'visa': 'Visa requirements vary by destination and your nationality. Ask me about a specific country and I can give you details!',
+    'default': 'Great question! I can help with Singapore, Japan, Vietnam, Bali, or Malaysia! Ask me about itineraries, budgets, food, attractions, or visas for any destination.'
   };
 
   function getBotResponse(userMessage) {
