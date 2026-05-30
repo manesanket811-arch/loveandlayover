@@ -190,7 +190,7 @@ footer .logo { color:var(--paper); }
   <div class="contact-section">
     <h2>Have more questions? Get in touch! 📬</h2>
     <p>Don't see your question answered? Send us a message and we'll get back to you with travel tips and advice tailored to your trip.</p>
-    <form id="contact-form">
+    <form id="contact-form" action="https://formsubmit.co/theloveandlayover@gmail.com" method="POST">
       <div class="form-group">
         <label for="name">Your Name *</label>
         <input type="text" id="name" name="name" required>
@@ -214,6 +214,8 @@ footer .logo { color:var(--paper); }
         <label for="message">Your Message *</label>
         <textarea id="message" name="message" required placeholder="Tell us about your travel plans, questions, or interests..."></textarea>
       </div>
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://www.loveandlayover.in/faq.html?success=true">
       <button type="submit" class="submit-btn" id="submit-btn">Send Message</button>
     </form>
     <div id="form-status" style="margin-top:15px;display:none;padding:15px;border-radius:8px;text-align:center;font-weight:600;border:2px solid"></div>
@@ -237,16 +239,7 @@ footer .logo { color:var(--paper); }
   </div>
 </footer>
 
-<script async src="https://cdn.emailjs.com/sdk/3.11.0/email.min.js"></script>
 <script>
-// Initialize EmailJS when ready
-window.addEventListener('load', function() {
-  if (typeof emailjs !== 'undefined') {
-    emailjs.init('ReDGILhmKtJ5fh3f8');
-  }
-});
-
-// Setup immediately (don't wait for EmailJS)
 document.getElementById('yr').textContent = new Date().getFullYear();
 
 // Country buttons
@@ -261,65 +254,54 @@ document.querySelectorAll('.country-btn').forEach(btn => {
 
 // Form submission
 const form = document.getElementById('contact-form');
+const status = document.getElementById('form-status');
+const btn = document.getElementById('submit-btn');
+
 if(form) {
   form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const btn = document.getElementById('submit-btn');
-    const status = document.getElementById('form-status');
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
-    const dest = document.getElementById('destination').value || 'Not specified';
     const msg = document.getElementById('message').value.trim();
 
     if(!name || !email || !msg) {
+      e.preventDefault();
       status.textContent = '⚠️ Please fill all required fields';
       status.style.background = '#fff3cd';
       status.style.color = '#856404';
       status.style.borderColor = '#ffeaa7';
       status.style.display = 'block';
-      return;
+      status.scrollIntoView({ behavior: 'smooth' });
+      return false;
     }
 
+    // Show sending message
     btn.disabled = true;
     btn.textContent = 'Sending...';
+    status.innerHTML = '<strong>Sending your message...</strong>';
+    status.style.background = '#e7f3ff';
+    status.style.color = '#004085';
+    status.style.borderColor = '#b8daff';
+    status.style.display = 'block';
+    status.scrollIntoView({ behavior: 'smooth' });
 
-    if (typeof emailjs === 'undefined') {
-      status.textContent = '❌ Email service not loaded. Please try again.';
-      status.style.background = '#f8d7da';
-      status.style.color = '#721c24';
-      status.style.display = 'block';
-      btn.disabled = false;
-      btn.textContent = 'Send Message';
-      return;
-    }
-
-    emailjs.send('service_fnzuahb', 'template_brlsskr', {
-      from_name: name,
-      from_email: email,
-      destination: dest,
-      message: msg
-    }).then(() => {
-      status.innerHTML = '<strong>✅ Message Sent!</strong><br>We\'ll reply soon.';
-      status.style.background = '#d4edda';
-      status.style.color = '#155724';
-      status.style.borderColor = '#c3e6cb';
-      status.style.display = 'block';
-      status.scrollIntoView({ behavior: 'smooth' });
-      form.reset();
-      btn.disabled = false;
-      btn.textContent = 'Send Message';
-      setTimeout(() => { status.style.display = 'none'; }, 6000);
-    }).catch((err) => {
-      status.innerHTML = '<strong>❌ Failed</strong><br>' + (err.text || err.message || 'Error');
-      status.style.background = '#f8d7da';
-      status.style.color = '#721c24';
-      status.style.borderColor = '#f5c6cb';
-      status.style.display = 'block';
-      status.scrollIntoView({ behavior: 'smooth' });
-      btn.disabled = false;
-      btn.textContent = 'Send Message';
-    });
+    // Form will submit to FormSubmit
   });
+}
+
+// Check if form was just submitted successfully
+if(new URLSearchParams(window.location.search).get('success') === 'true') {
+  status.innerHTML = '<strong>✅ Message Sent Successfully!</strong><br>Thank you! We\'ll reply to your email soon.';
+  status.style.background = '#d4edda';
+  status.style.color = '#155724';
+  status.style.borderColor = '#c3e6cb';
+  status.style.display = 'block';
+  status.scrollIntoView({ behavior: 'smooth' });
+
+  // Clear the URL parameter
+  window.history.replaceState({}, document.title, window.location.pathname);
+
+  // Hide after 6 seconds
+  setTimeout(() => { status.style.display = 'none'; }, 6000);
 }
 </script>
 
