@@ -216,7 +216,7 @@ footer .logo { color:var(--paper); }
       </div>
       <button type="submit" class="submit-btn" id="submit-btn">Send Message</button>
     </form>
-    <div id="form-status" style="margin-top:15px;display:none;padding:12px;border-radius:8px;text-align:center;font-weight:600"></div>
+    <div id="form-status" style="margin-top:15px;display:none;padding:15px;border-radius:8px;text-align:center;font-weight:600;border:2px solid"></div>
   </div>
 </div>
 
@@ -285,31 +285,38 @@ footer .logo { color:var(--paper); }
       from_email: email,
       destination: destination || 'Not specified',
       message: message,
-      to_email: 'manesanket811@gmail.com'
+      to_email: 'theloveandlayover@gmail.com'
     }).then(() => {
-      // Success
+      // Success - Show prominent message
       statusDiv.style.display = 'block';
       statusDiv.style.background = '#d4edda';
       statusDiv.style.color = '#155724';
-      statusDiv.style.border = '1px solid #c3e6cb';
-      statusDiv.textContent = '✅ Message sent! We\'ll reply to your email soon.';
+      statusDiv.style.borderColor = '#c3e6cb';
+      statusDiv.innerHTML = '<strong style="font-size:1.1em">✅ Message Sent Successfully!</strong><br>We\'ll reply to your email soon. Thank you for reaching out!';
+
+      // Scroll to message
+      statusDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
       // Reset form
       document.getElementById('contact-form').reset();
       submitBtn.disabled = false;
       submitBtn.textContent = 'Send Message';
 
-      // Hide message after 5 seconds
+      // Hide message after 6 seconds
       setTimeout(() => {
         statusDiv.style.display = 'none';
-      }, 5000);
+      }, 6000);
     }).catch((error) => {
-      // Error
+      // Error - Show prominent message
+      console.error('Error:', error);
       statusDiv.style.display = 'block';
       statusDiv.style.background = '#f8d7da';
       statusDiv.style.color = '#721c24';
-      statusDiv.style.border = '1px solid #f5c6cb';
-      statusDiv.textContent = '❌ Error sending message. Please try again or email manesanket811@gmail.com';
+      statusDiv.style.borderColor = '#f5c6cb';
+      statusDiv.innerHTML = '<strong style="font-size:1.1em">❌ Failed to Send</strong><br>Please try again or email us at theloveandlayover@gmail.com';
+
+      // Scroll to message
+      statusDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
       submitBtn.disabled = false;
       submitBtn.textContent = 'Send Message';
