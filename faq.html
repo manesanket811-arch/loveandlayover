@@ -239,31 +239,34 @@ footer .logo { color:var(--paper); }
 
 <script src="https://cdn.emailjs.com/sdk/3.11.0/email.min.js"></script>
 <script>
-  // Initialize EmailJS
-  emailjs.init('ReDGILhmKtJ5fh3f8');
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize EmailJS
+    emailjs.init('ReDGILhmKtJ5fh3f8');
 
-  document.getElementById('yr').textContent=new Date().getFullYear();
+    document.getElementById('yr').textContent=new Date().getFullYear();
 
-  // Country filter functionality
-  const countryBtns = document.querySelectorAll('.country-btn');
-  const countryFaqs = document.querySelectorAll('.country-faq');
+    // Country filter functionality
+    const countryBtns = document.querySelectorAll('.country-btn');
+    const countryFaqs = document.querySelectorAll('.country-faq');
 
-  countryBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const country = btn.dataset.country;
+    countryBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const country = btn.dataset.country;
 
-      // Update active button
-      countryBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+        // Update active button
+        countryBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
 
-      // Update visible FAQ
-      countryFaqs.forEach(faq => faq.classList.remove('active'));
-      document.getElementById(country + '-faq').classList.add('active');
+        // Update visible FAQ
+        countryFaqs.forEach(faq => faq.classList.remove('active'));
+        document.getElementById(country + '-faq').classList.add('active');
+      });
     });
-  });
 
-  // Contact form submission
-  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    // Contact form submission
+    const contactForm = document.getElementById('contact-form');
+    if(contactForm) {
+      contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
 
     const submitBtn = document.getElementById('submit-btn');
@@ -335,6 +338,9 @@ footer .logo { color:var(--paper); }
       submitBtn.disabled = false;
       submitBtn.textContent = 'Send Message';
     });
+      } else {
+        console.error('Contact form not found!');
+      }
   });
 </script>
 
