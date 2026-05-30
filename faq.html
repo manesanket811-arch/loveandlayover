@@ -190,7 +190,7 @@ footer .logo { color:var(--paper); }
   <div class="contact-section">
     <h2>Have more questions? Get in touch! 📬</h2>
     <p>Don't see your question answered? Send us a message and we'll get back to you with travel tips and advice tailored to your trip.</p>
-    <form action="https://formspree.io/f/mvoezvvp" method="POST">
+    <form id="contact-form">
       <div class="form-group">
         <label for="name">Your Name *</label>
         <input type="text" id="name" name="name" required>
@@ -214,8 +214,9 @@ footer .logo { color:var(--paper); }
         <label for="message">Your Message *</label>
         <textarea id="message" name="message" required placeholder="Tell us about your travel plans, questions, or interests..."></textarea>
       </div>
-      <button type="submit" class="submit-btn">Send Message</button>
+      <button type="submit" class="submit-btn" id="submit-btn">Send Message</button>
     </form>
+    <div id="form-status" style="margin-top:15px;display:none;padding:12px;border-radius:8px;text-align:center;font-weight:600"></div>
   </div>
 </div>
 
@@ -236,7 +237,16 @@ footer .logo { color:var(--paper); }
   </div>
 </footer>
 
+<script src="https://cdn.emailjs.com/sdk/3.11.0/email.min.js"></script>
 <script>
+  // Initialize EmailJS - SETUP REQUIRED
+  // 1. Go to https://www.emailjs.com
+  // 2. Create a free account
+  // 3. Set up a Service (Gmail recommended), Email Template, and get your Public Key
+  // 4. Replace 'YOUR_PUBLIC_KEY' below with your actual EmailJS Public Key
+
+  emailjs.init('YOUR_PUBLIC_KEY'); // REPLACE WITH YOUR KEY
+
   document.getElementById('yr').textContent=new Date().getFullYear();
 
   // Country filter functionality
@@ -254,6 +264,60 @@ footer .logo { color:var(--paper); }
       // Update visible FAQ
       countryFaqs.forEach(faq => faq.classList.remove('active'));
       document.getElementById(country + '-faq').classList.add('active');
+    });
+  });
+
+  // Contact form submission
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const submitBtn = document.getElementById('submit-btn');
+    const statusDiv = document.getElementById('form-status');
+
+    // Get form values
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const destination = document.getElementById('destination').value;
+    const message = document.getElementById('message').value;
+
+    // Change button state
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    // Send email via EmailJS
+    emailjs.send('SERVICE_ID', 'TEMPLATE_ID', {
+      from_name: name,
+      from_email: email,
+      destination: destination || 'Not specified',
+      message: message,
+      to_email: 'manesanket811@gmail.com' // Your email
+    }).then(() => {
+      // Success
+      statusDiv.style.display = 'block';
+      statusDiv.style.background = '#d4edda';
+      statusDiv.style.color = '#155724';
+      statusDiv.style.border = '1px solid #c3e6cb';
+      statusDiv.textContent = '✅ Message sent! We\'ll reply to your email soon.';
+
+      // Reset form
+      document.getElementById('contact-form').reset();
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send Message';
+
+      // Hide message after 5 seconds
+      setTimeout(() => {
+        statusDiv.style.display = 'none';
+      }, 5000);
+    }).catch((error) => {
+      // Error
+      statusDiv.style.display = 'block';
+      statusDiv.style.background = '#f8d7da';
+      statusDiv.style.color = '#721c24';
+      statusDiv.style.border = '1px solid #f5c6cb';
+      statusDiv.textContent = '❌ Error sending message. Please try again or email manesanket811@gmail.com';
+
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send Message';
     });
   });
 </script>
