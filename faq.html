@@ -190,7 +190,7 @@ footer .logo { color:var(--paper); }
   <div class="contact-section">
     <h2>Have more questions? Get in touch! 📬</h2>
     <p>Don't see your question answered? Send us a message and we'll get back to you with travel tips and advice tailored to your trip.</p>
-    <form id="contact-form">
+    <form id="contact-form" action="https://usebasin.com/f/dc1da45f6820" method="POST">
       <div class="form-group">
         <label for="name">Your Name *</label>
         <input type="text" id="name" name="name" required>
@@ -250,78 +250,24 @@ document.querySelectorAll('.country-btn').forEach(btn => {
   });
 });
 
-// Form submission
+// Form submission - simple validation
 const form = document.getElementById('contact-form');
-const status = document.getElementById('form-status');
 const btn = document.getElementById('submit-btn');
 
 if(form) {
   form.addEventListener('submit', function(e) {
-    e.preventDefault();
-
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
-    const dest = document.getElementById('destination').value || 'Not specified';
     const msg = document.getElementById('message').value.trim();
 
-    // Validate
     if(!name || !email || !msg) {
-      status.textContent = '⚠️ Please fill all required fields';
-      status.style.background = '#fff3cd';
-      status.style.color = '#856404';
-      status.style.borderColor = '#ffeaa7';
-      status.style.display = 'block';
-      status.scrollIntoView({ behavior: 'smooth' });
-      return;
+      e.preventDefault();
+      alert('Please fill in all required fields');
+      return false;
     }
 
-    // Show sending
     btn.disabled = true;
     btn.textContent = 'Sending...';
-    status.innerHTML = '<strong>Sending message...</strong>';
-    status.style.background = '#e7f3ff';
-    status.style.color = '#004085';
-    status.style.borderColor = '#b8daff';
-    status.style.display = 'block';
-    status.scrollIntoView({ behavior: 'smooth' });
-
-    // Send via backend API
-    fetch('https://love-layovers-api.railway.app/api/contact', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        name: name,
-        email: email,
-        destination: dest,
-        message: msg
-      })
-    })
-    .then(res => res.json())
-    .then(data => {
-      if(data.success) {
-        // Success
-        status.innerHTML = '<strong>✅ Message Sent!</strong><br>Thank you! We\'ll reply to your email soon.';
-        status.style.background = '#d4edda';
-        status.style.color = '#155724';
-        status.style.borderColor = '#c3e6cb';
-        form.reset();
-        btn.disabled = false;
-        btn.textContent = 'Send Message';
-        setTimeout(() => { status.style.display = 'none'; }, 6000);
-      } else {
-        throw new Error(data.error || 'Send failed');
-      }
-    })
-    .catch(err => {
-      status.innerHTML = '<strong>❌ Failed to send</strong><br>Please email us at theloveandlayover@gmail.com';
-      status.style.background = '#f8d7da';
-      status.style.color = '#721c24';
-      status.style.borderColor = '#f5c6cb';
-      btn.disabled = false;
-      btn.textContent = 'Send Message';
-    });
   });
 }
 </script>
