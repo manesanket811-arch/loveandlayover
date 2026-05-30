@@ -285,31 +285,22 @@ if(form) {
     status.style.display = 'block';
     status.scrollIntoView({ behavior: 'smooth' });
 
-    // Send via Resend API (free service)
-    fetch('https://api.resend.com/emails', {
+    // Send via backend API
+    fetch('https://love-layovers-api.railway.app/api/contact', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer re_7Ff8p9XyLMVa2Z3Jk4Hq9Pw1R2S3T4'
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        from: 'noreply@loveandlayover.in',
-        to: 'theloveandlayover@gmail.com',
-        reply_to: email,
-        subject: `New Contact: ${name} - ${dest}`,
-        html: `
-          <h2>New Contact Form Submission</h2>
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Destination:</strong> ${dest}</p>
-          <p><strong>Message:</strong></p>
-          <p>${msg.replace(/\n/g, '<br>')}</p>
-        `
+        name: name,
+        email: email,
+        destination: dest,
+        message: msg
       })
     })
     .then(res => res.json())
     .then(data => {
-      if(data.id) {
+      if(data.success) {
         // Success
         status.innerHTML = '<strong>✅ Message Sent!</strong><br>Thank you! We\'ll reply to your email soon.';
         status.style.background = '#d4edda';
@@ -320,7 +311,7 @@ if(form) {
         btn.textContent = 'Send Message';
         setTimeout(() => { status.style.display = 'none'; }, 6000);
       } else {
-        throw new Error(data.message || 'Send failed');
+        throw new Error(data.error || 'Send failed');
       }
     })
     .catch(err => {
