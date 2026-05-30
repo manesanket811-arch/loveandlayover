@@ -237,34 +237,31 @@ footer .logo { color:var(--paper); }
   </div>
 </footer>
 
-<script src="https://cdn.emailjs.com/sdk/3.11.0/email.min.js"></script>
+<script async src="https://cdn.emailjs.com/sdk/3.11.0/email.min.js"></script>
 <script>
-function setupApp() {
-  // Initialize EmailJS
+// Initialize EmailJS when ready
+window.addEventListener('load', function() {
   if (typeof emailjs !== 'undefined') {
     emailjs.init('ReDGILhmKtJ5fh3f8');
-  } else {
-    setTimeout(setupApp, 100);
-    return;
   }
+});
 
-  // Year
-  document.getElementById('yr').textContent = new Date().getFullYear();
+// Setup immediately (don't wait for EmailJS)
+document.getElementById('yr').textContent = new Date().getFullYear();
 
-  // Country buttons
-  document.querySelectorAll('.country-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-      document.querySelectorAll('.country-btn').forEach(b => b.classList.remove('active'));
-      this.classList.add('active');
-      document.querySelectorAll('.country-faq').forEach(f => f.classList.remove('active'));
-      document.getElementById(this.dataset.country + '-faq').classList.add('active');
-    });
+// Country buttons
+document.querySelectorAll('.country-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.country-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    document.querySelectorAll('.country-faq').forEach(f => f.classList.remove('active'));
+    document.getElementById(this.dataset.country + '-faq').classList.add('active');
   });
+});
 
-  // Form
-  const form = document.getElementById('contact-form');
-  if(!form) return;
-
+// Form submission
+const form = document.getElementById('contact-form');
+if(form) {
   form.addEventListener('submit', function(e) {
     e.preventDefault();
     const btn = document.getElementById('submit-btn');
@@ -285,6 +282,16 @@ function setupApp() {
 
     btn.disabled = true;
     btn.textContent = 'Sending...';
+
+    if (typeof emailjs === 'undefined') {
+      status.textContent = '❌ Email service not loaded. Please try again.';
+      status.style.background = '#f8d7da';
+      status.style.color = '#721c24';
+      status.style.display = 'block';
+      btn.disabled = false;
+      btn.textContent = 'Send Message';
+      return;
+    }
 
     emailjs.send('service_fnzuahb', 'template_brlsskr', {
       from_name: name,
@@ -314,8 +321,6 @@ function setupApp() {
     });
   });
 }
-
-setupApp();
 </script>
 
 </body>
