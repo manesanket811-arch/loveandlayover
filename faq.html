@@ -239,12 +239,25 @@ footer .logo { color:var(--paper); }
 
 <script src="https://cdn.emailjs.com/sdk/3.11.0/email.min.js"></script>
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
+  // Wait for EmailJS to load and DOM to be ready
+  function initializeForm() {
+    if(typeof emailjs === 'undefined') {
+      console.warn('EmailJS not loaded yet, retrying...');
+      setTimeout(initializeForm, 100);
+      return;
+    }
+
+    console.log('EmailJS loaded successfully');
     // Initialize EmailJS
     emailjs.init('ReDGILhmKtJ5fh3f8');
 
     document.getElementById('yr').textContent=new Date().getFullYear();
 
+    // Continue with form setup
+    setupForm();
+  }
+
+  function setupForm() {
     // Country filter functionality
     const countryBtns = document.querySelectorAll('.country-btn');
     const countryFaqs = document.querySelectorAll('.country-faq');
@@ -344,7 +357,14 @@ footer .logo { color:var(--paper); }
       } else {
         console.error('Contact form not found!');
       }
-  });
+  }
+
+  // Initialize when DOM is ready
+  if(document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeForm);
+  } else {
+    initializeForm();
+  }
 </script>
 
 </body>
