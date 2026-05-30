@@ -239,13 +239,8 @@ footer .logo { color:var(--paper); }
 
 <script src="https://cdn.emailjs.com/sdk/3.11.0/email.min.js"></script>
 <script>
-  // Initialize EmailJS - SETUP REQUIRED
-  // 1. Go to https://www.emailjs.com
-  // 2. Create a free account
-  // 3. Set up a Service (Gmail recommended), Email Template, and get your Public Key
-  // 4. Replace 'YOUR_PUBLIC_KEY' below with your actual EmailJS Public Key
-
-  emailjs.init('YOUR_PUBLIC_KEY'); // REPLACE WITH YOUR KEY
+  // Initialize EmailJS
+  emailjs.init('ReDGILhmKtJ5fh3f8');
 
   document.getElementById('yr').textContent=new Date().getFullYear();
 
@@ -285,12 +280,12 @@ footer .logo { color:var(--paper); }
     submitBtn.textContent = 'Sending...';
 
     // Send email via EmailJS
-    emailjs.send('SERVICE_ID', 'TEMPLATE_ID', {
+    emailjs.send('service_y3w7iw3', 'template_uc5akzx', {
       from_name: name,
       from_email: email,
       destination: destination || 'Not specified',
       message: message,
-      to_email: 'manesanket811@gmail.com' // Your email
+      to_email: 'manesanket811@gmail.com'
     }).then(() => {
       // Success
       statusDiv.style.display = 'block';
