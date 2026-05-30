@@ -577,32 +577,9 @@
       <p>Real itineraries from places we've explored — with timings, costs, tips, and honest reviews.</p>
     </div>
 
-    <div style="background:#fff;border-radius:18px;padding:28px;box-shadow:0 10px 40px rgba(26,35,50,.12);margin:40px 0;display:grid;grid-template-columns:1fr 1fr;gap:16px">
-      <div>
-        <label style="display:block;font-weight:600;margin-bottom:8px;color:var(--ink);font-size:.95rem">Country</label>
-        <select id="homeCountryFilter" style="width:100%;padding:10px 12px;border:2px solid rgba(26,35,50,.2);border-radius:8px;font-family:'Outfit',sans-serif;font-size:1rem;cursor:pointer;background:#fff">
-          <option value="">All Destinations (5)</option>
-          <option value="Singapore">Singapore</option>
-          <option value="Japan">Japan</option>
-          <option value="Vietnam">Vietnam</option>
-          <option value="Bali">Bali</option>
-          <option value="Malaysia">Malaysia</option>
-        </select>
-      </div>
-      <div>
-        <label style="display:block;font-weight:600;margin-bottom:8px;color:var(--ink);font-size:.95rem">Duration</label>
-        <div style="display:flex;gap:8px">
-          <button class="home-duration-btn active" data-duration="3" style="flex:1;padding:10px 12px;border:2px solid rgba(26,35,50,.2);border-radius:8px;background:#fff;cursor:pointer;font-weight:600;color:var(--ink);transition:.25s">3 Days</button>
-          <button class="home-duration-btn" data-duration="5" style="flex:1;padding:10px 12px;border:2px solid rgba(26,35,50,.2);border-radius:8px;background:#fff;cursor:pointer;font-weight:600;color:var(--ink);transition:.25s">5 Days</button>
-          <button class="home-duration-btn" data-duration="10" style="flex:1;padding:10px 12px;border:2px solid rgba(26,35,50,.2);border-radius:8px;background:#fff;cursor:pointer;font-weight:600;color:var(--ink);transition:.25s">10 Days</button>
-        </div>
-      </div>
-    </div>
-
-    <a href="itinerary-builder.html" style="display:inline-block;margin-bottom:28px;color:var(--accent);font-weight:600">View all itineraries →</a>
-
-    <div class="guide-grid" id="homeGuidesContainer">
-      <div style="grid-column:1/-1;text-align:center;padding:40px"><p>Loading itineraries...</p></div>
+    <div style="text-align:center;padding:60px 40px;background:linear-gradient(135deg,rgba(255,107,53,.08),rgba(247,147,30,.08));border-radius:18px;margin:50px 0">
+      <p style="color:#56646a;font-size:1.05rem;margin-bottom:28px;max-width:600px;margin-left:auto;margin-right:auto">Choose your destination and duration to get a customized day-by-day itinerary with attractions, costs, insider tips, and everything you need to plan the perfect trip.</p>
+      <a href="itinerary-builder.html" class="btn coral" style="padding:15px 40px;font-size:1rem;display:inline-block">Explore All Itineraries →</a>
     </div>
   </div>
 </section>
@@ -920,76 +897,6 @@
     messagesDiv.scrollTop = messagesDiv.scrollHeight;
   }
 
-  // ===== ITINERARY SELECTOR =====
-  let allItineraries = [];
-  let selectedCountry = '';
-  let selectedDuration = 3;
-
-  async function loadHomeItineraries() {
-    try {
-      const response = await fetch('data/itineraries.json');
-      const data = await response.json();
-      allItineraries = data.itineraries;
-      renderHomeCards();
-    } catch (error) {
-      console.error('Error loading itineraries:', error);
-      document.getElementById('homeGuidesContainer').innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:40px"><p>Error loading itineraries</p></div>';
-    }
-  }
-
-  function renderHomeCards() {
-    let filtered = allItineraries;
-
-    if(selectedCountry) {
-      filtered = filtered.filter(it => it.country === selectedCountry);
-    }
-
-    filtered = filtered.filter(it => it.duration === selectedDuration);
-
-    if(filtered.length === 0) {
-      document.getElementById('homeGuidesContainer').innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:40px"><p>No itineraries found</p></div>';
-      return;
-    }
-
-    const html = filtered.map(it => `
-      <div class="gcard reveal" style="cursor:pointer">
-        <div class="gtop ${it.colorClass}"><span class="badge">${it.emoji} ${it.badge}</span><div class="days"><span class="nn">${it.duration}</span><span class="dd">days</span></div></div>
-        <div class="gbody"><h3>${it.title}</h3><p>${it.description}</p><span class="link" style="display:block;margin-top:12px;cursor:pointer" onclick="this.nextElementSibling.classList.toggle('show'); this.textContent = this.nextElementSibling.classList.contains('show') ? '▼ Collapse' : '▶ Expand'">▶ Expand</span></div>
-        <div style="display:none;padding:20px;border-top:1px solid rgba(13,38,43,.1);background:#fafaf9;font-size:.95rem;color:#56646a" class="show">
-          <h4 style="font-family:'Fraunces',serif;margin-bottom:12px">Day-by-Day Breakdown:</h4>
-          ${it.days.map(day => `<p><strong>Day ${day.day} — ${day.title}</strong></p><p>Attractions: ${day.attractions.join(', ')}</p><p>Cost: ${day.cost}</p><p style="margin-bottom:12px">Tips: ${day.tips.join(' • ')}</p>`).join('')}
-          <p style="margin-top:16px"><a href="itinerary-builder.html" style="color:var(--accent);font-weight:600">View all itineraries →</a></p>
-        </div>
-      </div>
-    `).join('');
-
-    document.getElementById('homeGuidesContainer').innerHTML = html;
-  }
-
-  document.getElementById('homeCountryFilter').addEventListener('change', (e) => {
-    selectedCountry = e.target.value;
-    renderHomeCards();
-  });
-
-  document.querySelectorAll('.home-duration-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.home-duration-btn').forEach(b => b.style.background = '#fff');
-      btn.style.background = 'var(--accent)';
-      btn.style.color = '#fff';
-      btn.style.borderColor = 'var(--accent)';
-      document.querySelectorAll('.home-duration-btn').forEach(b => {
-        if(b !== btn) {
-          b.style.background = '#fff';
-          b.style.color = 'var(--ink)';
-          b.style.borderColor = 'rgba(26,35,50,.2)';
-        }
-      });
-      selectedDuration = parseInt(btn.dataset.duration);
-      renderHomeCards();
-    });
-  });
-
-  loadHomeItineraries();
 </script>
 </body>
 </html>
