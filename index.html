@@ -896,6 +896,68 @@
     messagesDiv.scrollTop = messagesDiv.scrollHeight;
   }
 
+  // ===== YOUTUBE AUTOMATION =====
+  async function loadLatestVideos() {
+    try {
+      const channelId = 'UCUABrODa0CNF5zgkesAlYeA';
+      const feedUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
+
+      // Fetch RSS feed
+      const response = await fetch(feedUrl);
+      const xmlText = await response.text();
+      const parser = new DOMParser();
+      const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+
+      // Extract video entries
+      const entries = xmlDoc.querySelectorAll('entry');
+      const videos = [];
+
+      entries.forEach((entry, idx) => {
+        if(idx < 3) { // Get latest 3 videos
+          const titleEl = entry.querySelector('title');
+          const linkEl = entry.querySelector('link');
+          const mediaEl = entry.querySelector('[url]');
+
+          if(titleEl && linkEl) {
+            const href = linkEl.getAttribute('href');
+            const videoId = href.split('v=')[1];
+            const title = titleEl.textContent;
+
+            videos.push({
+              id: videoId,
+              title: title,
+              url: href
+            });
+          }
+        }
+      });
+
+      // If we got videos, update the grid
+      if(videos.length > 0) {
+        const videoGrid = document.getElementById('videoGrid');
+        if(videoGrid) {
+          let html = '';
+          videos.forEach((video, idx) => {
+            const thumbClass = ['a', 'b', 'c'][idx] || 'a';
+            html += `
+              <a class="vcard reveal" href="${video.url}" target="_blank" rel="noopener">
+                <div class="vthumb ${thumbClass}"><iframe src="https://www.youtube-nocookie.com/embed/${video.id}" allowfullscreen=""></iframe></div>
+                <div class="vmeta"><h3>${video.title}</h3><div class="info">Travel vlog · Destination guides</div></div>
+              </a>
+            `;
+          });
+          videoGrid.innerHTML = html;
+        }
+      }
+    } catch (error) {
+      console.log('YouTube feed loaded (may be CORS restricted, using fallback)');
+      // If CORS blocks it, that's okay - fallback videos remain
+    }
+  }
+
+  // Load videos on page load
+  window.addEventListener('load', loadLatestVideos);
+
 </script>
 </body>
 </html>
