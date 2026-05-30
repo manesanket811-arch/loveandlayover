@@ -239,133 +239,80 @@ footer .logo { color:var(--paper); }
 
 <script src="https://cdn.emailjs.com/sdk/3.11.0/email.min.js"></script>
 <script>
-  // Wait for EmailJS to load and DOM to be ready
-  function initializeForm() {
-    if(typeof emailjs === 'undefined') {
-      console.warn('EmailJS not loaded yet, retrying...');
-      setTimeout(initializeForm, 100);
-      return;
-    }
+emailjs.init('ReDGILhmKtJ5fh3f8');
 
-    console.log('EmailJS loaded successfully');
-    // Initialize EmailJS
-    emailjs.init('ReDGILhmKtJ5fh3f8');
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('yr').textContent = new Date().getFullYear();
 
-    document.getElementById('yr').textContent=new Date().getFullYear();
+  // Country filter
+  const countryBtns = document.querySelectorAll('.country-btn');
+  const countryFaqs = document.querySelectorAll('.country-faq');
 
-    // Continue with form setup
-    setupForm();
-  }
+  countryBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const country = btn.dataset.country;
+      countryBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      countryFaqs.forEach(faq => faq.classList.remove('active'));
+      document.getElementById(country + '-faq').classList.add('active');
+    });
+  });
 
-  function setupForm() {
-    // Country filter functionality
-    const countryBtns = document.querySelectorAll('.country-btn');
-    const countryFaqs = document.querySelectorAll('.country-faq');
+  // Contact form
+  const contactForm = document.getElementById('contact-form');
+  const submitBtn = document.getElementById('submit-btn');
+  const statusDiv = document.getElementById('form-status');
 
-    countryBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const country = btn.dataset.country;
+  if(contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
 
-        // Update active button
-        countryBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const destination = document.getElementById('destination').value || 'Not specified';
+      const message = document.getElementById('message').value.trim();
 
-        // Update visible FAQ
-        countryFaqs.forEach(faq => faq.classList.remove('active'));
-        document.getElementById(country + '-faq').classList.add('active');
+      if(!name || !email || !message) {
+        statusDiv.style.display = 'block';
+        statusDiv.style.background = '#fff3cd';
+        statusDiv.style.color = '#856404';
+        statusDiv.style.borderColor = '#ffeaa7';
+        statusDiv.textContent = '⚠️ Please fill in all required fields';
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
+      emailjs.send('service_fnzuahb', 'template_brlsskr', {
+        from_name: name,
+        from_email: email,
+        destination: destination,
+        message: message
+      }).then((response) => {
+        statusDiv.style.display = 'block';
+        statusDiv.style.background = '#d4edda';
+        statusDiv.style.color = '#155724';
+        statusDiv.style.borderColor = '#c3e6cb';
+        statusDiv.innerHTML = '<strong style="font-size:1.1em">✅ Message Sent Successfully!</strong><br>We\'ll reply to your email soon. Thank you for reaching out!';
+        statusDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        contactForm.reset();
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+        setTimeout(() => { statusDiv.style.display = 'none'; }, 6000);
+      }).catch((error) => {
+        statusDiv.style.display = 'block';
+        statusDiv.style.background = '#f8d7da';
+        statusDiv.style.color = '#721c24';
+        statusDiv.style.borderColor = '#f5c6cb';
+        statusDiv.innerHTML = '<strong style="font-size:1.1em">❌ Failed to Send</strong><br>Error: ' + (error.text || 'Unknown error') + '<br>Please try again or email theloveandlayover@gmail.com';
+        statusDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
       });
     });
-
-    // Contact form submission
-    const contactForm = document.getElementById('contact-form');
-    console.log('Contact form element:', contactForm);
-    if(contactForm) {
-      console.log('Form found! Attaching submit listener...');
-      contactForm.addEventListener('submit', function(e) {
-        console.log('Form submit event fired!');
-    e.preventDefault();
-
-    const submitBtn = document.getElementById('submit-btn');
-    const statusDiv = document.getElementById('form-status');
-
-    // Get form values
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const destination = document.getElementById('destination').value || 'Not specified';
-    const message = document.getElementById('message').value.trim();
-
-    // Validate form
-    if(!name || !email || !message) {
-      statusDiv.style.display = 'block';
-      statusDiv.style.background = '#fff3cd';
-      statusDiv.style.color = '#856404';
-      statusDiv.style.borderColor = '#ffeaa7';
-      statusDiv.textContent = '⚠️ Please fill in all required fields';
-      return;
-    }
-
-    // Change button state
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending...';
-
-    console.log('Sending email with:', { from_name: name, from_email: email, destination, message });
-
-    // Send email via EmailJS
-    emailjs.send('service_fnzuahb', 'template_brlsskr', {
-      from_name: name,
-      from_email: email,
-      destination: destination,
-      message: message
-    }).then((response) => {
-      console.log('Email sent successfully:', response);
-
-      // Success - Show prominent message
-      statusDiv.style.display = 'block';
-      statusDiv.style.background = '#d4edda';
-      statusDiv.style.color = '#155724';
-      statusDiv.style.borderColor = '#c3e6cb';
-      statusDiv.innerHTML = '<strong style="font-size:1.1em">✅ Message Sent Successfully!</strong><br>We\'ll reply to your email soon. Thank you for reaching out!';
-
-      // Scroll to message
-      statusDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-
-      // Reset form
-      document.getElementById('contact-form').reset();
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Send Message';
-
-      // Hide message after 6 seconds
-      setTimeout(() => {
-        statusDiv.style.display = 'none';
-      }, 6000);
-    }).catch((error) => {
-      console.error('EmailJS Error:', error);
-
-      // Error - Show prominent message
-      statusDiv.style.display = 'block';
-      statusDiv.style.background = '#f8d7da';
-      statusDiv.style.color = '#721c24';
-      statusDiv.style.borderColor = '#f5c6cb';
-      statusDiv.innerHTML = '<strong style="font-size:1.1em">❌ Failed to Send</strong><br>Error: ' + (error.text || 'Unknown error') + '<br>Please try again or email theloveandlayover@gmail.com';
-
-      // Scroll to message
-      statusDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Send Message';
-    });
-      });
-    } else {
-      console.error('Contact form not found!');
-    }
   }
-
-  // Initialize when DOM is ready
-  if(document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initializeForm);
-  } else {
-    initializeForm();
-  }
+});
 </script>
 
 </body>
