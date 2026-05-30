@@ -190,7 +190,7 @@ footer .logo { color:var(--paper); }
   <div class="contact-section">
     <h2>Have more questions? Get in touch! 📬</h2>
     <p>Don't see your question answered? Send us a message and we'll get back to you with travel tips and advice tailored to your trip.</p>
-    <form id="contact-form" action="https://formsubmit.co/theloveandlayover@gmail.com" method="POST">
+    <form id="contact-form">
       <div class="form-group">
         <label for="name">Your Name *</label>
         <input type="text" id="name" name="name" required>
@@ -214,8 +214,6 @@ footer .logo { color:var(--paper); }
         <label for="message">Your Message *</label>
         <textarea id="message" name="message" required placeholder="Tell us about your travel plans, questions, or interests..."></textarea>
       </div>
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://www.loveandlayover.in/faq.html?success=true">
       <button type="submit" class="submit-btn" id="submit-btn">Send Message</button>
     </form>
     <div id="form-status" style="margin-top:15px;display:none;padding:15px;border-radius:8px;text-align:center;font-weight:600;border:2px solid"></div>
@@ -259,49 +257,81 @@ const btn = document.getElementById('submit-btn');
 
 if(form) {
   form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
+    const dest = document.getElementById('destination').value || 'Not specified';
     const msg = document.getElementById('message').value.trim();
 
+    // Validate
     if(!name || !email || !msg) {
-      e.preventDefault();
       status.textContent = '⚠️ Please fill all required fields';
       status.style.background = '#fff3cd';
       status.style.color = '#856404';
       status.style.borderColor = '#ffeaa7';
       status.style.display = 'block';
       status.scrollIntoView({ behavior: 'smooth' });
-      return false;
+      return;
     }
 
-    // Show sending message
+    // Show sending
     btn.disabled = true;
     btn.textContent = 'Sending...';
-    status.innerHTML = '<strong>Sending your message...</strong>';
+    status.innerHTML = '<strong>Sending message...</strong>';
     status.style.background = '#e7f3ff';
     status.style.color = '#004085';
     status.style.borderColor = '#b8daff';
     status.style.display = 'block';
     status.scrollIntoView({ behavior: 'smooth' });
 
-    // Form will submit to FormSubmit
+    // Send via Resend API (free service)
+    fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer re_7Ff8p9XyLMVa2Z3Jk4Hq9Pw1R2S3T4'
+      },
+      body: JSON.stringify({
+        from: 'noreply@loveandlayover.in',
+        to: 'theloveandlayover@gmail.com',
+        reply_to: email,
+        subject: `New Contact: ${name} - ${dest}`,
+        html: `
+          <h2>New Contact Form Submission</h2>
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Destination:</strong> ${dest}</p>
+          <p><strong>Message:</strong></p>
+          <p>${msg.replace(/\n/g, '<br>')}</p>
+        `
+      })
+    })
+    .then(res => res.json())
+    .then(data => {
+      if(data.id) {
+        // Success
+        status.innerHTML = '<strong>✅ Message Sent!</strong><br>Thank you! We\'ll reply to your email soon.';
+        status.style.background = '#d4edda';
+        status.style.color = '#155724';
+        status.style.borderColor = '#c3e6cb';
+        form.reset();
+        btn.disabled = false;
+        btn.textContent = 'Send Message';
+        setTimeout(() => { status.style.display = 'none'; }, 6000);
+      } else {
+        throw new Error(data.message || 'Send failed');
+      }
+    })
+    .catch(err => {
+      status.innerHTML = '<strong>❌ Failed to send</strong><br>Please email us at theloveandlayover@gmail.com';
+      status.style.background = '#f8d7da';
+      status.style.color = '#721c24';
+      status.style.borderColor = '#f5c6cb';
+      btn.disabled = false;
+      btn.textContent = 'Send Message';
+    });
   });
-}
-
-// Check if form was just submitted successfully
-if(new URLSearchParams(window.location.search).get('success') === 'true') {
-  status.innerHTML = '<strong>✅ Message Sent Successfully!</strong><br>Thank you! We\'ll reply to your email soon.';
-  status.style.background = '#d4edda';
-  status.style.color = '#155724';
-  status.style.borderColor = '#c3e6cb';
-  status.style.display = 'block';
-  status.scrollIntoView({ behavior: 'smooth' });
-
-  // Clear the URL parameter
-  window.history.replaceState({}, document.title, window.location.pathname);
-
-  // Hide after 6 seconds
-  setTimeout(() => { status.style.display = 'none'; }, 6000);
 }
 </script>
 
