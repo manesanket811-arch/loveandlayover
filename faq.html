@@ -239,80 +239,82 @@ footer .logo { color:var(--paper); }
 
 <script src="https://cdn.emailjs.com/sdk/3.11.0/email.min.js"></script>
 <script>
-emailjs.init('ReDGILhmKtJ5fh3f8');
+  // Initialize EmailJS
+  emailjs.init('ReDGILhmKtJ5fh3f8');
 
-document.addEventListener('DOMContentLoaded', function() {
+  // Handle year
   document.getElementById('yr').textContent = new Date().getFullYear();
 
-  // Country filter
-  const countryBtns = document.querySelectorAll('.country-btn');
-  const countryFaqs = document.querySelectorAll('.country-faq');
-
-  countryBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const country = btn.dataset.country;
-      countryBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      countryFaqs.forEach(faq => faq.classList.remove('active'));
-      document.getElementById(country + '-faq').classList.add('active');
+  // Country filter buttons
+  document.querySelectorAll('.country-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.country-btn').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      document.querySelectorAll('.country-faq').forEach(f => f.classList.remove('active'));
+      document.getElementById(this.dataset.country + '-faq').classList.add('active');
     });
   });
 
-  // Contact form
-  const contactForm = document.getElementById('contact-form');
-  const submitBtn = document.getElementById('submit-btn');
-  const statusDiv = document.getElementById('form-status');
+  // Form submission
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
 
-  if(contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-      e.preventDefault();
+    const form = this;
+    const submitBtn = document.getElementById('submit-btn');
+    const statusDiv = document.getElementById('form-status');
 
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const destination = document.getElementById('destination').value || 'Not specified';
-      const message = document.getElementById('message').value.trim();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const destination = document.getElementById('destination').value || 'Not specified';
+    const message = document.getElementById('message').value.trim();
 
-      if(!name || !email || !message) {
-        statusDiv.style.display = 'block';
-        statusDiv.style.background = '#fff3cd';
-        statusDiv.style.color = '#856404';
-        statusDiv.style.borderColor = '#ffeaa7';
-        statusDiv.textContent = '⚠️ Please fill in all required fields';
-        return;
-      }
+    // Validation
+    if (!name || !email || !message) {
+      statusDiv.textContent = '⚠️ Please fill in all required fields';
+      statusDiv.style.background = '#fff3cd';
+      statusDiv.style.color = '#856404';
+      statusDiv.style.borderColor = '#ffeaa7';
+      statusDiv.style.display = 'block';
+      return;
+    }
 
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending...';
+    // Sending state
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
 
-      emailjs.send('service_fnzuahb', 'template_brlsskr', {
-        from_name: name,
-        from_email: email,
-        destination: destination,
-        message: message
-      }).then((response) => {
-        statusDiv.style.display = 'block';
-        statusDiv.style.background = '#d4edda';
-        statusDiv.style.color = '#155724';
-        statusDiv.style.borderColor = '#c3e6cb';
-        statusDiv.innerHTML = '<strong style="font-size:1.1em">✅ Message Sent Successfully!</strong><br>We\'ll reply to your email soon. Thank you for reaching out!';
-        statusDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        contactForm.reset();
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Send Message';
-        setTimeout(() => { statusDiv.style.display = 'none'; }, 6000);
-      }).catch((error) => {
-        statusDiv.style.display = 'block';
-        statusDiv.style.background = '#f8d7da';
-        statusDiv.style.color = '#721c24';
-        statusDiv.style.borderColor = '#f5c6cb';
-        statusDiv.innerHTML = '<strong style="font-size:1.1em">❌ Failed to Send</strong><br>Error: ' + (error.text || 'Unknown error') + '<br>Please try again or email theloveandlayover@gmail.com';
-        statusDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Send Message';
-      });
+    // Send email
+    emailjs.send('service_fnzuahb', 'template_brlsskr', {
+      from_name: name,
+      from_email: email,
+      destination: destination,
+      message: message
+    }).then(function() {
+      // Success
+      statusDiv.innerHTML = '<strong>✅ Message Sent Successfully!</strong><br>We\'ll reply to your email soon.';
+      statusDiv.style.background = '#d4edda';
+      statusDiv.style.color = '#155724';
+      statusDiv.style.borderColor = '#c3e6cb';
+      statusDiv.style.display = 'block';
+      statusDiv.scrollIntoView({ behavior: 'smooth' });
+
+      form.reset();
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send Message';
+
+      setTimeout(() => { statusDiv.style.display = 'none'; }, 6000);
+    }).catch(function(error) {
+      // Error
+      statusDiv.innerHTML = '<strong>❌ Failed to Send</strong><br>Error: ' + (error.text || error.message || 'Unknown error');
+      statusDiv.style.background = '#f8d7da';
+      statusDiv.style.color = '#721c24';
+      statusDiv.style.borderColor = '#f5c6cb';
+      statusDiv.style.display = 'block';
+      statusDiv.scrollIntoView({ behavior: 'smooth' });
+
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send Message';
     });
-  }
-});
+  });
 </script>
 
 </body>
