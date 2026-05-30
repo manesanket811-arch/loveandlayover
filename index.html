@@ -576,43 +576,33 @@
       <h2>Destinations & itineraries</h2>
       <p>Real itineraries from places we've explored — with timings, costs, tips, and honest reviews.</p>
     </div>
-    <div class="guide-grid">
-      <div class="gcard reveal" style="cursor:pointer">
-        <div class="gtop t1"><span class="badge">🍜 Food & Culture</span><div class="days"><span class="nn">4</span><span class="dd">days</span></div></div>
-        <div class="gbody"><h3>Singapore Food Tour</h3><p>Hawker centers, local food markets, temples & museums. The ultimate food lover's 4-day guide to Singapore's best eats and culture.</p><span class="link" style="display:block;margin-top:12px">► Expand itinerary</span></div>
-        <div style="display:none;padding:20px;border-top:1px solid rgba(13,38,43,.1);background:#fafaf9;font-size:.95rem;color:#56646a">
-          <h4 style="font-family:'Fraunces',serif;margin-bottom:12px">Day-by-Day Breakdown:</h4>
-          <p><strong>Day 1:</strong> Chinatown exploration - temples, street food, traditional desserts</p>
-          <p style="margin-top:8px"><strong>Day 2:</strong> Little India - spice markets, Sri Mariamman Temple, roti prata</p>
-          <p style="margin-top:8px"><strong>Day 3:</strong> Kampong Glam - Arab Street, Sultan Mosque, traditional coffee shops</p>
-          <p style="margin-top:8px"><strong>Day 4:</strong> Hawker centers - Maxwell Food Centre, Tiong Bahru, Newton Circus</p>
-          <p style="margin-top:16px;color:#6a777c">For detailed timing, costs, and restaurant recommendations, <a href="blog/singapore-food-guide.html" style="color:var(--accent);font-weight:600">read the full guide →</a></p>
+
+    <div style="background:#fff;border-radius:18px;padding:28px;box-shadow:0 10px 40px rgba(26,35,50,.12);margin:40px 0;display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <div>
+        <label style="display:block;font-weight:600;margin-bottom:8px;color:var(--ink);font-size:.95rem">Country</label>
+        <select id="homeCountryFilter" style="width:100%;padding:10px 12px;border:2px solid rgba(26,35,50,.2);border-radius:8px;font-family:'Outfit',sans-serif;font-size:1rem;cursor:pointer;background:#fff">
+          <option value="">All Destinations (5)</option>
+          <option value="Singapore">Singapore</option>
+          <option value="Japan">Japan</option>
+          <option value="Vietnam">Vietnam</option>
+          <option value="Bali">Bali</option>
+          <option value="Malaysia">Malaysia</option>
+        </select>
+      </div>
+      <div>
+        <label style="display:block;font-weight:600;margin-bottom:8px;color:var(--ink);font-size:.95rem">Duration</label>
+        <div style="display:flex;gap:8px">
+          <button class="home-duration-btn active" data-duration="3" style="flex:1;padding:10px 12px;border:2px solid rgba(26,35,50,.2);border-radius:8px;background:#fff;cursor:pointer;font-weight:600;color:var(--ink);transition:.25s">3 Days</button>
+          <button class="home-duration-btn" data-duration="5" style="flex:1;padding:10px 12px;border:2px solid rgba(26,35,50,.2);border-radius:8px;background:#fff;cursor:pointer;font-weight:600;color:var(--ink);transition:.25s">5 Days</button>
+          <button class="home-duration-btn" data-duration="10" style="flex:1;padding:10px 12px;border:2px solid rgba(26,35,50,.2);border-radius:8px;background:#fff;cursor:pointer;font-weight:600;color:var(--ink);transition:.25s">10 Days</button>
         </div>
       </div>
-      <div class="gcard reveal" style="cursor:pointer">
-        <div class="gtop t2"><span class="badge">🌿 Nature & Gardens</span><div class="days"><span class="nn">3</span><span class="dd">days</span></div></div>
-        <div class="gbody"><h3>Singapore Gardens & Parks</h3><p>Gardens by the Bay, nature reserves, and botanical gardens. A peaceful escape in Southeast Asia's garden city with insider tips.</p><span class="link" style="display:block;margin-top:12px">► Expand itinerary</span></div>
-        <div style="display:none;padding:20px;border-top:1px solid rgba(13,38,43,.1);background:#fafaf9;font-size:.95rem;color:#56646a">
-          <h4 style="font-family:'Fraunces',serif;margin-bottom:12px">Day-by-Day Breakdown:</h4>
-          <p><strong>Day 1:</strong> Singapore Botanic Gardens - herb garden, orchid garden, peaceful walks</p>
-          <p style="margin-top:8px"><strong>Day 2:</strong> East Coast beaches - Changi Beach, East Coast Park, water sports, sunset</p>
-          <p style="margin-top:8px"><strong>Day 3:</strong> Pulau Ubin - mangrove kayaking, mountain biking, island trekking</p>
-          <p style="margin-top:16px;color:#6a777c">For detailed timing, costs, and insider tips, <a href="blog/singapore-budget-travel.html" style="color:var(--accent);font-weight:600">read the full guide →</a></p>
-        </div>
-      </div>
-      <div class="gcard reveal" style="cursor:pointer">
-        <div class="gtop t3"><span class="badge">🏙 City Explorer</span><div class="days"><span class="nn">5</span><span class="dd">days</span></div></div>
-        <div class="gbody"><h3>Singapore Complete 5-Day Guide</h3><p>Marina Bay, colonial architecture, neighborhoods, shopping & nightlife. Everything you need to experience Singapore like a local.</p><span class="link" style="display:block;margin-top:12px">► Expand itinerary</span></div>
-        <div style="display:none;padding:20px;border-top:1px solid rgba(13,38,43,.1);background:#fafaf9;font-size:.95rem;color:#56646a">
-          <h4 style="font-family:'Fraunces',serif;margin-bottom:12px">Day-by-Day Breakdown:</h4>
-          <p><strong>Day 1:</strong> Marina Bay - Sands observation deck, light show, Gardens by the Bay</p>
-          <p style="margin-top:8px"><strong>Day 2:</strong> Gardens by the Bay - Supertrees, Cloud Forest, Art & Science Museum</p>
-          <p style="margin-top:8px"><strong>Day 3:</strong> Chinatown - temples, street food, Singapore Flyer sunset</p>
-          <p style="margin-top:8px"><strong>Day 4:</strong> Sentosa Island - Universal Studios, beaches, S.E.A Aquarium</p>
-          <p style="margin-top:8px"><strong>Day 5:</strong> Orchard Road - shopping, local markets, relaxation</p>
-          <p style="margin-top:16px;color:#6a777c">For detailed timing, costs, and all recommendations, <a href="blog/singapore-5-day-itinerary.html" style="color:var(--accent);font-weight:600">read the full guide →</a></p>
-        </div>
-      </div>
+    </div>
+
+    <a href="itinerary-builder.html" style="display:inline-block;margin-bottom:28px;color:var(--accent);font-weight:600">View all itineraries →</a>
+
+    <div class="guide-grid" id="homeGuidesContainer">
+      <div style="grid-column:1/-1;text-align:center;padding:40px"><p>Loading itineraries...</p></div>
     </div>
   </div>
 </section>
@@ -929,6 +919,77 @@
     messagesDiv.innerHTML = sessionStorage.getItem('chat-history');
     messagesDiv.scrollTop = messagesDiv.scrollHeight;
   }
+
+  // ===== ITINERARY SELECTOR =====
+  let allItineraries = [];
+  let selectedCountry = '';
+  let selectedDuration = 3;
+
+  async function loadHomeItineraries() {
+    try {
+      const response = await fetch('data/itineraries.json');
+      const data = await response.json();
+      allItineraries = data.itineraries;
+      renderHomeCards();
+    } catch (error) {
+      console.error('Error loading itineraries:', error);
+      document.getElementById('homeGuidesContainer').innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:40px"><p>Error loading itineraries</p></div>';
+    }
+  }
+
+  function renderHomeCards() {
+    let filtered = allItineraries;
+
+    if(selectedCountry) {
+      filtered = filtered.filter(it => it.country === selectedCountry);
+    }
+
+    filtered = filtered.filter(it => it.duration === selectedDuration);
+
+    if(filtered.length === 0) {
+      document.getElementById('homeGuidesContainer').innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:40px"><p>No itineraries found</p></div>';
+      return;
+    }
+
+    const html = filtered.map(it => `
+      <div class="gcard reveal" style="cursor:pointer">
+        <div class="gtop ${it.colorClass}"><span class="badge">${it.emoji} ${it.badge}</span><div class="days"><span class="nn">${it.duration}</span><span class="dd">days</span></div></div>
+        <div class="gbody"><h3>${it.title}</h3><p>${it.description}</p><span class="link" style="display:block;margin-top:12px;cursor:pointer" onclick="this.nextElementSibling.classList.toggle('show'); this.textContent = this.nextElementSibling.classList.contains('show') ? '▼ Collapse' : '▶ Expand'">▶ Expand</span></div>
+        <div style="display:none;padding:20px;border-top:1px solid rgba(13,38,43,.1);background:#fafaf9;font-size:.95rem;color:#56646a" class="show">
+          <h4 style="font-family:'Fraunces',serif;margin-bottom:12px">Day-by-Day Breakdown:</h4>
+          ${it.days.map(day => `<p><strong>Day ${day.day} — ${day.title}</strong></p><p>Attractions: ${day.attractions.join(', ')}</p><p>Cost: ${day.cost}</p><p style="margin-bottom:12px">Tips: ${day.tips.join(' • ')}</p>`).join('')}
+          <p style="margin-top:16px"><a href="itinerary-builder.html" style="color:var(--accent);font-weight:600">View all itineraries →</a></p>
+        </div>
+      </div>
+    `).join('');
+
+    document.getElementById('homeGuidesContainer').innerHTML = html;
+  }
+
+  document.getElementById('homeCountryFilter').addEventListener('change', (e) => {
+    selectedCountry = e.target.value;
+    renderHomeCards();
+  });
+
+  document.querySelectorAll('.home-duration-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.home-duration-btn').forEach(b => b.style.background = '#fff');
+      btn.style.background = 'var(--accent)';
+      btn.style.color = '#fff';
+      btn.style.borderColor = 'var(--accent)';
+      document.querySelectorAll('.home-duration-btn').forEach(b => {
+        if(b !== btn) {
+          b.style.background = '#fff';
+          b.style.color = 'var(--ink)';
+          b.style.borderColor = 'rgba(26,35,50,.2)';
+        }
+      });
+      selectedDuration = parseInt(btn.dataset.duration);
+      renderHomeCards();
+    });
+  });
+
+  loadHomeItineraries();
 </script>
 </body>
 </html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Itinerary Builder — Plan Your Perfect Trip | Love and Layovers</title>
+<meta name="description" content="Interactive itinerary builder. Choose your destination (Singapore, Japan, Vietnam, Bali, Malaysia) and duration (3, 5, or 10 days) to get a customized travel plan.">
+<link rel="canonical" href="https://www.loveandlayover.in/itinerary-builder.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Datadog RUM -->
+<script>
+  (function(h,o,u,n,d) {
+    h=h[d]=h[d]||{q:[],onReady:function(c){h.q.push(c)}}
+    d=o.createElement(u);d.async=1;d.src=n;d.crossOrigin=''
+    n=o.getElementsByTagName(u)[0];n.parentNode.insertBefore(d,n)
+  })(window,document,'script','https://www.datadoghq-browser-agent.com/us5/v7/datadog-rum.js','DD_RUM')
+  window.DD_RUM.onReady(function() {
+    window.DD_RUM.init({
+        applicationId: '2b36cb95-5c53-4b4c-afd7-5cc7207d8d8c',
+        clientToken: 'pub398e9055d3a8e18d44a22e64e505b1fa',
+        site: 'us5.datadoghq.com',
+        service: 'love-and-layovers',
+        env: 'production',
+        version: '1.0.0',
+        sessionSampleRate: 100,
+        sessionReplaySampleRate: 20,
+        trackResources: true,
+        trackUserInteractions: true,
+        trackLongTasks: true,
+    });
+  })
+</script>
+<style>
+:root { --ink:#1a2332; --paper:#fefaf5; --accent:#ff6b35; --secondary:#f7931e; --teal:#0fb6a8; --deep:#0d4f6b; --sky:#ffe9d6; --shadow:rgba(26,35,50,.12); --maxw:1180px; }
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'Outfit',sans-serif; background:var(--paper); color:var(--ink); overflow-x:hidden; line-height:1.6; }
+h1,h2,h3 { font-family:'Fraunces',serif; line-height:1.1; font-weight:900; letter-spacing:-.02em; }
+a { color:inherit; text-decoration:none; }
+.wrap { max-width:var(--maxw); margin:0 auto; padding:0 24px; }
+header { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(255,250,242,.92); backdrop-filter:blur(12px); box-shadow:0 2px 24px var(--shadow); }
+nav { display:flex; align-items:center; justify-content:space-between; max-width:var(--maxw); margin:0 auto; padding:14px 24px; }
+.logo { font-family:'Fraunces',serif; font-weight:900; font-size:1.3rem; color:var(--ink); display:flex; align-items:center; gap:9px; }
+.logo .dot { width:32px; height:32px; border-radius:50%; background-image:url('https://loveandlayover-website-604218333793.s3.us-east-1.amazonaws.com/logo.jpg'); background-size:cover; background-position:center; border:2px solid var(--accent); }
+.back-link { font-weight:600; color:var(--accent); }
+.hero-page { padding:140px 0 60px; background:linear-gradient(135deg,var(--accent),var(--secondary)); color:#fff; }
+.hero-page h1 { font-size:clamp(2.2rem,5vw,3.5rem); margin-bottom:12px; }
+.selector-box { background:#fff; border-radius:18px; padding:40px 32px; box-shadow:0 10px 40px var(--shadow); margin:50px 0; }
+.selector-box h2 { font-size:1.4rem; margin-bottom:24px; color:var(--ink); text-align:center; }
+.selector-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:32px; }
+.selector-group label { display:block; font-weight:600; margin-bottom:8px; color:var(--ink); }
+select, .duration-btns { width:100%; padding:12px 14px; border:2px solid rgba(26,35,50,.2); border-radius:8px; font-family:'Outfit',sans-serif; font-size:1rem; }
+select { cursor:pointer; background:#fff; }
+.duration-btns { display:flex; gap:8px; }
+.duration-btn { flex:1; padding:10px 12px; border:2px solid rgba(26,35,50,.2); border-radius:8px; background:#fff; cursor:pointer; font-weight:600; color:var(--ink); transition:.25s; }
+.duration-btn:hover { border-color:var(--accent); }
+.duration-btn.active { background:var(--accent); color:#fff; border-color:var(--accent); }
+.results-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:32px; padding:40px 0; }
+.gcard { background:#fff; border-radius:18px; overflow:hidden; box-shadow:0 10px 40px var(--shadow); transition:.3s; }
+.gcard:hover { transform:translateY(-8px); box-shadow:0 22px 55px rgba(13,38,43,.18); }
+.gtop { padding:28px; color:#fff; display:flex; justify-content:space-between; align-items:flex-start; gap:16px; }
+.gtop.t1 { background:linear-gradient(135deg,var(--accent),var(--secondary)); }
+.gtop.t2 { background:linear-gradient(135deg,var(--teal),var(--deep)); }
+.gtop.t3 { background:linear-gradient(135deg,var(--secondary),#ffd166); }
+.badge { font-weight:600; font-size:.8rem; background:rgba(255,255,255,.25); padding:4px 10px; border-radius:20px; white-space:nowrap; }
+.days { width:44px; height:44px; border-radius:50%; background:rgba(255,255,255,.2); display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1.1rem; }
+.gbody { padding:28px; }
+.gbody h3 { font-size:1.2rem; margin-bottom:12px; color:var(--ink); }
+.gbody p { color:#56646a; font-size:.95rem; margin-bottom:16px; }
+.expand-link { font-weight:600; color:var(--accent); display:inline-flex; align-items:center; gap:6px; transition:.2s; cursor:pointer; }
+.expand-link:hover { gap:10px; }
+.hidden-content { display:none; padding-top:16px; border-top:1px solid rgba(13,38,43,.1); }
+.hidden-content.show { display:block; animation:slideDown .3s ease; }
+@keyframes slideDown { from { opacity:0; transform:translateY(-10px); } to { opacity:1; transform:none; } }
+.day-item { margin-bottom:20px; }
+.day-item h4 { color:var(--accent); font-weight:600; margin-bottom:8px; }
+.day-item p { color:#56646a; font-size:.9rem; margin:4px 0; }
+.no-results { text-align:center; padding:60px 20px; }
+.no-results p { font-size:1.1rem; color:#56646a; }
+footer { background:var(--ink); color:#9fb0b5; padding:50px 0 30px; margin-top:60px; }
+.foot { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px; }
+footer .logo { color:var(--paper); }
+.foot-links { display:flex; gap:24px; flex-wrap:wrap; }
+.foot-links a:hover { color:var(--secondary); }
+.copy { text-align:center; margin-top:30px; padding-top:24px; border-top:1px solid rgba(255,255,255,.08); font-size:.85rem; }
+@media(max-width:900px) { .results-grid { grid-template-columns:1fr; } .selector-grid { grid-template-columns:1fr; } }
+@media(max-width:560px) { .hero-page { padding:100px 0 40px; } .selector-box { padding:24px 16px; } .duration-btns { flex-direction:column; } }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="logo"><span class="dot"></span>Love and Layovers</a>
+    <a href="index.html" class="back-link">← Back home</a>
+  </nav>
+</header>
+
+<section class="hero-page">
+  <div class="wrap">
+    <h1>Plan Your Itinerary</h1>
+    <p>Choose your destination and duration to get a customized travel plan.</p>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="selector-box">
+    <h2>Select Your Destination & Duration</h2>
+    <div class="selector-grid">
+      <div class="selector-group">
+        <label for="countryFilter">Country</label>
+        <select id="countryFilter">
+          <option value="">All Destinations</option>
+          <option value="Singapore">Singapore</option>
+          <option value="Japan">Japan</option>
+          <option value="Vietnam">Vietnam</option>
+          <option value="Bali">Bali</option>
+          <option value="Malaysia">Malaysia</option>
+        </select>
+      </div>
+      <div class="selector-group">
+        <label>Duration</label>
+        <div class="duration-btns">
+          <button class="duration-btn active" data-duration="3">3 Days</button>
+          <button class="duration-btn" data-duration="5">5 Days</button>
+          <button class="duration-btn" data-duration="10">10 Days</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="results-grid" id="resultsContainer">
+    <div class="no-results"><p>Loading itineraries...</p></div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a href="index.html" class="logo"><span class="dot"></span>Love and Layovers</a>
+      <div class="foot-links">
+        <a href="index.html#videos">Videos</a>
+        <a href="index.html#guides">Destinations</a>
+        <a href="blog.html">Blog</a>
+        <a href="faq.html">FAQ</a>
+        <a href="index.html#subscribe">Subscribe</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+    <div class="copy">© <span id="yr"></span> Love and Layovers · Travel tips with heart ✈</div>
+  </div>
+</footer>
+
+<script>
+let allItineraries = [];
+let selectedCountry = '';
+let selectedDuration = 3;
+
+// Load itineraries
+async function loadItineraries() {
+  try {
+    const response = await fetch('data/itineraries.json');
+    const data = await response.json();
+    allItineraries = data.itineraries;
+    renderCards();
+  } catch (error) {
+    console.error('Error loading itineraries:', error);
+    document.getElementById('resultsContainer').innerHTML = '<div class="no-results"><p>Error loading itineraries. Please refresh.</p></div>';
+  }
+}
+
+// Filter and render cards
+function renderCards() {
+  let filtered = allItineraries;
+
+  if (selectedCountry) {
+    filtered = filtered.filter(it => it.country === selectedCountry);
+  }
+
+  filtered = filtered.filter(it => it.duration === selectedDuration);
+
+  if (filtered.length === 0) {
+    document.getElementById('resultsContainer').innerHTML = '<div class="no-results" style="grid-column:1/-1"><p>No itineraries found for this selection.</p></div>';
+    return;
+  }
+
+  const html = filtered.map(it => `
+    <div class="gcard">
+      <div class="gtop ${it.colorClass}">
+        <div>
+          <span class="badge">${it.emoji} ${it.badge}</span>
+          <h3>${it.title}</h3>
+          <p>${it.description}</p>
+        </div>
+        <div class="days">${it.duration}</div>
+      </div>
+      <div class="gbody">
+        <a class="expand-link" onclick="toggleContent(this)">▶ Expand itinerary</a>
+        <div class="hidden-content">
+          ${it.days.map((day, idx) => `
+            <div class="day-item">
+              <h4>Day ${day.day} — ${day.title}</h4>
+              <p><strong>Attractions:</strong> ${day.attractions.join(', ')}</p>
+              <p><strong>Daily Cost:</strong> ${day.cost}</p>
+              <p><strong>Tips:</strong> ${day.tips.join(' • ')}</p>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    </div>
+  `).join('');
+
+  document.getElementById('resultsContainer').innerHTML = html;
+}
+
+// Toggle expand/collapse
+function toggleContent(link) {
+  const content = link.nextElementSibling;
+  content.classList.toggle('show');
+  link.textContent = content.classList.contains('show') ? '▼ Collapse itinerary' : '▶ Expand itinerary';
+}
+
+// Event listeners
+document.getElementById('countryFilter').addEventListener('change', (e) => {
+  selectedCountry = e.target.value;
+  renderCards();
+});
+
+document.querySelectorAll('.duration-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.duration-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    selectedDuration = parseInt(btn.dataset.duration);
+    renderCards();
+  });
+});
+
+// Initialize
+document.getElementById('yr').textContent = new Date().getFullYear();
+loadItineraries();
+</script>
+
+</body>
+</html>
