@@ -750,8 +750,12 @@
   // Enhanced Chatbot with Better UI
   const chatbotHTML = `
     <div id="chatbot-widget" style="position:fixed;bottom:20px;right:20px;z-index:999;font-family:inherit">
-      <div id="chatbot-button" style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#ff9e1b,#ff5d3b);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.8rem;box-shadow:0 4px 20px rgba(255,107,53,.4);transition:.3s">
-        ✈
+      <div id="chatbot-button" style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#ff9e1b,#ff5d3b);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 20px rgba(255,107,53,.4);transition:.3s">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 2C8.27 2 2 8.27 2 16c0 2.33.57 4.53 1.58 6.45L2 30l7.55-1.58A13.95 13.95 0 0016 30c7.73 0 14-6.27 14-14S23.73 2 16 2zm0 25.5c-2.04 0-3.98-.5-5.68-1.39l-.41-.22-4.25.89.89-4.25-.22-.41A11.47 11.47 0 014.5 16c0-6.35 5.15-11.5 11.5-11.5S27.5 9.65 27.5 16 22.35 27.5 16 27.5z" fill="currentColor"/>
+          <path d="M9 15h14v2H9z" fill="currentColor" opacity="0.7"/>
+          <path d="M9 19h10v2H9z" fill="currentColor" opacity="0.7"/>
+        </svg>
       </div>
       <div id="chatbot-window" style="display:none;position:absolute;bottom:80px;right:0;width:380px;max-height:550px;background:#fff;border-radius:20px;box-shadow:0 10px 50px rgba(0,0,0,.2);flex-direction:column;overflow:hidden">
         <div style="background:linear-gradient(135deg,#ff9e1b,#ff5d3b);color:#fff;padding:20px;font-weight:600;display:flex;justify-content:space-between;align-items:center">
