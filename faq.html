@@ -354,9 +354,10 @@ footer .logo { color:var(--paper); }
       submitBtn.disabled = false;
       submitBtn.textContent = 'Send Message';
     });
-      } else {
-        console.error('Contact form not found!');
-      }
+      });
+    } else {
+      console.error('Contact form not found!');
+    }
   }
 
   // Initialize when DOM is ready
