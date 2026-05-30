@@ -265,8 +265,11 @@ footer .logo { color:var(--paper); }
 
     // Contact form submission
     const contactForm = document.getElementById('contact-form');
+    console.log('Contact form element:', contactForm);
     if(contactForm) {
+      console.log('Form found! Attaching submit listener...');
       contactForm.addEventListener('submit', function(e) {
+        console.log('Form submit event fired!');
     e.preventDefault();
 
     const submitBtn = document.getElementById('submit-btn');
