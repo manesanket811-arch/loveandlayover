@@ -618,13 +618,13 @@
         <a class="chan" href="mailto:theloveandlayover@gmail.com"><div class="ic em">✉</div><div><div class="t">Email</div><div class="s">theloveandlayover@gmail.com</div></div></a>
       </div>
     </div>
-    <form class="cform" id="cform">
-      <div class="field"><label for="name">Your name</label><input type="text" id="name" placeholder="Jane Traveler" required></div>
-      <div class="field"><label for="cemail">Email</label><input type="email" id="cemail" placeholder="you@email.com" required></div>
-      <div class="field"><label for="dest">Where are you going?</label><input type="text" id="dest" placeholder="e.g. Japan in spring"></div>
-      <div class="field"><label for="msg">Your question</label><textarea id="msg" placeholder="What would you like help with?" required></textarea></div>
+    <form class="cform" id="contact-form" action="https://usebasin.com/f/40f3bf9ec4e9" method="POST">
+      <div class="field"><label for="name">Your name</label><input type="text" id="name" name="name" placeholder="Jane Traveler" required></div>
+      <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="you@email.com" required></div>
+      <div class="field"><label for="destination">Where are you going?</label><select id="destination" name="destination" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-family:inherit;font-size:.95rem"><option value="">Select a destination...</option><option value="Singapore">🇸🇬 Singapore</option><option value="Japan">🇯🇵 Japan</option><option value="Vietnam">🇻🇳 Vietnam</option><option value="Bali">🇮🇩 Bali</option><option value="Malaysia">🇲🇾 Malaysia</option></select></div>
+      <div class="field"><label for="message">Your question</label><textarea id="message" name="message" placeholder="What would you like help with?" required></textarea></div>
       <button type="submit" class="btn coral" style="width:100%;font-size:1rem;padding:15px">Send message</button>
-      <div id="formNote" style="margin-top:14px;font-size:.88rem;color:var(--deep);display:none"></div>
+      <div id="form-status" style="margin-top:14px;font-size:.88rem;color:var(--deep);display:none;padding:12px;border-radius:6px;text-align:center"></div>
     </form>
   </div>
 </section>
