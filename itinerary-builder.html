@@ -162,6 +162,7 @@ footer .logo { color:var(--paper); }
 document.getElementById('yr').textContent = new Date().getFullYear();
 
 let allItineraries = [];
+let itineraryMap = {};
 let selectedCountry = '';
 let selectedDuration = 3;
 
@@ -170,6 +171,9 @@ fetch('/data/itineraries.json')
   .then(response => response.json())
   .then(data => {
     allItineraries = data.itineraries || [];
+    allItineraries.forEach(it => {
+      itineraryMap[it.id] = it;
+    });
     renderItineraries();
   })
   .catch(error => {
@@ -208,7 +212,7 @@ function renderItineraries() {
   }
 
   grid.innerHTML = filtered.map(it => `
-    <div class="card" onclick="openModal(${JSON.stringify(it).replace(/"/g, '&quot;')})">
+    <div class="card" style="cursor:pointer;" onclick="openModal('${it.id}')">
       <div class="card-header">
         <h3>${it.emoji} ${it.country}</h3>
         <div class="duration">${it.duration} Days</div>
@@ -217,20 +221,23 @@ function renderItineraries() {
       <div class="card-body">
         <h4>${it.title}</h4>
         <p>${it.description}</p>
-        <p style="margin-top:12px; font-size:.85rem; color:var(--accent); font-weight:600;">Click to view details →</p>
+        <p style="margin-top:12px; font-size:.85rem; color:var(--accent); font-weight:600;">👆 Click to view day-by-day itinerary</p>
       </div>
     </div>
   `).join('');
 }
 
-function openModal(itinerary) {
+function openModal(itineraryId) {
+  const itinerary = itineraryMap[itineraryId];
+  if (!itinerary) return;
+
   const modal = document.getElementById('detailsModal');
   const title = document.getElementById('modalTitle');
   const body = document.getElementById('modalBody');
 
   title.textContent = `${itinerary.emoji} ${itinerary.title}`;
 
-  let daysHtml = '<div style="margin-bottom:16px;"><strong>Cost per day:</strong> ' + itinerary.days[0].cost + '</div>';
+  let daysHtml = '<div style="margin-bottom:20px;"><strong style="color:var(--accent); font-size:1.1rem;">Budget estimate:</strong> ' + itinerary.days.map(d => d.cost).join(' → ') + '</div>';
   daysHtml += itinerary.days.map(day => `
     <div class="day-item">
       <h3>Day ${day.day}: ${day.title}</h3>
@@ -238,8 +245,8 @@ function openModal(itinerary) {
       <ul style="margin-left:20px; margin-bottom:10px;">
         ${day.attractions.map(attr => `<li>${attr}</li>`).join('')}
       </ul>
-      <p><strong>Budget:</strong> ${day.cost}</p>
-      <p><strong>Tips:</strong></p>
+      <p><strong>💰 Budget:</strong> ${day.cost}</p>
+      <p><strong>💡 Tips:</strong></p>
       <ul style="margin-left:20px;">
         ${day.tips.map(tip => `<li>${tip}</li>`).join('')}
       </ul>
