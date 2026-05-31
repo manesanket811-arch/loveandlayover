@@ -146,7 +146,7 @@ let selectedCountry = '';
 let selectedDuration = 3;
 
 // Load itineraries data
-fetch('/data/test-itineraries.json')
+fetch('/data/itineraries.json')
   .then(response => response.json())
   .then(data => {
     allItineraries = data.itineraries || [];
@@ -187,19 +187,19 @@ function renderItineraries() {
     return;
   }
 
-  grid.innerHTML = filtered.map(it => 
+  grid.innerHTML = filtered.map(it => `
     <div class="card">
       <div class="card-header">
-        <h3> </h3>
-        <div class="duration"> Days</div>
-        <div class="badge"></div>
+        <h3>${it.emoji} ${it.country}</h3>
+        <div class="duration">${it.duration} Days</div>
+        <div class="badge">${it.badge || 'Explorer'}</div>
       </div>
       <div class="card-body">
-        <h4></h4>
-        <p></p>
+        <h4>${it.title}</h4>
+        <p>${it.description}</p>
       </div>
     </div>
-  ).join('');
+  `).join('');
 }
 </script>
 
