@@ -168,17 +168,23 @@ let selectedDuration = 3;
 
 // Load itineraries data
 fetch('/data/itineraries.json')
-  .then(response => response.json())
+  .then(response => {
+    if (!response.ok) throw new Error('Failed to fetch: ' + response.status);
+    return response.json();
+  })
   .then(data => {
+    console.log('Data loaded:', data);
     allItineraries = data.itineraries || [];
+    console.log('Loaded', allItineraries.length, 'itineraries');
     allItineraries.forEach(it => {
       itineraryMap[it.id] = it;
     });
+    console.log('Map keys:', Object.keys(itineraryMap).slice(0, 5));
     renderItineraries();
   })
   .catch(error => {
     console.error('Error loading itineraries:', error);
-    document.getElementById('itinerary-grid').innerHTML = '<div class="empty-state"><p>Error loading itineraries. Please refresh the page.</p></div>';
+    document.getElementById('itinerary-grid').innerHTML = '<div class="empty-state"><p>Error loading itineraries: ' + error.message + '</p></div>';
   });
 
 // Country selector
@@ -229,7 +235,15 @@ function renderItineraries() {
 
 function openModal(itineraryId) {
   const itinerary = itineraryMap[itineraryId];
-  if (!itinerary) return;
+  if (!itinerary) {
+    console.error('Itinerary not found:', itineraryId);
+    console.log('Available IDs:', Object.keys(itineraryMap));
+    return;
+  }
+  if (!itinerary.days) {
+    console.error('No days for itinerary:', itinerary);
+    return;
+  }
 
   const modal = document.getElementById('detailsModal');
   const title = document.getElementById('modalTitle');
