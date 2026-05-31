@@ -1,814 +1,436 @@
-{
-  "itineraries": [
-    {
-      "id": "singapore-3",
-      "country": "Singapore",
-      "duration": 3,
-      "title": "Singapore 3-Day Express",
-      "emoji": "🏙",
-      "description": "Hit the iconic highlights in just 3 days. Perfect for short stopovers.",
-      "badge": "City Explorer",
-      "colorClass": "t1",
-      "days": [
-        {
-          "day": 1,
-          "title": "Arrival & Marina Bay Magic",
-          "attractions": ["Marina Bay Sands observation deck (2-3 hrs)", "ArtScience Museum", "Light show at Gardens by the Bay (free)", "Dinner at Marina Bay waterfront"],
-          "cost": "SGD 100-150",
-          "tips": ["Arrive early at MBS for sunset views", "Light show runs nightly at 7:45pm & 8:45pm", "Hawker dinner is cheaper than restaurants"]
-        },
-        {
-          "day": 2,
-          "title": "Culture & Heritage",
-          "attractions": ["Chinatown walking tour", "Sri Mariamman Temple", "Buddha Tooth Relic Temple", "Thian Hock Keng temple", "Maxwell Food Centre dinner"],
-          "cost": "SGD 80-120",
-          "tips": ["Wear comfortable shoes for walking", "Food at hawker centers is 2-4 SGD per dish", "Visit temples early to avoid crowds"]
-        },
-        {
-          "day": 3,
-          "title": "Nature & Island Escape",
-          "attractions": ["Gardens by the Bay Cloud Forest & Flower Dome", "Sentosa Island beaches", "Universal Studios or S.E.A Aquarium", "Singapore Flyer optional"],
-          "cost": "SGD 120-180",
-          "tips": ["Monorail to Sentosa is cheaper than cable car", "Beach time is free, activities are paid", "End with Flyer for night city views"]
-        }
-      ]
-    },
-    {
-      "id": "singapore-5",
-      "country": "Singapore",
-      "duration": 5,
-      "title": "Singapore 5-Day Complete",
-      "emoji": "🏙",
-      "description": "Full Singapore experience. Food, culture, nature, and nightlife.",
-      "badge": "Food & Explorer",
-      "colorClass": "t2",
-      "days": [
-        {
-          "day": 1,
-          "title": "Arrival & Marina Bay",
-          "attractions": ["Marina Bay Sands observation deck", "Gardens by the Bay light show", "ArtScience Museum", "Esplanade walk"],
-          "cost": "SGD 120-150",
-          "tips": ["Buy MBS ticket online to skip queues", "Visit at sunset for best views", "Free light show at 7:45pm & 8:45pm"]
-        },
-        {
-          "day": 2,
-          "title": "Hawker & Street Food Tour",
-          "attractions": ["Maxwell Food Centre breakfast", "Tiong Bahru wet market & hawker", "Chinatown walking tour", "Newton Food Centre seafood dinner"],
-          "cost": "SGD 60-100",
-          "tips": ["Eat where locals eat for best prices", "Try laksa, hainanese chicken, char kway teow", "Bring cash for hawker stalls"]
-        },
-        {
-          "day": 3,
-          "title": "Cultural Heritage",
-          "attractions": ["Sri Mariamman Temple", "Chinatown Heritage Centre", "Buddha Tooth Relic Temple", "Little India walking tour", "Kampong Glam Arab Street"],
-          "cost": "SGD 80-120",
-          "tips": ["Temples are free entry", "Heritage museum is 10 SGD", "Shop for souvenirs on Arab Street"]
-        },
-        {
-          "day": 4,
-          "title": "Island & Nature",
-          "attractions": ["Sentosa Island full day", "Universal Studios or S.E.A Aquarium", "Beach time at Siloso Beach", "Sunset cable car ride", "Sentosa night market"],
-          "cost": "SGD 150-220",
-          "tips": ["Cable car is SGD 35 roundtrip", "Attractions 25-35 SGD each", "Beach is free, restaurants near beach are pricey"]
-        },
-        {
-          "day": 5,
-          "title": "Nature, Botanic Gardens & Nightlife",
-          "attractions": ["Singapore Botanic Gardens (free)", "Thomson Nature Park", "East Coast Seafood Centre for dinner", "Clarke Quay bar hopping", "Shopping at Orchad Road"],
-          "cost": "SGD 100-180",
-          "tips": ["Botanic Gardens is largest greenspace in city", "East Coast is local seafood spot", "Orchad Road malls open until 10pm"]
-        }
-      ]
-    },
-    {
-      "id": "singapore-10",
-      "country": "Singapore",
-      "duration": 10,
-      "title": "Singapore 10-Day Deep Dive",
-      "emoji": "🏙",
-      "description": "Slow travel. Explore every neighborhood, food district, and hidden gem.",
-      "badge": "Complete Explorer",
-      "colorClass": "t3",
-      "days": [
-        {
-          "day": 1,
-          "title": "Arrival & Marina Bay",
-          "attractions": ["Marina Bay Sands observation deck at sunset", "Gardens by the Bay light show", "Esplanade walk & shopping"],
-          "cost": "SGD 120-150",
-          "tips": ["Arrive early to MBS", "Book hotel in Marina Bay for walkability"]
-        },
-        {
-          "day": 2,
-          "title": "Hawker Tour Part 1",
-          "attractions": ["Maxwell Food Centre (laksa & chicken rice)", "Tiong Bahru Market", "Lau Pa Sat historic market", "Outram Park dinner"],
-          "cost": "SGD 50-80",
-          "tips": ["Start early, food is cheaper morning", "Peak hours 11am-1pm, 5-7pm"]
-        },
-        {
-          "day": 3,
-          "title": "Chinatown Deep Dive",
-          "attractions": ["Chinatown Heritage Museum", "Buddha Tooth Relic Temple", "Sri Mariamman Temple", "Thian Hock Keng", "Shophouse exploration"],
-          "cost": "SGD 60-100",
-          "tips": ["Hire local guide for stories", "Temple hours 8am-6pm typically"]
-        },
-        {
-          "day": 4,
-          "title": "Little India & Kampong Glam",
-          "attractions": ["Sri Veeramakaliamman Temple", "Little India street tour", "Spice markets", "Kampong Glam Arab Street", "Hajjah Fatimah Mosque"],
-          "cost": "SGD 70-110",
-          "tips": ["Wear modest clothing for temples", "Shopping is negotiable at markets", "Arab Street best at dusk"]
-        },
-        {
-          "day": 5,
-          "title": "Eastern Singapore",
-          "attractions": ["Katong neighbourhood food tour", "East Coast Park beaches", "East Coast Lagoon Food Village", "Changi Museum"],
-          "cost": "SGD 80-120",
-          "tips": ["Katong is local residential area", "East Coast seafood is must-eat", "Museum entry 6 SGD"]
-        },
-        {
-          "day": 6,
-          "title": "Nature & Gardens",
-          "attractions": ["Singapore Botanic Gardens full day", "Butterfly Park", "Japanese Garden & Chinese Garden", "Nature reserves walk"],
-          "cost": "SGD 60-100",
-          "tips": ["Botanic Gardens free, massive", "Bring water, sun protection", "Gardens open 5am-midnight"]
-        },
-        {
-          "day": 7,
-          "title": "Sentosa Island Full Day",
-          "attractions": ["Universal Studios Singapore full day OR S.E.A Aquarium", "Siloso Beach", "Fort Siloso historical site", "Cable car ride", "Sentosa boardwalk"],
-          "cost": "SGD 180-250",
-          "tips": ["Pick one major attraction, not both", "Cable car 35 SGD roundtrip", "Beach sunset is free"]
-        },
-        {
-          "day": 8,
-          "title": "Hawker Tour Part 2 & Hidden Neighborhoods",
-          "attractions": ["Alexandra Food Centre", "Mei Chin Road hawker stalls", "Outram Park", "Joo Chiat Road vintage shops", "Katong laksa king"],
-          "cost": "SGD 70-110",
-          "tips": ["These are non-touristy hawker spots", "Locals know best places"]
-        },
-        {
-          "day": 9,
-          "title": "Shopping & Nightlife",
-          "attractions": ["Orchard Road luxury shopping", "Ion Orchard mall (tallest in SG)", "Peranakan Museum", "Singapore Flyer at night", "Clarke Quay bar district"],
-          "cost": "SGD 100-200",
-          "tips": ["Most malls open until 10pm", "Flyer 33 SGD for night ride", "Clarke Quay drinks 12-20 SGD per cocktail"]
-        },
-        {
-          "day": 10,
-          "title": "Relaxation & Departure",
-          "attractions": ["Spa day (local spa 40-60 SGD/hr)", "Last-minute shopping at Changi airport", "Rooftop bar at Marina Bay for sunset", "Departure"],
-          "cost": "SGD 100-150",
-          "tips": ["Airport shopping is good for souvenirs", "Rooftop bars offer free-flow happy hour 5-7pm"]
-        }
-      ]
-    },
-    {
-      "id": "japan-3",
-      "country": "Japan",
-      "duration": 3,
-      "title": "Japan 3-Day Tokyo Highlights",
-      "emoji": "🗼",
-      "description": "Tokyo essentials: temples, shopping, culture in 72 hours.",
-      "badge": "City Lights",
-      "colorClass": "t1",
-      "days": [
-        {
-          "day": 1,
-          "title": "Arrival & Shibuya Sensibility",
-          "attractions": ["Senso-ji Temple in Asakusa", "Takeshita Street shopping", "Shibuya Crossing experience", "Meiji Shrine & Omotesando"],
-          "cost": "¥8,000-12,000",
-          "tips": ["Get JR Pass at airport if staying 7+ days", "IC card (Suica/Pasmo) for all transport", "Senso-ji is free, donation optional"]
-        },
-        {
-          "day": 2,
-          "title": "Modern & Traditional Tokyo",
-          "attractions": ["Tokyo Skytree or Tokyo Tower observation deck", "Akihabara electric district", "Harajuku youth culture", "Shinjuku neon lights", "Omoide Yokocho alley dinner"],
-          "cost": "¥10,000-15,000",
-          "tips": ["Observation deck 2,100 yen", "Akihabara is gamer & anime paradise", "Shinjuku after dark is electric"]
-        },
-        {
-          "day": 3,
-          "title": "Gardens & Escape",
-          "attractions": ["Imperial Palace East Gardens (free)", "Ueno Park & museums", "Rikugien Garden", "Ginza luxury district", "Tsukiji Outer Market for sushi"],
-          "cost": "¥9,000-13,000",
-          "tips": ["Gardens require 1000 yen entry", "Tsukiji sushi is best at breakfast", "Museum entry 600-1000 yen"]
-        }
-      ]
-    },
-    {
-      "id": "japan-5",
-      "country": "Japan",
-      "duration": 5,
-      "title": "Japan 5-Day Tokyo & Kawaguchiko",
-      "emoji": "🗼",
-      "description": "Tokyo city + Mt. Fuji views from Kawaguchiko lake town.",
-      "badge": "City & Mt. Fuji",
-      "colorClass": "t2",
-      "days": [
-        {
-          "day": 1,
-          "title": "Tokyo: Temples & Culture",
-          "attractions": ["Senso-ji Temple", "Meiji Shrine", "Harajuku fashion district", "Shibuya Crossing at night"],
-          "cost": "¥8,000-12,000",
-          "tips": ["Visit Senso-ji early morning", "Meiji Shrine is sacred, be respectful"]
-        },
-        {
-          "day": 2,
-          "title": "Tokyo: Modern Japan",
-          "attractions": ["Akihabara electronics & anime", "Shinjuku skyline & observation deck", "Tokyo Skytree", "Ginza luxury shopping"],
-          "cost": "¥10,000-15,000",
-          "tips": ["Observation decks 2,100+ yen", "Shinjuku is best at night"]
-        },
-        {
-          "day": 3,
-          "title": "Day Trip: Mt. Fuji Kawaguchiko",
-          "attractions": ["Chureito Pagoda with Mt. Fuji backdrop", "Lake Kawaguchiko boat ride", "Kawaguchi Lake Amusement Park", "Onsen (hot spring) experience"],
-          "cost": "¥12,000-18,000",
-          "tips": ["Bullet train to Kawaguchiko 1.5 hrs", "Clear mornings best for Mt. Fuji views", "Onsen entry 300-500 yen"]
-        },
-        {
-          "day": 4,
-          "title": "Ueno & Museum Day",
-          "attractions": ["Ueno Park full day", "Tokyo National Museum", "Ueno Zoo", "Rikugien Garden", "Asakusa evening walk"],
-          "cost": "¥7,000-10,000",
-          "tips": ["Park is free, museums 600-1000 yen", "Zoo entry 600 yen", "Plan 3-4 hours for museum"]
-        },
-        {
-          "day": 5,
-          "title": "Last-Minute Shopping & Departure",
-          "attractions": ["Tsukiji Outer Market breakfast", "Ginza final shopping", "Haneda Airport terminal shopping", "Departure"],
-          "cost": "¥8,000-12,000",
-          "tips": ["Tsukiji best early morning (6-9am)", "Airport shopping for souvenirs"]
-        }
-      ]
-    },
-    {
-      "id": "japan-10",
-      "country": "Japan",
-      "duration": 10,
-      "title": "Japan 10-Day Tokyo to Kyoto",
-      "emoji": "🗼",
-      "description": "Full Japan experience: Modern Tokyo + Traditional Kyoto + Mt. Fuji.",
-      "badge": "Complete Journey",
-      "colorClass": "t3",
-      "days": [
-        {
-          "day": 1,
-          "title": "Tokyo Arrival & Asakusa",
-          "attractions": ["Senso-ji Temple early morning", "Nakamise shopping street", "Asakusa culture & temples", "Evening Shibuya Crossing"],
-          "cost": "¥8,000-12,000",
-          "tips": ["Get 7-day JR Pass for Tokyo-Kyoto travel", "Stay in central Tokyo for first 5 days"]
-        },
-        {
-          "day": 2,
-          "title": "Tokyo Modern: Shibuya, Shinjuku, Harajuku",
-          "attractions": ["Shibuya Crossing & shopping", "Takeshita Street fashion", "Meiji Shrine & Omotesando", "Shinjuku observation deck & neon lights"],
-          "cost": "¥10,000-14,000",
-          "tips": ["Meiji Shrine free", "Shinjuku Tower 1,100 yen"]
-        },
-        {
-          "day": 3,
-          "title": "Tokyo Tech: Akihabara & Ginza",
-          "attractions": ["Akihabara electronics & anime", "Mandarake vintage shops", "Ginza luxury shopping", "Tsukiji Outer Market for fresh seafood"],
-          "cost": "¥9,000-13,000",
-          "tips": ["Akihabara best for gadgets", "Tsukiji sushi breakfast"]
-        },
-        {
-          "day": 4,
-          "title": "Mt. Fuji Day Trip from Tokyo",
-          "attractions": ["Bullet train to Kawaguchiko (90 min)", "Chureito Pagoda with Mt. Fuji view", "Lake Kawaguchiko boat ride", "Onsen hot spring soak"],
-          "cost": "¥12,000-18,000",
-          "tips": ["Use JR Pass for free bullet train", "Go early morning for clear Mt. Fuji views", "Stay overnight option for sunrise hike"]
-        },
-        {
-          "day": 5,
-          "title": "Tokyo Nature: Ueno & Imperial Palaces",
-          "attractions": ["Ueno Park full day exploration", "Tokyo National Museum", "Rikugien Garden", "Imperial Palace East Gardens"],
-          "cost": "¥7,000-10,000",
-          "tips": ["All gardens/parks free or low cost", "Museum 600-1000 yen"]
-        },
-        {
-          "day": 6,
-          "title": "Travel Day: Tokyo to Kyoto via Shinkansen",
-          "attractions": ["Bullet train journey (2.5 hrs)", "Ginkaku-ji Temple (Silver Pavilion)", "Arashiyama Bamboo Grove", "Bamboo forest walk", "Saga Arashiyama train scenic ride"],
-          "cost": "¥10,000-14,000",
-          "tips": ["Watch Mt. Fuji from train if clear", "Bullet train seat reservation free with JR Pass", "Arrive Kyoto by evening"]
-        },
-        {
-          "day": 7,
-          "title": "Kyoto Temples & Temples",
-          "attractions": ["Fushimi Inari 10,000 red torii gates", "Gojo Station to Inari shrine (5 min train)", "Kinkaku-ji (Golden Pavilion)", "Ryoan-ji Temple with rock garden"],
-          "cost": "¥5,000-8,000",
-          "tips": ["Fushimi Inari free, go early morning (6am)", "Crowds thin after 9am", "Temples open 8-9am"]
-        },
-        {
-          "day": 8,
-          "title": "Kyoto Culture & Geisha District",
-          "attractions": ["Gion geisha district evening walk", "Yasaka Shrine observation point", "Sannenzaka & Ninenzaka historic streets", "Tea ceremony experience (2 hrs)"],
-          "cost": "¥8,000-15,000",
-          "tips": ["Tea ceremony 3,000-5,000 yen", "Gion best at dusk (5-7pm)", "Photogra geisha is prohibited"]
-        },
-        {
-          "day": 9,
-          "title": "Kyoto Bamboo & Philosopher's Path",
-          "attractions": ["Arashiyama Bamboo Grove morning walk", "Tenryu-ji Temple", "Philosopher's Path canal walk (2 km)", "Nanzen-ji aqueduct", "Imperial Villa gardens"],
-          "cost": "¥6,000-9,000",
-          "tips": ["Bamboo Grove best at 6-7am before crowds", "Philosopher's Path is peaceful", "Temple entries 800-1000 yen each"]
-        },
-        {
-          "day": 10,
-          "title": "Kyoto Shopping & Departure",
-          "attractions": ["Nishiki Market food tour (local breakfast)", "Pontocho Alley riverside walk", "Maruyama Park for last views", "Last-minute souvenirs", "Return to Tokyo or depart from Kobe"],
-          "cost": "¥7,000-11,000",
-          "tips": ["Nishiki Market is food lover's paradise", "Fresh seafood, pickles, tea to buy"]
-        }
-      ]
-    },
-    {
-      "id": "vietnam-3",
-      "country": "Vietnam",
-      "duration": 3,
-      "title": "Vietnam 3-Day Hanoi Rush",
-      "emoji": "🏮",
-      "description": "Hanoi highlights: Street food, temples, cyclo rides in 3 days.",
-      "badge": "Street Life",
-      "colorClass": "t1",
-      "days": [
-        {
-          "day": 1,
-          "title": "Hanoi Old Town Immersion",
-          "attractions": ["Hoan Kiem Lake walk (free)", "St. Joseph Cathedral", "Old Town narrow streets exploration", "Cyclo ride through streets (30 min, $5-8)", "Street food dinner tour"],
-          "cost": "$40-60",
-          "tips": ["Old Town best explored on foot", "Cyclo rides are touristy but fun", "Street food costs 1-2 USD per item"]
-        },
-        {
-          "day": 2,
-          "title": "Temples & Lacquerware",
-          "attractions": ["Temple of Literature (oldest university)", "One Pillar Pagoda", "Thang Long Water Puppet Theatre show (evening)", "Lacquerware shopping", "Hanoi night market walk"],
-          "cost": "$50-75",
-          "tips": ["Water puppet show 3-4 USD", "Temple of Literature entry 2 USD", "Night market opens 7pm"]
-        },
-        {
-          "day": 3,
-          "title": "French Colonial & Museums",
-          "attractions": ["Ho Chi Minh Mausoleum complex", "National Museum of Vietnam", "French Quarter walking tour", "Hanoi Hilton (old prison)", "Last street food tour"],
-          "cost": "$45-65",
-          "tips": ["Mausoleum closed Mon/Fri morning", "Museum entry 1 USD", "Hanoi Hilton very impactful & somber"]
-        }
-      ]
-    },
-    {
-      "id": "vietnam-5",
-      "country": "Vietnam",
-      "duration": 5,
-      "title": "Vietnam 5-Day Hanoi & Halong Bay",
-      "emoji": "🏮",
-      "description": "Hanoi city + 2-night Halong Bay cruise through limestone karsts.",
-      "badge": "History & Nature",
-      "colorClass": "t2",
-      "days": [
-        {
-          "day": 1,
-          "title": "Hanoi Old Town & Culture",
-          "attractions": ["Hoan Kiem Lake morning walk", "Old Town street exploration", "Temple of Literature", "One Pillar Pagoda", "Water Puppet Theatre show"],
-          "cost": "$50-70",
-          "tips": ["Early morning best for lake", "Theatre show at 8pm"]
-        },
-        {
-          "day": 2,
-          "title": "Hanoi Museums & Street Food",
-          "attractions": ["National Museum", "Hanoi Hilton Prison Museum", "French Quarter tour", "Street food walking tour", "Thang Long Water Puppet (if missed day 1)"],
-          "cost": "$45-60",
-          "tips": ["Museums best early morning", "Street food 1-2 USD per dish"]
-        },
-        {
-          "day": 3,
-          "title": "Halong Bay Cruise Day 1",
-          "attractions": ["Hanoi to Halong Bay (3.5 hr drive)", "Aboard cruise ship by 1pm", "Limestone karst sightseeing", "Fishing village visit", "Sunset on deck"],
-          "cost": "$120-180",
-          "tips": ["Cruise includes lunch, dinner, breakfast", "Book cruise with hotel in advance", "Bring camera for sunset"]
-        },
-        {
-          "day": 4,
-          "title": "Halong Bay Cruise Day 2",
-          "attractions": ["Morning tai chi on deck (free)", "Sung Sot Cave exploration", "Titop Island beach & viewpoint", "Overnight on boat", "Sunset & dinner"],
-          "cost": "$120-180",
-          "tips": ["Cave exploration 2-3 hours", "Titop Island climb worth the effort", "Bring swimsuit for beach"]
-        },
-        {
-          "day": 5,
-          "title": "Return to Hanoi",
-          "attractions": ["Halong Bay breakfast & departure", "Return to Hanoi by evening", "Last street food dinner", "Departure or rest day"],
-          "cost": "$30-50",
-          "tips": ["Arrive Hanoi by 7pm", "Options for extra shopping/rest"]
-        }
-      ]
-    },
-    {
-      "id": "vietnam-10",
-      "country": "Vietnam",
-      "duration": 10,
-      "title": "Vietnam 10-Day North to South",
-      "emoji": "🏮",
-      "description": "Full Vietnam: Hanoi → Halong Bay → Ho Chi Minh → Mekong Delta.",
-      "badge": "Complete Tour",
-      "colorClass": "t3",
-      "days": [
-        {
-          "day": 1,
-          "title": "Hanoi Arrival & Old Town",
-          "attractions": ["Hoan Kiem Lake", "Old Town narrow streets", "Temple of Literature", "Cyclo ride", "Street food dinner"],
-          "cost": "$50-70",
-          "tips": ["Get travel insurance (important in Vietnam)", "USD accepted everywhere"]
-        },
-        {
-          "day": 2,
-          "title": "Hanoi Temples & History",
-          "attractions": ["One Pillar Pagoda", "Ho Chi Minh Mausoleum complex", "National Museum", "Water Puppet Theatre", "French Quarter walk"],
-          "cost": "$45-65",
-          "tips": ["Mausoleum best early morning", "Show 8pm daily"]
-        },
-        {
-          "day": 3,
-          "title": "Halong Bay Cruise Embark",
-          "attractions": ["Drive to Halong (3.5 hrs)", "Cruise boarding by 1pm", "Limestone karst tour", "Sunset on ship", "Dinner & night onboard"],
-          "cost": "$140-200",
-          "tips": ["Meals included in cruise", "Bring seasickness meds if prone"]
-        },
-        {
-          "day": 4,
-          "title": "Halong Bay Cave & Island Exploration",
-          "attractions": ["Morning tai chi on deck", "Sung Sot Cave tour", "Titop Island climb & beach", "Sunset dinner", "Night swim if weather permits"],
-          "cost": "$140-200",
-          "tips": ["Cave 2-3 hrs", "Island climbing 45 mins"]
-        },
-        {
-          "day": 5,
-          "title": "Halong Departure & Fly to Ho Chi Minh",
-          "attractions": ["Early breakfast on ship", "Return to Hanoi", "Afternoon flight to Ho Chi Minh City", "Backpacker area Pham Ngu Lao exploration"],
-          "cost": "$80-120",
-          "tips": ["Hanoi to HCMC flight 2 hours", "Flight 20-40 USD", "Stay in District 1 or District 3"]
-        },
-        {
-          "day": 6,
-          "title": "Ho Chi Minh War History & Culture",
-          "attractions": ["War Remnants Museum (emotional)", "Reunification Palace", "Ben Thanh Market", "Saigon River cruise at sunset", "Street food in Nguyen Hue"],
-          "cost": "$35-50",
-          "tips": ["Museum heavy but important", "River cruise sunset 10 USD", "Avoid scalding hot daytime"]
-        },
-        {
-          "day": 7,
-          "title": "Ho Chi Minh: Temples & Neighborhoods",
-          "attractions": ["Jade Emperor Pagoda", "A-Dong Market (local breakfast)", "District 1 walking tour", "Bitexco Financial Tower observation deck", "Lantern Town visit"],
-          "cost": "$40-60",
-          "tips": ["Pagoda entry 5,000 VND (free)", "Tower 3 USD entry", "Lantern Town neon glow at night"]
-        },
-        {
-          "day": 8,
-          "title": "Cu Chi Tunnels Day Tour",
-          "attractions": ["Drive 60km from HCMC to Cu Chi", "Underground tunnel system exploration", "Firing range optional", "Rice paper making demo", "Return to HCMC for dinner"],
-          "cost": "$50-75",
-          "tips": ["Tour 4-5 hours", "Tunnel crawling claustrophobic for some", "Lunch at tunnel entrance restaurant"]
-        },
-        {
-          "day": 9,
-          "title": "Mekong Delta Day Trip",
-          "attractions": ["Drive 80km to Mekong", "Boat through floating villages", "Coconut candy factory", "Bee farm visit", "Rowing boat through small channels", "Fresh fruit sampling"],
-          "cost": "$60-80",
-          "tips": ["Wear hat & sunscreen", "Boat tour 4-5 hours", "Local fruit is cheap & delicious"]
-        },
-        {
-          "day": 10,
-          "title": "Last Day Shopping & Departure",
-          "attractions": ["Ben Thanh Market final shopping", "Dong Khoi Street luxury browsing", "Tan Son Nhat Airport shopping", "Departure"],
-          "cost": "$30-50",
-          "tips": ["Ben Thanh best for souvenirs", "Avoid durian fruit in checked luggage"]
-        }
-      ]
-    },
-    {
-      "id": "bali-3",
-      "country": "Bali",
-      "duration": 3,
-      "title": "Bali 3-Day Beach & Temple Bliss",
-      "emoji": "🏝",
-      "description": "Bali essentials: Beaches, temples, rice terraces in 72 hours.",
-      "badge": "Tropical Escape",
-      "colorClass": "t1",
-      "days": [
-        {
-          "day": 1,
-          "title": "Bali Arrival & Seminyak Beach",
-          "attractions": ["Arrive at Denpasar Airport", "Transfer to Seminyak (1.5 hr)", "Relax at Seminyak Beach", "Sunset at clifftop bar", "Dinner at beach club"],
-          "cost": "$60-100",
-          "tips": ["Airport transfer 150-200k IDR", "Beach clubs have 2 USD beers", "Sunset views best 5-6pm"]
-        },
-        {
-          "day": 2,
-          "title": "Temples & Rice Terraces",
-          "attractions": ["Tanah Lot Temple (iconic)", "Tegallalang Rice Terrace", "Ubud Art District walk", "Traditional massage (1 hr, $5-8)", "Ubud Palace exploration"],
-          "cost": "$50-80",
-          "tips": ["Tanah Lot 30k IDR entry", "Rice terraces free", "Hire scooter or driver for day ($25-40)"]
-        },
-        {
-          "day": 3,
-          "title": "Nature & Beach Chill",
-          "attractions": ["Waterfalls (Tegenungan or Gianyar)", "Monkey Forest Ubud (free)", "Final beach sunset", "Spa treatment if time", "Departure"],
-          "cost": "$50-80",
-          "tips": ["Monkey Forest watch valuables", "Many return visitors end with final massage"]
-        }
-      ]
-    },
-    {
-      "id": "bali-5",
-      "country": "Bali",
-      "duration": 5,
-      "title": "Bali 5-Day Complete Island",
-      "emoji": "🏝",
-      "description": "Beaches, culture, nature, adventure all in one island.",
-      "badge": "Island Life",
-      "colorClass": "t2",
-      "days": [
-        {
-          "day": 1,
-          "title": "Arrival & Seminyak Beach",
-          "attractions": ["Denpasar Airport arrival", "Transfer to Seminyak beachside resort", "Relax at Seminyak Beach", "Sunset beach club happy hour (5-7pm)", "Dinner at Potato Head Beach Club"],
-          "cost": "$70-110",
-          "tips": ["Airport transfer 150-200k IDR (~$10)", "Book beachfront hotel in advance"]
-        },
-        {
-          "day": 2,
-          "title": "Temples & Ubud",
-          "attractions": ["Tanah Lot Temple at sunset", "Tegallalang Rice Terrace early morning", "Ubud Traditional Art District", "Ubud Palace & Water Palace", "Monkey Forest walk"],
-          "cost": "$60-90",
-          "tips": ["Hire driver for day (~$40)", "Rice terrace photos best 6-8am"]
-        },
-        {
-          "day": 3,
-          "title": "Waterfalls & Trekking",
-          "attractions": ["Tegenungan Waterfall swim", "Waterfall trekking adventure", "Traditional Balinese lunch", "Visit local villages", "Spa & massage in Ubud"],
-          "cost": "$70-100",
-          "tips": ["Waterfall entry 10-15k IDR", "Trek takes 2-3 hours", "Bring swimsuit & towel"]
-        },
-        {
-          "day": 4,
-          "title": "Beach Adventure Day",
-          "attractions": ["Return to Seminyak", "Uluwatu Temple sunset experience", "Kecak Fire Dance performance (evening)", "Clifftop dinner views", "Beach bar nightlife"],
-          "cost": "$80-120",
-          "tips": ["Uluwatu Temple 30k IDR", "Dance show 50k IDR", "Drinks at sunset bars 3-5 USD"]
-        },
-        {
-          "day": 5,
-          "title": "Last Day Beaches & Departure",
-          "attractions": ["Kuta Beach final swim", "Seminyak sunbath time", "Shopping at Mall Bali", "Last massage (1 hour, $8)", "Depart airport"],
-          "cost": "$50-80",
-          "tips": ["Save time for airport transfer (1.5 hrs)", "Duty-free shopping at airport"]
-        }
-      ]
-    },
-    {
-      "id": "bali-10",
-      "country": "Bali",
-      "duration": 10,
-      "title": "Bali 10-Day Island Deep Experience",
-      "emoji": "🏝",
-      "description": "Slow travel through beaches, temples, mountains, and culture.",
-      "badge": "Complete Experience",
-      "colorClass": "t3",
-      "days": [
-        {
-          "day": 1,
-          "title": "Arrival & Seminyak Settlement",
-          "attractions": ["Denpasar Airport arrival", "Transfer to Seminyak resort", "Beach walk & orientation", "Sunset at beach club", "Dinner at local warung"],
-          "cost": "$70-110",
-          "tips": ["Settle into beach rhythm"]
-        },
-        {
-          "day": 2,
-          "title": "Seminyak Beach Culture",
-          "attractions": ["Seminyak Beach full day", "Clifftop sunset bars", "Potato Head Beach Club sunset", "Sunset dinner on beach", "Beach club party vibes"],
-          "cost": "$80-120",
-          "tips": ["Beers 2-3 USD", "Sunset best 5:30-6:30pm"]
-        },
-        {
-          "day": 3,
-          "title": "Tanah Lot & Sunset Temple",
-          "attractions": ["Tanah Lot Temple iconic visit", "Sunset at temple grounds", "Local seafood dinner", "Evening clifftop exploration", "Drinks with temple views"],
-          "cost": "$70-100",
-          "tips": ["Go at sunset (5pm onwards)", "Temple entry 30k IDR"]
-        },
-        {
-          "day": 4,
-          "title": "Ubud Art & Culture",
-          "attractions": ["Transfer to Ubud (1.5 hrs)", "Tegallalang Rice Terrace hike", "Ubud Palace exploration", "Traditional art galleries", "Ubud Market walk"],
-          "cost": "$70-100",
-          "tips": ["Rice terraces best at 6-8am", "Hire guide for stories"]
-        },
-        {
-          "day": 5,
-          "title": "Ubud Nature Exploration",
-          "attractions": ["Monkey Forest morning visit", "Tegenungan Waterfall swim", "Local village walk", "Traditional coffee farm visit", "Spa treatment afternoon"],
-          "cost": "$70-100",
-          "tips": ["Monkey forest watch gear", "Coffee farm tour 50k IDR"]
-        },
-        {
-          "day": 6,
-          "title": "Ubud Adventure Day",
-          "attractions": ["Rice terrace trekking", "Waterfall hiking adventure", "Swing in the jungle adventure", "Traditional lunch", "Balinese cooking class"],
-          "cost": "$80-120",
-          "tips": ["Adventure activities fun but tiring", "Cooking class 80-100 USD"]
-        },
-        {
-          "day": 7,
-          "title": "Batur Mountain Sunrise Trek",
-          "attractions": ["Sunrise trek Mt. Batur (midnight start)", "Crater rim views at sunrise", "Hot spring soak after", "Breakfast with views", "Return to Ubud afternoon"],
-          "cost": "$80-120",
-          "tips": ["Trek starts 1-2am, returns 9am", "Bring warm clothes & headlamp"]
-        },
-        {
-          "day": 8,
-          "title": "Ubud Relaxation & Culture",
-          "attractions": ["Traditional dance performance", "Ubud Water Palace swim", "Art galleries & museums", "Meditation/yoga class", "Local restaurant dinner"],
-          "cost": "$70-100",
-          "tips": ["Dance shows evenings at temple", "Yoga 5-6 USD"]
-        },
-        {
-          "day": 9,
-          "title": "Return to Beach & Relax",
-          "attractions": ["Return to Seminyak (1.5 hrs)", "Beach relaxation day", "Spa & massage (2 hrs, $15-20)", "Sunset bar hopping", "Last dinner with beach views"],
-          "cost": "$80-120",
-          "tips": ["Extended massage best", "Last beach sunset important"]
-        },
-        {
-          "day": 10,
-          "title": "Final Beach Day & Departure",
-          "attractions": ["Early morning beach walk", "Last swim & sun", "Breakfast on beach", "Shopping at malls", "Airport transfer & departure"],
-          "cost": "$60-100",
-          "tips": ["Leave 2.5 hours for airport", "Souvenir shopping last minute"]
-        }
-      ]
-    },
-    {
-      "id": "malaysia-3",
-      "country": "Malaysia",
-      "duration": 3,
-      "title": "Malaysia 3-Day Kuala Lumpur Rush",
-      "emoji": "🏙",
-      "description": "KL highlights: Petronas Towers, temples, and street food in 72 hours.",
-      "badge": "City Vibes",
-      "colorClass": "t1",
-      "days": [
-        {
-          "day": 1,
-          "title": "Arrival & KL Skyline",
-          "attractions": ["Petronas Twin Towers observation deck", "KLCC Park walk (free)", "Sentral Tower shopping", "Dinner at Pavilion mall", "Evening cityscape views"],
-          "cost": "RM120-180",
-          "tips": ["Petronas entry 80 RM (~$17)", "Avoid midday heat, visit 5pm onwards"]
-        },
-        {
-          "day": 2,
-          "title": "Temples & Markets",
-          "attractions": ["Thean Hou Temple (oldest Chinese temple)", "Sri Mahamariamman Temple", "Central Market walk & shopping", "Petaling Street night market", "Local noodles dinner"],
-          "cost": "RM80-130",
-          "tips": ["Temple visits free", "Night market 7pm-midnight", "Street food 2-5 RM per item"]
-        },
-        {
-          "day": 3,
-          "title": "Day Trip: Batu Caves & National Park",
-          "attractions": ["Batu Caves limestone temple (20 min from KL)", "Cave exploration & monkey spotting", "Kuala Lumpur Forest Eco Park", "Leaf-cutter ants trail", "Evening departure"],
-          "cost": "RM100-150",
-          "tips": ["Caves 2 RM entry", "Watch valuables with monkeys", "Cave challenging climb but worth it"]
-        }
-      ]
-    },
-    {
-      "id": "malaysia-5",
-      "country": "Malaysia",
-      "duration": 5,
-      "title": "Malaysia 5-Day KL & Petronas",
-      "emoji": "🏙",
-      "description": "Kuala Lumpur city culture + day trips to nature and temples.",
-      "badge": "City Explorer",
-      "colorClass": "t2",
-      "days": [
-        {
-          "day": 1,
-          "title": "Arrival & KL Skyline",
-          "attractions": ["Petronas Twin Towers sunset entry", "KLCC Park evening walk", "Pavilion mall exploration", "Dinner at Jalan Alor street food lane"],
-          "cost": "RM120-180",
-          "tips": ["Book Petronas online to save 10%", "Alor lane best 6pm-midnight"]
-        },
-        {
-          "day": 2,
-          "title": "Temples & Spiritual Bali-like Vibes",
-          "attractions": ["Thean Hou Temple tour", "Sri Mahamariamman Temple", "Batu Caves limestone cliffs", "Monkey spotting", "Temple shopping stalls"],
-          "cost": "RM90-140",
-          "tips": ["Caves entry 2 RM", "Early morning least crowded"]
-        },
-        {
-          "day": 3,
-          "title": "Nature Day: Forest & Waterfall",
-          "attractions": ["KL Forest Eco Park nature walk", "Bukit Nanas Forest Reserve trek", "Waterfall hike", "Local outdoor lunch", "Bird watching opportunity"],
-          "cost": "RM100-150",
-          "tips": ["Early start 7am best", "Bring mosquito spray", "Trek 2-3 hours"]
-        },
-        {
-          "day": 4,
-          "title": "Markets & Local Food Culture",
-          "attractions": ["Central Market daytime browsing", "Petaling Street night market", "Jalan Alor street food tour", "Dim sum breakfast (Cantonese style)", "Shopping at traditional markets"],
-          "cost": "RM100-150",
-          "tips": ["Haggle at Petaling Street", "Dim sum 3-5 RM per dish"]
-        },
-        {
-          "day": 5,
-          "title": "Last Day Highlights & Departure",
-          "attractions": ["Merdeka Square historical walk", "National Museum optional", "Last Central Market shopping", "Petronas final sunset visit", "Airport departure"],
-          "cost": "RM80-130",
-          "tips": ["Leave 1.5 hours for airport", "Souvenirs at Central Market"]
-        }
-      ]
-    },
-    {
-      "id": "malaysia-10",
-      "country": "Malaysia",
-      "duration": 10,
-      "title": "Malaysia 10-Day KL, Penang & Islands",
-      "emoji": "🏙",
-      "description": "Multi-city Malaysia: KL → Penang → island paradise.",
-      "badge": "Complete Journey",
-      "colorClass": "t3",
-      "days": [
-        {
-          "day": 1,
-          "title": "KL Arrival & Orientation",
-          "attractions": ["Petronas Twin Towers sunset", "KLCC Park walk", "Pavilion shopping", "Jalan Alor street food dinner"],
-          "cost": "RM120-180",
-          "tips": ["Book Petronas online", "Stay 3 nights in KL"]
-        },
-        {
-          "day": 2,
-          "title": "KL Temples & Culture",
-          "attractions": ["Thean Hou Temple", "Sri Mahamariamman Temple", "Batu Caves explorer", "Chinatown exploration", "Night market walk"],
-          "cost": "RM100-150",
-          "tips": ["Caves early morning best", "Chinatown morning dim sum"]
-        },
-        {
-          "day": 3,
-          "title": "KL Nature & Day Trip",
-          "attractions": ["KL Forest Eco Park trek", "Waterfall hike", "Petronas final sunset", "Last Central Market shopping", "Afternoon flight to Penang"],
-          "cost": "RM140-200",
-          "tips": ["Flight 30-40 USD", "Leave 2pm for airport"]
-        },
-        {
-          "day": 4,
-          "title": "Penang Georgetown Arrival",
-          "attractions": ["Arrive Penang afternoon", "Georgetown UNESCO heritage walk", "Street art exploration", "Cheong Fatt Tze Mansion tour", "Local seafood dinner"],
-          "cost": "RM100-150",
-          "tips": ["Georgetown is UNESCO site", "Stay in Georgetown center"]
-        },
-        {
-          "day": 5,
-          "title": "Penang Temples & Nature",
-          "attractions": ["Kek Lok Si Temple cable car ride", "Thaipusam temple climbing", "Penang Botanical Gardens walk", "Lunch with city views", "Street food tour evening"],
-          "cost": "RM100-150",
-          "tips": ["Cable car 3 RM roundtrip", "Temples free entry"]
-        },
-        {
-          "day": 6,
-          "title": "Penang Island & Beach",
-          "attractions": ["Batu Ferringhi Beach relaxation", "Beach promenade walk", "Water sports optional (jet ski, banana boat)", "Sunset beach dinner", "Seafood restaurant on beach"],
-          "cost": "RM120-180",
-          "tips": ["Beach is free", "Jet ski 50-80 RM"]
-        },
-        {
-          "day": 7,
-          "title": "Island Hop Day Tour",
-          "attractions": ["Langkawi Island day trip (45 min ferry)", "Langkawi cable car sky bridge", "Langkawi beach time", "Duty-free shopping (famous)", "Return to Penang evening"],
-          "cost": "RM180-250",
-          "tips": ["Ferry 25 RM", "Cable car 15 RM", "Duty-free electronics cheap"]
-        },
-        {
-          "day": 8,
-          "title": "Penang Food Culture",
-          "attractions": ["Georgetown breakfast hawker stalls", "Pinang Peranakan Mansion tour", "Khoo Kongsi clan temple", "Cook from market dinner prep", "Food court exploration"],
-          "cost": "RM100-150",
-          "tips": ["Hawker stalls cheap (2-5 RM)", "Mansion tour 12 RM"]
-        },
-        {
-          "day": 9,
-          "title": "Relaxation & Spa Day",
-          "attractions": ["Beach spa day", "Traditional Malay massage (1.5 hrs)", "Beach sunset final time", "Beachfront dinner", "Last night Georgetown walk"],
-          "cost": "RM120-180",
-          "tips": ["Massage 40-60 RM", "Relax before travel"]
-        },
-        {
-          "day": 10,
-          "title": "Penang to KL & Departure",
-          "attractions": ["Morning beach walk", "Last hawker breakfast", "Ferry to Kuala Lumpur (1 hr) or flight", "Penang airport shopping", "Flight home"],
-          "cost": "RM100-150",
-          "tips": ["Leave 2 hours for ferry/flight", "Penang airport duty-free last stop"]
-        }
-      ]
-    }
-  ]
+﻿{
+    "itineraries":  [
+                        {
+                            "id":  "singapore-3",
+                            "description":  "Hit the iconic highlights in just 3 days.",
+                            "badge":  "City Explorer",
+                            "duration":  3,
+                            "emoji":  "🏙",
+                            "title":  "Singapore 3-Day Express",
+                            "country":  "Singapore"
+                        },
+                        {
+                            "id":  "singapore-5",
+                            "description":  "Full Singapore experience with food and culture.",
+                            "badge":  "Food Explorer",
+                            "duration":  5,
+                            "emoji":  "🏙",
+                            "title":  "Singapore 5-Day Complete",
+                            "country":  "Singapore"
+                        },
+                        {
+                            "id":  "singapore-10",
+                            "description":  "Slow travel exploring neighborhoods and hidden gems.",
+                            "badge":  "Complete Explorer",
+                            "duration":  10,
+                            "emoji":  "🏙",
+                            "title":  "Singapore 10-Day Deep Dive",
+                            "country":  "Singapore"
+                        },
+                        {
+                            "id":  "thailand-3",
+                            "description":  "Bangkok temples, markets, street food in 72 hours.",
+                            "badge":  "Temple Tour",
+                            "duration":  3,
+                            "emoji":  "🇹🇭",
+                            "title":  "Thailand 3-Day Bangkok",
+                            "country":  "Thailand"
+                        },
+                        {
+                            "id":  "thailand-5",
+                            "description":  "Bangkok city and island escape with beaches.",
+                            "badge":  "City \u0026 Beach",
+                            "duration":  5,
+                            "emoji":  "🇹🇭",
+                            "title":  "Thailand 5-Day Bangkok \u0026 Islands",
+                            "country":  "Thailand"
+                        },
+                        {
+                            "id":  "thailand-10",
+                            "description":  "Bangkok, Chiang Mai, Phuket, temples and beaches.",
+                            "badge":  "Complete Journey",
+                            "duration":  10,
+                            "emoji":  "🇹🇭",
+                            "title":  "Thailand 10-Day Complete",
+                            "country":  "Thailand"
+                        },
+                        {
+                            "id":  "vietnam-3",
+                            "description":  "Hanoi highlights: Street food, temples, cyclo rides.",
+                            "badge":  "Street Life",
+                            "duration":  3,
+                            "emoji":  "🏮",
+                            "title":  "Vietnam 3-Day Hanoi",
+                            "country":  "Vietnam"
+                        },
+                        {
+                            "id":  "vietnam-5",
+                            "description":  "Hanoi city and Halong Bay limestone karsts cruise.",
+                            "badge":  "History \u0026 Nature",
+                            "duration":  5,
+                            "emoji":  "🏮",
+                            "title":  "Vietnam 5-Day Hanoi \u0026 Halong Bay",
+                            "country":  "Vietnam"
+                        },
+                        {
+                            "id":  "vietnam-10",
+                            "description":  "Complete Vietnam: Hanoi, Halong Bay, Ho Chi Minh, Mekong.",
+                            "badge":  "Complete Tour",
+                            "duration":  10,
+                            "emoji":  "🏮",
+                            "title":  "Vietnam 10-Day North to South",
+                            "country":  "Vietnam"
+                        },
+                        {
+                            "id":  "japan-3",
+                            "description":  "Tokyo essentials: temples, shopping, culture.",
+                            "badge":  "City Lights",
+                            "duration":  3,
+                            "emoji":  "🗼",
+                            "title":  "Japan 3-Day Tokyo",
+                            "country":  "Japan"
+                        },
+                        {
+                            "id":  "japan-5",
+                            "description":  "Tokyo city and Mt. Fuji views from lake town.",
+                            "badge":  "City \u0026 Mt. Fuji",
+                            "duration":  5,
+                            "emoji":  "🗼",
+                            "title":  "Japan 5-Day Tokyo \u0026 Mt. Fuji",
+                            "country":  "Japan"
+                        },
+                        {
+                            "id":  "japan-10",
+                            "description":  "Modern Tokyo, traditional Kyoto, Mt. Fuji views.",
+                            "badge":  "Complete Journey",
+                            "duration":  10,
+                            "emoji":  "🗼",
+                            "title":  "Japan 10-Day Tokyo to Kyoto",
+                            "country":  "Japan"
+                        },
+                        {
+                            "id":  "skorea-3",
+                            "description":  "Seoul K-pop, palaces, street food in 3 days.",
+                            "badge":  "Pop Culture",
+                            "duration":  3,
+                            "emoji":  "🇰🇷",
+                            "title":  "South Korea 3-Day Seoul",
+                            "country":  "South Korea"
+                        },
+                        {
+                            "id":  "skorea-5",
+                            "description":  "Seoul exploration and DMZ historical tour.",
+                            "badge":  "History \u0026 Culture",
+                            "duration":  5,
+                            "emoji":  "🇰🇷",
+                            "title":  "South Korea 5-Day Seoul \u0026 DMZ",
+                            "country":  "South Korea"
+                        },
+                        {
+                            "id":  "skorea-10",
+                            "description":  "Seoul, DMZ, Gyeongju, Busan, Jeju Island.",
+                            "badge":  "Complete Tour",
+                            "duration":  10,
+                            "emoji":  "🇰🇷",
+                            "title":  "South Korea 10-Day Complete",
+                            "country":  "South Korea"
+                        },
+                        {
+                            "id":  "cambodia-3",
+                            "description":  "Angkor Wat temples. UNESCO World Heritage wonders.",
+                            "badge":  "Temple Explorer",
+                            "duration":  3,
+                            "emoji":  "🇰🇭",
+                            "title":  "Cambodia 3-Day Siem Reap",
+                            "country":  "Cambodia"
+                        },
+                        {
+                            "id":  "cambodia-5",
+                            "description":  "Angkor temples and Phnom Penh capital exploration.",
+                            "badge":  "History Tour",
+                            "duration":  5,
+                            "emoji":  "🇰🇭",
+                            "title":  "Cambodia 5-Day Angkor \u0026 Phnom Penh",
+                            "country":  "Cambodia"
+                        },
+                        {
+                            "id":  "cambodia-10",
+                            "description":  "Siem Reap, Phnom Penh, Sihanoukville temples and beaches.",
+                            "badge":  "Complete Journey",
+                            "duration":  10,
+                            "emoji":  "🇰🇭",
+                            "title":  "Cambodia 10-Day Complete",
+                            "country":  "Cambodia"
+                        },
+                        {
+                            "id":  "philippines-3",
+                            "description":  "Manila city and nearby islands island hopping.",
+                            "badge":  "Island Life",
+                            "duration":  3,
+                            "emoji":  "🇵🇭",
+                            "title":  "Philippines 3-Day Manila",
+                            "country":  "Philippines"
+                        },
+                        {
+                            "id":  "philippines-5",
+                            "description":  "Manila and Boracay island resort experience.",
+                            "badge":  "City \u0026 Beach",
+                            "duration":  5,
+                            "emoji":  "🇵🇭",
+                            "title":  "Philippines 5-Day Manila \u0026 Boracay",
+                            "country":  "Philippines"
+                        },
+                        {
+                            "id":  "philippines-10",
+                            "description":  "Manila, Boracay, Palawan ultimate island experience.",
+                            "badge":  "Complete Tour",
+                            "duration":  10,
+                            "emoji":  "🇵🇭",
+                            "title":  "Philippines 10-Day Island Hopping",
+                            "country":  "Philippines"
+                        },
+                        {
+                            "id":  "indonesia-3",
+                            "description":  "Bali beaches, temples, rice terraces tropical escape.",
+                            "badge":  "Tropical Paradise",
+                            "duration":  3,
+                            "emoji":  "🇮🇩",
+                            "title":  "Indonesia 3-Day Bali",
+                            "country":  "Indonesia"
+                        },
+                        {
+                            "id":  "indonesia-5",
+                            "description":  "Bali full experience beaches temples culture nightlife.",
+                            "badge":  "Island Explorer",
+                            "duration":  5,
+                            "emoji":  "🇮🇩",
+                            "title":  "Indonesia 5-Day Bali Extended",
+                            "country":  "Indonesia"
+                        },
+                        {
+                            "id":  "indonesia-10",
+                            "description":  "Bali and Java volcanoes temples and mountains.",
+                            "badge":  "Complete Journey",
+                            "duration":  10,
+                            "emoji":  "🇮🇩",
+                            "title":  "Indonesia 10-Day Bali \u0026 Java",
+                            "country":  "Indonesia"
+                        },
+                        {
+                            "id":  "taiwan-3",
+                            "description":  "Taipei night markets, temples, hot springs.",
+                            "badge":  "Night Market Tour",
+                            "duration":  3,
+                            "emoji":  "🇹🇼",
+                            "title":  "Taiwan 3-Day Taipei",
+                            "country":  "Taiwan"
+                        },
+                        {
+                            "id":  "taiwan-5",
+                            "description":  "Taipei and Jiufen old town mountain villages.",
+                            "badge":  "City \u0026 Mountain",
+                            "duration":  5,
+                            "emoji":  "🇹🇼",
+                            "title":  "Taiwan 5-Day Taipei \u0026 Jiufen",
+                            "country":  "Taiwan"
+                        },
+                        {
+                            "id":  "taiwan-10",
+                            "description":  "Taipei, Jiufen, Sun Moon Lake, Alishan mountains and tea.",
+                            "badge":  "Complete Tour",
+                            "duration":  10,
+                            "emoji":  "🇹🇼",
+                            "title":  "Taiwan 10-Day Complete",
+                            "country":  "Taiwan"
+                        },
+                        {
+                            "id":  "hongkong-3",
+                            "description":  "Hong Kong skyline, harbor, street food escape.",
+                            "badge":  "Urban Explorer",
+                            "duration":  3,
+                            "emoji":  "🇭🇰",
+                            "title":  "Hong Kong 3-Day Highlights",
+                            "country":  "Hong Kong"
+                        },
+                        {
+                            "id":  "hongkong-5",
+                            "description":  "Hong Kong city and island escapes urban nature mix.",
+                            "badge":  "City \u0026 Nature",
+                            "duration":  5,
+                            "emoji":  "🇭🇰",
+                            "title":  "Hong Kong 5-Day City \u0026 Islands",
+                            "country":  "Hong Kong"
+                        },
+                        {
+                            "id":  "hongkong-10",
+                            "description":  "Hong Kong city, islands, New Territories, Macau.",
+                            "badge":  "Complete Journey",
+                            "duration":  10,
+                            "emoji":  "🇭🇰",
+                            "title":  "Hong Kong 10-Day Deep Dive",
+                            "country":  "Hong Kong"
+                        },
+                        {
+                            "id":  "laos-3",
+                            "description":  "Luang Prabang temples and monks spiritual escape.",
+                            "badge":  "Spiritual Journey",
+                            "duration":  3,
+                            "emoji":  "🇱🇦",
+                            "title":  "Laos 3-Day Luang Prabang",
+                            "country":  "Laos"
+                        },
+                        {
+                            "id":  "laos-5",
+                            "description":  "Luang Prabang and Vang Vieng temples and adventure.",
+                            "badge":  "Temples \u0026 Adventure",
+                            "duration":  5,
+                            "emoji":  "🇱🇦",
+                            "title":  "Laos 5-Day Luang Prabang \u0026 Vang Vieng",
+                            "country":  "Laos"
+                        },
+                        {
+                            "id":  "laos-10",
+                            "description":  "Luang Prabang, Vang Vieng, Vientiane, Bolaven.",
+                            "badge":  "Complete Tour",
+                            "duration":  10,
+                            "emoji":  "🇱🇦",
+                            "title":  "Laos 10-Day Complete",
+                            "country":  "Laos"
+                        },
+                        {
+                            "id":  "myanmar-3",
+                            "description":  "Yangon temples and colonial architecture heritage.",
+                            "badge":  "Heritage Tour",
+                            "duration":  3,
+                            "emoji":  "🇲🇲",
+                            "title":  "Myanmar 3-Day Yangon",
+                            "country":  "Myanmar"
+                        },
+                        {
+                            "id":  "myanmar-5",
+                            "description":  "Yangon and Bagan ancient temples modern Myanmar.",
+                            "badge":  "Temple Explorer",
+                            "duration":  5,
+                            "emoji":  "🇲🇲",
+                            "title":  "Myanmar 5-Day Yangon \u0026 Bagan",
+                            "country":  "Myanmar"
+                        },
+                        {
+                            "id":  "myanmar-10",
+                            "description":  "Yangon, Bagan, Mandalay, Inle Lake temples.",
+                            "badge":  "Complete Journey",
+                            "duration":  10,
+                            "emoji":  "🇲🇲",
+                            "title":  "Myanmar 10-Day Complete",
+                            "country":  "Myanmar"
+                        },
+                        {
+                            "id":  "india-3",
+                            "description":  "Delhi history and chaos old city monuments.",
+                            "badge":  "History Tour",
+                            "duration":  3,
+                            "emoji":  "🇮🇳",
+                            "title":  "India 3-Day Delhi",
+                            "country":  "India"
+                        },
+                        {
+                            "id":  "india-5",
+                            "description":  "Delhi and Agra Taj Mahal monuments exploration.",
+                            "badge":  "Monument Tour",
+                            "duration":  5,
+                            "emoji":  "🇮🇳",
+                            "title":  "India 5-Day Delhi \u0026 Taj Mahal",
+                            "country":  "India"
+                        },
+                        {
+                            "id":  "india-10",
+                            "description":  "Delhi, Agra, Jaipur, Rajasthan classic India.",
+                            "badge":  "Complete Tour",
+                            "duration":  10,
+                            "emoji":  "🇮🇳",
+                            "title":  "India 10-Day Golden Triangle",
+                            "country":  "India"
+                        },
+                        {
+                            "id":  "nepal-3",
+                            "description":  "Kathmandu temples and Durbar Square mountain culture.",
+                            "badge":  "Mountain Culture",
+                            "duration":  3,
+                            "emoji":  "🇳🇵",
+                            "title":  "Nepal 3-Day Kathmandu",
+                            "country":  "Nepal"
+                        },
+                        {
+                            "id":  "nepal-5",
+                            "description":  "Kathmandu and Pokhara temples and lake views.",
+                            "badge":  "Temple \u0026 Lake",
+                            "duration":  5,
+                            "emoji":  "🇳🇵",
+                            "title":  "Nepal 5-Day Kathmandu \u0026 Pokhara",
+                            "country":  "Nepal"
+                        },
+                        {
+                            "id":  "nepal-10",
+                            "description":  "Kathmandu, Pokhara, Annapurna temples and trekking.",
+                            "badge":  "Complete Journey",
+                            "duration":  10,
+                            "emoji":  "🇳🇵",
+                            "title":  "Nepal 10-Day Mountain Trek",
+                            "country":  "Nepal"
+                        },
+                        {
+                            "id":  "srilanka-3",
+                            "description":  "Colombo beaches temples island introduction.",
+                            "badge":  "Island Explorer",
+                            "duration":  3,
+                            "emoji":  "🇱🇰",
+                            "title":  "Sri Lanka 3-Day Colombo",
+                            "country":  "Sri Lanka"
+                        },
+                        {
+                            "id":  "srilanka-5",
+                            "description":  "Colombo, Kandy, Nuwara Eliya tea plantations.",
+                            "badge":  "Tea Country",
+                            "duration":  5,
+                            "emoji":  "🇱🇰",
+                            "title":  "Sri Lanka 5-Day Triangle Tour",
+                            "country":  "Sri Lanka"
+                        },
+                        {
+                            "id":  "srilanka-10",
+                            "description":  "Colombo, Kandy, Nuwara Eliya, Mirissa complete tour.",
+                            "badge":  "Complete Journey",
+                            "duration":  10,
+                            "emoji":  "🇱🇰",
+                            "title":  "Sri Lanka 10-Day Complete",
+                            "country":  "Sri Lanka"
+                        },
+                        {
+                            "id":  "maldives-3",
+                            "description":  "Maldives island resort ultimate tropical paradise.",
+                            "badge":  "Luxury Escape",
+                            "duration":  3,
+                            "emoji":  "🇲🇻",
+                            "title":  "Maldives 3-Day Luxury",
+                            "country":  "Maldives"
+                        },
+                        {
+                            "id":  "maldives-5",
+                            "description":  "Maldives diving snorkeling and relaxation.",
+                            "badge":  "Water Sports",
+                            "duration":  5,
+                            "emoji":  "🇲🇻",
+                            "title":  "Maldives 5-Day Resort",
+                            "country":  "Maldives"
+                        },
+                        {
+                            "id":  "maldives-10",
+                            "description":  "Extended Maldives multiple islands deep diving.",
+                            "badge":  "Complete Paradise",
+                            "duration":  10,
+                            "emoji":  "🇲🇻",
+                            "title":  "Maldives 10-Day Paradise",
+                            "country":  "Maldives"
+                        }
+                    ]
 }
