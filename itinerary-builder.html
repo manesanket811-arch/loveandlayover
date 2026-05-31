@@ -344,9 +344,10 @@ countrySelect.addEventListener('change', async (e) => {
 
   document.getElementById('currencyCountry').textContent = countryName;
   document.getElementById('currencyCode').textContent = currency;
-  const rate = exchangeRates[currency];
+  const apiRate = exchangeRates[currency]; // 1 INR = X currency
+  const rate = 1 / apiRate; // Convert to: 1 currency = X INR
   document.getElementById('rateLocal').textContent = `1 ${currency} = ₹${rate.toFixed(2)}`;
-  document.getElementById('rateINR').textContent = `₹1 = ${(1/rate).toFixed(4)} ${currency}`;
+  document.getElementById('rateINR').textContent = `₹1 = ${apiRate.toFixed(4)} ${currency}`;
   document.getElementById('currencyBox').style.display = 'block';
 
   // Reset inputs
@@ -360,7 +361,9 @@ document.getElementById('amountLocal').addEventListener('input', (e) => {
   if (!selected || !exchangeRates[selected.currency]) return;
 
   const amount = parseFloat(e.target.value) || 0;
-  const inrAmount = amount * exchangeRates[selected.currency];
+  const apiRate = exchangeRates[selected.currency]; // 1 INR = X currency
+  const rate = 1 / apiRate; // 1 currency = X INR
+  const inrAmount = amount * rate;
   document.getElementById('amountINR').value = inrAmount.toFixed(2);
 });
 
@@ -369,7 +372,8 @@ document.getElementById('amountINR').addEventListener('input', (e) => {
   if (!selected || !exchangeRates[selected.currency]) return;
 
   const amount = parseFloat(e.target.value) || 0;
-  const localAmount = amount / exchangeRates[selected.currency];
+  const apiRate = exchangeRates[selected.currency]; // 1 INR = X currency
+  const localAmount = amount * apiRate;
   document.getElementById('amountLocal').value = localAmount.toFixed(2);
 });
 
