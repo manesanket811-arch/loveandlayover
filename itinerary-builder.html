@@ -259,10 +259,13 @@ function renderItineraries() {
     return;
   }
 
-  grid.innerHTML = filtered.map(it => `
+  grid.innerHTML = filtered.map(it => {
+    const countryCode = countryFlags[it.country];
+    const flagUrl = `https://flagcdn.com/w64/${countryCode}.png`;
+    return `
     <div class="card" style="cursor:pointer;" onclick="openModal('${it.id}')">
       <div class="card-header">
-        <h3>${it.emoji} ${it.country}</h3>
+        <h3><img src="${flagUrl}" alt="${it.country}" style="width:28px; height:auto; vertical-align:middle; margin-right:8px; border-radius:2px;">${it.country}</h3>
         <div class="duration">${it.duration} Days</div>
         <div class="badge">${it.badge || 'Explorer'}</div>
       </div>
@@ -272,7 +275,8 @@ function renderItineraries() {
         <p style="margin-top:12px; font-size:.85rem; color:var(--accent); font-weight:600;">👆 Click to view day-by-day itinerary</p>
       </div>
     </div>
-  `).join('');
+  `;
+  }).join('');
 }
 
 function openModal(itineraryId) {
@@ -291,7 +295,9 @@ function openModal(itineraryId) {
   const title = document.getElementById('modalTitle');
   const body = document.getElementById('modalBody');
 
-  title.textContent = `${itinerary.emoji} ${itinerary.title}`;
+  const countryCode = countryFlags[itinerary.country];
+  const flagUrl = `https://flagcdn.com/w64/${countryCode}.png`;
+  title.innerHTML = `<img src="${flagUrl}" alt="${itinerary.country}" style="width:32px; height:auto; vertical-align:middle; margin-right:10px; border-radius:2px;">${itinerary.title}`;
 
   let daysHtml = '<div style="margin-bottom:20px;"><strong style="color:var(--accent); font-size:1.1rem;">Budget estimate:</strong> ' + itinerary.days.map(d => d.cost).join(' → ') + '</div>';
   daysHtml += itinerary.days.map(day => `
@@ -420,8 +426,8 @@ countrySelect.addEventListener('change', async (e) => {
   document.getElementById('currencyCode').textContent = currency;
   const apiRate = exchangeRates[currency]; // 1 INR = X currency
   const rate = 1 / apiRate; // Convert to: 1 currency = X INR
-  document.getElementById('rateLocal').textContent = `1 ${currency} = ₹${rate.toFixed(2)}`;
-  document.getElementById('rateINR').textContent = `₹1 = ${apiRate.toFixed(4)} ${currency}`;
+  document.getElementById('rateLocal').textContent = `1 ${currency} = ₹ ${rate.toFixed(2)}`;
+  document.getElementById('rateINR').textContent = `₹ 1 = ${apiRate.toFixed(4)} ${currency}`;
   document.getElementById('currencyBox').style.display = 'block';
 
   // Reset inputs
