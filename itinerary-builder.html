@@ -394,9 +394,7 @@ function updateTicker() {
     html += `
       <div class="ticker-item">
         <img src="${flagUrl}" alt="${it.country}" class="ticker-flag" onerror="this.style.display='none'">
-        <span class="ticker-currency">1 ${currency}</span>
-        <span>=</span>
-        <span class="ticker-rate">₹${rate.toFixed(2)}</span>
+        <span class="ticker-currency">1${currency}=<span class="ticker-rate">₹${rate.toFixed(2)}</span></span>
       </div>
     `;
   });
