@@ -21,6 +21,13 @@ header { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(25
 nav { display:flex; align-items:center; justify-content:space-between; max-width:var(--maxw); margin:0 auto; padding:14px 24px; }
 .logo { font-family:'Fraunces',serif; font-weight:900; font-size:1.3rem; color:var(--ink); }
 .back-link { font-weight:600; color:var(--accent); }
+.rates-ticker { background:linear-gradient(90deg,#1a1a2e,#16213e); color:#fff; padding:12px 0; overflow:hidden; margin-bottom:20px; }
+.ticker-content { display:flex; gap:40px; animation:scroll 60s linear infinite; padding:0 20px; }
+.ticker-item { white-space:nowrap; display:flex; align-items:center; gap:8px; font-weight:600; font-size:.95rem; }
+.ticker-item .flag { font-size:1.5rem; }
+.ticker-item .rate { color:#4ecdc4; }
+@keyframes scroll { 0% { transform:translateX(100%); } 100% { transform:translateX(-100%); } }
+.rates-ticker:hover .ticker-content { animation-play-state:paused; }
 .hero-page { padding:140px 0 60px; background:linear-gradient(135deg,var(--accent),var(--secondary)); color:#fff; }
 .hero-page h1 { font-size:clamp(2.2rem,5vw,3.5rem); margin-bottom:12px; }
 .hero-page p { font-size:1.1rem; opacity:.95; }
@@ -97,6 +104,12 @@ footer .logo { color:var(--paper); }
     <p>Explore 15+ destinations with customized guides. Choose your destination and trip length.</p>
   </div>
 </section>
+
+<div class="rates-ticker">
+  <div class="ticker-content" id="tickerContent">
+    <!-- Populated by JavaScript -->
+  </div>
+</div>
 
 <div class="wrap">
   <div class="selector-box">
@@ -320,9 +333,35 @@ async function fetchExchangeRates() {
     const data = await response.json();
     exchangeRates = data.rates;
     console.log('Exchange rates loaded:', Object.keys(exchangeRates).length, 'currencies');
+    updateTicker();
   } catch (error) {
     console.error('Error fetching exchange rates:', error);
   }
+}
+
+// Update ticker with current rates
+function updateTicker() {
+  const tickerContent = document.getElementById('tickerContent');
+  if (!tickerContent || Object.keys(exchangeRates).length === 0) return;
+
+  let html = '';
+  allItineraries.forEach((it, idx) => {
+    const currency = it.currency;
+    const apiRate = exchangeRates[currency];
+    if (!apiRate) return;
+
+    const rate = 1 / apiRate; // 1 currency = X INR
+    html += `
+      <div class="ticker-item">
+        <span class="flag">${it.emoji}</span>
+        <span>${currency}: <span class="rate">₹${rate.toFixed(2)}</span></span>
+      </div>
+    `;
+  });
+
+  // Duplicate for infinite scroll effect
+  html += html;
+  tickerContent.innerHTML = html;
 }
 
 // Show currency converter when country selected (added to existing listener)
@@ -379,6 +418,11 @@ document.getElementById('amountINR').addEventListener('input', (e) => {
 
 // Load exchange rates on page load
 fetchExchangeRates();
+
+// Refresh exchange rates every 60 seconds
+setInterval(() => {
+  fetchExchangeRates();
+}, 60000);
 </script>
 
 </body>
