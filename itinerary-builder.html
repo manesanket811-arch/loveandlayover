@@ -146,7 +146,7 @@ let selectedCountry = '';
 let selectedDuration = 3;
 
 // Load itineraries data
-fetch('data/itineraries.json')
+fetch('/data/itineraries.json')
   .then(response => response.json())
   .then(data => {
     allItineraries = data.itineraries || [];
