@@ -1,436 +1,1418 @@
 {
     "itineraries":  [
                         {
+                            "colorClass":  "t1",
                             "id":  "singapore-3",
-                            "description":  "Hit the iconic highlights in just 3 days.",
-                            "badge":  "City Explorer",
-                            "duration":  3,
-                            "emoji":  "🏙",
+                            "days":  [
+                                         {
+                                             "title":  "Marina Bay Magic",
+                                             "attractions":  [
+                                                                 "Marina Bay Sands observation deck",
+                                                                 "ArtScience Museum",
+                                                                 "Gardens by the Bay light show (free)",
+                                                                 "Dinner at Marina waterfront"
+                                                             ],
+                                             "day":  1,
+                                             "tips":  [
+                                                          "Arrive early for sunset views",
+                                                          "Light shows run nightly at 7:45pm \u0026 8:45pm"
+                                                      ],
+                                             "cost":  "SGD 100-150"
+                                         },
+                                         {
+                                             "title":  "Culture \u0026 Heritage",
+                                             "attractions":  [
+                                                                 "Chinatown walking tour",
+                                                                 "Sri Mariamman Temple",
+                                                                 "Buddha Tooth Relic Temple",
+                                                                 "Maxwell Food Centre dinner"
+                                                             ],
+                                             "day":  2,
+                                             "tips":  [
+                                                          "Wear comfortable shoes",
+                                                          "Food at hawkers is 2-4 SGD per dish"
+                                                      ],
+                                             "cost":  "SGD 80-120"
+                                         },
+                                         {
+                                             "title":  "Nature \u0026 Islands",
+                                             "attractions":  [
+                                                                 "Gardens by the Bay Cloud Forest",
+                                                                 "Sentosa Island beaches",
+                                                                 "Universal Studios or S.E.A Aquarium"
+                                                             ],
+                                             "day":  3,
+                                             "tips":  [
+                                                          "Monorail to Sentosa is cheaper",
+                                                          "End with Flyer for night views"
+                                                      ],
+                                             "cost":  "SGD 120-180"
+                                         }
+                                     ],
+                            "description":  "Hit the iconic highlights in just 3 days. Perfect for short stopovers.",
                             "title":  "Singapore 3-Day Express",
-                            "country":  "Singapore"
+                            "emoji":  "🏙",
+                            "badge":  "City Explorer",
+                            "country":  "Singapore",
+                            "duration":  3
                         },
                         {
+                            "colorClass":  "t2",
                             "id":  "singapore-5",
-                            "description":  "Full Singapore experience with food and culture.",
-                            "badge":  "Food Explorer",
-                            "duration":  5,
-                            "emoji":  "🏙",
+                            "days":  [
+                                         {
+                                             "title":  "Marina Bay",
+                                             "attractions":  [
+                                                                 "Marina Bay Sands observation deck",
+                                                                 "ArtScience Museum",
+                                                                 "Gardens by the Bay"
+                                                             ],
+                                             "day":  1,
+                                             "tips":  [
+                                                          "Book observation deck online",
+                                                          "Arrive before sunset"
+                                                      ],
+                                             "cost":  "SGD 120-150"
+                                         },
+                                         {
+                                             "title":  "Chinatown \u0026 Streets",
+                                             "attractions":  [
+                                                                 "Chinatown Heritage Center",
+                                                                 "Sri Mariamman Temple",
+                                                                 "Thian Hock Keng",
+                                                                 "Street food tour"
+                                                             ],
+                                             "day":  2,
+                                             "tips":  [
+                                                          "Hawker food is amazingly cheap",
+                                                          "Visit temples in morning"
+                                                      ],
+                                             "cost":  "SGD 100-130"
+                                         },
+                                         {
+                                             "title":  "Nature Escape",
+                                             "attractions":  [
+                                                                 "Cloud Forest \u0026 Flower Dome",
+                                                                 "Sentosa beaches",
+                                                                 "Underwater World Aquarium"
+                                                             ],
+                                             "day":  3,
+                                             "tips":  [
+                                                          "Bundle gardens with FastTrack pass",
+                                                          "Bring swimwear"
+                                                      ],
+                                             "cost":  "SGD 140-180"
+                                         },
+                                         {
+                                             "title":  "Food \u0026 Shopping",
+                                             "attractions":  [
+                                                                 "Tekka Market",
+                                                                 "Orchard Road shopping",
+                                                                 "Joo Chiat heritage walk",
+                                                                 "Night Safari optional"
+                                                             ],
+                                             "day":  4,
+                                             "tips":  [
+                                                          "Joo Chiat has colorful shophouses",
+                                                          "Shop early before afternoon crowds"
+                                                      ],
+                                             "cost":  "SGD 130-160"
+                                         },
+                                         {
+                                             "title":  "Rest \u0026 Relax",
+                                             "attractions":  [
+                                                                 "Botanic Gardens",
+                                                                 "Khatib Bongsu nature reserve",
+                                                                 "Final shopping at Changi Airport",
+                                                                 "Departure"
+                                                             ],
+                                             "day":  5,
+                                             "tips":  [
+                                                          "Botanic Gardens free entry",
+                                                          "Arrive 3 hours before flight"
+                                                      ],
+                                             "cost":  "SGD 50-80"
+                                         }
+                                     ],
+                            "description":  "Full Singapore experience. Food, culture, nature, and nightlife combined.",
                             "title":  "Singapore 5-Day Complete",
-                            "country":  "Singapore"
-                        },
-                        {
-                            "id":  "singapore-10",
-                            "description":  "Slow travel exploring neighborhoods and hidden gems.",
-                            "badge":  "Complete Explorer",
-                            "duration":  10,
                             "emoji":  "🏙",
-                            "title":  "Singapore 10-Day Deep Dive",
-                            "country":  "Singapore"
+                            "badge":  "Food \u0026 Explorer",
+                            "country":  "Singapore",
+                            "duration":  5
                         },
                         {
+                            "colorClass":  "t3",
                             "id":  "thailand-3",
-                            "description":  "Bangkok temples, markets, street food in 72 hours.",
-                            "badge":  "Temple Tour",
-                            "duration":  3,
-                            "emoji":  "🇹🇭",
-                            "title":  "Thailand 3-Day Bangkok",
-                            "country":  "Thailand"
+                            "days":  [
+                                         {
+                                             "title":  "Grand Palace \u0026 Markets",
+                                             "attractions":  [
+                                                                 "Grand Palace tour",
+                                                                 "Wat Phra Kaew",
+                                                                 "Floating markets (Damnoen Saduak)",
+                                                                 "Dinner cruise on Chao Phraya"
+                                                             ],
+                                             "day":  1,
+                                             "tips":  [
+                                                          "Dress modestly for palace",
+                                                          "Book floating market tour in advance"
+                                                      ],
+                                             "cost":  "THB 1500-2000"
+                                         },
+                                         {
+                                             "title":  "Ancient Temples",
+                                             "attractions":  [
+                                                                 "Wat Arun",
+                                                                 "Wat Pho (Reclining Buddha)",
+                                                                 "Wat Saket",
+                                                                 "Street food walking tour"
+                                                             ],
+                                             "day":  2,
+                                             "tips":  [
+                                                          "Temples close by 4:30pm",
+                                                          "Street food is super cheap 30-100 THB"
+                                                      ],
+                                             "cost":  "THB 1000-1500"
+                                         },
+                                         {
+                                             "title":  "Local Experience",
+                                             "attractions":  [
+                                                                 "Chatuchak Weekend Market (if weekend)",
+                                                                 "Muay Thai boxing match",
+                                                                 "Lumphini Park evening stroll",
+                                                                 "Jazz bar at night"
+                                                             ],
+                                             "day":  3,
+                                             "tips":  [
+                                                          "Chatuchak is massive - start early",
+                                                          "Muay Thai matches best on Friday/Saturday"
+                                                      ],
+                                             "cost":  "THB 1200-1800"
+                                         }
+                                     ],
+                            "description":  "Temples, markets, and street food in Thailand\u0027s vibrant capital.",
+                            "title":  "Bangkok 3-Day Highlights",
+                            "emoji":  "🕯",
+                            "badge":  "Street Food",
+                            "country":  "Thailand",
+                            "duration":  3
                         },
                         {
+                            "colorClass":  "t1",
                             "id":  "thailand-5",
-                            "description":  "Bangkok city and island escape with beaches.",
-                            "badge":  "City \u0026 Beach",
-                            "duration":  5,
-                            "emoji":  "🇹🇭",
-                            "title":  "Thailand 5-Day Bangkok \u0026 Islands",
-                            "country":  "Thailand"
+                            "days":  [
+                                         {
+                                             "title":  "Bangkok Arrival",
+                                             "attractions":  [
+                                                                 "Grand Palace",
+                                                                 "Floating markets",
+                                                                 "Chao Phraya dinner cruise"
+                                                             ],
+                                             "day":  1,
+                                             "tips":  [
+                                                          "Arrive early at markets",
+                                                          "Cruise includes dinner"
+                                                      ],
+                                             "cost":  "THB 1800-2200"
+                                         },
+                                         {
+                                             "title":  "Temples \u0026 Markets",
+                                             "attractions":  [
+                                                                 "Wat Arun sunrise boat tour",
+                                                                 "Wat Pho",
+                                                                 "Damnoen Saduak market",
+                                                                 "Muay Thai match"
+                                                             ],
+                                             "day":  2,
+                                             "tips":  [
+                                                          "Wake up for Wat Arun sunrise",
+                                                          "Book boxing match day before"
+                                                      ],
+                                             "cost":  "THB 1500-2000"
+                                         },
+                                         {
+                                             "title":  "Travel to Phuket",
+                                             "attractions":  [
+                                                                 "Flight or train to Phuket",
+                                                                 "Patong Beach sunset",
+                                                                 "Bangla Road nightlife"
+                                                             ],
+                                             "day":  3,
+                                             "tips":  [
+                                                          "Flight cheaper than train",
+                                                          "Patong has most nightlife"
+                                                      ],
+                                             "cost":  "THB 2000-3000"
+                                         },
+                                         {
+                                             "title":  "Island Hopping",
+                                             "attractions":  [
+                                                                 "Phang Nga Bay limestone tour",
+                                                                 "Snorkeling at James Bond Island",
+                                                                 "Sunset return to Phuket",
+                                                                 "Street food dinner"
+                                                             ],
+                                             "day":  4,
+                                             "tips":  [
+                                                          "Snorkeling gear provided",
+                                                          "Tours pick up from hotels"
+                                                      ],
+                                             "cost":  "THB 2200-2800"
+                                         },
+                                         {
+                                             "title":  "Beach Relaxation",
+                                             "attractions":  [
+                                                                 "Kata or Karon Beach",
+                                                                 "Spa massage",
+                                                                 "Last-minute shopping",
+                                                                 "Departure"
+                                                             ],
+                                             "day":  5,
+                                             "tips":  [
+                                                          "Kata quieter than Patong",
+                                                          "Massage costs 200-400 THB per hour"
+                                                      ],
+                                             "cost":  "THB 1000-1500"
+                                         }
+                                     ],
+                            "description":  "Bangkok temples combined with island beaches and island relaxation.",
+                            "title":  "Thailand 5-Day Island Adventure",
+                            "emoji":  "🕯",
+                            "badge":  "Beach \u0026 Culture",
+                            "country":  "Thailand",
+                            "duration":  5
                         },
                         {
-                            "id":  "thailand-10",
-                            "description":  "Bangkok, Chiang Mai, Phuket, temples and beaches.",
-                            "badge":  "Complete Journey",
-                            "duration":  10,
-                            "emoji":  "🇹🇭",
-                            "title":  "Thailand 10-Day Complete",
-                            "country":  "Thailand"
-                        },
-                        {
+                            "colorClass":  "t2",
                             "id":  "vietnam-3",
-                            "description":  "Hanoi highlights: Street food, temples, cyclo rides.",
-                            "badge":  "Street Life",
-                            "duration":  3,
+                            "days":  [
+                                         {
+                                             "title":  "Old Quarter Exploration",
+                                             "attractions":  [
+                                                                 "Hoan Kiem Lake walk",
+                                                                 "Old Quarter street food tour",
+                                                                 "Hang Dao (street of shops)",
+                                                                 "Night market"
+                                                             ],
+                                             "day":  1,
+                                             "tips":  [
+                                                          "Hoan Kiem Lake free",
+                                                          "Street food 20-40k VND per dish"
+                                                      ],
+                                             "cost":  "USD 40-60"
+                                         },
+                                         {
+                                             "title":  "Temples \u0026 Lake",
+                                             "attractions":  [
+                                                                 "Temple of Literature",
+                                                                 "One Pillar Pagoda",
+                                                                 "Tran Quoc Pagoda",
+                                                                 "Water puppet show evening"
+                                                             ],
+                                             "day":  2,
+                                             "tips":  [
+                                                          "Water puppet show magical",
+                                                          "Temple of Literature less crowded morning"
+                                                      ],
+                                             "cost":  "USD 50-70"
+                                         },
+                                         {
+                                             "title":  "Local Vibes",
+                                             "attractions":  [
+                                                                 "Coffee shop hopping in French Quarter",
+                                                                 "Dong Xuan Market",
+                                                                 "Evening egg coffee experience",
+                                                                 "Street food walking tour"
+                                                             ],
+                                             "day":  3,
+                                             "tips":  [
+                                                          "Egg coffee unique to Hanoi",
+                                                          "Markets close by 5pm"
+                                                      ],
+                                             "cost":  "USD 45-65"
+                                         }
+                                     ],
+                            "description":  "Explore Hanoi\u0027s chaotic streets, temples, and iconic water puppet shows.",
+                            "title":  "Hanoi 3-Day Immersion",
                             "emoji":  "🏮",
-                            "title":  "Vietnam 3-Day Hanoi",
-                            "country":  "Vietnam"
+                            "badge":  "Cultural",
+                            "country":  "Vietnam",
+                            "duration":  3
                         },
                         {
+                            "colorClass":  "t3",
                             "id":  "vietnam-5",
-                            "description":  "Hanoi city and Halong Bay limestone karsts cruise.",
-                            "badge":  "History \u0026 Nature",
-                            "duration":  5,
+                            "days":  [
+                                         {
+                                             "title":  "Hanoi Arrival",
+                                             "attractions":  [
+                                                                 "Hoan Kiem Lake",
+                                                                 "Old Quarter food tour",
+                                                                 "Temple of Literature",
+                                                                 "Water puppet show"
+                                                             ],
+                                             "day":  1,
+                                             "tips":  [
+                                                          "Join walking food tour",
+                                                          "Show booking required"
+                                                      ],
+                                             "cost":  "USD 60-80"
+                                         },
+                                         {
+                                             "title":  "Halong Bay Cruise",
+                                             "attractions":  [
+                                                                 "Train to Halong (2.5 hrs)",
+                                                                 "Overnight cruise start",
+                                                                 "Cave exploration",
+                                                                 "Kayaking between limestone"
+                                                             ],
+                                             "day":  2,
+                                             "tips":  [
+                                                          "Cruises include meals",
+                                                          "Book 2-3 days beforehand"
+                                                      ],
+                                             "cost":  "USD 80-120"
+                                         },
+                                         {
+                                             "title":  "Halong Bay",
+                                             "attractions":  [
+                                                                 "Floating village visit",
+                                                                 "Sunken monastery",
+                                                                 "Return to Hanoi overnight",
+                                                                 "Rest day"
+                                                             ],
+                                             "day":  3,
+                                             "tips":  [
+                                                          "Bring seasickness medication",
+                                                          "Cruises are all-inclusive"
+                                                      ],
+                                             "cost":  "USD 70-100"
+                                         },
+                                         {
+                                             "title":  "Fly to Ho Chi Minh",
+                                             "attractions":  [
+                                                                 "War Remnants Museum",
+                                                                 "Ben Thanh Market",
+                                                                 "Cu Chi Tunnels tour preparation"
+                                                             ],
+                                             "day":  4,
+                                             "tips":  [
+                                                          "Museum emotionally heavy but important",
+                                                          "Ben Thanh most famous market"
+                                                      ],
+                                             "cost":  "USD 90-130"
+                                         },
+                                         {
+                                             "title":  "Mekong \u0026 Shopping",
+                                             "attractions":  [
+                                                                 "Cu Chi Tunnels tour",
+                                                                 "Mekong Delta boat ride",
+                                                                 "Last-minute shopping",
+                                                                 "Departure"
+                                                             ],
+                                             "day":  5,
+                                             "tips":  [
+                                                          "Tunnels crawl tunnels optional",
+                                                          "Mekong tours include lunch"
+                                                      ],
+                                             "cost":  "USD 80-120"
+                                         }
+                                     ],
+                            "description":  "Hanoi, Halong Bay, and Ho Chi Minh City combined for complete Vietnam experience.",
+                            "title":  "Vietnam North to South",
                             "emoji":  "🏮",
-                            "title":  "Vietnam 5-Day Hanoi \u0026 Halong Bay",
-                            "country":  "Vietnam"
+                            "badge":  "Beach \u0026 Culture",
+                            "country":  "Vietnam",
+                            "duration":  5
                         },
                         {
-                            "id":  "vietnam-10",
-                            "description":  "Complete Vietnam: Hanoi, Halong Bay, Ho Chi Minh, Mekong.",
-                            "badge":  "Complete Tour",
-                            "duration":  10,
-                            "emoji":  "🏮",
-                            "title":  "Vietnam 10-Day North to South",
-                            "country":  "Vietnam"
-                        },
-                        {
+                            "colorClass":  "t1",
                             "id":  "japan-3",
-                            "description":  "Tokyo essentials: temples, shopping, culture.",
-                            "badge":  "City Lights",
-                            "duration":  3,
-                            "emoji":  "🗼",
-                            "title":  "Japan 3-Day Tokyo",
-                            "country":  "Japan"
+                            "days":  [
+                                         {
+                                             "title":  "Shibuya \u0026 Shinjuku",
+                                             "attractions":  [
+                                                                 "Shibuya Crossing",
+                                                                 "Shibuya 109 shopping",
+                                                                 "Hachiko statue",
+                                                                 "Shinjuku neon district walk"
+                                                             ],
+                                             "day":  1,
+                                             "tips":  [
+                                                          "Best time for crossing early evening",
+                                                          "Shinjuku Kabukicho for neon experience"
+                                                      ],
+                                             "cost":  "JPY 8000-12000"
+                                         },
+                                         {
+                                             "title":  "Temples \u0026 Neighborhoods",
+                                             "attractions":  [
+                                                                 "Senso-ji Temple (Asakusa)",
+                                                                 "Meiji Shrine forest walk",
+                                                                 "Harajuku fashion district",
+                                                                 "Omotesando design street"
+                                                             ],
+                                             "day":  2,
+                                             "tips":  [
+                                                          "Senso-ji crowded in afternoon",
+                                                          "Meiji Shrine free, arrive early"
+                                                      ],
+                                             "cost":  "JPY 6000-10000"
+                                         },
+                                         {
+                                             "title":  "Tech \u0026 Views",
+                                             "attractions":  [
+                                                                 "Tokyo Skytree or Tokyo Tower",
+                                                                 "Akihabara electronics district",
+                                                                 "Pokemon Center",
+                                                                 "Teamlab Borderless digital art"
+                                                             ],
+                                             "day":  3,
+                                             "tips":  [
+                                                          "Book Teamlab ahead online",
+                                                          "Skytree faster but Tower cheaper"
+                                                      ],
+                                             "cost":  "JPY 10000-15000"
+                                         }
+                                     ],
+                            "description":  "Experience Tokyo\u0027s fusion of ancient temples and ultra-modern technology.",
+                            "title":  "Tokyo 3-Day Express",
+                            "emoji":  "⛩",
+                            "badge":  "Modern City",
+                            "country":  "Japan",
+                            "duration":  3
                         },
                         {
+                            "colorClass":  "t2",
                             "id":  "japan-5",
-                            "description":  "Tokyo city and Mt. Fuji views from lake town.",
-                            "badge":  "City \u0026 Mt. Fuji",
-                            "duration":  5,
-                            "emoji":  "🗼",
-                            "title":  "Japan 5-Day Tokyo \u0026 Mt. Fuji",
-                            "country":  "Japan"
+                            "days":  [
+                                         {
+                                             "title":  "Tokyo Arrival",
+                                             "attractions":  [
+                                                                 "Shibuya Crossing",
+                                                                 "Shinjuku exploration",
+                                                                 "Teamlab Borderless",
+                                                                 "Dinner in Shibuya"
+                                                             ],
+                                             "day":  1,
+                                             "tips":  [
+                                                          "Get JR Pass if multi-day",
+                                                          "Teamlab book online"
+                                                      ],
+                                             "cost":  "JPY 12000-16000"
+                                         },
+                                         {
+                                             "title":  "Temples \u0026 Markets",
+                                             "attractions":  [
+                                                                 "Senso-ji Temple",
+                                                                 "Tsukiji Outer Market breakfast",
+                                                                 "Meiji Shrine",
+                                                                 "Harajuku Takeshita Street"
+                                                             ],
+                                             "day":  2,
+                                             "tips":  [
+                                                          "Market breakfast freshest",
+                                                          "Shrine visit early morning"
+                                                      ],
+                                             "cost":  "JPY 8000-12000"
+                                         },
+                                         {
+                                             "title":  "Bullet Train to Kyoto",
+                                             "attractions":  [
+                                                                 "Shinkansen bullet train (2.5 hrs)",
+                                                                 "Fushimi Inari thousands of torii gates",
+                                                                 "Kinkaku-ji Golden Temple",
+                                                                 "Arashiyama Bamboo Grove evening"
+                                                             ],
+                                             "day":  3,
+                                             "tips":  [
+                                                          "Inari best at dawn",
+                                                          "Bamboo grove at sunset"
+                                                      ],
+                                             "cost":  "JPY 15000-20000"
+                                         },
+                                         {
+                                             "title":  "Kyoto Temples",
+                                             "attractions":  [
+                                                                 "Ryoan-ji dry garden",
+                                                                 "Kiyomizu-dera temple",
+                                                                 "Geisha district Gion walking",
+                                                                 "Traditional dinner show"
+                                                             ],
+                                             "day":  4,
+                                             "tips":  [
+                                                          "Geisha spotting early evening",
+                                                          "Temples close by 5pm"
+                                                      ],
+                                             "cost":  "JPY 10000-15000"
+                                         },
+                                         {
+                                             "title":  "Kyoto \u0026 Departure",
+                                             "attractions":  [
+                                                                 "Arashiyama bamboo morning revisit",
+                                                                 "Local crafts shopping",
+                                                                 "Train back to Tokyo",
+                                                                 "Departure"
+                                                             ],
+                                             "day":  5,
+                                             "tips":  [
+                                                          "Fushimi Inari second visit quieter",
+                                                          "Crafts shops in Gion"
+                                                      ],
+                                             "cost":  "JPY 8000-12000"
+                                         }
+                                     ],
+                            "description":  "Modern Tokyo combined with ancient Kyoto temples and traditions.",
+                            "title":  "Tokyo to Kyoto 5-Day Journey",
+                            "emoji":  "⛩",
+                            "badge":  "Modern \u0026 Ancient",
+                            "country":  "Japan",
+                            "duration":  5
                         },
                         {
+                            "colorClass":  "t3",
                             "id":  "japan-10",
-                            "description":  "Modern Tokyo, traditional Kyoto, Mt. Fuji views.",
-                            "badge":  "Complete Journey",
-                            "duration":  10,
-                            "emoji":  "🗼",
-                            "title":  "Japan 10-Day Tokyo to Kyoto",
-                            "country":  "Japan"
+                            "days":  [
+                                         {
+                                             "title":  "Tokyo Arrival",
+                                             "attractions":  [
+                                                                 "Shibuya Crossing",
+                                                                 "Shinjuku",
+                                                                 "Teamlab"
+                                                             ],
+                                             "day":  1,
+                                             "tips":  [
+                                                          "Jet lag? Rest day first",
+                                                          "Get 7-day JR Pass"
+                                                      ],
+                                             "cost":  "JPY 12000-16000"
+                                         },
+                                         {
+                                             "title":  "Tokyo Temples",
+                                             "attractions":  [
+                                                                 "Senso-ji",
+                                                                 "Meiji Shrine",
+                                                                 "Harajuku"
+                                                             ],
+                                             "day":  2,
+                                             "tips":  [
+                                                          "Early morning temple visits",
+                                                          "Cheap eats in Harajuku"
+                                                      ],
+                                             "cost":  "JPY 8000-12000"
+                                         },
+                                         {
+                                             "title":  "Mt. Fuji Day Trip",
+                                             "attractions":  [
+                                                                 "Lake Kawaguchi views",
+                                                                 "Mount Fuji 5th Station",
+                                                                 "Hakone Open-Air Museum"
+                                                             ],
+                                             "day":  3,
+                                             "tips":  [
+                                                          "Clear days best for Mt. Fuji views",
+                                                          "Day trip from Tokyo possible"
+                                                      ],
+                                             "cost":  "JPY 15000-20000"
+                                         },
+                                         {
+                                             "title":  "Kyoto Arrival",
+                                             "attractions":  [
+                                                                 "Fushimi Inari",
+                                                                 "Kinkaku-ji",
+                                                                 "Arashiyama Bamboo"
+                                                             ],
+                                             "day":  4,
+                                             "tips":  [
+                                                          "Stay 3 nights in Kyoto",
+                                                          "Buy bus pass"
+                                                      ],
+                                             "cost":  "JPY 12000-16000"
+                                         },
+                                         {
+                                             "title":  "Kyoto South",
+                                             "attractions":  [
+                                                                 "Kiyomizu-dera",
+                                                                 "Sanzen-in temple",
+                                                                 "Philosopher\u0027s Path walk"
+                                                             ],
+                                             "day":  5,
+                                             "tips":  [
+                                                          "Philosopher\u0027s Path free",
+                                                          "Path stunning in autumn"
+                                                      ],
+                                             "cost":  "JPY 9000-13000"
+                                         },
+                                         {
+                                             "title":  "Kyoto North \u0026 Geisha",
+                                             "attractions":  [
+                                                                 "Kinkaku-ji repeat for sunrise",
+                                                                 "Ryoan-ji dry garden",
+                                                                 "Gion evening walk",
+                                                                 "Dinner show"
+                                                             ],
+                                             "day":  6,
+                                             "tips":  [
+                                                          "Book dinner show ahead",
+                                                          "Geishas walk Gion 6-7pm"
+                                                      ],
+                                             "cost":  "JPY 11000-15000"
+                                         },
+                                         {
+                                             "title":  "Osaka Culture",
+                                             "attractions":  [
+                                                                 "Train to Osaka",
+                                                                 "Osaka Castle",
+                                                                 "Dotonbori neon district",
+                                                                 "Street food heaven"
+                                                             ],
+                                             "day":  7,
+                                             "tips":  [
+                                                          "Osaka cheaper than Tokyo/Kyoto",
+                                                          "Dotonbori busy evening"
+                                                      ],
+                                             "cost":  "JPY 10000-14000"
+                                         },
+                                         {
+                                             "title":  "Kobe \u0026 Countryside",
+                                             "attractions":  [
+                                                                 "Day trip to Kobe",
+                                                                 "Sake breweries",
+                                                                 "Arima hot springs",
+                                                                 "Return to Osaka"
+                                                             ],
+                                             "day":  8,
+                                             "tips":  [
+                                                          "Kobe famous for beef",
+                                                          "Hot springs relaxing"
+                                                      ],
+                                             "cost":  "JPY 12000-16000"
+                                         },
+                                         {
+                                             "title":  "Osaka Exploration",
+                                             "attractions":  [
+                                                                 "Shinsekai street food",
+                                                                 "Sumiyoshi Taisha shrine",
+                                                                 "Last-minute shopping",
+                                                                 "Osaka nightlife"
+                                                             ],
+                                             "day":  9,
+                                             "tips":  [
+                                                          "Shinsekai authentic local",
+                                                          "Shrine free entry"
+                                                      ],
+                                             "cost":  "JPY 9000-13000"
+                                         },
+                                         {
+                                             "title":  "Departure",
+                                             "attractions":  [
+                                                                 "Breakfast shopping",
+                                                                 "Kansai Airport (from Osaka)",
+                                                                 "Flight home"
+                                                             ],
+                                             "day":  10,
+                                             "tips":  [
+                                                          "Arrive 3 hours early",
+                                                          "Last-minute souvenirs at airport"
+                                                      ],
+                                             "cost":  "JPY 5000-8000"
+                                         }
+                                     ],
+                            "description":  "Complete Japan experience including Tokyo, Kyoto, Mt. Fuji, Osaka, and countryside.",
+                            "title":  "Japan 10-Day Grand Tour",
+                            "emoji":  "⛩",
+                            "badge":  "Grand Tour",
+                            "country":  "Japan",
+                            "duration":  10
                         },
                         {
-                            "id":  "skorea-3",
-                            "description":  "Seoul K-pop, palaces, street food in 3 days.",
-                            "badge":  "Pop Culture",
-                            "duration":  3,
-                            "emoji":  "🇰🇷",
-                            "title":  "South Korea 3-Day Seoul",
-                            "country":  "South Korea"
+                            "colorClass":  "t1",
+                            "id":  "southkorea-3",
+                            "days":  [
+                                         {
+                                             "title":  "Gangnam \u0026 Palaces",
+                                             "attractions":  [
+                                                                 "Gyeongbokgung Palace",
+                                                                 "Bukchon Hanok Village",
+                                                                 "Insadong traditional street",
+                                                                 "Dongdaemun shopping"
+                                                             ],
+                                             "day":  1,
+                                             "tips":  [
+                                                          "Palace tours in English available",
+                                                          "Hanok village free to walk"
+                                                      ],
+                                             "cost":  "KRW 50000-70000"
+                                         },
+                                         {
+                                             "title":  "K-Pop Tour",
+                                             "attractions":  [
+                                                                 "SM Entertainment building (K-pop)",
+                                                                 "Myeongdong shopping district",
+                                                                 "Korean cafe hopping (Instagrammable)",
+                                                                 "Gangnam neon nightlife"
+                                                             ],
+                                             "day":  2,
+                                             "tips":  [
+                                                          "Myeongdong extremely crowded",
+                                                          "Cafes most popular with tourists"
+                                                      ],
+                                             "cost":  "KRW 60000-80000"
+                                         },
+                                         {
+                                             "title":  "Modern Seoul",
+                                             "attractions":  [
+                                                                 "N Seoul Tower",
+                                                                 "Han River bike ride",
+                                                                 "Hongdae artsy neighborhood street art",
+                                                                 "Korean BBQ dinner"
+                                                             ],
+                                             "day":  3,
+                                             "tips":  [
+                                                          "Tower views worth it",
+                                                          "Hongdae hipster vibe, galleries"
+                                                      ],
+                                             "cost":  "KRW 55000-75000"
+                                         }
+                                     ],
+                            "description":  "K-pop hotspots, traditional palaces, and modern street fashion in Seoul.",
+                            "title":  "Seoul 3-Day K-Pop \u0026 Culture",
+                            "emoji":  "🎤",
+                            "badge":  "K-Culture",
+                            "country":  "South Korea",
+                            "duration":  3
                         },
                         {
-                            "id":  "skorea-5",
-                            "description":  "Seoul exploration and DMZ historical tour.",
-                            "badge":  "History \u0026 Culture",
-                            "duration":  5,
-                            "emoji":  "🇰🇷",
-                            "title":  "South Korea 5-Day Seoul \u0026 DMZ",
-                            "country":  "South Korea"
-                        },
-                        {
-                            "id":  "skorea-10",
-                            "description":  "Seoul, DMZ, Gyeongju, Busan, Jeju Island.",
-                            "badge":  "Complete Tour",
-                            "duration":  10,
-                            "emoji":  "🇰🇷",
-                            "title":  "South Korea 10-Day Complete",
-                            "country":  "South Korea"
-                        },
-                        {
+                            "colorClass":  "t2",
                             "id":  "cambodia-3",
-                            "description":  "Angkor Wat temples. UNESCO World Heritage wonders.",
-                            "badge":  "Temple Explorer",
-                            "duration":  3,
-                            "emoji":  "🇰🇭",
-                            "title":  "Cambodia 3-Day Siem Reap",
-                            "country":  "Cambodia"
+                            "days":  [
+                                         {
+                                             "title":  "Arrival in Siem Reap",
+                                             "attractions":  [
+                                                                 "Old Market walking",
+                                                                 "Artisans Angkor crafts workshop",
+                                                                 "Tonle Sap lake sunset boat",
+                                                                 "Night market exploration"
+                                                             ],
+                                             "day":  1,
+                                             "tips":  [
+                                                          "Tonle Sap tour includes sunset",
+                                                          "Night market great for dinner"
+                                                      ],
+                                             "cost":  "USD 50-70"
+                                         },
+                                         {
+                                             "title":  "Angkor Sunrise \u0026 Temples",
+                                             "attractions":  [
+                                                                 "Angkor Wat sunrise (5am start)",
+                                                                 "Bayon Temple (smiley faces)",
+                                                                 "Ta Prohm (Tomb Raider temple)",
+                                                                 "Lunch at local restaurant"
+                                                             ],
+                                             "day":  2,
+                                             "tips":  [
+                                                          "3-day pass worth it",
+                                                          "Sunrise worth waking up for",
+                                                          "Hire knowledgeable guide"
+                                                      ],
+                                             "cost":  "USD 80-100"
+                                         },
+                                         {
+                                             "title":  "More Temples \u0026 Culture",
+                                             "attractions":  [
+                                                                 "Lesser-known temples",
+                                                                 "Floating villages on Tonle Sap",
+                                                                 "Angkor National Museum",
+                                                                 "Departure"
+                                                             ],
+                                             "day":  3,
+                                             "tips":  [
+                                                          "Floating villages ethical tourism",
+                                                          "Museum helps understand history"
+                                                      ],
+                                             "cost":  "USD 70-90"
+                                         }
+                                     ],
+                            "description":  "One of the world\u0027s largest religious monuments and stunning Khmer temples.",
+                            "title":  "Angkor Wat 3-Day Wonder",
+                            "emoji":  "🏛",
+                            "badge":  "History",
+                            "country":  "Cambodia",
+                            "duration":  3
                         },
                         {
-                            "id":  "cambodia-5",
-                            "description":  "Angkor temples and Phnom Penh capital exploration.",
-                            "badge":  "History Tour",
-                            "duration":  5,
-                            "emoji":  "🇰🇭",
-                            "title":  "Cambodia 5-Day Angkor \u0026 Phnom Penh",
-                            "country":  "Cambodia"
-                        },
-                        {
-                            "id":  "cambodia-10",
-                            "description":  "Siem Reap, Phnom Penh, Sihanoukville temples and beaches.",
-                            "badge":  "Complete Journey",
-                            "duration":  10,
-                            "emoji":  "🇰🇭",
-                            "title":  "Cambodia 10-Day Complete",
-                            "country":  "Cambodia"
-                        },
-                        {
+                            "colorClass":  "t3",
                             "id":  "philippines-3",
-                            "description":  "Manila city and nearby islands island hopping.",
-                            "badge":  "Island Life",
-                            "duration":  3,
-                            "emoji":  "🇵🇭",
-                            "title":  "Philippines 3-Day Manila",
-                            "country":  "Philippines"
+                            "days":  [
+                                         {
+                                             "title":  "Manila City",
+                                             "attractions":  [
+                                                                 "Intramuros walled city tour",
+                                                                 "San Agustin Church",
+                                                                 "Rizal Park",
+                                                                 "Manila Bay sunset cruise"
+                                                             ],
+                                             "day":  1,
+                                             "tips":  [
+                                                          "Intramuros walkable in few hours",
+                                                          "Cruise includes dinner"
+                                                      ],
+                                             "cost":  "PHP 2000-3000"
+                                         },
+                                         {
+                                             "title":  "Flight to Boracay",
+                                             "attractions":  [
+                                                                 "Fly to Boracay (1 hr)",
+                                                                 "White Beach",
+                                                                 "Water sports (parasailing, jetski)",
+                                                                 "Sunset party at beach"
+                                                             ],
+                                             "day":  2,
+                                             "tips":  [
+                                                          "Book beach resort in advance",
+                                                          "Boracay wild nightlife"
+                                                      ],
+                                             "cost":  "PHP 5000-7000"
+                                         },
+                                         {
+                                             "title":  "Beach Relaxation",
+                                             "attractions":  [
+                                                                 "Snorkeling tour",
+                                                                 "Island hopping",
+                                                                 "Massage and spa",
+                                                                 "Departure flight"
+                                                             ],
+                                             "day":  3,
+                                             "tips":  [
+                                                          "Snorkeling great marine life",
+                                                          "Island tours include lunch"
+                                                      ],
+                                             "cost":  "PHP 3000-4000"
+                                         }
+                                     ],
+                            "description":  "Manila\u0027s vibrant culture meets pristine white sand beaches of Boracay.",
+                            "title":  "Manila \u0026 Boracay 3-Day Beach",
+                            "emoji":  "🏖",
+                            "badge":  "Beach Paradise",
+                            "country":  "Philippines",
+                            "duration":  3
                         },
                         {
-                            "id":  "philippines-5",
-                            "description":  "Manila and Boracay island resort experience.",
-                            "badge":  "City \u0026 Beach",
-                            "duration":  5,
-                            "emoji":  "🇵🇭",
-                            "title":  "Philippines 5-Day Manila \u0026 Boracay",
-                            "country":  "Philippines"
-                        },
-                        {
-                            "id":  "philippines-10",
-                            "description":  "Manila, Boracay, Palawan ultimate island experience.",
-                            "badge":  "Complete Tour",
-                            "duration":  10,
-                            "emoji":  "🇵🇭",
-                            "title":  "Philippines 10-Day Island Hopping",
-                            "country":  "Philippines"
-                        },
-                        {
+                            "colorClass":  "t1",
                             "id":  "indonesia-3",
-                            "description":  "Bali beaches, temples, rice terraces tropical escape.",
-                            "badge":  "Tropical Paradise",
-                            "duration":  3,
-                            "emoji":  "🇮🇩",
-                            "title":  "Indonesia 3-Day Bali",
-                            "country":  "Indonesia"
+                            "days":  [
+                                         {
+                                             "title":  "Ubud Cultural Center",
+                                             "attractions":  [
+                                                                 "Ubud Monkey Forest",
+                                                                 "Tegallalang rice terraces",
+                                                                 "Ubud Palace",
+                                                                 "Traditional dance show"
+                                                             ],
+                                             "day":  1,
+                                             "tips":  [
+                                                          "Monkey Forest early morning",
+                                                          "Dance show evening booking required"
+                                                      ],
+                                             "cost":  "USD 50-70"
+                                         },
+                                         {
+                                             "title":  "Beach Day at Seminyak",
+                                             "attractions":  [
+                                                                 "Drive to Seminyak (1 hr)",
+                                                                 "Seminyak Beach sunset",
+                                                                 "Beachclub with pool",
+                                                                 "Chill dinner on beach"
+                                                             ],
+                                             "day":  2,
+                                             "tips":  [
+                                                          "Beachclubs can be pricey but worth",
+                                                          "Sunset perfect around 6pm"
+                                                      ],
+                                             "cost":  "USD 60-85"
+                                         },
+                                         {
+                                             "title":  "Water Activities",
+                                             "attractions":  [
+                                                                 "Surfing at Canggu Beach",
+                                                                 "Uluwatu Temple cliff edge",
+                                                                 "Traditional Balinese massage",
+                                                                 "Departure"
+                                                             ],
+                                             "day":  3,
+                                             "tips":  [
+                                                          "Uluwatu Temple stunning at sunset",
+                                                          "Massage super cheap USD 5"
+                                                      ],
+                                             "cost":  "USD 55-80"
+                                         }
+                                     ],
+                            "description":  "Bali\u0027s spiritual temples, rice terraces, and world-famous beaches combined.",
+                            "title":  "Bali 3-Day Temple \u0026 Beach",
+                            "emoji":  "🌴",
+                            "badge":  "Spiritual Escape",
+                            "country":  "Indonesia",
+                            "duration":  3
                         },
                         {
-                            "id":  "indonesia-5",
-                            "description":  "Bali full experience beaches temples culture nightlife.",
-                            "badge":  "Island Explorer",
-                            "duration":  5,
-                            "emoji":  "🇮🇩",
-                            "title":  "Indonesia 5-Day Bali Extended",
-                            "country":  "Indonesia"
-                        },
-                        {
-                            "id":  "indonesia-10",
-                            "description":  "Bali and Java volcanoes temples and mountains.",
-                            "badge":  "Complete Journey",
-                            "duration":  10,
-                            "emoji":  "🇮🇩",
-                            "title":  "Indonesia 10-Day Bali \u0026 Java",
-                            "country":  "Indonesia"
-                        },
-                        {
+                            "colorClass":  "t2",
                             "id":  "taiwan-3",
-                            "description":  "Taipei night markets, temples, hot springs.",
-                            "badge":  "Night Market Tour",
-                            "duration":  3,
-                            "emoji":  "🇹🇼",
-                            "title":  "Taiwan 3-Day Taipei",
-                            "country":  "Taiwan"
+                            "days":  [
+                                         {
+                                             "title":  "Taipei City",
+                                             "attractions":  [
+                                                                 "Taipei 101 skyscraper",
+                                                                 "Chiang Kai-shek Memorial",
+                                                                 "Shilin night market food",
+                                                                 "Cat Street shopping"
+                                                             ],
+                                             "day":  1,
+                                             "tips":  [
+                                                          "101 observation deck pricey but views amazing",
+                                                          "Night markets close 10-11pm"
+                                                      ],
+                                             "cost":  "TWD 2000-3000"
+                                         },
+                                         {
+                                             "title":  "Mountain Day Trip",
+                                             "attractions":  [
+                                                                 "Jiufen Old Street mountain town",
+                                                                 "Tea house experience",
+                                                                 "Lantern festival view (seasonal)",
+                                                                 "Hot springs in Beitou"
+                                                             ],
+                                             "day":  2,
+                                             "tips":  [
+                                                          "Jiufen touristy but charming",
+                                                          "Hot springs relaxing"
+                                                      ],
+                                             "cost":  "TWD 1500-2500"
+                                         },
+                                         {
+                                             "title":  "Culture \u0026 Markets",
+                                             "attractions":  [
+                                                                 "National Palace Museum",
+                                                                 "Elephant Mountain hiking",
+                                                                 "Raohe night market",
+                                                                 "Departure"
+                                                             ],
+                                             "day":  3,
+                                             "tips":  [
+                                                          "Museum has incredible artifacts",
+                                                          "Elephant Mountain free with city views"
+                                                      ],
+                                             "cost":  "TWD 1000-1500"
+                                         }
+                                     ],
+                            "description":  "High-tech Taipei meets traditional mountain culture and vibrant night markets.",
+                            "title":  "Taipei 3-Day Modern \u0026 Mountains",
+                            "emoji":  "🏯",
+                            "badge":  "Tech \u0026 Nature",
+                            "country":  "Taiwan",
+                            "duration":  3
                         },
                         {
-                            "id":  "taiwan-5",
-                            "description":  "Taipei and Jiufen old town mountain villages.",
-                            "badge":  "City \u0026 Mountain",
-                            "duration":  5,
-                            "emoji":  "🇹🇼",
-                            "title":  "Taiwan 5-Day Taipei \u0026 Jiufen",
-                            "country":  "Taiwan"
-                        },
-                        {
-                            "id":  "taiwan-10",
-                            "description":  "Taipei, Jiufen, Sun Moon Lake, Alishan mountains and tea.",
-                            "badge":  "Complete Tour",
-                            "duration":  10,
-                            "emoji":  "🇹🇼",
-                            "title":  "Taiwan 10-Day Complete",
-                            "country":  "Taiwan"
-                        },
-                        {
+                            "colorClass":  "t3",
                             "id":  "hongkong-3",
-                            "description":  "Hong Kong skyline, harbor, street food escape.",
-                            "badge":  "Urban Explorer",
-                            "duration":  3,
-                            "emoji":  "🇭🇰",
-                            "title":  "Hong Kong 3-Day Highlights",
-                            "country":  "Hong Kong"
+                            "days":  [
+                                         {
+                                             "title":  "Harbor \u0026 Markets",
+                                             "attractions":  [
+                                                                 "Star Ferry across harbor",
+                                                                 "Victoria Peak sunset tram",
+                                                                 "Peak Tower observation deck",
+                                                                 "Dim sum breakfast"
+                                                             ],
+                                             "day":  1,
+                                             "tips":  [
+                                                          "Peak tram pricey, walk down saves money",
+                                                          "Dim sum best at breakfast 7-11am"
+                                                      ],
+                                             "cost":  "HKD 500-700"
+                                         },
+                                         {
+                                             "title":  "Street Markets \u0026 Islands",
+                                             "attractions":  [
+                                                                 "Ladies\u0027 Market shopping",
+                                                                 "Temple Street night market",
+                                                                 "Junk boat evening cruise",
+                                                                 "Hong Kong Island walking"
+                                                             ],
+                                             "day":  2,
+                                             "tips":  [
+                                                          "Night markets haggle-friendly",
+                                                          "Junk boat romantic"
+                                                      ],
+                                             "cost":  "HKD 600-800"
+                                         },
+                                         {
+                                             "title":  "Island Getaway",
+                                             "attractions":  [
+                                                                 "Star Ferry to Lantau Island",
+                                                                 "Big Buddha statue",
+                                                                 "Po Lin Monastery",
+                                                                 "Return to Central \u0026 departure"
+                                                             ],
+                                             "day":  3,
+                                             "tips":  [
+                                                          "Buddha cable car scenic",
+                                                          "Monastery vegetarian lunch available"
+                                                      ],
+                                             "cost":  "HKD 550-750"
+                                         }
+                                     ],
+                            "description":  "Stunning harbor views, dim sum breakfasts, and vibrant street markets in Hong Kong.",
+                            "title":  "Hong Kong 3-Day Harbor City",
+                            "emoji":  "🌃",
+                            "badge":  "Harbor City",
+                            "country":  "Hong Kong",
+                            "duration":  3
                         },
                         {
-                            "id":  "hongkong-5",
-                            "description":  "Hong Kong city and island escapes urban nature mix.",
-                            "badge":  "City \u0026 Nature",
-                            "duration":  5,
-                            "emoji":  "🇭🇰",
-                            "title":  "Hong Kong 5-Day City \u0026 Islands",
-                            "country":  "Hong Kong"
-                        },
-                        {
-                            "id":  "hongkong-10",
-                            "description":  "Hong Kong city, islands, New Territories, Macau.",
-                            "badge":  "Complete Journey",
-                            "duration":  10,
-                            "emoji":  "🇭🇰",
-                            "title":  "Hong Kong 10-Day Deep Dive",
-                            "country":  "Hong Kong"
-                        },
-                        {
+                            "colorClass":  "t1",
                             "id":  "laos-3",
-                            "description":  "Luang Prabang temples and monks spiritual escape.",
-                            "badge":  "Spiritual Journey",
-                            "duration":  3,
-                            "emoji":  "🇱🇦",
-                            "title":  "Laos 3-Day Luang Prabang",
-                            "country":  "Laos"
+                            "days":  [
+                                         {
+                                             "title":  "Temple City Arrival",
+                                             "attractions":  [
+                                                                 "Wat Xieng Thong temple",
+                                                                 "Night market food exploration",
+                                                                 "Mekong River sunset walk",
+                                                                 "Local restaurant dinner"
+                                                             ],
+                                             "day":  1,
+                                             "tips":  [
+                                                          "Temple tour morning best",
+                                                          "Night market chaotic but authentic"
+                                                      ],
+                                             "cost":  "USD 40-55"
+                                         },
+                                         {
+                                             "title":  "Morning Rituals \u0026 Caves",
+                                             "attractions":  [
+                                                                 "Monk alms giving ceremony (5:30am)",
+                                                                 "Cave temples adventure",
+                                                                 "Kuang Si Waterfall swimming",
+                                                                 "Ock Pop Tok handicraft"
+                                                             ],
+                                             "day":  2,
+                                             "tips":  [
+                                                          "Alms ceremony spiritual experience",
+                                                          "Waterfall absolutely worth visit"
+                                                      ],
+                                             "cost":  "USD 55-75"
+                                         },
+                                         {
+                                             "title":  "Slower Pace",
+                                             "attractions":  [
+                                                                 "Bike ride through countryside villages",
+                                                                 "Fish lunch at local home",
+                                                                 "Bamboo rafting",
+                                                                 "Departure"
+                                                             ],
+                                             "day":  3,
+                                             "tips":  [
+                                                          "Bike tour very relaxing",
+                                                          "Raft tour on Mekong scenic"
+                                                      ],
+                                             "cost":  "USD 45-65"
+                                         }
+                                     ],
+                            "description":  "Peaceful Buddhist temples, serene Mekong River, and slower pace of life in Laos.",
+                            "title":  "Luang Prabang 3-Day Spiritual",
+                            "emoji":  "🧘",
+                            "badge":  "Spiritual Peace",
+                            "country":  "Laos",
+                            "duration":  3
                         },
                         {
-                            "id":  "laos-5",
-                            "description":  "Luang Prabang and Vang Vieng temples and adventure.",
-                            "badge":  "Temples \u0026 Adventure",
-                            "duration":  5,
-                            "emoji":  "🇱🇦",
-                            "title":  "Laos 5-Day Luang Prabang \u0026 Vang Vieng",
-                            "country":  "Laos"
-                        },
-                        {
-                            "id":  "laos-10",
-                            "description":  "Luang Prabang, Vang Vieng, Vientiane, Bolaven.",
-                            "badge":  "Complete Tour",
-                            "duration":  10,
-                            "emoji":  "🇱🇦",
-                            "title":  "Laos 10-Day Complete",
-                            "country":  "Laos"
-                        },
-                        {
+                            "colorClass":  "t2",
                             "id":  "myanmar-3",
-                            "description":  "Yangon temples and colonial architecture heritage.",
-                            "badge":  "Heritage Tour",
-                            "duration":  3,
-                            "emoji":  "🇲🇲",
-                            "title":  "Myanmar 3-Day Yangon",
-                            "country":  "Myanmar"
+                            "days":  [
+                                         {
+                                             "title":  "Yangon Pagodas",
+                                             "attractions":  [
+                                                                 "Shwedagon Pagoda (golden temple)",
+                                                                 "Sule Pagoda city center",
+                                                                 "Bogyoke Aung San Market",
+                                                                 "Street food walking tour"
+                                                             ],
+                                             "day":  1,
+                                             "tips":  [
+                                                          "Shwedagon magical at sunset",
+                                                          "Market great for souvenirs"
+                                                      ],
+                                             "cost":  "USD 50-70"
+                                         },
+                                         {
+                                             "title":  "Fly to Bagan",
+                                             "attractions":  [
+                                                                 "Flight to Bagan (1 hr)",
+                                                                 "Sunset hot air balloon ride",
+                                                                 "Bagan temple complex exploration",
+                                                                 "Dinner with local family"
+                                                             ],
+                                             "day":  2,
+                                             "tips":  [
+                                                          "Hot air balloon unforgettable",
+                                                          "Book balloon 2 weeks ahead",
+                                                          "Local dinner booking required"
+                                                      ],
+                                             "cost":  "USD 150-200"
+                                         },
+                                         {
+                                             "title":  "Bagan Temples",
+                                             "attractions":  [
+                                                                 "Sunrise horse cart tour",
+                                                                 "Temple hopping all day",
+                                                                 "Lacquerware workshop visit",
+                                                                 "Departure"
+                                                             ],
+                                             "day":  3,
+                                             "tips":  [
+                                                          "Sunrise cart tour cheap and magical",
+                                                          "Over 2000 temples to explore"
+                                                      ],
+                                             "cost":  "USD 80-120"
+                                         }
+                                     ],
+                            "description":  "Golden pagodas and ancient temples in one of Asia\u0027s least touristy destinations.",
+                            "title":  "Yangon \u0026 Bagan 3-Day Ancient",
+                            "emoji":  "⛩",
+                            "badge":  "Off-the-Beaten-Path",
+                            "country":  "Myanmar",
+                            "duration":  3
                         },
                         {
-                            "id":  "myanmar-5",
-                            "description":  "Yangon and Bagan ancient temples modern Myanmar.",
-                            "badge":  "Temple Explorer",
-                            "duration":  5,
-                            "emoji":  "🇲🇲",
-                            "title":  "Myanmar 5-Day Yangon \u0026 Bagan",
-                            "country":  "Myanmar"
-                        },
-                        {
-                            "id":  "myanmar-10",
-                            "description":  "Yangon, Bagan, Mandalay, Inle Lake temples.",
-                            "badge":  "Complete Journey",
-                            "duration":  10,
-                            "emoji":  "🇲🇲",
-                            "title":  "Myanmar 10-Day Complete",
-                            "country":  "Myanmar"
-                        },
-                        {
+                            "colorClass":  "t3",
                             "id":  "india-3",
-                            "description":  "Delhi history and chaos old city monuments.",
-                            "badge":  "History Tour",
-                            "duration":  3,
-                            "emoji":  "🇮🇳",
-                            "title":  "India 3-Day Delhi",
-                            "country":  "India"
+                            "days":  [
+                                         {
+                                             "title":  "Delhi Exploration",
+                                             "attractions":  [
+                                                                 "India Gate monument",
+                                                                 "Red Fort old city",
+                                                                 "Chandni Chowk street market chaos",
+                                                                 "Street food crawl"
+                                                             ],
+                                             "day":  1,
+                                             "tips":  [
+                                                          "Red Fort book tour guide",
+                                                          "Chandni Chowk arrive early"
+                                                      ],
+                                             "cost":  "INR 1500-2500"
+                                         },
+                                         {
+                                             "title":  "Travel to Agra",
+                                             "attractions":  [
+                                                                 "Train to Agra (3.5 hrs)",
+                                                                 "Taj Mahal sunset visit",
+                                                                 "Mehtab Bagh garden view",
+                                                                 "Local Mughlai food"
+                                                             ],
+                                             "day":  2,
+                                             "tips":  [
+                                                          "Book Taj Mahal sunrise and sunset",
+                                                          "Mehtab Bagh free, best sunset spot"
+                                                      ],
+                                             "cost":  "INR 3000-4500"
+                                         },
+                                         {
+                                             "title":  "Taj Mahal \u0026 Return",
+                                             "attractions":  [
+                                                                 "Taj Mahal sunrise visit",
+                                                                 "Agra Fort",
+                                                                 "Return train to Delhi",
+                                                                 "Departure"
+                                                             ],
+                                             "day":  3,
+                                             "tips":  [
+                                                          "Sunrise visit less crowded",
+                                                          "Fort view complements Taj"
+                                                      ],
+                                             "cost":  "INR 2000-3000"
+                                         }
+                                     ],
+                            "description":  "India\u0027s iconic Taj Mahal, Mughal architecture, and sensory overload of Delhi.",
+                            "title":  "Delhi \u0026 Agra 3-Day Taj Mahal",
+                            "emoji":  "🕌",
+                            "badge":  "Taj Mahal",
+                            "country":  "India",
+                            "duration":  3
                         },
                         {
-                            "id":  "india-5",
-                            "description":  "Delhi and Agra Taj Mahal monuments exploration.",
-                            "badge":  "Monument Tour",
-                            "duration":  5,
-                            "emoji":  "🇮🇳",
-                            "title":  "India 5-Day Delhi \u0026 Taj Mahal",
-                            "country":  "India"
-                        },
-                        {
-                            "id":  "india-10",
-                            "description":  "Delhi, Agra, Jaipur, Rajasthan classic India.",
-                            "badge":  "Complete Tour",
-                            "duration":  10,
-                            "emoji":  "🇮🇳",
-                            "title":  "India 10-Day Golden Triangle",
-                            "country":  "India"
-                        },
-                        {
+                            "colorClass":  "t1",
                             "id":  "nepal-3",
-                            "description":  "Kathmandu temples and Durbar Square mountain culture.",
+                            "days":  [
+                                         {
+                                             "title":  "Temple Circuit",
+                                             "attractions":  [
+                                                                 "Pashupatinath Temple",
+                                                                 "Boudhanath Stupa giant mandala",
+                                                                 "Kathmandu Durbar Square",
+                                                                 "Thamel tourist district exploring"
+                                                             ],
+                                             "day":  1,
+                                             "tips":  [
+                                                          "Temple tour early morning",
+                                                          "Stupa stunning at dawn with prayer flags"
+                                                      ],
+                                             "cost":  "USD 45-60"
+                                         },
+                                         {
+                                             "title":  "Hilltop Viewpoint",
+                                             "attractions":  [
+                                                                 "Monkey Temple Swayambhunath",
+                                                                 "City viewpoint for Himalaya views",
+                                                                 "Pottery workshops watching",
+                                                                 "Newari food tasting"
+                                                             ],
+                                             "day":  2,
+                                             "tips":  [
+                                                          "Swayambhunath monkeys playful",
+                                                          "Clear days you see snowpeaks"
+                                                      ],
+                                             "cost":  "USD 50-70"
+                                         },
+                                         {
+                                             "title":  "Craft \u0026 Culture",
+                                             "attractions":  [
+                                                                 "Bhaktapur ancient city day trip",
+                                                                 "Wood carving workshops",
+                                                                 "Traditional weaving seeing",
+                                                                 "Departure"
+                                                             ],
+                                             "day":  3,
+                                             "tips":  [
+                                                          "Bhaktapur preserved medieval city",
+                                                          "Crafts cheaper than Thamel"
+                                                      ],
+                                             "cost":  "USD 55-75"
+                                         }
+                                     ],
+                            "description":  "Sacred temples, Himalayan views, and rich Newari culture in Nepal\u0027s capital.",
+                            "title":  "Kathmandu 3-Day Cultural Hub",
+                            "emoji":  "🏔",
                             "badge":  "Mountain Culture",
-                            "duration":  3,
-                            "emoji":  "🇳🇵",
-                            "title":  "Nepal 3-Day Kathmandu",
-                            "country":  "Nepal"
+                            "country":  "Nepal",
+                            "duration":  3
                         },
                         {
-                            "id":  "nepal-5",
-                            "description":  "Kathmandu and Pokhara temples and lake views.",
-                            "badge":  "Temple \u0026 Lake",
-                            "duration":  5,
-                            "emoji":  "🇳🇵",
-                            "title":  "Nepal 5-Day Kathmandu \u0026 Pokhara",
-                            "country":  "Nepal"
-                        },
-                        {
-                            "id":  "nepal-10",
-                            "description":  "Kathmandu, Pokhara, Annapurna temples and trekking.",
-                            "badge":  "Complete Journey",
-                            "duration":  10,
-                            "emoji":  "🇳🇵",
-                            "title":  "Nepal 10-Day Mountain Trek",
-                            "country":  "Nepal"
-                        },
-                        {
+                            "colorClass":  "t2",
                             "id":  "srilanka-3",
-                            "description":  "Colombo beaches temples island introduction.",
-                            "badge":  "Island Explorer",
-                            "duration":  3,
-                            "emoji":  "🇱🇰",
-                            "title":  "Sri Lanka 3-Day Colombo",
-                            "country":  "Sri Lanka"
+                            "days":  [
+                                         {
+                                             "title":  "Colombo Coastal City",
+                                             "attractions":  [
+                                                                 "Colombo Fort colonial district",
+                                                                 "Galle Face Hotel oceanfront",
+                                                                 "National Museum",
+                                                                 "Pettah market chaos"
+                                                             ],
+                                             "day":  1,
+                                             "tips":  [
+                                                          "Fort walkable in afternoon",
+                                                          "Galle Face great for sunset tea"
+                                                      ],
+                                             "cost":  "USD 50-65"
+                                         },
+                                         {
+                                             "title":  "Train to Kandy",
+                                             "attractions":  [
+                                                                 "Scenic train journey 5 hrs",
+                                                                 "Kandy Lake walk",
+                                                                 "Sacred Tooth Relic Temple",
+                                                                 "Evening pooja ceremony"
+                                                             ],
+                                             "day":  2,
+                                             "tips":  [
+                                                          "Train journey most beautiful in world",
+                                                          "Book train seats advance",
+                                                          "Pooja ceremony 7pm important"
+                                                      ],
+                                             "cost":  "USD 60-80"
+                                         },
+                                         {
+                                             "title":  "Tea Plantations",
+                                             "attractions":  [
+                                                                 "Tea factory tour",
+                                                                 "Tea plantation walk",
+                                                                 "Cooking class traditional",
+                                                                 "Departure flight"
+                                                             ],
+                                             "day":  3,
+                                             "tips":  [
+                                                          "Tea tour educational \u0026 tea tasting",
+                                                          "Cooking class hands-on fun"
+                                                      ],
+                                             "cost":  "USD 55-75"
+                                         }
+                                     ],
+                            "description":  "Colonial charm, sacred Buddhist temples, and lush tea plantations of Sri Lanka.",
+                            "title":  "Colombo \u0026 Kandy 3-Day Island",
+                            "emoji":  "🌺",
+                            "badge":  "Sacred Island",
+                            "country":  "Sri Lanka",
+                            "duration":  3
                         },
                         {
-                            "id":  "srilanka-5",
-                            "description":  "Colombo, Kandy, Nuwara Eliya tea plantations.",
-                            "badge":  "Tea Country",
-                            "duration":  5,
-                            "emoji":  "🇱🇰",
-                            "title":  "Sri Lanka 5-Day Triangle Tour",
-                            "country":  "Sri Lanka"
-                        },
-                        {
-                            "id":  "srilanka-10",
-                            "description":  "Colombo, Kandy, Nuwara Eliya, Mirissa complete tour.",
-                            "badge":  "Complete Journey",
-                            "duration":  10,
-                            "emoji":  "🇱🇰",
-                            "title":  "Sri Lanka 10-Day Complete",
-                            "country":  "Sri Lanka"
-                        },
-                        {
+                            "colorClass":  "t3",
                             "id":  "maldives-3",
-                            "description":  "Maldives island resort ultimate tropical paradise.",
-                            "badge":  "Luxury Escape",
-                            "duration":  3,
-                            "emoji":  "🇲🇻",
-                            "title":  "Maldives 3-Day Luxury",
-                            "country":  "Maldives"
-                        },
-                        {
-                            "id":  "maldives-5",
-                            "description":  "Maldives diving snorkeling and relaxation.",
-                            "badge":  "Water Sports",
-                            "duration":  5,
-                            "emoji":  "🇲🇻",
-                            "title":  "Maldives 5-Day Resort",
-                            "country":  "Maldives"
-                        },
-                        {
-                            "id":  "maldives-10",
-                            "description":  "Extended Maldives multiple islands deep diving.",
-                            "badge":  "Complete Paradise",
-                            "duration":  10,
-                            "emoji":  "🇲🇻",
-                            "title":  "Maldives 10-Day Paradise",
-                            "country":  "Maldives"
+                            "days":  [
+                                         {
+                                             "title":  "Arrival \u0026 Resort Settling",
+                                             "attractions":  [
+                                                                 "Speedboat to resort island",
+                                                                 "Snorkeling house reef afternoon",
+                                                                 "Sunset beach walk",
+                                                                 "Dinner by beach"
+                                                             ],
+                                             "day":  1,
+                                             "tips":  [
+                                                          "Speedboat ride scenic",
+                                                          "House reef snorkeling free"
+                                                      ],
+                                             "cost":  "USD 300-400"
+                                         },
+                                         {
+                                             "title":  "Island Adventures",
+                                             "attractions":  [
+                                                                 "Diving or snorkeling excursion",
+                                                                 "Dolphin watching sunset cruise",
+                                                                 "Water sports (jet ski, parasail)",
+                                                                 "Island spa massage"
+                                                             ],
+                                             "day":  2,
+                                             "tips":  [
+                                                          "Book dive in advance",
+                                                          "Dolphin cruise seasonal",
+                                                          "Spa pricey but worth"
+                                                      ],
+                                             "cost":  "USD 350-450"
+                                         },
+                                         {
+                                             "title":  "Relax \u0026 Depart",
+                                             "attractions":  [
+                                                                 "Beach relaxation morning",
+                                                                 "Last snorkeling session",
+                                                                 "Resort shopping souvenirs",
+                                                                 "Speedboat to airport"
+                                                             ],
+                                             "day":  3,
+                                             "tips":  [
+                                                          "Pack underwater camera",
+                                                          "Bring reef-safe sunscreen"
+                                                      ],
+                                             "cost":  "USD 250-350"
+                                         }
+                                     ],
+                            "description":  "Overwater bungalows, crystal-clear waters, and perfect tropical island paradise.",
+                            "title":  "Maldives 3-Day Island Paradise",
+                            "emoji":  "🏝",
+                            "badge":  "Paradise Island",
+                            "country":  "Maldives",
+                            "duration":  3
                         }
                     ]
 }
