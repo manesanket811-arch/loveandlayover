@@ -22,10 +22,10 @@ nav { display:flex; align-items:center; justify-content:space-between; max-width
 .logo { font-family:'Fraunces',serif; font-weight:900; font-size:1.3rem; color:var(--ink); }
 .back-link { font-weight:600; color:var(--accent); }
 .rates-ticker { background:#2c3e50; color:#fff; padding:8px 0; overflow:hidden; margin-bottom:30px; }
-.ticker-content { display:flex; gap:80px; animation:scroll 90s linear infinite; padding:0 40px; }
-.ticker-item { white-space:nowrap; display:flex; align-items:center; gap:10px; font-size:.85rem; letter-spacing:.5px; }
-.ticker-flag { font-size:1.8rem; }
-.ticker-currency { font-weight:600; min-width:50px; }
+.ticker-content { display:flex; gap:30px; animation:scroll 70s linear infinite; padding:0 40px; }
+.ticker-item { white-space:nowrap; display:flex; align-items:center; gap:6px; font-size:.8rem; letter-spacing:.3px; }
+.ticker-flag { font-size:1.6rem; }
+.ticker-currency { font-weight:600; min-width:45px; }
 .ticker-rate { color:#4ecdc4; font-weight:700; }
 @keyframes scroll { 0% { transform:translateX(100%); } 100% { transform:translateX(-100%); } }
 .rates-ticker:hover .ticker-content { animation-play-state:paused; cursor:pointer; }
@@ -365,8 +365,7 @@ function updateTicker() {
     html += `
       <div class="ticker-item">
         <span class="ticker-flag">${it.emoji}</span>
-        <span class="ticker-currency">1 ${currency}</span>
-        <span>=</span>
+        <span class="ticker-currency">${currency}</span>
         <span class="ticker-rate">₹${rate.toFixed(2)}</span>
       </div>
     `;
