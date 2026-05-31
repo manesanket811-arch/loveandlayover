@@ -21,13 +21,14 @@ header { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(25
 nav { display:flex; align-items:center; justify-content:space-between; max-width:var(--maxw); margin:0 auto; padding:14px 24px; }
 .logo { font-family:'Fraunces',serif; font-weight:900; font-size:1.3rem; color:var(--ink); }
 .back-link { font-weight:600; color:var(--accent); }
-.rates-ticker { background:linear-gradient(90deg,#1a1a2e,#16213e); color:#fff; padding:12px 0; overflow:hidden; margin-bottom:20px; }
-.ticker-content { display:flex; gap:40px; animation:scroll 60s linear infinite; padding:0 20px; }
-.ticker-item { white-space:nowrap; display:flex; align-items:center; gap:8px; font-weight:600; font-size:.95rem; }
-.ticker-item .flag { font-size:1.5rem; }
-.ticker-item .rate { color:#4ecdc4; }
+.rates-ticker { background:#2c3e50; color:#fff; padding:8px 0; overflow:hidden; margin-bottom:30px; }
+.ticker-content { display:flex; gap:80px; animation:scroll 90s linear infinite; padding:0 40px; }
+.ticker-item { white-space:nowrap; display:flex; align-items:center; gap:10px; font-size:.85rem; letter-spacing:.5px; }
+.ticker-flag { font-size:1.8rem; }
+.ticker-currency { font-weight:600; min-width:50px; }
+.ticker-rate { color:#4ecdc4; font-weight:700; }
 @keyframes scroll { 0% { transform:translateX(100%); } 100% { transform:translateX(-100%); } }
-.rates-ticker:hover .ticker-content { animation-play-state:paused; }
+.rates-ticker:hover .ticker-content { animation-play-state:paused; cursor:pointer; }
 .hero-page { padding:140px 0 60px; background:linear-gradient(135deg,var(--accent),var(--secondary)); color:#fff; }
 .hero-page h1 { font-size:clamp(2.2rem,5vw,3.5rem); margin-bottom:12px; }
 .hero-page p { font-size:1.1rem; opacity:.95; }
@@ -344,8 +345,18 @@ function updateTicker() {
   const tickerContent = document.getElementById('tickerContent');
   if (!tickerContent || Object.keys(exchangeRates).length === 0) return;
 
+  // Get unique countries (avoid duplicates from 3/5/10 day versions)
+  const uniqueCountries = [];
+  const seen = new Set();
+  allItineraries.forEach(it => {
+    if (!seen.has(it.country)) {
+      seen.add(it.country);
+      uniqueCountries.push(it);
+    }
+  });
+
   let html = '';
-  allItineraries.forEach((it, idx) => {
+  uniqueCountries.forEach((it) => {
     const currency = it.currency;
     const apiRate = exchangeRates[currency];
     if (!apiRate) return;
@@ -353,8 +364,10 @@ function updateTicker() {
     const rate = 1 / apiRate; // 1 currency = X INR
     html += `
       <div class="ticker-item">
-        <span class="flag">${it.emoji}</span>
-        <span>${currency}: <span class="rate">₹${rate.toFixed(2)}</span></span>
+        <span class="ticker-flag">${it.emoji}</span>
+        <span class="ticker-currency">1 ${currency}</span>
+        <span>=</span>
+        <span class="ticker-rate">₹${rate.toFixed(2)}</span>
       </div>
     `;
   });
