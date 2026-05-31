@@ -1,0 +1,22 @@
+﻿{
+    "itineraries":  [
+                        {
+                            "id":  "singapore-3",
+                            "description":  "Hit the iconic highlights in just 3 days.",
+                            "badge":  "City Explorer",
+                            "duration":  3,
+                            "emoji":  "🏙",
+                            "title":  "Singapore 3-Day Express",
+                            "country":  "Singapore"
+                        },
+                        {
+                            "id":  "singapore-5",
+                            "description":  "Full Singapore experience.",
+                            "badge":  "Food \u0026 Explorer",
+                            "duration":  5,
+                            "emoji":  "🏙",
+                            "title":  "Singapore 5-Day Complete",
+                            "country":  "Singapore"
+                        }
+                    ]
+}
