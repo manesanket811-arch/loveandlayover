@@ -341,43 +341,50 @@ document.addEventListener('keydown', (e) => {
 
 // Fetch exchange rates with caching
 async function fetchExchangeRates() {
-  try {
-    // Show loading state
-    const tickerContent = document.getElementById('tickerContent');
-    if (tickerContent && !exchangeRates || Object.keys(exchangeRates).length === 0) {
-      tickerContent.innerHTML = '<div style="padding: 8px 40px; color: #ccc; font-size: 0.8rem;">Loading exchange rates...</div>';
-    }
+  const tickerContent = document.getElementById('tickerContent');
 
-    // Try to use cached rates first while fetching fresh ones
+  try {
+    // Check for cached rates first
     const cachedRates = localStorage.getItem('exchangeRates');
-    if (cachedRates) {
+    const cacheTimestamp = localStorage.getItem('exchangeRatesCachedAt');
+    const cacheAge = cacheTimestamp ? Date.now() - parseInt(cacheTimestamp) : Infinity;
+
+    // Show cached rates if available and less than 24 hours old
+    if (cachedRates && cacheAge < 24 * 60 * 60 * 1000) {
       try {
         exchangeRates = JSON.parse(cachedRates);
         updateTicker();
       } catch (e) {
         console.error('Invalid cached rates');
       }
+    } else if (!exchangeRates || Object.keys(exchangeRates).length === 0) {
+      // Show loading message only if no cached rates available
+      if (tickerContent) {
+        tickerContent.innerHTML = '<div style="padding: 8px 40px; color: #ccc; font-size: 0.8rem;">Loading exchange rates...</div>';
+      }
     }
 
-    // Fetch fresh rates
+    // Fetch fresh rates (doesn't block display of cached rates)
     const response = await fetch('https://api.exchangerate-api.com/v4/latest/INR', {
       signal: AbortSignal.timeout(5000) // 5 second timeout
     });
+
+    if (!response.ok) throw new Error('API returned ' + response.status);
     const data = await response.json();
     exchangeRates = data.rates;
 
-    // Cache the rates
+    // Cache the rates with timestamp
     localStorage.setItem('exchangeRates', JSON.stringify(exchangeRates));
+    localStorage.setItem('exchangeRatesCachedAt', Date.now().toString());
 
     console.log('Exchange rates loaded:', Object.keys(exchangeRates).length, 'currencies');
     updateTicker();
   } catch (error) {
     console.error('Error fetching exchange rates:', error);
     // If fetch failed, at least show cached rates if available
-    if (!exchangeRates || Object.keys(exchangeRates).length === 0) {
-      const tickerContent = document.getElementById('tickerContent');
+    if (Object.keys(exchangeRates).length === 0) {
       if (tickerContent) {
-        tickerContent.innerHTML = '<div style="padding: 8px 40px; color: #999; font-size: 0.8rem;">Exchange rates unavailable</div>';
+        tickerContent.innerHTML = '<div style="padding: 8px 40px; color: #999; font-size: 0.8rem;">Exchange rates unavailable (no cached data)</div>';
       }
     }
   }
