@@ -2,53 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.loveandlayover.in/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-01</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.loveandlayover.in/itinerary-builder.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <priority>0.95</priority>
+  </url>
+  <url>
     <loc>https://www.loveandlayover.in/blog.html</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-01</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.loveandlayover.in/faq.html</loc>
-    <lastmod>2026-05-30</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.loveandlayover.in/itinerary-builder.html</loc>
-    <lastmod>2026-05-31</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.loveandlayover.in/blog/singapore-5-day-itinerary.html</loc>
-    <lastmod>2026-05-30</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.loveandlayover.in/blog/singapore-food-guide.html</loc>
-    <lastmod>2026-05-30</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.loveandlayover.in/blog/singapore-budget-travel.html</loc>
-    <lastmod>2026-05-30</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.loveandlayover.in/blog/singapore-layover-guide.html</loc>
-    <lastmod>2026-05-30</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.loveandlayover.in/blog/japan-5-day-itinerary.html</loc>
-    <lastmod>2026-05-30</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.loveandlayover.in/blog/vietnam-travel-guide.html</loc>
-    <lastmod>2026-05-30</lastmod>
-    <priority>0.8</priority>
+    <lastmod>2026-06-01</lastmod>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.loveandlayover.in/destinations/</loc>
@@ -67,6 +37,36 @@
   </url>
   <url>
     <loc>https://www.loveandlayover.in/destinations/australia.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.loveandlayover.in/destinations/thailand.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.loveandlayover.in/destinations/vietnam.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.loveandlayover.in/destinations/india.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.loveandlayover.in/destinations/mexico.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.loveandlayover.in/destinations/egypt.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.loveandlayover.in/destinations/turkey.html</loc>
     <lastmod>2026-06-01</lastmod>
     <priority>0.85</priority>
   </url>
