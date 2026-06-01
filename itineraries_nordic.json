@@ -1,0 +1,656 @@
+[
+  {
+    "id": "norway-3",
+    "country": "Norway",
+    "duration": 3,
+    "title": "Oslo & Fjord Gateway",
+    "emoji": "🇳🇴",
+    "description": "Capital city, Viking heritage, and fjord scenery",
+    "badge": "Quick Getaway",
+    "colorClass": "t1",
+    "currency": "NOK",
+    "days": [
+      {
+        "day": 1,
+        "title": "Oslo City Exploration",
+        "attractions": [
+          "Oslo City Hall [red brick building with views and murals]",
+          "Vigeland Sculpture Park [largest sculpture park with 200+ bronze works]",
+          "Royal Palace [official residence of Norwegian monarch]",
+          "Akershus Fortress [medieval fortress with harbor views]",
+          "Karl Johans Street [main shopping street with street life]"
+        ],
+        "cost": "600-1000 NOK",
+        "tips": [
+          "Get Oslo Pass for unlimited transport and museum entries",
+          "Many parks and museums free entry"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Vikings & Museums",
+        "attractions": [
+          "Viking Ship Museum [authentic Viking ships from 9th century]",
+          "Norwegian Museum of Cultural History [open-air museum with historic buildings]",
+          "Munch Museum [home of famous 'The Scream' painting]",
+          "National Gallery [Norwegian art and masters]",
+          "Fram Museum [polar exploration ship and artifacts]"
+        ],
+        "cost": "550-900 NOK",
+        "tips": [
+          "Book Viking Ship Museum in advance during summer",
+          "Munch Museum houses world's most recognizable paintings"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Fjord Day Trip",
+        "attractions": [
+          "Oslofjord [scenic fjord with boat cruises]",
+          "Lilehammer [Winter Olympics host town]",
+          "Hadeland [glassworks and pottery region]",
+          "Gudbrandsdalsleden [scenic valley drive]",
+          "Alpine hiking [mountain trails with lake views]"
+        ],
+        "cost": "600-1000 NOK",
+        "tips": [
+          "Lilehammer 2 hours from Oslo; day trip feasible",
+          "Best hiking conditions June-September"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "norway-5",
+    "country": "Norway",
+    "duration": 5,
+    "title": "Norway's Fjord Wonder",
+    "emoji": "🇳🇴",
+    "description": "Oslo, Bergen, Geirangerfjord, and dramatic peaks",
+    "badge": "Best Value",
+    "colorClass": "t2",
+    "currency": "NOK",
+    "days": [
+      {
+        "day": 1,
+        "title": "Oslo Introduction",
+        "attractions": [
+          "Oslo City Hall [historic center with murals]",
+          "Vigeland Park [sculpture park with 200+ works]",
+          "Royal Palace [monarch residence]",
+          "Akershus Fortress [medieval fortress]",
+          "Karl Johans Street [main avenue]"
+        ],
+        "cost": "600-1000 NOK",
+        "tips": [
+          "Buy Oslo Pass for unlimited transport",
+          "City very walkable and compact"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Oslo Museums & Culture",
+        "attractions": [
+          "Viking Ship Museum [authentic Viking vessels]",
+          "Munch Museum [The Scream and Norwegian art]",
+          "Fram Museum [polar ship exploration]",
+          "Norwegian Museum of Cultural History [open-air historic buildings]",
+          "Modern Opera House [contemporary architecture on harbor]"
+        ],
+        "cost": "550-900 NOK",
+        "tips": [
+          "Book museums online for skip-the-line",
+          "Opera House free to explore exterior"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Travel to Bergen",
+        "attractions": [
+          "Bergen Bryggen [UNESCO historic waterfront with Hanseatic buildings]",
+          "Fish Market [seafood and local produce market]",
+          "Floibanen Funicular [cable car to mountain viewpoint]",
+          "Bergenhus Fortress [medieval fortress on harbor]",
+          "Fløyen Mountain [hiking with city and fjord views]"
+        ],
+        "cost": "650-1050 NOK",
+        "tips": [
+          "Train Oslo-Bergen 7 hours (scenic railway journey)",
+          "Bergen weather often rainy; bring rain jacket"
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Geirangerfjord Excursion",
+        "attractions": [
+          "Geirangerfjord [narrow fjord with steep waterfalls]",
+          "Seven Sisters Waterfall [seven cascades on cliff face]",
+          "Eagle Bend [hairpin road viewpoint]",
+          "Dalsnibba [mountain with panoramic fjord views]",
+          "Fjord boat cruise [scenic tour through fjord]"
+        ],
+        "cost": "700-1100 NOK",
+        "tips": [
+          "Geirangerfjord 5 hours from Bergen via scenic drive",
+          "Early morning visits best for photography"
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Return via Scenic Route",
+        "attractions": [
+          "Trollstigen [hairpin mountain road with 11 hairpin turns]",
+          "Geirangerfjord return [different perspective from other direction]",
+          "Mountain hiking [alpine trails with peak views]",
+          "Local village pubs [traditional Norwegian food]",
+          "Return to Bergen or Oslo [evening drive or train]"
+        ],
+        "cost": "650-1000 NOK",
+        "tips": [
+          "Trollstigen only open June-September due to snow",
+          "Drive this road slowly; many hairpins"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "norway-10",
+    "country": "Norway",
+    "duration": 10,
+    "title": "Complete Nordic Explorer",
+    "emoji": "🇳🇴",
+    "description": "Oslo, Bergen, Geirangerfjord, Northern Lights preparation",
+    "badge": "Full Experience",
+    "colorClass": "t3",
+    "currency": "NOK",
+    "days": [
+      {
+        "day": 1,
+        "title": "Oslo City Discovery",
+        "attractions": [
+          "City Hall [historic and cultural center]",
+          "Vigeland Sculpture Park [200+ sculptures]",
+          "Royal Palace [official residence]",
+          "Akershus Fortress [medieval fortress]",
+          "Harbor walk [scenic waterfront promenade]"
+        ],
+        "cost": "600-1000 NOK",
+        "tips": [
+          "Get Oslo Pass 3-day for museums and transport",
+          "Stay near City Hall for easy access"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Vikings & Norwegian Culture",
+        "attractions": [
+          "Viking Ship Museum [ancient Viking vessels]",
+          "Munch Museum [The Scream and masterpieces]",
+          "Fram Museum [polar exploration ship]",
+          "Cultural History Museum [open-air historic buildings]",
+          "Modern Opera House [contemporary design]"
+        ],
+        "cost": "550-900 NOK",
+        "tips": [
+          "Book museum tickets online in advance",
+          "Munch Museum most crowded; visit early morning"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Mountain & Lake Region",
+        "attractions": [
+          "Lilehammer [Winter Olympics town]",
+          "Lillehammer Olympic Stadium [skiing venue]",
+          "Lake Mjøsa [largest Norwegian lake]",
+          "Hamar [harbor town with historic railway]",
+          "Alpine hiking [mountain trails]"
+        ],
+        "cost": "600-1000 NOK",
+        "tips": [
+          "Lilehammer 2 hours from Oslo",
+          "Summer offers hiking; winter offers skiing"
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Travel to Bergen",
+        "attractions": [
+          "Scenic train journey [Oslo-Bergen 7-hour route]",
+          "Bryggen Wharf [UNESCO historic waterfront]",
+          "Fish Market [fresh seafood and local food]",
+          "Floibanen Funicular [mountain cable car with views]",
+          "Harbor walk [scenic waterfront]"
+        ],
+        "cost": "650-1050 NOK",
+        "tips": [
+          "Book train seats with window for scenic views",
+          "Arrive Bergen evening; explore next day"
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Bergen Exploration",
+        "attractions": [
+          "Bryggen [historic Hanseatic quarter]",
+          "Rosenkrantz Tower [fortress with city views]",
+          "Bergenhus Fortress [medieval fortress]",
+          "Fløyen Mountain [hiking to viewpoint]",
+          "Traditional seafood restaurants [dinner with harbor views]"
+        ],
+        "cost": "600-950 NOK",
+        "tips": [
+          "Bryggen best photographed early morning",
+          "Fish Market lunch with ocean views"
+        ]
+      },
+      {
+        "day": 6,
+        "title": "Geirangerfjord Journey",
+        "attractions": [
+          "Geirangerfjord [dramatic fjord with waterfalls]",
+          "Seven Sisters Waterfall [seven cascade waterfall]",
+          "Eagle Bend [mountain hairpin road viewpoint]",
+          "Fjord boat cruise [scenic water tour]",
+          "Mountain village [traditional Norwegian settlement]"
+        ],
+        "cost": "700-1100 NOK",
+        "tips": [
+          "5-hour drive from Bergen; rent car",
+          "Stay in Geirangerfjord village for full experience"
+        ]
+      },
+      {
+        "day": 7,
+        "title": "Trollstigen & Mountain Pass",
+        "attractions": [
+          "Trollstigen [famous mountain road with 11 hairpins]",
+          "Stigfossen Waterfall [cascade alongside road]",
+          "Mountain viewpoints [alpine lake views]",
+          "Hikers Paradise [numerous mountain trails]",
+          "Traditional mountain lodge [authentic Nordic hospitality]"
+        ],
+        "cost": "650-1000 NOK",
+        "tips": [
+          "Trollstigen open June-September only",
+          "Drive slowly; many hairpins and steep grades"
+        ]
+      },
+      {
+        "day": 8,
+        "title": "Romboleden Valley",
+        "attractions": [
+          "Rauma River [wild water rafting or scenic drives]",
+          "Verma Gorge [narrow canyon with river]",
+          "Local villages [authentic mountain communities]",
+          "Farm stays [traditional Norwegian farm experience]",
+          "Forest hiking [woodland trails with waterfall views]"
+        ],
+        "cost": "600-950 NOK",
+        "tips": [
+          "Region less touristy than main fjords",
+          "Farm stays provide authentic local experience"
+        ]
+      },
+      {
+        "day": 9,
+        "title": "Northern Norway Preparation",
+        "attractions": [
+          "Travel north towards Arctic [Tromsø if time permits]",
+          "Arctic wilderness [tundra and mountain landscape]",
+          "Sami culture [indigenous peoples and traditions]",
+          "Aurora displays [Northern Lights best September-March]",
+          "Local Arctic activities [dog sledding, reindeer herding]"
+        ],
+        "cost": "750-1150 NOK",
+        "tips": [
+          "Northern Lights season September-March",
+          "Book Arctic activities in advance"
+        ]
+      },
+      {
+        "day": 10,
+        "title": "Return & Reflection",
+        "attractions": [
+          "Flight back to Oslo or direct to home country",
+          "Last-minute shopping [Norwegian crafts, wool]",
+          "Reflection on Norwegian nature [fjords, mountains, culture]",
+          "Planning return visit [to experience different season]",
+          "Norwegian memories [photographs and stories to share]"
+        ],
+        "cost": "500-850 NOK",
+        "tips": [
+          "Leave room in luggage for Norwegian sweaters and items",
+          "Best souvenir: memories of stunning fjords and mountains"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sweden-3",
+    "country": "Sweden",
+    "duration": 3,
+    "title": "Stockholm Island Escape",
+    "emoji": "🇸🇪",
+    "description": "Venice of the North, archipelago islands, and Nordic design",
+    "badge": "Quick Getaway",
+    "colorClass": "t1",
+    "currency": "SEK",
+    "days": [
+      {
+        "day": 1,
+        "title": "Stockholm City Tour",
+        "attractions": [
+          "Gamla Stan [Old Town with cobblestone streets and medieval buildings]",
+          "Royal Palace [official residence of Swedish monarch]",
+          "Storkyrkan Cathedral [historic cathedral in Old Town]",
+          "Vasa Museum [preserved 17th-century warship]",
+          "Djurgården Island [green space with museums and parks]"
+        ],
+        "cost": "500-800 SEK",
+        "tips": [
+          "Stockholm Pass offers unlimited transport and museum entries",
+          "Gamla Stan very touristy; visit early morning for fewer crowds"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Museums & Modern Stockholm",
+        "attractions": [
+          "Vasa Museum [most visited museum with intact Viking ship]",
+          "Skansen [open-air museum with Swedish buildings and animals]",
+          "ABBA Museum [Scandinavian pop group memorabilia]",
+          "City Hall [architecture with tower views]",
+          "Modern Museum [contemporary Scandinavian art]"
+        ],
+        "cost": "600-950 SEK",
+        "tips": [
+          "Vasa Museum book online for skip-the-line",
+          "Skansen large; allow 3-4 hours for full visit"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Stockholm Archipelago",
+        "attractions": [
+          "Stockholm Archipelago [30,000 islands and skerries]",
+          "Island boat tour [scenic water tour through islands]",
+          "Vaxholm Island [historic fortress and island village]",
+          "Grinda Island [car-free island with swimming]",
+          "Sunset viewing [Swedish summer light in evening]"
+        ],
+        "cost": "550-850 SEK",
+        "tips": [
+          "Ferries run frequently between islands",
+          "Best visited June-August for warmest weather"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sweden-5",
+    "country": "Sweden",
+    "duration": 5,
+    "title": "Sweden North & South",
+    "emoji": "🇸🇪",
+    "description": "Stockholm, Gothenburg, Swedish Lapland, and design",
+    "badge": "Best Value",
+    "colorClass": "t2",
+    "currency": "SEK",
+    "days": [
+      {
+        "day": 1,
+        "title": "Stockholm Introduction",
+        "attractions": [
+          "Gamla Stan [medieval Old Town]",
+          "Royal Palace [royal residence]",
+          "Vasa Museum [preserved warship]",
+          "Djurgården Island [museums and parks]",
+          "City Hall [tower with panoramic views]"
+        ],
+        "cost": "500-800 SEK",
+        "tips": [
+          "Get Stockholm Pass for unlimited transport and museums",
+          "City central and walkable"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Stockholm Museums & Archipelago",
+        "attractions": [
+          "Skansen Museum [open-air Swedish heritage]",
+          "ABBA Museum [pop music memorabilia]",
+          "Modern Art Museum [contemporary Scandinavian]",
+          "Archipelago boat tour [island-hopping excursion]",
+          "Island swimming [local beach culture]"
+        ],
+        "cost": "600-950 SEK",
+        "tips": [
+          "Spend afternoon on archipelago islands",
+          "Swimming popular in Swedish summer"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Travel to Gothenburg",
+        "attractions": [
+          "Train journey [Stockholm to Gothenburg 5 hours on scenic route]",
+          "Gothenburg Harbor [waterfront with restaurants]",
+          "Liseberg Theme Park [historic amusement park]",
+          "Canal district [Venice-like waterways and bridges]",
+          "Swedish coast [beach and seaside culture]"
+        ],
+        "cost": "550-900 SEK",
+        "tips": [
+          "Train journey scenic; sit on right for best views",
+          "Gothenburg more relaxed than Stockholm"
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Gothenburg Exploration",
+        "attractions": [
+          "Gothenburg Museum [Swedish art and culture]",
+          "Cathedral [neoclassical architecture]",
+          "Haga District [bohemian neighborhood with cafes]",
+          "Food market [local Swedish cuisine]",
+          "Harborfront walk [scenic waterfront promenade]"
+        ],
+        "cost": "500-800 SEK",
+        "tips": [
+          "Haga best for quirky shops and traditional Swedish coffee",
+          "Food tours available through local guides"
+        ]
+      },
+      {
+        "day": 5,
+        "title": "West Coast or Return",
+        "attractions": [
+          "West Swedish Coast [rocky granite coast and fishing villages]",
+          "Marstrand Island [historic fortress and beach resort]",
+          "Bohuslan Archipelago [scenic coastal islands]",
+          "Fresh seafood [coastal restaurants with local catch]",
+          "Return to Stockholm [evening train]"
+        ],
+        "cost": "550-900 SEK",
+        "tips": [
+          "West Coast best in summer months",
+          "Book train tickets in advance for better prices"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sweden-10",
+    "country": "Sweden",
+    "duration": 10,
+    "title": "Complete Scandinavian Journey",
+    "emoji": "🇸🇪",
+    "description": "Stockholm, Gothenburg, Swedish Lapland, and Northern Lights",
+    "badge": "Full Experience",
+    "colorClass": "t3",
+    "currency": "SEK",
+    "days": [
+      {
+        "day": 1,
+        "title": "Stockholm Welcome",
+        "attractions": [
+          "Gamla Stan [Old Town medieval streets]",
+          "Royal Palace [official royal residence]",
+          "Storkyrkan Cathedral [historic cathedral]",
+          "City Hall [tower with views]",
+          "Harbor walk [waterfront promenade]"
+        ],
+        "cost": "500-800 SEK",
+        "tips": [
+          "Buy Stockholm Pass for 3 days",
+          "Stay near Gamla Stan or Norrmalm"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Stockholm Museums",
+        "attractions": [
+          "Vasa Museum [17th-century warship]",
+          "Skansen [open-air heritage museum]",
+          "ABBA Museum [pop music history]",
+          "Modern Art Museum [contemporary art]",
+          "Djurgården Island [green space and museums]"
+        ],
+        "cost": "600-950 SEK",
+        "tips": [
+          "Book Vasa online for skip-the-line",
+          "Allow 4-5 hours for Skansen"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Stockholm Archipelago",
+        "attractions": [
+          "Archipelago boat tour [30,000 islands]",
+          "Vaxholm Island [fortress and village]",
+          "Swimming [beach islands]",
+          "Sunset viewing [Swedish summer light]",
+          "Island lunch [seafood restaurants]"
+        ],
+        "cost": "550-850 SEK",
+        "tips": [
+          "Full day tour recommended",
+          "Bring swimsuit and towel"
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Travel to Gothenburg",
+        "attractions": [
+          "Train journey [scenic 5-hour route]",
+          "Gothenburg Harbor [waterfront]",
+          "Liseberg Park [amusement park]",
+          "Canal district [Venice-like waterways]",
+          "Harborfront restaurants [dinner views]"
+        ],
+        "cost": "550-900 SEK",
+        "tips": [
+          "Window seat on right side for scenic views",
+          "Evening arrival allows harbor exploration"
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Gothenburg City",
+        "attractions": [
+          "Museum of Art [Swedish and European art]",
+          "Cathedral [neoclassical architecture]",
+          "Haga District [bohemian village feeling]",
+          "Food market [Swedish specialties]",
+          "Waterfront walk [canal and harbor views]"
+        ],
+        "cost": "500-800 SEK",
+        "tips": [
+          "Haga good for cafes and local shopping",
+          "Food tours showcase Swedish cuisine"
+        ]
+      },
+      {
+        "day": 6,
+        "title": "West Coast Exploration",
+        "attractions": [
+          "Bohuslan Archipelago [granite islands and fishing villages]",
+          "Marstrand Island [fortress and beach]",
+          "Rocky coastline [scenic drives and hiking]",
+          "Fresh seafood [coastal restaurants]",
+          "Swimming and boating [water activities]"
+        ],
+        "cost": "600-950 SEK",
+        "tips": [
+          "Rent car for flexibility on coast",
+          "Summer best for swimming"
+        ]
+      },
+      {
+        "day": 7,
+        "title": "Swedish Lapland North",
+        "attractions": [
+          "Flight or train to Kiruna [Arctic town]",
+          "Arctic wilderness [tundra landscape]",
+          "Sami culture [indigenous reindeer herding]",
+          "Ice Hotel [unique hotel made of ice and snow]",
+          "Midnight Sun [summer light in Arctic]"
+        ],
+        "cost": "700-1100 SEK",
+        "tips": [
+          "Book Ice Hotel well in advance",
+          "Midnight Sun June-July; Northern Lights Sept-March"
+        ]
+      },
+      {
+        "day": 8,
+        "title": "Arctic Adventures",
+        "attractions": [
+          "Dog sledding [winter activity or summer training]",
+          "Reindeer herding [Sami traditional activity]",
+          "Snowmobile safari [Arctic snow exploration]",
+          "Aurora hunting [Northern Lights viewing]",
+          "Sauna tradition [Swedish spa culture]"
+        ],
+        "cost": "850-1250 SEK",
+        "tips": [
+          "Book Arctic activities in advance",
+          "Dress warmly even in summer at Arctic"
+        ]
+      },
+      {
+        "day": 9,
+        "title": "Lapland Nature",
+        "attractions": [
+          "Abisko National Park [mountain and lake scenery]",
+          "Kebnekaise [highest Swedish mountain]",
+          "National Park hiking [mountain trails]",
+          "Sami handicrafts [traditional duodji items]",
+          "Local restaurants [Arctic cuisine]"
+        ],
+        "cost": "600-950 SEK",
+        "tips": [
+          "Hiking possible June-September",
+          "Wildlife includes moose, reindeer, eagles"
+        ]
+      },
+      {
+        "day": 10,
+        "title": "Return & Reflection",
+        "attractions": [
+          "Return flight or train to Stockholm",
+          "Last-minute shopping [Swedish design, glassware]",
+          "Reflection on Swedish nature and culture",
+          "Planning next Scandinavian adventure",
+          "Fond memories of Viking heritage and modern design"
+        ],
+        "cost": "500-850 SEK",
+        "tips": [
+          "Swedish glassware makes excellent souvenirs",
+          "Book return transport well in advance"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,656 @@
+[
+  {
+    "id": "uae-3",
+    "country": "UAE",
+    "duration": 3,
+    "title": "Dubai Luxury Quick Escape",
+    "emoji": "🇦🇪",
+    "description": "Burj Khalifa, Palm Islands, and desert luxury",
+    "badge": "Quick Getaway",
+    "colorClass": "t1",
+    "currency": "AED",
+    "days": [
+      {
+        "day": 1,
+        "title": "Dubai Downtown",
+        "attractions": [
+          "Burj Khalifa [world's tallest building with observations deck]",
+          "Dubai Mall [world's largest shopping mall]",
+          "Fountain show [choreographed water display]",
+          "Gold Souk [traditional gold market]",
+          "Downtown Dubai [modern development]"
+        ],
+        "cost": "400-700 AED",
+        "tips": [
+          "Burj Khalifa book online for skip-the-line",
+          "Fountain shows multiple daily viewings"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Palm & Beach",
+        "attractions": [
+          "Palm Jumeirah [palm-shaped island development]",
+          "Atlantis Resort [luxury resort with aquarium]",
+          "Jumeirah Beach [pristine sandy beach]",
+          "Beach clubs [summer entertainment]",
+          "Jet skiing [water sports activities]"
+        ],
+        "cost": "500-850 AED",
+        "tips": [
+          "Beach clubs entrance fees worth it",
+          "Beach swimming best morning before crowds"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Desert Experience",
+        "attractions": [
+          "Desert safari [4x4 off-road adventure]",
+          "Sand dune bashing [thrilling vehicle ride]",
+          "Bedouin camp [traditional desert experience]",
+          "Camel riding [cultural desert transport]",
+          "Sunset viewing [desert golden hour]"
+        ],
+        "cost": "350-600 AED",
+        "tips": [
+          "Desert safari tours include dinner",
+          "Bring sunscreen and hat"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "uae-5",
+    "country": "UAE",
+    "duration": 5,
+    "title": "Dubai & Abu Dhabi Adventure",
+    "emoji": "🇦🇪",
+    "description": "Dubai luxury, Abu Dhabi culture, desert, and beaches",
+    "badge": "Best Value",
+    "colorClass": "t2",
+    "currency": "AED",
+    "days": [
+      {
+        "day": 1,
+        "title": "Dubai Introduction",
+        "attractions": [
+          "Burj Khalifa [tallest building with deck]",
+          "Dubai Mall [shopping and dining]",
+          "Fountain show [water and light display]",
+          "Downtown Dubai [modern city center]",
+          "Evening orientation [city lights]"
+        ],
+        "cost": "400-700 AED",
+        "tips": [
+          "Book Burj Khalifa in advance",
+          "Dress modestly in public places"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Beaches & Water Sports",
+        "attractions": [
+          "Palm Jumeirah [manmade island]",
+          "Jumeirah Beach [sandy shore]",
+          "Beach clubs [pool and restaurant]",
+          "Jet skiing [water activities]",
+          "Marine life [snorkeling optional]"
+        ],
+        "cost": "500-850 AED",
+        "tips": [
+          "Beach clubs day pass includes pool and lounger",
+          "Swimming gear rentals available"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Desert & Culture",
+        "attractions": [
+          "Desert safari [4x4 dune adventure]",
+          "Bedouin camp [traditional hospitality]",
+          "Camel riding [cultural transport]",
+          "Falconry [traditional hunting sport]",
+          "Dinner [BBQ and belly dance show]"
+        ],
+        "cost": "350-600 AED",
+        "tips": [
+          "Safari best in early morning or evening",
+          "Wear comfortable clothes for riding"
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Travel to Abu Dhabi",
+        "attractions": [
+          "Sheikh Zayed Grand Mosque [architectural masterpiece]",
+          "Emirates Palace [luxury hotel and landmark]",
+          "Corniche Road [waterfront promenade]",
+          "City views [modern Abu Dhabi]",
+          "Traditional souks [local markets]"
+        ],
+        "cost": "350-600 AED",
+        "tips": [
+          "Bus or driving 1.5 hours from Dubai",
+          "Mosque free entry; respectful dress required"
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Abu Dhabi Culture",
+        "attractions": [
+          "Louvre Abu Dhabi [art museum]",
+          "Saadiyat Cultural District [museums and culture]",
+          "Mangrove kayaking [nature activity]",
+          "Fish market [traditional market]",
+          "Farewell dinner [Emirati cuisine]"
+        ],
+        "cost": "400-700 AED",
+        "tips": [
+          "Louvre tickets 60-100 AED",
+          "Mangrove kayaking scenic and peaceful"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "uae-10",
+    "country": "UAE",
+    "duration": 10,
+    "title": "Complete Emirates Explorer",
+    "emoji": "🇦🇪",
+    "description": "Dubai, Abu Dhabi, Sharjah, desert, coast, and culture",
+    "badge": "Full Experience",
+    "colorClass": "t3",
+    "currency": "AED",
+    "days": [
+      {
+        "day": 1,
+        "title": "Dubai Arrival",
+        "attractions": [
+          "Burj Khalifa [tallest building]",
+          "Dubai Mall [world's largest mall]",
+          "Fountain show [choreographed display]",
+          "Downtown Dubai [modern city center]",
+          "Hotel check-in and rest [settle in]"
+        ],
+        "cost": "400-700 AED",
+        "tips": [
+          "Arrive early to book Burj Khalifa",
+          "Central Dubai location best for access"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Dubai Luxury Experience",
+        "attractions": [
+          "Palm Jumeirah [artificial island]",
+          "Atlantis Resort [luxury resort]",
+          "Jumeirah Beach [pristine sand]",
+          "Beach club [pool and dining]",
+          "Sunset at beach [golden hour views]"
+        ],
+        "cost": "500-850 AED",
+        "tips": [
+          "Beach clubs worth the entrance fee",
+          "Atlantis aquarium impressive"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Desert & Dunes",
+        "attractions": [
+          "Desert safari [4x4 adventure]",
+          "Sand dune bashing [thrilling ride]",
+          "Bedouin camp [traditional experience]",
+          "Camel riding [cultural activity]",
+          "BBQ dinner [outdoor feast]"
+        ],
+        "cost": "350-600 AED",
+        "tips": [
+          "Safari includes hotel transfer and dinner",
+          "Bring light jacket for evening"
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Sharjah Alternative",
+        "attractions": [
+          "Sharjah Art Museum [regional art collections]",
+          "Al Noor Mosque [stunning mosque architecture]",
+          "Blue Souk [traditional market]",
+          "Corniche [waterfront walk]",
+          "Hana Centre [shopping and dining]"
+        ],
+        "cost": "200-400 AED",
+        "tips": [
+          "Sharjah 30 minutes from Dubai; more affordable",
+          "Mosque free entry; respectful dress required"
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Abu Dhabi Grand Mosque",
+        "attractions": [
+          "Sheikh Zayed Grand Mosque [architectural wonder]",
+          "Emirates Palace [luxury landmark]",
+          "Corniche Road [waterfront promenade]",
+          "Cultural Heritage Area [museums]",
+          "Sunset viewing [evening light]"
+        ],
+        "cost": "350-600 AED",
+        "tips": [
+          "Mosque free but dress modestly",
+          "Early morning visit best light"
+        ]
+      },
+      {
+        "day": 6,
+        "title": "Abu Dhabi Museums",
+        "attractions": [
+          "Louvre Abu Dhabi [art museum]",
+          "Zayed National Museum [Emirati history]",
+          "Saadiyat Beach [island beach]",
+          "Mangrove kayaking [nature tours]",
+          "Island exploration [by boat]"
+        ],
+        "cost": "400-700 AED",
+        "tips": [
+          "Museum tickets around 60-100 AED",
+          "Mangrove kayaking peaceful and unique"
+        ]
+      },
+      {
+        "day": 7,
+        "title": "Water Activities",
+        "attractions": [
+          "Yacht cruise [luxury boat tour]",
+          "Snorkeling [marine life viewing]",
+          "Beach relaxation [rest day]",
+          "Water sports [parasailing, jet skiing]",
+          "Sunset cruise [evening boat tour]"
+        ],
+        "cost": "500-900 AED",
+        "tips": [
+          "Boat tours book in advance",
+          "Bring underwater camera for snorkeling"
+        ]
+      },
+      {
+        "day": 8,
+        "title": "Emirate Culture Deep Dive",
+        "attractions": [
+          "Heritage Village [traditional architecture]",
+          "Fish market [local trading]",
+          "Spice Souk [aromatic market]",
+          "Cooking class [Emirati cuisine]",
+          "Textile museum [traditional crafts]"
+        ],
+        "cost": "300-550 AED",
+        "tips": [
+          "Heritage Village free entry",
+          "Cooking class 200-400 AED"
+        ]
+      },
+      {
+        "day": 9,
+        "title": "Shopping & Food",
+        "attractions": [
+          "Malls [world-class shopping]",
+          "Fashion stores [luxury brands]",
+          "Food courts [international cuisine]",
+          "Fine dining [Michelin stars]",
+          "Gold Souk [jewel shopping]"
+        ],
+        "cost": "varies",
+        "tips": [
+          "Malls air-conditioned; escape heat",
+          "Haggle prices in traditional souks"
+        ]
+      },
+      {
+        "day": 10,
+        "title": "Return Home",
+        "attractions": [
+          "Final shopping [last-minute purchases]",
+          "Reflection on Emirates [luxury and tradition]",
+          "Airport transfer [departure]",
+          "Flight home [journey completion]",
+          "UAE memories [cultural blend]"
+        ],
+        "cost": "varies",
+        "tips": [
+          "Allow 3 hours before international flight",
+          "Souvenirs: dates, saffron, Arabian perfume"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "egypt-3",
+    "country": "Egypt",
+    "duration": 3,
+    "title": "Cairo Pharaonic Highlights",
+    "emoji": "🇪🇬",
+    "description": "Pyramids of Giza, Sphinx, and ancient artifacts",
+    "badge": "Quick Getaway",
+    "colorClass": "t1",
+    "currency": "EGP",
+    "days": [
+      {
+        "day": 1,
+        "title": "Giza Pyramids",
+        "attractions": [
+          "Great Pyramid of Khufu [oldest standing structure on earth]",
+          "Pyramid of Khafre [second largest pyramid]",
+          "Pyramid of Menkaure [third pyramid on plateau]",
+          "Great Sphinx [mythical lion guardian]",
+          "Panoramic views [sunrise or sunset viewing]"
+        ],
+        "cost": "200-400 EGP",
+        "tips": [
+          "Sunrise visit best for photography and cool temperature",
+          "Book guide for better understanding of history"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Cairo Museums & City",
+        "attractions": [
+          "Egyptian Museum [world's largest pharaonic collection]",
+          "Mummy room [preserved royal mummies]",
+          "Khan el-Khalili Bazaar [medieval market]",
+          "Old Cairo [Islamic quarter with mosques]",
+          "Street food [authentic Egyptian cuisine]"
+        ],
+        "cost": "200-350 EGP",
+        "tips": [
+          "Museum morning visit before afternoon crowds",
+          "Bazaar visit with guide for haggling tips"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Nile & Day Trip",
+        "attractions": [
+          "Nile River cruise [historic river journey]",
+          "Saqqara [necropolis with tombs]",
+          "Step Pyramid [Egypt's first pyramid]",
+          "Memphis [ancient capital city ruins]",
+          "Traditional felucca [sailing boat]"
+        ],
+        "cost": "250-450 EGP",
+        "tips": [
+          "Saqqara less crowded than Giza",
+          "Felucca sunset cruise romantic"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "egypt-5",
+    "country": "Egypt",
+    "duration": 5,
+    "title": "Nile Valley Explorer",
+    "emoji": "🇪🇬",
+    "description": "Cairo, Giza, Luxor, Valley of Kings, and Nile cruises",
+    "badge": "Best Value",
+    "colorClass": "t2",
+    "currency": "EGP",
+    "days": [
+      {
+        "day": 1,
+        "title": "Cairo Pyramids",
+        "attractions": [
+          "Giza Pyramid complex [three great pyramids]",
+          "Great Sphinx [limestone guardian statue]",
+          "Panoramic view [sunrise viewing]",
+          "Guided tour [historical narration]",
+          "Camel ride [traditional transport]"
+        ],
+        "cost": "200-400 EGP",
+        "tips": [
+          "Early morning for cool temperatures",
+          "Professional guide provides context"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Cairo Museums",
+        "attractions": [
+          "Egyptian Museum [largest pharaonic collection]",
+          "Mummy room [royal preserved bodies]",
+          "Tutankhamun treasures [golden artifacts]",
+          "Khan el-Khalili Bazaar [traditional market]",
+          "Dinner cruise [Nile boat dining]"
+        ],
+        "cost": "250-450 EGP",
+        "tips": [
+          "Museum can feel overwhelming; prioritize sections",
+          "Cruise dinner includes entertainment"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Flight to Luxor",
+        "attractions": [
+          "Luxor Temple [riverside temple]",
+          "Karnak Temple [massive temple complex]",
+          "Nile promenade [waterfront walk]",
+          "Luxor Museum [regional artifacts]",
+          "Valley of Kings [royal tomb site]"
+        ],
+        "cost": "300-500 EGP",
+        "tips": [
+          "Flight Cairo to Luxor 1 hour",
+          "Karnak largest temple in Egypt"
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Valley of Kings",
+        "attractions": [
+          "Valley of Kings [hidden royal tombs]",
+          "Tutankhamun tomb [pharaoh's burial]",
+          "Temple of Hatshepsut [female pharaoh temple]",
+          "Colossi of Memnon [massive stone statues]",
+          "Valley of Queens [royal wives' tombs]"
+        ],
+        "cost": "250-450 EGP",
+        "tips": [
+          "Early morning before heat",
+          "Wear comfortable walking shoes"
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Nile Cruise Return",
+        "attractions": [
+          "Felucca sailing boat [traditional travel]",
+          "Banana island [local villages]",
+          "Local markets [fresh produce]",
+          "Flight back to Cairo [1 hour]",
+          "Reflection on Egypt [pharaonic wonders]"
+        ],
+        "cost": "200-350 EGP",
+        "tips": [
+          "Felucca sailboats rent by the hour",
+          "Book return flight with flexibility"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "egypt-10",
+    "country": "Egypt",
+    "duration": 10,
+    "title": "Complete Ancient Egypt Journey",
+    "emoji": "🇪🇬",
+    "description": "Cairo, Giza, Luxor, Aswan, Abu Simbel, and Nile cruise",
+    "badge": "Full Experience",
+    "colorClass": "t3",
+    "currency": "EGP",
+    "days": [
+      {
+        "day": 1,
+        "title": "Cairo Arrival",
+        "attractions": [
+          "Giza Pyramids [great pyramids complex]",
+          "Great Sphinx [limestone guardian]",
+          "Sunrise viewing [golden light]",
+          "Camel ride [traditional experience]",
+          "Orientation in Cairo [city overview]"
+        ],
+        "cost": "200-400 EGP",
+        "tips": [
+          "Arrive early for cool morning",
+          "Stay hydrated in desert heat"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Cairo Museums & Bazaars",
+        "attractions": [
+          "Egyptian Museum [pharaonic artifacts]",
+          "Mummy room [royal remains]",
+          "Tutankhamun treasures [golden masks]",
+          "Khan el-Khalili Bazaar [medieval market]",
+          "Islamic Cairo [mosques and history]"
+        ],
+        "cost": "250-450 EGP",
+        "tips": [
+          "Museum early morning",
+          "Bazaar haggling expected and fun"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Saqqara & Memphis",
+        "attractions": [
+          "Saqqara necropolis [oldest pyramid complex]",
+          "Step Pyramid [first stone structure]",
+          "Memphis [ancient capital ruins]",
+          "Colossi statues [massive sculptures]",
+          "Nile views [river panorama]"
+        ],
+        "cost": "200-350 EGP",
+        "tips": [
+          "Less crowded than Giza",
+          "Guide helps interpretation"
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Flight to Luxor",
+        "attractions": [
+          "Luxor Temple [riverside temple]",
+          "Karnak Temple Complex [massive temples]",
+          "Avenue of Sphinxes [temple connection]",
+          "Nile promenade [waterfront walk]",
+          "Sunset river cruise [evening boat tour]"
+        ],
+        "cost": "300-500 EGP",
+        "tips": [
+          "Flight Cairo to Luxor 1 hour",
+          "Karnak largest temple in Egypt"
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Valley of Kings",
+        "attractions": [
+          "Valley of Kings [hidden royal tombs]",
+          "Tutankhamun tomb [pharaoh burial]",
+          "Temple of Hatshepsut [female pharaoh]",
+          "Colossi of Memnon [stone statues]",
+          "Valley of Queens [wives' tombs]"
+        ],
+        "cost": "250-450 EGP",
+        "tips": [
+          "Early morning best visit time",
+          "Many tombs require extra tickets"
+        ]
+      },
+      {
+        "day": 6,
+        "title": "Nile Cruise",
+        "attractions": [
+          "Nile River cruise [Luxor to Aswan]",
+          "Dendera Temple [Hathor temple]",
+          "Edfu Temple [Horus temple]",
+          "Kom Ombo Temple [dual temple]",
+          "Felucca sailing [traditional boats]"
+        ],
+        "cost": "400-700 EGP",
+        "tips": [
+          "Multi-day cruise 3-4 days standard",
+          "All-inclusive meals and sightseeing"
+        ]
+      },
+      {
+        "day": 7,
+        "title": "Aswan & Philae",
+        "attractions": [
+          "Aswan [southern city on Nile]",
+          "Philae Temple [island temple]",
+          "Felucca islands [river islands]",
+          "Nubian villages [local culture]",
+          "Aswan market [local produce]"
+        ],
+        "cost": "300-500 EGP",
+        "tips": [
+          "Aswan slower pace than Cairo/Luxor",
+          "Felucca boat trip scenic"
+        ]
+      },
+      {
+        "day": 8,
+        "title": "Abu Simbel",
+        "attractions": [
+          "Abu Simbel Temple [colossal temple complex]",
+          "Great Temple [Ramesses II temple]",
+          "Small Temple [Nefertari temple]",
+          "Sound and light show [evening show]",
+          "Lake Nasser [artificial lake views]"
+        ],
+        "cost": "350-600 EGP",
+        "tips": [
+          "Early morning tour from Aswan",
+          "Most scenic experience in Egypt"
+        ]
+      },
+      {
+        "day": 9,
+        "title": "Relax or Explore",
+        "attractions": [
+          "Aswan Botanical Garden [island gardens]",
+          "Nile sunset [golden hour views]",
+          "Local Nubian cuisine [authentic food]",
+          "Shopping for souvenirs [handicrafts]",
+          "Reflection on Egypt [timeless monuments]"
+        ],
+        "cost": "200-350 EGP",
+        "tips": [
+          "Relax after intensive touring",
+          "Souvenirs: papyrus, scarabs, spices"
+        ]
+      },
+      {
+        "day": 10,
+        "title": "Return Home",
+        "attractions": [
+          "Flight Aswan to Cairo [2.5 hours]",
+          "Cairo overnight if needed",
+          "Reflection on ancient Egypt [pharaonic legacy]",
+          "International flight [homeward journey]",
+          "Unforgettable Egyptian memories [timeless wonder]"
+        ],
+        "cost": "varies",
+        "tips": [
+          "Allow buffer for domestic flight",
+          "Egypt magical and spiritual experience"
+        ]
+      }
+    ]
+  }
+]

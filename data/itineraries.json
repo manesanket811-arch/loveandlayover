@@ -10092,6 +10092,4911 @@
           ]
         }
       ]
+    },
+    {
+      "id": "uk-3",
+      "country": "UK",
+      "duration": 3,
+      "title": "London Icons Express",
+      "emoji": "🇬🇧",
+      "description": "Big Ben, royal palaces, and Thames-side charm",
+      "badge": "Quick Getaway",
+      "colorClass": "t1",
+      "currency": "GBP",
+      "days": [
+        {
+          "day": 1,
+          "title": "Westminster & Royal London",
+          "attractions": [
+            "Big Ben & Palace of Westminster [iconic gothic parliament building with clock tower]",
+            "Westminster Abbey [Gothic church with royal coronations and royal tombs]",
+            "Buckingham Palace [official residence of monarch with changing of guards ceremony]",
+            "St. James's Park [royal park with lake and wildlife near palace]",
+            "Horse Guards Parade [historic military parade ground]"
+          ],
+          "cost": "50-80 GBP",
+          "tips": [
+            "Buy London Pass for unlimited transport and museum entries",
+            "Watch Changing of the Guard at 11:30am (Monday, Wednesday, Friday, Sunday)"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Museums & South Bank",
+          "attractions": [
+            "British Museum [world-famous museum with Egyptian mummies and Greek sculptures]",
+            "National Gallery [art museum with masterpieces by Van Gogh and Da Vinci]",
+            "Tower of London [medieval fortress with crown jewels and Beefeater guards]",
+            "Tower Bridge [iconic Victorian bridge with glass walkway]",
+            "South Bank [riverside promenade with London Eye views]"
+          ],
+          "cost": "45-75 GBP",
+          "tips": [
+            "Most major museums free entry; book timed slots online",
+            "Tower of London book ahead to skip queues"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Shopping & Neighborhoods",
+          "attractions": [
+            "Oxford Street [famous shopping boulevard with major brands]",
+            "Harrods Department Store [luxury shopping landmark in Knightsbridge]",
+            "Covent Garden [historic market with street performers and restaurants]",
+            "Borough Market [food market with international cuisine]",
+            "Camden Market [alternative market with vintage and indie shops]"
+          ],
+          "cost": "40-70 GBP",
+          "tips": [
+            "Borough Market best visited morning for fresh food and less crowds",
+            "Camden Market packed weekends; go weekday for better experience"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uk-5",
+      "country": "UK",
+      "duration": 5,
+      "title": "England's Highlights Tour",
+      "emoji": "🇬🇧",
+      "description": "London, Bath, and Stonehenge ancient mysteries",
+      "badge": "Best Value",
+      "colorClass": "t2",
+      "currency": "GBP",
+      "days": [
+        {
+          "day": 1,
+          "title": "London Arrival",
+          "attractions": [
+            "Big Ben & Houses of Parliament [gothic architecture and clock tower]",
+            "Westminster Abbey [church with royal history]",
+            "Buckingham Palace [royal residence]",
+            "St. James's Park [peaceful green space]",
+            "Thames River Walk [scenic waterfront walk]"
+          ],
+          "cost": "50-80 GBP",
+          "tips": [
+            "Get Oyster Card for unlimited tube/bus travel",
+            "Stay in Zone 1-2 for easy access to attractions"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Museums & Culture",
+          "attractions": [
+            "British Museum [ancient civilizations and artifacts]",
+            "National Gallery [European art masterpieces]",
+            "Tower of London [medieval fortress with crown jewels]",
+            "Tower Bridge [iconic bridge with glass skywalk]",
+            "Shakespeare's Globe [reconstructed Elizabethan theatre]"
+          ],
+          "cost": "45-75 GBP",
+          "tips": [
+            "Book British Museum and Tower of London online for fast entry",
+            "Globe Theatre tours available; Shakespeare plays sometimes staged"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Stonehenge & Bath Day Trip",
+          "attractions": [
+            "Stonehenge [mysterious prehistoric monument with massive stones]",
+            "Salisbury [medieval cathedral town near Stonehenge]",
+            "Bath Roman Spa [ancient Roman bathing complex with museum]",
+            "Bath Abbey [stunning gothic architecture]",
+            "Royal Crescent [elegant Georgian architecture]"
+          ],
+          "cost": "60-100 GBP",
+          "tips": [
+            "Train from London to Bath takes 1.5 hours",
+            "Visit Stonehenge early morning for fewer crowds and better light"
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Bath & Cotswolds",
+          "attractions": [
+            "Roman Baths Museum [preserved ancient bathing complex]",
+            "Pulteney Bridge [elegant Georgian bridge over river]",
+            "Cotswolds Villages [honey-colored stone villages like Bourton-on-the-Water]",
+            "Blenheim Palace [UNESCO birthplace of Winston Churchill]",
+            "Oxford University [historic university colleges and gardens]"
+          ],
+          "cost": "55-90 GBP",
+          "tips": [
+            "Rent car or join tour to explore Cotswolds villages",
+            "Blenheim Palace requires several hours for full exploration"
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Oxford & Return",
+          "attractions": [
+            "Oxford University Colleges [Christ Church, Bodleian Library, Trinity College]",
+            "Oxford Castle [medieval tower with views of city]",
+            "Ashmolean Museum [art and archaeology collections]",
+            "Botanical Garden [riverside garden with 4,000 plant species]",
+            "Punting on Cherwell [traditional flat-bottomed boat tours]"
+          ],
+          "cost": "50-80 GBP",
+          "tips": [
+            "Punting requires advance booking or can be done anytime",
+            "Visit college chapels during evensong for beautiful choir performances"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uk-10",
+      "country": "UK",
+      "duration": 10,
+      "title": "Complete Britain Discovery",
+      "emoji": "🇬🇧",
+      "description": "London, England, Scotland Edinburgh, Lake District",
+      "badge": "Full Experience",
+      "colorClass": "t3",
+      "currency": "GBP",
+      "days": [
+        {
+          "day": 1,
+          "title": "London Arrival & Westminster",
+          "attractions": [
+            "Big Ben [clock tower and parliament building]",
+            "Westminster Abbey [royal church]",
+            "Buckingham Palace [royal residence with guards]",
+            "St. James's Park [royal park]",
+            "Thames River Walk [scenic waterfront]"
+          ],
+          "cost": "50-80 GBP",
+          "tips": [
+            "Get London Pass for 3/6/10-day unlimited access",
+            "Stay near tube station for easy commute"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Museums & Royal London",
+          "attractions": [
+            "British Museum [world artifacts]",
+            "National Gallery [European art]",
+            "Tower of London [crown jewels and fortress]",
+            "Tower Bridge [iconic bridge]",
+            "St. Paul's Cathedral [Wren's baroque masterpiece]"
+          ],
+          "cost": "45-75 GBP",
+          "tips": [
+            "Book museums online for skip-the-line entry",
+            "St. Paul's evensong choir free entry"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "South London & Greenwich",
+          "attractions": [
+            "Greenwich Observatory [prime meridian and ship models]",
+            "Cutty Sark [historic clipper ship]",
+            "Greenwich Park [historic royal park]",
+            "Thames Barrier [engineering marvel with visitor center]",
+            "Shakespeare's Globe [reconstructed theatre]"
+          ],
+          "cost": "40-70 GBP",
+          "tips": [
+            "Use Thames Clipper boat from central London to Greenwich",
+            "Greenwich best for afternoon visit after museums"
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Stonehenge & Bath",
+          "attractions": [
+            "Stonehenge [prehistoric monument]",
+            "Salisbury Cathedral [stunning gothic cathedral]",
+            "Bath Roman Spa [ancient bathing complex]",
+            "Bath Abbey [gothic architecture]",
+            "Royal Crescent [elegant Georgian architecture]"
+          ],
+          "cost": "60-100 GBP",
+          "tips": [
+            "Train London to Bath 1.5 hours",
+            "Stonehenge sunrise visit spectacular but very early"
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Cotswolds Villages",
+          "attractions": [
+            "Bourton-on-the-Water [picturesque village with river]",
+            "Cotswold villages [honey-colored stone buildings]",
+            "Blenheim Palace [UNESCO palace and birthplace of Churchill]",
+            "Bibury [picture-postcard village]",
+            "Cotswold Water Park [scenic water and villages]"
+          ],
+          "cost": "55-90 GBP",
+          "tips": [
+            "Rent car to explore multiple villages in one day",
+            "Stay overnight in village for authentic experience"
+          ]
+        },
+        {
+          "day": 6,
+          "title": "Oxford University",
+          "attractions": [
+            "Oxford University Colleges [Christ Church, Magdalen, Trinity]",
+            "Bodleian Library [historic university library]",
+            "Ashmolean Museum [art and antiquities]",
+            "Radcliffe Camera [iconic circular library]",
+            "Punting on Cherwell [traditional boats on river]"
+          ],
+          "cost": "50-80 GBP",
+          "tips": [
+            "Visit colleges during undergraduate term for vibrant atmosphere",
+            "Book punting in advance or do spontaneously"
+          ]
+        },
+        {
+          "day": 7,
+          "title": "Travel to Edinburgh",
+          "attractions": [
+            "Train journey through countryside [scenic 6-hour journey with refreshments]",
+            "Edinburgh Castle [hilltop fortress with city views]",
+            "Royal Mile [historic street with shops and pubs]",
+            "Arthur's Seat [extinct volcano with panoramic views]",
+            "Holyrood Palace [official Scottish residence of monarch]"
+          ],
+          "cost": "65-100 GBP",
+          "tips": [
+            "Book train tickets in advance for better prices",
+            "Climb Arthur's Seat early morning for fewer crowds and best light"
+          ]
+        },
+        {
+          "day": 8,
+          "title": "Edinburgh Culture",
+          "attractions": [
+            "Edinburgh Castle [medieval fortress with crown jewels]",
+            "National Museum of Scotland [Scottish history and culture]",
+            "Scottish Parliament [modern building with views]",
+            "Greyfriars Kirkyard [historic graveyard and Harry Potter inspiration]",
+            "Camera Obscura [historic optical device with city views]"
+          ],
+          "cost": "55-85 GBP",
+          "tips": [
+            "Book castle tickets online for skip-the-line",
+            "Greyfriars Bobby statue popular selfie spot"
+          ]
+        },
+        {
+          "day": 9,
+          "title": "Lake District Day Trip",
+          "attractions": [
+            "Lake Windermere [largest lake with boat cruises]",
+            "Ambleside [charming village on lake]",
+            "Beatrix Potter Gallery [author's home and museum]",
+            "Mountain hiking [fells and peaks for trekking]",
+            "Local pubs [traditional ale and fish & chips]"
+          ],
+          "cost": "60-95 GBP",
+          "tips": [
+            "Train from Edinburgh to Lake District 3-4 hours",
+            "Book boat cruises in advance during peak season"
+          ]
+        },
+        {
+          "day": 10,
+          "title": "Lake District & Return",
+          "attractions": [
+            "Catbells [mountain walk with lake views]",
+            "Keswick [town with lake access and shops]",
+            "Derwent Water [scenic lake for boat tours]",
+            "Lodore Falls [waterfall with hiking trails]",
+            "Return to London [evening train 5-6 hours]"
+          ],
+          "cost": "55-90 GBP",
+          "tips": [
+            "Early morning hike before afternoon train",
+            "Pack picnic for mountain walk"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ireland-3",
+      "country": "Ireland",
+      "duration": 3,
+      "title": "Dublin Charm Quick Escape",
+      "emoji": "🇮🇪",
+      "description": "Guinness, Georgian architecture, and Irish culture",
+      "badge": "Quick Getaway",
+      "colorClass": "t1",
+      "currency": "EUR",
+      "days": [
+        {
+          "day": 1,
+          "title": "Dublin City Center",
+          "attractions": [
+            "Temple Bar [historic quarter with pubs and restaurants]",
+            "Ha'penny Bridge [iconic cast-iron bridge over Liffey river]",
+            "Trinity College [historic university with Book of Kells]",
+            "Grafton Street [shopping street with street performers]",
+            "St. Stephen's Green [central park with museums nearby]"
+          ],
+          "cost": "50-80 EUR",
+          "tips": [
+            "Dublin very walkable; stay centrally for easy access",
+            "Book Temple Bar restaurants in advance; popular with tourists"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Museums & Literary Dublin",
+          "attractions": [
+            "Guinness Storehouse [brewery museum with rooftop bar with city views]",
+            "Book of Kells [illuminated medieval manuscript at Trinity]",
+            "National Museum [Irish history and artifacts]",
+            "Dublin Writers Museum [Joyce, Beckett, Wilde exhibits]",
+            "Smiths Tavern [historic pub for traditional music and Guinness]"
+          ],
+          "cost": "45-75 EUR",
+          "tips": [
+            "Book Guinness Storehouse online to skip queues",
+            "Live traditional music in pubs most evenings"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Day Trips from Dublin",
+          "attractions": [
+            "Wicklow Mountains [scenic mountain range with monasteries]",
+            "Glendalough [valley with ancient monastic site]",
+            "Cliffs of Moher [dramatic 230-meter cliffs [1.5 hour drive]]",
+            "Irish countryside [rural villages with green hills]",
+            "Local pubs [authentic Irish hospitality and food]"
+          ],
+          "cost": "55-90 EUR",
+          "tips": [
+            "Rent car for countryside exploration",
+            "Cliffs of Moher best on clear days for dramatic views"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ireland-5",
+      "country": "Ireland",
+      "duration": 5,
+      "title": "Ireland's Wild Atlantic Way",
+      "emoji": "🇮🇪",
+      "description": "Dublin, Cliffs of Moher, Galway, and coastal beauty",
+      "badge": "Best Value",
+      "colorClass": "t2",
+      "currency": "EUR",
+      "days": [
+        {
+          "day": 1,
+          "title": "Dublin City Exploration",
+          "attractions": [
+            "Temple Bar Quarter [historic neighborhood with pubs]",
+            "Trinity College [university with Book of Kells]",
+            "Ha'penny Bridge [iconic riverside bridge]",
+            "Grafton Street [main shopping street]",
+            "St. Stephen's Green [central park]"
+          ],
+          "cost": "50-80 EUR",
+          "tips": [
+            "City center walkable and pedestrian friendly",
+            "Book museum tickets online for faster entry"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Guinness & Museums",
+          "attractions": [
+            "Guinness Storehouse [brewery with rooftop bar and city views]",
+            "National Museum [Irish heritage and artifacts]",
+            "Dublin Writers Museum [literary collections]",
+            "Smiths Tavern [traditional music venue and authentic pub]",
+            "Liffey River Walk [scenic waterfront]"
+          ],
+          "cost": "45-75 EUR",
+          "tips": [
+            "Visit Guinness Storehouse at sunset for best rooftop light",
+            "Traditional music sessions nightly in many pubs"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Drive to Cliffs of Moher",
+          "attractions": [
+            "Wicklow Mountains [scenic mountain range south of Dublin]",
+            "Glendalough [valley with monastic ruins and lakes]",
+            "Cliffs of Moher [spectacular 230-meter sea cliffs]",
+            "Doolin Village [cliff-side village with traditional music]",
+            "O'Brien's Tower [round tower on cliffs with coastal views]"
+          ],
+          "cost": "60-100 EUR",
+          "tips": [
+            "Rent car for flexibility in countryside",
+            "Cliffs best visited morning before afternoon crowds"
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Galway & Connemara",
+          "attractions": [
+            "Galway City [bohemian coastal town with colorful buildings]",
+            "Shop Street [pedestrian area with shops and restaurants]",
+            "Connemara Mountains [dramatic coastal mountain scenery]",
+            "Kylemore Abbey [castle on lake in mountains]",
+            "Westport [charming harbor town]"
+          ],
+          "cost": "55-85 EUR",
+          "tips": [
+            "Galway 2 hours from Cliffs of Moher via scenic drive",
+            "Connemara known for traditional Irish culture and music"
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Aran Islands or Return",
+          "attractions": [
+            "Aran Islands [three islands off coast with ancient sites and traditional culture]",
+            "Dun Aengus [prehistoric stone fort on island cliff]",
+            "Galway Seafood Festival [seasonal festival with local cuisine]",
+            "Return to Dublin [train or flight 2-3 hours]",
+            "Irish traditional music session [farewell experience]"
+          ],
+          "cost": "65-100 EUR",
+          "tips": [
+            "Ferry to Aran Islands from Galway or Doolin (45 mins)",
+            "Islands car-free; bring sturdy walking shoes"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ireland-10",
+      "country": "Ireland",
+      "duration": 10,
+      "title": "Complete Irish Adventure",
+      "emoji": "🇮🇪",
+      "description": "Dublin, Wild West, Ring of Kerry, and Celtic heritage",
+      "badge": "Full Experience",
+      "colorClass": "t3",
+      "currency": "EUR",
+      "days": [
+        {
+          "day": 1,
+          "title": "Dublin City Introduction",
+          "attractions": [
+            "Temple Bar [historic neighborhood]",
+            "Trinity College [Book of Kells]",
+            "Ha'penny Bridge [iconic bridge]",
+            "Grafton Street [shopping street]",
+            "St. Stephen's Green [park]"
+          ],
+          "cost": "50-80 EUR",
+          "tips": [
+            "Stay central for easy walking",
+            "Book accommodations in Temple Bar area"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Dublin Museums & Culture",
+          "attractions": [
+            "Guinness Storehouse [rooftop bar with views]",
+            "National Museum [Irish history]",
+            "Writers Museum [Irish literature]",
+            "St. Patrick's Cathedral [historic church]",
+            "Traditional pub evening [music and Guinness]"
+          ],
+          "cost": "45-75 EUR",
+          "tips": [
+            "Book Guinness online for fast track",
+            "Pubs best after 9pm for traditional sessions"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Wicklow Day Trip",
+          "attractions": [
+            "Wicklow Mountains [scenic range]",
+            "Glendalough [monastery in valley]",
+            "Powerscourt Estate [historic manor]",
+            "Bray [seaside town]",
+            "Wicklow Wildlife Park [animal sanctuary]"
+          ],
+          "cost": "55-90 EUR",
+          "tips": [
+            "Day tour from Dublin available",
+            "Glendalough best in morning light"
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Cliffs of Moher",
+          "attractions": [
+            "Cliffs of Moher [230-meter sea cliffs]",
+            "O'Brien's Tower [coastal observation tower]",
+            "Burren Region [limestone landscape]",
+            "Doolin Village [traditional music hub]",
+            "Liscannor Beach [beach near cliffs]"
+          ],
+          "cost": "60-100 EUR",
+          "tips": [
+            "Early morning visit for fewer crowds",
+            "Can be windy and misty; bring layers"
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Galway & Connemara",
+          "attractions": [
+            "Galway City [colorful coastal town]",
+            "Connemara Mountains [scenic coastal range]",
+            "Kylemore Abbey [castle on lake]",
+            "Westport [harbor town]",
+            "Clare Island [island off coast]"
+          ],
+          "cost": "55-85 EUR",
+          "tips": [
+            "Rent car for mountain exploration",
+            "Traditional Irish music venues abundant"
+          ]
+        },
+        {
+          "day": 6,
+          "title": "Aran Islands",
+          "attractions": [
+            "Dun Aengus [prehistoric stone fort]",
+            "Inishmore [largest island with cliffs]",
+            "Traditional island culture [horse carts, traditional dress]",
+            "Currachs [traditional rowing boats]",
+            "Aran Sweaters [traditional knitted garments]"
+          ],
+          "cost": "65-100 EUR",
+          "tips": [
+            "Ferry 45 minutes from Galway or Doolin",
+            "No cars on islands; explore on foot or rent bike"
+          ]
+        },
+        {
+          "day": 7,
+          "title": "Ring of Kerry Drive",
+          "attractions": [
+            "Killarney [tourist hub with colorful streets]",
+            "Ring of Kerry [scenic 179km circular drive]",
+            "Muckross House [historic manor in national park]",
+            "Lakes of Killarney [mountain lake views]",
+            "Dunloe Gap [mountain pass with hiking]"
+          ],
+          "cost": "60-95 EUR",
+          "tips": [
+            "Full Ring drive takes 4-5 hours; break at towns",
+            "Rent car for flexibility"
+          ]
+        },
+        {
+          "day": 8,
+          "title": "Dingle Peninsula",
+          "attractions": [
+            "Dingle Town [fishing village with colorful buildings]",
+            "Fungie the Dolphin [famous wild dolphin]",
+            "Slea Head Drive [scenic peninsula loop]",
+            "Skellig Michael [monastic island off coast]",
+            "Conor Pass [mountain pass with stunning views]"
+          ],
+          "cost": "55-90 EUR",
+          "tips": [
+            "Book dolphin boat tour in advance",
+            "Slea Head Drive one of Ireland's most scenic routes"
+          ]
+        },
+        {
+          "day": 9,
+          "title": "Cork & South Coast",
+          "attractions": [
+            "Cork City [second-largest city with cultural vibe]",
+            "English Market [historic food market]",
+            "Blarney Castle [castle with Blarney Stone]",
+            "Kinsale [picturesque harbor town]",
+            "Drombeg Stone Circle [prehistoric standing stones]"
+          ],
+          "cost": "50-80 EUR",
+          "tips": [
+            "Kinsale colorful and walkable; great seafood restaurants",
+            "Blarney Castle 10km from Cork, easy day trip"
+          ]
+        },
+        {
+          "day": 10,
+          "title": "Return to Dublin",
+          "attractions": [
+            "Travel back to Dublin [flight or train 2-3 hours]",
+            "Last evening in Temple Bar [traditional music and farewell dinner]",
+            "Final Guinness [toast to Ireland]",
+            "Shopping for souvenirs [Irish wool, pottery]",
+            "Reflection on Irish culture [memories and connections]"
+          ],
+          "cost": "60-100 EUR",
+          "tips": [
+            "Plan return journey early to avoid travel stress",
+            "Leave room for unplanned experiences and spontaneous adventures"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "norway-3",
+      "country": "Norway",
+      "duration": 3,
+      "title": "Oslo & Fjord Gateway",
+      "emoji": "🇳🇴",
+      "description": "Capital city, Viking heritage, and fjord scenery",
+      "badge": "Quick Getaway",
+      "colorClass": "t1",
+      "currency": "NOK",
+      "days": [
+        {
+          "day": 1,
+          "title": "Oslo City Exploration",
+          "attractions": [
+            "Oslo City Hall [red brick building with views and murals]",
+            "Vigeland Sculpture Park [largest sculpture park with 200+ bronze works]",
+            "Royal Palace [official residence of Norwegian monarch]",
+            "Akershus Fortress [medieval fortress with harbor views]",
+            "Karl Johans Street [main shopping street with street life]"
+          ],
+          "cost": "600-1000 NOK",
+          "tips": [
+            "Get Oslo Pass for unlimited transport and museum entries",
+            "Many parks and museums free entry"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Vikings & Museums",
+          "attractions": [
+            "Viking Ship Museum [authentic Viking ships from 9th century]",
+            "Norwegian Museum of Cultural History [open-air museum with historic buildings]",
+            "Munch Museum [home of famous 'The Scream' painting]",
+            "National Gallery [Norwegian art and masters]",
+            "Fram Museum [polar exploration ship and artifacts]"
+          ],
+          "cost": "550-900 NOK",
+          "tips": [
+            "Book Viking Ship Museum in advance during summer",
+            "Munch Museum houses world's most recognizable paintings"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Fjord Day Trip",
+          "attractions": [
+            "Oslofjord [scenic fjord with boat cruises]",
+            "Lilehammer [Winter Olympics host town]",
+            "Hadeland [glassworks and pottery region]",
+            "Gudbrandsdalsleden [scenic valley drive]",
+            "Alpine hiking [mountain trails with lake views]"
+          ],
+          "cost": "600-1000 NOK",
+          "tips": [
+            "Lilehammer 2 hours from Oslo; day trip feasible",
+            "Best hiking conditions June-September"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "norway-5",
+      "country": "Norway",
+      "duration": 5,
+      "title": "Norway's Fjord Wonder",
+      "emoji": "🇳🇴",
+      "description": "Oslo, Bergen, Geirangerfjord, and dramatic peaks",
+      "badge": "Best Value",
+      "colorClass": "t2",
+      "currency": "NOK",
+      "days": [
+        {
+          "day": 1,
+          "title": "Oslo Introduction",
+          "attractions": [
+            "Oslo City Hall [historic center with murals]",
+            "Vigeland Park [sculpture park with 200+ works]",
+            "Royal Palace [monarch residence]",
+            "Akershus Fortress [medieval fortress]",
+            "Karl Johans Street [main avenue]"
+          ],
+          "cost": "600-1000 NOK",
+          "tips": [
+            "Buy Oslo Pass for unlimited transport",
+            "City very walkable and compact"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Oslo Museums & Culture",
+          "attractions": [
+            "Viking Ship Museum [authentic Viking vessels]",
+            "Munch Museum [The Scream and Norwegian art]",
+            "Fram Museum [polar ship exploration]",
+            "Norwegian Museum of Cultural History [open-air historic buildings]",
+            "Modern Opera House [contemporary architecture on harbor]"
+          ],
+          "cost": "550-900 NOK",
+          "tips": [
+            "Book museums online for skip-the-line",
+            "Opera House free to explore exterior"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Travel to Bergen",
+          "attractions": [
+            "Bergen Bryggen [UNESCO historic waterfront with Hanseatic buildings]",
+            "Fish Market [seafood and local produce market]",
+            "Floibanen Funicular [cable car to mountain viewpoint]",
+            "Bergenhus Fortress [medieval fortress on harbor]",
+            "Fløyen Mountain [hiking with city and fjord views]"
+          ],
+          "cost": "650-1050 NOK",
+          "tips": [
+            "Train Oslo-Bergen 7 hours (scenic railway journey)",
+            "Bergen weather often rainy; bring rain jacket"
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Geirangerfjord Excursion",
+          "attractions": [
+            "Geirangerfjord [narrow fjord with steep waterfalls]",
+            "Seven Sisters Waterfall [seven cascades on cliff face]",
+            "Eagle Bend [hairpin road viewpoint]",
+            "Dalsnibba [mountain with panoramic fjord views]",
+            "Fjord boat cruise [scenic tour through fjord]"
+          ],
+          "cost": "700-1100 NOK",
+          "tips": [
+            "Geirangerfjord 5 hours from Bergen via scenic drive",
+            "Early morning visits best for photography"
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Return via Scenic Route",
+          "attractions": [
+            "Trollstigen [hairpin mountain road with 11 hairpin turns]",
+            "Geirangerfjord return [different perspective from other direction]",
+            "Mountain hiking [alpine trails with peak views]",
+            "Local village pubs [traditional Norwegian food]",
+            "Return to Bergen or Oslo [evening drive or train]"
+          ],
+          "cost": "650-1000 NOK",
+          "tips": [
+            "Trollstigen only open June-September due to snow",
+            "Drive this road slowly; many hairpins"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "norway-10",
+      "country": "Norway",
+      "duration": 10,
+      "title": "Complete Nordic Explorer",
+      "emoji": "🇳🇴",
+      "description": "Oslo, Bergen, Geirangerfjord, Northern Lights preparation",
+      "badge": "Full Experience",
+      "colorClass": "t3",
+      "currency": "NOK",
+      "days": [
+        {
+          "day": 1,
+          "title": "Oslo City Discovery",
+          "attractions": [
+            "City Hall [historic and cultural center]",
+            "Vigeland Sculpture Park [200+ sculptures]",
+            "Royal Palace [official residence]",
+            "Akershus Fortress [medieval fortress]",
+            "Harbor walk [scenic waterfront promenade]"
+          ],
+          "cost": "600-1000 NOK",
+          "tips": [
+            "Get Oslo Pass 3-day for museums and transport",
+            "Stay near City Hall for easy access"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Vikings & Norwegian Culture",
+          "attractions": [
+            "Viking Ship Museum [ancient Viking vessels]",
+            "Munch Museum [The Scream and masterpieces]",
+            "Fram Museum [polar exploration ship]",
+            "Cultural History Museum [open-air historic buildings]",
+            "Modern Opera House [contemporary design]"
+          ],
+          "cost": "550-900 NOK",
+          "tips": [
+            "Book museum tickets online in advance",
+            "Munch Museum most crowded; visit early morning"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Mountain & Lake Region",
+          "attractions": [
+            "Lilehammer [Winter Olympics town]",
+            "Lillehammer Olympic Stadium [skiing venue]",
+            "Lake Mjøsa [largest Norwegian lake]",
+            "Hamar [harbor town with historic railway]",
+            "Alpine hiking [mountain trails]"
+          ],
+          "cost": "600-1000 NOK",
+          "tips": [
+            "Lilehammer 2 hours from Oslo",
+            "Summer offers hiking; winter offers skiing"
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Travel to Bergen",
+          "attractions": [
+            "Scenic train journey [Oslo-Bergen 7-hour route]",
+            "Bryggen Wharf [UNESCO historic waterfront]",
+            "Fish Market [fresh seafood and local food]",
+            "Floibanen Funicular [mountain cable car with views]",
+            "Harbor walk [scenic waterfront]"
+          ],
+          "cost": "650-1050 NOK",
+          "tips": [
+            "Book train seats with window for scenic views",
+            "Arrive Bergen evening; explore next day"
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Bergen Exploration",
+          "attractions": [
+            "Bryggen [historic Hanseatic quarter]",
+            "Rosenkrantz Tower [fortress with city views]",
+            "Bergenhus Fortress [medieval fortress]",
+            "Fløyen Mountain [hiking to viewpoint]",
+            "Traditional seafood restaurants [dinner with harbor views]"
+          ],
+          "cost": "600-950 NOK",
+          "tips": [
+            "Bryggen best photographed early morning",
+            "Fish Market lunch with ocean views"
+          ]
+        },
+        {
+          "day": 6,
+          "title": "Geirangerfjord Journey",
+          "attractions": [
+            "Geirangerfjord [dramatic fjord with waterfalls]",
+            "Seven Sisters Waterfall [seven cascade waterfall]",
+            "Eagle Bend [mountain hairpin road viewpoint]",
+            "Fjord boat cruise [scenic water tour]",
+            "Mountain village [traditional Norwegian settlement]"
+          ],
+          "cost": "700-1100 NOK",
+          "tips": [
+            "5-hour drive from Bergen; rent car",
+            "Stay in Geirangerfjord village for full experience"
+          ]
+        },
+        {
+          "day": 7,
+          "title": "Trollstigen & Mountain Pass",
+          "attractions": [
+            "Trollstigen [famous mountain road with 11 hairpins]",
+            "Stigfossen Waterfall [cascade alongside road]",
+            "Mountain viewpoints [alpine lake views]",
+            "Hikers Paradise [numerous mountain trails]",
+            "Traditional mountain lodge [authentic Nordic hospitality]"
+          ],
+          "cost": "650-1000 NOK",
+          "tips": [
+            "Trollstigen open June-September only",
+            "Drive slowly; many hairpins and steep grades"
+          ]
+        },
+        {
+          "day": 8,
+          "title": "Romboleden Valley",
+          "attractions": [
+            "Rauma River [wild water rafting or scenic drives]",
+            "Verma Gorge [narrow canyon with river]",
+            "Local villages [authentic mountain communities]",
+            "Farm stays [traditional Norwegian farm experience]",
+            "Forest hiking [woodland trails with waterfall views]"
+          ],
+          "cost": "600-950 NOK",
+          "tips": [
+            "Region less touristy than main fjords",
+            "Farm stays provide authentic local experience"
+          ]
+        },
+        {
+          "day": 9,
+          "title": "Northern Norway Preparation",
+          "attractions": [
+            "Travel north towards Arctic [Tromsø if time permits]",
+            "Arctic wilderness [tundra and mountain landscape]",
+            "Sami culture [indigenous peoples and traditions]",
+            "Aurora displays [Northern Lights best September-March]",
+            "Local Arctic activities [dog sledding, reindeer herding]"
+          ],
+          "cost": "750-1150 NOK",
+          "tips": [
+            "Northern Lights season September-March",
+            "Book Arctic activities in advance"
+          ]
+        },
+        {
+          "day": 10,
+          "title": "Return & Reflection",
+          "attractions": [
+            "Flight back to Oslo or direct to home country",
+            "Last-minute shopping [Norwegian crafts, wool]",
+            "Reflection on Norwegian nature [fjords, mountains, culture]",
+            "Planning return visit [to experience different season]",
+            "Norwegian memories [photographs and stories to share]"
+          ],
+          "cost": "500-850 NOK",
+          "tips": [
+            "Leave room in luggage for Norwegian sweaters and items",
+            "Best souvenir: memories of stunning fjords and mountains"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sweden-3",
+      "country": "Sweden",
+      "duration": 3,
+      "title": "Stockholm Island Escape",
+      "emoji": "🇸🇪",
+      "description": "Venice of the North, archipelago islands, and Nordic design",
+      "badge": "Quick Getaway",
+      "colorClass": "t1",
+      "currency": "SEK",
+      "days": [
+        {
+          "day": 1,
+          "title": "Stockholm City Tour",
+          "attractions": [
+            "Gamla Stan [Old Town with cobblestone streets and medieval buildings]",
+            "Royal Palace [official residence of Swedish monarch]",
+            "Storkyrkan Cathedral [historic cathedral in Old Town]",
+            "Vasa Museum [preserved 17th-century warship]",
+            "Djurgården Island [green space with museums and parks]"
+          ],
+          "cost": "500-800 SEK",
+          "tips": [
+            "Stockholm Pass offers unlimited transport and museum entries",
+            "Gamla Stan very touristy; visit early morning for fewer crowds"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Museums & Modern Stockholm",
+          "attractions": [
+            "Vasa Museum [most visited museum with intact Viking ship]",
+            "Skansen [open-air museum with Swedish buildings and animals]",
+            "ABBA Museum [Scandinavian pop group memorabilia]",
+            "City Hall [architecture with tower views]",
+            "Modern Museum [contemporary Scandinavian art]"
+          ],
+          "cost": "600-950 SEK",
+          "tips": [
+            "Vasa Museum book online for skip-the-line",
+            "Skansen large; allow 3-4 hours for full visit"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Stockholm Archipelago",
+          "attractions": [
+            "Stockholm Archipelago [30,000 islands and skerries]",
+            "Island boat tour [scenic water tour through islands]",
+            "Vaxholm Island [historic fortress and island village]",
+            "Grinda Island [car-free island with swimming]",
+            "Sunset viewing [Swedish summer light in evening]"
+          ],
+          "cost": "550-850 SEK",
+          "tips": [
+            "Ferries run frequently between islands",
+            "Best visited June-August for warmest weather"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sweden-5",
+      "country": "Sweden",
+      "duration": 5,
+      "title": "Sweden North & South",
+      "emoji": "🇸🇪",
+      "description": "Stockholm, Gothenburg, Swedish Lapland, and design",
+      "badge": "Best Value",
+      "colorClass": "t2",
+      "currency": "SEK",
+      "days": [
+        {
+          "day": 1,
+          "title": "Stockholm Introduction",
+          "attractions": [
+            "Gamla Stan [medieval Old Town]",
+            "Royal Palace [royal residence]",
+            "Vasa Museum [preserved warship]",
+            "Djurgården Island [museums and parks]",
+            "City Hall [tower with panoramic views]"
+          ],
+          "cost": "500-800 SEK",
+          "tips": [
+            "Get Stockholm Pass for unlimited transport and museums",
+            "City central and walkable"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Stockholm Museums & Archipelago",
+          "attractions": [
+            "Skansen Museum [open-air Swedish heritage]",
+            "ABBA Museum [pop music memorabilia]",
+            "Modern Art Museum [contemporary Scandinavian]",
+            "Archipelago boat tour [island-hopping excursion]",
+            "Island swimming [local beach culture]"
+          ],
+          "cost": "600-950 SEK",
+          "tips": [
+            "Spend afternoon on archipelago islands",
+            "Swimming popular in Swedish summer"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Travel to Gothenburg",
+          "attractions": [
+            "Train journey [Stockholm to Gothenburg 5 hours on scenic route]",
+            "Gothenburg Harbor [waterfront with restaurants]",
+            "Liseberg Theme Park [historic amusement park]",
+            "Canal district [Venice-like waterways and bridges]",
+            "Swedish coast [beach and seaside culture]"
+          ],
+          "cost": "550-900 SEK",
+          "tips": [
+            "Train journey scenic; sit on right for best views",
+            "Gothenburg more relaxed than Stockholm"
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Gothenburg Exploration",
+          "attractions": [
+            "Gothenburg Museum [Swedish art and culture]",
+            "Cathedral [neoclassical architecture]",
+            "Haga District [bohemian neighborhood with cafes]",
+            "Food market [local Swedish cuisine]",
+            "Harborfront walk [scenic waterfront promenade]"
+          ],
+          "cost": "500-800 SEK",
+          "tips": [
+            "Haga best for quirky shops and traditional Swedish coffee",
+            "Food tours available through local guides"
+          ]
+        },
+        {
+          "day": 5,
+          "title": "West Coast or Return",
+          "attractions": [
+            "West Swedish Coast [rocky granite coast and fishing villages]",
+            "Marstrand Island [historic fortress and beach resort]",
+            "Bohuslan Archipelago [scenic coastal islands]",
+            "Fresh seafood [coastal restaurants with local catch]",
+            "Return to Stockholm [evening train]"
+          ],
+          "cost": "550-900 SEK",
+          "tips": [
+            "West Coast best in summer months",
+            "Book train tickets in advance for better prices"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sweden-10",
+      "country": "Sweden",
+      "duration": 10,
+      "title": "Complete Scandinavian Journey",
+      "emoji": "🇸🇪",
+      "description": "Stockholm, Gothenburg, Swedish Lapland, and Northern Lights",
+      "badge": "Full Experience",
+      "colorClass": "t3",
+      "currency": "SEK",
+      "days": [
+        {
+          "day": 1,
+          "title": "Stockholm Welcome",
+          "attractions": [
+            "Gamla Stan [Old Town medieval streets]",
+            "Royal Palace [official royal residence]",
+            "Storkyrkan Cathedral [historic cathedral]",
+            "City Hall [tower with views]",
+            "Harbor walk [waterfront promenade]"
+          ],
+          "cost": "500-800 SEK",
+          "tips": [
+            "Buy Stockholm Pass for 3 days",
+            "Stay near Gamla Stan or Norrmalm"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Stockholm Museums",
+          "attractions": [
+            "Vasa Museum [17th-century warship]",
+            "Skansen [open-air heritage museum]",
+            "ABBA Museum [pop music history]",
+            "Modern Art Museum [contemporary art]",
+            "Djurgården Island [green space and museums]"
+          ],
+          "cost": "600-950 SEK",
+          "tips": [
+            "Book Vasa online for skip-the-line",
+            "Allow 4-5 hours for Skansen"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Stockholm Archipelago",
+          "attractions": [
+            "Archipelago boat tour [30,000 islands]",
+            "Vaxholm Island [fortress and village]",
+            "Swimming [beach islands]",
+            "Sunset viewing [Swedish summer light]",
+            "Island lunch [seafood restaurants]"
+          ],
+          "cost": "550-850 SEK",
+          "tips": [
+            "Full day tour recommended",
+            "Bring swimsuit and towel"
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Travel to Gothenburg",
+          "attractions": [
+            "Train journey [scenic 5-hour route]",
+            "Gothenburg Harbor [waterfront]",
+            "Liseberg Park [amusement park]",
+            "Canal district [Venice-like waterways]",
+            "Harborfront restaurants [dinner views]"
+          ],
+          "cost": "550-900 SEK",
+          "tips": [
+            "Window seat on right side for scenic views",
+            "Evening arrival allows harbor exploration"
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Gothenburg City",
+          "attractions": [
+            "Museum of Art [Swedish and European art]",
+            "Cathedral [neoclassical architecture]",
+            "Haga District [bohemian village feeling]",
+            "Food market [Swedish specialties]",
+            "Waterfront walk [canal and harbor views]"
+          ],
+          "cost": "500-800 SEK",
+          "tips": [
+            "Haga good for cafes and local shopping",
+            "Food tours showcase Swedish cuisine"
+          ]
+        },
+        {
+          "day": 6,
+          "title": "West Coast Exploration",
+          "attractions": [
+            "Bohuslan Archipelago [granite islands and fishing villages]",
+            "Marstrand Island [fortress and beach]",
+            "Rocky coastline [scenic drives and hiking]",
+            "Fresh seafood [coastal restaurants]",
+            "Swimming and boating [water activities]"
+          ],
+          "cost": "600-950 SEK",
+          "tips": [
+            "Rent car for flexibility on coast",
+            "Summer best for swimming"
+          ]
+        },
+        {
+          "day": 7,
+          "title": "Swedish Lapland North",
+          "attractions": [
+            "Flight or train to Kiruna [Arctic town]",
+            "Arctic wilderness [tundra landscape]",
+            "Sami culture [indigenous reindeer herding]",
+            "Ice Hotel [unique hotel made of ice and snow]",
+            "Midnight Sun [summer light in Arctic]"
+          ],
+          "cost": "700-1100 SEK",
+          "tips": [
+            "Book Ice Hotel well in advance",
+            "Midnight Sun June-July; Northern Lights Sept-March"
+          ]
+        },
+        {
+          "day": 8,
+          "title": "Arctic Adventures",
+          "attractions": [
+            "Dog sledding [winter activity or summer training]",
+            "Reindeer herding [Sami traditional activity]",
+            "Snowmobile safari [Arctic snow exploration]",
+            "Aurora hunting [Northern Lights viewing]",
+            "Sauna tradition [Swedish spa culture]"
+          ],
+          "cost": "850-1250 SEK",
+          "tips": [
+            "Book Arctic activities in advance",
+            "Dress warmly even in summer at Arctic"
+          ]
+        },
+        {
+          "day": 9,
+          "title": "Lapland Nature",
+          "attractions": [
+            "Abisko National Park [mountain and lake scenery]",
+            "Kebnekaise [highest Swedish mountain]",
+            "National Park hiking [mountain trails]",
+            "Sami handicrafts [traditional duodji items]",
+            "Local restaurants [Arctic cuisine]"
+          ],
+          "cost": "600-950 SEK",
+          "tips": [
+            "Hiking possible June-September",
+            "Wildlife includes moose, reindeer, eagles"
+          ]
+        },
+        {
+          "day": 10,
+          "title": "Return & Reflection",
+          "attractions": [
+            "Return flight or train to Stockholm",
+            "Last-minute shopping [Swedish design, glassware]",
+            "Reflection on Swedish nature and culture",
+            "Planning next Scandinavian adventure",
+            "Fond memories of Viking heritage and modern design"
+          ],
+          "cost": "500-850 SEK",
+          "tips": [
+            "Swedish glassware makes excellent souvenirs",
+            "Book return transport well in advance"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "belgium-3",
+      "country": "Belgium",
+      "duration": 3,
+      "title": "Bruges & Brussels Charm",
+      "emoji": "🇧🇪",
+      "description": "Medieval towns, Belgian chocolate, beer, and waffles",
+      "badge": "Quick Getaway",
+      "colorClass": "t1",
+      "currency": "EUR",
+      "days": [
+        {
+          "day": 1,
+          "title": "Brussels Discovery",
+          "attractions": [
+            "Grand Place [UNESCO ornate square with guild halls]",
+            "Manneken Pis [famous bronze statue of boy]",
+            "Royal Palace [official royal residence]",
+            "Atomium [futuristic 1958 monument with sphere interior]",
+            "Belgian Parliament [historic government building]"
+          ],
+          "cost": "50-80 EUR",
+          "tips": [
+            "Grand Place most beautiful in evening with lighting",
+            "Manneken Pis small; many tourists gather for photos"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Bruges Medieval Town",
+          "attractions": [
+            "Belfry Tower [medieval bell tower with city views]",
+            "Canals [picturesque water channels through old town]",
+            "Market Square [central plaza with restaurants]",
+            "Bruges Cathedral [gothic church with art]",
+            "Chocolate shops [Belgian specialty treats]"
+          ],
+          "cost": "45-75 EUR",
+          "tips": [
+            "Train Brussels to Bruges 30 minutes",
+            "Early morning walks before tour groups arrive"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Food & Culture",
+          "attractions": [
+            "Belgian waffles [street vendors throughout both cities]",
+            "Belgian chocolate [artisanal shops and makers]",
+            "Belgian beer tasting [trappist and lambic varieties]",
+            "Local museums [art and history in both cities]",
+            "Street markets [local produce and crafts]"
+          ],
+          "cost": "40-70 EUR",
+          "tips": [
+            "Waffle stands everywhere; try both waffle and fruit versions",
+            "Belgian beer styles unique to monasteries"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "belgium-5",
+      "country": "Belgium",
+      "duration": 5,
+      "title": "Belgium's Best Cities",
+      "emoji": "🇧🇪",
+      "description": "Brussels, Bruges, Antwerp, chocolate, and medieval squares",
+      "badge": "Best Value",
+      "colorClass": "t2",
+      "currency": "EUR",
+      "days": [
+        {
+          "day": 1,
+          "title": "Brussels Welcome",
+          "attractions": [
+            "Grand Place [UNESCO square with historic guildhalls]",
+            "Manneken Pis [famous boy statue]",
+            "Royal Palace [official residence]",
+            "Atomium [futuristic 1958 structure]",
+            "European Quarter [EU headquarters buildings]"
+          ],
+          "cost": "50-80 EUR",
+          "tips": [
+            "Stay near Grand Place for central location",
+            "Brussels very walkable and compact"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Brussels Museums & Culture",
+          "attractions": [
+            "Belgian Art Museum [medieval to modern art]",
+            "Comic Book Museum [Belgium's art form]",
+            "Chocolate Museum [history and tasting]",
+            "Street Art [murals and installations]",
+            "Beer Museum [Belgian beer varieties and history]"
+          ],
+          "cost": "45-75 EUR",
+          "tips": [
+            "Comic Book Museum highlights Belgian creators",
+            "Chocolate Museum interactive and tasty"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Bruges Medieval Beauty",
+          "attractions": [
+            "Belfry Tower [bell tower with views]",
+            "Canals [Venice-like water channels]",
+            "Market Square [central plaza]",
+            "Bruges Cathedral [gothic church]",
+            "Chocolate shops [Belgian artisan chocolates]"
+          ],
+          "cost": "45-75 EUR",
+          "tips": [
+            "Bruges day trip from Brussels 30 minutes by train",
+            "Canal boat tours available"
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Antwerp Fashion & Diamonds",
+          "attractions": [
+            "Antwerp Cathedral [largest cathedral in Benelux]",
+            "Diamond Quarter [world diamond trading center]",
+            "Fashion District [designer boutiques and showrooms]",
+            "Old Town [historic streets and guild halls]",
+            "Rubenshuis [home of famous painter Rubens]"
+          ],
+          "cost": "50-80 EUR",
+          "tips": [
+            "Antwerp 45 minutes from Brussels by train",
+            "Rubenshuis museum worth visiting for art and architecture"
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Belgian Foods & Return",
+          "attractions": [
+            "Belgian waffles [street food specialty]",
+            "Belgian chocolate [master craftspeople]",
+            "Belgian beer [trappist monastery brews]",
+            "Local fries [Belgian-style with mayo]",
+            "Shopping [chocolate and beer to take home]"
+          ],
+          "cost": "40-70 EUR",
+          "tips": [
+            "Sample different beer styles in pubs",
+            "Pack chocolate for gifts or travel"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "belgium-10",
+      "country": "Belgium",
+      "duration": 10,
+      "title": "Complete Belgium Experience",
+      "emoji": "🇧🇪",
+      "description": "Brussels, Bruges, Antwerp, Flanders, and food immersion",
+      "badge": "Full Experience",
+      "colorClass": "t3",
+      "currency": "EUR",
+      "days": [
+        {
+          "day": 1,
+          "title": "Brussels Arrival",
+          "attractions": [
+            "Grand Place [UNESCO historic square]",
+            "Manneken Pis [famous statue]",
+            "Royal Palace [official residence]",
+            "Initial city walk [orientation and overview]",
+            "Evening orientation [dinner in old town]"
+          ],
+          "cost": "50-80 EUR",
+          "tips": [
+            "Arrive early to settle in",
+            "Late dinner typical in Brussels"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Brussels Museums",
+          "attractions": [
+            "Belgian Art Museum [medieval to contemporary]",
+            "Comic Book Museum [Belgian art form]",
+            "Chocolate Museum [history and tasting]",
+            "Atomium [futuristic monument]",
+            "Museum gardens [peaceful green spaces]"
+          ],
+          "cost": "45-75 EUR",
+          "tips": [
+            "Buy museum pass for multiple entries",
+            "Atomium has amazing city views"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Brussels Food Tour",
+          "attractions": [
+            "Beer Museum [tasting and history]",
+            "Chocolate shops [master chocolatiers]",
+            "Street food [waffles and fries]",
+            "Cheese markets [local dairy]",
+            "Cooking class [learn Belgian cuisine]"
+          ],
+          "cost": "60-100 EUR",
+          "tips": [
+            "Food tours informative and tasty",
+            "Belgian beer styles vary by region"
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Bruges Day Trip",
+          "attractions": [
+            "Belfry Tower [bell tower with views]",
+            "Canals [water channels through town]",
+            "Market Square [central plaza]",
+            "Cathedral [gothic architecture]",
+            "Chocolate making class [hands-on experience]"
+          ],
+          "cost": "50-80 EUR",
+          "tips": [
+            "Train from Brussels 30 minutes",
+            "Early morning before crowds"
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Bruges Neighborhoods",
+          "attractions": [
+            "Beguinage [UNESCO convent compound]",
+            "Minnewater Lake [romantic lake]",
+            "Local museums [art and history]",
+            "Canal cruises [water tours]",
+            "Evening beer in cozy pubs [local experience]"
+          ],
+          "cost": "45-75 EUR",
+          "tips": [
+            "Minnewater beautiful at sunset",
+            "Pubs serve local beers and cheese"
+          ]
+        },
+        {
+          "day": 6,
+          "title": "Antwerp Diamonds",
+          "attractions": [
+            "Antwerp Cathedral [largest cathedral in Benelux]",
+            "Diamond Quarter [world diamond center]",
+            "Diamond Museum [cutting and history]",
+            "Fashion district [Belgian designers]",
+            "Rubenshuis [painter's home and studio]"
+          ],
+          "cost": "50-80 EUR",
+          "tips": [
+            "Train Bruges to Antwerp via Brussels 2 hours",
+            "Diamond Quarter underground; shop windows on street"
+          ]
+        },
+        {
+          "day": 7,
+          "title": "Antwerp Art & Culture",
+          "attractions": [
+            "Royal Fine Arts Museum [Flemish art masterpieces]",
+            "Street art [murals and installations]",
+            "Fashion boutiques [Belgian designers]",
+            "Old town [historic guild halls]",
+            "River walks [Scheldt River promenade]"
+          ],
+          "cost": "45-75 EUR",
+          "tips": [
+            "Antwerp art scene very vibrant",
+            "Fashion shopping excellent quality"
+          ]
+        },
+        {
+          "day": 8,
+          "title": "Flanders Countryside",
+          "attractions": [
+            "Bruges surroundings [rural villages]",
+            "Tulip fields [seasonal flowers]",
+            "Cycling routes [flat terrain perfect for bikes]",
+            "Local farmstays [authentic rural experience]",
+            "Traditional breweries [trappist beer makers]"
+          ],
+          "cost": "50-85 EUR",
+          "tips": [
+            "Rent bikes for countryside exploration",
+            "Spring best for tulip fields"
+          ]
+        },
+        {
+          "day": 9,
+          "title": "Lesser-Known Towns",
+          "attractions": [
+            "Ghent [university town with canals]",
+            "Tournai [cathedral city]",
+            "Mechelen [historic town with carillon]",
+            "Ostend [beach resort on coast]",
+            "Local markets [fresh produce and crafts]"
+          ],
+          "cost": "45-75 EUR",
+          "tips": [
+            "Ghent good alternative to Bruges without crowds",
+            "Ostend offers beach break from cities"
+          ]
+        },
+        {
+          "day": 10,
+          "title": "Final Belgian Experiences",
+          "attractions": [
+            "Return to Brussels [via train]",
+            "Last chocolate purchases [gifts]",
+            "Final beer tasting [farewell pints]",
+            "Belgian waffles [last taste]",
+            "Reflection on Flemish culture [art and heritage]"
+          ],
+          "cost": "40-70 EUR",
+          "tips": [
+            "Pack souvenirs carefully",
+            "Belgium best in spring or fall"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "romania-3",
+      "country": "Romania",
+      "duration": 3,
+      "title": "Transylvania Mystery Tour",
+      "emoji": "🇷🇴",
+      "description": "Dracula's castle, medieval towns, and Carpathian mountains",
+      "badge": "Quick Getaway",
+      "colorClass": "t1",
+      "currency": "RON",
+      "days": [
+        {
+          "day": 1,
+          "title": "Bucharest Capital",
+          "attractions": [
+            "Palace of Parliament [world's heaviest building]",
+            "Old Town [historic streets and restaurants]",
+            "Revolution Square [historical importance]",
+            "Herastrau Park [green space with lake]",
+            "Romanian National Museum [art and history]"
+          ],
+          "cost": "400-650 RON",
+          "tips": [
+            "Bucharest best explored on foot",
+            "Palace of Parliament tour requires advance booking"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Dracula's Castle Tour",
+          "attractions": [
+            "Bran Castle [famous castle of Dracula legend]",
+            "Medieval fortified villages [Saxon towns]",
+            "Carpathian mountains [dramatic mountain scenery]",
+            "Traditional cuisine [Romanian specialties]",
+            "Local villages [authentic rural life]"
+          ],
+          "cost": "450-750 RON",
+          "tips": [
+            "Bran Castle 140km from Bucharest; day trip possible",
+            "Book tour or rent car for flexibility"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Brașov & Transylvania",
+          "attractions": [
+            "Brașov [mountain town with Gothic church]",
+            "Black Church [largest church in southeast Europe]",
+            "Poiana Brașov [ski resort and mountain views]",
+            "Carpathian hiking [mountain trails]",
+            "Local crafts [handmade goods and textiles]"
+          ],
+          "cost": "400-650 RON",
+          "tips": [
+            "Brașov 2.5 hours from Bucharest by train",
+            "Mountain hiking best June-September"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "romania-5",
+      "country": "Romania",
+      "duration": 5,
+      "title": "Transylvania & Mountain Quest",
+      "emoji": "🇷🇴",
+      "description": "Dracula, medieval towns, Carpathians, and vibrant Bucharest",
+      "badge": "Best Value",
+      "colorClass": "t2",
+      "currency": "RON",
+      "days": [
+        {
+          "day": 1,
+          "title": "Bucharest Arrival",
+          "attractions": [
+            "Palace of Parliament [world's heaviest building]",
+            "Old Town [historic quarter]",
+            "Revolution Square [historical site]",
+            "National Museum [Romanian art]",
+            "Evening in Old Town [dinner and nightlife]"
+          ],
+          "cost": "400-650 RON",
+          "tips": [
+            "Book Palace tour in advance",
+            "Old Town walkable and pedestrian friendly"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Bran Castle Excursion",
+          "attractions": [
+            "Bran Castle [Dracula legend castle]",
+            "Medieval villages [Saxon architecture]",
+            "Carpathian scenery [mountain views]",
+            "Traditional Romanian food [local restaurants]",
+            "Craftspeople [local artisans]"
+          ],
+          "cost": "450-750 RON",
+          "tips": [
+            "Day tour from Bucharest available",
+            "Book castle tour as crowds can be large"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Brașov Mountain Town",
+          "attractions": [
+            "Black Church [largest church in region]",
+            "Town Square [central plaza with restaurants]",
+            "Poiana Brașov [mountain resort with views]",
+            "Mount Tampa [hiking with city views]",
+            "Traditional architecture [Saxon houses]"
+          ],
+          "cost": "400-650 RON",
+          "tips": [
+            "Train from Bucharest 2.5 hours",
+            "Town very walkable and scenic"
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Carpathian Mountains Hike",
+          "attractions": [
+            "Carpathian mountain trails [hiking and nature]",
+            "Mountain lodges [rustic accommodation]",
+            "Wildlife [bears, wolves, lynx in wild]",
+            "Mountain villages [authentic rural communities]",
+            "Stunning vistas [panoramic mountain views]"
+          ],
+          "cost": "500-800 RON",
+          "tips": [
+            "Best hiking June-September",
+            "Guide recommended for wildlife areas"
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Return & Shopping",
+          "attractions": [
+            "Brașov last-minute exploration [shops and cafes]",
+            "Local crafts [pottery and textiles]",
+            "Traditional items [souvenirs]",
+            "Return to Bucharest [evening train]",
+            "Reflection on Romanian hospitality [warmth of people]"
+          ],
+          "cost": "400-650 RON",
+          "tips": [
+            "Book return train in advance",
+            "Handcrafted items make excellent gifts"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "romania-10",
+      "country": "Romania",
+      "duration": 10,
+      "title": "Complete Romanian Explorer",
+      "emoji": "🇷🇴",
+      "description": "Bucharest, Transylvania, Carpathians, and Black Sea coast",
+      "badge": "Full Experience",
+      "colorClass": "t3",
+      "currency": "RON",
+      "days": [
+        {
+          "day": 1,
+          "title": "Bucharest Welcome",
+          "attractions": [
+            "Palace of Parliament [world's largest building]",
+            "Old Town [historic medieval quarter]",
+            "Revolution Square [ 1989 uprising site]",
+            "National Museum [art collections]",
+            "Evening orientation [local restaurants]"
+          ],
+          "cost": "400-650 RON",
+          "tips": [
+            "Stay in Old Town for walkability",
+            "Early booking for Palace tour"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Bucharest Culture",
+          "attractions": [
+            "Romanian National Museum [masterpieces]",
+            "Village Museum [open-air ethnographic]",
+            "Herastrau Park [peaceful green space]",
+            "Art galleries [contemporary Romanian]",
+            "Traditional folk shows [music and dance]"
+          ],
+          "cost": "450-750 RON",
+          "tips": [
+            "Folk shows evenings; book in advance",
+            "Museum pass available"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Bran Castle & Villages",
+          "attractions": [
+            "Bran Castle [Dracula legend]",
+            "Rasnov Fortress [medieval stronghold]",
+            "Saxon villages [traditional architecture]",
+            "Carpathian foothills [mountain scenery]",
+            "Country inns [authentic dining]"
+          ],
+          "cost": "500-800 RON",
+          "tips": [
+            "Full day tour or self-drive",
+            "Multiple castles in area"
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Brașov Mountain Town",
+          "attractions": [
+            "Black Church [largest church in region]",
+            "Town Square [central plaza]",
+            "Mount Tampa [hiking with views]",
+            "Poiana Brașov [mountain resort]",
+            "Local architecture [Saxon buildings]"
+          ],
+          "cost": "400-650 RON",
+          "tips": [
+            "Base for mountain explorations",
+            "Excellent local restaurants"
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Carpathian Hiking Expedition",
+          "attractions": [
+            "Mountain trails [multi-hour hikes]",
+            "Alpine meadows [stunning meadow landscapes]",
+            "Mountain huts [rustic lodges]",
+            "Wildlife spotting [bears, wolves, eagles]",
+            "Night skies [less light pollution]"
+          ],
+          "cost": "550-850 RON",
+          "tips": [
+            "Hire local guide for wildlife",
+            "June-September best season"
+          ]
+        },
+        {
+          "day": 6,
+          "title": "Sibiu Medieval Town",
+          "attractions": [
+            "Sibiu Old Town [UNESCO medieval center]",
+            "Brukenthal Palace [art museum]",
+            "Town walls [fortified medieval architecture]",
+            "Large Square [central plaza]",
+            "Evangelical Church [Gothic cathedral]"
+          ],
+          "cost": "400-650 RON",
+          "tips": [
+            "Train from Brașov 3 hours",
+            "Sibiu less touristy than Brașov"
+          ]
+        },
+        {
+          "day": 7,
+          "title": "Transylvania Village Life",
+          "attractions": [
+            "Rural villages [traditional farmhouses]",
+            "Farmstays [authentic experience]",
+            "Traditional crafts [pottery and weaving]",
+            "Local cheese [dairy products]",
+            "Village festivals [seasonal celebrations if timed right]"
+          ],
+          "cost": "450-700 RON",
+          "tips": [
+            "Immersion in traditional Romanian life",
+            "Rent car for countryside exploration"
+          ]
+        },
+        {
+          "day": 8,
+          "title": "Travel to Black Sea Coast",
+          "attractions": [
+            "Constanța [seaside resort city]",
+            "Black Sea beaches [sandy shores]",
+            "Casino [historic building on beachfront]",
+            "Aquarium [marine life exhibits]",
+            "Beach bars [summer atmosphere]"
+          ],
+          "cost": "500-800 RON",
+          "tips": [
+            "Long drive or flight to Constanța",
+            "Sea warm June-September"
+          ]
+        },
+        {
+          "day": 9,
+          "title": "Black Sea Relaxation",
+          "attractions": [
+            "Beach swimming [Mediterranean-style Black Sea]",
+            "Seaside restaurants [fresh seafood]",
+            "Mangalia [resort south of Constanța]",
+            "Water sports [jet skiing, parasailing]",
+            "Evening sunset [romantic beach views]"
+          ],
+          "cost": "450-750 RON",
+          "tips": [
+            "Beach season May-September",
+            "All-inclusive resorts available"
+          ]
+        },
+        {
+          "day": 10,
+          "title": "Return Home",
+          "attractions": [
+            "Return flight or overnight train to Bucharest",
+            "Final Romanian experiences [goodbye dinner]",
+            "Souvenir shopping [pottery, textiles]",
+            "Reflection on Carpathians [mountain beauty]",
+            "Plans for return visit [seasons to explore]"
+          ],
+          "cost": "400-650 RON",
+          "tips": [
+            "Book transport in advance",
+            "Romania excellent value for money"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bulgaria-3",
+      "country": "Bulgaria",
+      "duration": 3,
+      "title": "Sofia & Mountain Escape",
+      "emoji": "🇧🇬",
+      "description": "Bulgarian capital, ancient history, and affordable mountain towns",
+      "badge": "Quick Getaway",
+      "colorClass": "t1",
+      "currency": "BGN",
+      "days": [
+        {
+          "day": 1,
+          "title": "Sofia City Tour",
+          "attractions": [
+            "Alexander Nevsky Cathedral [golden-domed church]",
+            "Rila Monastery [UNESCO mountain monastery]",
+            "Boyana Church [medieval frescoes]",
+            "National Museum [Bulgarian history and artifacts]",
+            "Central Sofia market [street food and local goods]"
+          ],
+          "cost": "300-500 BGN",
+          "tips": [
+            "Sofia very affordable European capital",
+            "Day trip to Rila Monastery popular from city"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Mountain Monasteries",
+          "attractions": [
+            "Rila Monastery [UNESCO site with golden domes]",
+            "Monastery museum [religious artifacts]",
+            "Mountain hiking [trails around monastery]",
+            "Village of Rila [authentic mountain village]",
+            "Local restaurants [hearty Bulgarian food]"
+          ],
+          "cost": "350-550 BGN",
+          "tips": [
+            "Day tour from Sofia available",
+            "Early arrival before crowds"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Skiing or Mountain Resort",
+          "attractions": [
+            "Bansko ski resort [skiing in winter]",
+            "Ski lift rides [mountain views in summer]",
+            "Mountain hiking [alpine trails]",
+            "National park [Pirin Mountains]",
+            "Village culture [Bulgarian traditions]"
+          ],
+          "cost": "350-600 BGN",
+          "tips": [
+            "Skiing December-April; hiking June-September",
+            "Budget-friendly mountain resort"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bulgaria-5",
+      "country": "Bulgaria",
+      "duration": 5,
+      "title": "Bulgaria's Mountain & Beach",
+      "emoji": "🇧🇬",
+      "description": "Sofia, Black Sea coast, mountain monasteries, and affordable prices",
+      "badge": "Best Value",
+      "colorClass": "t2",
+      "currency": "BGN",
+      "days": [
+        {
+          "day": 1,
+          "title": "Sofia Arrival",
+          "attractions": [
+            "Alexander Nevsky Cathedral [golden-domed landmark]",
+            "Boyana Church [medieval frescoes]",
+            "National Museum [Bulgarian collections]",
+            "Central market [street food]",
+            "Local café culture [coffee and pastries]"
+          ],
+          "cost": "300-500 BGN",
+          "tips": [
+            "Sofia very budget-friendly",
+            "Walk city center; it's compact"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Rila Monastery",
+          "attractions": [
+            "Rila Monastery [UNESCO monastery with golden domes]",
+            "Monastery museum [religious artifacts]",
+            "Mountain walks [trails and scenery]",
+            "Mountain village [authentic Bulgaria]",
+            "Traditional cuisine [local restaurant]"
+          ],
+          "cost": "350-550 BGN",
+          "tips": [
+            "Day trip from Sofia",
+            "Early morning for best light"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Travel to Black Sea",
+          "attractions": [
+            "Varna [seaside city on coast]",
+            "Golden Sands [popular beach resort]",
+            "Sea Garden [seaside park]",
+            "Roman bath ruins [ancient history]",
+            "Beach bars [summer nightlife]"
+          ],
+          "cost": "400-650 BGN",
+          "tips": [
+            "Train Sofia to Varna 6-8 hours",
+            "Overnight bus also available"
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Black Sea Beach Days",
+          "attractions": [
+            "Golden Sands Beach [sandy beach with water sports]",
+            "Sunny Beach [alternative beach resort]",
+            "Beach clubs [summer atmosphere]",
+            "Water sports [jet skiing, parasailing, surfing]",
+            "Fresh seafood [beachfront restaurants]"
+          ],
+          "cost": "350-600 BGN",
+          "tips": [
+            "Beach season May-September",
+            "Budget accommodation available"
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Return or Explore More",
+          "attractions": [
+            "Varna city exploration [museums and churches]",
+            "Nesebar [old town UNESCO site with ancient ruins]",
+            "Burgas [less touristy beach town south]",
+            "Archaeological sites [ancient Thracian settlements]",
+            "Return to Sofia [evening train]"
+          ],
+          "cost": "350-550 BGN",
+          "tips": [
+            "Nesebar good day trip from Varna",
+            "Book return transport ahead"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bulgaria-10",
+      "country": "Bulgaria",
+      "duration": 10,
+      "title": "Complete Bulgarian Adventure",
+      "emoji": "🇧🇬",
+      "description": "Sofia, Rila, Black Sea, Balkan trails, and Mediterranean vibes",
+      "badge": "Full Experience",
+      "colorClass": "t3",
+      "currency": "BGN",
+      "days": [
+        {
+          "day": 1,
+          "title": "Sofia Welcome",
+          "attractions": [
+            "Alexander Nevsky Cathedral [golden-domed church]",
+            "Boyana Church [medieval frescoes]",
+            "National Museum [Bulgarian history]",
+            "Street food tour [local cuisine introduction]",
+            "Evening in city center [orientation]"
+          ],
+          "cost": "300-500 BGN",
+          "tips": [
+            "Sofia most affordable European capital",
+            "Stay central for walkability"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Sofia Museums",
+          "attractions": [
+            "Alexander Nevsky Crypt [mosaic icons]",
+            "National Art Gallery [Bulgarian masters]",
+            "Ethnographic Museum [traditional culture]",
+            "Ancient Forum Ruins [Roman city remains]",
+            "Café culture [local coffee and pastries]"
+          ],
+          "cost": "350-550 BGN",
+          "tips": [
+            "Museum prices very low",
+            "Multiple museums walking distance"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Rila Monastery Pilgrimage",
+          "attractions": [
+            "Rila Monastery [UNESCO golden-domed complex]",
+            "Religious icon museum [artifacts and art]",
+            "Mountain walks [trails around monastery]",
+            "Mountain village [Rila village]",
+            "Traditional restaurant [Bulgaria cuisine]"
+          ],
+          "cost": "400-650 BGN",
+          "tips": [
+            "Day tour or self-drive from Sofia",
+            "Bring respectful clothing"
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Mountain Hiking",
+          "attractions": [
+            "Pirin Mountains [national park with trails]",
+            "Bansko [mountain resort town]",
+            "Alpine lakes [mountain water scenery]",
+            "Mountain meadows [wildflower views]",
+            "Wildlife [eagles and mountain goats]"
+          ],
+          "cost": "450-750 BGN",
+          "tips": [
+            "Rent car for mountain exploration",
+            "Hiking best June-September"
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Rhodope Mountains",
+          "attractions": [
+            "Smolyan [mountain town with museums]",
+            "Eagle Rocks [scenic mountain formations]",
+            "Mountain villages [traditional architecture]",
+            "Pamporcovo Ski Resort [mountain views]",
+            "Cave systems [speleology and natural wonders]"
+          ],
+          "cost": "400-650 BGN",
+          "tips": [
+            "Less touristy than western mountains",
+            "Excellent hiking region"
+          ]
+        },
+        {
+          "day": 6,
+          "title": "Travel to Varna",
+          "attractions": [
+            "Varna [seaside city on Black Sea]",
+            "Sea Garden [waterfront park]",
+            "Roman bath museum [ancient history]",
+            "Archaeological Museum [ancient artifacts]",
+            "Evening beach walk [sunset views]"
+          ],
+          "cost": "400-650 BGN",
+          "tips": [
+            "Train Sofia to Varna 6-8 hours scenic",
+            "Overnight bus also available"
+          ]
+        },
+        {
+          "day": 7,
+          "title": "Black Sea Beach Zone",
+          "attractions": [
+            "Golden Sands Beach [popular sandy beach]",
+            "Water sports [jet skiing, surfing]",
+            "Beach clubs [summer nightlife]",
+            "Seafood restaurants [fresh daily catch]",
+            "Swimming [warm sea June-September]"
+          ],
+          "cost": "350-600 BGN",
+          "tips": [
+            "Beach season May-September",
+            "Very affordable compared to western Europe"
+          ]
+        },
+        {
+          "day": 8,
+          "title": "Nesebar Ancient Town",
+          "attractions": [
+            "Nesebar Old Town [UNESCO site with ruins]",
+            "Ancient churches [Byzantine architecture]",
+            "Archaeological remains [Greek and Roman]",
+            "Fishing harbor [colorful wooden houses]",
+            "Sunset views [evening beach walks]"
+          ],
+          "cost": "350-550 BGN",
+          "tips": [
+            "30km south of Varna",
+            "Many restaurants with sea views"
+          ]
+        },
+        {
+          "day": 9,
+          "title": "Burgas & Alternative Beach",
+          "attractions": [
+            "Burgas [less touristy port city]",
+            "Sandy beach [quieter than Golden Sands]",
+            "Wetland reserve [bird watching]",
+            "Local fish restaurants [authentic dining]",
+            "Cheaper accommodation [budget option]"
+          ],
+          "cost": "300-500 BGN",
+          "tips": [
+            "Burgas 30km south of Nesebar",
+            "Good base for exploring coast"
+          ]
+        },
+        {
+          "day": 10,
+          "title": "Return & Reflection",
+          "attractions": [
+            "Last beach morning [swim and relax]",
+            "Souvenir shopping [rose oil, crafts]",
+            "Return to Sofia [flight or overnight train]",
+            "Bulgarian hospitality reflection [warm people]",
+            "Budget travel victory [incredible value]"
+          ],
+          "cost": "350-550 BGN",
+          "tips": [
+            "Bulgaria excellent value destination",
+            "Rose oil makes perfect souvenir"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "turkey-3",
+      "country": "Turkey",
+      "duration": 3,
+      "title": "Istanbul Quick Escape",
+      "emoji": "🇹🇷",
+      "description": "Blue Mosque, Hagia Sophia, and Bosphorus magic",
+      "badge": "Quick Getaway",
+      "colorClass": "t1",
+      "currency": "TRY",
+      "days": [
+        {
+          "day": 1,
+          "title": "Istanbul Old City",
+          "attractions": [
+            "Hagia Sophia [6th-century Byzantine masterpiece]",
+            "Blue Mosque [Ottoman mosque with blue tiles]",
+            "Topkapi Palace [Ottoman palace with jewels]",
+            "Sultanahmet Square [historic center]",
+            "Bosphorus sunset cruise [water tour with views]"
+          ],
+          "cost": "800-1200 TRY",
+          "tips": [
+            "Book Bosphorus cruise for sunset",
+            "Hagia Sophia book tickets online"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Bazaars & Modern Istanbul",
+          "attractions": [
+            "Grand Bazaar [covered market with 4000+ shops]",
+            "Spice Bazaar [fragrant spice market]",
+            "Galata Tower [medieval tower with city views]",
+            "Beyoglu District [modern shops and nightlife]",
+            "Whirling Dervish ceremony [spiritual Islamic dance]"
+          ],
+          "cost": "700-1100 TRY",
+          "tips": [
+            "Haggle in bazaar; starting prices high",
+            "Whirling Dervish tickets online in advance"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Turkish Culture",
+          "attractions": [
+            "Turkish hammam [traditional bath experience]",
+            "Turkish cuisine class [cooking lesson]",
+            "Local tea houses [authentic café culture]",
+            "Shopping for souvenirs [carpets, ceramics]",
+            "Farewell dinner [Turkish food experience]"
+          ],
+          "cost": "600-1000 TRY",
+          "tips": [
+            "Hammam genuinely relaxing experience",
+            "Turkish tea and coffee ubiquitous and cheap"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "turkey-5",
+      "country": "Turkey",
+      "duration": 5,
+      "title": "Turkey's Wonders",
+      "emoji": "🇹🇷",
+      "description": "Istanbul, Cappadocia's fairy chimneys, and Turkish Riviera",
+      "badge": "Best Value",
+      "colorClass": "t2",
+      "currency": "TRY",
+      "days": [
+        {
+          "day": 1,
+          "title": "Istanbul Arrival",
+          "attractions": [
+            "Hagia Sophia [Byzantine church-mosque-museum]",
+            "Blue Mosque [Ottoman mosque]",
+            "Topkapi Palace [sultan's residence]",
+            "Sultanahmet Square [center of old city]",
+            "Evening Bosphorus cruise [water tour]"
+          ],
+          "cost": "800-1200 TRY",
+          "tips": [
+            "Book popular sites online in advance",
+            "Cruise best at sunset"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Istanbul Markets & Culture",
+          "attractions": [
+            "Grand Bazaar [largest covered market]",
+            "Spice Bazaar [aromatic market]",
+            "Galata Tower [tower with views]",
+            "Whirling Dervish ceremony [Islamic spiritual dance]",
+            "Turkish hammam [traditional bath]"
+          ],
+          "cost": "700-1100 TRY",
+          "tips": [
+            "Bargain in bazaar but respectfully",
+            "Dervish ceremony tickets 800-1200 TRY"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Flight to Cappadocia",
+          "attractions": [
+            "Cappadocia fairy chimneys [unique rock formations]",
+            "Cave hotels [rock-carved accommodation]",
+            "Hot air balloon ride [sunrise flight over landscape]",
+            "Underground cities [ancient carved cities]",
+            "Local village [authentic Cappadocian culture]"
+          ],
+          "cost": "900-1400 TRY",
+          "tips": [
+            "Hot air balloon 1000-1500 TRY; book in advance",
+            "Early morning flight for best views"
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Cappadocia Exploration",
+          "attractions": [
+            "Goreme Open Air Museum [rock-carved churches]",
+            "Zelve [abandoned cave village]",
+            "Valley hiking [scenic trails among rocks]",
+            "Pottery workshop [Turkish ceramics class]",
+            "Cave restaurant [dinner in cave]"
+          ],
+          "cost": "700-1100 TRY",
+          "tips": [
+            "Museum very crowded; arrive early",
+            "Hiking good in cooler morning"
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Return to Istanbul",
+          "attractions": [
+            "Domestic flight back to Istanbul [1 hour]",
+            "Turkish cuisine [final feast]",
+            "Souvenir shopping [carpets, evil eye amulets]",
+            "Farewell café [Turkish coffee and desserts]",
+            "Reflection on Turkey [Eastern meets Western]"
+          ],
+          "cost": "600-1000 TRY",
+          "tips": [
+            "Carpets best souvenirs; get certificates",
+            "Turkish coffee strong; small cups"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "turkey-10",
+      "country": "Turkey",
+      "duration": 10,
+      "title": "Complete Turkish Journey",
+      "emoji": "🇹🇷",
+      "description": "Istanbul, Cappadocia, Aegean coast, and Mediterranean beaches",
+      "badge": "Full Experience",
+      "colorClass": "t3",
+      "currency": "TRY",
+      "days": [
+        {
+          "day": 1,
+          "title": "Istanbul Old City",
+          "attractions": [
+            "Hagia Sophia [Byzantine architectural masterpiece]",
+            "Blue Mosque [Ottoman mosque with blue İznik tiles]",
+            "Topkapi Palace [Ottoman palace with treasures]",
+            "Sultanahmet Square [historic center]",
+            "Golden Horn walk [waterfront promenade]"
+          ],
+          "cost": "800-1200 TRY",
+          "tips": [
+            "Book major sites online for skip-the-line",
+            "Early morning visits best for light"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Istanbul Markets & Culture",
+          "attractions": [
+            "Grand Bazaar [4000+ shops covering acres]",
+            "Spice Bazaar [fragrant spice market]",
+            "Galata Tower [medieval tower climb]",
+            "Beyoglu [modern district with nightlife]",
+            "Turkish hammam [relaxing bath experience]"
+          ],
+          "cost": "700-1100 TRY",
+          "tips": [
+            "Bargain in bazaar; starting prices inflated",
+            "Hammam 300-500 TRY"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Bosphorus & Culture",
+          "attractions": [
+            "Bosphorus cruise [water tour through straits]",
+            "Whirling Dervish ceremony [Sufi spiritual performance]",
+            "Turkish cooking class [learn authentic recipes]",
+            "Café culture [tea houses and coffee]",
+            "Evening dinner [Turkish cuisine feast]"
+          ],
+          "cost": "800-1300 TRY",
+          "tips": [
+            "Dervish ceremony book in advance",
+            "Cooking class fun and delicious"
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Flight to Cappadocia",
+          "attractions": [
+            "Cappadocia fairy chimneys [volcanic rock formations]",
+            "Hot air balloon ride [sunrise flight]",
+            "Cave hotel [rock-carved accommodation]",
+            "Underground city [ancient carved complex]",
+            "Village dinner [authentic Cappadocia food]"
+          ],
+          "cost": "900-1400 TRY",
+          "tips": [
+            "Book hot air balloon 1200-1500 TRY in advance",
+            "Early morning flights most spectacular"
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Cappadocia Deep Dive",
+          "attractions": [
+            "Goreme Museum [rock-carved Byzantine churches]",
+            "Zelve Ghost Village [abandoned cave settlement]",
+            "Love Valley [phallic rock formations hiking]",
+            "Pottery workshop [Turkish ceramics]",
+            "Sunset at viewpoint [panoramic rock views]"
+          ],
+          "cost": "700-1100 TRY",
+          "tips": [
+            "Museum very crowded; go early morning",
+            "Valley hiking beautiful and unique"
+          ]
+        },
+        {
+          "day": 6,
+          "title": "Aegean Izmir Region",
+          "attractions": [
+            "Flight to Izmir [Aegean coastal city]",
+            "Alsancak District [seafront promenade]",
+            "Konak Pier [waterfront landmark]",
+            "Ancient Ephesus [nearby UNESCO site]",
+            "Turkish Mediterranean culture [coastal lifestyle]"
+          ],
+          "cost": "700-1100 TRY",
+          "tips": [
+            "Ephesus day trip from Izmir 2 hours",
+            "Aegean coast relaxed compared to Istanbul"
+          ]
+        },
+        {
+          "day": 7,
+          "title": "Ephesus & Ancient History",
+          "attractions": [
+            "Ephesus [ancient Roman city with marble streets]",
+            "Library of Celsus [ornate facade building]",
+            "Great Theatre [ancient amphitheater]",
+            "House of Virgin Mary [pilgrimage site]",
+            "Museum [archaeological artifacts]"
+          ],
+          "cost": "600-1000 TRY",
+          "tips": [
+            "Early morning before crowds and heat",
+            "Wear comfortable walking shoes"
+          ]
+        },
+        {
+          "day": 8,
+          "title": "Aegean Beaches",
+          "attractions": [
+            "Kusadasi Beach Town [seaside resort]",
+            "Greek Island Ferry [day trip to Samos]",
+            "Beach swimming [warm Aegean Sea]",
+            "Seafood restaurant [fresh catch lunch]",
+            "Sunset beach walk [evening relaxation]"
+          ],
+          "cost": "650-1050 TRY",
+          "tips": [
+            "Ferry to Samos island 2 hours",
+            "Beaches crowded July-August; visit June or September"
+          ]
+        },
+        {
+          "day": 9,
+          "title": "Mediterranean Coast",
+          "attractions": [
+            "Antalya [Mediterranean beach resort]",
+            "Turkish Riviera [turquoise coast]",
+            "Beach clubs [summer atmosphere]",
+            "Water sports [parasailing, jet skiing]",
+            "Local fish restaurants [Mediterranean cuisine]"
+          ],
+          "cost": "700-1150 TRY",
+          "tips": [
+            "Flight or bus Izmir to Antalya",
+            "Mediterranean warmest June-September"
+          ]
+        },
+        {
+          "day": 10,
+          "title": "Return & Reflection",
+          "attractions": [
+            "Flight back to Istanbul or home country",
+            "Final Turkish breakfast [menemen and fresh bread]",
+            "Souvenir shopping [carpets, ceramics]",
+            "Reflection on Turkey [crossroads of cultures]",
+            "Planning return [exploring southern coast]"
+          ],
+          "cost": "600-1000 TRY",
+          "tips": [
+            "Carpets require certificates for export",
+            "Turkey excellent value for Indian travelers"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jordan-3",
+      "country": "Jordan",
+      "duration": 3,
+      "title": "Petra Wonder Tour",
+      "emoji": "🇯🇴",
+      "description": "Petra's rose-red city, Dead Sea, and desert landscapes",
+      "badge": "Quick Getaway",
+      "colorClass": "t1",
+      "currency": "JOD",
+      "days": [
+        {
+          "day": 1,
+          "title": "Amman Capital",
+          "attractions": [
+            "Amman Citadel [ancient ruins on hilltop]",
+            "Roman Theatre [ancient amphitheater]",
+            "Dead Sea views [lowest point on earth]",
+            "Balboa Street [restaurant and shop district]",
+            "Sunset city views [evening panorama]"
+          ],
+          "cost": "50-100 JOD",
+          "tips": [
+            "Amman cool and cosmopolitan Middle Eastern capital",
+            "Stay central for ease of transport"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Petra Ancient City",
+          "attractions": [
+            "Petra [rose-red carved city in cliffs]",
+            "Treasury [iconic carved facade]",
+            "Monastery [largest carved structure]",
+            "High Place of Sacrifice [summit views]",
+            "Hiking trails [scenic walks through canyon]"
+          ],
+          "cost": "80-150 JOD",
+          "tips": [
+            "Petra one of Seven Wonders of World",
+            "Wear comfortable hiking boots and hat"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Dead Sea Relaxation",
+          "attractions": [
+            "Dead Sea [lowest point on earth at -430m]",
+            "Floating in salt water [unique experience]",
+            "Mud therapy [natural healing minerals]",
+            "Dead Sea Resort [spa facilities]",
+            "Sunset over water [golden hour views]"
+          ],
+          "cost": "60-120 JOD",
+          "tips": [
+            "Dead Sea mineral-rich; skin feels rejuvenated",
+            "Cannot sink in salt water; floating natural"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jordan-5",
+      "country": "Jordan",
+      "duration": 5,
+      "title": "Jordan's Desert & History",
+      "emoji": "🇯🇴",
+      "description": "Petra, Dead Sea, Amman, Wadi Rum desert, and biblical sites",
+      "badge": "Best Value",
+      "colorClass": "t2",
+      "currency": "JOD",
+      "days": [
+        {
+          "day": 1,
+          "title": "Amman Arrival",
+          "attractions": [
+            "Amman Citadel [hilltop ruins]",
+            "Roman Theatre [ancient amphitheater]",
+            "Byzantine churches [religious monuments]",
+            "Balboa Street [modern dining]",
+            "Evening orientation [city views]"
+          ],
+          "cost": "50-100 JOD",
+          "tips": [
+            "Amman modern and safe capital",
+            "Taxi or private driver recommended"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Petra Ancient Wonder",
+          "attractions": [
+            "Petra [UNESCO rose-red carved city]",
+            "Treasury [most iconic structure]",
+            "Monastery [largest temple carving]",
+            "Canyon hikes [scenic trails]",
+            "Bedouin guides [local expertise]"
+          ],
+          "cost": "80-150 JOD",
+          "tips": [
+            "Petra must-see wonder; full day needed",
+            "Early arrival beats afternoon crowds"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Wadi Rum Desert",
+          "attractions": [
+            "Wadi Rum [desert landscape with rock formations]",
+            "4x4 desert safari [off-road adventure]",
+            "Camel riding [traditional desert transport]",
+            "Bedouin camp [nomadic hospitality]",
+            "Desert stargazing [night sky viewing]"
+          ],
+          "cost": "100-180 JOD",
+          "tips": [
+            "Wadi Rum most photogenic desert landscape",
+            "Overnight in camp recommended"
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Dead Sea Therapeutic",
+          "attractions": [
+            "Dead Sea [lowest point on earth]",
+            "Floating experience [buoyancy in salt water]",
+            "Mud therapy [mineral-rich mud treatments]",
+            "Hot springs [thermal water]",
+            "Resort amenities [spa and restaurants]"
+          ],
+          "cost": "60-120 JOD",
+          "tips": [
+            "Dead Sea minerals therapeutic for skin",
+            "Cannot drown; floating automatic"
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Return & Biblical Sites",
+          "attractions": [
+            "Mount Nebo [Moses viewpoint of Promised Land]",
+            "Madaba [mosaic city with ancient church]",
+            "Baptism site [biblical location on Jordan River]",
+            "Return to Amman [evening city]",
+            "Farewell dinner [Jordanian cuisine]"
+          ],
+          "cost": "70-120 JOD",
+          "tips": [
+            "Mount Nebo pilgrimage site",
+            "Madaba ancient mosaics impressive"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jordan-10",
+      "country": "Jordan",
+      "duration": 10,
+      "title": "Complete Jordan Exploration",
+      "emoji": "🇯🇴",
+      "description": "Petra, Wadi Rum, Dead Sea, Amman, biblical sites, and nature",
+      "badge": "Full Experience",
+      "colorClass": "t3",
+      "currency": "JOD",
+      "days": [
+        {
+          "day": 1,
+          "title": "Amman Arrival",
+          "attractions": [
+            "Citadel [ancient ruins]",
+            "Roman Theatre [amphitheater]",
+            "Churches and mosques [religious sites]",
+            "Museum [Jordanian history]",
+            "City orientation [layout understanding]"
+          ],
+          "cost": "50-100 JOD",
+          "tips": [
+            "Relax after travel",
+            "Explore downtown walking routes"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Amman Culture & History",
+          "attractions": [
+            "National Museum [comprehensive collections]",
+            "Jordan Museum [archaeology and history]",
+            "Roman Odeum [ancient theater remains]",
+            "Byzantine churches [religious relics]",
+            "Balboa dining [trendy restaurants]"
+          ],
+          "cost": "60-120 JOD",
+          "tips": [
+            "Museum day to understand Jordan",
+            "Multiple archaeological finds"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Petra Exploration",
+          "attractions": [
+            "Petra [rose-red city carved in cliffs]",
+            "Treasury [iconic Al Khazneh facade]",
+            "Monastery [largest carved temple]",
+            "Sacrifice altar [summit vistas]",
+            "Canyonhiking [scenic routes]"
+          ],
+          "cost": "80-150 JOD",
+          "tips": [
+            "Two full days in Petra recommended",
+            "Early morning hikes best"
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Petra Continuing",
+          "attractions": [
+            "Petra trails [additional hiking routes]",
+            "Royal tombs [multiple carved monuments]",
+            "Temple of Al Deir [highest temple]",
+            "Photography [sunset golden light]",
+            "Camel rides [traditional transport]"
+          ],
+          "cost": "80-150 JOD",
+          "tips": [
+            "Wear hiking boots and bring water",
+            "Guide enhances understanding"
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Wadi Rum Desert Adventures",
+          "attractions": [
+            "Wadi Rum [rock formations and sand]",
+            "4x4 safari [off-road adventure]",
+            "Lawrence of Arabia sites [filming locations]",
+            "Camel riding [desert transport]",
+            "Bedouin camp [nomadic experience]"
+          ],
+          "cost": "100-180 JOD",
+          "tips": [
+            "Sunset best in desert for photography",
+            "Overnight camp recommended"
+          ]
+        },
+        {
+          "day": 6,
+          "title": "Wadi Rum Continuation",
+          "attractions": [
+            "Desert sunrise [golden light on rocks]",
+            "More trails [less-visited wadi areas]",
+            "Traditional Bedouin meals [nomadic cuisine]",
+            "Stargazing [unpolluted night sky]",
+            "Camel trekking [longer journey]"
+          ],
+          "cost": "100-180 JOD",
+          "tips": [
+            "Night sky incredibly clear",
+            "Warm sleeping bag needed"
+          ]
+        },
+        {
+          "day": 7,
+          "title": "Dead Sea Thermal",
+          "attractions": [
+            "Dead Sea [lowest point earth -430m]",
+            "Floating experience [salt water buoyancy]",
+            "Mud therapy [mineral-rich mud]",
+            "Hot springs [thermal healing waters]",
+            "Spa resort [facilities and restaurants]"
+          ],
+          "cost": "60-120 JOD",
+          "tips": [
+            "Therapeutic minerals benefit skin",
+            "Cannot drown; naturally float"
+          ]
+        },
+        {
+          "day": 8,
+          "title": "Biblical Jordan",
+          "attractions": [
+            "Mount Nebo [Moses promised land view]",
+            "Madaba [mosaic city mosaics]",
+            "Baptism site [Jesus baptism location]",
+            "Machaerus [Herod's fortress]",
+            "Religious pilgrimage [spiritual journey]"
+          ],
+          "cost": "70-120 JOD",
+          "tips": [
+            "Important pilgrimage destinations",
+            "Madaba ancient Byzantine mosaics"
+          ]
+        },
+        {
+          "day": 9,
+          "title": "Nature & Adventure",
+          "attractions": [
+            "Dana Biosphere Reserve [nature hiking]",
+            "Ajloun Forest [green walking trails]",
+            "Jerash [Roman city ruins]",
+            "Umm Qais [viewpoint over valleys]",
+            "River Jordan [holy river]"
+          ],
+          "cost": "60-120 JOD",
+          "tips": [
+            "Spring best season for hiking",
+            "Green landscapes contrasting with desert"
+          ]
+        },
+        {
+          "day": 10,
+          "title": "Return & Reflection",
+          "attractions": [
+            "Return to Amman [final city day]",
+            "Last-minute shopping [souvenirs and crafts]",
+            "Reflection on Jordan [diverse landscapes]",
+            "Farewell dinner [Jordanian mezze feast]",
+            "Flight home [memories of Middle East]"
+          ],
+          "cost": "70-120 JOD",
+          "tips": [
+            "Jordan incredible value destination",
+            "Hospitality warm and welcoming"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oman-3",
+      "country": "Oman",
+      "duration": 3,
+      "title": "Muscat Beach Escape",
+      "emoji": "🇴🇲",
+      "description": "Coastal charm, turquoise beaches, and Arabian hospitality",
+      "badge": "Quick Getaway",
+      "colorClass": "t1",
+      "currency": "OMR",
+      "days": [
+        {
+          "day": 1,
+          "title": "Muscat Corniche",
+          "attractions": [
+            "Muscat Corniche [waterfront promenade]",
+            "Sultan Qaboos Grand Mosque [architectural marvel]",
+            "Royal Opera House [modern venue]",
+            "Al Alam Palace [sultan's residence]",
+            "Sunset views [golden hour from harbor]"
+          ],
+          "cost": "80-150 OMR",
+          "tips": [
+            "Muscat very clean and organized capital",
+            "Respectful dress in conservative areas"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Beaches & Water",
+          "attractions": [
+            "Shatti Beach [sandy beach with swimmers]",
+            "Qurum Beach [popular swimming spot]",
+            "Turquoise water [crystal clear sea]",
+            "Water sports [snorkeling, diving]",
+            "Beach clubs [restaurants with sea views]"
+          ],
+          "cost": "70-120 OMR",
+          "tips": [
+            "Beach conservative; swimwear appropriate",
+            "Water warm and clear year-round"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Wadis & Nature",
+          "attractions": [
+            "Wadi Shab [canyon with waterfall and pools]",
+            "Hiking to waterfall [scenic trail]",
+            "Swimming in pools [natural water basins]",
+            "Traditional villages [Omani culture]",
+            "Camel spotting [desert animals]"
+          ],
+          "cost": "60-100 OMR",
+          "tips": [
+            "Wadi Shab one of Oman's best hikes",
+            "Bring swimsuit for water pools"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oman-5",
+      "country": "Oman",
+      "duration": 5,
+      "title": "Oman's Mountain & Sea",
+      "emoji": "🇴🇲",
+      "description": "Muscat, Wadis, mountains, beaches, and coastal villages",
+      "badge": "Best Value",
+      "colorClass": "t2",
+      "currency": "OMR",
+      "days": [
+        {
+          "day": 1,
+          "title": "Muscat Introduction",
+          "attractions": [
+            "Corniche waterfront [scenic promenade]",
+            "Grand Mosque [beautiful architecture]",
+            "Opera House [cultural venue]",
+            "Al Alam Palace [royal landmark]",
+            "Sunset dinner [harbor restaurant]"
+          ],
+          "cost": "80-150 OMR",
+          "tips": [
+            "Muscat small; easily walkable",
+            "Capital city calm and organized"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Muscat Beaches",
+          "attractions": [
+            "Shatti Beach [popular swimming]",
+            "Qurum Beach [local favorite]",
+            "Beach resorts [luxury and comfort]",
+            "Snorkeling [coral and fish]",
+            "Beach clubs [dining and relaxation]"
+          ],
+          "cost": "70-120 OMR",
+          "tips": [
+            "Warm clear water year-round",
+            "Conservative dress outside resorts"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Wadi Trekking",
+          "attractions": [
+            "Wadi Shab [gorge with waterfall]",
+            "Natural pools [swim in canyon water]",
+            "Hiking trails [scenic walks]",
+            "Mountain air [fresh cooling breeze]",
+            "Traditional village [local culture]"
+          ],
+          "cost": "80-150 OMR",
+          "tips": [
+            "Wadi Shab most popular wadi]",
+            "Early morning hike for cool weather"
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Musandam Peninsula",
+          "attractions": [
+            "Khor Dugri [coastal inlet]",
+            "Boat cruise [scenic dhow sailing]",
+            "Dolphin watching [marine mammals]",
+            "Snorkeling sites [marine life]",
+            "Coastal villages [fishing communities]"
+          ],
+          "cost": "100-180 OMR",
+          "tips": [
+            "Musandam most scenic coastal area",
+            "Boat tours book in advance"
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Return & Reflection",
+          "attractions": [
+            "Last beach morning [relaxation]",
+            "Shopping for frankincense [Oman specialty]",
+            "Souvenir shopping [dates, handicrafts]",
+            "Farewell dinner [Arabic food]",
+            "Reflection on Oman [hidden gem]"
+          ],
+          "cost": "70-120 OMR",
+          "tips": [
+            "Frankincense unique Oman product",
+            "Oman underrated and peaceful"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oman-10",
+      "country": "Oman",
+      "duration": 10,
+      "title": "Complete Oman Adventure",
+      "emoji": "🇴🇲",
+      "description": "Muscat, Musandam, mountains, deserts, wadis, and Arabian culture",
+      "badge": "Full Experience",
+      "colorClass": "t3",
+      "currency": "OMR",
+      "days": [
+        {
+          "day": 1,
+          "title": "Muscat Arrival",
+          "attractions": [
+            "Corniche [waterfront walk]",
+            "Grand Mosque [stunning architecture]",
+            "Opera House [cultural landmark]",
+            "Al Alam Palace [royal residence]",
+            "Evening orientation [city layout]"
+          ],
+          "cost": "80-150 OMR",
+          "tips": [
+            "Muscat excellent base",
+            "Small and navigable city"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Muscat Culture",
+          "attractions": [
+            "Oman Museum [history and culture]",
+            "Heritage areas [traditional architecture]",
+            "Spice markets [aromatic souk]",
+            "Frankincense shops [specialty products]",
+            "Traditional restaurants [Arabian food]"
+          ],
+          "cost": "70-120 OMR",
+          "tips": [
+            "Frankincense unique Oman export",
+            "Museum illuminates Oman history"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Wadi Shab & Wadis",
+          "attractions": [
+            "Wadi Shab [gorge waterfall hike]",
+            "Natural pools [mountain water]",
+            "Wadi Bani Khalid [oasis pools]",
+            "Village culture [Omani communities]",
+            "Traditional lifestyle [non-touristy]"
+          ],
+          "cost": "80-150 OMR",
+          "tips": [
+            "Multiple wadis near Muscat",
+            "Bring water and snack for hikes"
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Beaches & Snorkeling",
+          "attractions": [
+            "Shatti Beach [main swimming]",
+            "Snorkeling [coral and fish]",
+            "Qurum Beach [alternative beach]",
+            "Water sports [jet skiing, diving]",
+            "Beach resort day [relaxation]"
+          ],
+          "cost": "70-120 OMR",
+          "tips": [
+            "Water clear and warm",
+            "Coral reefs close to shore"
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Musandam Peninsula",
+          "attractions": [
+            "Travel to Khasab [northernmost region]",
+            "Khor Dugri [scenic inlet]",
+            "Dhow boat cruise [traditional sailing]",
+            "Dolphin watching [marine mammals]",
+            "Khasab village [fishing community]"
+          ],
+          "cost": "100-180 OMR",
+          "tips": [
+            "Musandam most scenic area",
+            "Drive or fly Muscat to Khasab"
+          ]
+        },
+        {
+          "day": 6,
+          "title": "Musandam Exploration",
+          "attractions": [
+            "Telegraph Island [historical site]",
+            "More boat cruises [scenic water tours]",
+            "Snorkeling Musandam [pristine reefs]",
+            "Mountain walks [highland views]",
+            "Local fish restaurants [fresh catch]"
+          ],
+          "cost": "100-180 OMR",
+          "tips": [
+            "Musandam hidden gem",
+            "Less tourists than other Gulf regions"
+          ]
+        },
+        {
+          "day": 7,
+          "title": "Desert Exploring",
+          "attractions": [
+            "Sharqiyyah Sands [desert landscape]",
+            "Wahiba Desert [4x4 safari]",
+            "Bedouin camps [nomadic hospitality]",
+            "Desert stargazing [night sky]",
+            "Dune driving [off-road adventure]"
+          ],
+          "cost": "120-200 OMR",
+          "tips": [
+            "Desert less touristy than Wadi Rum",
+            "Overnight camping option"
+          ]
+        },
+        {
+          "day": 8,
+          "title": "Mountain Trails",
+          "attractions": [
+            "Jebel Akhdar [mountain area]",
+            "Trekking paths [scenic mountain hikes]",
+            "Pomegranate orchards [agricultural terraces]",
+            "Mountain villages [highland culture]",
+            "Stunning vistas [panoramic views]"
+          ],
+          "cost": "90-150 OMR",
+          "tips": [
+            "Mountain cooling break from coast",
+            "Requires 4x4 vehicle for access"
+          ]
+        },
+        {
+          "day": 9,
+          "title": "Relaxation & Shopping",
+          "attractions": [
+            "Beach final day [swimming]",
+            "Spa and massage [wellness]",
+            "Souvenir shopping [handicrafts]",
+            "Frankincense shopping [specialty items]",
+            "Reflection on Oman [peaceful nation]"
+          ],
+          "cost": "80-150 OMR",
+          "tips": [
+            "Oman excellent value",
+            "Authentic Arabian experience"
+          ]
+        },
+        {
+          "day": 10,
+          "title": "Departure",
+          "attractions": [
+            "Final morning in Muscat [last walk]",
+            "Airport transfer [ending journey]",
+            "Reflection on Oman [adventure memories]",
+            "Flight home [journey completion]",
+            "Oman wonderful memories [Arabian charm]"
+          ],
+          "cost": "varies",
+          "tips": [
+            "Oman underrated travel destination",
+            "Very hospitable people"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "morocco-3",
+      "country": "Morocco",
+      "duration": 3,
+      "title": "Marrakech Magical Escape",
+      "emoji": "🇲🇦",
+      "description": "Medina markets, Jemaa el-Fnaa square, and Sahara nearby",
+      "badge": "Quick Getaway",
+      "colorClass": "t1",
+      "currency": "MAD",
+      "days": [
+        {
+          "day": 1,
+          "title": "Marrakech Medina",
+          "attractions": [
+            "Jemaa el-Fnaa Square [main plaza with performers]",
+            "Souks [labyrinth of shops]",
+            "Ben Youssef Mosque [beautiful architecture]",
+            "Palace Gardens [peaceful green spaces]",
+            "Street food [Moroccan cuisine]"
+          ],
+          "cost": "300-500 MAD",
+          "tips": [
+            "Medina maze-like; hire guide for orientation",
+            "Stay in medina riad for authentic experience"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Atlas Mountains",
+          "attractions": [
+            "High Atlas Mountains [dramatic peaks]",
+            "Imlil village [mountain village]",
+            "Kasbah hike [trekking trails]",
+            "Waterfall [natural water feature]",
+            "Traditional lodges [Moroccan hospitality]"
+          ],
+          "cost": "350-600 MAD",
+          "tips": [
+            "Atlas Mountains day trip from Marrakech",
+            "Bring hiking boots and water"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Sahara Desert",
+          "attractions": [
+            "Sahara Desert [vast golden dunes]",
+            "Camel trekking [desert journey]",
+            "Berber camp [nomadic settlement]",
+            "Sunset dunes [golden hour views]",
+            "Stargazing [night sky]"
+          ],
+          "cost": "400-700 MAD",
+          "tips": [
+            "Sahara experience unique and memorable",
+            "Overnight in camp recommended"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "morocco-5",
+      "country": "Morocco",
+      "duration": 5,
+      "title": "Morocco's Colors",
+      "emoji": "🇲🇦",
+      "description": "Marrakech, Fez, Atlas Mountains, Sahara, and medina culture",
+      "badge": "Best Value",
+      "colorClass": "t2",
+      "currency": "MAD",
+      "days": [
+        {
+          "day": 1,
+          "title": "Marrakech Arrival",
+          "attractions": [
+            "Jemaa el-Fnaa Square [performers and food]",
+            "Ben Youssef Mosque [Islamic architecture]",
+            "Medina souks [shopping streets]",
+            "Palace gardens [Menara gardens]",
+            "Evening orientation [night atmosphere]"
+          ],
+          "cost": "300-500 MAD",
+          "tips": [
+            "Hire guide for medina first time",
+            "Riad accommodations charming and affordable"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Atlas & Imlil",
+          "attractions": [
+            "High Atlas Mountains [scenic range]",
+            "Imlil village [mountain community]",
+            "Trekking routes [hiking paths]",
+            "Waterfalls [mountain streams]",
+            "Local meals [mountain food]"
+          ],
+          "cost": "350-600 MAD",
+          "tips": [
+            "Day trip or overnight in mountains",
+            "Local guides provide best experience"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Sahara Trek",
+          "attractions": [
+            "Sahara Desert [dunes landscape]",
+            "Camel caravan [desert travel]",
+            "Berber camp [nomadic culture]",
+            "Sunset & stargazing [desert night]",
+            "Traditional meals [Berber cuisine]"
+          ],
+          "cost": "400-700 MAD",
+          "tips": [
+            "2-3 day Sahara tour popular",
+            "Overnight in desert recommended"
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Travel to Fez",
+          "attractions": [
+            "Fez Medina [oldest medina in Morocco]",
+            "Moulay Idris Shrine [important mosque]",
+            "Leather tannery [traditional craft]",
+            "Blue gates [iconic city landmark]",
+            "Local riads [traditional accommodation]"
+          ],
+          "cost": "350-600 MAD",
+          "tips": [
+            "Bus or flight from Marrakech to Fez",
+            "Fez medina most authentic in Morocco"
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Fez Culture & Return",
+          "attractions": [
+            "Fez medina exploration [winding streets]",
+            "Artisan workshops [ceramics and wood]",
+            "Food tour [local cuisine]",
+            "Return to Marrakech [evening drive]",
+            "Reflection on Morocco [colors and culture]"
+          ],
+          "cost": "300-500 MAD",
+          "tips": [
+            "Fez medina beautiful and preserved",
+            "Haggling expected in souks"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "morocco-10",
+      "country": "Morocco",
+      "duration": 10,
+      "title": "Complete Moroccan Journey",
+      "emoji": "🇲🇦",
+      "description": "Marrakech, Fez, Essaouira, Atlas Mountains, Sahara, coast",
+      "badge": "Full Experience",
+      "colorClass": "t3",
+      "currency": "MAD",
+      "days": [
+        {
+          "day": 1,
+          "title": "Marrakech Welcome",
+          "attractions": [
+            "Jemaa el-Fnaa [main plaza]",
+            "Ben Youssef Mosque [beautiful mosque]",
+            "Marrakech Museum [art collections]",
+            "Riad accommodation [traditional house]",
+            "Evening souks [night market]"
+          ],
+          "cost": "300-500 MAD",
+          "tips": [
+            "Medina most atmospheric at night",
+            "Hire guide for first exploration"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Marrakech Culture",
+          "attractions": [
+            "Menara Gardens [peaceful green space]",
+            "Bahia Palace [ornate architecture]",
+            "Majorelle Gardens [blue botanical]",
+            "Medina crafts [artisans at work]",
+            "Street food tour [local cuisine]"
+          ],
+          "cost": "350-600 MAD",
+          "tips": [
+            "Gardens oasis from medina crowds",
+            "Majorelle most famous garden"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Atlas Mountains Trek",
+          "attractions": [
+            "Imlil village [mountain settlement]",
+            "Kasbah hiking [trail routes]",
+            "Waterfalls [mountain streams]",
+            "Berber village [local culture]",
+            "Mountain meals [traditional food]"
+          ],
+          "cost": "350-600 MAD",
+          "tips": [
+            "Multi-day trekking available",
+            "Guide recommended for safety"
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Sahara Expedition",
+          "attractions": [
+            "Dunes landscape [golden sands]",
+            "Camel caravan [traditional travel]",
+            "Berber camp [nomadic experience]",
+            "Desert sunset [golden hour]",
+            "Stargazing night [unpolluted sky]"
+          ],
+          "cost": "400-700 MAD",
+          "tips": [
+            "Overnight in Sahara quintessential",
+            "3-day Sahara tour popular"
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Sahara Continuing",
+          "attractions": [
+            "Desert sunrise [golden morning light]",
+            "More dune exploration [vast landscape]",
+            "Nomadic lifestyle [Berber culture]",
+            "Return to city [evening arrival]",
+            "Rest and shower [refresh after desert]"
+          ],
+          "cost": "400-700 MAD",
+          "tips": [
+            "Sahara physically demanding but worth it",
+            "Camel riding toughest on legs"
+          ]
+        },
+        {
+          "day": 6,
+          "title": "Travel to Fez",
+          "attractions": [
+            "Fez Medina [most authentic Morocco]",
+            "Moulay Idris Shrine [important site]",
+            "Leather tannery [traditional craft]",
+            "Dye pits [artisan process]",
+            "Riad accommodation [traditional home]"
+          ],
+          "cost": "350-600 MAD",
+          "tips": [
+            "Flight or bus 1 hour from Marrakech",
+            "Fez medina world's largest"
+          ]
+        },
+        {
+          "day": 7,
+          "title": "Fez Exploration",
+          "attractions": [
+            "Medina winding streets [maze-like]",
+            "Souks shopping [artisanal goods]",
+            "Ceramic workshops [local crafts]",
+            "Woodworking studios [traditional]",
+            "Food tour [Moroccan cuisine]"
+          ],
+          "cost": "300-500 MAD",
+          "tips": [
+            "Hire local guide for medina",
+            "Easy to get lost but rewarding"
+          ]
+        },
+        {
+          "day": 8,
+          "title": "Travel to Essaouira",
+          "attractions": [
+            "Essaouira coastal city [beach town]",
+            "Harbor [fishing boats and seafood]",
+            "Beach [sandy Atlantic coast]",
+            "Medina [less touristy than others]",
+            "Sunset dinner [ocean views]"
+          ],
+          "cost": "300-500 MAD",
+          "tips": [
+            "Bus or flight 5 hours from Fez",
+            "Coastal city refreshing break"
+          ]
+        },
+        {
+          "day": 9,
+          "title": "Essaouira Beach",
+          "attractions": [
+            "Beach swimming [cool Atlantic water]",
+            "Windsurfing [water sports]",
+            "Seafood restaurants [fresh fish]",
+            "Artist studios [local creators]",
+            "Argan oil cooperative [traditional product]"
+          ],
+          "cost": "350-600 MAD",
+          "tips": [
+            "Essaouira windy; kitesurfing popular",
+            "Argan oil unique Moroccan product"
+          ]
+        },
+        {
+          "day": 10,
+          "title": "Return Home",
+          "attractions": [
+            "Final morning beach [relaxation]",
+            "Souvenir shopping [argan oil, rugs]",
+            "Reflection on Morocco [diverse beauty]",
+            "Travel home [flight or bus]",
+            "Moroccan memories [colors and culture]"
+          ],
+          "cost": "varies",
+          "tips": [
+            "Morocco incredible value for travelers",
+            "Very walkable cities with great food"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "australia-3",
+      "country": "Australia",
+      "duration": 3,
+      "title": "Sydney Coastal Escape",
+      "emoji": "🇦🇺",
+      "description": "Opera House, Bondi Beach, Blue Mountains, and Australian wildlife",
+      "badge": "Quick Getaway",
+      "colorClass": "t1",
+      "currency": "AUD",
+      "days": [
+        {
+          "day": 1,
+          "title": "Sydney Arrival",
+          "attractions": [
+            "Sydney Opera House [iconic building and tours]",
+            "Circular Quay [waterfront promenade]",
+            "Royal Botanic Gardens [green space with views]",
+            "The Rocks [historic neighborhood]",
+            "Sunset views [evening harbor light]"
+          ],
+          "cost": "150-250 AUD",
+          "tips": [
+            "Sydney one of world's most beautiful cities",
+            "Book Opera House tour online"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Beaches & Walks",
+          "attractions": [
+            "Bondi Beach [iconic Sydney beach]",
+            "Bondi to Coogee coastal walk [5km scenic trail]",
+            "Beach swimming [warm summer water]",
+            "Beach clubs [dining and drinks]",
+            "Cliff-top sunset [golden hour views]"
+          ],
+          "cost": "120-200 AUD",
+          "tips": [
+            "Coastal walk one of Sydney's best activities",
+            "Beaches safe with lifeguard patrols"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Blue Mountains",
+          "attractions": [
+            "Blue Mountains [national park cliffs]",
+            "Three Sisters [iconic rock formation]",
+            "Scenic World [railway, cableway, walkway]",
+            "Rainforest walks [nature trails]",
+            "Waterfall viewing [natural cascade]"
+          ],
+          "cost": "200-300 AUD",
+          "tips": [
+            "Day trip from Sydney 2 hours by train",
+            "Scenic World combined ticket best value"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "australia-5",
+      "country": "Australia",
+      "duration": 5,
+      "title": "Australia's East Coast",
+      "emoji": "🇦🇺",
+      "description": "Sydney, Great Barrier Reef, Melbourne, and coastal beauty",
+      "badge": "Best Value",
+      "colorClass": "t2",
+      "currency": "AUD",
+      "days": [
+        {
+          "day": 1,
+          "title": "Sydney Iconic Sights",
+          "attractions": [
+            "Opera House [architectural marvel]",
+            "Circular Quay [waterfront hub]",
+            "Botanic Gardens [peaceful park]",
+            "Harbour Bridge [climb or walk options]",
+            "Beach sunset [evening light]"
+          ],
+          "cost": "150-250 AUD",
+          "tips": [
+            "Book Opera House tour early",
+            "Bondi Beach most famous beach"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Sydney & Blue Mountains",
+          "attractions": [
+            "Bondi to Coogee walk [cliff-top trail]",
+            "Beach swimming [ocean water]",
+            "Blue Mountains day trip [national park]",
+            "Three Sisters rock [photo spot]",
+            "Scenic World rides [rail, cable, walk]"
+          ],
+          "cost": "200-350 AUD",
+          "tips": [
+            "Coastal walk 6km moderate difficulty",
+            "Blue Mountains cool break from city"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Flight to Cairns",
+          "attractions": [
+            "Cairns coastal town [tropical city]",
+            "Cairns Esplanade [waterfront promenade]",
+            "Great Barrier Reef [world's largest reef]",
+            "Reef boat tour [snorkeling and diving]",
+            "Marine life [fish and coral]"
+          ],
+          "cost": "250-450 AUD",
+          "tips": [
+            "Flight Sydney to Cairns 3 hours",
+            "Reef tour best early morning departure"
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Great Barrier Reef",
+          "attractions": [
+            "Coral viewing [underwater ecosystem]",
+            "Snorkeling [see fish and coral up close]",
+            "Diving [deeper underwater exploration]",
+            "Sea turtles [marine animals]",
+            "Rainforest hinterland [nature contrast]"
+          ],
+          "cost": "300-500 AUD",
+          "tips": [
+            "Reef one of world's natural wonders",
+            "Diving certification not needed for snorkel"
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Return to Sydney",
+          "attractions": [
+            "Flight Cairns to Sydney [3 hours]",
+            "Final evening beach [sunset]",
+            "Farewell dinner [Australian cuisine]",
+            "Reflection on Australia [vast beauty]",
+            "Planning return visit [multiple regions]"
+          ],
+          "cost": "150-250 AUD",
+          "tips": [
+            "Australia huge; one trip barely scratches surface",
+            "Consider Melbourne, Tasmania on future visits"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "australia-10",
+      "country": "Australia",
+      "duration": 10,
+      "title": "Complete Australian Discovery",
+      "emoji": "🇦🇺",
+      "description": "Sydney, Great Barrier Reef, Melbourne, Uluru, and Outback",
+      "badge": "Full Experience",
+      "colorClass": "t3",
+      "currency": "AUD",
+      "days": [
+        {
+          "day": 1,
+          "title": "Sydney Introduction",
+          "attractions": [
+            "Opera House [iconic architecture]",
+            "Circular Quay [waterfront landmark]",
+            "Botanic Gardens [peaceful green space]",
+            "The Rocks [historic cobblestone area]",
+            "Evening walk [harbor views]"
+          ],
+          "cost": "150-250 AUD",
+          "tips": [
+            "Sydney most visited Australian city",
+            "Stay in Bondi or Circular Quay area"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Sydney Beaches & Culture",
+          "attractions": [
+            "Bondi to Coogee walk [scenic coastal trail]",
+            "Beach swimming [Bondi Beach]",
+            "Taronga Zoo [wildlife viewing]",
+            "Harbour Bridge walk [climbing option]",
+            "Beach club dining [sunset dinner]"
+          ],
+          "cost": "200-350 AUD",
+          "tips": [
+            "Walk best in morning or late afternoon",
+            "Zoo great for Australian animals"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Blue Mountains Day Trip",
+          "attractions": [
+            "Three Sisters [iconic rock formation]",
+            "Scenic World [railway, cableway, walkway]",
+            "Rainforest walks [nature trails among trees]",
+            "Waterfalls [cascading water]",
+            "Cliffside views [scenic vistas]"
+          ],
+          "cost": "200-300 AUD",
+          "tips": [
+            "Train 2 hours from Sydney Central",
+            "Full day needed for Blue Mountains"
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Flight to Melbourne",
+          "attractions": [
+            "Melbourne city [vibrant arts scene]",
+            "Street art lanes [graffiti alleyways]",
+            "Queen Victoria Market [food and shopping]",
+            "Yarra River [riverfront walking]",
+            "Colonial architecture [historic buildings]"
+          ],
+          "cost": "200-350 AUD",
+          "tips": [
+            "Flight or overnight train Sydney to Melbourne",
+            "Melbourne considered more creative city"
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Melbourne Culture",
+          "attractions": [
+            "Art galleries [Australian contemporary art]",
+            "National Gallery of Victoria [famous museum]",
+            "Beach suburbs [St Kilda, Brighton]",
+            "Rainbow beach boxes [colorful historic huts]",
+            "Penguin parade [nightly penguin return]"
+          ],
+          "cost": "200-350 AUD",
+          "tips": [
+            "Melbourne cultural capital of Australia",
+            "Book penguin parade in advance"
+          ]
+        },
+        {
+          "day": 6,
+          "title": "Flight to Cairns",
+          "attractions": [
+            "Cairns coastal town [tropical city]",
+            "Esplanade [waterfront promenade]",
+            "Great Barrier Reef [world's largest coral reef]",
+            "Reef boat tour [snorkeling experience]",
+            "Tropical sunset [evening views]"
+          ],
+          "cost": "250-450 AUD",
+          "tips": [
+            "Flight Melbourne to Cairns 3+ hours",
+            "Reef tours depart early morning"
+          ]
+        },
+        {
+          "day": 7,
+          "title": "Great Barrier Reef Adventure",
+          "attractions": [
+            "Snorkeling [view coral and fish]",
+            "Diving [deeper underwater experience]",
+            "Sea turtles [marine animals]",
+            "Colorful coral [underwater ecosystem]",
+            "Reef education [learning about reef]"
+          ],
+          "cost": "300-500 AUD",
+          "tips": [
+            "One of world's natural wonders",
+            "Multiple reef operators available"
+          ]
+        },
+        {
+          "day": 8,
+          "title": "Flight to Uluru",
+          "attractions": [
+            "Uluru [iconic red rock formation]",
+            "Aboriginal culture [indigenous heritage]",
+            "Uluru-Kata Tjuta National Park [sacred sites]",
+            "Sunrise over Uluru [golden light]",
+            "Desert landscape [vast outback]"
+          ],
+          "cost": "350-550 AUD",
+          "tips": [
+            "Uluru sacred site; treat respectfully",
+            "Outback extreme heat; bring water"
+          ]
+        },
+        {
+          "day": 9,
+          "title": "Red Center Exploration",
+          "attractions": [
+            "Kings Canyon [hiking trail]",
+            "Kata Tjuta [rock formations]",
+            "Aboriginal cultural tour [learning about culture]",
+            "Sunset at Uluru [magical colors]",
+            "Stargazing [clear night sky]"
+          ],
+          "cost": "300-500 AUD",
+          "tips": [
+            "Extreme heat in summer; visit cooler months",
+            "Respectful tours support indigenous communities"
+          ]
+        },
+        {
+          "day": 10,
+          "title": "Return to Sydney",
+          "attractions": [
+            "Flight Uluru to Sydney [4+ hours via Alice Springs]",
+            "Final beach day [relaxation]",
+            "Souvenir shopping [Aboriginal art, boomerangs]",
+            "Farewell dinner [Australian steakhouse]",
+            "Reflection on Australia [diverse landscapes]"
+          ],
+          "cost": "200-350 AUD",
+          "tips": [
+            "Australia largest country to cover",
+            "Consider 3 weeks for more regions"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mexico-3",
+      "country": "Mexico",
+      "duration": 3,
+      "title": "Mexico City Magic",
+      "emoji": "🇲🇽",
+      "description": "Colonial architecture, museums, street food, and vibrant culture",
+      "badge": "Quick Getaway",
+      "colorClass": "t1",
+      "currency": "MXN",
+      "days": [
+        {
+          "day": 1,
+          "title": "Mexico City Historic Center",
+          "attractions": [
+            "Zócalo [main plaza and historic center]",
+            "Metropolitan Cathedral [colonial church]",
+            "National Palace [government building with murals]",
+            "Templo Mayor [Aztec temple ruins]",
+            "Street food [tacos and tamales]"
+          ],
+          "cost": "800-1200 MXN",
+          "tips": [
+            "Mexico City one of world's largest capitals",
+            "Street food authentic and cheap"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Museums & Culture",
+          "attractions": [
+            "National Museum of Anthropology [world-class museum]",
+            "Frida Kahlo Museum [artist's home]",
+            "Murals and street art [Diego Rivera murals]",
+            "Xochimilco Floating Gardens [boat tours]",
+            "Traditional canals [indigenous heritage]"
+          ],
+          "cost": "900-1300 MXN",
+          "tips": [
+            "Anthropology museum one of best in world",
+            "Frida Museum book in advance"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Day Trip to Teotihuacán",
+          "attractions": [
+            "Teotihuacán [ancient pyramid complex]",
+            "Pyramid of the Sun [largest pyramid]",
+            "Pyramid of the Moon [ceremonial building]",
+            "Avenue of the Dead [main thoroughfare]",
+            "Ancient civilization [archaeological wonder]"
+          ],
+          "cost": "800-1200 MXN",
+          "tips": [
+            "Day trip 45km north of Mexico City",
+            "Early morning visit beats afternoon heat"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mexico-5",
+      "country": "Mexico",
+      "duration": 5,
+      "title": "Mexico's Heritage & Coast",
+      "emoji": "🇲🇽",
+      "description": "Mexico City, Teotihuacán, Oaxaca, and Caribbean beaches",
+      "badge": "Best Value",
+      "colorClass": "t2",
+      "currency": "MXN",
+      "days": [
+        {
+          "day": 1,
+          "title": "Mexico City Arrival",
+          "attractions": [
+            "Zócalo [main plaza]",
+            "Cathedral [colonial architecture]",
+            "National Palace [Diego Rivera murals]",
+            "Templo Mayor [Aztec ruins]",
+            "Street food tour [local cuisine]"
+          ],
+          "cost": "800-1200 MXN",
+          "tips": [
+            "Mexico City excellent street food capital",
+            "Stay in Coyoacán or Roma neighborhoods"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Museums & Day Trip",
+          "attractions": [
+            "National Museum of Anthropology [priceless collections]",
+            "Frida Kahlo Museum [artist's life]",
+            "Xochimilco floating gardens [boat tour]",
+            "Teotihuacán [ancient pyramids nearby]",
+            "Archaeological wonders [Aztec heritage]"
+          ],
+          "cost": "1000-1400 MXN",
+          "tips": [
+            "Multiple museums can't see all in 2 days",
+            "Xochimilco best as sunset boat tour"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Flight to Oaxaca",
+          "attractions": [
+            "Oaxaca City [colonial mountain town]",
+            "Zócalo [town plaza]",
+            "Textiles [traditional crafts]",
+            "Indigenous culture [local traditions]",
+            "Regional cuisine [Oaxacan food]"
+          ],
+          "cost": "800-1200 MXN",
+          "tips": [
+            "Flight or overnight bus 1.5 hours",
+            "Oaxaca cultural heart of Mexico"
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Oaxaca Markets & Villages",
+          "attractions": [
+            "Central Market [food and crafts]",
+            "Craft villages [weaving and pottery]",
+            "Hierve el Agua [petrified waterfall]",
+            "Traditional textile workshop [weaving demonstration]",
+            "Mezcal tasting [local spirit]"
+          ],
+          "cost": "900-1300 MXN",
+          "tips": [
+            "Oaxaca famous for textiles and crafts",
+            "Mezcal local spirit; many distilleries"
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Return & Reflection",
+          "attractions": [
+            "Final market visit [last-minute shopping]",
+            "Souvenir hunting [textiles and crafts]",
+            "Final meal [traditional Oaxacan food]",
+            "Return to Mexico City [evening flight]",
+            "Reflection on Mexico [ancient and modern]"
+          ],
+          "cost": "800-1200 MXN",
+          "tips": [
+            "Mexico blend of indigenous and Spanish",
+            "Very affordable for travelers"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mexico-10",
+      "country": "Mexico",
+      "duration": 10,
+      "title": "Complete Mexico Discovery",
+      "emoji": "🇲🇽",
+      "description": "Mexico City, Teotihuacán, Oaxaca, Caribbean coast, and Mayan ruins",
+      "badge": "Full Experience",
+      "colorClass": "t3",
+      "currency": "MXN",
+      "days": [
+        {
+          "day": 1,
+          "title": "Mexico City Arrival",
+          "attractions": [
+            "Zócalo [main plaza and center]",
+            "Metropolitan Cathedral [colonial church]",
+            "National Palace [with famous murals]",
+            "Templo Mayor [Aztec temple ruins]",
+            "City orientation [understanding layout]"
+          ],
+          "cost": "800-1200 MXN",
+          "tips": [
+            "Mexico City massive; take time to explore",
+            "Street food excellent and affordable"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Mexico City Museums",
+          "attractions": [
+            "National Museum of Anthropology [world's best]",
+            "Frida Kahlo Museum [artist's home]",
+            "Palacio de Bellas Artes [architecture and art]",
+            "Muralism tour [Diego Rivera works]",
+            "Maya and Aztec exhibits [indigenous heritage]"
+          ],
+          "cost": "1000-1400 MXN",
+          "tips": [
+            "Museum day very recommended",
+            "Book Frida Museum in advance"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Teotihuacán & Xochimilco",
+          "attractions": [
+            "Teotihuacán [pyramid complex]",
+            "Pyramid of the Sun [iconic pyramid]",
+            "Pyramid of the Moon [ceremonial site]",
+            "Xochimilco floating gardens [boat tour]",
+            "Traditional canals [indigenous waterways]"
+          ],
+          "cost": "900-1300 MXN",
+          "tips": [
+            "Teotihuacán 45km north; early morning best",
+            "Xochimilco magical as sunset tour"
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Coyoacán & Markets",
+          "attractions": [
+            "Coyoacán neighborhood [bohemian area]",
+            "Plaza Hidalgo [charming plaza]",
+            "Artisan markets [local crafts]",
+            "León Trotsky House [historical site]",
+            "Café culture [coffee and pastries]"
+          ],
+          "cost": "800-1200 MXN",
+          "tips": [
+            "Coyoacán charming village within city",
+            "Weekend markets best for crafts"
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Flight to Oaxaca",
+          "attractions": [
+            "Oaxaca City [colonial mountain town]",
+            "Zócalo [beautiful plaza]",
+            "Indigenous culture [living traditions]",
+            "Textiles and crafts [artisan work]",
+            "Regional cuisine [famous food]"
+          ],
+          "cost": "900-1300 MXN",
+          "tips": [
+            "Flight or bus 5-6 hours",
+            "Oaxaca cultural heart of Mexico"
+          ]
+        },
+        {
+          "day": 6,
+          "title": "Oaxaca Markets & Villages",
+          "attractions": [
+            "Central Market [food and handicrafts]",
+            "Craft villages [weaving and pottery]",
+            "Hierve el Agua [petrified waterfall]",
+            "Textile workshop [traditional weaving]",
+            "Mezcal distillery [local spirit tasting]"
+          ],
+          "cost": "1000-1400 MXN",
+          "tips": [
+            "Oaxaca artisan capital",
+            "Day trips to villages recommended"
+          ]
+        },
+        {
+          "day": 7,
+          "title": "Flight to Cancún",
+          "attractions": [
+            "Cancún Caribbean coast [beach resort]",
+            "Beach [turquoise water and sand]",
+            "Mayan Riviera [Caribbean coast]",
+            "Island hopping [cenotes and caves]",
+            "Water activities [snorkeling, diving]"
+          ],
+          "cost": "1200-1800 MXN",
+          "tips": [
+            "Flight Oaxaca to Cancún 2 hours",
+            "Cancún very touristy; consider Playa nearby"
+          ]
+        },
+        {
+          "day": 8,
+          "title": "Tulum Ruins & Cenotes",
+          "attractions": [
+            "Tulum [Mayan fortress on cliff]",
+            "Beach access [turquoise water below ruins]",
+            "Cenotes [natural limestone wells]",
+            "Snorkeling [swim in cenotes]",
+            "Jungle and nature [tropical forest]"
+          ],
+          "cost": "1000-1500 MXN",
+          "tips": [
+            "Tulum most beautifully situated Mayan site",
+            "Cenote swimming unique experience"
+          ]
+        },
+        {
+          "day": 9,
+          "title": "Chichen Itza & Cozumel",
+          "attractions": [
+            "Chichen Itza [largest Mayan city]",
+            "El Castillo [iconic pyramid]",
+            "Temple of Warriors [carved structures]",
+            "Cozumel Island [diving paradise]",
+            "Coral reefs [marine life]"
+          ],
+          "cost": "1200-1800 MXN",
+          "tips": [
+            "Chichen Itza one of world's wonders",
+            "Cozumel world-class diving destination"
+          ]
+        },
+        {
+          "day": 10,
+          "title": "Return Home",
+          "attractions": [
+            "Final beach morning [relaxation]",
+            "Souvenir shopping [local crafts]",
+            "Reflection on Mexico [diverse beauty]",
+            "Flight home [ending journey]",
+            "Mexico unforgettable memories [ancient and modern]"
+          ],
+          "cost": "varies",
+          "tips": [
+            "Mexico incredible value destination",
+            "Very welcoming to international travelers"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uae-3",
+      "country": "UAE",
+      "duration": 3,
+      "title": "Dubai Desert Escape",
+      "emoji": "🇦🇪",
+      "description": "Burj Khalifa, desert safari, luxury shopping, and Arabian hospitality",
+      "badge": "Quick Getaway",
+      "colorClass": "t1",
+      "currency": "AED",
+      "days": [
+        {
+          "day": 1,
+          "title": "Dubai Iconic Sights",
+          "attractions": [
+            "Burj Khalifa [world's tallest building with observation deck]",
+            "Dubai Mall [massive shopping center at building base]",
+            "Fountain Show [choreographed water fountain display]",
+            "Dune Bashing [4x4 desert off-road driving]",
+            "Arabian dinner [traditional Bedouin-style meal]"
+          ],
+          "cost": "400-700 AED",
+          "tips": [
+            "Book Burj Khalifa tickets online for skip-the-line",
+            "Desert safari best at sunset"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Beaches & Gold Souks",
+          "attractions": [
+            "Jumeirah Beach [pristine white sand beach]",
+            "Beach clubs [luxury waterfront venues]",
+            "Gold Souk [traditional jewelry market]",
+            "Spice Souk [aromatic market with traditional spices]",
+            "Abra boats [traditional wooden water taxis]"
+          ],
+          "cost": "300-600 AED",
+          "tips": [
+            "Beach clubs offer day passes for pools and restaurants",
+            "Haggle in souks; prices not fixed"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Modern Dubai",
+          "attractions": [
+            "Palm Jumeirah [artificial island shaped like palm tree]",
+            "Atlantis Resort [luxury hotel with aquarium]",
+            "Yacht cruise [marina and coastal views]",
+            "Shopping malls [world-class retail]",
+            "Sunset dining [waterfront restaurants]"
+          ],
+          "cost": "350-650 AED",
+          "tips": [
+            "Palm Jumeirah best viewed from water or helicopter",
+            "UAE extremely hot; summer 45°C+"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uae-5",
+      "country": "UAE",
+      "duration": 5,
+      "title": "UAE Luxury & Adventure",
+      "emoji": "🇦🇪",
+      "description": "Dubai, Abu Dhabi, deserts, beaches, and modern Arabian culture",
+      "badge": "Best Value",
+      "colorClass": "t2",
+      "currency": "AED",
+      "days": [
+        {
+          "day": 1,
+          "title": "Dubai Introduction",
+          "attractions": [
+            "Burj Khalifa [iconic tall building]",
+            "Dubai Mall [shopping center]",
+            "Fountain Show [water display]",
+            "Dune bashing [desert safari]",
+            "Arabian dinner [traditional meal]"
+          ],
+          "cost": "400-700 AED",
+          "tips": [
+            "Pre-book Burj Khalifa online",
+            "Desert sunset best time for safari"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Beach & Souks Day",
+          "attractions": [
+            "Jumeirah Beach [swimming and relaxation]",
+            "Gold Souk [jewelry market]",
+            "Spice Souk [traditional spices]",
+            "Abra boat ride [traditional water transport]",
+            "Waterfront dinner [seafood and views]"
+          ],
+          "cost": "300-600 AED",
+          "tips": [
+            "Beaches perfect for swimming year-round",
+            "Souks authentic and less touristy than malls"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Travel to Abu Dhabi",
+          "attractions": [
+            "Sheikh Zayed Grand Mosque [stunning architecture]",
+            "Emirates Palace [luxury hotel architecture]",
+            "Corniche waterfront [scenic promenade]",
+            "Marina island [artificial development]",
+            "Cultural activities [UAE heritage]"
+          ],
+          "cost": "350-650 AED",
+          "tips": [
+            "Abu Dhabi 1.5 hours from Dubai by car",
+            "Grand Mosque open to visitors; dress modestly"
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Abu Dhabi Cultural",
+          "attractions": [
+            "Louvre Abu Dhabi [world-class art museum]",
+            "Sheikh Zayed Heritage Museum [Emirati culture]",
+            "Date market [traditional souks]",
+            "Mangrove kayaking [nature activity]",
+            "Beach clubs [waterfront relaxation]"
+          ],
+          "cost": "400-700 AED",
+          "tips": [
+            "Louvre museum excellent art collection",
+            "Mangrove kayaking unique and peaceful"
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Desert Experience",
+          "attractions": [
+            "Empty Quarter [Rub al Khali vast desert]",
+            "Camel trekking [desert transportation]",
+            "Bedouin village [nomadic settlement]",
+            "Stargazing [night sky in desert]",
+            "Return to coast [final beach evening]"
+          ],
+          "cost": "450-800 AED",
+          "tips": [
+            "Overnight desert camp available",
+            "Desert experience quintessential UAE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uae-10",
+      "country": "UAE",
+      "duration": 10,
+      "title": "Complete UAE Exploration",
+      "emoji": "🇦🇪",
+      "description": "Dubai, Abu Dhabi, Ras Al Khaimah, deserts, mountains, and luxury experiences",
+      "badge": "Full Experience",
+      "colorClass": "t3",
+      "currency": "AED",
+      "days": [
+        {
+          "day": 1,
+          "title": "Dubai Arrival",
+          "attractions": [
+            "Burj Khalifa [world's tallest building]",
+            "Dubai Mall [shopping center]",
+            "Fountain Show [choreographed display]",
+            "Dune Safari [desert off-road driving]",
+            "Bedouin dinner [traditional meal]"
+          ],
+          "cost": "400-700 AED",
+          "tips": [
+            "Book Burj Khalifa skip-the-line online",
+            "Safari best at sunset for cooler weather"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Dubai Beach & Souk",
+          "attractions": [
+            "Jumeirah Beach [swimming and relaxation]",
+            "Gold Souk [jewelry shopping]",
+            "Spice Souk [traditional market]",
+            "Abra boat ride [traditional watercraft]",
+            "Dinner cruise [yacht on Persian Gulf]"
+          ],
+          "cost": "350-650 AED",
+          "tips": [
+            "Beach clubs worth day pass investment",
+            "Haggling expected in traditional souks"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Modern Dubai",
+          "attractions": [
+            "Palm Jumeirah [artificial island]",
+            "Atlantis Resort [luxury hotel]",
+            "Yacht marina [luxury boats]",
+            "Beach clubs [waterfront venues]",
+            "Shopping malls [world-class retail]"
+          ],
+          "cost": "400-750 AED",
+          "tips": [
+            "Palm best viewed from sea or sky",
+            "Dubai extremely hot in summer"
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Dubai Adventure Sports",
+          "attractions": [
+            "Skydiving [jumping over Palm Jumeirah]",
+            "Jet skiing [water sports]",
+            "Hot air balloon [sunrise float over dunes]",
+            "ATV quad biking [desert vehicles]",
+            "Evening bazaar [night market]"
+          ],
+          "cost": "500-900 AED",
+          "tips": [
+            "Book adventure activities in advance",
+            "Balloon ride most magical at sunrise"
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Abu Dhabi Day",
+          "attractions": [
+            "Sheikh Zayed Grand Mosque [architectural marvel]",
+            "Louvre Abu Dhabi [world museum]",
+            "Emirates Palace [luxury palace hotel]",
+            "Corniche walk [waterfront promenade]",
+            "Heritage Village [traditional Emirati life]"
+          ],
+          "cost": "400-700 AED",
+          "tips": [
+            "Abu Dhabi 1.5 hours from Dubai",
+            "Grand Mosque must-see; dress respectfully"
+          ]
+        },
+        {
+          "day": 6,
+          "title": "Abu Dhabi Nature",
+          "attractions": [
+            "Mangrove kayaking [paddling through ecosystem]",
+            "Date market [traditional souks]",
+            "Natural hot springs [thermal baths]",
+            "Beach clubs [waterfront relaxation]",
+            "Sunset drive [scenic coastal route]"
+          ],
+          "cost": "350-650 AED",
+          "tips": [
+            "Mangrove kayaking peaceful and unique",
+            "Abu Dhabi less touristy than Dubai"
+          ]
+        },
+        {
+          "day": 7,
+          "title": "Ras Al Khaimah Mountains",
+          "attractions": [
+            "Hajar Mountains [dramatic mountain range]",
+            "Jebel Jais [highest peak in UAE]",
+            "Mountain hiking [trekking trails]",
+            "Adventure park [ziplines and rides]",
+            "Traditional forts [historical structures]"
+          ],
+          "cost": "400-700 AED",
+          "tips": [
+            "Ras Al Khaimah quieter than Dubai/Abu Dhabi",
+            "Mountains great for trekking and photography"
+          ]
+        },
+        {
+          "day": 8,
+          "title": "Ras Al Khaimah Culture",
+          "attractions": [
+            "Al Qasimi Palace [historical palace]",
+            "Dhayah Fort [ancient fort on hilltop]",
+            "Beach resorts [quiet beaches]",
+            "Artisan workshops [local crafts]",
+            "Fish souks [fresh seafood market]"
+          ],
+          "cost": "300-600 AED",
+          "tips": [
+            "Ras Al Khaimah underrated gem",
+            "Fish souk authentic local experience"
+          ]
+        },
+        {
+          "day": 9,
+          "title": "Desert Overnight",
+          "attractions": [
+            "Rub al Khali [Empty Quarter largest desert]",
+            "Camel trekking [desert journey]",
+            "Bedouin camp [traditional nomadic settlement]",
+            "Campfire meal [authentic cuisine]",
+            "Desert stargazing [night sky]"
+          ],
+          "cost": "450-800 AED",
+          "tips": [
+            "Desert overnight quintessential UAE experience",
+            "Camel riding initially uncomfortable but memorable"
+          ]
+        },
+        {
+          "day": 10,
+          "title": "Final Relaxation",
+          "attractions": [
+            "Beach day [swimming and sunbathing]",
+            "Spa treatments [luxury wellness]",
+            "Souvenir shopping [gifts and crafts]",
+            "Farewell dinner [Arabic cuisine]",
+            "Reflection on UAE [modern Arabia]"
+          ],
+          "cost": "400-700 AED",
+          "tips": [
+            "UAE blend of tradition and modernity",
+            "Excellent hospitality and service"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "egypt-3",
+      "country": "Egypt",
+      "duration": 3,
+      "title": "Cairo Ancient Wonders",
+      "emoji": "🇪🇬",
+      "description": "Pyramids, Sphinx, Egyptian Museum, and Nile River",
+      "badge": "Quick Getaway",
+      "colorClass": "t1",
+      "currency": "EGP",
+      "days": [
+        {
+          "day": 1,
+          "title": "Giza Pyramids",
+          "attractions": [
+            "Great Pyramid of Khufu [tallest pyramid]",
+            "Pyramid of Khafre [second largest pyramid]",
+            "Great Sphinx [limestone statue with lion's body]",
+            "Solar Boat Museum [reconstructed royal boat]",
+            "Camel riding [traditional desert transport]"
+          ],
+          "cost": "400-800 EGP",
+          "tips": [
+            "Pyramids best visited early morning before heat",
+            "Wear sunscreen and hat; desert very hot"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Cairo City & Museum",
+          "attractions": [
+            "Egyptian Museum [Tutankhamun treasures]",
+            "Tahrir Square [iconic central plaza]",
+            "Citadel of Saladin [medieval fortress]",
+            "Islamic Cairo [historic old city]",
+            "Khan el-Khalili Bazaar [traditional market]"
+          ],
+          "cost": "500-900 EGP",
+          "tips": [
+            "Museum very crowded; arrive early",
+            "Khan el-Khalili authentic shopping experience"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Nile & Saqqara",
+          "attractions": [
+            "Nile River [life force of Egypt]",
+            "Felucca boat sail [traditional sailing boat]",
+            "Saqqara Pyramids [stepped pyramid complex]",
+            "Memphis [ancient Egyptian capital]",
+            "Sunset dinner cruise [evening Nile experience]"
+          ],
+          "cost": "400-800 EGP",
+          "tips": [
+            "Felucca sail magical at sunset",
+            "Saqqara less touristy than Giza"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "egypt-5",
+      "country": "Egypt",
+      "duration": 5,
+      "title": "Egypt's Pharaohs & Temples",
+      "emoji": "🇪🇬",
+      "description": "Cairo, Giza, Luxor, Aswan, temples, tombs, and Nile cruise",
+      "badge": "Best Value",
+      "colorClass": "t2",
+      "currency": "EGP",
+      "days": [
+        {
+          "day": 1,
+          "title": "Cairo Arrival",
+          "attractions": [
+            "Great Pyramids [Khufu, Khafre, Menkaure]",
+            "Great Sphinx [iconic monument]",
+            "Solar Boat Museum [pharaonic vessel]",
+            "Camel riding [desert journey]",
+            "Sunset views [golden hour light]"
+          ],
+          "cost": "400-800 EGP",
+          "tips": [
+            "Book giza early morning tours",
+            "Bring water and sun protection"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Cairo Museums & Culture",
+          "attractions": [
+            "Egyptian Museum [world's greatest collection]",
+            "Tutankhamun treasures [golden artifacts]",
+            "Citadel of Saladin [Islamic fortress]",
+            "Khan el-Khalili Bazaar [shopping bazaar]",
+            "Islamic Cairo [medieval neighborhoods]"
+          ],
+          "cost": "500-900 EGP",
+          "tips": [
+            "Museum world-class; hire guide for context",
+            "Bazaar best in morning when cooler"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Flight to Luxor",
+          "attractions": [
+            "Luxor Temple [temple in city center]",
+            "Karnak Temple Complex [massive temple site]",
+            "Valley of the Kings [royal tombs across river]",
+            "Temple of Hatshepsut [mortuary temple]",
+            "Nile views [river scenery]"
+          ],
+          "cost": "600-1100 EGP",
+          "tips": [
+            "Flight Cairo to Luxor 1.5 hours",
+            "Luxor archaeological capital of world"
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Luxor & Aswan",
+          "attractions": [
+            "Valley of the Kings [pharaonic tombs]",
+            "Mortuary temples [religious monuments]",
+            "Nile cruise [boat travel to Aswan]",
+            "Aswan Philae Temple [island temple]",
+            "Felucca sailing [traditional boats]"
+          ],
+          "cost": "700-1200 EGP",
+          "tips": [
+            "Valley of Kings incredible concentration of tombs",
+            "Nile cruise relaxing and scenic"
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Return & Reflection",
+          "attractions": [
+            "Aswan city exploration [Nile riverside]",
+            "Nubian cultural sites [African heritage]",
+            "Flight back to Cairo [evening return]",
+            "Reflection on Egypt [ancient wonders]",
+            "Souvenir hunting [papyrus and antiquities]"
+          ],
+          "cost": "400-800 EGP",
+          "tips": [
+            "Egypt incredible value for travelers",
+            "Archaeological sites deeply moving"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "egypt-10",
+      "country": "Egypt",
+      "duration": 10,
+      "title": "Complete Egyptian Journey",
+      "emoji": "🇪🇬",
+      "description": "Cairo, Giza, Luxor, Aswan, temples, tombs, Nile cruise, and Red Sea",
+      "badge": "Full Experience",
+      "colorClass": "t3",
+      "currency": "EGP",
+      "days": [
+        {
+          "day": 1,
+          "title": "Cairo Arrival",
+          "attractions": [
+            "Great Pyramids [Khufu, Khafre, Menkaure]",
+            "Great Sphinx [famous monument]",
+            "Giza Plateau [plateau with pyramids]",
+            "Camel riding [desert transport]",
+            "Evening bazaar [night market]"
+          ],
+          "cost": "400-800 EGP",
+          "tips": [
+            "Pyramids best early morning before heat",
+            "Pre-book skip-the-line tickets online"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Cairo Museums",
+          "attractions": [
+            "Egyptian Museum [greatest antiquities]",
+            "Tutankhamun treasures [golden masks and artifacts]",
+            "Mummy chamber [preserved pharaohs]",
+            "Pharaonic jewelry [golden ornaments]",
+            "Museum café [relaxation"
+          ],
+          "cost": "500-900 EGP",
+          "tips": [
+            "Museum hire guide for full understanding",
+            "Tutankhamun room most popular section"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Saqqara & Memphis",
+          "attractions": [
+            "Saqqara Pyramids [stepped pyramid oldest stone structures]",
+            "Pyramid of Djoser [architectural innovation]",
+            "Memphis ancient capital [museum and temples]",
+            "Open air museum [historical reconstructions]",
+            "Sacred animal necropolis [Apis bull tombs]"
+          ],
+          "cost": "500-900 EGP",
+          "tips": [
+            "Saqqara less crowded than Giza",
+            "Memphis ancient Egypt's former capital"
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Nile Cruise & Cairo Culture",
+          "attractions": [
+            "Nile River [Egypt's lifeblood]",
+            "Felucca sailing [traditional boat]",
+            "Khan el-Khalili Bazaar [shopping bazaar]",
+            "Citadel of Saladin [medieval fortress]",
+            "Islamic Cairo [historic neighborhoods]"
+          ],
+          "cost": "500-900 EGP",
+          "tips": [
+            "Felucca sail magical at sunset",
+            "Khan el-Khalili very authentic marketplace"
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Flight to Luxor",
+          "attractions": [
+            "Luxor Temple [temple in town center]",
+            "Karnak Temple Complex [vast temple site]",
+            "Valley of the Kings [pharaonic tomb necropolis]",
+            "Temple of Hatshepsut [unique mortuary temple]",
+            "Colossi of Memnon [giant statues]"
+          ],
+          "cost": "600-1100 EGP",
+          "tips": [
+            "Flight Cairo to Luxor comfortable 1.5 hours",
+            "Luxor archaeological wonder of world"
+          ]
+        },
+        {
+          "day": 6,
+          "title": "Luxor & Valley of Kings",
+          "attractions": [
+            "Valley of the Kings [multiple royal tombs]",
+            "King Tut's Tomb [famous burial site]",
+            "Temple of Hatshepsut [mortuary temple]",
+            "Mortuary temples [royal religious sites]",
+            "West Bank exploration [archaeological sites]"
+          ],
+          "cost": "700-1200 EGP",
+          "tips": [
+            "Valley of Kings half day minimum",
+            "West bank guides essential for understanding"
+          ]
+        },
+        {
+          "day": 7,
+          "title": "Nile Cruise to Aswan",
+          "attractions": [
+            "Nile sailing [boat journey to Aswan]",
+            "Edfu Temple [temple on river]",
+            "Kom Ombo Temple [dual temple complex]",
+            "Local villages [riverside culture]",
+            "Sunset on Nile [evening river views]"
+          ],
+          "cost": "800-1400 EGP",
+          "tips": [
+            "Nile cruise most relaxing way to see temples",
+            "Overnight boats available for 3+ days"
+          ]
+        },
+        {
+          "day": 8,
+          "title": "Aswan Temple & Culture",
+          "attractions": [
+            "Philae Temple [island temple on reservoir]",
+            "Abu Simbel [massive rock temple in south]",
+            "Aswan High Dam [modern engineering marvel]",
+            "Felucca sailing [boats between islands]",
+            "Nubian villages [cultural sites]"
+          ],
+          "cost": "800-1400 EGP",
+          "tips": [
+            "Abu Simbel most impressive; early boat tour",
+            "Nubian culture distinct from Egyptian Arab culture"
+          ]
+        },
+        {
+          "day": 9,
+          "title": "Red Sea Beach",
+          "attractions": [
+            "Flight or bus to Hurghada [Red Sea resort]",
+            "Coral reef snorkeling [underwater ecosystem]",
+            "Beach relaxation [white sand beach]",
+            "Water sports [snorkeling, diving]",
+            "Beach club [sunset dining]"
+          ],
+          "cost": "600-1100 EGP",
+          "tips": [
+            "Red Sea contrast to pharaonic monuments",
+            "Snorkeling incredible with clear warm water"
+          ]
+        },
+        {
+          "day": 10,
+          "title": "Return Home",
+          "attractions": [
+            "Final beach morning [swimming]",
+            "Souvenir shopping [papyrus, crafts]",
+            "Reflection on Egypt [ancient civilization]",
+            "Flight home [Cairo or direct]",
+            "Egypt unforgettable memories [timeless wonders]"
+          ],
+          "cost": "varies",
+          "tips": [
+            "Egypt incredible archaeological treasure",
+            "Pharaonic civilization 5000+ years old"
+          ]
+        }
+      ]
     }
   ]
 }
