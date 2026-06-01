@@ -9787,6 +9787,311 @@
           ]
         }
       ]
+    },
+    {
+      "id": "slovenia-3",
+      "country": "Slovenia",
+      "duration": 3,
+      "title": "Lake Bled Alpine Escape",
+      "emoji": "🇸🇮",
+      "description": "Alpine lakes, fairytale castles, and emerald forests",
+      "badge": "Quick Getaway",
+      "colorClass": "t1",
+      "currency": "EUR",
+      "days": [
+        {
+          "day": 1,
+          "title": "Lake Bled Arrival",
+          "attractions": [
+            "Lake Bled [Pristine glacial lake with island church and clifftop castle]",
+            "Bled Island [Small island with Church of the Assumption accessible by boat]",
+            "Bled Castle [Medieval castle perched on cliff with museum and restaurant]",
+            "Bled Gorge [Scenic canyon with hiking trails and waterfall]",
+            "Pletna Boats [Traditional wooden boats offering lake tours]"
+          ],
+          "cost": "45-75 EUR",
+          "tips": [
+            "Rent bicycle to explore around lake like locals",
+            "Arrive early morning for peaceful lake experience before crowds"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Bohinj & Alpine Villages",
+          "attractions": [
+            "Lake Bohinj [Larger Alpine lake surrounded by Julian Alps]",
+            "Vogar Waterfall [Beautiful cascade accessible by moderate hiking]",
+            "Radovljica Village [Medieval honey town with apiary museums]",
+            "Alpine Meadows [Scenic high-altitude pastures with wildflowers]",
+            "Mountain Huts [Traditional lodges serving local cheese and bread]"
+          ],
+          "cost": "40-70 EUR",
+          "tips": [
+            "Lake Bohinj less crowded than Bled; equally beautiful",
+            "Honey tasting in Radovljica; local beekeeping tradition"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Postojna & Karst",
+          "attractions": [
+            "Postojna Cave [Vast stalactite and stalagmite formations with train rides]",
+            "Predjama Castle [Castle built into cave mouth on cliff]",
+            "Karst Plateau [UNESCO limestone landscape with sinkholes]",
+            "Underground River [Subterranean waterways in cave system]",
+            "Skocjan Caves [UNESCO site with dramatic canyon and caves]"
+          ],
+          "cost": "50-85 EUR",
+          "tips": [
+            "Cave tours require advance booking in high season",
+            "Bring light jacket; caves maintain cool temperature year-round"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "serbia-3",
+      "country": "Serbia",
+      "duration": 3,
+      "title": "Belgrade Vibrant Culture",
+      "emoji": "🇷🇸",
+      "description": "Danube river charm, nightlife, and Balkan culture",
+      "badge": "Quick Getaway",
+      "colorClass": "t1",
+      "currency": "RSD",
+      "days": [
+        {
+          "day": 1,
+          "title": "Belgrade Old Town",
+          "attractions": [
+            "Kalemegdan Fortress [Strategic fortress overlook Danube confluence]",
+            "Danube River [Scenic views from fortress and riverfront walks]",
+            "Republic Square [Historic central square with museums]",
+            "St. Sava Church [Orthodox church with golden dome]",
+            "Old Town Streets [Narrow alleys with cafes and boutiques]"
+          ],
+          "cost": "1500-2500 RSD",
+          "tips": [
+            "Belgrade very affordable; great food and drinks at low prices",
+            "Nightlife centered in Dorćol district; lively until early morning"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Museums & Culture",
+          "attractions": [
+            "National Museum [Art collections spanning medieval to modern periods]",
+            "Nikola Tesla Museum [Exhibits on inventor's life and work]",
+            "Tito's Tomb [Memorial to Yugoslav leader with museum]",
+            "Military Museum [Weapons and military history exhibits]",
+            "Jewish Synagogue [Historic Sephardic synagogue with tours]"
+          ],
+          "cost": "1200-2000 RSD",
+          "tips": [
+            "Many museums free on certain days; check schedules",
+            "Tesla Museum fascinating for science enthusiasts"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Zemun & River Cruises",
+          "attractions": [
+            "Zemun District [Austro-Hungarian architecture across Danube]",
+            "Danube Tower [Observation tower with city and river views]",
+            "Gardos Tower [Medieval tower in Zemun with fortification]",
+            "River Cruise [Danube boat tour at sunset]",
+            "Fisherman's Wharf [Riverside restaurants with fresh fish]"
+          ],
+          "cost": "1400-2300 RSD",
+          "tips": [
+            "Zemun best visited afternoon and evening",
+            "River cruises romantic at sunset; book in advance"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bosnia-3",
+      "country": "Bosnia and Herzegovina",
+      "duration": 3,
+      "title": "Mostar Bridge & Mountains",
+      "emoji": "🇧🇦",
+      "description": "Ottoman heritage, war history, and mountain landscapes",
+      "badge": "Quick Getaway",
+      "colorClass": "t1",
+      "currency": "BAM",
+      "days": [
+        {
+          "day": 1,
+          "title": "Sarajevo History",
+          "attractions": [
+            "Stari Grad [Ottoman old town with narrow bazaar streets]",
+            "Sebilj Fountain [Iconic octagonal fountain in main plaza]",
+            "Gazi Husrev-Beg Mosque [Ottoman mosque with tilework and courtyard]",
+            "Sarajevo War Museum [Historical exhibits on 1990s conflict]",
+            "Tunnel Museum [Underground tunnel used during siege]"
+          ],
+          "cost": "30-60 BAM",
+          "tips": [
+            "Old town very walkable and compact",
+            "War museums sobering but important historical context"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Mostar Bridge",
+          "attractions": [
+            "Stari Most [16th-century Ottoman bridge rebuilt after war]",
+            "Mostar Old Town [Ottoman architecture alongside Neretva river]",
+            "Kriva Cuprija [Old bridge in picturesque riverside setting]",
+            "Museum of War [Exhibits on town's war experience]",
+            "Bridge Divers [Tradition of jumping from Stari Most into river]"
+          ],
+          "cost": "35-65 BAM",
+          "tips": [
+            "Train from Sarajevo to Mostar takes 2.5 hours",
+            "Watch bridge divers in summer (dangerous tradition; not recommended to attempt)"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Konjic & Nature",
+          "attractions": [
+            "Konjic Fortress [15th-century fortress with commanding views]",
+            "Underground Military Bunker [Secret WWII and Cold War facility]",
+            "Naretva River Valley [Scenic valley with agricultural landscapes]",
+            "Thermal Springs [Natural hot springs with spa facilities]",
+            "Mountain Hiking [Alpine trails in surrounding hills]"
+          ],
+          "cost": "40-70 BAM",
+          "tips": [
+            "Underground bunker tours fascinating but claustrophobic",
+            "Naretva Valley best for nature photography and hiking"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "malta-3",
+      "country": "Malta",
+      "duration": 3,
+      "title": "Mediterranean Island Paradise",
+      "emoji": "🇲🇹",
+      "description": "Ancient temples, crystal waters, and coastal villages",
+      "badge": "Quick Getaway",
+      "colorClass": "t1",
+      "currency": "EUR",
+      "days": [
+        {
+          "day": 1,
+          "title": "Valletta Historic City",
+          "attractions": [
+            "Valletta [UNESCO fortified capital city with grid street layout]",
+            "St. John's Co-Cathedral [Knights of Malta cathedral with baroque interior]",
+            "Grand Master's Palace [Former seat of Grand Masters with government offices]",
+            "Upper Barracca Gardens [Gardens with views across Grand Harbour]",
+            "Mediterranean Sea Views [Scenic coastal vistas from city walls]"
+          ],
+          "cost": "40-70 EUR",
+          "tips": [
+            "Valletta very walkable; compact historic city",
+            "Museums and cathedrals require modest dress code"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Ancient Temples & Gozo",
+          "attractions": [
+            "Hagar Qim Temple [5,500-year-old megalithic temple from neolithic era]",
+            "Mnajdra Temple [Ancient temples aligned with celestial events]",
+            "Ferry to Gozo [Island ferry across crystal blue waters]",
+            "Ggantija Temples [Oldest standing buildings in Europe on Gozo]",
+            "Azure Window [Famous limestone rock formation on coastline]"
+          ],
+          "cost": "50-85 EUR",
+          "tips": [
+            "Ancient temples among world's oldest structures; worthwhile visit",
+            "Ferry to Gozo scenic 30-minute journey"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Beaches & Swimming",
+          "attractions": [
+            "Blue Lagoon [Crystal clear shallow lagoon between Malta and Comino]",
+            "Golden Bay [Sandy beach with warm shallow water]",
+            "Boat Tours [Scenic cruises around coastline and hidden coves]",
+            "Snorkeling [Excellent visibility and marine life]",
+            "Coastal Caves [Natural caves accessible by boat or swimming]"
+          ],
+          "cost": "45-80 EUR",
+          "tips": [
+            "Summer crowds at Blue Lagoon; go early morning",
+            "Water incredibly warm and clear for Mediterranean swimming"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "albania-3",
+      "country": "Albania",
+      "duration": 3,
+      "title": "Tirana & Riviera",
+      "emoji": "🇦🇱",
+      "description": "Affordable Balkan destination with beaches and mountains",
+      "badge": "Quick Getaway",
+      "colorClass": "t1",
+      "currency": "ALL",
+      "days": [
+        {
+          "day": 1,
+          "title": "Tirana City Life",
+          "attractions": [
+            "Skanderbeg Square [Central plaza with government and cultural buildings]",
+            "Et'hem Bey Mosque [Ottoman mosque with colorful dome]",
+            "National Museum [Albanian history from ancient to modern times]",
+            "Artificial Lake [Scenic lake for walking and relaxation]",
+            "Colored Apartments [Brightly painted residential buildings]"
+          ],
+          "cost": "1200-2000 ALL",
+          "tips": [
+            "Albania extremely affordable compared to Western Europe",
+            "Many restaurants offer traditional Balkan food at low prices"
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Dajti Mountain",
+          "attractions": [
+            "Dajti Ekspres [Cable car to mountain top above Tirana]",
+            "Mountain Hiking [Trails through forest with city views]",
+            "Alpine Restaurant [Traditional restaurant with meat dishes]",
+            "Weekend Market [Local goods sold by mountain villagers]",
+            "Panoramic Views [City and valley vistas from elevation]"
+          ],
+          "cost": "1400-2300 ALL",
+          "tips": [
+            "Cable car experience unique and popular with locals",
+            "Sunset views from mountain top spectacular"
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Riviera Beaches",
+          "attractions": [
+            "Saranda Coastal Town [Beach resort with Greek island atmosphere]",
+            "Ksamil Beach [Small island beaches near Greek border]",
+            "Butrint Ancient Ruins [UNESCO archaeological site with Greek and Roman remains]",
+            "Blue Eye Spring [Natural spring with brilliant blue water]",
+            "Fresh Seafood [Beachfront restaurants with daily catch]"
+          ],
+          "cost": "1600-2800 ALL",
+          "tips": [
+            "Bus from Tirana to Saranda takes 5 hours but scenic",
+            "Butrint worth visit for ancient history and natural setting"
+          ]
+        }
+      ]
     }
   ]
 }
