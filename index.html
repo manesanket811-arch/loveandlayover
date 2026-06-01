@@ -257,6 +257,20 @@
   }
   .eyebrow .pulse{width:9px;height:9px;border-radius:50%;background:#0fb6a8;animation:pulse 1.8s infinite}
   @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(15,182,168,.5)}50%{box-shadow:0 0 0 7px rgba(15,182,168,0)}}
+  @keyframes fadeIn{0%{opacity:0}100%{opacity:1}}
+  @keyframes fadeInUp{0%{opacity:0;transform:translateY(20px)}100%{opacity:1;transform:translateY(0)}}
+  @keyframes fadeInDown{0%{opacity:0;transform:translateY(-20px)}100%{opacity:1;transform:translateY(0)}}
+  @keyframes fadeInLeft{0%{opacity:0;transform:translateX(-20px)}100%{opacity:1;transform:translateX(0)}}
+  @keyframes fadeInRight{0%{opacity:0;transform:translateX(20px)}100%{opacity:1;transform:translateX(0)}}
+  @keyframes slideUp{0%{transform:translateY(40px);opacity:0}100%{transform:translateY(0);opacity:1}}
+  @keyframes shimmer{0%{background-position:0% 0%}100%{background-position:100% 0%}}
+  /* Animation utility classes */
+  .reveal{animation-fill-mode:both;opacity:0}
+  .fade-in{animation:fadeIn 0.5s ease-out forwards}
+  .fade-in-up{animation:fadeInUp 0.5s ease-out forwards}
+  .fade-in-down{animation:fadeInDown 0.5s ease-out forwards}
+  .fade-in-left{animation:fadeInLeft 0.6s ease-out forwards}
+  .fade-in-right{animation:fadeInRight 0.6s ease-out forwards}
   .hero h1{font-size:clamp(2.8rem,6vw,5rem);margin-bottom:22px;color:var(--ink);text-shadow:none}
   .hero h1 .hl{color:#0fb6a8;position:relative;white-space:nowrap}
   .hero h1 .hl svg{position:absolute;left:0;bottom:-10px;width:100%;height:14px;stroke:#0fb6a8}
@@ -512,17 +526,17 @@
 <section class="hero">
   <div class="wrap">
     <div class="hero-text">
-      <span class="eyebrow"><span class="pulse"></span>New episodes every week · Subscribe now</span>
-      <h1>Real travel stories,<br>honest <span class="hl">tips & tricks<svg viewBox="0 0 200 14" preserveAspectRatio="none"><path d="M2 9 C50 2 150 2 198 8" stroke="#ff6b35" stroke-width="4" fill="none" stroke-linecap="round"/></svg></span></h1>
-      <p class="lead">Join us as we explore the world. We share real travel experiences, insider tips, and ready-to-use itineraries so you can plan your next adventure with confidence.</p>
-      <div class="hero-cta">
+      <span class="eyebrow fade-in" style="animation-duration:0.4s"><span class="pulse"></span>New episodes every week · Subscribe now</span>
+      <h1 class="fade-in-down" style="animation-duration:0.6s; animation-delay:0.1s">Real travel stories,<br>honest <span class="hl">tips & tricks<svg viewBox="0 0 200 14" preserveAspectRatio="none"><path d="M2 9 C50 2 150 2 198 8" stroke="#ff6b35" stroke-width="4" fill="none" stroke-linecap="round"/></svg></span></h1>
+      <p class="lead fade-in-up" style="animation-duration:0.6s; animation-delay:0.2s">Join us as we explore the world. We share real travel experiences, insider tips, and ready-to-use itineraries so you can plan your next adventure with confidence.</p>
+      <div class="hero-cta fade-in-up" style="animation-duration:0.6s; animation-delay:0.3s">
         <a href="#videos" class="btn coral">▶ Watch our videos</a>
         <a href="#guides" class="btn">Browse itineraries</a>
       </div>
       <div class="stats">
-        <div class="stat"><div class="n">25+</div><div class="l">Destinations explored</div></div>
-        <div class="stat"><div class="n">100%</div><div class="l">Free itineraries</div></div>
-        <div class="stat"><div class="n">Real</div><div class="l">Travel experiences</div></div>
+        <div class="stat fade-in-up" style="animation-duration:0.5s; animation-delay:0.4s"><div class="n">25+</div><div class="l">Destinations explored</div></div>
+        <div class="stat fade-in-up" style="animation-duration:0.5s; animation-delay:0.5s"><div class="n">100%</div><div class="l">Free itineraries</div></div>
+        <div class="stat fade-in-up" style="animation-duration:0.5s; animation-delay:0.6s"><div class="n">Real</div><div class="l">Travel experiences</div></div>
       </div>
     </div>
     <div class="hero-visual">
@@ -607,17 +621,17 @@
     <div style="margin-top:60px">
       <h3 style="font-size:1.5rem;margin-bottom:30px;text-align:center">Featured Destination Guides</h3>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
-        <a href="destinations/singapore.html" style="text-decoration:none;color:inherit;background:#fff;padding:28px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.08);transition:all .3s;display:flex;flex-direction:column">
+        <a href="destinations/singapore.html" class="fade-in-up" style="text-decoration:none;color:inherit;background:#fff;padding:28px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.08);transition:all .3s;display:flex;flex-direction:column;animation-duration:0.5s;animation-delay:0s">
           <h4 style="color:#ff6b35;margin-bottom:12px;font-size:1.1rem">🏙️ Singapore Travel Guide</h4>
           <p style="color:#56646a;font-size:.9rem;flex:1">Complete guide with Marina Bay, Gardens by the Bay, hawker food, and 3/5/10-day itineraries.</p>
           <span style="color:#ff6b35;font-weight:600;margin-top:16px">View Guide →</span>
         </a>
-        <a href="destinations/japan.html" style="text-decoration:none;color:inherit;background:#fff;padding:28px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.08);transition:all .3s;display:flex;flex-direction:column">
+        <a href="destinations/japan.html" class="fade-in-up" style="text-decoration:none;color:inherit;background:#fff;padding:28px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.08);transition:all .3s;display:flex;flex-direction:column;animation-duration:0.5s;animation-delay:0.1s">
           <h4 style="color:#ff6b35;margin-bottom:12px;font-size:1.1rem">🗻 Japan Travel Guide</h4>
           <p style="color:#56646a;font-size:.9rem;flex:1">Tokyo, Kyoto, Mt. Fuji exploration with detailed day-by-day plans for all budgets and trip lengths.</p>
           <span style="color:#ff6b35;font-weight:600;margin-top:16px">View Guide →</span>
         </a>
-        <a href="destinations/australia.html" style="text-decoration:none;color:inherit;background:#fff;padding:28px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.08);transition:all .3s;display:flex;flex-direction:column">
+        <a href="destinations/australia.html" class="fade-in-up" style="text-decoration:none;color:inherit;background:#fff;padding:28px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.08);transition:all .3s;display:flex;flex-direction:column;animation-duration:0.5s;animation-delay:0.2s">
           <h4 style="color:#ff6b35;margin-bottom:12px;font-size:1.1rem">🏖️ Australia Travel Guide</h4>
           <p style="color:#56646a;font-size:.9rem;flex:1">Sydney, Great Barrier Reef, Uluru and the Outback. Complete Australian adventure itineraries.</p>
           <span style="color:#ff6b35;font-weight:600;margin-top:16px">View Guide →</span>
@@ -639,28 +653,28 @@
       <p>Join thousands of travelers who've used our guides for stress-free adventures.</p>
     </div>
     <div class="tgrid">
-      <div class="tcard reveal">
+      <div class="tcard reveal fade-in-up" style="animation-duration:0.5s;animation-delay:0s">
         <div class="avatar a">S</div>
         <h4>Sarah Chen</h4>
         <div class="loc">Singapore</div>
         <div class="stars">★★★★★</div>
         <p>"Their Singapore itinerary was incredibly detailed. We saw things other tourists miss. Worth every second reading!"</p>
       </div>
-      <div class="tcard reveal">
+      <div class="tcard reveal fade-in-up" style="animation-duration:0.5s;animation-delay:0.1s">
         <div class="avatar b">M</div>
         <h4>Marco Silva</h4>
         <div class="loc">Brazil</div>
         <div class="stars">★★★★★</div>
         <p>"Finally, a travel channel that feels genuine. No overspending tips here—just honest advice and real costs."</p>
       </div>
-      <div class="tcard reveal">
+      <div class="tcard reveal fade-in-up" style="animation-duration:0.5s;animation-delay:0.2s">
         <div class="avatar c">A</div>
         <h4>Aisha Patel</h4>
         <div class="loc">India</div>
         <div class="stars">★★★★★</div>
         <p>"Watched their videos, followed their guides, had the best trip. The food recommendations alone are worth it!"</p>
       </div>
-      <div class="tcard reveal">
+      <div class="tcard reveal fade-in-up" style="animation-duration:0.5s;animation-delay:0.3s">
         <div class="avatar d">J</div>
         <h4>James Murphy</h4>
         <div class="loc">UK</div>
@@ -1063,6 +1077,26 @@
 
   // Load videos on page load
   window.addEventListener('load', loadLatestVideos);
+
+  // Enhanced scroll-triggered animations with Intersection Observer
+  const animatedElements = document.querySelectorAll('[class*="fade-in"]');
+  const animationObserverOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const animationObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        animationObserver.unobserve(entry.target);
+      }
+    });
+  }, animationObserverOptions);
+
+  animatedElements.forEach(el => {
+    animationObserver.observe(el);
+  });
 
 </script>
 </body>
