@@ -318,7 +318,7 @@ function renderItineraries() {
     return `
     <div class="card" style="cursor:pointer;" onclick="openModal('${it.id}')">
       <div class="card-header">
-        <h3><img src="${flagUrl}" alt="${it.country}" style="width:28px; height:20px; vertical-align:middle; margin-right:8px; border-radius:2px;">${it.country}</h3>
+        <h3><img src="${flagUrl}" alt="${it.country}" loading="lazy" style="width:28px; height:20px; vertical-align:middle; margin-right:8px; border-radius:2px;">${it.country}</h3>
         <div class="duration">${it.duration} Days</div>
         <div class="badge">${it.badge || 'Explorer'}</div>
       </div>
@@ -350,7 +350,7 @@ function openModal(itineraryId) {
 
   const countryCode = countryFlags[itinerary.country];
   const flagUrl = `https://flagcdn.com/${countryCode}.svg`;
-  title.innerHTML = `<img src="${flagUrl}" alt="${itinerary.country}" style="width:32px; height:24px; vertical-align:middle; margin-right:10px; border-radius:2px;">${itinerary.title}`;
+  title.innerHTML = `<img src="${flagUrl}" alt="${itinerary.country}" loading="lazy" style="width:32px; height:24px; vertical-align:middle; margin-right:10px; border-radius:2px;">${itinerary.title}`;
 
   let daysHtml = '<div style="margin-bottom:20px;"><strong style="color:var(--accent); font-size:1.1rem;">Budget estimate:</strong> ' + itinerary.days.map(d => d.cost).join(' → ') + '</div>';
   daysHtml += itinerary.days.map(day => `
@@ -522,7 +522,7 @@ function updateTicker() {
 
     html += `
       <div class="ticker-item">
-        <img src="${flagUrl}" alt="${it.country}" class="ticker-flag" onerror="this.style.display='none'">
+        <img src="${flagUrl}" alt="${it.country}" class="ticker-flag" loading="lazy" onerror="this.style.display='none'">
         <span class="ticker-currency">1${currency}=<span class="ticker-rate">₹${rate.toFixed(2)}</span></span>
       </div>
     `;

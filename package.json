@@ -1,0 +1,15 @@
+{
+  "name": "love-and-layovers",
+  "version": "1.0.0",
+  "description": "Travel planning website with destination guides and itinerary builder",
+  "type": "module",
+  "scripts": {
+    "optimize-images": "node optimize-images.js"
+  },
+  "devDependencies": {
+    "imagemin": "^8.0.1",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-webp": "^7.0.0"
+  }
+}
