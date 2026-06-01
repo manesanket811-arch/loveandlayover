@@ -120,21 +120,7 @@ footer .logo { color:var(--paper); }
       <label for="country-select">Select Country:</label>
       <select id="country-select">
         <option value="">All Countries</option>
-        <option value="Singapore">🇸🇬 Singapore</option>
-        <option value="Thailand">🇹🇭 Thailand</option>
-        <option value="Vietnam">🇻🇳 Vietnam</option>
-        <option value="South Korea">🇰🇷 South Korea</option>
-        <option value="Cambodia">🇰🇭 Cambodia</option>
-        <option value="Philippines">🇵🇭 Philippines</option>
-        <option value="Indonesia">🇮🇩 Indonesia</option>
-        <option value="Taiwan">🇹🇼 Taiwan</option>
-        <option value="Hong Kong">🇭🇰 Hong Kong</option>
-        <option value="Laos">🇱🇦 Laos</option>
-        <option value="Myanmar">🇲🇲 Myanmar</option>
-        <option value="India">🇮🇳 India</option>
-        <option value="Nepal">🇳🇵 Nepal</option>
-        <option value="Sri Lanka">🇱🇰 Sri Lanka</option>
-        <option value="Maldives">🇲🇻 Maldives</option>
+        <!-- Options populated dynamically from data -->
       </select>
     </div>
 
@@ -221,6 +207,26 @@ fetch('/data/itineraries.json')
       itineraryMap[it.id] = it;
     });
     console.log('Map keys:', Object.keys(itineraryMap).slice(0, 5));
+
+    // Dynamically populate country dropdown
+    const uniqueCountries = [];
+    const seen = new Set();
+    allItineraries.forEach(it => {
+      if (!seen.has(it.country)) {
+        seen.add(it.country);
+        uniqueCountries.push(it.country);
+      }
+    });
+    uniqueCountries.sort();
+
+    const countrySelect = document.getElementById('country-select');
+    uniqueCountries.forEach(country => {
+      const option = document.createElement('option');
+      option.value = country;
+      option.textContent = country;
+      countrySelect.appendChild(option);
+    });
+
     renderItineraries();
   })
   .catch(error => {
