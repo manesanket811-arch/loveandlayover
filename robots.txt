@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
 Sitemap: https://loveandlayovers.com/sitemap.xml
+# Test: Workflow trigger check - 2026-06-01
