@@ -563,10 +563,10 @@
       <h2>Latest adventures, on screen</h2>
       <p>New episodes every trip. Watch first, then steal our exact routes below.</p>
     </div>
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:40px; margin-top:60px; align-items:start;">
+    <div style="display:grid; grid-template-columns:50% 50%; gap:30px; margin-top:60px; align-items:start;">
       <!-- YouTube Column -->
-      <div>
-        <div class="video-grid" id="videoGrid">
+      <div style="min-width:0;">
+        <div class="video-grid" id="videoGrid" style="grid-template-columns:1fr;">
           <a class="vcard reveal" href="https://www.youtube.com/shorts/3ZuyHb8lAYg" target="_blank" rel="noopener">
             <div class="vthumb a"><iframe src="https://www.youtube-nocookie.com/embed/3ZuyHb8lAYg" allowfullscreen=""></iframe></div>
             <div class="vmeta"><h3>Latest Short</h3><div class="info">Quick travel tips · Destination moments</div></div>
@@ -584,9 +584,9 @@
       </div>
 
       <!-- Instagram Column -->
-      <div>
-        <h3 style="margin-bottom:20px; color:var(--ink);">Daily Travel Moments</h3>
-        <div class="insta-widget reveal" style="max-height:600px; overflow:hidden; border-radius:12px;">
+      <div style="min-width:0;">
+        <h3 style="margin-bottom:20px; color:var(--ink); margin-top:0;">Daily Travel Moments</h3>
+        <div style="max-height:550px; overflow:hidden; border-radius:12px; box-shadow:0 12px 40px rgba(13,38,43,.1);">
           <!-- Elfsight Instagram Feed | Love and Layover -->
           <script src="https://elfsightcdn.com/platform.js" async></script>
           <div class="elfsight-app-2a41819a-389a-483c-8aad-f0b729f4b159" data-elfsight-app-lazy></div>
