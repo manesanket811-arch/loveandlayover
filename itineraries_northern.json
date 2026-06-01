@@ -1,0 +1,1310 @@
+[
+  {
+    "id": "denmark-3",
+    "country": "Denmark",
+    "duration": 3,
+    "title": "Copenhagen's Classic Weekend",
+    "emoji": "🇩🇰",
+    "description": "Explore Copenhagen's iconic landmarks, historic palaces, and colorful harbor districts in a quick 3-day escape.",
+    "badge": "Quick Getaway",
+    "colorClass": "t1",
+    "currency": "DKK",
+    "days": [
+      {
+        "day": 1,
+        "title": "Historic Copenhagen",
+        "attractions": [
+          "Amalienborg Palace [Royal residence with daily changing of the guard ceremony in Frederiksstaden]",
+          "Nyhavn Harbor [18th-century canal-side district with colorful townhouses, restaurants, and photo opportunities]",
+          "Tivoli Gardens [Historic amusement park with rides, gardens, and evening illuminations since 1843]",
+          "Stroget Street [Europe's longest pedestrian shopping street spanning 1.1km through central Copenhagen]",
+          "Rosenborg Castle [Renaissance palace housing the Crown Jewels and royal apartments]"
+        ],
+        "cost": "400-600 DKK",
+        "tips": [
+          "Get a Copenhagen Card for unlimited public transport and museum entries",
+          "Visit Tivoli in evening for magical light displays (additional 30 DKK entry)"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Art & Culture",
+        "attractions": [
+          "Christiansborg Palace [Seat of Parliament with grand halls, royal kitchens, and art collections]",
+          "National Museum of Denmark [Exhibits covering Danish history from Stone Age to modern times]",
+          "Little Mermaid Statue [Iconic bronze sculpture on the waterfront inspired by Hans Christian Andersen tale]",
+          "Kastellet [Star-shaped fortress from 1662 with moats, gardens, and harbor views]",
+          "Ny Carlsberg Glyptotek [Art museum with Egyptian, Etruscan, and modern European masterpieces]"
+        ],
+        "cost": "350-500 DKK",
+        "tips": [
+          "Museums often have free entry on Sundays for residents; check ahead",
+          "Rent a bicycle to explore the city like locals do"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Roskilde Day Trip",
+        "attractions": [
+          "Roskilde Cathedral [UNESCO-listed medieval cathedral with tombs of Danish kings and queens]",
+          "Viking Ship Museum [Five authentic Norse vessels from 11th century with interactive exhibits]",
+          "Roskilde Harbor [Charming waterfront district with restaurants and recreational activities]",
+          "Frederiksborg Castle [Renaissance palace in Hillerød with royal collections, accessible via day trip]",
+          "Roskilde Market Square [Historic center with cafes, shops, and local atmosphere]"
+        ],
+        "cost": "300-450 DKK",
+        "tips": [
+          "Train from Copenhagen to Roskilde takes 25 minutes and costs ~80 DKK return",
+          "Pack lunch or try traditional Danish smørrebrød open-faced sandwiches"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "denmark-5",
+    "country": "Denmark",
+    "duration": 5,
+    "title": "Denmark's Coastal & Royal Experience",
+    "emoji": "🇩🇰",
+    "description": "Discover Copenhagen's vibrant culture, royal palaces, Viking heritage, and charming coastal towns across 5 days.",
+    "badge": "Best Value",
+    "colorClass": "t2",
+    "currency": "DKK",
+    "days": [
+      {
+        "day": 1,
+        "title": "Copenhagen Highlights",
+        "attractions": [
+          "Nyhavn Harbor [Iconic 17th-century waterfront with pastel buildings, cafes, and canal tours]",
+          "Amalienborg Palace [Royal winter residence with ceremonial Changing of the Guard at noon]",
+          "Christiansborg Palace [Neo-Baroque parliament building with royal receptions halls and throne room]",
+          "Rosenborg Castle [Renaissance palace displaying Danish Crown Jewels and royal artifacts]",
+          "Stroget Shopping Street [Pedestrian thoroughfare with boutiques, galleries, and street performers]"
+        ],
+        "cost": "450-650 DKK",
+        "tips": [
+          "Purchase Copenhagen Card (3-day) for 429 DKK covering transport and 70+ attractions",
+          "Evening stroll along Nyhavn offers best photo opportunities at sunset"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Museums & Modern Art",
+        "attractions": [
+          "Ny Carlsberg Glyptotek [Art museum housing Egyptian, Mediterranean, and modern collections]",
+          "National Museum [Comprehensive Danish history from prehistoric times to contemporary era]",
+          "Thorvaldsen Museum [Neoclassical sculptor's works and personal collection in historic building]",
+          "Tivoli Gardens [Historic theme park with vintage wooden rides and evening entertainment]",
+          "Little Mermaid Statue [Bronze sculpture in Kastellet fortress area overlooking the harbor]"
+        ],
+        "cost": "400-550 DKK",
+        "tips": [
+          "Many museums are free for children under 18 and students with valid ID",
+          "Tivoli tickets cost extra (around 130 DKK for entry); rides require additional payment"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Roskilde & Viking Heritage",
+        "attractions": [
+          "Roskilde Cathedral [UNESCO site containing remains of 39 Danish monarchs in chapels and crypts]",
+          "Viking Ship Museum [Five preserved Viking vessels with interactive maritime history exhibits]",
+          "Roskilde Fjord [Scenic waterway with sailing opportunities and coastal villages]",
+          "Frederiksborg Castle [Magnificent Renaissance palace with 60 rooms in nearby Hillerød]",
+          "Roskilde Settlement Museum [Open-air exhibition of medieval houses and craftspeople]"
+        ],
+        "cost": "350-500 DKK",
+        "tips": [
+          "Train to Roskilde costs ~80 DKK return and takes 25 minutes from central station",
+          "Combine Roskilde Cathedral and Viking Ship Museum tickets for discount"
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Malmö, Sweden Day Trip",
+        "attractions": [
+          "Malmö Castle [Renaissance fortress housing historical museum and art exhibitions]",
+          "Stortorget Square [Historic town square with colorful Renaissance buildings and restaurants]",
+          "Turning Torso [Modern 190-meter twisted skyscraper dominating Malmö's skyline]",
+          "St. Petri Church [Medieval Gothic church with intricate interior decorations and tower views]",
+          "Lilla Torg [Charming old square with Half-timbered buildings, cafes, and boutique shops]"
+        ],
+        "cost": "500-700 DKK",
+        "tips": [
+          "Øresund Bridge train to Malmö costs ~150 DKK return and takes 35 minutes",
+          "Swedish Kronor useful but EUR often accepted; ATMs readily available"
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Beaches & Relaxation",
+        "attractions": [
+          "Amager Beach Park [8km urban beach with swimming, beach volleyball, and waterfront dining]",
+          "Vedbæk Beach [Sandy north Zealand coastal town with charming harbor and seafood restaurants]",
+          "Tåsinge & Langeland Islands [South Danish islands with rolling landscapes, lighthouses, and beaches]",
+          "Dyrehaven Forest [Ancient royal hunting forest with 2000 roaming deer and cycling trails]",
+          "Helsingør (Elsinore) [Coastal town with Kronborg Castle, inspiration for Hamlet's castle]"
+        ],
+        "cost": "300-450 DKK",
+        "tips": [
+          "Beach season runs June-August; water temperatures peak in August around 17°C",
+          "Rent bicycles (around 100-150 DKK/day) for island exploration"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "denmark-10",
+    "country": "Denmark",
+    "duration": 10,
+    "title": "Denmark: From Castles to Coasts",
+    "emoji": "🇩🇰",
+    "description": "Comprehensive Danish exploration covering Copenhagen, North Zealand castles, Jutland peninsula, and island experiences.",
+    "badge": "Full Experience",
+    "colorClass": "t3",
+    "currency": "DKK",
+    "days": [
+      {
+        "day": 1,
+        "title": "Copenhagen Old Town",
+        "attractions": [
+          "Nyhavn Waterfront [Historic 17th-century harbor with 88 colorful merchant houses and canal tours]",
+          "Amalienborg Palace [Rococo royal residence with daily 11:30 AM changing of the guards ceremony]",
+          "Frederiksstaden District [Elegant 18th-century royal quarter with classical architecture]",
+          "Little Mermaid Statue [Iconic bronze sculpture in Kastellet fortress on harbor promenade]",
+          "Stroget Street [Pedestrian shopping district spanning 1.1km with boutiques and street performers]"
+        ],
+        "cost": "400-600 DKK",
+        "tips": [
+          "Start early to beat crowds at Nyhavn and Little Mermaid",
+          "Photography best at golden hour (sunset) for Nyhavn buildings"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Palaces & Museums",
+        "attractions": [
+          "Rosenborg Castle [Renaissance palace with Crown Jewels, royal apartments, and throne room]",
+          "Christiansborg Palace [Parliament building with royal reception rooms and throne throne]",
+          "Ny Carlsberg Glyptotek [Art museum with Egyptian, Mediterranean, and French collections]",
+          "Kastellet Fortress [Star-shaped 17th-century military fortress with moats and windmill]",
+          "National Museum [Comprehensive Danish history from stone age to present day]"
+        ],
+        "cost": "450-700 DKK",
+        "tips": [
+          "Museums often have free Thursday evening hours (check individual websites)",
+          "Copenhagen Card provides unlimited museum access and public transport"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "North Zealand Castles",
+        "attractions": [
+          "Frederiksborg Castle [Renaissance palace with 60 rooms, Baroque gardens, and art museum]",
+          "Kronborg Castle [UNESCO fortress in Elsinore, inspiration for Shakespeare's Hamlet]",
+          "Lake Esrum [Denmark's largest lake surrounded by forests and historic monasteries]",
+          "Helsingør Harbor Town [Medieval port city with charming streets, restaurants, and coastal walks]",
+          "Tåsinge Beach & Coastal Path [Scenic Danish Riviera coastline with sandy beaches]"
+        ],
+        "cost": "350-550 DKK",
+        "tips": [
+          "Rent car or take trains (individual tickets ~80-120 DKK) to reach North Zealand attractions",
+          "Combine Frederiksborg and Kronborg in one day trip from Copenhagen"
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Viking Heritage & Roskilde",
+        "attractions": [
+          "Viking Ship Museum [Five preserved 11th-century Norse vessels with interactive exhibits]",
+          "Roskilde Cathedral [UNESCO site containing tombs of 39 Danish monarchs since 1080]",
+          "Roskilde Fjord [Scenic waterway with sailing opportunities, kayaking, and coastal villages]",
+          "Frederiksborg Castle Second Visit [If missed previous day; gardens are spectacular]",
+          "Roskilde Market Square [Historic center with traditional Danish restaurants and cafes]"
+        ],
+        "cost": "300-500 DKK",
+        "tips": [
+          "Train to Roskilde: 25 minutes, ~80 DKK return from Copenhagen",
+          "Combine Viking Ship Museum and Cathedral tickets for 10% discount"
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Malmö & Swedish Riviera",
+        "attractions": [
+          "Malmö Castle [Renaissance fortress with historical museum, art galleries, and sea views]",
+          "Stortorget Square [Historic marketplace surrounded by colorful Renaissance buildings]",
+          "Turning Torso [Modern 190-meter twisted residential skyscraper, architectural icon]",
+          "St. Petri Church [Gothic medieval church with ornate interior and panoramic tower]",
+          "Lilla Torg [Picturesque old square with half-timbered houses and craft shops]"
+        ],
+        "cost": "500-750 DKK",
+        "tips": [
+          "Øresund Bridge train to Malmö: 35 minutes, ~150 DKK return",
+          "Malmö walkable city; rent bicycle for waterfront promenade and beaches"
+        ]
+      },
+      {
+        "day": 6,
+        "title": "Aarhus & Jutland Peninsula",
+        "attractions": [
+          "ARoS Art Museum [Contemporary art museum with rainbow sky bridge offering city views]",
+          "Aarhus Cathedral [Medieval Gothic cathedral with Renaissance altarpiece and organ]",
+          "Latin Quarter [Historic district with narrow cobblestone streets, galleries, and cafes]",
+          "Moesgård Museum [Archaeological museum with Viking exhibits and ancient artifacts]",
+          "Aarhus Beach Park [Urban waterfront with swimming, restaurants, and entertainment]"
+        ],
+        "cost": "400-600 DKK",
+        "tips": [
+          "Train from Copenhagen to Aarhus: 4 hours, around 300 DKK return",
+          "Aarhus is Denmark's second city with excellent food scene"
+        ]
+      },
+      {
+        "day": 7,
+        "title": "Jutland Countryside",
+        "attractions": [
+          "Legoland Billund [Theme park with 36 million LEGO bricks, rides, and attractions]",
+          "Givskud Zoo [Safari park with 1000+ animals and scenic car tour route]",
+          "Ebeltoft Old Town [Charming medieval harbor village with Half-timbered houses]",
+          "Grenå Beach [Scenic sandy beach on Denmark's west coast, perfect for relaxation]",
+          "Djursland Scenic Route [Coastal drive through forests, farmland, and seaside villages]"
+        ],
+        "cost": "500-800 DKK",
+        "tips": [
+          "Rent car for Jutland exploration; petrol costs ~12 DKK/liter",
+          "Legoland entry ~450 DKK; book online for discounts"
+        ]
+      },
+      {
+        "day": 8,
+        "title": "Faroe Islands Exploration",
+        "attractions": [
+          "Tórshavn Capital [Colorful Faroese architecture, harbor, and local market]",
+          "Mykines Island [Remote island with 14 inhabitants, hiking trails, and seabird colonies]",
+          "Lake Sørvágsvatn [Crater lake with dramatic cliff views overlooking the Atlantic]",
+          "Vestmanna Bird Cliffs [Boat tours through caves and dramatic basalt formations]",
+          "Gasadalur Waterfall [Scenic waterfall cascading directly into the sea]"
+        ],
+        "cost": "800-1200 DKK",
+        "tips": [
+          "Ferry from Copenhagen to Faroes: ~15-18 hours or flight 1 hour (600-1500 DKK)",
+          "Weather changes rapidly; bring waterproof jacket and layered clothing"
+        ]
+      },
+      {
+        "day": 9,
+        "title": "Island Hopping: Ærøskøbing",
+        "attractions": [
+          "Ærøskøbing Harbor [Charming medieval harbor town with colorful buildings and narrow streets]",
+          "Island Beaches [Sandy beaches on the southern coast with calm waters and family amenities]",
+          "Bicycle Culture [Flat terrain perfect for island exploration by bike rental]",
+          "Local Restaurants [Traditional Danish cuisine in historic half-timbered houses]",
+          "Windmills & Countryside [Rural Ærø with traditional Danish agricultural landscape]"
+        ],
+        "cost": "300-450 DKK",
+        "tips": [
+          "Ferry from Svendborg or Fåborg to Ærøskøbing: 45-70 minutes, ~150-200 DKK return",
+          "Rent bicycles (100-150 DKK/day) to explore the entire island"
+        ]
+      },
+      {
+        "day": 10,
+        "title": "Beach Relaxation & Return",
+        "attractions": [
+          "Amager Beach Park [8km urban beach with swimming, beach volleyball, and waterfront dining]",
+          "Tivoli Gardens Evening Visit [Historic theme park with illuminated attractions and dining]",
+          "Copenhagen Canal Cruise [Guided boat tour through canals, Nyhavn, and harbor]",
+          "Nørrebro District [Trendy neighborhood with street art, vintage shops, and vibrant cafes]",
+          "Final Shopping [Stroget and design shops for Danish souvenirs and crafts]"
+        ],
+        "cost": "350-550 DKK",
+        "tips": [
+          "Rest day before departure; explore neighborhood cafes and parks",
+          "Book farewell dinner at Nyhavn or Nørrebro restaurant for memories"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "estonia-3",
+    "country": "Estonia",
+    "duration": 3,
+    "title": "Tallinn's Medieval Charms",
+    "emoji": "🇪🇪",
+    "description": "Experience Estonia's capital with medieval Old Town, vibrant neighborhoods, and historic sites in just 3 days.",
+    "badge": "Quick Getaway",
+    "colorClass": "t1",
+    "currency": "EUR",
+    "days": [
+      {
+        "day": 1,
+        "title": "Medieval Tallinn",
+        "attractions": [
+          "Tallinn Old Town [UNESCO-listed medieval city with 2.4km defensive walls, 47 towers, and cobblestone streets]",
+          "Alexander Nevsky Cathedral [Russian Orthodox cathedral with golden domes overlooking Old Town]",
+          "St. Olaf Church [Gothic church with 124-meter spire, formerly Europe's tallest building in 16th century]",
+          "Town Hall Square [Historic marketplace surrounded by merchants' houses and outdoor restaurants]",
+          "Kiek in de Kök Tower [Medieval cannon tower with museum exhibits on siege history]"
+        ],
+        "cost": "50-80 EUR",
+        "tips": [
+          "Book Tallinn Card for unlimited public transport and museum entries",
+          "Visit Old Town early morning to avoid cruise ship crowds"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Culture & Museums",
+        "attractions": [
+          "Estonian History Museum [Comprehensive exhibits from Stone Age to independence in Kiek in de Kök tower]",
+          "Estonian National Museum [Modern museum with cultural heritage and contemporary Estonian identity]",
+          "Kadriorg Palace [18th-century Baroque palace built by Peter the Great]",
+          "Kumu Art Museum [Contemporary Estonian art in striking modern building]",
+          "Lennusadam Seaplane Museum [Historic harbor with vintage seaplanes and maritime exhibits]"
+        ],
+        "cost": "40-65 EUR",
+        "tips": [
+          "Museums often free on Thursday evenings after 5pm",
+          "Combine palace and art museum tickets for 10% discount"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Nature & Suburbs",
+        "attractions": [
+          "Lahemaa National Park [Coastal park with forests, wetlands, and three manor estates]",
+          "Altja Village [Historic fishing village with traditional wooden houses and coastal path]",
+          "Jägala Waterfall [Estonia's largest waterfall with scenic surroundings]",
+          "Toila Manor [Romantic 18th-century estate with park and romantic viewpoints]",
+          "Käsmu Village [Picturesque seaside village famous as Estonian Riviera resort]"
+        ],
+        "cost": "35-55 EUR",
+        "tips": [
+          "Rent car for national park exploration or take organized tour from Tallinn",
+          "Pack picnic supplies from Tallinn markets for day in nature"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "estonia-5",
+    "country": "Estonia",
+    "duration": 5,
+    "title": "Estonia's Forests & Islands",
+    "emoji": "🇪🇪",
+    "description": "Discover Tallinn's medieval charm, pristine nature reserves, and island culture across 5 comprehensive days.",
+    "badge": "Best Value",
+    "colorClass": "t2",
+    "currency": "EUR",
+    "days": [
+      {
+        "day": 1,
+        "title": "Tallinn Old Town & Harbor",
+        "attractions": [
+          "Tallinn Old Town [UNESCO medieval city with intact walls, 47 towers, and winding cobblestone streets]",
+          "Alexander Nevsky Cathedral [Russian Orthodox cathedral with golden onion domes overlooking the city]",
+          "St. Olaf Church [Gothic spire dominating skyline at 124 meters, formerly Europe's tallest]",
+          "Town Hall Square [Historic marketplace with medieval buildings, restaurants, and daily atmosphere]",
+          "Lennusadam Museum [Historic harbor with vintage seaplanes, submarines, and maritime exhibitions]"
+        ],
+        "cost": "50-85 EUR",
+        "tips": [
+          "Purchase Tallinn Card (24/48/72 hours) for unlimited transport and most museum entries",
+          "Evening atmosphere in Old Town is magical after day-trippers depart"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Museums & Palaces",
+        "attractions": [
+          "Kadriorg Palace [Baroque 18th-century palace built by Peter the Great with art museum]",
+          "Kumu Art Museum [Contemporary Estonian art in striking modern architecture]",
+          "Estonian National Museum [Interactive exhibits on Estonian culture and history]",
+          "Kiek in de Kök Tower [Medieval cannon tower with museum on city's defensive history]",
+          "Russian Museum of Occupation [Historical exhibits on Soviet occupation and independence]"
+        ],
+        "cost": "45-70 EUR",
+        "tips": [
+          "Many museums offer free entry on specific weekday evenings",
+          "National Museum features excellent cafe with traditional Estonian food"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Lahemaa National Park",
+        "attractions": [
+          "Lahemaa National Park [Largest Estonian national park with coastline, forests, and three historic manors]",
+          "Palmse Manor [18th-century neoclassical estate with gardens and historical exhibits]",
+          "Altja Village [Historic fishing village with traditional wooden houses and coastal path]",
+          "Jägala Waterfall [Estonia's largest 8-meter waterfall with scenic forest setting]",
+          "Viru Bog [Wooden boardwalk through pristine peatland ecosystem with wildlife viewing]"
+        ],
+        "cost": "40-65 EUR",
+        "tips": [
+          "Rent car from Tallinn (40-60 EUR/day) for park flexibility, or join organized tour",
+          "Best photography during golden hour along coastal paths"
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Island Hopping: Saaremaa",
+        "attractions": [
+          "Kuressaare Castle [Medieval castle with museum on island's history and culture]",
+          "Kaali Crater [Meteorite impact crater surrounded by beach and scenic viewpoint]",
+          "Vilsandi National Park [Marine protected area with bird sanctuaries and island ecosystems]",
+          "Angla Windmills [Five picturesque traditional wooden windmills in countryside]",
+          "Kuresoo Bog [Boardwalk through authentic peatland ecosystem]"
+        ],
+        "cost": "50-75 EUR",
+        "tips": [
+          "Ferry from Tallinn to Kuressaare: 3 hours by car ferry, ~30 EUR return with car",
+          "Rent scooter or bicycle on island for scenic exploration"
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Tartu & University Town",
+        "attractions": [
+          "University of Tartu [Historic university with neoclassical architecture and student traditions]",
+          "Tartu Town Hall [Medieval red building overlooking Raekoja plats square]",
+          "Emajõgi River Cruise [Scenic boat tour through old town along historic waterway]",
+          "Tähtvere Science Center [Interactive museum with planetarium and hands-on exhibits]",
+          "Petseri Old Town [Medieval streets with galleries, boutiques, and authentic Estonian cafes]"
+        ],
+        "cost": "35-60 EUR",
+        "tips": [
+          "Train from Tallinn to Tartu: 2.5 hours, ~15 EUR",
+          "Tartu offers excellent Estonian food scene at fraction of Tallinn prices"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "estonia-10",
+    "country": "Estonia",
+    "duration": 10,
+    "title": "Estonia: Forests, Islands & Culture",
+    "emoji": "🇪🇪",
+    "description": "Deep dive into Estonia's medieval heritage, pristine natural parks, island cultures, and Soviet-era history.",
+    "badge": "Full Experience",
+    "colorClass": "t3",
+    "currency": "EUR",
+    "days": [
+      {
+        "day": 1,
+        "title": "Tallinn Old Town Discovery",
+        "attractions": [
+          "Tallinn Old Town [UNESCO medieval city with 2.4km walls, 47 towers, and authentic cobblestone streets]",
+          "Alexander Nevsky Cathedral [Russian Orthodox cathedral with golden domes, built 1894-1900]",
+          "St. Olaf Church [Gothic spire at 124 meters, once Europe's tallest in 16th century]",
+          "Town Hall Square [Historic marketplace with medieval guild houses and daily markets]",
+          "City Walls & Gates [Intact defensive walls with 47 towers open for exploration]"
+        ],
+        "cost": "50-90 EUR",
+        "tips": [
+          "Purchase 72-hour Tallinn Card for all museums, galleries, and public transport",
+          "Walk walls at sunset for spectacular city views"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Medieval Quarter Deep Dive",
+        "attractions": [
+          "Kiek in de Kök Tower [Medieval cannon tower with siege history museum]",
+          "Maiden's Tower [Part of city walls with medieval cafe inside]",
+          "St. Canute Guild [Medieval guild house with authentic wooden interior]",
+          "Dominican Monastery [Historic 13th-century monastery with museum and cafe]",
+          "Three Sisters House [Three connected medieval merchant houses]"
+        ],
+        "cost": "40-65 EUR",
+        "tips": [
+          "Many medieval buildings have atmospheric cafes inside for coffee breaks",
+          "Early morning provides best light for architectural photography"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Museums & Soviet Heritage",
+        "attractions": [
+          "Russian Museum of Occupation [Exhibits on Soviet occupation and Estonian independence]",
+          "Kumu Art Museum [Contemporary Estonian art in striking modern building]",
+          "Estonian National Museum [Interactive cultural heritage and identity exhibits]",
+          "Lennusadam Seaplane Museum [Historic harbor with vintage aircraft and submarines]",
+          "Estonian Film Museum [Cinema history from silent era to present]"
+        ],
+        "cost": "45-75 EUR",
+        "tips": [
+          "Book guided tour of occupation museum for historical context",
+          "Lennusadam offers hands-on submarine exploration experience"
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Kadriorg Palace & Eastern Tallinn",
+        "attractions": [
+          "Kadriorg Palace [Baroque palace built by Peter the Great with art museum]",
+          "Kadriorg Park [Romantic palace gardens with pathways and secret corners]",
+          "Toompea Castle [Historic castle housing Estonian Parliament with tower views]",
+          "Alexander Nevsky Cathedral [Russian Orthodox cathedral visible from palace area]",
+          "Estonian Presidential Palace [Official residence in Baroque building]"
+        ],
+        "cost": "35-60 EUR",
+        "tips": [
+          "Combine palace admission with park exploration for full experience",
+          "Picnic in palace gardens with local groceries from Balti Jaama Market"
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Lahemaa National Park",
+        "attractions": [
+          "Lahemaa National Park [Largest park with forests, wetlands, and three historic manors]",
+          "Palmse Manor [18th-century neoclassical estate with gardens and carriage museum]",
+          "Altja Village [Historic fishing village with traditional wooden houses and coastal paths]",
+          "Jägala Waterfall [Estonia's largest waterfall with scenic forest surroundings]",
+          "Käsmu Village [Coastal resort village on the Riviera with scenic walks]"
+        ],
+        "cost": "45-70 EUR",
+        "tips": [
+          "Rent car from Tallinn for flexibility (40-60 EUR/day)",
+          "Pack picnic supplies; nature areas have limited food options"
+        ]
+      },
+      {
+        "day": 6,
+        "title": "Saaremaa Island - Kuressaare",
+        "attractions": [
+          "Kuressaare Castle [Medieval castle with comprehensive museum on island history]",
+          "Kaali Crater [Meteorite impact crater with beach and scenic viewpoint]",
+          "Angla Windmills [Five traditional wooden windmills in countryside setting]",
+          "Vilsandi National Park [Marine protected area with bird sanctuaries and islands]",
+          "Kuresoo Bog [Boardwalk through pristine peatland ecosystem]"
+        ],
+        "cost": "55-85 EUR",
+        "tips": [
+          "Ferry from Tallinn to Kuressaare: 3 hours, ~30 EUR with car",
+          "Rent bicycle or scooter on island for scenic exploration"
+        ]
+      },
+      {
+        "day": 7,
+        "title": "Saaremaa Nature & Villages",
+        "attractions": [
+          "Ängla Heritage Area [Traditional farmstead with preserved wooden buildings]",
+          "Kihelkonna Parish [Rural countryside with traditional village culture]",
+          "Panga Cliff [Sandstone cliff on western coast with panoramic ocean views]",
+          "Sorga Village [Charming seaside settlement with fishing traditions]",
+          "Loona Manor [Historic manor house with museum and surroundings]"
+        ],
+        "cost": "30-50 EUR",
+        "tips": [
+          "Drive scenic Route 1 around island perimeter (137km)",
+          "Stop at roadside farm shops for local dairy and bread products"
+        ]
+      },
+      {
+        "day": 8,
+        "title": "Hiiumaa Island Escape",
+        "attractions": [
+          "Kõpu Lighthouse [Estonia's oldest lighthouse with Baltic Sea views]",
+          "Emajõgi Bog [Largest bog in Estonia with observation tower]",
+          "Sarve Peninsula [Scenic rocky coastline with unique geological formations]",
+          "Käina Town [Historic harbor town with wooden architecture]",
+          "Pühalepa Church [Medieval church in countryside setting]"
+        ],
+        "cost": "50-80 EUR",
+        "tips": [
+          "Ferry between islands runs regularly; plan route carefully",
+          "Island roads narrow and winding; drive cautiously"
+        ]
+      },
+      {
+        "day": 9,
+        "title": "Tartu University Town",
+        "attractions": [
+          "University of Tartu [Historic university with neoclassical buildings and student traditions]",
+          "Tartu Town Hall [Red medieval building overlooking historic Raekoja plats square]",
+          "Tähtvere Science Center [Interactive museum with planetarium and hands-on exhibits]",
+          "Emajõgi River Promenade [Scenic waterfront walk through old town]",
+          "Estonian National Museum Branch [Exhibits on rural and folk culture]"
+        ],
+        "cost": "40-65 EUR",
+        "tips": [
+          "Train from Tallinn: 2.5 hours, ~15 EUR",
+          "University town offers authentic Estonian culture and excellent food"
+        ]
+      },
+      {
+        "day": 10,
+        "title": "Digital Nomad & Relaxation",
+        "attractions": [
+          "Telliskivi Creative City [Former industrial area with design studios, galleries, and cafes]",
+          "Balti Jaama Market [Historic railway market with local food, crafts, and antiques]",
+          "Nõmme District [Bohemian neighborhood with vintage shops and artistic cafes]",
+          "Zoological Gardens [Historic zoo with native Estonian wildlife]",
+          "Stroomi Beach [Sandy beach 15 minutes from center with water activities]"
+        ],
+        "cost": "35-60 EUR",
+        "tips": [
+          "Experience Estonia's reputation as digital leader; visit e-governance exhibits",
+          "Final shopping for unique Estonian design and handicrafts"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "finland-3",
+    "country": "Finland",
+    "duration": 3,
+    "title": "Helsinki's Modern & Natural Contrasts",
+    "emoji": "🇫🇮",
+    "description": "Explore Finland's capital with striking modern architecture, islands, saunas, and Nordic design in 3 days.",
+    "badge": "Quick Getaway",
+    "colorClass": "t1",
+    "currency": "EUR",
+    "days": [
+      {
+        "day": 1,
+        "title": "Helsinki Highlights",
+        "attractions": [
+          "Cathedral of the Rock (Temppeliaukio Church) [Built directly into hillside with copper dome, acoustics famous for classical concerts]",
+          "Uspenski Cathedral [Largest Eastern Orthodox cathedral in Western Europe with red brick and golden domes]",
+          "Suomenlinna Fortress [UNESCO island fortress with historic buildings, museums, and coastal walks]",
+          "Market Square (Kauppatori) [Historic seaside marketplace with food vendors, restaurants, and harbor views]",
+          "National Museum of Finland [Exhibits on Finnish history, archaeology, and cultural heritage]"
+        ],
+        "cost": "60-90 EUR",
+        "tips": [
+          "Purchase Helsinki Card for unlimited transport and museum entries",
+          "Sauna culture essential; try public sauna like Löyly or Rajaportin"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Design & Culture",
+        "attractions": [
+          "Design District (Punavuori) [Gallery-filled quarter with boutiques, restaurants, and independent shops]",
+          "Kiasma Contemporary Art Museum [Modern art in striking white building with interactive exhibits]",
+          "Ateneum Art Museum [Classical to modern Finnish art collection]",
+          "Finnish Museum of Natural History [Natural history exhibits with wildlife dioramas]",
+          "Senate Square [Neoclassical white buildings surrounding historic marketplace]"
+        ],
+        "cost": "50-80 EUR",
+        "tips": [
+          "Design District offers authentic Finnish design at better prices than chains",
+          "Many museums free on Friday evenings 5-8pm"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Islands & Nature",
+        "attractions": [
+          "Suomenlinna Ferry Ride [20-minute scenic boat ride to island fortress with sea views]",
+          "National Parks [Nuuksio or Sipoonkorpi day hikes from Helsinki with forest and lake scenery]",
+          "Nuuksio National Park [Ancient forests with hiking trails and lake swimming opportunities]",
+          "Metsähallitus Nature Centers [Interactive exhibits on Finnish ecosystems and wildlife]",
+          "Lake Tuusula Scenic Drive [Rural landscape with artist villages and coastal scenery]"
+        ],
+        "cost": "40-70 EUR",
+        "tips": [
+          "Rent car for nature exploration or take organized day tours",
+          "Swimming season peaks July-August; water temperature around 15-20°C"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "finland-5",
+    "country": "Finland",
+    "duration": 5,
+    "title": "Finland's Lakes, Forests & Design",
+    "emoji": "🇫🇮",
+    "description": "Comprehensive Finnish experience with Helsinki design, lake regions, sauna culture, and natural landscapes.",
+    "badge": "Best Value",
+    "colorClass": "t2",
+    "currency": "EUR",
+    "days": [
+      {
+        "day": 1,
+        "title": "Helsinki Old Town & Islands",
+        "attractions": [
+          "Uspenski Cathedral [Largest Eastern Orthodox cathedral in Western Europe with red brick exterior]",
+          "Senate Square [Neoclassical white buildings surrounding historic marketplace]",
+          "Cathedral of the Rock [Church built into hillside with acoustic concerts and stunning interior]",
+          "Suomenlinna Fortress [UNESCO island with historic buildings, museums, and scenic walks]",
+          "Market Square Harbor [Fresh seafood market with restaurants and summer terraces]"
+        ],
+        "cost": "60-100 EUR",
+        "tips": [
+          "Purchase Helsinki Card (24/48/72 hours) for unlimited transport and museums",
+          "Island ferries depart every 10-20 minutes from Market Square"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Design & Modern Helsinki",
+        "attractions": [
+          "Design District (Punavuori) [Gallery-filled quarter with 200+ design studios and boutiques]",
+          "Kiasma Contemporary Art Museum [Modern art museum with international exhibitions]",
+          "Ateneum Art Museum [Finnish art from neoclassical period to contemporary works]",
+          "Marimekko Design Store [Iconic Finnish textile company with flagship store and cafe]",
+          "Aalto University Campus [Alvar Aalto-designed buildings showcasing Finnish modernism]"
+        ],
+        "cost": "55-85 EUR",
+        "tips": [
+          "Design District browsing is free; purchase small souvenirs like Marimekko prints",
+          "Friday museum evenings often free or discounted after 5pm"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Lake Region & National Parks",
+        "attractions": [
+          "Nuuksio National Park [Ancient forests with hiking trails and pristine lakes]",
+          "Sipoonkorpi National Park [Boreal forest ecosystems with scenic walking routes]",
+          "Lake Tuusula [Largest lake in southern Finland with artist villages and scenic drives]",
+          "Savonlinna Castle [Medieval castle on lake island with seasonal opera festival]",
+          "Forest Sauna Experiences [Traditional wood-heated saunas with lake swimming]"
+        ],
+        "cost": "50-80 EUR",
+        "tips": [
+          "Rent car from Helsinki for lake region flexibility (50-70 EUR/day)",
+          "Pack picnic; nature areas have limited food options"
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Sauna & Wellness Culture",
+        "attractions": [
+          "Löyly Sauna [Modern sauna complex on waterfront with restaurant and cultural events]",
+          "Rajaportin Public Sauna [Authentic 1928 public sauna experience with local Finns]",
+          "Serena Water Park [Largest waterpark in Nordic countries with pools and saunas]",
+          "Kotiharjun Sauna [Historic smoke sauna with traditional wood-heated experience]",
+          "Lake Bathing & Winter Swimming [Year-round swimming in pristine Finnish lakes]"
+        ],
+        "cost": "45-75 EUR",
+        "tips": [
+          "Sauna etiquette: respect privacy and cleanliness; swimwear often optional in single-sex areas",
+          "Bring towel or rent; soap and shampoo provided at public saunas"
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Turku & Southwest Coast",
+        "attractions": [
+          "Turku Castle [Medieval castle with museum and historical exhibitions]",
+          "Cathedral of Turku [Gothic cathedral with important religious artifacts]",
+          "Åbo Akademi University [Historic Swedish-language university with charming campus]",
+          "Turku Museum [Archaeological and cultural exhibits on southwestern Finland]",
+          "Naantali Spa Resort [Picturesque coastal town with spa facilities and archipelago views]"
+        ],
+        "cost": "50-80 EUR",
+        "tips": [
+          "Train from Helsinki to Turku: 2 hours, ~25-35 EUR",
+          "Naantali combines wellness with charming old town atmosphere"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "finland-10",
+    "country": "Finland",
+    "duration": 10,
+    "title": "Finland: North to South Grand Tour",
+    "emoji": "🇫🇮",
+    "description": "Epic Finnish journey from Lapland's Arctic Circle through Lake Regions, Helsinki design, and coastal regions.",
+    "badge": "Full Experience",
+    "colorClass": "t3",
+    "currency": "EUR",
+    "days": [
+      {
+        "day": 1,
+        "title": "Helsinki Old Town Discovery",
+        "attractions": [
+          "Uspenski Cathedral [Largest Eastern Orthodox cathedral in Western Europe, built 1868]",
+          "Senate Square [Neoclassical white buildings surrounding historic marketplace since 1818]",
+          "Cathedral of the Rock [Unique church built directly into bedrock with famous acoustics]",
+          "Market Square [Historic harbor marketplace with food vendors and waterfront restaurants]",
+          "Old Town Harbor Walks [Scenic waterfront promenade with museums and galleries]"
+        ],
+        "cost": "60-100 EUR",
+        "tips": [
+          "Helsinki Card offers unlimited transport and museum entries",
+          "Start exploration at Senate Square then walk toward harbor"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Design District & Islands",
+        "attractions": [
+          "Design District (Punavuori) [200+ design studios, galleries, and boutiques in renovated district]",
+          "Kiasma Contemporary Art Museum [Modern art with interactive international exhibitions]",
+          "Ateneum Art Museum [Comprehensive Finnish art from neoclassical to contemporary periods]",
+          "Suomenlinna Fortress [UNESCO island with historic buildings and scenic walks]",
+          "Marimekko Store [Iconic Finnish textiles and design flagship location]"
+        ],
+        "cost": "55-90 EUR",
+        "tips": [
+          "Suomenlinna ferries depart every 10-20 minutes; bring comfortable shoes",
+          "Design District is walkable; explore cafes between browsing studios"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Sauna & Wellness Culture",
+        "attractions": [
+          "Löyly Sauna [Modern waterfront sauna complex with restaurant, cultural events, and saunas]",
+          "Rajaportin Public Sauna [Authentic 1928 public sauna with locals and traditional experience]",
+          "Kotiharjun Sauna [Historic wood-heated smoke sauna with authentic atmosphere]",
+          "Serena Water Park [Nordic region's largest waterpark with pools and saunas]",
+          "Lake Tuusula Swimming [Pristine lake bathing with scenic countryside surroundings]"
+        ],
+        "cost": "50-85 EUR",
+        "tips": [
+          "Public sauna experience is essential Finnish cultural activity",
+          "Many include traditional birch whisk treatments (vihta)"
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Lake Regions & Savonlinna",
+        "attractions": [
+          "Nuuksio National Park [Ancient boreal forests with hiking trails and lake swimming]",
+          "Sipoonkorpi National Park [Protected forests with scenic walking routes]",
+          "Savonlinna Castle [13th-century castle on lake island, venue for summer opera festival]",
+          "Lake Saimaa [Largest lake in Europe with scenic drives and island villages]",
+          "Monk Seals Habitat [Rare freshwater seal colonies in pristine lake environments]"
+        ],
+        "cost": "55-85 EUR",
+        "tips": [
+          "Rent car for Savonlinna journey; scenic route through countryside",
+          "Train also available from Helsinki (4-5 hours, ~30-40 EUR)"
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Turku & Archipelago",
+        "attractions": [
+          "Turku Castle [Medieval castle with museum exploring regional history]",
+          "Cathedral of Turku [Important Gothic cathedral from 14th century]",
+          "Åbo Akademi University [Historic Swedish-language university with charming campus]",
+          "Turku Museum [Exhibits on archaeology, culture, and medieval history]",
+          "Naantali Spa Resort [Picturesque coastal town with wellness facilities and harbors]"
+        ],
+        "cost": "55-90 EUR",
+        "tips": [
+          "Train from Helsinki to Turku: 2 hours, ~25-35 EUR",
+          "Combine Turku with Naantali coastal exploration"
+        ]
+      },
+      {
+        "day": 6,
+        "title": "Mariehamn & Åland Islands",
+        "attractions": [
+          "Åland Islands [Swedish-speaking autonomous region with Nordic charm]",
+          "Mariehamn Harbor [Historic maritime town with seafood restaurants]",
+          "Bomarsund Fortress [Ruins of 19th-century fortress with scenic waterside location]",
+          "Kastelholm Castle [Medieval castle ruins surrounded by cultural heritage]",
+          "Island Bicycling [Flat terrain perfect for exploring villages and coastline]"
+        ],
+        "cost": "70-110 EUR",
+        "tips": [
+          "Ferry from Turku to Mariehamn: 5-6 hours, ~50-80 EUR",
+          "Rent bicycle (10-15 EUR/day) to explore archipelago islands"
+        ]
+      },
+      {
+        "day": 7,
+        "title": "Tampere City Experience",
+        "attractions": [
+          "Moomin Museum [Interactive museum dedicated to Tove Jansson's beloved characters]",
+          "Tampere Cathedral [Modern white cathedral on hillside with panoramic city views]",
+          "Pyynikki Park [Historic park with observation tower overlooking lakes]",
+          "Finlayson Cultural Center [Historic industrial area converted to cultural complex]",
+          "Tampere Museum of Art [Finnish and international art collections in modern building]"
+        ],
+        "cost": "50-80 EUR",
+        "tips": [
+          "Train from Helsinki to Tampere: 2 hours, ~20-30 EUR",
+          "Moomin Museum appeals to all ages with character immersion"
+        ]
+      },
+      {
+        "day": 8,
+        "title": "Jyväskylä & Central Lakes",
+        "attractions": [
+          "Alvar Aalto Museum [Architecture museum celebrating Finland's famous modernist designer]",
+          "Jyväskylä Museum [History and art collections from central Finland region]",
+          "Lake Jyväs [Scenic lake with swimming, boating, and water activities]",
+          "Castle Ruins of Laukaa [Medieval ruins in countryside with archaeological significance]",
+          "Päijänne National Park [Protected lake and forest environment with hiking trails]"
+        ],
+        "cost": "45-75 EUR",
+        "tips": [
+          "Train from Tampere: 1.5 hours, ~15-25 EUR",
+          "Central Finland offers authentic rural and lake culture"
+        ]
+      },
+      {
+        "day": 9,
+        "title": "Arctic Circle & Rovaniemi",
+        "attractions": [
+          "Santa Claus Village [Official residence with post office, gift shop, and reindeer sleigh rides]",
+          "Arctic Circle Monument [Marker indicating 66.5° north latitude with photo opportunities]",
+          "Arktikum Science Museum [Arctic research exhibits and natural history]",
+          "Indigenous Sámi Culture [Traditional herding practices and cultural museums]",
+          "Northern Lights Viewing [Seasonal Arctic phenomenon visible late September through March]"
+        ],
+        "cost": "100-150 EUR",
+        "tips": [
+          "Flight from Helsinki to Rovaniemi: 2.5 hours, ~80-150 EUR",
+          "Winter visits (Dec-Feb) offer Northern Lights; summer offers Midnight Sun"
+        ]
+      },
+      {
+        "day": 10,
+        "title": "Inari & Sámi Heritage",
+        "attractions": [
+          "Inari Lake [Finland's third-largest lake surrounded by pristine Lapland wilderness]",
+          "Siida Sámi Museum [Comprehensive exhibits on Indigenous Sámi culture and traditions]",
+          "Sámi Cultural Tourism [Reindeer herding experiences, traditional food, and craft workshops]",
+          "Arctic Wildflower Reserves [Protected areas with subarctic plant species]",
+          "Return Journey to Helsinki [Scenic flight or train through Finnish landscapes]"
+        ],
+        "cost": "80-130 EUR",
+        "tips": [
+          "Inari accessible by scenic drive or flight from Rovaniemi (1 hour)",
+          "Sámi experiences more authentic than Santa Village tourism"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "iceland-3",
+    "country": "Iceland",
+    "duration": 3,
+    "title": "Golden Circle & Blue Lagoon",
+    "emoji": "🇮🇸",
+    "description": "Experience Iceland's iconic natural wonders in just 3 days: geysers, waterfalls, glaciers, and geothermal spas.",
+    "badge": "Quick Getaway",
+    "colorClass": "t1",
+    "currency": "ISK",
+    "days": [
+      {
+        "day": 1,
+        "title": "Reykjavik & Blue Lagoon",
+        "attractions": [
+          "Blue Lagoon Geothermal Spa [Milky blue geothermal water at 38-40°C surrounded by lava fields]",
+          "Reykjavik Old Harbor [Historic waterfront with colorful buildings, restaurants, and whale watching tours]",
+          "Hallgrímskirkja Church [Iconic tower offering panoramic city and mountain views from observation deck]",
+          "Sun Voyager Sculpture [Modern art installation on waterfront symbolizing discovery and hope]",
+          "Perlan Building [Rotating glass dome with exhibitions on Iceland's nature and culture]"
+        ],
+        "cost": "8,000-12,000 ISK",
+        "tips": [
+          "Book Blue Lagoon in advance (4,500-6,500 ISK); prices lower online",
+          "Bring swimsuit and towel; lockers provided with entry fee"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Golden Circle",
+        "attractions": [
+          "Þingvellir National Park [UNESCO site showing Atlantic rift valley and historic Icelandic parliament site]",
+          "Geysir Geothermal Area [Erupting hot springs with Strokkur geyser shooting 30-40 meters every 5-8 minutes]",
+          "Gullfoss Waterfall [Powerful two-stage waterfall dropping 32 meters into river canyon]",
+          "Laugavatn Hot Spring Lake [Geothermal lake with swimming opportunities and natural warmth]",
+          "Faxi Waterfall [Beautiful waterfall in rural countryside on scenic drive]"
+        ],
+        "cost": "6,000-10,000 ISK",
+        "tips": [
+          "Golden Circle can be self-driven (budget rental car) or joined organized tour",
+          "Bring warm layers; weather changes rapidly in highlands"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "South Coast & Glaciers",
+        "attractions": [
+          "Seljalandsfoss Waterfall [67-meter waterfall where you can walk behind cascading water]",
+          "Skógafoss Waterfall [Powerful 60-meter waterfall with misty spray and rainbow effects]",
+          "Sólheimasandur Black Sand Beach [Dramatic black volcanic sand beach with offshore sea stacks]",
+          "Jökulsárlón Glacier Lagoon [Icebergs calving into blue lagoon with seal colonies]",
+          "Vatnajökull Glacier [Europe's largest glacier system creating dramatic ice formations]"
+        ],
+        "cost": "7,000-11,000 ISK",
+        "tips": [
+          "South Coast drive takes 4-5 hours; start early for multiple stops",
+          "Bring weatherproof jacket and sturdy hiking boots"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "iceland-5",
+    "country": "Iceland",
+    "duration": 5,
+    "title": "Iceland's Natural Wonders",
+    "emoji": "🇮🇸",
+    "description": "Comprehensive Icelandic experience combining Golden Circle, South Coast, glaciers, waterfalls, and geothermal spas.",
+    "badge": "Best Value",
+    "colorClass": "t2",
+    "currency": "ISK",
+    "days": [
+      {
+        "day": 1,
+        "title": "Reykjavik Urban Culture",
+        "attractions": [
+          "Blue Lagoon Geothermal Spa [Milky blue geothermal water surrounded by lava fields, 38-40°C year-round]",
+          "Hallgrímskirkja Church [Iconic tower with 244.3-meter height offering city and mountain panoramas]",
+          "Reykjavik Old Harbor [Historic waterfront with colorful buildings, seafood restaurants, whale watching tours]",
+          "National Museum [Comprehensive exhibits on Icelandic culture, history, and settlement]",
+          "Perlan Building [Glass dome with rotating exhibition on Iceland's geology and natural phenomena]"
+        ],
+        "cost": "8,000-12,000 ISK",
+        "tips": [
+          "Pre-book Blue Lagoon online for cheaper rates (4,500-6,500 ISK)",
+          "Reykjavik's vibrant nightlife and restaurant scene best explored after sunset"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Golden Circle Complete",
+        "attractions": [
+          "Þingvellir National Park [UNESCO site showing Atlantic rift valley and world's oldest parliament site from 930]",
+          "Geysir Geothermal Area [Active hot springs with Strokkur erupting 30-40 meters every 5-8 minutes]",
+          "Gullfoss Waterfall [Majestic two-stage 32-meter waterfall with powerful mist spray]",
+          "Laugavatn Hot Spring Lake [Geothermally heated lake perfect for swimming amid steaming water]",
+          "Skálholt Religious Site [Historic cathedral and educational center in rural area]"
+        ],
+        "cost": "6,000-10,000 ISK",
+        "tips": [
+          "Rent 4WD vehicle or join organized tour for safety and flexibility",
+          "Weather unpredictable; bring waterproof jacket and layers"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "South Coast Waterfalls & Glaciers",
+        "attractions": [
+          "Seljalandsfoss Waterfall [67-meter cascade where visitors can walk behind water curtain]",
+          "Skógafoss Waterfall [Impressive 60-meter waterfall with rainbow mist and scenic hiking trails]",
+          "Sólheimasandur Black Sand Beach [Volcanic black sand with basalt sea cliffs and dramatic formations]",
+          "Dyrhólaey Peninsula [Scenic headland with lighthouse, puffin colonies, and sea caves]",
+          "Jökulsárlón Glacier Lagoon [Iceberg calving into blue lagoon with swimming seals and Aurora viewing]"
+        ],
+        "cost": "7,000-11,000 ISK",
+        "tips": [
+          "South Coast drive is long (4-5 hours); consider overnight in Vík or Höfn",
+          "Black sand beaches dangerous; respect warning signs and rip currents"
+        ]
+      },
+      {
+        "day": 4,
+        "title": "West Iceland & Snæfellsjökull",
+        "attractions": [
+          "Snæfellsjökull National Park [Glacier-capped volcano visible from mainland, featured in Jules Verne novel]",
+          "Kirkjufell Mountain [Iconic cone-shaped mountain rising 463 meters, photographed extensively]",
+          "Stykkishólmur Harbor Town [Historic fishing village with colorful houses and museum]",
+          "Rauðfeldsgjá Waterfall [Scenic waterfall hidden in cave accessible via swimming]",
+          "Whale Watching Tours [Departure from Snæfellsnes Peninsula exploring marine ecosystems]"
+        ],
+        "cost": "6,000-9,000 ISK",
+        "tips": [
+          "Snæfellsnes Peninsula scenic loop drive takes 5-6 hours from Reykjavik",
+          "Weather can be extreme; carry emergency supplies"
+        ]
+      },
+      {
+        "day": 5,
+        "title": "North Iceland & Waterfalls",
+        "attractions": [
+          "Goðafoss Waterfall [Powerful 'waterfall of the gods' with 12-meter drop and misty surroundings]",
+          "Lake Mývatn [Geothermal lake region with natural hot springs and unique geology]",
+          "Krafla Volcanic Area [Active geothermal field with steam vents and colorful mineral deposits]",
+          "Ásbyrgi Canyon [Dramatic horseshoe-shaped canyon with hiking trails and river]",
+          "Dimmuborgir [Otherworldly lava formations and hiking trails through natural rock labyrinth]"
+        ],
+        "cost": "6,000-10,000 ISK",
+        "tips": [
+          "Flight from Reykjavik to Akureyri: 45 minutes, ~15,000-20,000 ISK",
+          "Alternative: scenic 5-hour drive along Route 1"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "iceland-10",
+    "country": "Iceland",
+    "duration": 10,
+    "title": "Iceland's Complete Natural Grand Tour",
+    "emoji": "🇮🇸",
+    "description": "Epic journey around Iceland exploring glaciers, volcanoes, waterfalls, geysers, black sand beaches, and Northern Lights.",
+    "badge": "Full Experience",
+    "colorClass": "t3",
+    "currency": "ISK",
+    "days": [
+      {
+        "day": 1,
+        "title": "Arrival & Reykjavik Culture",
+        "attractions": [
+          "Blue Lagoon Geothermal Spa [World-famous milky-blue geothermal water 38-40°C surrounded by lava]",
+          "Reykjavik City Center [Colorful buildings, vibrant cafes, art galleries, and shopping streets]",
+          "Hallgrímskirkja Church [Iconic 74-meter tower with 360-degree city and landscape panoramas]",
+          "Reykjavik Old Harbor [Historic waterfront with whale watching tours and fresh seafood]",
+          "National Museum [Exhibitions on Iceland's settlement, Viking heritage, and cultural evolution]"
+        ],
+        "cost": "8,000-13,000 ISK",
+        "tips": [
+          "Arrive early for afternoon Blue Lagoon swim; book online in advance",
+          "Consider renting car at airport for entire 10-day journey"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Golden Circle Complete",
+        "attractions": [
+          "Þingvellir National Park [UNESCO rift valley showing continental plates, historic parliament grounds]",
+          "Geysir Geothermal Area [Active hot springs with Strokkur geyser erupting every 5-8 minutes to 40 meters]",
+          "Gullfoss Waterfall [Two-stage 32-meter waterfall with thunderous power and misty rainbow spray]",
+          "Laugavatn Geothermal Lake [Heated swimming lake surrounded by steam vents and mountains]",
+          "Secret Lagoon [Natural hot spring pool in remote countryside with minimal crowds]"
+        ],
+        "cost": "6,000-10,000 ISK",
+        "tips": [
+          "Start early for Þingvellir; parking can be congested midday",
+          "Pack swimsuit for geothermal lake swimming"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "South Coast Waterfalls",
+        "attractions": [
+          "Seljalandsfoss Waterfall [67-meter cascade allowing visitors to walk behind water curtain]",
+          "Gljúfrabúi Hidden Waterfall [Secret waterfall nestled in cave accessible via scenic walk]",
+          "Skógafoss Waterfall [Powerful 60-meter waterfall with continuous mist and rainbow effects]",
+          "Sólaheimajökull Glacier [Accessible glacier front with hiking and ice exploration options]",
+          "Skaftafell Area [Glacial valley with hiking trails and Svartifoss black sand waterfall]"
+        ],
+        "cost": "6,000-9,000 ISK",
+        "tips": [
+          "Wear waterproof jacket; spray from Skógafoss soaks completely",
+          "Glacier hiking requires proper equipment; book guided tours"
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Southeast Glaciers & Lagoons",
+        "attractions": [
+          "Jökulsárlón Glacier Lagoon [Icebergs calving into blue lagoon with seal colonies and Aurora viewing]",
+          "Diamond Beach [Black sand with floating ice chunks shaped like diamonds from glacier melt]",
+          "Breiðamerkurjökull Glacier [Accessible glacier tongue with guided hiking and ice cave exploration]",
+          "Vatnajökull Glacier [Europe's largest glacier system creating dramatic ice formations]",
+          "Höfn Harbor Town [Fishing village serving as base for southeast exploration]"
+        ],
+        "cost": "7,000-11,000 ISK",
+        "tips": [
+          "Jökulsárlón is Iceland's most photographed glacier; arrive early",
+          "Overnight in Höfn for relaxed pace; excellent seafood restaurants"
+        ]
+      },
+      {
+        "day": 5,
+        "title": "East Iceland Fjords",
+        "attractions": [
+          "Egilsstaðir Cultural Center [Local arts, crafts, and traditional Icelandic heritage exhibits]",
+          "East Fjords Scenic Drive [Dramatic fjord coastline with fishing villages and mountain views]",
+          "Seydisfjordur Harbor Town [Colorful houses, artistic community, and beautiful fjord setting]",
+          "Snaefell Mountain [Hiking opportunities with panoramic Arctic views]",
+          "East Iceland Folk Museum [Exhibits on regional history, settlement, and fishing traditions]"
+        ],
+        "cost": "5,000-8,000 ISK",
+        "tips": [
+          "East Iceland less touristy than south coast; authentic local experiences",
+          "Scenic drives more important than specific attractions"
+        ]
+      },
+      {
+        "day": 6,
+        "title": "North Iceland Waterfalls & Geothermal",
+        "attractions": [
+          "Goðafoss Waterfall ['Waterfall of the gods' with powerful 12-meter cascades and misty drama]",
+          "Lake Mývatn [Geothermal lake surrounded by pseudo-craters and natural hot springs]",
+          "Krafla Volcanic Area [Active geothermal field with steam vents and colorful mineral deposits]",
+          "Námafjall [Geothermal area with bubbling mud pools and sulfur vents]",
+          "Dimmuborgir [Lava formations creating otherworldly landscape with hiking trails]"
+        ],
+        "cost": "6,000-9,000 ISK",
+        "tips": [
+          "Geothermal areas have sulfur smell; not recommended for asthma sufferers",
+          "Visit geothermal sites early morning for fewer tourists"
+        ]
+      },
+      {
+        "day": 7,
+        "title": "Snæfellsnes Peninsula Scenic Loop",
+        "attractions": [
+          "Kirkjufell Mountain [Iconic cone-shaped 463-meter peak photographed from multiple angles]",
+          "Snæfellsjökull Glacier [Volcano-glacier featured in Jules Verne's Journey to Center of Earth]",
+          "Stykkishólmur Harbor Town [Colorful fishing village with museum and restaurant culture]",
+          "Rauðfeldsgjá Waterfall [Hidden waterfall in cave accessible via swimming through water]",
+          "Lónarangar Sea Cliffs [Dramatic basalt formations with seabird colonies and crashing waves]"
+        ],
+        "cost": "6,000-10,000 ISK",
+        "tips": [
+          "Snæfellsnes Peninsula loop takes 5-6 hours driving; don't rush",
+          "Multiple photo stops; bring tripod for landscape photography"
+        ]
+      },
+      {
+        "day": 8,
+        "title": "West Iceland & Waterfalls",
+        "attractions": [
+          "Hraunfossar Waterfall [Series of waterfalls cascading from lava field into glacier river]",
+          "Barnafoss Waterfall [Smaller complementary waterfall in scenic canyon setting]",
+          "Deildartunguhver Hot Spring [Europe's most voluminous hot spring at 180 liters per second]",
+          "Rjúkandi Waterfall [Remote waterfall in untouched wilderness area]",
+          "Borgarnes Viking Settlement [Historic area with sagas and Viking heritage museums]"
+        ],
+        "cost": "5,000-8,000 ISK",
+        "tips": [
+          "West Iceland less visited than south; fewer crowds and authentic nature",
+          "Some roads narrow gravel; drive carefully"
+        ]
+      },
+      {
+        "day": 9,
+        "title": "Central Highlands & Geothermal Zones",
+        "attractions": [
+          "Geysir Geothermal Area Second Visit [Different light for Strokkur photography]",
+          "Haukadalur Valley [Geothermal region with natural hot springs and steam vents]",
+          "Kerið Crater Lake [Blue crater lake with colorful mineral-rich walls]",
+          "Langjökull Glacier [Second-largest glacier with ice tunnel tours and snowmobiling]",
+          "Skaftafell Hiking [Challenging mountain trails with views of multiple glacier tongues]"
+        ],
+        "cost": "7,000-11,000 ISK",
+        "tips": [
+          "Book glacier activities in advance; tours fill quickly in summer",
+          "Hiking trails require stamina; bring plenty of water"
+        ]
+      },
+      {
+        "day": 10,
+        "title": "Aurora Hunting & Departure",
+        "attractions": [
+          "Northern Lights Search [Winter activity viewing Aurora Borealis from dark sky locations]",
+          "Midnight Sun Photography [Summer activity capturing non-setting sun and golden light]",
+          "Final Reykjavik Exploration [Museums, galleries, and restaurants not covered earlier]",
+          "Thermal Pools [Spa visits like Sky Lagoon with city views or rural hot springs]",
+          "Shopping & Souvenirs [Wool products, Icelandic art, and local delicacies]"
+        ],
+        "cost": "6,000-10,000 ISK",
+        "tips": [
+          "Aurora hunting success weather-dependent; book multiple nights if possible",
+          "Departure flight typically early morning; pack night before"
+        ]
+      }
+    ]
+  }
+]

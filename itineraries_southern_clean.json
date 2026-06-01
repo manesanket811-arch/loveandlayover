@@ -1,0 +1,307 @@
+[
+  {
+    "id": "spain-3",
+    "country": "Spain",
+    "duration": 3,
+    "title": "Barcelona Gaudi Escape",
+    "emoji": "🇪🇸",
+    "description": "Modernist architecture, vibrant nightlife, and Mediterranean beaches",
+    "badge": "Quick Getaway",
+    "colorClass": "t1",
+    "currency": "EUR",
+    "days": [
+      {
+        "day": 1,
+        "title": "Sagrada Familia & Eixample",
+        "attractions": [
+          "Sagrada Familia [Gaudi's unfinished basilica with intricate facades and soaring interior]",
+          "Park Guell [Gaudi-designed park with colorful mosaics and city views]",
+          "Casa Batllo [Gaudi's modernist apartment building with wavy facade]",
+          "La Pedrera [Apartment building with undulating stone exterior and rooftop sculptures]",
+          "Passeig de Gracia [Elegant boulevard with shops, cafes, and modernist architecture]"
+        ],
+        "cost": "50-90 EUR",
+        "tips": [
+          "Book Sagrada Familia tickets online weeks in advance",
+          "Visit Park Guell early morning for fewer crowds and better photography"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Gothic Quarter & Beaches",
+        "attractions": [
+          "Gothic Quarter [Medieval streets with narrow alleys and historic buildings]",
+          "Barcelona Cathedral [Gothic cathedral with cloisters and rooftop gargoyles]",
+          "Las Ramblas [Famous tree-lined pedestrian promenade with street performers]",
+          "Picasso Museum [Extensive collection of Picasso works and sketches]",
+          "Barceloneta Beach [Sandy beach with beach bars and Mediterranean views]"
+        ],
+        "cost": "40-75 EUR",
+        "tips": [
+          "Gothic Quarter best explored on foot early morning",
+          "Las Ramblas has pickpockets; keep valuables secure"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Montserrat Day Trip",
+        "attractions": [
+          "Montserrat Monastery [Benedictine monastery nestled among dramatic rock formations]",
+          "Montserrat Rock Formations [Unique geological formations for hiking and photos]",
+          "Cable Car Rides [Scenic transportation between monastery and surrounding peaks]",
+          "Black Madonna [Religious icon housed in the basilica]",
+          "Hiking Trails [Mountain paths with panoramic valley views]"
+        ],
+        "cost": "45-80 EUR",
+        "tips": [
+          "Train from Barcelona to Montserrat takes 1 hour",
+          "Wear sturdy hiking boots for mountain trails"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "italy-3",
+    "country": "Italy",
+    "duration": 3,
+    "title": "Rome's Ancient Wonders",
+    "emoji": "🇮🇹",
+    "description": "Colosseum, Vatican, and timeless Roman monuments",
+    "badge": "Quick Getaway",
+    "colorClass": "t1",
+    "currency": "EUR",
+    "days": [
+      {
+        "day": 1,
+        "title": "Roman Monuments",
+        "attractions": [
+          "Colosseum [Ancient amphitheater built 72-80 AD with gladiator history]",
+          "Roman Forum [Archaeological site with temples, arches, and government buildings]",
+          "Palatine Hill [Imperial palace ruins with panoramic city views]",
+          "Trevi Fountain [Baroque fountain where visitors toss coins for return to Rome]",
+          "Pantheon [Ancient temple with massive dome and oculus]"
+        ],
+        "cost": "55-95 EUR",
+        "tips": [
+          "Book Colosseum skip-the-line tickets online",
+          "Visit Colosseum early morning or at sunset for fewer crowds"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Vatican & Art",
+        "attractions": [
+          "Vatican Museums [Vast art collection including Sistine Chapel ceiling]",
+          "Sistine Chapel [Michelangelo's painted ceiling and Last Judgment]",
+          "St. Peter's Basilica [Largest church in Christendom with Renaissance architecture]",
+          "Castel Sant'Angelo [Circular fortress with Tiber views and art museum]",
+          "Vatican Gardens [Papal gardens with sculptures and green spaces]"
+        ],
+        "cost": "50-90 EUR",
+        "tips": [
+          "Vatican Museums requires 4-5 hours minimum for proper viewing",
+          "Climb St. Peter's dome for panoramic Rome views (steep stairs)"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Neighborhoods & Food",
+        "attractions": [
+          "Trastevere [Historic neighborhood with cobblestone streets and evening nightlife]",
+          "Spanish Steps [Famous staircase with designer shops at base]",
+          "Campo de Fiori [Morning market and historic square]",
+          "Jewish Ghetto [Historic district with kosher restaurants]",
+          "Local Food Tour [Traditional pasta, gelato, and Italian specialties]"
+        ],
+        "cost": "45-80 EUR",
+        "tips": [
+          "Trastevere best visited evening for authentic restaurant experience",
+          "Campo de Fiori morning market offers fresh produce and local food"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "greece-3",
+    "country": "Greece",
+    "duration": 3,
+    "title": "Athens & Santorini Quick",
+    "emoji": "🇬🇷",
+    "description": "Ancient ruins, white-washed villages, and Mediterranean sunsets",
+    "badge": "Quick Getaway",
+    "colorClass": "t1",
+    "currency": "EUR",
+    "days": [
+      {
+        "day": 1,
+        "title": "Athenian Antiquities",
+        "attractions": [
+          "Acropolis [Ancient citadel with Parthenon and temple ruins perched on hill]",
+          "Parthenon [5th-century BC temple dedicated to Athena with iconic columns]",
+          "Panathenaic Stadium [Ancient Olympic stadium hosting first modern Olympics]",
+          "Acropolis Museum [World-class museum with ancient sculptures and artifacts]",
+          "Plaka District [Historic neighborhood with narrow streets, tavernas, and shops]"
+        ],
+        "cost": "45-80 EUR",
+        "tips": [
+          "Arrive Acropolis at opening time to beat crowds",
+          "Wear comfortable shoes for extensive hill walking"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Ferry to Santorini",
+        "attractions": [
+          "Fira Caldera [Stunning cliff-top village overlooking volcanic caldera]",
+          "Oia Village [Famous white-washed village with sunset views]",
+          "Santorini Beaches [Black sand beaches from volcanic history]",
+          "Akrotiri Archaeological Site [Preserved Minoan settlement from 1600 BC]",
+          "Wine Tasting [Local Assyrtiko wine from volcanic vineyards]"
+        ],
+        "cost": "60-100 EUR",
+        "tips": [
+          "Ferry Athens to Santorini takes 5-7 hours",
+          "Book accommodations in Oia well in advance for sunset views"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Santorini Island Exploration",
+        "attractions": [
+          "Akrotiri [Excavated Minoan city with multi-story buildings preserved by ash]",
+          "Red Beach [Unique reddish sand beach surrounded by cliffs]",
+          "Ammoudi Bay [Fishing village at base of cliffs with fresh seafood tavernas]",
+          "Caldera Cruise [Boat tour around volcanic islands and hot springs]",
+          "Traditional Windmills [Whitewashed windmills on cliffs for photos]"
+        ],
+        "cost": "55-90 EUR",
+        "tips": [
+          "Rent ATV or car for island exploration flexibility",
+          "Caldera cruises best in late afternoon before sunset"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "portugal-3",
+    "country": "Portugal",
+    "duration": 3,
+    "title": "Lisbon Coastal Charm",
+    "emoji": "🇵🇹",
+    "description": "Historic tiles, pastries, and coastal beauty",
+    "badge": "Quick Getaway",
+    "colorClass": "t1",
+    "currency": "EUR",
+    "days": [
+      {
+        "day": 1,
+        "title": "Lisbon Old Town",
+        "attractions": [
+          "Belem Tower [UNESCO fortress at Tagus River mouth from Age of Discovery]",
+          "Jeronimos Monastery [Architectural masterpiece with Gothic and Renaissance elements]",
+          "Pasteis de Nata [Famous custard tart dessert from Belem Bakery]",
+          "Tejo River Walk [Scenic waterfront promenade with views]",
+          "Discoveries Monument [Modern monument celebrating Portuguese explorers]"
+        ],
+        "cost": "40-70 EUR",
+        "tips": [
+          "Get Lisbon Card for unlimited public transport and museum entries",
+          "Try Pasteis de Nata at Pasteis de Belem (not tourist trap)"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Alfama & Castle",
+        "attractions": [
+          "Saint George's Castle [Medieval fortress with panoramic city views from walls]",
+          "Alfama District [Maze-like medieval neighborhood with Fado music venues]",
+          "Fado Museum [Exhibits on traditional Portuguese music culture]",
+          "Tram 28 [Historic streetcar through narrow Alfama streets]",
+          "Miradouro (viewpoint) [Best city views from multiple hilltop locations]"
+        ],
+        "cost": "35-65 EUR",
+        "tips": [
+          "Explore Alfama on foot; main streets have food vendors",
+          "Attend Fado performance in evening for authentic music and atmosphere"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Sintra & Cascais Day Trip",
+        "attractions": [
+          "Pena Palace [Romantic 19th-century palace with colorful architecture perched on mountain]",
+          "Quinta da Regaleira [Mysterious estate with underground chambers and gardens]",
+          "Sintra Old Town [UNESCO site with winding streets and historical buildings]",
+          "Cascais Coastal Town [Beach resort with seafood restaurants and promenade]",
+          "Cabo da Roca [Westernmost point of continental Europe with cliff views]"
+        ],
+        "cost": "45-80 EUR",
+        "tips": [
+          "Day trip from Lisbon; train from Rossio Station (30 minutes to Sintra)",
+          "Pena Palace requires significant hill walking; wear comfortable shoes"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "croatia-3",
+    "country": "Croatia",
+    "duration": 3,
+    "title": "Dubrovnik Old Town",
+    "emoji": "🇭🇷",
+    "description": "Medieval walled city, Adriatic coast, and Game of Thrones filming locations",
+    "badge": "Quick Getaway",
+    "colorClass": "t1",
+    "currency": "HRK",
+    "days": [
+      {
+        "day": 1,
+        "title": "Dubrovnik City Walls",
+        "attractions": [
+          "City Walls [1,940m of fortifications surrounding Old Town with panoramic coastal views]",
+          "Old Town [UNESCO site with limestone streets and baroque architecture]",
+          "Rector's Palace [Gothic-Renaissance building with museum and dark interior]",
+          "Cathedral [Baroque cathedral with religious artifacts and artwork]",
+          "Stradun [Main street connecting city gates through heart of Old Town]"
+        ],
+        "cost": "300-500 HRK",
+        "tips": [
+          "Walk entire city wall at sunrise for empty streets and perfect lighting",
+          "Old Town can be extremely crowded; visit early morning or late evening"
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Island Excursion",
+        "attractions": [
+          "Lokrum Island [Nearby island with botanical garden and Game of Thrones sites]",
+          "Elaphiti Islands [Ferry-accessible islands with beaches and villages]",
+          "Boat Tour [Scenic boat rides around Dubrovnik's coastline and islands]",
+          "Beach Swimming [Local beaches with clear Adriatic water]",
+          "Sunset Views [Best experienced from fortification walls or boat]"
+        ],
+        "cost": "250-450 HRK",
+        "tips": [
+          "Ferries to islands run frequently; no advance booking usually needed",
+          "Bring swimsuit and sunscreen for island beach time"
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Game of Thrones & History",
+        "attractions": [
+          "Game of Thrones Locations [Dubrovnik Old Town served as King's Landing in TV series]",
+          "Pile Gate [Famous gate used in Game of Thrones series]",
+          "Local Taverns [Medieval pubs serving traditional Dalmatian food]",
+          "Maritime Museum [Museum documenting Dubrovnik's naval history]",
+          "Photography Tour [Professional photo session in most scenic locations]"
+        ],
+        "cost": "280-480 HRK",
+        "tips": [
+          "Game of Thrones tours available with knowledgeable guides",
+          "Download location map to identify TV series filming spots"
+        ]
+      }
+    ]
+  }
+]
