@@ -71,18 +71,18 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5D7GNE6JQL"></script>
-<script>
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-5D7GNE6JQL"></script>
+<script defer>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-5D7GNE6JQL');
 </script>
 <!-- Datadog RUM -->
-<script>
+<script defer>
   (function(h,o,u,n,d) {
     h=h[d]=h[d]||{q:[],onReady:function(c){h.q.push(c)}}
-    d=o.createElement(u);d.async=1;d.src=n;d.crossOrigin=''
+    d=o.createElement(u);d.defer=1;d.src=n;d.crossOrigin=''
     n=o.getElementsByTagName(u)[0];n.parentNode.insertBefore(d,n)
   })(window,document,'script','https://www.datadoghq-browser-agent.com/us5/v7/datadog-rum.js','DD_RUM')
   window.DD_RUM.onReady(function() {
@@ -561,7 +561,7 @@
         <h3 style="margin:0 0 8px 0; color:var(--ink); font-size:0.95rem;">Latest on YouTube</h3>
         <div class="video-grid" id="videoGrid" style="grid-template-columns:1fr; max-height:280px; overflow:hidden; border-radius:6px;">
           <a class="vcard reveal" href="https://www.youtube.com/shorts/3ZuyHb8lAYg" target="_blank" rel="noopener">
-            <div class="vthumb a"><iframe width="320" height="180" src="https://www.youtube-nocookie.com/embed/3ZuyHb8lAYg" allowfullscreen="" loading="lazy" title="Love and Layovers YouTube Short"></iframe></div>
+            <div class="vthumb a"><iframe width="320" height="180" src="https://www.youtube-nocookie.com/embed/3ZuyHb8lAYg" allowfullscreen="" title="Love and Layovers YouTube Short"></iframe></div>
             <div class="vmeta"><h3>Latest Short</h3><div class="info">Quick travel tips · Destination moments</div></div>
           </a>
         </div>
