@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Travel Destinations & Country Guides | Love and Layovers</title>
-<meta name="description" content="Explore 54 countries with detailed travel guides. Free 3/5/10-day itineraries, budgets, visa info, and insider tips for every destination.">
-<meta name="keywords" content="travel destinations, country guides, itineraries, travel tips, budget travel">
+<title>19 Destination Guides | Asia • Europe • Americas | Love and Layovers</title>
+<meta name="description" content="Explore 19 destination guides organized by region: Asia (9), Europe (6), Americas & Others (4). Free itineraries with food guides, best times to visit, neighborhood guides, and budgets for each destination.">
+<meta name="keywords" content="travel destinations, Asia travel guides, Europe travel guides, destination guides by region, itineraries, budget travel, food guides, neighborhood guides">
 <link rel="canonical" href="https://www.loveandlayover.in/destinations/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,112 +29,596 @@
   ]
 }
 </script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "name": "Travel Destinations",
-  "description": "Complete destination guides with itineraries for 54 countries"
+  "name": "19 Destination Travel Guides",
+  "description": "Complete destination guides with itineraries, food guides, neighborhood explorations, and budgets for 19 travel destinations across Asia, Europe, and the Americas.",
+  "url": "https://www.loveandlayover.in/destinations/"
 }
 </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Asia Travel Guides",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Singapore Travel Guide", "url": "https://www.loveandlayover.in/destinations/singapore.html"},
+    {"@type": "ListItem", "position": 2, "name": "Japan Travel Guide", "url": "https://www.loveandlayover.in/destinations/japan.html"},
+    {"@type": "ListItem", "position": 3, "name": "Thailand Travel Guide", "url": "https://www.loveandlayover.in/destinations/thailand.html"},
+    {"@type": "ListItem", "position": 4, "name": "Vietnam Travel Guide", "url": "https://www.loveandlayover.in/destinations/vietnam.html"},
+    {"@type": "ListItem", "position": 5, "name": "India Travel Guide", "url": "https://www.loveandlayover.in/destinations/india.html"},
+    {"@type": "ListItem", "position": 6, "name": "Bali Travel Guide", "url": "https://www.loveandlayover.in/destinations/bali.html"},
+    {"@type": "ListItem", "position": 7, "name": "Indonesia Travel Guide", "url": "https://www.loveandlayover.in/destinations/indonesia.html"},
+    {"@type": "ListItem", "position": 8, "name": "Malaysia Travel Guide", "url": "https://www.loveandlayover.in/destinations/malaysia.html"},
+    {"@type": "ListItem", "position": 9, "name": "Sri Lanka Travel Guide", "url": "https://www.loveandlayover.in/destinations/srilanka.html"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Europe Travel Guides",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Italy Travel Guide", "url": "https://www.loveandlayover.in/destinations/italy.html"},
+    {"@type": "ListItem", "position": 2, "name": "France Travel Guide", "url": "https://www.loveandlayover.in/destinations/france.html"},
+    {"@type": "ListItem", "position": 3, "name": "Spain Travel Guide", "url": "https://www.loveandlayover.in/destinations/spain.html"},
+    {"@type": "ListItem", "position": 4, "name": "Greece Travel Guide", "url": "https://www.loveandlayover.in/destinations/greece.html"},
+    {"@type": "ListItem", "position": 5, "name": "Portugal Travel Guide", "url": "https://www.loveandlayover.in/destinations/portugal.html"},
+    {"@type": "ListItem", "position": 6, "name": "Germany Travel Guide", "url": "https://www.loveandlayover.in/destinations/germany.html"}
+  ]
+}
+</script>
+
 <style>
-:root { --ink:#1a2332; --paper:#fefaf5; --accent:#ff6b35; --secondary:#f7931e; }
+:root {
+  --ink:#1a2332;
+  --paper:#fefaf5;
+  --accent:#ff6b35;
+  --secondary:#f7931e;
+  --teal:#0fb6a8;
+  --deep:#0d4f6b;
+  --sky:#ffe9d6;
+  --shadow:rgba(26,35,50,.12);
+}
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:'Outfit',sans-serif; background:var(--paper); color:var(--ink); }
-h1,h2,h3 { font-family:'Fraunces',serif; font-weight:900; }
+html { scroll-behavior:smooth; }
+body {
+  font-family:'Outfit',sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.6;
+}
+h1,h2,h3,h4 { font-family:'Fraunces',serif; font-weight:900; line-height:1.1; }
+a { color:inherit; text-decoration:none; }
+img { max-width:100%; display:block; }
 .wrap { max-width:1180px; margin:0 auto; padding:0 24px; }
-header { background:rgba(255,250,242,.92); padding:14px 0; }
-.nav { display:flex; justify-content:space-between; align-items:center; }
-.logo { font-size:1.3rem; font-weight:900; }
-.nav-links { display:flex; gap:30px; }
-.nav-links a { text-decoration:none; color:inherit; }
-.hero { padding:60px 0; text-align:center; }
-.hero h1 { font-size:3rem; margin-bottom:20px; }
-.hero p { font-size:1.1rem; color:#666; margin-bottom:30px; }
-.section { padding:50px 0; }
-.section h2 { font-size:2rem; margin-bottom:30px; }
-.destination-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; margin-top:30px; }
-.dest-card { background:#fff; padding:20px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,.1); text-decoration:none; color:inherit; transition:all .3s; }
-.dest-card:hover { transform:translateY(-4px); box-shadow:0 8px 16px rgba(0,0,0,.15); }
-.dest-card h3 { color:var(--accent); margin-bottom:8px; }
-.dest-card p { font-size:.9rem; color:#666; }
-footer { background:var(--ink); color:#fff; padding:40px 0; margin-top:60px; }
-footer a { color:var(--secondary); text-decoration:none; }
-.copy { margin-top:30px; padding-top:30px; border-top:1px solid rgba(255,255,255,.1); text-align:center; }
-.cta-button { display:inline-block; background:var(--accent); color:#fff; padding:12px 28px; border-radius:6px; font-weight:600; text-decoration:none; }
-.featured { background:linear-gradient(135deg,var(--accent),var(--secondary)); color:#fff; padding:30px; border-radius:8px; margin-bottom:40px; }
-.featured h2 { color:#fff; margin-bottom:20px; }
-@media(max-width:600px) { .hero h1 { font-size:1.8rem; } }
+
+/* HEADER */
+header {
+  background:rgba(255,250,242,.92);
+  padding:14px 0;
+  position:sticky;
+  top:0;
+  z-index:100;
+  backdrop-filter:blur(12px);
+}
+.nav {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.logo {
+  font-size:1.3rem;
+  font-weight:900;
+  color:var(--ink);
+}
+.nav-links {
+  display:flex;
+  gap:30px;
+}
+.nav-links a {
+  font-weight:500;
+  font-size:.96rem;
+  position:relative;
+  transition:.2s;
+}
+.nav-links a:hover { color:var(--accent); }
+
+/* HERO */
+.hero {
+  padding:80px 0 60px;
+  text-align:center;
+  background:linear-gradient(135deg,rgba(232,244,248,.35),rgba(212,232,240,.35),rgba(200,223,240,.35));
+}
+.hero h1 {
+  font-size:clamp(2.2rem,5vw,3.5rem);
+  margin-bottom:16px;
+  color:var(--ink);
+}
+.hero .tagline {
+  font-size:1.15rem;
+  color:#56646a;
+  margin-bottom:24px;
+  max-width:700px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.hero-cta {
+  display:flex;
+  gap:16px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+.btn {
+  display:inline-block;
+  background:var(--accent);
+  color:#fff;
+  padding:12px 28px;
+  border-radius:8px;
+  font-weight:600;
+  transition:all .3s;
+  border:none;
+  cursor:pointer;
+  font-size:.95rem;
+}
+.btn:hover {
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(26,35,50,.2);
+}
+.btn.secondary {
+  background:#fff;
+  color:var(--ink);
+  border:2px solid var(--accent);
+}
+
+/* SEARCH/FILTER SECTION */
+.filter-section {
+  background:#fff;
+  padding:30px;
+  border-radius:12px;
+  margin:50px 0;
+  box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+.filter-section h3 {
+  font-size:1.1rem;
+  margin-bottom:16px;
+}
+.filter-area {
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.filter-btn {
+  padding:8px 18px;
+  border:2px solid #e0e0e0;
+  border-radius:20px;
+  background:#fff;
+  color:var(--ink);
+  font-weight:500;
+  cursor:pointer;
+  transition:all .2s;
+}
+.filter-btn:hover,
+.filter-btn.active {
+  border-color:var(--accent);
+  color:var(--accent);
+  background:rgba(255,107,53,.05);
+}
+
+/* REGIONS SECTION */
+.section {
+  padding:60px 0;
+}
+.section-title {
+  font-size:1.8rem;
+  margin-bottom:8px;
+  color:var(--ink);
+}
+.region-subtitle {
+  font-size:.95rem;
+  color:#56646a;
+  margin-bottom:30px;
+  font-weight:500;
+}
+
+/* DESTINATION GRID */
+.destination-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  margin-bottom:60px;
+}
+.dest-card {
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 2px 8px rgba(0,0,0,.08);
+  transition:all .3s;
+  text-decoration:none;
+  color:inherit;
+  display:flex;
+  flex-direction:column;
+  padding:24px;
+}
+.dest-card:hover {
+  transform:translateY(-6px);
+  box-shadow:0 8px 20px rgba(0,0,0,.14);
+}
+.dest-card h3 {
+  font-size:1.25rem;
+  margin-bottom:8px;
+  color:var(--accent);
+}
+.dest-card .description {
+  font-size:.9rem;
+  color:#56646a;
+  margin-bottom:14px;
+  flex:1;
+}
+.dest-card .includes {
+  font-size:.8rem;
+  color:#7a8a8f;
+  margin-bottom:12px;
+  line-height:1.5;
+}
+.dest-card .budget {
+  font-size:.85rem;
+  background:rgba(255,107,53,.08);
+  padding:8px 12px;
+  border-radius:6px;
+  margin-bottom:12px;
+  color:var(--accent);
+  font-weight:600;
+}
+.dest-card .link {
+  color:var(--accent);
+  font-weight:600;
+  display:inline-flex;
+  gap:6px;
+  align-items:center;
+  transition:.2s;
+  margin-top:auto;
+}
+.dest-card:hover .link {
+  gap:11px;
+}
+
+/* FOOTER */
+footer {
+  background:var(--ink);
+  color:#9fb0b5;
+  padding:50px 0 30px;
+  margin-top:60px;
+}
+footer a {
+  color:var(--secondary);
+  text-decoration:none;
+  transition:.2s;
+}
+footer a:hover {
+  color:#ff9e1b;
+}
+.foot {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:20px;
+  margin-bottom:30px;
+}
+.foot-links {
+  display:flex;
+  gap:24px;
+  flex-wrap:wrap;
+}
+.copy {
+  text-align:center;
+  padding-top:24px;
+  border-top:1px solid rgba(255,255,255,.08);
+  font-size:.85rem;
+}
+
+/* RESPONSIVE */
+@media(max-width:1024px) {
+  .destination-grid {
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+  }
+}
+@media(max-width:768px) {
+  .destination-grid {
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+  }
+  .filter-section {
+    padding:24px;
+  }
+}
+@media(max-width:600px) {
+  .hero {
+    padding:60px 0 40px;
+  }
+  .hero h1 {
+    font-size:2rem;
+  }
+  .destination-grid {
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+  .hero-cta {
+    flex-direction:column;
+  }
+  .btn {
+    width:100%;
+  }
+}
 </style>
 </head>
 <body>
 <header>
-<nav class="wrap nav">
-<a href="/" class="logo">Love and Layovers</a>
-<div class="nav-links">
-<a href="/itinerary-builder.html">Itineraries</a>
-<a href="/blog.html">Blog</a>
-<a href="/faq.html">FAQ</a>
-</div>
-</nav>
+  <nav class="wrap nav">
+    <a href="/" class="logo">Love and Layovers</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/itinerary-builder.html">Itineraries</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/faq.html">FAQ</a>
+    </div>
+  </nav>
 </header>
 
 <main>
-<div class="hero">
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <h1>Explore 19 Destination Guides</h1>
+    <p class="tagline">Comprehensive travel guides organized by region. Each destination includes food guides, neighborhood explorations, best times to visit, getting around tips, and daily budget breakdowns.</p>
+    <div class="hero-cta">
+      <a href="/itinerary-builder.html" class="btn">Build Custom Itinerary</a>
+      <a href="#guides" class="btn secondary">Browse All Guides</a>
+    </div>
+  </div>
+</section>
+
+<!-- SEARCH/FILTER -->
 <div class="wrap">
-<h1>54 Travel Destinations</h1>
-<p>Explore the world with free itineraries, budgets, and insider guides</p>
-</div>
+  <div class="filter-section">
+    <h3>Filter by Region</h3>
+    <div class="filter-area">
+      <button class="filter-btn active" onclick="filterRegion('all')">All Destinations (19)</button>
+      <button class="filter-btn" onclick="filterRegion('asia')">Asia (9)</button>
+      <button class="filter-btn" onclick="filterRegion('europe')">Europe (6)</button>
+      <button class="filter-btn" onclick="filterRegion('americas')">Americas & Others (4)</button>
+    </div>
+  </div>
 </div>
 
-<div class="section">
-<div class="wrap">
-<div class="featured">
-<h2>Featured Destinations</h2>
-<p>Start with one of our most popular guides. Each includes 3, 5, and 10-day itineraries with daily breakdowns, costs, and travel tips.</p>
-</div>
+<!-- GUIDES BY REGION -->
+<section id="guides">
+  <div class="wrap">
 
-<div class="destination-grid">
-<a href="singapore.html" class="dest-card">
-<h3>🏙️ Singapore</h3>
-<p>Marina Bay, Gardens by the Bay, hawker food scene, and Sentosa Island in compact city-state perfection.</p>
-</a>
-<a href="japan.html" class="dest-card">
-<h3>🗻 Japan</h3>
-<p>Tokyo's energy, Kyoto's temples, Mt. Fuji views, and world-class food. Complete guide to Japan's must-sees.</p>
-</a>
-<a href="australia.html" class="dest-card">
-<h3>🏖️ Australia</h3>
-<p>Sydney Opera House, Great Barrier Reef, Uluru, unique wildlife. Vast landscapes and unforgettable adventures.</p>
-</a>
-</div>
-</div>
+    <!-- ASIA -->
+    <div class="region" data-region="asia">
+      <h2 class="section-title">🌏 Asia (9 Destinations)</h2>
+      <p class="region-subtitle">Discover vibrant cultures, incredible food, ancient temples, and modern cities across Asia</p>
 
-<div class="section">
-<div class="wrap">
-<h2>Coming Soon: Full Destination Library</h2>
-<p>We're building comprehensive guides for all 54 countries with detailed itineraries, budgets, and local tips. Check back soon for guides to:</p>
-<p style="margin-top:20px; font-size:.95rem; line-height:1.8;">
-Thailand • Vietnam • Indonesia • Malaysia • Sri Lanka • India • Morocco • Egypt • Turkey • Greece • Spain • Portugal • Italy • France • Germany • 
-UK • Ireland • Scandinavia • Eastern Europe • Mexico • Peru • Colombia • Brazil • Iceland • Canada • New Zealand • and more...
-</p>
-</div>
-</div>
+      <div class="destination-grid">
+        <a href="singapore.html" class="dest-card">
+          <h3>🇸🇬 Singapore</h3>
+          <p class="description">Ultra-modern city-state with Marina Bay, hawker food paradise, and Sentosa Island.</p>
+          <div class="includes">Includes: Food Guide • Best Time • Getting Around • Neighborhoods</div>
+          <div class="budget">$40-60/day</div>
+          <span class="link">View Guide →</span>
+        </a>
+        <a href="japan.html" class="dest-card">
+          <h3>🇯🇵 Japan</h3>
+          <p class="description">Tokyo's energy, Kyoto's temples, Mt. Fuji views, and world-class cuisine.</p>
+          <div class="includes">Includes: Food Guide • Best Time • Getting Around • Neighborhoods</div>
+          <div class="budget">$50-80/day</div>
+          <span class="link">View Guide →</span>
+        </a>
+        <a href="thailand.html" class="dest-card">
+          <h3>🇹🇭 Thailand</h3>
+          <p class="description">Bangkok's chaos, island escapes, temples, and legendary street food scene.</p>
+          <div class="includes">Includes: Food Guide • Best Time • Getting Around • Neighborhoods</div>
+          <div class="budget">$25-40/day</div>
+          <span class="link">View Guide →</span>
+        </a>
+        <a href="vietnam.html" class="dest-card">
+          <h3>🇻🇳 Vietnam</h3>
+          <p class="description">Hanoi charm, Halong Bay cruises, Hoi An's lanterns, and pho perfection.</p>
+          <div class="includes">Includes: Food Guide • Best Time • Getting Around • Neighborhoods</div>
+          <div class="budget">$20-30/day</div>
+          <span class="link">View Guide →</span>
+        </a>
+        <a href="india.html" class="dest-card">
+          <h3>🇮🇳 India</h3>
+          <p class="description">Taj Mahal, spice-filled cuisine, sacred temples, and colorful street culture.</p>
+          <div class="includes">Includes: Food Guide • Best Time • Getting Around • Neighborhoods</div>
+          <div class="budget">$15-25/day</div>
+          <span class="link">View Guide →</span>
+        </a>
+        <a href="bali.html" class="dest-card">
+          <h3>🇮🇩 Bali</h3>
+          <p class="description">Rice terraces, temples, beaches, and spiritual retreats in Indonesia's island paradise.</p>
+          <div class="includes">Includes: Food Guide • Best Time • Getting Around • Neighborhoods</div>
+          <div class="budget">$25-40/day</div>
+          <span class="link">View Guide →</span>
+        </a>
+        <a href="indonesia.html" class="dest-card">
+          <h3>🇮🇩 Indonesia</h3>
+          <p class="description">Beyond Bali: volcanoes, diving, islands, and diverse Indonesian archipelago exploration.</p>
+          <div class="includes">Includes: Food Guide • Best Time • Getting Around • Neighborhoods</div>
+          <div class="budget">$20-35/day</div>
+          <span class="link">View Guide →</span>
+        </a>
+        <a href="malaysia.html" class="dest-card">
+          <h3>🇲🇾 Malaysia</h3>
+          <p class="description">Kuala Lumpur towers, Georgetown's charm, jungle treks, and fusion cuisine.</p>
+          <div class="includes">Includes: Food Guide • Best Time • Getting Around • Neighborhoods</div>
+          <div class="budget">$25-35/day</div>
+          <span class="link">View Guide →</span>
+        </a>
+        <a href="srilanka.html" class="dest-card">
+          <h3>🇱🇰 Sri Lanka</h3>
+          <p class="description">Tea plantations, ancient temples, beaches, wildlife, and dramatic mountain landscapes.</p>
+          <div class="includes">Includes: Food Guide • Best Time • Getting Around • Neighborhoods</div>
+          <div class="budget">$20-30/day</div>
+          <span class="link">View Guide →</span>
+        </a>
+      </div>
+    </div>
 
-<div class="section">
-<div class="wrap">
-<h2>Use Our Itinerary Builder</h2>
-<p>Can't wait for your destination guide? Use our free itinerary builder to create custom 3/5/10-day plans for all 54 countries.</p>
-<a href="/itinerary-builder.html" class="cta-button" style="margin-top:20px; font-size:1rem;">Build Your Itinerary →</a>
-</div>
-</div>
+    <!-- EUROPE -->
+    <div class="region" data-region="europe">
+      <h2 class="section-title">🌍 Europe (6 Destinations)</h2>
+      <p class="region-subtitle">Experience historic cities, world-class cuisine, art, architecture, and Mediterranean charm</p>
+
+      <div class="destination-grid">
+        <a href="italy.html" class="dest-card">
+          <h3>🇮🇹 Italy</h3>
+          <p class="description">Rome's history, Venice's canals, Tuscany's countryside, and pasta perfection.</p>
+          <div class="includes">Includes: Food Guide • Best Time • Getting Around • Neighborhoods</div>
+          <div class="budget">€50-80/day</div>
+          <span class="link">View Guide →</span>
+        </a>
+        <a href="france.html" class="dest-card">
+          <h3>🇫🇷 France</h3>
+          <p class="description">Paris elegance, French Riviera beaches, wine regions, and culinary excellence.</p>
+          <div class="includes">Includes: Food Guide • Best Time • Getting Around • Neighborhoods</div>
+          <div class="budget">€60-90/day</div>
+          <span class="link">View Guide →</span>
+        </a>
+        <a href="spain.html" class="dest-card">
+          <h3>🇪🇸 Spain</h3>
+          <p class="description">Barcelona's modernism, Madrid's museums, Seville's passion, and tapas culture.</p>
+          <div class="includes">Includes: Food Guide • Best Time • Getting Around • Neighborhoods</div>
+          <div class="budget">€40-65/day</div>
+          <span class="link">View Guide →</span>
+        </a>
+        <a href="greece.html" class="dest-card">
+          <h3>🇬🇷 Greece</h3>
+          <p class="description">Athens' ruins, island hopping, Mediterranean beaches, and Greek island life.</p>
+          <div class="includes">Includes: Food Guide • Best Time • Getting Around • Neighborhoods</div>
+          <div class="budget">€35-55/day</div>
+          <span class="link">View Guide →</span>
+        </a>
+        <a href="portugal.html" class="dest-card">
+          <h3>🇵🇹 Portugal</h3>
+          <p class="description">Lisbon's charm, Algarve beaches, Port wine, tiles, and Atlantic coast beauty.</p>
+          <div class="includes">Includes: Food Guide • Best Time • Getting Around • Neighborhoods</div>
+          <div class="budget">€30-50/day</div>
+          <span class="link">View Guide →</span>
+        </a>
+        <a href="germany.html" class="dest-card">
+          <h3>🇩🇪 Germany</h3>
+          <p class="description">Berlin's history, Bavarian beer, Bavarian castles, and efficient culture.</p>
+          <div class="includes">Includes: Food Guide • Best Time • Getting Around • Neighborhoods</div>
+          <div class="budget">€40-70/day</div>
+          <span class="link">View Guide →</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- AMERICAS & OTHERS -->
+    <div class="region" data-region="americas">
+      <h2 class="section-title">🌎 Americas & Others (4 Destinations)</h2>
+      <p class="region-subtitle">Adventure awaits in Latin America and beyond with lost cities, natural wonders, and vibrant cultures</p>
+
+      <div class="destination-grid">
+        <a href="mexico.html" class="dest-card">
+          <h3>🇲🇽 Mexico</h3>
+          <p class="description">Cancun beaches, Mayan ruins, Mexico City culture, and tacos on every corner.</p>
+          <div class="includes">Includes: Food Guide • Best Time • Getting Around • Neighborhoods</div>
+          <div class="budget">$35-55/day</div>
+          <span class="link">View Guide →</span>
+        </a>
+        <a href="peru.html" class="dest-card">
+          <h3>🇵🇪 Peru</h3>
+          <p class="description">Machu Picchu, Lima's food scene, Sacred Valley, and Incan heritage exploration.</p>
+          <div class="includes">Includes: Food Guide • Best Time • Getting Around • Neighborhoods</div>
+          <div class="budget">$30-45/day</div>
+          <span class="link">View Guide →</span>
+        </a>
+        <a href="australia.html" class="dest-card">
+          <h3>🇦🇺 Australia</h3>
+          <p class="description">Sydney Opera House, Great Barrier Reef, Outback, and unique wildlife everywhere.</p>
+          <div class="includes">Includes: Food Guide • Best Time • Getting Around • Neighborhoods</div>
+          <div class="budget">$50-75/day</div>
+          <span class="link">View Guide →</span>
+        </a>
+        <a href="iceland.html" class="dest-card">
+          <h3>🇮🇸 Iceland</h3>
+          <p class="description">Waterfalls, glaciers, geysers, Northern Lights, and dramatic natural landscapes.</p>
+          <div class="includes">Includes: Food Guide • Best Time • Getting Around • Neighborhoods</div>
+          <div class="budget">€60-90/day</div>
+          <span class="link">View Guide →</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section style="padding:60px 0; background:linear-gradient(135deg,rgba(255,107,53,.08),rgba(247,147,30,.08)); margin-top:60px;">
+  <div class="wrap" style="text-align:center;">
+    <h2 style="font-size:2rem; margin-bottom:16px;">Can't Choose? Build Your Own Itinerary</h2>
+    <p style="font-size:1.05rem; color:#56646a; margin-bottom:28px; max-width:600px; margin-left:auto; margin-right:auto;">Use our free itinerary builder to create custom day-by-day plans for any destination with attractions, costs, tips, and everything you need.</p>
+    <a href="/itinerary-builder.html" class="btn" style="padding:15px 40px; font-size:1rem;">Explore All Itineraries →</a>
+  </div>
+</section>
+
 </main>
 
 <footer>
-<div class="wrap">
-<p><a href="/itinerary-builder.html">Itinerary Builder</a> | <a href="/blog.html">Blog</a> | <a href="/faq.html">FAQ</a></p>
-<div class="copy">&copy; 2026 Love and Layovers · Travel tips with heart ✈</div>
-</div>
+  <div class="wrap">
+    <div class="foot">
+      <a href="/" class="logo">Love and Layovers</a>
+      <div class="foot-links">
+        <a href="/">Home</a>
+        <a href="#guides">Destinations</a>
+        <a href="/itinerary-builder.html">Itineraries</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/faq.html">FAQ</a>
+      </div>
+    </div>
+    <div class="copy">&copy; 2026 Love and Layovers · Travel tips with heart ✈</div>
+  </div>
 </footer>
+
+<script>
+  function filterRegion(region) {
+    // Update active button
+    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+
+    // Show/hide regions
+    document.querySelectorAll('.region').forEach(r => {
+      if(region === 'all' || r.dataset.region === region) {
+        r.style.display = 'block';
+      } else {
+        r.style.display = 'none';
+      }
+    });
+  }
+
+  // Analytics
+  if(window.gtag) {
+    document.querySelectorAll('.dest-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const destination = card.querySelector('h3').textContent.replace(/[^a-z]/gi, '').toLowerCase();
+        gtag('event', 'destination_click', {destination});
+      });
+    });
+  }
+</script>
 </body>
 </html>
