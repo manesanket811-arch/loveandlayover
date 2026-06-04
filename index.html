@@ -560,7 +560,7 @@
         <h3 style="margin:0 0 8px 0; color:var(--ink); font-size:0.95rem;">Latest on YouTube</h3>
         <div class="video-grid" id="videoGrid" style="grid-template-columns:1fr; max-height:280px; overflow:hidden; border-radius:6px;">
           <a class="vcard reveal" href="https://www.youtube.com/shorts/3ZuyHb8lAYg" target="_blank" rel="noopener">
-            <div class="vthumb a"><iframe src="https://www.youtube-nocookie.com/embed/3ZuyHb8lAYg" allowfullscreen=""></iframe></div>
+            <div class="vthumb a"><iframe width="320" height="180" src="https://www.youtube-nocookie.com/embed/3ZuyHb8lAYg" allowfullscreen="" loading="lazy" title="Love and Layovers YouTube Short"></iframe></div>
             <div class="vmeta"><h3>Latest Short</h3><div class="info">Quick travel tips · Destination moments</div></div>
           </a>
         </div>
@@ -570,10 +570,14 @@
       <!-- Instagram Column -->
       <div style="min-width:0;">
         <h3 style="margin:0 0 8px 0; color:var(--ink); font-size:0.95rem;">Daily Travel Moments</h3>
-        <div style="max-height:280px; overflow:hidden; border-radius:6px; box-shadow:0 8px 24px rgba(13,38,43,.08);">
-          <!-- Elfsight Instagram Feed | Love and Layover -->
-          <script src="https://elfsightcdn.com/platform.js" async></script>
-          <div class="elfsight-app-2a41819a-389a-483c-8aad-f0b729f4b159" data-elfsight-app-lazy></div>
+        <div style="max-height:280px; overflow:hidden; border-radius:6px; box-shadow:0 8px 24px rgba(13,38,43,.08); background:#f9f9f9; display:grid; grid-template-columns:repeat(3,1fr); gap:2px;" id="instagram-feed">
+          <!-- Instagram feed will load here -->
+          <div style="aspect-ratio:1; background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);"></div>
+          <div style="aspect-ratio:1; background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%);"></div>
+          <div style="aspect-ratio:1; background:linear-gradient(135deg,#4facfe 0%,#00f2fe 100%);"></div>
+          <div style="aspect-ratio:1; background:linear-gradient(135deg,#43e97b 0%,#38f9d7 100%);"></div>
+          <div style="aspect-ratio:1; background:linear-gradient(135deg,#fa709a 0%,#fee140 100%);"></div>
+          <div style="aspect-ratio:1; background:linear-gradient(135deg,#30cfd0 0%,#330867 100%);"></div>
         </div>
         <div class="center reveal" style="margin-top:8px;"><a href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener" class="btn coral" style="padding:8px 18px; font-size:0.85rem;">Visit Instagram →</a></div>
       </div>
@@ -1062,7 +1066,7 @@
             const thumbClass = ['a', 'b', 'c'][idx] || 'a';
             html += `
               <a class="vcard reveal" href="${video.url}" target="_blank" rel="noopener">
-                <div class="vthumb ${thumbClass}"><iframe src="https://www.youtube-nocookie.com/embed/${video.id}" allowfullscreen=""></iframe></div>
+                <div class="vthumb ${thumbClass}"><iframe width="320" height="180" src="https://www.youtube-nocookie.com/embed/${video.id}" allowfullscreen="" loading="lazy" title="Love and Layovers - ${video.title}"></iframe></div>
                 <div class="vmeta"><h3>${video.title}</h3><div class="info">Travel vlog · Destination guides</div></div>
               </a>
             `;
