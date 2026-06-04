@@ -209,7 +209,7 @@
   .scrolled .logo{color:var(--ink);text-shadow:none}
   .logo .dot{
     width:40px;height:40px;border-radius:50%;
-    background-image:url('https://loveandlayover-website-604218333793.s3.us-east-1.amazonaws.com/logo.jpg');
+    background-image:url('/logo.webp');
     background-size:cover;
     background-position:center;
     display:inline-flex;align-items:center;justify-content:center;
@@ -242,7 +242,7 @@
     padding:120px 0 60px;
     background:
       linear-gradient(135deg,rgba(232,244,248,.35),rgba(212,232,240,.35),rgba(200,223,240,.35)),
-      url('https://loveandlayover-website-604218333793.s3.us-east-1.amazonaws.com/banner.png');
+      url('/banner.webp');
     background-size:cover;
     background-position:center;
     overflow:hidden;
@@ -1068,12 +1068,32 @@
             const thumbClass = ['a', 'b', 'c'][idx] || 'a';
             html += `
               <a class="vcard reveal" href="${video.url}" target="_blank" rel="noopener">
-                <div class="vthumb ${thumbClass}"><iframe width="320" height="180" src="https://www.youtube-nocookie.com/embed/${video.id}" allowfullscreen="" loading="lazy" title="Love and Layovers - ${video.title}"></iframe></div>
+                <div class="vthumb ${thumbClass}" data-video-id="${video.id}" data-video-title="${video.title}" style="background:url('https://img.youtube.com/vi/${video.id}/mqdefault.jpg') no-repeat center/cover; cursor:pointer; position:relative;">
+                  <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:60px; height:60px; background:rgba(0,0,0,0.6); border-radius:50%; display:flex; align-items:center; justify-content:center;">
+                    <div style="width:0; height:0; border-left:18px solid #fff; border-top:12px solid transparent; border-bottom:12px solid transparent; margin-left:4px;"></div>
+                  </div>
+                </div>
                 <div class="vmeta"><h3>${video.title}</h3><div class="info">Travel vlog · Destination guides</div></div>
               </a>
             `;
           });
           videoGrid.innerHTML = html;
+          document.querySelectorAll('.vthumb[data-video-id]').forEach(thumb => {
+            thumb.addEventListener('click', (e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              const videoId = thumb.getAttribute('data-video-id');
+              const videoTitle = thumb.getAttribute('data-video-title');
+              const iframe = document.createElement('iframe');
+              iframe.setAttribute('width', '320');
+              iframe.setAttribute('height', '180');
+              iframe.setAttribute('src', `https://www.youtube-nocookie.com/embed/${videoId}`);
+              iframe.setAttribute('allowfullscreen', '');
+              iframe.setAttribute('title', `Love and Layovers - ${videoTitle}`);
+              iframe.style.border = 'none';
+              thumb.replaceWith(iframe);
+            });
+          });
         }
       }
     } catch (error) {
