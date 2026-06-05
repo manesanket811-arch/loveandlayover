@@ -1,0 +1,8 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <rect width="256" height="256" fill="#fefaf5" rx="60"/>
+  <g transform="translate(128, 128)">
+    <!-- Plane icon -->
+    <path d="M -40 -20 L 40 0 L -40 20 L -20 0 Z" fill="#ff6b35" opacity="0.9"/>
+    <circle cx="0" cy="0" r="8" fill="#f7931e"/>
+  </g>
+</svg>
