@@ -1066,13 +1066,20 @@
     try {
       const channelId = 'UCUABrODa0CNF5zgkesAlYeA';
       const feedUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
-      const corsProxy = 'https://corsproxy.io/?';
+      const corsProxy = 'https://api.allorigins.win/raw?url=';
 
       // Fetch RSS feed through CORS proxy
       const response = await fetch(corsProxy + encodeURIComponent(feedUrl));
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
       const xmlText = await response.text();
       const parser = new DOMParser();
       const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+
+      // Check for parsing errors
+      if (xmlDoc.getElementsByTagName('parsererror').length > 0) {
+        throw new Error('XML Parse Error');
+      }
 
       // Extract video entries
       const entries = xmlDoc.querySelectorAll('entry');
@@ -1088,11 +1095,13 @@
             const videoId = href.split('v=')[1];
             const title = titleEl.textContent;
 
-            videos.push({
-              id: videoId,
-              title: title,
-              url: href
-            });
+            if(videoId && title) {
+              videos.push({
+                id: videoId,
+                title: title,
+                url: href
+              });
+            }
           }
         }
       });
@@ -1135,8 +1144,8 @@
         }
       }
     } catch (error) {
-      console.log('YouTube feed loaded (may be CORS restricted, using fallback)');
-      // If CORS blocks it, that's okay - fallback videos remain
+      console.error('YouTube feed error:', error);
+      // If fetch fails, fallback videos remain
     }
   }
 
