@@ -1066,9 +1066,10 @@
     try {
       const channelId = 'UCUABrODa0CNF5zgkesAlYeA';
       const feedUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
+      const corsProxy = 'https://corsproxy.io/?';
 
-      // Fetch RSS feed
-      const response = await fetch(feedUrl);
+      // Fetch RSS feed through CORS proxy
+      const response = await fetch(corsProxy + encodeURIComponent(feedUrl));
       const xmlText = await response.text();
       const parser = new DOMParser();
       const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
@@ -1081,7 +1082,6 @@
         if(idx < 3) { // Get latest 3 videos
           const titleEl = entry.querySelector('title');
           const linkEl = entry.querySelector('link');
-          const mediaEl = entry.querySelector('[url]');
 
           if(titleEl && linkEl) {
             const href = linkEl.getAttribute('href');
