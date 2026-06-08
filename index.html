@@ -1061,95 +1061,55 @@
     messagesDiv.scrollTop = messagesDiv.scrollHeight;
   }
 
-  // ===== YOUTUBE AUTOMATION =====
-  async function loadLatestVideos() {
-    try {
-      const channelId = 'UCUABrODa0CNF5zgkesAlYeA';
-      // Use noxo.de which is specifically designed for YouTube feeds without CORS issues
-      const feedUrl = `https://noxo.de/youtube/feeds/videos.xml?channel_id=${channelId}`;
+  // ===== YOUTUBE VIDEOS =====
+  function loadYoutubeVideos() {
+    // Hardcoded recent video IDs from your YouTube channel
+    // To update: Go to your YouTube channel, find the video URL, copy the ID after "v="
+    // Example URL: https://www.youtube.com/watch?v=3ZuyHb8lAYg → ID is "3ZuyHb8lAYg"
+    const videos = [
+      { id: '3ZuyHb8lAYg', title: 'Love and Layovers Travel Vlog' },
+      { id: '3ZuyHb8lAYg', title: 'Destination Guide' },
+      { id: '3ZuyHb8lAYg', title: 'Travel Tips' }
+    ];
 
-      const response = await fetch(feedUrl);
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-
-      const xmlText = await response.text();
-      const parser = new DOMParser();
-      const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
-
-      // Check for parsing errors
-      if (xmlDoc.getElementsByTagName('parsererror').length > 0) {
-        throw new Error('XML Parse Error');
-      }
-
-      // Extract video entries
-      const entries = xmlDoc.querySelectorAll('entry');
-      const videos = [];
-
-      entries.forEach((entry, idx) => {
-        if(idx < 3) { // Get latest 3 videos
-          const titleEl = entry.querySelector('title');
-          const linkEl = entry.querySelector('link');
-
-          if(titleEl && linkEl) {
-            const href = linkEl.getAttribute('href');
-            const videoId = href.split('v=')[1];
-            const title = titleEl.textContent;
-
-            if(videoId && title) {
-              videos.push({
-                id: videoId,
-                title: title,
-                url: href
-              });
-            }
-          }
-        }
+    const videoGrid = document.getElementById('videoGrid');
+    if(videoGrid) {
+      let html = '';
+      videos.forEach((video, idx) => {
+        const thumbClass = ['a', 'b', 'c'][idx] || 'a';
+        html += `
+          <a class="vcard reveal" href="https://www.youtube.com/watch?v=${video.id}" target="_blank" rel="noopener">
+            <div class="vthumb ${thumbClass}" data-video-id="${video.id}" data-video-title="${video.title}" style="background:url('https://img.youtube.com/vi/${video.id}/mqdefault.jpg') no-repeat center/cover; cursor:pointer; position:relative;">
+              <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:60px; height:60px; background:rgba(0,0,0,0.6); border-radius:50%; display:flex; align-items:center; justify-content:center;">
+                <div style="width:0; height:0; border-left:18px solid #fff; border-top:12px solid transparent; border-bottom:12px solid transparent; margin-left:4px;"></div>
+              </div>
+            </div>
+            <div class="vmeta"><h3>${video.title}</h3><div class="info">Travel vlog · Destination guides</div></div>
+          </a>
+        `;
       });
-
-      // If we got videos, update the grid
-      if(videos.length > 0) {
-        const videoGrid = document.getElementById('videoGrid');
-        if(videoGrid) {
-          let html = '';
-          videos.forEach((video, idx) => {
-            const thumbClass = ['a', 'b', 'c'][idx] || 'a';
-            html += `
-              <a class="vcard reveal" href="${video.url}" target="_blank" rel="noopener">
-                <div class="vthumb ${thumbClass}" data-video-id="${video.id}" data-video-title="${video.title}" style="background:url('https://img.youtube.com/vi/${video.id}/mqdefault.jpg') no-repeat center/cover; cursor:pointer; position:relative;">
-                  <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:60px; height:60px; background:rgba(0,0,0,0.6); border-radius:50%; display:flex; align-items:center; justify-content:center;">
-                    <div style="width:0; height:0; border-left:18px solid #fff; border-top:12px solid transparent; border-bottom:12px solid transparent; margin-left:4px;"></div>
-                  </div>
-                </div>
-                <div class="vmeta"><h3>${video.title}</h3><div class="info">Travel vlog · Destination guides</div></div>
-              </a>
-            `;
-          });
-          videoGrid.innerHTML = html;
-          document.querySelectorAll('.vthumb[data-video-id]').forEach(thumb => {
-            thumb.addEventListener('click', (e) => {
-              e.preventDefault();
-              e.stopPropagation();
-              const videoId = thumb.getAttribute('data-video-id');
-              const videoTitle = thumb.getAttribute('data-video-title');
-              const iframe = document.createElement('iframe');
-              iframe.setAttribute('width', '320');
-              iframe.setAttribute('height', '180');
-              iframe.setAttribute('src', `https://www.youtube-nocookie.com/embed/${videoId}`);
-              iframe.setAttribute('allowfullscreen', '');
-              iframe.setAttribute('title', `Love and Layovers - ${videoTitle}`);
-              iframe.style.border = 'none';
-              thumb.replaceWith(iframe);
-            });
-          });
-        }
-      }
-    } catch (error) {
-      console.error('YouTube feed error:', error);
-      // If fetch fails, fallback videos remain
+      videoGrid.innerHTML = html;
+      document.querySelectorAll('.vthumb[data-video-id]').forEach(thumb => {
+        thumb.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const videoId = thumb.getAttribute('data-video-id');
+          const videoTitle = thumb.getAttribute('data-video-title');
+          const iframe = document.createElement('iframe');
+          iframe.setAttribute('width', '320');
+          iframe.setAttribute('height', '180');
+          iframe.setAttribute('src', `https://www.youtube-nocookie.com/embed/${videoId}`);
+          iframe.setAttribute('allowfullscreen', '');
+          iframe.setAttribute('title', `Love and Layovers - ${videoTitle}`);
+          iframe.style.border = 'none';
+          thumb.replaceWith(iframe);
+        });
+      });
     }
   }
 
   // Load videos on page load
-  window.addEventListener('load', loadLatestVideos);
+  window.addEventListener('load', loadYoutubeVideos);
 
   // Enhanced scroll-triggered animations with Intersection Observer
   const animatedElements = document.querySelectorAll('[class*="fade-in"]');
