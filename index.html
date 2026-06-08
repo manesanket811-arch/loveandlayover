@@ -1065,11 +1065,10 @@
   async function loadLatestVideos() {
     try {
       const channelId = 'UCUABrODa0CNF5zgkesAlYeA';
-      const feedUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
-      const corsProxy = 'https://api.allorigins.win/raw?url=';
+      // Use noxo.de which is specifically designed for YouTube feeds without CORS issues
+      const feedUrl = `https://noxo.de/youtube/feeds/videos.xml?channel_id=${channelId}`;
 
-      // Fetch RSS feed through CORS proxy
-      const response = await fetch(corsProxy + encodeURIComponent(feedUrl));
+      const response = await fetch(feedUrl);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
       const xmlText = await response.text();
