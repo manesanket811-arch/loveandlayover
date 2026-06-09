@@ -4,6 +4,32 @@
   <url>
     <loc>https://www.loveandlayover.in/</loc>
     <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/Qw5N2_YKZwY/mqdefault.jpg</video:thumbnail_loc>
+      <video:title>Love and Layovers Travel Stories</video:title>
+      <video:description>Discover authentic travel stories and adventures with Love and Layovers. Real experiences from real travelers exploring the world.</video:description>
+      <video:content_loc>https://www.youtube.com/watch?v=Qw5N2_YKZwY</video:content_loc>
+      <video:player_loc>https://www.youtube.com/embed/Qw5N2_YKZwY</video:player_loc>
+      <video:duration>60</video:duration>
+      <video:publication_date>2026-06-09T00:00:00+00:00</video:publication_date>
+      <video:category>Travel</video:category>
+      <video:tag>travel shorts</video:tag>
+      <video:tag>travel stories</video:tag>
+      <video:tag>adventure</video:tag>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/LmZdCyqEWI8/mqdefault.jpg</video:thumbnail_loc>
+      <video:title>Travel Moments & Adventures</video:title>
+      <video:description>Quick travel moments and exciting adventures captured in short-form video. Follow along as we explore destinations around the world.</video:description>
+      <video:content_loc>https://www.youtube.com/watch?v=LmZdCyqEWI8</video:content_loc>
+      <video:player_loc>https://www.youtube.com/embed/LmZdCyqEWI8</video:player_loc>
+      <video:duration>60</video:duration>
+      <video:publication_date>2026-06-09T00:00:00+00:00</video:publication_date>
+      <video:category>Travel</video:category>
+      <video:tag>travel shorts</video:tag>
+      <video:tag>travel moments</video:tag>
+      <video:tag>destination highlights</video:tag>
+    </video:video>
+    <video:video>
       <video:thumbnail_loc>https://img.youtube.com/vi/1h-4pUZcaF4/mqdefault.jpg</video:thumbnail_loc>
       <video:title>Love and Layovers Travel Vlog</video:title>
       <video:description>Explore the world with Love and Layovers. Real travel tips, destination guides, and travel vlogs from authentic travelers.</video:description>
