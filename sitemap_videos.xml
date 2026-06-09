@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://www.loveandlayover.in/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/1h-4pUZcaF4/mqdefault.jpg</video:thumbnail_loc>
+      <video:title>Love and Layovers Travel Vlog</video:title>
+      <video:description>Explore the world with Love and Layovers. Real travel tips, destination guides, and travel vlogs from authentic travelers.</video:description>
+      <video:content_loc>https://www.youtube.com/watch?v=1h-4pUZcaF4</video:content_loc>
+      <video:player_loc>https://www.youtube.com/embed/1h-4pUZcaF4</video:player_loc>
+      <video:duration>300</video:duration>
+      <video:publication_date>2024-01-01T00:00:00+00:00</video:publication_date>
+      <video:category>Travel</video:category>
+      <video:tag>travel vlog</video:tag>
+      <video:tag>destination guide</video:tag>
+      <video:tag>travel tips</video:tag>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/3ZuyHb8lAYg/mqdefault.jpg</video:thumbnail_loc>
+      <video:title>Destination Guide - Love and Layovers</video:title>
+      <video:description>Comprehensive destination guides featuring food tours, budget tips, neighborhoods, and travel itineraries.</video:description>
+      <video:content_loc>https://www.youtube.com/watch?v=3ZuyHb8lAYg</video:content_loc>
+      <video:player_loc>https://www.youtube.com/embed/3ZuyHb8lAYg</video:player_loc>
+      <video:duration>300</video:duration>
+      <video:publication_date>2024-01-01T00:00:00+00:00</video:publication_date>
+      <video:category>Travel</video:category>
+      <video:tag>destination guide</video:tag>
+      <video:tag>travel guide</video:tag>
+      <video:tag>budget travel</video:tag>
+    </video:video>
+  </url>
+</urlset>
