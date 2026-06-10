@@ -197,31 +197,43 @@
     <div style="margin-bottom:50px;">
       <h3 style="margin:0 0 24px 0; color:var(--ink); font-size:1.3rem;">Latest on YouTube</h3>
       <div class="video-grid" id="videoGrid">
-        <a class="vcard" href="https://www.youtube.com/watch?v=Qw5N2_YKZwY" target="_blank" rel="noopener">
-          <div class="vthumb" style="background:url('https://img.youtube.com/vi/Qw5N2_YKZwY/mqdefault.jpg') no-repeat center/cover;">
-            <div class="play-btn"><div style="width:0; height:0; border-left:18px solid #ff6b35; border-top:12px solid transparent; border-bottom:12px solid transparent; margin-left:4px;"></div></div>
-          </div>
-          <div class="vmeta"><h3>Love and Layovers Travel Stories</h3><div class="info">Travel Shorts · Stories</div></div>
-        </a>
-        <a class="vcard" href="https://www.youtube.com/watch?v=LmZdCyqEWI8" target="_blank" rel="noopener">
-          <div class="vthumb" style="background:url('https://img.youtube.com/vi/LmZdCyqEWI8/mqdefault.jpg') no-repeat center/cover;">
-            <div class="play-btn"><div style="width:0; height:0; border-left:18px solid #ff6b35; border-top:12px solid transparent; border-bottom:12px solid transparent; margin-left:4px;"></div></div>
-          </div>
-          <div class="vmeta"><h3>Travel Moments & Adventures</h3><div class="info">Travel Shorts · Moments</div></div>
-        </a>
-        <a class="vcard" href="https://www.youtube.com/watch?v=1h-4pUZcaF4" target="_blank" rel="noopener">
-          <div class="vthumb" style="background:url('https://img.youtube.com/vi/1h-4pUZcaF4/mqdefault.jpg') no-repeat center/cover;">
-            <div class="play-btn"><div style="width:0; height:0; border-left:18px solid #ff6b35; border-top:12px solid transparent; border-bottom:12px solid transparent; margin-left:4px;"></div></div>
-          </div>
-          <div class="vmeta"><h3>Love and Layovers Travel Vlog</h3><div class="info">Travel Vlog · Guides</div></div>
-        </a>
-        <a class="vcard" href="https://www.youtube.com/watch?v=3ZuyHb8lAYg" target="_blank" rel="noopener">
-          <div class="vthumb" style="background:url('https://img.youtube.com/vi/3ZuyHb8lAYg/mqdefault.jpg') no-repeat center/cover;">
-            <div class="play-btn"><div style="width:0; height:0; border-left:18px solid #ff6b35; border-top:12px solid transparent; border-bottom:12px solid transparent; margin-left:4px;"></div></div>
-          </div>
-          <div class="vmeta"><h3>Destination Guide</h3><div class="info">Travel Guide · Itineraries</div></div>
-        </a>
+        <!-- Videos loaded dynamically from videos-data.json -->
       </div>
+      <script>
+        // Load videos dynamically from JSON file
+        async function loadVideos() {
+          try {
+            const response = await fetch('/videos-data.json');
+            const videos = await response.json();
+            const grid = document.getElementById('videoGrid');
+            grid.innerHTML = '';
+
+            videos.forEach(video => {
+              const card = document.createElement('a');
+              card.href = `https://www.youtube.com/watch?v=${video.id}`;
+              card.target = '_blank';
+              card.rel = 'noopener';
+              card.className = 'vcard';
+              card.innerHTML = `
+                <div class="vthumb" style="background:url('https://img.youtube.com/vi/${video.id}/mqdefault.jpg') no-repeat center/cover;">
+                  <div class="play-btn"><div style="width:0; height:0; border-left:18px solid #b85623; border-top:12px solid transparent; border-bottom:12px solid transparent; margin-left:4px;"></div></div>
+                </div>
+                <div class="vmeta"><h3>${video.title}</h3><div class="info">${video.category} · ${video.type}</div></div>
+              `;
+              grid.appendChild(card);
+            });
+          } catch (error) {
+            console.error('Error loading videos:', error);
+          }
+        }
+
+        // Load videos when page loads
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', loadVideos);
+        } else {
+          loadVideos();
+        }
+      </script>
       <div style="text-align:center;"><a href="https://www.youtube.com/@LoveAndLayover" target="_blank" rel="noopener" class="btn coral" style="padding:14px 32px; font-size:1rem;">Subscribe on YouTube →</a></div>
     </div>
 
