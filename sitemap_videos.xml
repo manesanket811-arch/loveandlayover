@@ -18,7 +18,7 @@
     </video:video>
     <video:video>
       <video:thumbnail_loc>https://img.youtube.com/vi/LmZdCyqEWI8/mqdefault.jpg</video:thumbnail_loc>
-      <video:title>Travel Moments & Adventures</video:title>
+      <video:title>Travel Moments &amp; Adventures</video:title>
       <video:description>Quick travel moments and exciting adventures captured in short-form video. Follow along as we explore destinations around the world.</video:description>
       <video:content_loc>https://www.youtube.com/watch?v=LmZdCyqEWI8</video:content_loc>
       <video:player_loc>https://www.youtube.com/embed/LmZdCyqEWI8</video:player_loc>
