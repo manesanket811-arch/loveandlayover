@@ -944,7 +944,7 @@
 
   // Contact form with AWS integration
   const cform=document.getElementById('cform'),formNote=document.getElementById('formNote');
-  cform.addEventListener('submit',async(e)=>{
+  if(cform) cform.addEventListener('submit',async(e)=>{
     e.preventDefault();
     const name=document.getElementById('name').value;
     const email=document.getElementById('cemail').value;
@@ -975,7 +975,8 @@
     }
   });
 
-  document.getElementById('yr').textContent=new Date().getFullYear();
+  const yr=document.getElementById('yr');
+  if(yr) yr.textContent=new Date().getFullYear();
 
   // Enhanced Chatbot with Better UI
   const chatbotHTML = `
