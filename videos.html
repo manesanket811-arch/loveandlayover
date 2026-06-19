@@ -46,58 +46,44 @@
   gtag('config', 'G-5D7GNE6JQL');
 </script>
 <!-- Datadog RUM + Logs -->
-<script defer>
-  (function(h,o,u,n,d) {
-    h=h[d]=h[d]||{q:[],onReady:function(c){h.q.push(c)}}
-    d=o.createElement(u);d.defer=1;d.src=n;d.crossOrigin=''
-    n=o.getElementsByTagName(u)[0];n.parentNode.insertBefore(d,n)
-  })(window,document,'script','https://www.datadoghq-browser-agent.com/us5/v7/datadog-rum.js','DD_RUM')
-  window.DD_RUM.onReady(function() {
+<script src="https://www.datadoghq-browser-agent.com/us5/v7/datadog-rum.js"></script>
+<script src="https://www.datadoghq-browser-agent.com/us5/v7/datadog-logs.js"></script>
+<script>
+  // Initialize Datadog RUM
+  if (window.DD_RUM) {
     window.DD_RUM.init({
-        applicationId: '2b36cb95-5c53-4b4c-afd7-5cc7207d8d8c',
-        clientToken: 'pub398e9055d3a8e18d44a22e64e505b1fa',
-        site: 'us5.datadoghq.com',
-        service: 'love-and-layovers',
-        env: 'production',
-        version: '1.0.0',
-        sessionSampleRate: 100,
-        sessionReplaySampleRate: 20,
-        trackResources: true,
-        trackUserInteractions: true,
-        trackLongTasks: true,
-        defaultPrivacyLevel: 'mask-user-input',
+      applicationId: '2b36cb95-5c53-4b4c-afd7-5cc7207d8d8c',
+      clientToken: 'pub398e9055d3a8e18d44a22e64e505b1fa',
+      site: 'us5.datadoghq.com',
+      service: 'love-and-layovers',
+      env: 'production',
+      version: '1.0.0',
+      sessionSampleRate: 100,
+      sessionReplaySampleRate: 20,
+      trackResources: true,
+      trackUserInteractions: true,
+      trackLongTasks: true,
+      defaultPrivacyLevel: 'mask-user-input',
     });
     window.DD_RUM.startSessionReplayRecording();
-  })
+    console.log('[Datadog] RUM initialized');
+  }
 
   // Initialize Datadog Logs
-  (function(h,o,u,n,d) {
-    h=h[d]=h[d]||{q:[],onReady:function(c){h.q.push(c)}}
-    d=o.createElement(u);d.defer=1;d.src=n;d.crossOrigin=''
-    n=o.getElementsByTagName(u)[0];n.parentNode.insertBefore(d,n)
-  })(window,document,'script','https://www.datadoghq-browser-agent.com/us5/v7/datadog-logs.js','DD_LOGS')
-  window.DD_LOGS.onReady(function() {
+  if (window.DD_LOGS) {
     window.DD_LOGS.init({
-        clientToken: 'pub398e9055d3a8e18d44a22e64e505b1fa',
-        site: 'us5.datadoghq.com',
-        service: 'love-and-layovers',
-        env: 'production',
-        version: '1.0.0',
-        forwardErrorsToLogs: true,
-        sessionSampleRate: 100,
+      clientToken: 'pub398e9055d3a8e18d44a22e64e505b1fa',
+      site: 'us5.datadoghq.com',
+      service: 'love-and-layovers',
+      env: 'production',
+      version: '1.0.0',
+      forwardErrorsToLogs: true,
+      sessionSampleRate: 100,
     });
     window.DD_LOGS.logger.info('Website loaded', {page: window.location.pathname});
-  })
-
-  // Diagnostic logging
-  console.log('[Datadog] Checking SDK initialization...');
-  setTimeout(function() {
-    console.log('[Datadog] DD_RUM available:', typeof window.DD_RUM !== 'undefined');
-    console.log('[Datadog] DD_LOGS available:', typeof window.DD_LOGS !== 'undefined');
-    if (window.DD_LOGS) {
-      window.DD_LOGS.logger.info('[DIAGNOSTIC] Datadog Logs SDK initialized successfully');
-    }
-  }, 1000);
+    console.log('[Datadog] Logs initialized');
+  }
+</script>
 
   // Activity logging
   document.addEventListener('DOMContentLoaded', function() {
