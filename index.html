@@ -173,6 +173,16 @@
     window.DD_LOGS.logger.info('Website loaded', {page: window.location.pathname});
   })
 
+  // Diagnostic logging
+  console.log('[Datadog] Checking SDK initialization...');
+  setTimeout(function() {
+    console.log('[Datadog] DD_RUM available:', typeof window.DD_RUM !== 'undefined');
+    console.log('[Datadog] DD_LOGS available:', typeof window.DD_LOGS !== 'undefined');
+    if (window.DD_LOGS) {
+      window.DD_LOGS.logger.info('[DIAGNOSTIC] Datadog Logs SDK initialized successfully');
+    }
+  }, 1000);
+
   // Activity logging
   document.addEventListener('DOMContentLoaded', function() {
     // Track page navigation
