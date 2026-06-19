@@ -84,83 +84,240 @@
 </script>
 
 <script>
-  // Activity logging
+  // Enhanced Meaningful Activity Logging for Insights
+  const DD_CONTEXT = {
+    page_name: document.title || 'Unknown Page',
+    page_url: window.location.pathname,
+    page_host: window.location.hostname,
+    user_agent: navigator.userAgent.substring(0, 100),
+    device_type: /mobile|android|iphone|ipad/i.test(navigator.userAgent) ? 'mobile' : 'desktop',
+    viewport_width: window.innerWidth,
+    viewport_height: window.innerHeight,
+    session_start_time: new Date().toISOString(),
+    timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
+  };
+
+  // Track user engagement metrics
+  let pageEngagementMetrics = {
+    time_on_page_start: Date.now(),
+    max_scroll_depth: 0,
+    links_clicked: 0,
+    buttons_clicked: 0,
+    forms_submitted: 0,
+    videos_played: 0,
+    errors_encountered: 0,
+    instagram_clicks: 0,
+    youtube_clicks: 0
+  };
+
+  // Log page view with detailed context
+  if (window.DD_LOGS) {
+    window.DD_LOGS.logger.info('page_view', {
+      ...DD_CONTEXT,
+      event_type: 'page_load',
+      timestamp: new Date().toISOString(),
+      referrer: document.referrer || 'direct'
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function() {
-    // Track page navigation
+    // Enhanced link tracking with categorization
     const links = document.querySelectorAll('a[href^="/"], a[href^="http"]');
-    links.forEach(link => {
+    links.forEach((link, index) => {
       link.addEventListener('click', function() {
         const href = this.getAttribute('href');
-        window.DD_LOGS.logger.info('Link clicked', {
-          href: href,
-          text: this.textContent.substring(0, 50),
-          section: document.location.pathname
-        });
-      });
-    });
+        const linkText = this.textContent.trim().substring(0, 60);
+        const isExternalLink = href.startsWith('http');
+        const isYouTubeLink = href.includes('youtube.com');
+        const isInstagramLink = href.includes('instagram.com');
 
-    // Track form submissions
-    const forms = document.querySelectorAll('form');
-    forms.forEach(form => {
-      form.addEventListener('submit', function() {
-        window.DD_LOGS.logger.info('Form submitted', {
-          formId: this.id || 'unnamed',
-          formAction: this.action
-        });
-      });
-    });
+        pageEngagementMetrics.links_clicked++;
+        if (isYouTubeLink) pageEngagementMetrics.youtube_clicks++;
+        if (isInstagramLink) pageEngagementMetrics.instagram_clicks++;
 
-    // Track scroll depth
-    let maxScroll = 0;
-    window.addEventListener('scroll', function() {
-      const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-      if (scrollPercent > maxScroll) {
-        maxScroll = Math.round(scrollPercent / 10) * 10;
-        if (maxScroll % 20 === 0) {
-          window.DD_RUM.addAction('scroll_depth', {depth_percent: maxScroll});
-        }
-      }
-    });
-
-    // Track video plays
-    const videos = document.querySelectorAll('video, [data-video-id]');
-    videos.forEach(video => {
-      video.addEventListener('play', function() {
-        window.DD_LOGS.logger.info('Video played', {
-          videoId: this.id || this.getAttribute('data-video-id'),
+        window.DD_LOGS.logger.info('user_navigation', {
+          ...DD_CONTEXT,
+          action: 'link_click',
+          link_url: href,
+          link_text: linkText,
+          link_type: isExternalLink ? 'external' : 'internal',
+          is_youtube: isYouTubeLink,
+          is_instagram: isInstagramLink,
+          element_position: index,
+          total_links_clicked: pageEngagementMetrics.links_clicked,
           timestamp: new Date().toISOString()
         });
       });
     });
 
-    // Track button clicks
-    const buttons = document.querySelectorAll('button, a.btn');
-    buttons.forEach(btn => {
-      btn.addEventListener('click', function() {
-        window.DD_LOGS.logger.info('Button clicked', {
-          buttonText: this.textContent.substring(0, 50),
-          buttonClass: this.className
+    // Enhanced form tracking
+    const forms = document.querySelectorAll('form');
+    forms.forEach(form => {
+      form.addEventListener('submit', function(e) {
+        const formId = this.id || 'contact_form';
+        const formInputs = this.querySelectorAll('input, textarea, select');
+        const filledFields = Array.from(formInputs).filter(f => f.value.trim()).length;
+
+        pageEngagementMetrics.forms_submitted++;
+
+        window.DD_LOGS.logger.info('user_conversion', {
+          ...DD_CONTEXT,
+          action: 'form_submission',
+          form_id: formId,
+          form_fields_count: formInputs.length,
+          form_fields_filled: filledFields,
+          form_completion_rate: Math.round((filledFields / formInputs.length) * 100),
+          form_action: this.action || 'unknown',
+          timestamp: new Date().toISOString(),
+          time_to_submit: Math.round((Date.now() - pageEngagementMetrics.time_on_page_start) / 1000)
         });
       });
     });
+
+    // Enhanced scroll tracking with engagement insights
+    let maxScroll = 0;
+    window.addEventListener('scroll', function() {
+      const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      if (scrollPercent > maxScroll) {
+        maxScroll = Math.round(scrollPercent / 10) * 10;
+        pageEngagementMetrics.max_scroll_depth = maxScroll;
+
+        if (maxScroll % 20 === 0) {
+          window.DD_LOGS.logger.info('user_engagement', {
+            ...DD_CONTEXT,
+            action: 'scroll_depth',
+            scroll_percentage: maxScroll,
+            page_scroll_height: document.documentElement.scrollHeight,
+            viewport_height: window.innerHeight,
+            engagement_level: maxScroll >= 80 ? 'high' : maxScroll >= 50 ? 'medium' : 'low',
+            timestamp: new Date().toISOString()
+          });
+          window.DD_RUM.addAction('engagement_scroll', {depth: maxScroll});
+        }
+      }
+    });
+
+    // Enhanced video card tracking
+    const videoCards = document.querySelectorAll('.vcard');
+    videoCards.forEach((card, index) => {
+      card.addEventListener('click', function() {
+        const videoTitle = this.querySelector('.vmeta h3')?.textContent || 'Unknown Video';
+        const category = this.querySelector('.info')?.textContent || 'Unknown';
+        pageEngagementMetrics.videos_played++;
+
+        window.DD_LOGS.logger.info('content_engagement', {
+          ...DD_CONTEXT,
+          action: 'video_click',
+          content_type: 'video_card',
+          video_title: videoTitle.trim(),
+          video_category: category,
+          video_position: index + 1,
+          total_videos_viewed: pageEngagementMetrics.videos_played,
+          page_section: 'videos_gallery',
+          timestamp: new Date().toISOString()
+        });
+      });
+    });
+
+    // Enhanced CTA button tracking with social media focus
+    const buttons = document.querySelectorAll('button, a.btn');
+    buttons.forEach((btn, index) => {
+      btn.addEventListener('click', function() {
+        const buttonText = this.textContent.trim().substring(0, 50);
+        const buttonType = this.classList.contains('coral') ? 'primary_cta' : 'secondary_cta';
+        const nearestSection = this.closest('section')?.id || 'unknown_section';
+        const isSocialLink = buttonText.includes('Instagram') || buttonText.includes('YouTube') || buttonText.includes('Subscribe') || buttonText.includes('Follow');
+
+        pageEngagementMetrics.buttons_clicked++;
+
+        window.DD_LOGS.logger.info('cta_interaction', {
+          ...DD_CONTEXT,
+          action: 'button_click',
+          button_text: buttonText,
+          button_type: buttonType,
+          button_location: nearestSection,
+          button_index: index,
+          is_social_cta: isSocialLink,
+          total_buttons_clicked: pageEngagementMetrics.buttons_clicked,
+          timestamp: new Date().toISOString()
+        });
+      });
+    });
+
+    // Track Instagram widget interactions
+    const instagramWidget = document.querySelector('.elfsight-app-2a41819a-389a-483c-8aad-f0b729f4b159');
+    if (instagramWidget) {
+      instagramWidget.addEventListener('click', function() {
+        pageEngagementMetrics.instagram_clicks++;
+
+        window.DD_LOGS.logger.info('social_engagement', {
+          ...DD_CONTEXT,
+          action: 'instagram_widget_click',
+          social_platform: 'instagram',
+          widget_type: 'feed_embed',
+          total_instagram_interactions: pageEngagementMetrics.instagram_clicks,
+          timestamp: new Date().toISOString()
+        });
+      });
+    }
   });
 
-  // Global error handler
+  // Enhanced error tracking with context
   window.addEventListener('error', function(event) {
-    window.DD_LOGS.logger.error('JavaScript error', {
-      message: event.message,
-      filename: event.filename,
-      lineno: event.lineno,
-      colno: event.colno,
-      stack: event.error?.stack
+    pageEngagementMetrics.errors_encountered++;
+
+    window.DD_LOGS.logger.error('application_error', {
+      ...DD_CONTEXT,
+      error_type: 'javascript_error',
+      error_message: event.message.substring(0, 200),
+      error_file: event.filename,
+      error_line: event.lineno,
+      error_column: event.colno,
+      error_stack: event.error?.stack?.substring(0, 500),
+      total_errors: pageEngagementMetrics.errors_encountered,
+      severity: 'high',
+      timestamp: new Date().toISOString()
     });
   });
 
-  // Unhandled promise rejection handler
+  // Enhanced promise rejection tracking
   window.addEventListener('unhandledrejection', function(event) {
-    window.DD_LOGS.logger.error('Unhandled promise rejection', {
-      reason: event.reason?.message || String(event.reason)
+    pageEngagementMetrics.errors_encountered++;
+
+    window.DD_LOGS.logger.error('application_error', {
+      ...DD_CONTEXT,
+      error_type: 'unhandled_promise_rejection',
+      error_message: String(event.reason).substring(0, 200),
+      error_reason: event.reason?.message || String(event.reason),
+      total_errors: pageEngagementMetrics.errors_encountered,
+      severity: 'high',
+      timestamp: new Date().toISOString()
     });
+  });
+
+  // Track session engagement before leaving
+  window.addEventListener('beforeunload', function() {
+    const timeOnPage = Math.round((Date.now() - pageEngagementMetrics.time_on_page_start) / 1000);
+
+    if (window.DD_LOGS) {
+      window.DD_LOGS.logger.info('session_summary', {
+        ...DD_CONTEXT,
+        event_type: 'page_exit',
+        time_on_page_seconds: timeOnPage,
+        engagement_metrics: {
+          max_scroll_depth: pageEngagementMetrics.max_scroll_depth,
+          links_clicked: pageEngagementMetrics.links_clicked,
+          buttons_clicked: pageEngagementMetrics.buttons_clicked,
+          forms_submitted: pageEngagementMetrics.forms_submitted,
+          videos_viewed: pageEngagementMetrics.videos_played,
+          instagram_interactions: pageEngagementMetrics.instagram_clicks,
+          youtube_interactions: pageEngagementMetrics.youtube_clicks,
+          errors_encountered: pageEngagementMetrics.errors_encountered
+        },
+        engagement_score: Math.min(100, (pageEngagementMetrics.links_clicked + pageEngagementMetrics.buttons_clicked + pageEngagementMetrics.max_scroll_depth) * 5),
+        timestamp: new Date().toISOString()
+      });
+    }
   });
 </script>
 
