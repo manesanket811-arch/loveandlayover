@@ -45,7 +45,7 @@
   gtag('js', new Date());
   gtag('config', 'G-5D7GNE6JQL');
 </script>
-<!-- Datadog RUM -->
+<!-- Datadog RUM + Logs -->
 <script defer>
   (function(h,o,u,n,d) {
     h=h[d]=h[d]||{q:[],onReady:function(c){h.q.push(c)}}
@@ -65,8 +65,108 @@
         trackResources: true,
         trackUserInteractions: true,
         trackLongTasks: true,
+        defaultPrivacyLevel: 'mask-user-input',
     });
+    window.DD_RUM.startSessionReplayRecording();
   })
+
+  // Initialize Datadog Logs
+  (function(h,o,u,n,d) {
+    h=h[d]=h[d]||{q:[],onReady:function(c){h.q.push(c)}}
+    d=o.createElement(u);d.defer=1;d.src=n;d.crossOrigin=''
+    n=o.getElementsByTagName(u)[0];n.parentNode.insertBefore(d,n)
+  })(window,document,'script','https://www.datadoghq-browser-agent.com/us5/v7/datadog-logs.js','DD_LOGS')
+  window.DD_LOGS.onReady(function() {
+    window.DD_LOGS.init({
+        clientToken: 'pub398e9055d3a8e18d44a22e64e505b1fa',
+        site: 'us5.datadoghq.com',
+        service: 'love-and-layovers',
+        env: 'production',
+        version: '1.0.0',
+        forwardErrorsToLogs: true,
+        sessionSampleRate: 100,
+    });
+    window.DD_LOGS.logger.info('Website loaded', {page: window.location.pathname});
+  })
+
+  // Activity logging
+  document.addEventListener('DOMContentLoaded', function() {
+    // Track page navigation
+    const links = document.querySelectorAll('a[href^="/"], a[href^="http"]');
+    links.forEach(link => {
+      link.addEventListener('click', function() {
+        const href = this.getAttribute('href');
+        window.DD_LOGS.logger.info('Link clicked', {
+          href: href,
+          text: this.textContent.substring(0, 50),
+          section: document.location.pathname
+        });
+      });
+    });
+
+    // Track form submissions
+    const forms = document.querySelectorAll('form');
+    forms.forEach(form => {
+      form.addEventListener('submit', function() {
+        window.DD_LOGS.logger.info('Form submitted', {
+          formId: this.id || 'unnamed',
+          formAction: this.action
+        });
+      });
+    });
+
+    // Track scroll depth
+    let maxScroll = 0;
+    window.addEventListener('scroll', function() {
+      const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      if (scrollPercent > maxScroll) {
+        maxScroll = Math.round(scrollPercent / 10) * 10;
+        if (maxScroll % 20 === 0) {
+          window.DD_RUM.addAction('scroll_depth', {depth_percent: maxScroll});
+        }
+      }
+    });
+
+    // Track video plays
+    const videos = document.querySelectorAll('video, [data-video-id]');
+    videos.forEach(video => {
+      video.addEventListener('play', function() {
+        window.DD_LOGS.logger.info('Video played', {
+          videoId: this.id || this.getAttribute('data-video-id'),
+          timestamp: new Date().toISOString()
+        });
+      });
+    });
+
+    // Track button clicks
+    const buttons = document.querySelectorAll('button, a.btn');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', function() {
+        window.DD_LOGS.logger.info('Button clicked', {
+          buttonText: this.textContent.substring(0, 50),
+          buttonClass: this.className
+        });
+      });
+    });
+  });
+
+  // Global error handler
+  window.addEventListener('error', function(event) {
+    window.DD_LOGS.logger.error('JavaScript error', {
+      message: event.message,
+      filename: event.filename,
+      lineno: event.lineno,
+      colno: event.colno,
+      stack: event.error?.stack
+    });
+  });
+
+  // Unhandled promise rejection handler
+  window.addEventListener('unhandledrejection', function(event) {
+    window.DD_LOGS.logger.error('Unhandled promise rejection', {
+      reason: event.reason?.message || String(event.reason)
+    });
+  });
 </script>
 
 <style>
