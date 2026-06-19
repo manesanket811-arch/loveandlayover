@@ -133,7 +133,7 @@
 <script src="https://www.datadoghq-browser-agent.com/us5/v7/datadog-rum.js"></script>
 <script src="https://www.datadoghq-browser-agent.com/us5/v7/datadog-logs.js"></script>
 <script>
-  // Initialize Datadog RUM
+  // Initialize Datadog RUM (without session replay to avoid module loading issues)
   if (window.DD_RUM) {
     window.DD_RUM.init({
       applicationId: '2b36cb95-5c53-4b4c-afd7-5cc7207d8d8c',
@@ -143,13 +143,11 @@
       env: 'production',
       version: '1.0.0',
       sessionSampleRate: 100,
-      sessionReplaySampleRate: 20,
       trackResources: true,
       trackUserInteractions: true,
       trackLongTasks: true,
-      defaultPrivacyLevel: 'mask-user-input',
+      trackSessionAcrossSubdomains: false,
     });
-    window.DD_RUM.startSessionReplayRecording();
     console.log('[Datadog] RUM initialized');
   }
 
@@ -165,7 +163,7 @@
       sessionSampleRate: 100,
     });
     window.DD_LOGS.logger.info('Website loaded', {page: window.location.pathname});
-    console.log('[Datadog] Logs initialized');
+    console.log('[Datadog] Logs initialized successfully');
   }
 </script>
 
