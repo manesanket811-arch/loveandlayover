@@ -453,30 +453,92 @@
         <!-- Videos loaded dynamically from videos-data.json -->
       </div>
       <script>
-        // Load videos dynamically from JSON file
+        // Load videos dynamically from YouTube RSS feed
         async function loadVideos() {
           try {
-            const response = await fetch('/videos-data.json');
-            const videos = await response.json();
+            // YouTube channel RSS feed
+            const channelId = 'UCUABrODa0CNF5zgkesAlYeA';
+            const rssFeedUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
+
+            // Use CORS proxy to avoid CORS issues
+            const corsProxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(rssFeedUrl)}`;
+
+            const response = await fetch(corsProxyUrl);
+            const xmlText = await response.text();
+
+            // Parse XML
+            const parser = new DOMParser();
+            const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+
+            // Extract video entries
+            const entries = xmlDoc.querySelectorAll('entry');
             const grid = document.getElementById('videoGrid');
             grid.innerHTML = '';
 
-            videos.forEach(video => {
+            // Show max 12 videos
+            const videosToShow = Math.min(entries.length, 12);
+
+            for (let i = 0; i < videosToShow; i++) {
+              const entry = entries[i];
+
+              // Extract video ID from link
+              const link = entry.querySelector('link')?.getAttribute('href') || '';
+              const videoId = link.match(/v=([a-zA-Z0-9_-]+)/)?.[1];
+
+              if (!videoId) continue;
+
+              // Extract title
+              const title = entry.querySelector('title')?.textContent || 'Unknown Video';
+
+              // Extract published date
+              const published = entry.querySelector('published')?.textContent || '';
+              const publishDate = new Date(published).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric'
+              });
+
+              // Create video card
               const card = document.createElement('a');
-              card.href = `https://www.youtube.com/watch?v=${video.id}`;
+              card.href = `https://www.youtube.com/watch?v=${videoId}`;
               card.target = '_blank';
               card.rel = 'noopener';
               card.className = 'vcard';
               card.innerHTML = `
-                <div class="vthumb" style="background:url('https://img.youtube.com/vi/${video.id}/mqdefault.jpg') no-repeat center/cover;">
+                <div class="vthumb" style="background:url('https://img.youtube.com/vi/${videoId}/mqdefault.jpg') no-repeat center/cover;">
                   <div class="play-btn"><div style="width:0; height:0; border-left:18px solid #b85623; border-top:12px solid transparent; border-bottom:12px solid transparent; margin-left:4px;"></div></div>
                 </div>
-                <div class="vmeta"><h3>${video.title}</h3><div class="info">${video.category} · ${video.type}</div></div>
+                <div class="vmeta">
+                  <h3>${title}</h3>
+                  <div class="info">Published: ${publishDate}</div>
+                </div>
               `;
               grid.appendChild(card);
-            });
+
+              // Log to Datadog
+              if (window.DD_LOGS) {
+                window.DD_LOGS.logger.info('youtube_video_loaded', {
+                  video_id: videoId,
+                  video_title: title,
+                  published_date: publishDate,
+                  load_position: i + 1
+                });
+              }
+            }
+
+            if (videosToShow === 0) {
+              grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:#999;padding:40px;">Loading videos...</p>';
+            }
           } catch (error) {
-            console.error('Error loading videos:', error);
+            console.error('Error loading YouTube videos:', error);
+            document.getElementById('videoGrid').innerHTML = '<p style="grid-column:1/-1;text-align:center;color:#d94f20;padding:40px;">Unable to load videos. <a href="https://www.youtube.com/@LoveAndLayover" target="_blank">Visit our YouTube channel →</a></p>';
+
+            if (window.DD_LOGS) {
+              window.DD_LOGS.logger.error('youtube_feed_error', {
+                error_message: error.message,
+                error_type: 'rss_feed_fetch'
+              });
+            }
           }
         }
 
