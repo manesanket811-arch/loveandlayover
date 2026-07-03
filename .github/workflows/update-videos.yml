@@ -1,0 +1,105 @@
+name: Update YouTube Videos
+
+on:
+  schedule:
+    # Run every 6 hours
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+    # Allow manual trigger
+
+jobs:
+  update-videos:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Fetch YouTube Videos
+        run: |
+          cat > fetch-videos.js << 'EOF'
+          const https = require('https');
+          const fs = require('fs');
+
+          // YouTube channel ID
+          const channelId = 'UCUABrODa0CNF5zgkesAlYeA';
+          const feedUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
+
+          function fetchFeed(url) {
+            return new Promise((resolve, reject) => {
+              https.get(url, (res) => {
+                let data = '';
+                res.on('data', chunk => data += chunk);
+                res.on('end', () => resolve(data));
+              }).on('error', reject);
+            });
+          }
+
+          async function updateVideos() {
+            try {
+              const xmlData = await fetchFeed(feedUrl);
+
+              // Parse XML manually
+              const videoIds = [];
+              const videoTitles = [];
+
+              // Extract video IDs from links
+              const linkMatches = xmlData.match(/watch\?v=([a-zA-Z0-9_-]+)/g) || [];
+              linkMatches.forEach((match, i) => {
+                const id = match.replace('watch?v=', '');
+                videoIds.push(id);
+              });
+
+              // Extract titles
+              const titleMatches = xmlData.match(/<title>([^<]+)<\/title>/g) || [];
+              titleMatches.forEach((match, i) => {
+                const title = match.replace(/<\/?title>/g, '');
+                if (!title.includes('Love and Layovers') && title !== 'YouTube') {
+                  videoTitles.push(title);
+                }
+              });
+
+              // Build videos data
+              const videos = [];
+              for (let i = 0; i < Math.min(videoIds.length, 12); i++) {
+                if (videoIds[i]) {
+                  videos.push({
+                    id: videoIds[i],
+                    title: videoTitles[i] || `Video ${i + 1}`,
+                    category: 'Travel',
+                    type: 'Latest'
+                  });
+                }
+              }
+
+              // If no videos found from feed, use defaults
+              if (videos.length === 0) {
+                console.log('No videos found from feed, keeping existing data');
+                return;
+              }
+
+              // Write to JSON file
+              fs.writeFileSync('videos-data.json', JSON.stringify(videos, null, 2));
+              console.log(`✅ Updated ${videos.length} videos`);
+            } catch (error) {
+              console.error('❌ Error fetching videos:', error.message);
+              process.exit(1);
+            }
+          }
+
+          updateVideos();
+          EOF
+
+          node fetch-videos.js
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add videos-data.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update YouTube videos" && git push)
