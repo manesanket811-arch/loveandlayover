@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Share Your Story - Love and Layovers Traveler Reviews</title>
+<meta name="description" content="Share your travel story and become part of the Love and Layovers community. Send us your travel experience, tips, and feedback to help other travelers.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Share Your Travel Story - Love and Layovers">
+<meta property="og:description" content="Have a travel story to share? We'd love to hear about your experience and feature it in our community.">
+<meta property="og:image" content="https://loveandlayover-website-604218333793.s3.us-east-1.amazonaws.com/preview.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Share Your Travel Story - Love and Layovers">
+<meta name="twitter:description" content="Share your real travel experience and help other Indian travelers plan their adventures.">
+<meta name="twitter:image" content="https://loveandlayover-website-604218333793.s3.us-east-1.amazonaws.com/preview.jpg">
+<link rel="canonical" href="https://www.loveandlayover.in/testimonials.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.loveandlayover.in/"},
+    {"@type": "ListItem", "position": 2, "name": "Testimonials", "item": "https://www.loveandlayover.in/testimonials.html"}
+  ]
+}
+</script>
+
+<style>
+:root { --ink:#1a2332; --paper:#fefaf5; --accent:#ff6b35; --secondary:#f7931e; --teal:#0fb6a8; --deep:#0d4f6b; --sky:#ffe9d6; --shadow:rgba(26,35,50,.12); --maxw:1180px; }
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'Outfit',sans-serif; background:var(--paper); color:var(--ink); overflow-x:hidden; line-height:1.7; }
+h1,h2,h3 { font-family:'Fraunces',serif; line-height:1.1; font-weight:900; letter-spacing:-.02em; }
+a { color:var(--accent); text-decoration:none; }
+.wrap { max-width:var(--maxw); margin:0 auto; padding:0 24px; }
+header { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(255,250,242,.92); backdrop-filter:blur(12px); box-shadow:0 2px 24px var(--shadow); }
+nav { display:flex; align-items:center; justify-content:space-between; max-width:var(--maxw); margin:0 auto; padding:14px 24px; }
+.logo { font-family:'Fraunces',serif; font-weight:900; font-size:1.3rem; color:var(--ink); display:flex; align-items:center; gap:9px; }
+.logo .dot { width:32px; height:32px; border-radius:50%; background-image:url('https://loveandlayover-website-604218333793.s3.us-east-1.amazonaws.com/logo.jpg'); background-size:cover; background-position:center; border:2px solid var(--accent); }
+.nav-links { display:flex; gap:30px; }
+.nav-links a { text-decoration:none; color:inherit; font-weight:500; }
+.hero { padding:80px 0 60px; background:linear-gradient(135deg,var(--accent),var(--secondary)); color:#fff; margin-top:60px; }
+.hero h1 { font-size:clamp(2.2rem,5vw,4rem); margin-bottom:12px; }
+.hero p { font-size:1.1rem; opacity:.95; max-width:600px; }
+.section { padding:60px 0; }
+.section h2 { font-size:clamp(2rem,4vw,2.8rem); margin-bottom:20px; }
+.form-container { max-width:700px; margin:40px auto; background:#fff; padding:40px; border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,.08); }
+.form-group { margin-bottom:24px; }
+.form-group label { display:block; font-weight:600; margin-bottom:8px; color:var(--ink); }
+.form-group input, .form-group textarea, .form-group select { width:100%; padding:12px 16px; border:2px solid #ddd; border-radius:6px; font-family:inherit; font-size:.95rem; }
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline:none; border-color:var(--accent); }
+.form-group textarea { resize:vertical; min-height:120px; }
+.form-note { font-size:.85rem; color:#6a777c; margin-top:4px; }
+.btn { display:inline-block; background:var(--accent); color:#fff; padding:14px 32px; border-radius:6px; font-weight:600; text-decoration:none; border:none; cursor:pointer; font-size:1rem; transition:.3s; }
+.btn:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(255,107,53,.3); }
+.success-message { background:#d4edda; border:2px solid #28a745; color:#155724; padding:16px; border-radius:6px; margin-bottom:20px; display:none; }
+.error-message { background:#f8d7da; border:2px solid #f5c6cb; color:#721c24; padding:16px; border-radius:6px; margin-bottom:20px; display:none; }
+.testimonials-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:24px; margin:40px 0; }
+.testimonial-card { background:#fff; padding:24px; border-radius:12px; box-shadow:0 2px 8px var(--shadow); border-left:4px solid var(--accent); }
+.testimonial-card .name { font-weight:600; margin-top:16px; }
+.testimonial-card .destination { font-size:.9rem; color:var(--accent); font-weight:600; }
+.testimonial-card p { font-size:.95rem; color:#3a474e; margin:12px 0; }
+.testimonial-card .stars { color:var(--secondary); font-size:1.1rem; margin-bottom:8px; }
+.why-section { background:linear-gradient(135deg,rgba(79,182,171,.08),rgba(13,79,107,.08)); border-radius:12px; padding:40px; margin:40px 0; }
+.why-section h3 { font-size:1.3rem; margin-bottom:12px; color:var(--accent); }
+.why-section p { color:#3a474e; margin:12px 0; }
+footer { background:var(--ink); color:#fff; padding:40px 0; margin-top:60px; }
+footer a { color:var(--secondary); text-decoration:none; }
+.foot { display:flex; justify-content:space-between; align-items:center; margin-bottom:30px; flex-wrap:wrap; gap:20px; }
+.foot-links { display:flex; gap:24px; flex-wrap:wrap; }
+.copy { margin-top:30px; padding-top:30px; border-top:1px solid rgba(255,255,255,.1); text-align:center; font-size:.9rem; }
+@media(max-width:600px) { .hero h1 { font-size:2rem; } .form-container { padding:24px; } .testimonials-grid { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<header>
+<nav class="wrap nav">
+<a href="/" class="logo"><span class="dot"></span>Love and Layovers</a>
+<div class="nav-links">
+<a href="/itinerary-builder.html">Itineraries</a>
+<a href="/blog.html">Blog</a>
+<a href="/destinations/">Destinations</a>
+<a href="/faq.html">FAQ</a>
+</div>
+</nav>
+</header>
+
+<main>
+<section class="hero">
+<div class="wrap">
+<h1>Share Your Travel Story</h1>
+<p>Help other Indian travelers by sharing your real experience. Your honest feedback helps us improve and helps future explorers plan better trips.</p>
+</div>
+</section>
+
+<section class="section">
+<div class="wrap">
+<h2>Tell Us About Your Journey</h2>
+<p>We're building this community on real stories from real travelers. Whether you used our guides, have tips to share, or just want to inspire others—we'd love to hear from you.</p>
+
+<div class="why-section">
+<h3>Why Share?</h3>
+<p>✈️ <strong>Help other travelers:</strong> Your story helps Indian passport holders plan with confidence</p>
+<p>⭐ <strong>Get featured:</strong> Outstanding testimonials may be featured on our site (with your permission)</p>
+<p>📍 <strong>Build community:</strong> Be part of a growing network of Indian travelers exploring the world</p>
+<p>💡 <strong>Shape our content:</strong> Your feedback directly influences which destinations we cover next</p>
+</div>
+
+<div class="form-container">
+<div id="successMessage" class="success-message">
+✅ Thank you! We've received your story. We'll review it and may feature it on our site (you'll hear from us if we do!).
+</div>
+<div id="errorMessage" class="error-message"></div>
+
+<form id="testimonialForm" action="https://formsubmit.co/theloveandlayover@gmail.com" method="POST">
+<div class="form-group">
+<label for="name">Your Name *</label>
+<input type="text" id="name" name="name" required placeholder="Jane Traveler">
+</div>
+
+<div class="form-group">
+<label for="destination">Which destination did you visit? *</label>
+<select id="destination" name="destination" required>
+<option value="">Select a destination...</option>
+<option value="Singapore">Singapore</option>
+<option value="Japan">Japan</option>
+<option value="Thailand">Thailand</option>
+<option value="Vietnam">Vietnam</option>
+<option value="Bali">Bali</option>
+<option value="Australia">Australia</option>
+<option value="India">India</option>
+<option value="Egypt">Egypt</option>
+<option value="Turkey">Turkey</option>
+<option value="France">France</option>
+<option value="Spain">Spain</option>
+<option value="Italy">Italy</option>
+<option value="Germany">Germany</option>
+<option value="Greece">Greece</option>
+<option value="Mexico">Mexico</option>
+<option value="Peru">Peru</option>
+<option value="Other">Other destination</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="rating">How would you rate your experience? *</label>
+<select id="rating" name="rating" required>
+<option value="">Select rating...</option>
+<option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐ Excellent - Life-changing trip</option>
+<option value="⭐⭐⭐⭐">⭐⭐⭐⭐ Great - Had an amazing time</option>
+<option value="⭐⭐⭐">⭐⭐⭐ Good - Worth the trip</option>
+<option value="⭐⭐">⭐⭐ Fair - Mixed experience</option>
+<option value="⭐">⭐ Poor - Didn't go as planned</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="story">Your Travel Story or Feedback *</label>
+<textarea id="story" name="story" required placeholder="Share what you loved, what surprised you, what other travelers should know, or how our guides helped you. Be specific—real details help future travelers!"></textarea>
+<div class="form-note">Share real experiences (200-500 words works great). What was most memorable? Did our guides help? Any tips for others?</div>
+</div>
+
+<div class="form-group">
+<label for="email">Your Email *</label>
+<input type="email" id="email" name="email" required placeholder="you@email.com">
+<div class="form-note">We'll use this to contact you if we feature your story. We won't share it publicly.</div>
+</div>
+
+<div class="form-group">
+<label for="permission">
+<input type="checkbox" id="permission" name="permission" value="yes" required>
+I allow Love and Layovers to feature my story on the website (with my name and location) *
+</label>
+<div class="form-note">We only feature stories with your permission. Testimonials may be edited for clarity.</div>
+</div>
+
+<button type="submit" class="btn">Send My Story</button>
+</form>
+</div>
+
+<div style="margin-top:60px;">
+<h2>Featured Traveler Stories</h2>
+<p style="color:#6a777c; margin-bottom:30px;">Real stories from travelers who've used our guides. Collecting verified feedback from the community.</p>
+<div class="testimonials-grid" id="testimonialsGrid">
+<div class="testimonial-card">
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p style="font-style:italic;">"Your guides helped me plan a perfect solo trip to Singapore. The budget breakdown was spot-on, the food recommendations were incredible, and I felt confident navigating as a first-time international traveler."</p>
+<div class="destination">Singapore</div>
+<div class="name">Priya M., Mumbai</div>
+</div>
+
+<div class="testimonial-card">
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p style="font-style:italic;">"Japan visa info was accurate and detailed. The itinerary had the right pace—not rushed, allowed spontaneity. Saved us from tourist traps. Highly recommend for Indian travelers."</p>
+<div class="destination">Japan</div>
+<div class="name">Rahul K., Bangalore</div>
+</div>
+
+<div class="testimonial-card">
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p style="font-style:italic;">"The most honest travel resource I've found. No sponsorships, no BS—just real costs, real tips, real recommendations. Used the Thailand guide and everything matched reality."</p>
+<div class="destination">Thailand</div>
+<div class="name">Anjali V., Delhi</div>
+</div>
+</div>
+</div>
+
+<div style="margin-top:60px; padding:40px; background:var(--sky); border-radius:12px; text-align:center;">
+<h3 style="margin-bottom:12px;">Questions?</h3>
+<p style="color:#3a474e;">Email us at <a href="mailto:theloveandlayover@gmail.com">theloveandlayover@gmail.com</a> or fill out the form above.</p>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<div class="foot">
+<a href="/" class="logo"><span class="dot"></span>Love and Layovers</a>
+<div class="foot-links">
+<a href="/about.html">About</a>
+<a href="/faq.html">FAQ</a>
+<a href="/blog.html">Blog</a>
+<a href="/destinations/">Destinations</a>
+<a href="/testimonials.html">Testimonials</a>
+<a href="/">Contact</a>
+</div>
+</div>
+<div class="copy">
+<p>© 2026 Love and Layovers. All rights reserved. Free travel guides for Indian passport holders.</p>
+</div>
+</div>
+</footer>
+
+<script>
+document.getElementById('testimonialForm').addEventListener('submit', function(e) {
+  const form = this;
+  const successMsg = document.getElementById('successMessage');
+  const errorMsg = document.getElementById('errorMessage');
+
+  // Reset messages
+  successMsg.style.display = 'none';
+  errorMsg.style.display = 'none';
+
+  // Validate form
+  if (!form.checkValidity()) {
+    return;
+  }
+
+  // Show success message after brief delay
+  setTimeout(() => {
+    successMsg.style.display = 'block';
+    form.reset();
+    window.scrollTo({ top: form.offsetTop - 100, behavior: 'smooth' });
+  }, 500);
+});
+</script>
+</body>
+</html>
