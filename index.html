@@ -243,6 +243,14 @@
 
         pageEngagementMetrics.forms_submitted++;
 
+        // Track form submission in GA4
+        if (formId === 'contact-form') {
+          gtag('event', 'contact_form_submission', {
+            'form_type': 'contact',
+            'message_length': this.querySelector('textarea')?.value.length || 0
+          });
+        }
+
         window.DD_LOGS.logger.info('user_conversion', {
           ...DD_CONTEXT,
           action: 'form_submission',

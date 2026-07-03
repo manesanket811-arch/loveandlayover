@@ -242,6 +242,11 @@ document.getElementById('newsletterForm').addEventListener('submit', function(e)
 
   setTimeout(() => {
     successMsg.style.display = 'block';
+    const emailInput = document.getElementById('email');
+    gtag('event', 'newsletter_signup', {
+      'email': emailInput ? emailInput.value : 'unknown',
+      'signup_method': 'web_form'
+    });
     form.reset();
     window.scrollTo({ top: form.offsetTop - 200, behavior: 'smooth' });
   }, 500);

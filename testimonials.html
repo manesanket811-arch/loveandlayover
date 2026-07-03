@@ -320,6 +320,12 @@ document.getElementById('testimonialForm').addEventListener('submit', function(e
   // Show success message after brief delay
   setTimeout(() => {
     successMsg.style.display = 'block';
+    const ratingInput = document.getElementById('rating');
+    const destinationInput = document.getElementById('destination');
+    gtag('event', 'testimonial_submission', {
+      'destination': destinationInput ? destinationInput.value : 'unknown',
+      'rating': ratingInput ? ratingInput.value : 'unknown'
+    });
     form.reset();
     window.scrollTo({ top: form.offsetTop - 100, behavior: 'smooth' });
   }, 500);
