@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Search Console Setup Guide - Love and Layovers</title>
+<meta name="description" content="Step-by-step guide to verify Love and Layovers with Google Search Console, monitor search traffic, and improve SEO performance.">
+<link rel="canonical" href="https://www.loveandlayover.in/gsc-setup-guide.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5D7GNE6JQL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5D7GNE6JQL');
+</script>
+
+<style>
+:root { --ink:#1a2332; --paper:#fefaf5; --accent:#ff6b35; --secondary:#f7931e; --teal:#0fb6a8; --deep:#0d4f6b; --sky:#ffe9d6; --shadow:rgba(26,35,50,.12); --maxw:1180px; }
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'Outfit',sans-serif; background:var(--paper); color:var(--ink); overflow-x:hidden; line-height:1.7; }
+h1,h2,h3,h4 { font-family:'Fraunces',serif; line-height:1.1; font-weight:900; letter-spacing:-.02em; }
+a { color:var(--accent); text-decoration:none; }
+.wrap { max-width:var(--maxw); margin:0 auto; padding:0 24px; }
+header { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(255,250,242,.92); backdrop-filter:blur(12px); box-shadow:0 2px 24px var(--shadow); }
+nav { display:flex; align-items:center; justify-content:space-between; max-width:var(--maxw); margin:0 auto; padding:14px 24px; }
+.logo { font-family:'Fraunces',serif; font-weight:900; font-size:1.3rem; color:var(--ink); display:flex; align-items:center; gap:9px; }
+.logo .dot { width:32px; height:32px; border-radius:50%; background-image:url('https://loveandlayover-website-604218333793.s3.us-east-1.amazonaws.com/logo.jpg'); background-size:cover; background-position:center; border:2px solid var(--accent); }
+.nav-links { display:flex; gap:30px; }
+.nav-links a { text-decoration:none; color:inherit; font-weight:500; }
+main { padding-top:60px; }
+.hero { padding:60px 0 40px; background:linear-gradient(135deg,var(--accent),var(--secondary)); color:#fff; }
+.hero h1 { font-size:clamp(2rem,5vw,3.5rem); margin-bottom:12px; }
+.hero p { font-size:1rem; opacity:.95; max-width:600px; }
+.content { max-width:800px; margin:0 auto; padding:60px 24px; }
+.section { margin-bottom:50px; }
+.section h2 { font-size:2rem; margin-bottom:20px; color:var(--deep); border-bottom:3px solid var(--accent); padding-bottom:12px; }
+.section h3 { font-size:1.4rem; margin-top:28px; margin-bottom:14px; color:var(--ink); }
+.section h4 { font-size:1.1rem; margin-top:20px; margin-bottom:10px; color:var(--accent); font-weight:600; }
+.step-box { background:#f9f6f0; padding:24px; border-radius:8px; margin:20px 0; border-left:4px solid var(--accent); }
+.step-num { display:inline-block; background:var(--accent); color:#fff; width:32px; height:32px; border-radius:50%; text-align:center; line-height:32px; font-weight:900; margin-right:12px; }
+.code-block { background:#1a2332; color:#fff; padding:16px; border-radius:8px; overflow-x:auto; font-family:'Courier New',monospace; font-size:.9rem; margin:16px 0; }
+.checklist { background:#fff; padding:20px; border-radius:8px; border:2px solid var(--sky); margin:20px 0; }
+.checklist li { padding:8px 0; padding-left:28px; position:relative; list-style:none; }
+.checklist li:before { content:'☐'; position:absolute; left:0; color:var(--accent); font-weight:900; font-size:1.2rem; }
+.important { background:linear-gradient(135deg,rgba(255,107,53,.08),rgba(247,147,30,.08)); padding:20px; border-radius:8px; border-left:4px solid var(--secondary); margin:20px 0; }
+.important strong { color:var(--secondary); }
+.success-box { background:linear-gradient(135deg,rgba(15,182,168,.08),rgba(13,79,107,.08)); padding:20px; border-radius:8px; border-left:4px solid var(--teal); margin:20px 0; }
+.timeline { margin:30px 0; }
+.timeline-item { padding:20px 0; padding-left:40px; position:relative; border-left:2px solid var(--sky); }
+.timeline-item:first-child { border-left:3px solid var(--accent); }
+.timeline-item:before { content:'●'; position:absolute; left:-8px; top:18px; font-size:1.2rem; color:var(--accent); }
+table { width:100%; border-collapse:collapse; margin:20px 0; }
+th, td { text-align:left; padding:12px; border-bottom:1px solid #ddd; }
+th { background:var(--sky); font-weight:600; }
+tr:hover { background:#faf8f4; }
+footer { background:var(--ink); color:#fff; padding:40px 0; margin-top:60px; }
+footer a { color:var(--secondary); text-decoration:none; }
+.foot { display:flex; justify-content:space-between; align-items:center; margin-bottom:30px; flex-wrap:wrap; gap:20px; }
+.foot-links { display:flex; gap:24px; flex-wrap:wrap; }
+.copy { margin-top:30px; padding-top:30px; border-top:1px solid rgba(255,255,255,.1); text-align:center; font-size:.9rem; }
+@media(max-width:600px) { .hero h1 { font-size:1.8rem; } .section h2 { font-size:1.4rem; } .nav-links { gap:15px; font-size:.9rem; } }
+</style>
+</head>
+<body>
+<header>
+<nav class="wrap nav">
+<a href="/" class="logo"><span class="dot"></span>Love and Layovers</a>
+<div class="nav-links">
+<a href="/itinerary-builder.html">Itineraries</a>
+<a href="/blog.html">Blog</a>
+<a href="/destinations/">Destinations</a>
+<a href="/faq.html">FAQ</a>
+</div>
+</nav>
+</header>
+
+<main>
+<section class="hero">
+<div class="wrap">
+<h1>Google Search Console Setup Guide</h1>
+<p>Verify your website ownership, monitor search traffic, and improve SEO performance with Google Search Console.</p>
+</div>
+</section>
+
+<div class="content">
+<section class="section">
+<h2>What is Google Search Console (GSC)?</h2>
+<p>Google Search Console is a free tool that helps you monitor how your website appears in Google Search results. It shows you:</p>
+<ul style="margin-left:20px; margin-top:12px; color:#3a474e;">
+<li><strong>Search traffic:</strong> How many times your site appears in search results and how often users click through</li>
+<li><strong>Indexing status:</strong> Which pages Google has indexed and any crawl errors</li>
+<li><strong>Search performance:</strong> Average position, click-through rate, and queries that bring traffic</li>
+<li><strong>Mobile usability:</strong> Issues that may affect mobile users</li>
+<li><strong>Manual actions:</strong> Alerts if Google detects unnatural links or spammy content</li>
+</ul>
+</section>
+
+<section class="section">
+<h2>Pre-Verification Checklist</h2>
+<div class="checklist">
+<ul>
+<li><strong>Domain ownership:</strong> You have admin access to loveandlayover.in domain registrar</li>
+<li><strong>Email account:</strong> Access to theloveandlayover@gmail.com Gmail account</li>
+<li><strong>Sitemaps ready:</strong> robots.txt references sitemap (verified ✓)</li>
+<li><strong>GA4 installed:</strong> Google Analytics 4 tracking deployed to all pages (verified ✓)</li>
+<li><strong>Metadata complete:</strong> All pages have proper titles and descriptions (verified ✓)</li>
+<li><strong>15-30 minutes:</strong> Time to complete setup and verification</li>
+</ul>
+</div>
+</section>
+
+<section class="section">
+<h2>Step 1: Access Google Search Console</h2>
+<div class="step-box">
+<h3><span class="step-num">1</span>Visit Google Search Console</h3>
+<p>Go to <a href="https://search.google.com/search-console" target="_blank">https://search.google.com/search-console</a> and sign in with your Google account (theloveandlayover@gmail.com)</p>
+<p style="margin-top:12px; color:#6a777c; font-size:.95rem;">Make sure you're signed into the Gmail account associated with this project.</p>
+</div>
+
+<div class="step-box">
+<h3><span class="step-num">2</span>Start Adding Your Property</h3>
+<p>You'll see two options:</p>
+<ul style="margin-left:20px; margin-top:12px; color:#3a474e;">
+<li><strong>Domain</strong> — Covers all subdomains (www and non-www) and all protocols (HTTP and HTTPS) ← <em>Recommended</em></li>
+<li><strong>URL prefix</strong> — Specific to the exact URL you enter (less flexible)</li>
+</ul>
+<p style="margin-top:12px;"><strong>Choose: Domain</strong> and enter: <span class="code-block">loveandlayover.in</span></p>
+</div>
+
+<div class="step-box">
+<h3><span class="step-num">3</span>Verify Domain Ownership</h3>
+<p>Google will ask you to verify ownership of the domain. You'll see a DNS record to add:</p>
+<p style="margin-top:12px;"><strong>Record type:</strong> TXT</p>
+<p style="margin-top:8px;"><strong>Name:</strong> loveandlayover.in (or @ if your provider uses @)</p>
+<p style="margin-top:8px;"><strong>Value:</strong> google-site-verification=... (Google will provide the exact code)</p>
+<p style="margin-top:12px; color:#6a777c; font-size:.95rem;">Copy the verification code provided by Google Search Console.</p>
+</div>
+
+<section class="section" style="margin-top:40px;">
+<h3>Adding DNS Record to Your Domain Registrar</h3>
+
+<div class="important">
+<strong>⚠️ Important:</strong> You need to add the DNS verification record through your domain registrar (where you registered loveandlayover.in). This is typically done through a hosting control panel like cPanel, Namecheap, GoDaddy, Route 53, etc.
+</div>
+
+<div class="step-box">
+<h4>If using common registrars:</h4>
+<ul style="margin-left:20px; margin-top:12px; color:#3a474e;">
+<li><strong>Namecheap:</strong> Dashboard → your domain → Advanced DNS → Add TXT record</li>
+<li><strong>GoDaddy:</strong> My Products → DNS Manager → Add DNS Record → TXT</li>
+<li><strong>AWS Route 53:</strong> Hosted zones → Your domain → Create Record → Type: TXT</li>
+<li><strong>Hostinger/Bluehost:</strong> Control Panel → DNS Records → Add New Record</li>
+<li><strong>Domain.com:</strong> Manage Domain → DNS → Add Record → Text (TXT)</li>
+</ul>
+</div>
+
+<div class="step-box">
+<h4>General process (all registrars):</h4>
+<ol style="margin-left:20px; margin-top:12px; color:#3a474e;">
+<li>Log in to your domain registrar account</li>
+<li>Find "DNS Records," "DNS Settings," or "Advanced DNS" section</li>
+<li>Add a new TXT record with:
+  <ul style="margin-left:20px; margin-top:8px;">
+  <li>Host/Name: @ or your domain name (registrar-specific)</li>
+  <li>Type: TXT</li>
+  <li>Value: Paste the entire google-site-verification code from GSC</li>
+  </ul>
+</li>
+<li>Save/Publish the record</li>
+<li>Return to Google Search Console and click "Verify"</li>
+</ol>
+</div>
+
+<div class="success-box">
+<strong>✓ DNS propagation note:</strong> DNS changes take 15 minutes to 24 hours to propagate worldwide. If verification fails immediately, wait 30 minutes and retry.
+</div>
+</section>
+</section>
+
+<section class="section">
+<h2>Step 2: Submit Sitemaps</h2>
+<div class="step-box">
+<h3><span class="step-num">4</span>Go to Sitemaps Section</h3>
+<p>Once your domain is verified, click "Sitemaps" in the left navigation.</p>
+</div>
+
+<div class="step-box">
+<h3><span class="step-num">5</span>Add Your Sitemaps</h3>
+<p>You'll add three sitemaps (already created on the site):</p>
+<table>
+<thead>
+<tr>
+<th>Sitemap URL</th>
+<th>Purpose</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sitemap.xml</td>
+<td>Main sitemap with all pages</td>
+<td>✓ Ready</td>
+</tr>
+<tr>
+<td>sitemap-videos.xml</td>
+<td>Video-specific metadata</td>
+<td>✓ Ready</td>
+</tr>
+<tr>
+<td>sitemap-index.xml</td>
+<td>Index of all sitemaps</td>
+<td>✓ Ready</td>
+</tr>
+</tbody>
+</table>
+<p style="margin-top:20px;">Submit each one. Google will show:</p>
+<ul style="margin-left:20px; margin-top:12px; color:#3a474e;">
+<li><strong>Status:</strong> Success (appears as soon as GSC processes it)</li>
+<li><strong>Discovered URLs:</strong> Number of pages found in the sitemap</li>
+<li><strong>Submitted:</strong> Number of URLs submitted</li>
+<li><strong>Indexed:</strong> Number currently in Google's index</li>
+</ul>
+</div>
+
+<div class="success-box">
+<strong>✓ Processing time:</strong> Google typically processes sitemaps within 24-48 hours. Check back after a day to see indexing progress.
+</div>
+</section>
+
+<section class="section">
+<h2>Step 3: Request Indexing for Key Pages</h2>
+<div class="step-box">
+<h3><span class="step-num">6</span>Priority Pages to Index</h3>
+<p>After verifying and submitting sitemaps, request expedited indexing for your most important pages:</p>
+<ul style="margin-left:20px; margin-top:12px; color:#3a474e;">
+<li><strong>Homepage:</strong> https://www.loveandlayover.in/</li>
+<li><strong>Destination guides:</strong> https://www.loveandlayover.in/destinations/singapore.html (and top 5 others)</li>
+<li><strong>Blog hub:</strong> https://www.loveandlayover.in/blog.html</li>
+<li><strong>Itinerary builder:</strong> https://www.loveandlayover.in/itinerary-builder.html</li>
+<li><strong>FAQ:</strong> https://www.loveandlayover.in/faq.html</li>
+</ul>
+
+<h4 style="margin-top:20px;">How to request indexing:</h4>
+<ol style="margin-left:20px; margin-top:12px; color:#3a474e;">
+<li>In GSC, use the URL inspection tool (top search bar)</li>
+<li>Paste each URL from the list above</li>
+<li>Click "Request Indexing" button</li>
+<li>Repeat for 5-10 most important pages</li>
+</ol>
+</div>
+</section>
+
+<section class="section">
+<h2>Step 4: Monitor Search Traffic</h2>
+<div class="step-box">
+<h3><span class="step-num">7</span>Check Search Performance</h3>
+<p>Return to GSC after 1-2 weeks (indexing takes time). You'll see:</p>
+
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Meaning</th>
+<th>Target (First Month)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Total Clicks</strong></td>
+<td>Users clicking through from search to your site</td>
+<td>50+ clicks</td>
+</tr>
+<tr>
+<td><strong>Total Impressions</strong></td>
+<td>Times your site appeared in search results</td>
+<td>500+ impressions</td>
+</tr>
+<tr>
+<td><strong>Avg. Click-Through Rate</strong></td>
+<td>% of impressions that result in clicks</td>
+<td>5-10% (you'll see this grow)</td>
+</tr>
+<tr>
+<td><strong>Avg. Position</strong></td>
+<td>Average ranking position in search results</td>
+<td>Lower = better (aim for page 2-3 initially)</td>
+</tr>
+</tbody>
+</table>
+
+<p style="margin-top:20px;"><strong>What queries are bringing traffic?</strong></p>
+<p>In the "Queries" tab, you'll see search terms people use to find your site. Examples:</p>
+<ul style="margin-left:20px; margin-top:12px; color:#3a474e;">
+<li>"Singapore travel guide"</li>
+<li>"Japan visa for Indian passport"</li>
+<li>"Thailand itinerary 5 days"</li>
+<li>"How much does it cost to travel to Bali"</li>
+</ul>
+
+<p style="margin-top:20px;"><strong>Which pages are ranking?</strong></p>
+<p>In the "Pages" tab, see which of your URLs are appearing in search results and their performance.</p>
+</div>
+</section>
+
+<section class="section">
+<h2>Step 5: Connect to Google Analytics 4</h2>
+<div class="step-box">
+<h3><span class="step-num">8</span>Link GSC to GA4</h3>
+<p>To see what happens after users click through from Google Search:</p>
+<ol style="margin-left:20px; margin-top:12px; color:#3a474e;">
+<li>In GSC, go to Settings → View property details</li>
+<li>Scroll to "Google Analytics property" section</li>
+<li>Click "Connect" and select your GA4 property (Love and Layovers)</li>
+<li>Confirm and save</li>
+</ol>
+
+<p style="margin-top:20px;">Now in Google Analytics, you can see:</p>
+<ul style="margin-left:20px; margin-top:12px; color:#3a474e;">
+<li>Which search queries drive traffic to your site</li>
+<li>User behavior after arriving from search</li>
+<li>Conversion rates from organic search traffic</li>
+</ul>
+</div>
+</section>
+
+<section class="section">
+<h2>Key Metrics to Track (Monthly)</h2>
+<div class="step-box">
+
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>How to Check</th>
+<th>Healthy Growth</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Indexed Pages</strong></td>
+<td>GSC → Coverage tab</td>
+<td>Should show 25-30 pages indexed (all destination + blog pages)</td>
+</tr>
+<tr>
+<td><strong>Search Impressions</strong></td>
+<td>GSC → Performance tab</td>
+<td>Month 1: 500+, Month 2: 1000+, Month 3: 2000+</td>
+</tr>
+<tr>
+<td><strong>Click-Through Rate</strong></td>
+<td>GSC → Performance tab</td>
+<td>5-10% (improve meta descriptions to increase this)</td>
+</tr>
+<tr>
+<td><strong>Organic Sessions</strong></td>
+<td>GA4 → Acquisition → Channels</td>
+<td>Month 1: 50-100, Month 2: 100-200, Month 3: 200+</td>
+</tr>
+<tr>
+<td><strong>Newsletter Signups</strong></td>
+<td>GA4 → Conversions (set up in Phase 4b)</td>
+<td>5-10% of organic traffic</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</section>
+
+<section class="section">
+<h2>Common Issues & Solutions</h2>
+
+<div class="step-box">
+<h4>Issue: "DNS record not found" after 24 hours</h4>
+<p><strong>Solution:</strong> Verify you added the TXT record in the correct location. Some registrars require "@" as the host, others require the full domain name. Check your registrar's documentation or contact support to confirm the record is published.</p>
+</div>
+
+<div class="step-box">
+<h4>Issue: Sitemaps submitted but showing 0 indexed URLs</h4>
+<p><strong>Solution:</strong> This is normal in the first 24-48 hours. Google needs time to crawl and process the sitemap. Check back after 2-3 days. If still at 0, verify robots.txt allows crawling (it does ✓).</p>
+</div>
+
+<div class="step-box">
+<h4>Issue: Pages not appearing in search results after 1 month</h4>
+<p><strong>Solution:</strong> New sites typically take 2-4 weeks to appear in search. Ensure:</p>
+<ul style="margin-left:20px; margin-top:12px; color:#3a474e;">
+<li>Meta descriptions are unique and compelling</li>
+<li>Page titles include target keywords (e.g., "Singapore Travel Guide – 5-Day Itinerary")</li>
+<li>Content is substantive (your 2000+ word guides meet this ✓)</li>
+<li>Internal linking is good (verified ✓)</li>
+<li>Site speed is acceptable (use PageSpeed Insights to check)</li>
+</ul>
+</div>
+
+<div class="step-box">
+<h4>Issue: Lower CTR than expected (below 3%)</h4>
+<p><strong>Solution:</strong> Improve your meta descriptions. They should be 155-160 characters and include the target keyword. Example:</p>
+<p style="margin-top:12px; color:#6a777c; font-size:.95rem;">"Free travel guide to Singapore for Indian passport holders. 5-day itinerary, visa info, budget breakdown, food recommendations, and insider tips."</p>
+<p style="margin-top:12px;">Use GSC to identify low-CTR pages and update their meta descriptions.</p>
+</div>
+
+</section>
+
+<section class="section">
+<h2>Next Steps (Phase 4b: Conversions)</h2>
+<div class="success-box">
+<h3 style="color:var(--teal); margin-top:0;">After GSC is Set Up:</h3>
+<ol style="margin-left:20px; margin-top:12px; color:#3a474e;">
+<li><strong>Set up conversion events in GA4:</strong> Newsletter signups, contact form submissions, itinerary builder usage</li>
+<li><strong>Create analytics dashboard:</strong> Monitor search traffic → newsletter conversions</li>
+<li><strong>Weekly check-ins:</strong> Review GSC performance and identify high-performing queries to target</li>
+<li><strong>Content optimization:</strong> Update pages ranking in positions 5-15 to move them into top 3</li>
+</ol>
+</div>
+</section>
+
+<section class="section">
+<h2>Verification Checklist (Final)</h2>
+<div class="checklist">
+<ul>
+<li>Domain verified in Google Search Console</li>
+<li>All three sitemaps submitted (sitemap.xml, sitemap-videos.xml, sitemap-index.xml)</li>
+<li>Priority pages requested for indexing (10+ URLs)</li>
+<li>GSC connected to GA4 property</li>
+<li>Monitoring scheduled: Check GSC every 2 weeks for the first month</li>
+<li>GA4 events created for key conversions (waiting for Phase 4b)</li>
+</ul>
+</div>
+</section>
+
+</div>
+
+<footer>
+<div class="wrap">
+<div class="foot">
+<a href="/" class="logo"><span class="dot"></span>Love and Layovers</a>
+<div class="foot-links">
+<a href="/about.html">About</a>
+<a href="/faq.html">FAQ</a>
+<a href="/blog.html">Blog</a>
+<a href="/destinations/">Destinations</a>
+<a href="/">Contact</a>
+</div>
+</div>
+<div class="copy">
+<p>© 2026 Love and Layovers. All rights reserved. Free travel guides for Indian passport holders.</p>
+</div>
+</div>
+</footer>
+</body>
+</html>
