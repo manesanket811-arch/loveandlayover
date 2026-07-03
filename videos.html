@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Travel Videos - Love and Layovers YouTube Channel & Instagram</title>
-<meta name="description" content="Watch our travel vlogs, destination guides, food tours, and travel tips. Subscribe to Love and Layovers YouTube channel for new episodes every week.">
-<meta name="keywords" content="travel videos, travel vlog, destination guides, food tours, travel tips, YouTube channel, travel content">
+<title>Travel Videos - YouTube Vlogs, Destination Guides & Food Tours | Love and Layovers</title>
+<meta name="description" content="Watch authentic travel vlogs, Singapore destination guides, food tours, and travel tips from Love and Layovers. New episodes weekly featuring real travel experiences and insider tips.">
+<meta name="keywords" content="travel videos, travel vlog, destination guides, food tours, travel tips, YouTube channel, travel content, Singapore travel, travel experiences, travel adventures, wanderlust">
 <link rel="canonical" href="https://www.loveandlayover.in/videos.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Travel Videos - Love and Layovers">
@@ -27,12 +27,82 @@
   "@type": "CollectionPage",
   "name": "Love and Layovers Travel Videos",
   "url": "https://www.loveandlayover.in/videos.html",
-  "description": "Travel vlogs, destination guides, and food tours from Love and Layovers",
+  "description": "Authentic travel vlogs, Singapore destination guides, food tours, and real travel experiences from Love and Layovers channel",
+  "image": "https://loveandlayover-website-604218333793.s3.us-east-1.amazonaws.com/preview.jpg",
   "isPartOf": {
     "@type": "Organization",
     "name": "Love and Layovers",
-    "url": "https://www.loveandlayover.in"
+    "url": "https://www.loveandlayover.in",
+    "logo": "https://www.loveandlayover.in/logo.webp",
+    "sameAs": [
+      "https://www.youtube.com/@LoveAndLayover",
+      "https://www.instagram.com/loveandlayover"
+    ]
   }
+}
+</script>
+
+<!-- Breadcrumb Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.loveandlayover.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Videos",
+      "item": "https://www.loveandlayover.in/videos.html"
+    }
+  ]
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What travel destinations do Love and Layovers cover?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Love and Layovers features travel content from multiple Asian destinations including Singapore, with upcoming guides for Thailand, Vietnam, Japan, and more. Our channel focuses on authentic travel experiences, food tours, and destination guides."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often does Love and Layovers upload new videos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We upload new travel videos every week. Subscribe to our YouTube channel for notifications on new episodes featuring destination guides, food tours, and travel tips."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I find travel itineraries and tips?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Visit our website loveandlayover.in for detailed destination guides, itineraries, travel tips, and insider recommendations. We provide 100% free travel resources and real travel experiences."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I follow Love and Layovers on social media?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Follow Love and Layovers on YouTube @LoveAndLayover and Instagram @loveandlayover for daily travel moments, behind-the-scenes content, and travel inspiration."
+      }
+    }
+  ]
 }
 </script>
 
@@ -468,8 +538,8 @@
 <section class="hero">
   <div class="wrap">
     <div class="hero-content">
-      <h1>Our Latest Adventures</h1>
-      <p class="lead">Travel vlogs, destination guides & food tours. New episodes every week.</p>
+      <h1>Travel Vlogs & Destination Guides</h1>
+      <p class="lead">Authentic travel videos featuring real experiences, food tours, cultural exploration, and insider travel tips from around the world. Watch new episodes every week.</p>
     </div>
     <div class="hero-cta">
       <a href="https://www.youtube.com/@LoveAndLayover?sub_confirmation=1" target="_blank" rel="noopener" class="subscribe-btn">
@@ -484,8 +554,8 @@
 <section class="videos-section" id="videos">
   <div class="wrap">
     <div class="section-header">
-      <h2>Latest on YouTube</h2>
-      <p>New episodes every week. Watch, share & subscribe to never miss an adventure.</p>
+      <h2>Latest Travel Videos & Vlogs</h2>
+      <p>Watch authentic travel experiences, destination guides, and food tours from Love and Layovers. New travel episodes every week featuring real travel tips, insider recommendations, and adventure stories from around the world.</p>
     </div>
 
     <!-- YouTube Videos -->
@@ -647,12 +717,25 @@
                 "@context": "https://schema.org",
                 "@type": "VideoObject",
                 "name": video.title,
-                "url": `https://www.youtube.com/watch?v=${video.id}`,
+                "description": `${video.series || video.category} - ${video.title}. Watch this travel video from Love and Layovers featuring authentic experiences, destination guides, and travel tips. Part of our YouTube channel covering travel vlogs, food tours, and adventure stories.`,
                 "thumbnailUrl": `https://img.youtube.com/vi/${video.id}/mqdefault.jpg`,
-                "uploadDate": new Date().toISOString().split('T')[0],
-                "description": `${video.title} - Travel video from Love and Layovers`,
+                "uploadDate": video.published || new Date().toISOString().split('T')[0],
+                "duration": "PT10M",
                 "keywords": video.keywords ? video.keywords.join(', ') : 'travel, adventure',
-                "contentUrl": `https://www.youtube.com/watch?v=${video.id}`
+                "contentUrl": `https://www.youtube.com/watch?v=${video.id}`,
+                "url": `https://www.youtube.com/watch?v=${video.id}`,
+                "embedUrl": `https://www.youtube.com/embed/${video.id}`,
+                "interactionCount": "0",
+                "author": {
+                  "@type": "Organization",
+                  "name": "Love and Layovers",
+                  "url": "https://www.loveandlayover.in"
+                },
+                "isPartOf": {
+                  "@type": "CollectionPage",
+                  "name": "Love and Layovers Travel Videos",
+                  "url": "https://www.loveandlayover.in/videos.html"
+                }
               };
 
               // Add schema to page (for SEO)
@@ -707,8 +790,8 @@
     <!-- Instagram Section -->
     <div style="margin-top:60px;text-align:center;">
       <div class="section-header" style="margin-bottom:30px;">
-        <h2>Daily Travel Moments</h2>
-        <p>Follow us on Instagram for real travel stories & inspiration</p>
+        <h2>Daily Travel Moments on Instagram</h2>
+        <p>Follow us on Instagram for real travel stories, daily travel moments, behind-the-scenes content, and travel inspiration from destinations around the world.</p>
       </div>
       <script src="https://elfsightcdn.com/platform.js" async></script>
       <div style="width:50%;margin:0 auto 30px;overflow:hidden;border-radius:12px;">
