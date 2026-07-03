@@ -1,3 +1,32 @@
+# Love and Layovers - Robots.txt Configuration
+# Last updated: July 3, 2026
+
+# Allow all bots to crawl the site
 User-agent: *
 Allow: /
+
+# Specific rules for better crawl efficiency
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.php$
+Disallow: /*.js$
+Disallow: /*.css$
+
+# Allow search engines to crawl and index static assets
+User-agent: Googlebot
+Allow: *.js
+Allow: *.css
+
+# Sitemap locations
 Sitemap: https://www.loveandlayover.in/sitemap_index.xml
+Sitemap: https://www.loveandlayover.in/sitemap.xml
+Sitemap: https://www.loveandlayover.in/sitemap_videos.xml
+
+# RSS Feed
+RSS: https://www.loveandlayover.in/feed.xml
+
+# Crawl delay for all bots (in seconds)
+Crawl-delay: 1
+
+# Request rate
+Request-rate: 1/1s

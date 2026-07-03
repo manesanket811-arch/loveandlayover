@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Love and Layovers - Travel Guides Blog</title>
+    <link>https://www.loveandlayover.in/blog.html</link>
+    <description>Free travel guides, destination itineraries, and tips for Indian passport holders planning trips to 16 destinations worldwide.</description>
+    <language>en-us</language>
+    <copyright>2026 Love and Layovers</copyright>
+    <lastBuildDate>Thu, 03 Jul 2026 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://www.loveandlayover.in/feed.xml" rel="self" type="application/rss+xml" />
+
+    <item>
+      <title>Complete 5-Day Singapore Itinerary - Free Guide</title>
+      <link>https://www.loveandlayover.in/blog/singapore-5-day-itinerary.html</link>
+      <guid>https://www.loveandlayover.in/blog/singapore-5-day-itinerary.html</guid>
+      <pubDate>Wed, 29 May 2026 00:00:00 GMT</pubDate>
+      <description>Day-by-day Singapore itinerary covering Marina Bay, Gardens by the Bay, Chinatown, Sentosa, and Orchard Road. Perfect for first-time visitors.</description>
+      <content:encoded><![CDATA[Day-by-day Singapore itinerary for first-time visitors. Includes Marina Bay Sands, Gardens by the Bay, Chinatown food, Sentosa Island, and Orchard Road shopping. Budget breakdown in SGD, visa information for Indians, and insider tips for maximizing your 5 days in Singapore.]]></content:encoded>
+      <category>Singapore</category>
+    </item>
+
+    <item>
+      <title>Japan 10-Day Itinerary - Tokyo, Kyoto, Mt. Fuji</title>
+      <link>https://www.loveandlayover.in/blog/japan-10-day-itinerary.html</link>
+      <guid>https://www.loveandlayover.in/blog/japan-10-day-itinerary.html</guid>
+      <pubDate>Thu, 15 May 2026 00:00:00 GMT</pubDate>
+      <description>Complete 10-day Japan itinerary visiting Tokyo, Kyoto, Osaka, and Mt. Fuji. Includes transportation, budget, seasonal warnings, and cultural tips for Indian travelers.</description>
+      <content:encoded><![CDATA[Comprehensive 10-day Japan travel guide with Tokyo highlights, Kyoto temples, Mt. Fuji day trip (seasonal availability warning), Osaka street food, and local train pass tips. Visa requirements for Indian passport holders, budget breakdown in JPY, currency exchange tips, and best time to visit.]]></content:encoded>
+      <category>Japan</category>
+    </item>
+
+    <item>
+      <title>Southeast Asia Budget Travel Tips - Save Money</title>
+      <link>https://www.loveandlayover.in/blog/southeast-asia-budget-tips.html</link>
+      <guid>https://www.loveandlayover.in/blog/southeast-asia-budget-tips.html</guid>
+      <pubDate>Wed, 01 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Budget travel hacks for Southeast Asia: cheap eats, transport savings, accommodation tips, and money-saving strategies across Thailand, Vietnam, and Southeast Asian destinations.</description>
+      <content:encoded><![CDATA[Money-saving guide for Southeast Asia travel. Learn where to eat cheap (street food vs. restaurants), best transport options (buses, trains, flights), affordable accommodation (hostels, guesthouses, homestays), negotiation tips, currency exchange hacks, and when to splurge vs. save.]]></content:encoded>
+      <category>Southeast Asia</category>
+    </item>
+
+    <item>
+      <title>Thailand Food Guide - Street Food & Local Cuisine</title>
+      <link>https://www.loveandlayover.in/blog/thailand-food-guide.html</link>
+      <guid>https://www.loveandlayover.in/blog/thailand-food-guide.html</guid>
+      <pubDate>Fri, 20 May 2026 00:00:00 GMT</pubDate>
+      <description>Complete Thailand food guide with street food recommendations, must-try dishes (Pad Thai, Som Tam, Curry), hawker stalls, budget eating tips, and food safety advice.</description>
+      <content:encoded><![CDATA[Thailand culinary guide for travelers. Discover street food stalls, traditional dishes and their origins, best night markets for food, food safety tips, where to eat like locals, kitchen tours in Bangkok and Chiang Mai, and budget-friendly food options across Thailand.]]></content:encoded>
+      <category>Thailand</category>
+    </item>
+
+    <item>
+      <title>Vietnam Travel Guide - Hanoi, Ho Chi Minh City, Halong Bay</title>
+      <link>https://www.loveandlayover.in/blog/vietnam-travel-guide.html</link>
+      <guid>https://www.loveandlayover.in/blog/vietnam-travel-guide.html</guid>
+      <pubDate>Tue, 10 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Vietnam travel guide covering Hanoi, Ho Chi Minh City, Halong Bay, Mekong Delta. Includes visa info for Indians, budget breakdown in VND, transportation, and cultural tips.</description>
+      <content:encoded><![CDATA[Comprehensive Vietnam travel guide for Indian passport holders. E-visa requirements and process, Hanoi Old Quarter exploration, Ho Chi Minh City highlights, Halong Bay cruises, Mekong Delta tours, best time to visit, transportation (buses, flights, trains), and authentic cultural experiences.]]></content:encoded>
+      <category>Vietnam</category>
+    </item>
+
+    <item>
+      <title>Singapore First-Timer Guide - What to Know Before You Go</title>
+      <link>https://www.loveandlayover.in/blog/singapore-first-timer-guide.html</link>
+      <guid>https://www.loveandlayover.in/blog/singapore-first-timer-guide.html</guid>
+      <pubDate>Mon, 12 May 2026 00:00:00 GMT</pubDate>
+      <description>First-time visitor guide to Singapore. Essential info: visa for Indians, best neighborhoods, transportation (MRT), must-visit attractions, budget, safety, and local customs.</description>
+      <content:encoded><![CDATA[Singapore first-timer essentials. Visa requirements and procedures for Indian travelers, MRT transit system guide, neighborhood breakdown (Marina Bay, Chinatown, Katong), must-see attractions with costs, food scene from hawker centers to fine dining, safety information, best time to visit, and cultural etiquette for visitors.]]></content:encoded>
+      <category>Singapore</category>
+    </item>
+  </channel>
+</rss>
