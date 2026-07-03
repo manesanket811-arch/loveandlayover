@@ -25,6 +25,7 @@ jobs:
           cat > fetch-videos.js << 'EOF'
           const https = require('https');
           const fs = require('fs');
+          const xml2js = require('xml2js');
 
           // YouTube channel ID
           const channelId = 'UCUABrODa0CNF5zgkesAlYeA';
@@ -42,52 +43,54 @@ jobs:
 
           async function updateVideos() {
             try {
+              console.log('📺 Fetching YouTube RSS feed...');
               const xmlData = await fetchFeed(feedUrl);
 
-              // Parse XML manually
-              const videoIds = [];
-              const videoTitles = [];
-
-              // Extract video IDs from links
-              const linkMatches = xmlData.match(/watch\?v=([a-zA-Z0-9_-]+)/g) || [];
-              linkMatches.forEach((match, i) => {
-                const id = match.replace('watch?v=', '');
-                videoIds.push(id);
-              });
-
-              // Extract titles
-              const titleMatches = xmlData.match(/<title>([^<]+)<\/title>/g) || [];
-              titleMatches.forEach((match, i) => {
-                const title = match.replace(/<\/?title>/g, '');
-                if (!title.includes('Love and Layovers') && title !== 'YouTube') {
-                  videoTitles.push(title);
-                }
-              });
-
-              // Build videos data
+              // Simple XML parsing (xml2js not available in base runner)
               const videos = [];
-              for (let i = 0; i < Math.min(videoIds.length, 12); i++) {
-                if (videoIds[i]) {
-                  videos.push({
-                    id: videoIds[i],
-                    title: videoTitles[i] || `Video ${i + 1}`,
-                    category: 'Travel',
-                    type: 'Latest'
-                  });
-                }
+
+              // Extract entries using regex
+              const entryRegex = /<entry>([\s\S]*?)<\/entry>/g;
+              let match;
+              let count = 0;
+
+              while ((match = entryRegex.exec(xmlData)) && count < 12) {
+                const entry = match[1];
+
+                // Extract video ID from link
+                const linkMatch = entry.match(/watch\?v=([a-zA-Z0-9_-]{11})/);
+                if (!linkMatch) continue;
+
+                const videoId = linkMatch[1];
+
+                // Extract title
+                const titleMatch = entry.match(/<title>([^<]+)<\/title>/);
+                const title = titleMatch ? titleMatch[1].trim() : `Video ${count + 1}`;
+
+                videos.push({
+                  id: videoId,
+                  title: title,
+                  category: 'Travel',
+                  type: 'Latest'
+                });
+
+                count++;
               }
 
-              // If no videos found from feed, use defaults
+              // If no videos found from feed, keep existing data
               if (videos.length === 0) {
-                console.log('No videos found from feed, keeping existing data');
-                return;
+                console.log('⚠️  No videos found from feed, keeping existing data');
+                process.exit(0);
               }
 
               // Write to JSON file
               fs.writeFileSync('videos-data.json', JSON.stringify(videos, null, 2));
-              console.log(`✅ Updated ${videos.length} videos`);
+              console.log(`✅ Successfully updated ${videos.length} videos`);
+              console.log('Videos:');
+              videos.forEach((v, i) => console.log(`  ${i + 1}. ${v.title} (${v.id})`));
             } catch (error) {
               console.error('❌ Error fetching videos:', error.message);
+              console.error(error);
               process.exit(1);
             }
           }
