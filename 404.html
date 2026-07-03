@@ -3,21 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Page Not Found - Love and Layovers</title>
-<meta name="description" content="The page you're looking for isn't here. Let's help you find what you need to plan your next adventure.">
+<title>Page Not Found — Love and Layovers</title>
+<meta name="description" content="The page you're looking for doesn't exist. Explore our travel guides, itinerary builder, or browse destinations instead.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Page Not Found - Love and Layovers">
-<meta property="og:description" content="The page you're looking for isn't here. Let's help you find what you need to plan your next adventure.">
+<meta property="og:title" content="Page Not Found — Love and Layovers">
+<meta property="og:description" content="The page doesn't exist. Let's find you a travel guide instead.">
 <meta property="og:image" content="https://loveandlayover-website-604218333793.s3.us-east-1.amazonaws.com/preview.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Page Not Found - Love and Layovers">
-<meta name="twitter:description" content="Page not found. Browse destinations, blog, or itineraries to continue planning your trip.">
-<meta name="twitter:image" content="https://loveandlayover-website-604218333793.s3.us-east-1.amazonaws.com/preview.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Page Not Found — Love and Layovers">
+<meta name="twitter:description" content="The page doesn't exist. Let's find you a travel guide instead.">
 <link rel="canonical" href="https://www.loveandlayover.in/404.html">
+
+<!-- Design System -->
+<link rel="stylesheet" href="/css/theme.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<!-- Google Analytics 4 -->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5D7GNE6JQL"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -26,108 +29,243 @@
   gtag('config', 'G-5D7GNE6JQL');
 </script>
 
+<!-- Datadog -->
+<script src="https://www.datadoghq-browser-agent.com/us5/v7/datadog-rum.js"></script>
+<script src="https://www.datadoghq-browser-agent.com/us5/v7/datadog-logs.js"></script>
+<script>
+  if (window.DD_RUM) {
+    window.DD_RUM.init({
+      applicationId: '2b36cb95-5c53-4b4c-afd7-5cc7207d8d8c',
+      clientToken: 'pub398e9055d3a8e18d44a22e64e505b1fa',
+      site: 'us5.datadoghq.com',
+      service: 'love-and-layovers',
+      env: 'production'
+    });
+  }
+  if (window.DD_LOGS) {
+    window.DD_LOGS.init({
+      clientToken: 'pub398e9055d3a8e18d44a22e64e505b1fa',
+      site: 'us5.datadoghq.com',
+      service: 'love-and-layovers'
+    });
+    window.DD_LOGS.logger.info('404 page loaded', {path: window.location.pathname});
+  }
+</script>
+
 <style>
-:root { --ink:#1a2332; --paper:#fefaf5; --accent:#ff6b35; --secondary:#f7931e; --teal:#0fb6a8; --deep:#0d4f6b; --sky:#ffe9d6; --shadow:rgba(26,35,50,.12); --maxw:1180px; }
-* { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior:smooth; }
-body { font-family:'Outfit',sans-serif; background:var(--paper); color:var(--ink); overflow-x:hidden; line-height:1.7; min-height:100vh; display:flex; flex-direction:column; }
-h1,h2,h3 { font-family:'Fraunces',serif; line-height:1.1; font-weight:900; letter-spacing:-.02em; }
-a { color:var(--accent); text-decoration:none; }
-.wrap { max-width:var(--maxw); margin:0 auto; padding:0 24px; }
-header { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(255,250,242,.92); backdrop-filter:blur(12px); box-shadow:0 2px 24px var(--shadow); }
-nav { display:flex; align-items:center; justify-content:space-between; max-width:var(--maxw); margin:0 auto; padding:14px 24px; }
-.logo { font-family:'Fraunces',serif; font-weight:900; font-size:1.3rem; color:var(--ink); display:flex; align-items:center; gap:9px; }
-.logo .dot { width:32px; height:32px; border-radius:50%; background-image:url('https://loveandlayover-website-604218333793.s3.us-east-1.amazonaws.com/logo.jpg'); background-size:cover; background-position:center; border:2px solid var(--accent); }
-.nav-links { display:flex; gap:30px; }
-.nav-links a { text-decoration:none; color:inherit; font-weight:500; }
-main { flex:1; display:flex; align-items:center; justify-content:center; margin-top:60px; padding:60px 0; }
-.error-container { text-align:center; max-width:600px; }
-.error-code { font-size:120px; font-weight:900; color:var(--accent); line-height:1; margin-bottom:20px; }
-.error-title { font-size:2.5rem; margin-bottom:16px; color:var(--ink); }
-.error-message { font-size:1.1rem; color:#3a474e; margin-bottom:40px; }
-.error-emoji { font-size:80px; margin-bottom:20px; }
-.suggestions { background:linear-gradient(135deg,rgba(255,107,53,.08),rgba(247,147,30,.08)); border-radius:12px; padding:30px; margin:40px 0; text-align:left; }
-.suggestions h3 { font-size:1.3rem; margin-bottom:16px; text-align:center; }
-.suggestions ul { list-style:none; }
-.suggestions li { padding:12px 0; border-bottom:1px solid rgba(0,0,0,.08); }
-.suggestions li:last-child { border-bottom:none; }
-.suggestions a { color:var(--accent); font-weight:600; }
-.suggestions a:hover { text-decoration:underline; }
-.cta-links { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; margin:40px 0; }
-.cta-btn { display:inline-block; padding:16px 24px; background:var(--accent); color:#fff; border-radius:6px; font-weight:600; text-decoration:none; transition:.3s; text-align:center; }
-.cta-btn:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(255,107,53,.3); }
-.cta-btn.secondary { background:var(--teal); }
-.cta-btn.secondary:hover { box-shadow:0 8px 24px rgba(15,182,168,.3); }
-footer { background:var(--ink); color:#fff; padding:40px 0; margin-top:60px; }
-.foot { display:flex; justify-content:space-between; align-items:center; margin-bottom:30px; flex-wrap:wrap; gap:20px; }
-.foot-links { display:flex; gap:24px; flex-wrap:wrap; }
-.foot-links a { color:var(--secondary); text-decoration:none; }
-.copy { margin-top:30px; padding-top:30px; border-top:1px solid rgba(255,255,255,.1); text-align:center; font-size:.9rem; }
-@media(max-width:600px) { .error-code { font-size:80px; } .error-title { font-size:1.8rem; } .error-emoji { font-size:60px; } .suggestions { padding:20px; } .cta-links { grid-template-columns:1fr; } }
+  .error-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    text-align: center;
+    padding: 40px 24px;
+  }
+
+  .error-content {
+    max-width: 600px;
+  }
+
+  .error-code {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(4rem, 10vw, 8rem);
+    font-weight: 900;
+    color: var(--accent);
+    margin-bottom: 12px;
+    line-height: 1;
+  }
+
+  .error-title {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    margin-bottom: 16px;
+    color: var(--ink);
+  }
+
+  .error-message {
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+    margin-bottom: 40px;
+    line-height: 1.7;
+  }
+
+  .error-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 60px;
+  }
+
+  .error-actions a {
+    display: inline-block;
+  }
+
+  .error-suggestions {
+    background: var(--sand);
+    border-radius: var(--radius);
+    padding: 40px;
+    text-align: left;
+  }
+
+  .error-suggestions h2 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .suggestion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 24px;
+  }
+
+  .suggestion-card {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 20px;
+    text-align: center;
+  }
+
+  .suggestion-card h3 {
+    font-size: 1.1rem;
+    margin: 0 0 12px 0;
+    color: var(--ink);
+  }
+
+  .suggestion-card p {
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+    margin: 0 0 16px 0;
+  }
+
+  .suggestion-card a {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+  }
+
+  .suggestion-card a:hover {
+    background: #d1471f;
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    .error-suggestions {
+      padding: 24px;
+    }
+
+    .suggestion-grid {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>
 </head>
 <body>
+
+<!-- Header & Navigation -->
 <header>
-<nav class="wrap nav">
-<a href="/" class="logo"><span class="dot"></span>Love and Layovers</a>
-<div class="nav-links">
-<a href="/itinerary-builder.html">Itineraries</a>
-<a href="/blog.html">Blog</a>
-<a href="/destinations/">Destinations</a>
-<a href="/faq.html">FAQ</a>
-</div>
-</nav>
+
+  <nav class="wrap nav">
+    <a href="/" class="logo">Love and Layovers</a>
+    <div class="nav-links">
+      <a href="/destinations/">Destinations</a>
+      <a href="/itinerary-builder.html">Itineraries</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/videos.html">Videos</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/about.html">About</a>
+    </div>
+  </nav>
 </header>
 
 <main>
-<div class="wrap">
+
 <div class="error-container">
-<div class="error-emoji">✈️</div>
-<div class="error-code">404</div>
-<h1 class="error-title">Page Not Found</h1>
-<p class="error-message">Oops! It looks like this page took a wrong turn. The page you're looking for doesn't exist here.</p>
+  <div class="error-content">
+    <div class="error-code">404</div>
+    <h1 class="error-title">Page Not Found</h1>
+    <p class="error-message">
+      Looks like this page got lost somewhere between Singapore and Tokyo.
+      Let's get you back on track with a travel guide instead.
+    </p>
 
-<div class="suggestions">
-<h3>Here's what you can do:</h3>
-<ul>
-<li><strong>🗺️ <a href="/destinations/">Browse all destinations</a></strong> — Find travel guides for 16 destinations</li>
-<li><strong>📖 <a href="/blog.html">Check the travel blog</a></strong> — Read guides, tips, and itineraries</li>
-<li><strong>🏗️ <a href="/itinerary-builder.html">Build an itinerary</a></strong> — Create your custom trip plan</li>
-<li><strong>❓ <a href="/faq.html">Read the FAQ</a></strong> — Get answers about visas, budgets, and travel tips</li>
-<li><strong>📺 <a href="/videos.html">Watch travel videos</a></strong> — See real travel experiences</li>
-<li><strong>ℹ️ <a href="/about.html">Learn about us</a></strong> — Discover our mission and story</li>
-</ul>
+    <div class="error-actions">
+      <a href="/" class="btn btn--primary">← Back to Home</a>
+      <a href="/itinerary-builder.html" class="btn btn--secondary">Build Your Itinerary</a>
+    </div>
+
+    <div class="error-suggestions">
+      <h2>Popular Guides</h2>
+      <p style="text-align: center; margin: 0 0 20px 0; color: var(--ink-soft); font-size: 0.95rem;">
+        Start with one of our top destination guides
+      </p>
+
+      <div class="suggestion-grid">
+        <div class="suggestion-card">
+          <h3>Singapore</h3>
+          <p>Ultra-modern city with world-class food. 3–10 days, S$95–150/day</p>
+          <a href="/destinations/singapore.html">Explore →</a>
+        </div>
+
+        <div class="suggestion-card">
+          <h3>Japan</h3>
+          <p>Tokyo energy + ancient temples + Mount Fuji. 5–10 days, ¥5,000–8,000/day</p>
+          <a href="/destinations/japan.html">Explore →</a>
+        </div>
+
+        <div class="suggestion-card">
+          <h3>Thailand</h3>
+          <p>Bangkok street food + island beaches. 5–10 days, ฿1,200–1,800/day</p>
+          <a href="/destinations/thailand.html">Explore →</a>
+        </div>
+
+        <div class="suggestion-card">
+          <h3>Vietnam</h3>
+          <p>Ha Long Bay views + Saigon energy. 7–10 days, ₹1,000–1,500/day</p>
+          <a href="/destinations/vietnam.html">Explore →</a>
+        </div>
+      </div>
+
+      <div style="margin-top: 30px; padding-top: 30px; border-top: 1px solid rgba(0,0,0,.1); text-align: center;">
+        <p style="margin: 0 0 16px 0; color: var(--ink-soft); font-size: 0.95rem;">
+          Can't decide? Use our interactive planner.
+        </p>
+        <a href="/itinerary-builder.html" class="btn btn--primary">Start the Itinerary Builder</a>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class="cta-links">
-<a href="/" class="cta-btn">Back to Home</a>
-<a href="/itinerary-builder.html" class="cta-btn secondary">Build Itinerary</a>
-</div>
-
-<div style="margin-top:40px; padding:24px; background:#f8f6f2; border-radius:8px; text-align:left;">
-<p style="color:#3a474e; margin-bottom:12px;">Can't find what you're looking for? <a href="/" style="color:var(--accent); font-weight:600;">Contact us</a> and we'll help point you in the right direction.</p>
-</div>
-</div>
-</div>
 </main>
 
+<!-- Footer -->
 <footer>
-<div class="wrap">
-<div class="foot">
-<a href="/" class="logo"><span class="dot"></span>Love and Layovers</a>
-<div class="foot-links">
-<a href="/about.html">About</a>
-<a href="/faq.html">FAQ</a>
-<a href="/blog.html">Blog</a>
-<a href="/destinations/">Destinations</a>
-<a href="/testimonials.html">Testimonials</a>
-<a href="/">Contact</a>
-</div>
-</div>
-<div class="copy">
-<p>© 2026 Love and Layovers. All rights reserved. Free travel guides for Indian passport holders.</p>
-</div>
-</div>
+  <div class="wrap">
+    <p>
+      <strong>Love and Layovers</strong> — Free travel guides from real trips.<br>
+      <a href="/destinations/">Guides</a> |
+      <a href="/itinerary-builder.html">Builder</a> |
+      <a href="/blog.html">Blog</a> |
+      <a href="/videos.html">Videos</a> |
+      <a href="/faq.html">FAQ</a> |
+      <a href="/about.html">About</a> |
+      <a href="mailto:manesanket811@gmail.com">Contact</a>
+    </p>
+    <p style="margin-top: 20px; margin-bottom: 0;">
+      <a href="https://www.youtube.com/@loveandlayover">YouTube</a> |
+      <a href="https://www.instagram.com/loveandlayover">Instagram</a>
+    </p>
+    <div class="footer-copy">
+      &copy; 2026 Love and Layovers · Travel tips with heart ✈
+    </div>
+  </div>
 </footer>
 </body>
 </html>
