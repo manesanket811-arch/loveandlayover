@@ -25,7 +25,6 @@ jobs:
           cat > fetch-videos.cjs << 'EOF'
           const https = require('https');
           const fs = require('fs');
-          const xml2js = require('xml2js');
 
           // YouTube channel ID
           const channelId = 'UCUABrODa0CNF5zgkesAlYeA';
