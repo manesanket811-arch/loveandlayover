@@ -411,18 +411,11 @@
   .cta-buttons a{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:#fff;color:var(--accent);text-decoration:none;border-radius:8px;font-weight:600;font-size:1rem;transition:.3s;border:2px solid transparent}
   .cta-buttons a:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2)}
 
-  /* VIDEO MODAL */
-  .video-modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.95);z-index:200;justify-content:center;align-items:center;padding:20px}
-  .video-modal.active{display:flex;animation:fadeIn .3s ease}
-  @keyframes fadeIn{from{opacity:0}to{opacity:1}}
-  .modal-content{position:relative;max-width:900px;width:100%;background:#000;border-radius:12px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.8)}
-  .modal-player{position:relative;padding-bottom:56.25%;height:0}
-  .modal-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
-  .modal-close{position:absolute;top:12px;right:12px;width:40px;height:40px;background:rgba(255,255,255,.2);border:none;color:#fff;font-size:24px;cursor:pointer;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:.2s;z-index:10}
-  .modal-close:hover{background:rgba(255,255,255,.4)}
-  .modal-footer{padding:20px;background:#1a1a1a;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-  .modal-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(135deg,#ff6b35,#f7931e);color:#fff;text-decoration:none;border-radius:6px;font-weight:600;transition:.2s;border:none;cursor:pointer;font-size:.95rem}
-  .modal-btn:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(255,107,53,.3)}
+  /* INLINE VIDEO PLAYER */
+  .video-player-inline{position:relative;width:100%;padding-bottom:56.25%;height:0;background:#000}
+  .video-player-inline iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
+  .close-player-btn{position:absolute;top:8px;right:8px;width:36px;height:36px;background:rgba(0,0,0,.6);border:none;color:#fff;font-size:20px;cursor:pointer;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:.2s;z-index:5}
+  .close-player-btn:hover{background:rgba(0,0,0,.8)}
 
   /* INSTAGRAM SECTION */
   .elfsight-app-2a41819a-389a-483c-8aad-f0b729f4b159{max-height:500px;overflow:hidden!important}
@@ -554,15 +547,28 @@
           }
         }
 
-        // Open video modal with player
-        function openVideoModal(videoId, videoTitle) {
-          const modal = document.getElementById('videoModal');
-          const player = document.getElementById('videoPlayer');
-          const watchBtn = document.getElementById('watchOnYouTube');
+        // Play video inline on card
+        function playVideoInline(videoCard, videoId, videoTitle) {
+          const thumbnail = videoCard.querySelector('.vthumb');
 
-          player.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-          watchBtn.href = `https://www.youtube.com/watch?v=${videoId}`;
-          modal.classList.add('active');
+          // Check if already playing
+          if (thumbnail.classList.contains('playing')) return;
+
+          // Create player container
+          const playerContainer = document.createElement('div');
+          playerContainer.className = 'video-player-inline';
+          playerContainer.innerHTML = `
+            <button class="close-player-btn" onclick="closeInlinePlayer(this.closest('.vcard'))">✕</button>
+            <iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+          `;
+
+          // Replace thumbnail with player
+          thumbnail.style.display = 'none';
+          thumbnail.after(playerContainer);
+          thumbnail.classList.add('playing');
+          playerContainer.dataset.videoId = videoId;
 
           if (window.DD_LOGS) {
             window.DD_LOGS.logger.info('video_preview_opened', {
@@ -573,12 +579,16 @@
           }
         }
 
-        // Close video modal
-        function closeVideoModal() {
-          const modal = document.getElementById('videoModal');
-          const player = document.getElementById('videoPlayer');
-          player.src = '';
-          modal.classList.remove('active');
+        // Close inline player
+        function closeInlinePlayer(videoCard) {
+          const thumbnail = videoCard.querySelector('.vthumb');
+          const player = videoCard.querySelector('.video-player-inline');
+
+          if (player) {
+            player.remove();
+            thumbnail.style.display = '';
+            thumbnail.classList.remove('playing');
+          }
         }
 
         // Load videos from JSON file (automatically updated by GitHub Actions)
@@ -623,10 +633,10 @@
                 </div>
               `;
 
-              // Add click handler to open modal
+              // Add click handler to play video inline
               card.addEventListener('click', (e) => {
                 if (!e.target.closest('.video-actions')) {
-                  openVideoModal(video.id, video.title);
+                  playVideoInline(card, video.id, video.title);
                 }
               });
 
@@ -682,23 +692,14 @@
           loadVideos();
         }
 
-        // Modal interaction handlers
-        document.addEventListener('DOMContentLoaded', () => {
-          const modal = document.getElementById('videoModal');
-
-          // Close modal when clicking outside the content
-          modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-              closeVideoModal();
+        // Close player with ESC key
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            const playing = document.querySelector('.vthumb.playing');
+            if (playing) {
+              closeInlinePlayer(playing.closest('.vcard'));
             }
-          });
-
-          // Close modal with ESC key
-          document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && modal.classList.contains('active')) {
-              closeVideoModal();
-            }
-          });
+          }
         });
       </script>
     </div>
@@ -758,22 +759,6 @@
   </div>
 </section>
 </main>
-
-<!-- VIDEO PLAYER MODAL -->
-<div class="video-modal" id="videoModal">
-  <div class="modal-content">
-    <button class="modal-close" onclick="closeVideoModal()">✕</button>
-    <div class="modal-player">
-      <iframe id="videoPlayer" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <div class="modal-footer">
-      <a href="" id="watchOnYouTube" class="modal-btn" target="_blank" rel="noopener">
-        <svg fill="currentColor" viewBox="0 0 24 24" style="width:18px;height:18px"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-        Watch on YouTube
-      </a>
-    </div>
-  </div>
-</div>
 
 <footer>
   <div class="wrap">
