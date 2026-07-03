@@ -124,7 +124,11 @@ jobs:
                 const titleMatch = entry.match(/<title>([^<]+)<\/title>/);
                 const title = titleMatch ? titleMatch[1].trim() : `Video ${count + 1}`;
 
-                console.log(`Found video ${count + 1}: ${title} (${videoId})`);
+                // Extract published date
+                const publishedMatch = entry.match(/<published>([^<]+)<\/published>/);
+                const publishedDate = publishedMatch ? publishedMatch[1] : new Date().toISOString();
+
+                console.log(`Found video ${count + 1}: ${title} (${videoId}) - Published: ${publishedDate}`);
 
                 // Extract keywords from title
                 const keywords = extractKeywords(title);
@@ -134,6 +138,7 @@ jobs:
                   title: title,
                   category: 'Travel',
                   type: 'Latest',
+                  published: publishedDate,
                   keywords: keywords
                 });
 

@@ -456,6 +456,21 @@
         <!-- Videos loaded dynamically from videos-data.json -->
       </div>
       <script>
+        // Helper function to calculate relative time
+        function getRelativeTime(dateString) {
+          const now = new Date();
+          const published = new Date(dateString);
+          const seconds = Math.floor((now - published) / 1000);
+
+          if (seconds < 60) return 'now';
+          if (seconds < 3600) return `${Math.floor(seconds / 60)} min ago`;
+          if (seconds < 86400) return `${Math.floor(seconds / 3600)} hours ago`;
+          if (seconds < 604800) return `${Math.floor(seconds / 86400)} days ago`;
+          if (seconds < 2592000) return `${Math.floor(seconds / 604800)} weeks ago`;
+          if (seconds < 31536000) return `${Math.floor(seconds / 2592000)} months ago`;
+          return `${Math.floor(seconds / 31536000)} years ago`;
+        }
+
         // Load videos from JSON file (automatically updated by GitHub Actions)
         async function loadVideos() {
           try {
@@ -474,13 +489,17 @@
                 `<span class="video-tag">${kw}</span>`
               ).join('') : '';
 
+              // Calculate relative time from publish date
+              const relativeTime = video.published ? getRelativeTime(video.published) : 'recently';
+              const timeDisplay = relativeTime.charAt(0).toUpperCase() + relativeTime.slice(1);
+
               card.innerHTML = `
                 <div class="vthumb" style="background:url('https://img.youtube.com/vi/${video.id}/mqdefault.jpg') no-repeat center/cover;">
                   <div class="play-btn"><div style="width:0; height:0; border-left:18px solid #b85623; border-top:12px solid transparent; border-bottom:12px solid transparent; margin-left:4px;"></div></div>
                 </div>
                 <div class="vmeta">
                   <h3>${video.title}</h3>
-                  <div class="info">${video.category} · ${video.type}</div>
+                  <div class="info">${video.category} · ${timeDisplay}</div>
                   ${keywordsTags ? `<div class="keywords-container">${keywordsTags}</div>` : ''}
                 </div>
               `;
