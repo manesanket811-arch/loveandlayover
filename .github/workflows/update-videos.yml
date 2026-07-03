@@ -40,6 +40,34 @@ jobs:
             });
           }
 
+          function extractKeywords(title) {
+            // Common travel-related keywords
+            const travelKeywords = [
+              'travel', 'guide', 'vlog', 'trip', 'adventure', 'destination', 'explore',
+              'journey', 'vacation', 'tourism', 'tour', 'backpacking', 'wanderlust',
+              'itinerary', 'shorts', 'moments', 'tips', 'food', 'culture', 'experience'
+            ];
+
+            // Extract words from title
+            const words = title.toLowerCase()
+              .split(/[\s\-,:()]+/)
+              .filter(word => word.length > 3);
+
+            // Find matching travel keywords
+            const keywords = words.filter(word =>
+              travelKeywords.some(kw => word.includes(kw) || kw.includes(word))
+            );
+
+            // Add some default keywords if title contains specific terms
+            if (title.toLowerCase().includes('food')) keywords.push('food tour', 'culinary');
+            if (title.toLowerCase().includes('budget')) keywords.push('budget travel');
+            if (title.toLowerCase().includes('day')) keywords.push('itinerary');
+            if (title.toLowerCase().includes('guide')) keywords.push('travel guide');
+
+            // Return unique keywords, max 6
+            return [...new Set([...keywords, 'travel', 'adventure'])].slice(0, 6);
+          }
+
           async function updateVideos() {
             try {
               console.log('📺 Fetching YouTube RSS feed...');
@@ -98,11 +126,15 @@ jobs:
 
                 console.log(`Found video ${count + 1}: ${title} (${videoId})`);
 
+                // Extract keywords from title
+                const keywords = extractKeywords(title);
+
                 videos.push({
                   id: videoId,
                   title: title,
                   category: 'Travel',
-                  type: 'Latest'
+                  type: 'Latest',
+                  keywords: keywords
                 });
 
                 count++;
