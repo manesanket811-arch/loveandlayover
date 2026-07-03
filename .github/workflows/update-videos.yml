@@ -45,26 +45,58 @@ jobs:
               console.log('📺 Fetching YouTube RSS feed...');
               const xmlData = await fetchFeed(feedUrl);
 
+              // Debug: check if we got valid XML
+              console.log('Feed received, length:', xmlData.length);
+              console.log('First 500 chars:', xmlData.substring(0, 500));
+
               // Simple XML parsing (xml2js not available in base runner)
               const videos = [];
 
-              // Extract entries using regex
+              // Extract entries using regex - try different patterns
               const entryRegex = /<entry>([\s\S]*?)<\/entry>/g;
               let match;
               let count = 0;
+              let entryCount = 0;
 
               while ((match = entryRegex.exec(xmlData)) && count < 12) {
+                entryCount++;
                 const entry = match[1];
 
-                // Extract video ID from link
-                const linkMatch = entry.match(/watch\?v=([a-zA-Z0-9_-]{11})/);
-                if (!linkMatch) continue;
+                // Try multiple patterns for video ID extraction
+                let videoId = null;
 
-                const videoId = linkMatch[1];
+                // Pattern 1: watch?v=VIDEO_ID
+                let linkMatch = entry.match(/watch\?v=([a-zA-Z0-9_-]+)/);
+                if (linkMatch) {
+                  videoId = linkMatch[1];
+                }
+
+                // Pattern 2: /v/VIDEO_ID
+                if (!videoId) {
+                  linkMatch = entry.match(/\/v\/([a-zA-Z0-9_-]+)/);
+                  if (linkMatch) {
+                    videoId = linkMatch[1];
+                  }
+                }
+
+                // Pattern 3: videoId from yt:videoId tag
+                if (!videoId) {
+                  linkMatch = entry.match(/<yt:videoId>([a-zA-Z0-9_-]+)<\/yt:videoId>/);
+                  if (linkMatch) {
+                    videoId = linkMatch[1];
+                  }
+                }
+
+                if (!videoId) {
+                  console.log(`Entry ${entryCount}: No video ID found`);
+                  continue;
+                }
 
                 // Extract title
                 const titleMatch = entry.match(/<title>([^<]+)<\/title>/);
                 const title = titleMatch ? titleMatch[1].trim() : `Video ${count + 1}`;
+
+                console.log(`Found video ${count + 1}: ${title} (${videoId})`);
 
                 videos.push({
                   id: videoId,
@@ -75,6 +107,8 @@ jobs:
 
                 count++;
               }
+
+              console.log(`Processed ${entryCount} entries, found ${videos.length} videos`);
 
               // If no videos found from feed, keep existing data
               if (videos.length === 0) {
