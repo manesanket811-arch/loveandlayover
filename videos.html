@@ -460,11 +460,32 @@
             const channelId = 'UCUABrODa0CNF5zgkesAlYeA';
             const rssFeedUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
 
-            // Use CORS proxy to avoid CORS issues
-            const corsProxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(rssFeedUrl)}`;
+            // Try multiple CORS proxies with fallbacks
+            const proxies = [
+              `https://corsproxy.io/?${encodeURIComponent(rssFeedUrl)}`,
+              `https://thingproxy.freeboard.io/fetch/${encodeURIComponent(rssFeedUrl)}`,
+              `https://api.allorigins.win/raw?url=${encodeURIComponent(rssFeedUrl)}`
+            ];
 
-            const response = await fetch(corsProxyUrl);
-            const xmlText = await response.text();
+            let xmlText = null;
+            let lastError = null;
+
+            // Try each proxy until one works
+            for (const proxyUrl of proxies) {
+              try {
+                const response = await fetch(proxyUrl);
+                if (response.ok) {
+                  xmlText = await response.text();
+                  break;
+                }
+              } catch (e) {
+                lastError = e;
+                continue;
+              }
+            }
+
+            if (!xmlText) {
+              throw new Error('All CORS proxies failed. ' + (lastError?.message || ''));
 
             // Parse XML
             const parser = new DOMParser();
@@ -531,13 +552,46 @@
             }
           } catch (error) {
             console.error('Error loading YouTube videos:', error);
-            document.getElementById('videoGrid').innerHTML = '<p style="grid-column:1/-1;text-align:center;color:#d94f20;padding:40px;">Unable to load videos. <a href="https://www.youtube.com/@LoveAndLayover" target="_blank">Visit our YouTube channel →</a></p>';
 
-            if (window.DD_LOGS) {
-              window.DD_LOGS.logger.error('youtube_feed_error', {
-                error_message: error.message,
-                error_type: 'rss_feed_fetch'
+            // Fallback: Load videos from static JSON file
+            try {
+              const response = await fetch('/videos-data.json');
+              const videos = await response.json();
+              const grid = document.getElementById('videoGrid');
+              grid.innerHTML = '';
+
+              videos.forEach(video => {
+                const card = document.createElement('a');
+                card.href = `https://www.youtube.com/watch?v=${video.id}`;
+                card.target = '_blank';
+                card.rel = 'noopener';
+                card.className = 'vcard';
+                card.innerHTML = `
+                  <div class="vthumb" style="background:url('https://img.youtube.com/vi/${video.id}/mqdefault.jpg') no-repeat center/cover;">
+                    <div class="play-btn"><div style="width:0; height:0; border-left:18px solid #b85623; border-top:12px solid transparent; border-bottom:12px solid transparent; margin-left:4px;"></div></div>
+                  </div>
+                  <div class="vmeta"><h3>${video.title}</h3><div class="info">${video.category} · ${video.type}</div></div>
+                `;
+                grid.appendChild(card);
               });
+
+              if (window.DD_LOGS) {
+                window.DD_LOGS.logger.warn('youtube_rss_fallback', {
+                  error_message: error.message,
+                  fallback_type: 'static_json',
+                  videos_loaded: videos.length
+                });
+              }
+            } catch (fallbackError) {
+              document.getElementById('videoGrid').innerHTML = '<p style="grid-column:1/-1;text-align:center;color:#d94f20;padding:40px;">Unable to load videos. <a href="https://www.youtube.com/@LoveAndLayover" target="_blank">Visit our YouTube channel →</a></p>';
+
+              if (window.DD_LOGS) {
+                window.DD_LOGS.logger.error('youtube_feed_error', {
+                  error_message: error.message,
+                  fallback_error: fallbackError.message,
+                  error_type: 'rss_feed_and_fallback_failed'
+                });
+              }
             }
           }
         }
