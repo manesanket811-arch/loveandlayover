@@ -363,37 +363,44 @@
   .burger span{width:26px;height:3px;background:var(--ink);border-radius:3px;transition:.3s}
 
   /* HERO */
-  .hero{min-height:60vh;display:flex;align-items:center;padding:120px 0 60px;background:linear-gradient(135deg,rgba(232,244,248,.35),rgba(212,232,240,.35),rgba(200,223,240,.35)),url('/banner.webp');background-size:cover;background-position:center}
-  .hero .wrap{display:grid;grid-template-columns:1fr;gap:50px;align-items:center}
-  .eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.9);border:1px solid rgba(13,38,43,.15);padding:7px 16px;border-radius:50px;font-weight:600;font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;color:#0fb6a8;box-shadow:0 4px 14px rgba(13,38,43,.12);margin-bottom:26px}
-  .eyebrow .pulse{width:9px;height:9px;border-radius:50%;background:#0fb6a8;animation:pulse 1.8s infinite}
-  @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(15,182,168,.5)}50%{box-shadow:0 0 0 7px rgba(15,182,168,0)}}
-  .hero h1{font-size:clamp(2.2rem,5vw,3.5rem);margin-bottom:22px;color:var(--ink)}
-  .hero p.lead{font-size:1.1rem;max-width:500px;color:#2d3d45;margin-bottom:20px}
+  .hero{padding:30px 0;background:#fefaf5;border-bottom:1px solid rgba(26,35,50,.08)}
+  .hero .wrap{display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}
+  .hero-content{flex:1;min-width:280px}
+  .hero h1{font-size:2rem;margin-bottom:8px;color:var(--ink)}
+  .hero p.lead{font-size:.95rem;color:#6a777c;margin:0}
+  .hero-cta{flex:0 1 auto}
+  .subscribe-btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#ff6b35,#f7931e);color:#fff;padding:14px 32px;border-radius:50px;font-weight:700;text-decoration:none;transition:.3s;border:none;cursor:pointer;font-size:1rem}
+  .subscribe-btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(255,107,53,.3)}
+  .subscribe-btn svg{width:18px;height:18px}
 
   /* VIDEOS SECTION */
-  .videos-section{padding:80px 0}
-  .video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:40px 0}
-  .vcard{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 6px 20px var(--shadow);transition:.3s}
-  .vcard:hover{transform:translateY(-8px);box-shadow:0 14px 40px rgba(13,38,43,.16)}
-  .vthumb{aspect-ratio:16/10;position:relative;display:flex;align-items:center;justify-content:center;background-size:cover;background-position:center}
-  .vthumb::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.2);opacity:0;transition:.3s}
+  .videos-section{padding:60px 0;background:#fefaf5}
+  .section-header{margin-bottom:50px}
+  .section-header h2{font-size:2rem;margin-bottom:8px}
+  .section-header p{color:#6a777c;font-size:1rem}
+  .video-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:30px 0}
+  .vcard{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(26,35,50,.08);transition:.4s cubic-bezier(.23,1,.320,1);cursor:pointer;display:flex;flex-direction:column;height:100%}
+  .vcard:hover{transform:translateY(-6px);box-shadow:0 16px 32px rgba(26,35,50,.15)}
+  .vthumb{aspect-ratio:16/9;position:relative;display:flex;align-items:center;justify-content:center;background-size:cover;background-position:center;overflow:hidden}
+  .vthumb::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.15);opacity:0;transition:.4s}
   .vcard:hover .vthumb::before{opacity:1}
-  .play-btn{width:60px;height:60px;background:rgba(255,255,255,.95);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:.3s;z-index:2}
-  .vcard:hover .play-btn{transform:scale(1.1);background:#fff}
-  .vmeta{padding:24px}
-  .vmeta h3{font-size:1.2rem;margin-bottom:8px;color:var(--ink);margin:8px 0}
-  .vmeta .info{font-size:.85rem;color:#6a777c;margin-bottom:12px}
-  .video-duration{position:absolute;bottom:12px;right:12px;background:rgba(0,0,0,.8);color:#fff;padding:6px 10px;border-radius:4px;font-size:.8rem;font-weight:600}
-  .video-series{display:inline-block;background:#b85623;color:#fff;padding:4px 12px;border-radius:4px;font-size:.75rem;font-weight:600;margin-bottom:8px;text-transform:capitalize}
-  .video-description{font-size:.9rem;color:#555;margin:8px 0;line-height:1.4}
-  .video-actions{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
-  .action-btn{display:inline-block;padding:8px 16px;border-radius:6px;font-size:.9rem;font-weight:600;text-decoration:none;border:none;cursor:pointer;transition:.2s;background:#f0f0f0;color:#333}
-  .action-btn:hover{background:#b85623;color:#fff;transform:translateY(-2px)}
-  .share-btn{padding:8px 14px}
-  .keywords-container{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
-  .video-tag{display:inline-block;background:#f0f0f0;color:#666;padding:4px 10px;border-radius:16px;font-size:.75rem;font-weight:500;text-transform:capitalize;border:1px solid #e0e0e0;transition:.2s}
-  .video-tag:hover{background:#b85623;color:#fff;border-color:#b85623}
+  .vthumb::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,107,53,.08),rgba(247,147,30,.08));opacity:0;transition:.4s}
+  .vcard:hover .vthumb::after{opacity:1}
+  .play-btn{width:56px;height:56px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:.3s;z-index:2;box-shadow:0 4px 16px rgba(0,0,0,.2);transform:scale(.85);opacity:0}
+  .vcard:hover .play-btn{transform:scale(1);opacity:1}
+  .vmeta{padding:16px;flex-grow:1;display:flex;flex-direction:column}
+  .vmeta h3{font-size:1.05rem;margin:0 0 8px 0;color:var(--ink);line-height:1.3;font-weight:700}
+  .vmeta .info{font-size:.82rem;color:#888;margin-bottom:8px}
+  .video-duration{position:absolute;top:8px;right:8px;background:rgba(0,0,0,.75);color:#fff;padding:4px 8px;border-radius:4px;font-size:.7rem;font-weight:600;z-index:1}
+  .video-series{display:inline-block;background:linear-gradient(135deg,#ff6b35,#f7931e);color:#fff;padding:3px 10px;border-radius:4px;font-size:.7rem;font-weight:600;text-transform:capitalize;width:fit-content;margin-bottom:8px}
+  .video-description{font-size:.85rem;color:#666;margin:8px 0;line-height:1.4;display:none}
+  .video-actions{display:flex;gap:6px;margin-top:auto;flex-wrap:wrap}
+  .action-btn{display:inline-block;padding:6px 14px;border-radius:6px;font-size:.8rem;font-weight:600;text-decoration:none;border:none;cursor:pointer;transition:.2s;background:#f5f5f5;color:#333;flex:1;text-align:center}
+  .action-btn:hover{background:linear-gradient(135deg,#ff6b35,#f7931e);color:#fff}
+  .share-btn{flex:0.8}
+  .keywords-container{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px}
+  .video-tag{display:inline-block;background:#f0f0f0;color:#555;padding:3px 8px;border-radius:12px;font-size:.65rem;font-weight:500;text-transform:capitalize;border:1px solid #e8e8e8;transition:.2s}
+  .video-tag:hover{background:linear-gradient(135deg,#ff6b35,#f7931e);color:#fff;border-color:#ff6b35}
 
   /* CTA SECTION */
   .cta-section{background:linear-gradient(135deg,var(--accent),var(--secondary));padding:60px 20px;text-align:center;color:#fff;margin:60px 0}
@@ -411,12 +418,21 @@
   .copy{text-align:center;margin-top:30px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);font-size:.85rem}
 
   /* RESPONSIVE */
-  @media(max-width:900px){
-    .video-grid{grid-template-columns:1fr 1fr}
+  @media(max-width:1200px){
+    .video-grid{grid-template-columns:repeat(3,1fr);gap:18px}
+  }
+  @media(max-width:768px){
+    .video-grid{grid-template-columns:repeat(2,1fr);gap:16px}
+    .hero{padding:24px 0;flex-direction:column;text-align:center}
+    .hero-content{flex:1}
+    .hero h1{font-size:1.6rem}
+    .section-header h2{font-size:1.6rem}
   }
   @media(max-width:560px){
-    .video-grid{grid-template-columns:1fr}
-    .hero{padding:100px 0 40px}
+    .video-grid{grid-template-columns:1fr;gap:14px}
+    .hero{padding:18px 0}
+    .hero h1{font-size:1.4rem}
+    .subscribe-btn{font-size:.9rem;padding:12px 24px}
     .cta-buttons{flex-direction:column}
     .cta-buttons a{width:100%}
   }
@@ -442,30 +458,28 @@
 <!-- HERO -->
 <section class="hero">
   <div class="wrap">
-    <span class="eyebrow"><span class="pulse"></span>New episodes every week · Subscribe now</span>
-    <h1>From our channel</h1>
-    <p class="lead">Latest adventures, on screen. Watch our travel vlogs, destination guides, food tours, and real travel moments. New episodes every trip.</p>
+    <div class="hero-content">
+      <h1>Our Latest Adventures</h1>
+      <p class="lead">Travel vlogs, destination guides & food tours. New episodes every week.</p>
+    </div>
+    <div class="hero-cta">
+      <a href="https://www.youtube.com/@LoveAndLayover?sub_confirmation=1" target="_blank" rel="noopener" class="subscribe-btn">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        Subscribe
+      </a>
+    </div>
   </div>
 </section>
 
 <!-- VIDEOS SECTION -->
 <section class="videos-section" id="videos">
   <div class="wrap">
-    <div style="text-align:center; margin-bottom:40px;">
-      <h2 style="font-size:2rem; margin-bottom:16px;">Latest adventures, on screen</h2>
-      <p style="font-size:1.05rem; color:#3a474e; max-width:600px; margin:0 auto;">New episodes every trip. Watch first, then steal our exact routes below.</p>
-    </div>
-
-    <!-- YouTube Subscribe Banner -->
-    <div style="background:linear-gradient(135deg,#ff6b35,#f7931e);padding:30px 24px;border-radius:12px;margin-bottom:50px;text-align:center;color:#fff">
-      <h2 style="margin:0 0 12px 0;font-size:1.5rem;font-weight:900">Subscribe to our Channel</h2>
-      <p style="margin:0 0 20px 0;font-size:1.05rem;opacity:.95">Get notified for new travel videos, guides, and adventure stories every week!</p>
-      <a href="https://www.youtube.com/@LoveAndLayover?sub_confirmation=1" target="_blank" rel="noopener" style="display:inline-block;background:#fff;color:#ff6b35;padding:14px 40px;border-radius:50px;font-weight:700;font-size:1.1rem;text-decoration:none;transition:.3s">🔔 Subscribe Now</a>
+    <div class="section-header">
+      <h2>Latest on YouTube</h2>
+      <p>New episodes every week. Watch, share & subscribe to never miss an adventure.</p>
     </div>
 
     <!-- YouTube Videos -->
-    <div style="margin-bottom:50px;">
-      <h3 style="margin:0 0 24px 0; color:var(--ink); font-size:1.3rem;">Latest on YouTube</h3>
       <div class="video-grid" id="videoGrid">
         <!-- Videos loaded dynamically from videos-data.json -->
       </div>
@@ -597,12 +611,14 @@
           loadVideos();
         }
       </script>
-      <div style="text-align:center;"><a href="https://www.youtube.com/@LoveAndLayover" target="_blank" rel="noopener" class="btn coral" style="padding:14px 32px; font-size:1rem;">Subscribe on YouTube →</a></div>
     </div>
 
     <!-- Instagram Section -->
-    <div>
-      <h3 style="margin:0 0 24px 0; color:var(--ink); font-size:1.3rem;">Daily Travel Moments</h3>
+    <div style="margin-top:60px;">
+      <div class="section-header" style="margin-bottom:30px;">
+        <h2>Daily Travel Moments</h2>
+        <p>Follow us on Instagram for real travel stories & inspiration</p>
+      </div>
       <script src="https://elfsightcdn.com/platform.js" async></script>
       <div class="elfsight-app-2a41819a-389a-483c-8aad-f0b729f4b159" data-elfsight-app-lazy></div>
       <script>
@@ -626,7 +642,10 @@
         setTimeout(hideElfsightBranding, 2000);
         setTimeout(hideElfsightBranding, 5000);
       </script>
-      <div style="text-align:center;margin-top:24px;"><a href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener" class="btn coral" style="padding:12px 28px; font-size:0.95rem; font-weight:600; display:inline-block;">Follow on Instagram →</a></div>
+      <div style="text-align:center;margin-top:24px;"><a href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener" class="subscribe-btn" style="display:inline-flex;">
+        <svg fill="currentColor" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="0" fill="currentColor"/><circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="0" fill="none"/><circle cx="17.5" cy="6.5" r="1.5" stroke="currentColor" stroke-width="0" fill="currentColor"/></svg>
+        Follow on Instagram
+      </a></div>
     </div>
   </div>
 </section>
