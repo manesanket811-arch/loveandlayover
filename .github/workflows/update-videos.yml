@@ -79,7 +79,7 @@ jobs:
             if (title.toLowerCase().includes('guide')) keywords.push('travel guide');
 
             // Return unique keywords, max 6
-            return [...new Set([...keywords, 'travel', 'adventure'])].slice(0, 6);
+            return [...new Set([...keywords, 'adventure'])].slice(0, 6);
           }
 
           async function updateVideos() {
