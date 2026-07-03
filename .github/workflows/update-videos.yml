@@ -22,7 +22,7 @@ jobs:
 
       - name: Fetch YouTube Videos
         run: |
-          cat > fetch-videos.js << 'EOF'
+          cat > fetch-videos.cjs << 'EOF'
           const https = require('https');
           const fs = require('fs');
           const xml2js = require('xml2js');
@@ -98,7 +98,7 @@ jobs:
           updateVideos();
           EOF
 
-          node fetch-videos.js
+          node fetch-videos.cjs
 
       - name: Commit and push changes
         run: |
