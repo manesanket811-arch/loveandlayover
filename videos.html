@@ -363,7 +363,7 @@
   .burger span{width:26px;height:3px;background:var(--ink);border-radius:3px;transition:.3s}
 
   /* HERO */
-  .hero{padding:30px 0;background:#fefaf5;border-bottom:1px solid rgba(26,35,50,.08)}
+  .hero{padding:90px 0 30px;background:#fefaf5;border-bottom:1px solid rgba(26,35,50,.08)}
   .hero .wrap{display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}
   .hero-content{flex:1;min-width:280px}
   .hero h1{font-size:2rem;margin-bottom:8px;color:var(--ink)}
@@ -411,6 +411,9 @@
   .cta-buttons a{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:#fff;color:var(--accent);text-decoration:none;border-radius:8px;font-weight:600;font-size:1rem;transition:.3s;border:2px solid transparent}
   .cta-buttons a:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2)}
 
+  /* INSTAGRAM SECTION */
+  .elfsight-app-2a41819a-389a-483c-8aad-f0b729f4b159{max-height:500px;overflow:hidden!important}
+
   /* FOOTER */
   footer{background:var(--ink);color:#9fb0b5;padding:50px 0 30px}
   .footer-links{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:30px}
@@ -423,14 +426,14 @@
   }
   @media(max-width:768px){
     .video-grid{grid-template-columns:repeat(2,1fr);gap:16px}
-    .hero{padding:24px 0;flex-direction:column;text-align:center}
+    .hero{padding:80px 0 24px;flex-direction:column;text-align:center}
     .hero-content{flex:1}
     .hero h1{font-size:1.6rem}
     .section-header h2{font-size:1.6rem}
   }
   @media(max-width:560px){
     .video-grid{grid-template-columns:1fr;gap:14px}
-    .hero{padding:18px 0}
+    .hero{padding:80px 0 18px}
     .hero h1{font-size:1.4rem}
     .subscribe-btn{font-size:.9rem;padding:12px 24px}
     .cta-buttons{flex-direction:column}
@@ -530,7 +533,7 @@
               card.target = '_blank';
               card.rel = 'noopener';
               card.className = 'vcard';
-              const keywordsTags = video.keywords ? video.keywords.map(kw =>
+              const keywordsTags = video.keywords ? video.keywords.filter(kw => kw.toLowerCase() !== 'travel').map(kw =>
                 `<span class="video-tag">${kw}</span>`
               ).join('') : '';
 
