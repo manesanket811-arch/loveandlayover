@@ -486,6 +486,7 @@
 
             if (!xmlText) {
               throw new Error('All CORS proxies failed. ' + (lastError?.message || ''));
+            }
 
             // Parse XML
             const parser = new DOMParser();
