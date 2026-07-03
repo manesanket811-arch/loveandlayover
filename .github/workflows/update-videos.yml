@@ -40,6 +40,20 @@ jobs:
             });
           }
 
+          function determineSeries(title) {
+            const lowerTitle = title.toLowerCase();
+            if (lowerTitle.includes('guide')) return 'Destination Guide';
+            if (lowerTitle.includes('food')) return 'Food Tour';
+            if (lowerTitle.includes('short')) return 'Travel Shorts';
+            if (lowerTitle.includes('vlog')) return 'Travel Vlog';
+            if (lowerTitle.includes('itinerary')) return 'Itinerary';
+            if (lowerTitle.includes('day')) return 'Day Trip';
+            if (lowerTitle.includes('budget')) return 'Budget Travel';
+            if (lowerTitle.includes('adventure')) return 'Adventure';
+            if (lowerTitle.includes('culture') || lowerTitle.includes('local')) return 'Local Culture';
+            return 'Travel';
+          }
+
           function extractKeywords(title) {
             // Common travel-related keywords
             const travelKeywords = [
@@ -128,18 +142,32 @@ jobs:
                 const publishedMatch = entry.match(/<published>([^<]+)<\/published>/);
                 const publishedDate = publishedMatch ? publishedMatch[1] : new Date().toISOString();
 
-                console.log(`Found video ${count + 1}: ${title} (${videoId}) - Published: ${publishedDate}`);
+                // Extract description
+                const descriptionMatch = entry.match(/<summary[^>]*>([^<]+)<\/summary>/);
+                const description = descriptionMatch ? descriptionMatch[1].trim().substring(0, 150) : '';
+
+                // Estimate video duration from title (shorts = <60s, others = longer)
+                const isShort = title.toLowerCase().includes('short') || title.length < 30;
+                const duration = isShort ? '< 1 min' : '5-15 min';
+
+                // Determine series/category from title
+                const series = determineSeries(title);
 
                 // Extract keywords from title
                 const keywords = extractKeywords(title);
+
+                console.log(`Found video ${count + 1}: ${title} (${videoId}) - Series: ${series} - Duration: ${duration}`);
 
                 videos.push({
                   id: videoId,
                   title: title,
                   category: 'Travel',
-                  type: 'Latest',
+                  type: series,
                   published: publishedDate,
-                  keywords: keywords
+                  description: description,
+                  duration: duration,
+                  keywords: keywords,
+                  series: series
                 });
 
                 count++;

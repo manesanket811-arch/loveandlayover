@@ -382,8 +382,15 @@
   .play-btn{width:60px;height:60px;background:rgba(255,255,255,.95);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:.3s;z-index:2}
   .vcard:hover .play-btn{transform:scale(1.1);background:#fff}
   .vmeta{padding:24px}
-  .vmeta h3{font-size:1.2rem;margin-bottom:8px;color:var(--ink)}
+  .vmeta h3{font-size:1.2rem;margin-bottom:8px;color:var(--ink);margin:8px 0}
   .vmeta .info{font-size:.85rem;color:#6a777c;margin-bottom:12px}
+  .video-duration{position:absolute;bottom:12px;right:12px;background:rgba(0,0,0,.8);color:#fff;padding:6px 10px;border-radius:4px;font-size:.8rem;font-weight:600}
+  .video-series{display:inline-block;background:#b85623;color:#fff;padding:4px 12px;border-radius:4px;font-size:.75rem;font-weight:600;margin-bottom:8px;text-transform:capitalize}
+  .video-description{font-size:.9rem;color:#555;margin:8px 0;line-height:1.4}
+  .video-actions{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+  .action-btn{display:inline-block;padding:8px 16px;border-radius:6px;font-size:.9rem;font-weight:600;text-decoration:none;border:none;cursor:pointer;transition:.2s;background:#f0f0f0;color:#333}
+  .action-btn:hover{background:#b85623;color:#fff;transform:translateY(-2px)}
+  .share-btn{padding:8px 14px}
   .keywords-container{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
   .video-tag{display:inline-block;background:#f0f0f0;color:#666;padding:4px 10px;border-radius:16px;font-size:.75rem;font-weight:500;text-transform:capitalize;border:1px solid #e0e0e0;transition:.2s}
   .video-tag:hover{background:#b85623;color:#fff;border-color:#b85623}
@@ -449,6 +456,13 @@
       <p style="font-size:1.05rem; color:#3a474e; max-width:600px; margin:0 auto;">New episodes every trip. Watch first, then steal our exact routes below.</p>
     </div>
 
+    <!-- YouTube Subscribe Banner -->
+    <div style="background:linear-gradient(135deg,#ff6b35,#f7931e);padding:30px 24px;border-radius:12px;margin-bottom:50px;text-align:center;color:#fff">
+      <h2 style="margin:0 0 12px 0;font-size:1.5rem;font-weight:900">Subscribe to our Channel</h2>
+      <p style="margin:0 0 20px 0;font-size:1.05rem;opacity:.95">Get notified for new travel videos, guides, and adventure stories every week!</p>
+      <a href="https://www.youtube.com/@LoveAndLayover?sub_confirmation=1" target="_blank" rel="noopener" style="display:inline-block;background:#fff;color:#ff6b35;padding:14px 40px;border-radius:50px;font-weight:700;font-size:1.1rem;text-decoration:none;transition:.3s">🔔 Subscribe Now</a>
+    </div>
+
     <!-- YouTube Videos -->
     <div style="margin-bottom:50px;">
       <h3 style="margin:0 0 24px 0; color:var(--ink); font-size:1.3rem;">Latest on YouTube</h3>
@@ -456,6 +470,23 @@
         <!-- Videos loaded dynamically from videos-data.json -->
       </div>
       <script>
+        // Share video function
+        function shareVideo(title, url) {
+          if (navigator.share) {
+            navigator.share({
+              title: title,
+              text: 'Check out this travel video from Love and Layovers!',
+              url: url
+            }).catch(err => console.log('Error sharing:', err));
+          } else {
+            // Fallback: copy to clipboard
+            const fullUrl = 'https://www.youtube.com/watch?v=' + url.split('v=')[1];
+            navigator.clipboard.writeText(fullUrl).then(() => {
+              alert('Video link copied to clipboard!');
+            });
+          }
+        }
+
         // Helper function to calculate relative time
         function getRelativeTime(dateString) {
           const now = new Date();
@@ -493,14 +524,25 @@
               const relativeTime = video.published ? getRelativeTime(video.published) : 'recently';
               const timeDisplay = relativeTime.charAt(0).toUpperCase() + relativeTime.slice(1);
 
+              // Create share URL
+              const shareUrl = `https://www.youtube.com/watch?v=${video.id}`;
+              const encodedShareUrl = encodeURIComponent(shareUrl);
+
               card.innerHTML = `
                 <div class="vthumb" style="background:url('https://img.youtube.com/vi/${video.id}/mqdefault.jpg') no-repeat center/cover;">
                   <div class="play-btn"><div style="width:0; height:0; border-left:18px solid #b85623; border-top:12px solid transparent; border-bottom:12px solid transparent; margin-left:4px;"></div></div>
+                  <div class="video-duration">${video.duration || '5-15 min'}</div>
                 </div>
                 <div class="vmeta">
+                  <div class="video-series">${video.series || video.category}</div>
                   <h3>${video.title}</h3>
-                  <div class="info">${video.category} · ${timeDisplay}</div>
+                  ${video.description ? `<p class="video-description">${video.description}...</p>` : ''}
+                  <div class="info">${timeDisplay}</div>
                   ${keywordsTags ? `<div class="keywords-container">${keywordsTags}</div>` : ''}
+                  <div class="video-actions">
+                    <a href="${shareUrl}" target="_blank" rel="noopener" class="action-btn">▶ Watch</a>
+                    <button class="action-btn share-btn" onclick="shareVideo('${video.title}', '${encodedShareUrl}')">📤 Share</button>
+                  </div>
                 </div>
               `;
               grid.appendChild(card);
