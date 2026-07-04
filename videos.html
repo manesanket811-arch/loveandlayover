@@ -156,10 +156,13 @@
       Destination guides, food tours, and travel tips. Subscribe for new videos every week.
     </p>
 
-    <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
-      <script type="module">
-        import { LiteYTEmbed } from 'https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/+esm';
+    <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));" id="videosGrid">
+      <!-- Videos loaded by JavaScript below -->
+    </div>
 
+    <script>
+      // Ensure lite-youtube is loaded first
+      const loadVideos = () => {
         const videos = [
           {id: '1h-4pUZcaF4', title: 'Singapore in 5 Days', desc: 'Marina Bay, food markets, temples'},
           {id: '3ZuyHb8lAYg', title: 'Japan 5-Day Itinerary', desc: 'Tokyo, Kyoto, Mount Fuji'},
@@ -169,7 +172,7 @@
           {id: 'jNQXAC9IVRw', title: 'India Travel Guide', desc: 'Taj Mahal, temples, street food'}
         ];
 
-        const grid = document.currentScript.closest('.card-grid') || document.querySelector('.card-grid');
+        const grid = document.getElementById('videosGrid');
 
         videos.forEach(video => {
           const card = document.createElement('div');
@@ -186,8 +189,15 @@
           `;
           grid.appendChild(card);
         });
-      </script>
-    </div>
+      };
+
+      // Load videos when DOM is ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', loadVideos);
+      } else {
+        loadVideos();
+      }
+    </script>
 
     <div style="text-align: center; margin-top: 40px;">
       <a href="https://www.youtube.com/@loveandlayover" class="btn btn--secondary">View all videos on YouTube →</a>
