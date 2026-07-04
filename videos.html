@@ -156,8 +156,37 @@
       Destination guides, food tours, and travel tips. Subscribe for new videos every week.
     </p>
 
-    <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));" id="videosGrid">
-      <div style="grid-column: 1/-1; text-align: center; padding: 40px;">Loading latest videos...</div>
+    <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+      <script type="module">
+        import { LiteYTEmbed } from 'https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/+esm';
+
+        const videos = [
+          {id: '1h-4pUZcaF4', title: 'Singapore in 5 Days', desc: 'Marina Bay, food markets, temples'},
+          {id: '3ZuyHb8lAYg', title: 'Japan 5-Day Itinerary', desc: 'Tokyo, Kyoto, Mount Fuji'},
+          {id: 'dQw4w9WgXcQ', title: 'Thailand Food Tour', desc: 'Pad thai, street food, Bangkok'},
+          {id: 'aqz-KE-bpKQ', title: 'Vietnam Guide', desc: 'Ha Long Bay, Hanoi, Saigon'},
+          {id: '2Vv-a_3VC_s', title: 'Budget Travel Hacks', desc: 'Save money on flights and hotels'},
+          {id: 'jNQXAC9IVRw', title: 'India Travel Guide', desc: 'Taj Mahal, temples, street food'}
+        ];
+
+        const grid = document.currentScript.closest('.card-grid') || document.querySelector('.card-grid');
+
+        videos.forEach(video => {
+          const card = document.createElement('div');
+          card.className = 'card card--video';
+          card.innerHTML = `
+            <div class="card--video-thumb" style="position: relative;">
+              <lite-youtube videoid="${video.id}" style="width: 100%; height: 360px; border-radius: 12px;"></lite-youtube>
+            </div>
+            <div class="card--video-info">
+              <h3>${video.title}</h3>
+              <p style="font-size: 0.9rem; color: var(--ink-soft); margin: 0.5rem 0;">${video.desc}</p>
+              <a href="https://www.youtube.com/watch?v=${video.id}" class="btn btn--yt" style="width: 100%; text-align: center; font-size: 0.9rem; margin-top: 12px;">Watch →</a>
+            </div>
+          `;
+          grid.appendChild(card);
+        });
+      </script>
     </div>
 
     <div style="text-align: center; margin-top: 40px;">
@@ -165,62 +194,6 @@
     </div>
   </div>
 </section>
-
-<script>
-async function loadYouTubeVideos() {
-  const channelId = 'UCK5Yggt-4QTHf5sZxJ_0Jzg'; // Love and Layovers channel ID
-  const grid = document.getElementById('videosGrid');
-
-  try {
-    // Fetch RSS feed using noxios.js or direct API
-    const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
-    const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(rssUrl)}`);
-    const data = await response.json();
-    const parser = new DOMParser();
-    const xmlDoc = parser.parseFromString(data.contents, 'text/xml');
-    const entries = xmlDoc.querySelectorAll('entry');
-
-    if (entries.length === 0) throw new Error('No videos found');
-
-    let html = '';
-    entries.slice(0, 6).forEach(entry => {
-      const title = entry.querySelector('title').textContent;
-      const link = entry.querySelector('link').getAttribute('href');
-      const videoId = link.match(/v=([a-zA-Z0-9_-]{11})/)?.[1] || link.match(/youtu\.be\/([a-zA-Z0-9_-]{11})/)?.[1];
-      const description = entry.querySelector('summary')?.textContent || 'Watch our latest travel video';
-      const published = new Date(entry.querySelector('published').textContent);
-
-      if (videoId) {
-        html += `
-          <div class="card card--video">
-            <div class="card--video-thumb">
-              <img
-                src="https://img.youtube.com/vi/${videoId}/sddefault.jpg"
-                alt="${title}"
-                width="640"
-                height="360"
-                loading="lazy">
-              <div class="card--video-play">▶</div>
-            </div>
-            <div class="card--video-info">
-              <h3>${title}</h3>
-              <p style="font-size: 0.9rem; color: var(--ink-soft); margin: 0.5rem 0;">${description.substring(0, 80)}${description.length > 80 ? '...' : ''}</p>
-              <a href="https://www.youtube.com/watch?v=${videoId}" class="btn btn--yt" style="width: 100%; text-align: center; font-size: 0.9rem; margin-top: 12px;">Watch →</a>
-            </div>
-          </div>
-        `;
-      }
-    });
-
-    grid.innerHTML = html || '<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--ink-soft);">Unable to load videos. <a href="https://www.youtube.com/@loveandlayover">Visit YouTube channel</a></div>';
-  } catch (error) {
-    console.error('Error loading videos:', error);
-    grid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--ink-soft);">Unable to load videos. <a href="https://www.youtube.com/@loveandlayover">Visit YouTube channel</a></div>';
-  }
-}
-
-loadYouTubeVideos();
-</script>
 
 <!-- YouTube Subscribe CTA -->
 <section class="section section--alt">
