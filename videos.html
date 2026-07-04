@@ -156,120 +156,8 @@
       Destination guides, food tours, and travel tips. Subscribe for new videos every week.
     </p>
 
-    <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
-      <!-- Video Card 1 -->
-      <div class="card card--video">
-        <div class="card--video-thumb">
-          <img
-            src="https://img.youtube.com/vi/1h-4pUZcaF4/sddefault.jpg"
-            alt="Singapore in 5 days"
-            width="640"
-            height="360"
-            loading="lazy">
-          <div class="card--video-play">▶</div>
-          <span class="card--video-duration">18:42</span>
-        </div>
-        <div class="card--video-info">
-          <h3>Singapore in 5 Days</h3>
-          <p style="font-size: 0.9rem; color: var(--ink-soft); margin: 0.5rem 0;">Marina Bay, food markets, temples.</p>
-          <a href="https://www.youtube.com/watch?v=1h-4pUZcaF4" class="btn btn--yt" style="width: 100%; text-align: center; font-size: 0.9rem; margin-top: 12px;">Watch →</a>
-        </div>
-      </div>
-
-      <!-- Video Card 2 -->
-      <div class="card card--video">
-        <div class="card--video-thumb">
-          <img
-            src="https://img.youtube.com/vi/3ZuyHb8lAYg/sddefault.jpg"
-            alt="Japan destination guide"
-            width="640"
-            height="360"
-            loading="lazy">
-          <div class="card--video-play">▶</div>
-          <span class="card--video-duration">22:15</span>
-        </div>
-        <div class="card--video-info">
-          <h3>Japan 5-Day Itinerary</h3>
-          <p style="font-size: 0.9rem; color: var(--ink-soft); margin: 0.5rem 0;">Tokyo, Kyoto, Mount Fuji.</p>
-          <a href="https://www.youtube.com/@loveandlayover" class="btn btn--yt" style="width: 100%; text-align: center; font-size: 0.9rem; margin-top: 12px;">Watch →</a>
-        </div>
-      </div>
-
-      <!-- Video Card 3 -->
-      <div class="card card--video">
-        <div class="card--video-thumb">
-          <img
-            src="https://img.youtube.com/vi/3ZuyHb8lAYg/sddefault.jpg"
-            alt="Thailand guide"
-            width="640"
-            height="360"
-            loading="lazy">
-          <div class="card--video-play">▶</div>
-          <span class="card--video-duration">19:30</span>
-        </div>
-        <div class="card--video-info">
-          <h3>Thailand Food Tour</h3>
-          <p style="font-size: 0.9rem; color: var(--ink-soft); margin: 0.5rem 0;">Pad thai, street food, Bangkok.</p>
-          <a href="https://www.youtube.com/@loveandlayover" class="btn btn--yt" style="width: 100%; text-align: center; font-size: 0.9rem; margin-top: 12px;">Watch →</a>
-        </div>
-      </div>
-
-      <!-- Video Card 4 -->
-      <div class="card card--video">
-        <div class="card--video-thumb">
-          <img
-            src="https://img.youtube.com/vi/3ZuyHb8lAYg/sddefault.jpg"
-            alt="Vietnam travel"
-            width="640"
-            height="360"
-            loading="lazy">
-          <div class="card--video-play">▶</div>
-          <span class="card--video-duration">20:45</span>
-        </div>
-        <div class="card--video-info">
-          <h3>Vietnam Guide</h3>
-          <p style="font-size: 0.9rem; color: var(--ink-soft); margin: 0.5rem 0;">Ha Long Bay, Hanoi, Saigon.</p>
-          <a href="https://www.youtube.com/@loveandlayover" class="btn btn--yt" style="width: 100%; text-align: center; font-size: 0.9rem; margin-top: 12px;">Watch →</a>
-        </div>
-      </div>
-
-      <!-- Video Card 5 -->
-      <div class="card card--video">
-        <div class="card--video-thumb">
-          <img
-            src="https://img.youtube.com/vi/3ZuyHb8lAYg/sddefault.jpg"
-            alt="Budget travel tips"
-            width="640"
-            height="360"
-            loading="lazy">
-          <div class="card--video-play">▶</div>
-          <span class="card--video-duration">15:20</span>
-        </div>
-        <div class="card--video-info">
-          <h3>Budget Travel Hacks</h3>
-          <p style="font-size: 0.9rem; color: var(--ink-soft); margin: 0.5rem 0;">Save money on flights and hotels.</p>
-          <a href="https://www.youtube.com/@loveandlayover" class="btn btn--yt" style="width: 100%; text-align: center; font-size: 0.9rem; margin-top: 12px;">Watch →</a>
-        </div>
-      </div>
-
-      <!-- Video Card 6 -->
-      <div class="card card--video">
-        <div class="card--video-thumb">
-          <img
-            src="https://img.youtube.com/vi/3ZuyHb8lAYg/sddefault.jpg"
-            alt="Layover guide"
-            width="640"
-            height="360"
-            loading="lazy">
-          <div class="card--video-play">▶</div>
-          <span class="card--video-duration">12:10</span>
-        </div>
-        <div class="card--video-info">
-          <h3>6-Hour Layover Guide</h3>
-          <p style="font-size: 0.9rem; color: var(--ink-soft); margin: 0.5rem 0;">Make your stopover count.</p>
-          <a href="https://www.youtube.com/@loveandlayover" class="btn btn--yt" style="width: 100%; text-align: center; font-size: 0.9rem; margin-top: 12px;">Watch →</a>
-        </div>
-      </div>
+    <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));" id="videosGrid">
+      <div style="grid-column: 1/-1; text-align: center; padding: 40px;">Loading latest videos...</div>
     </div>
 
     <div style="text-align: center; margin-top: 40px;">
@@ -277,6 +165,62 @@
     </div>
   </div>
 </section>
+
+<script>
+async function loadYouTubeVideos() {
+  const channelId = 'UCK5Yggt-4QTHf5sZxJ_0Jzg'; // Love and Layovers channel ID
+  const grid = document.getElementById('videosGrid');
+
+  try {
+    // Fetch RSS feed using noxios.js or direct API
+    const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
+    const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(rssUrl)}`);
+    const data = await response.json();
+    const parser = new DOMParser();
+    const xmlDoc = parser.parseFromString(data.contents, 'text/xml');
+    const entries = xmlDoc.querySelectorAll('entry');
+
+    if (entries.length === 0) throw new Error('No videos found');
+
+    let html = '';
+    entries.slice(0, 6).forEach(entry => {
+      const title = entry.querySelector('title').textContent;
+      const link = entry.querySelector('link').getAttribute('href');
+      const videoId = link.match(/v=([a-zA-Z0-9_-]{11})/)?.[1] || link.match(/youtu\.be\/([a-zA-Z0-9_-]{11})/)?.[1];
+      const description = entry.querySelector('summary')?.textContent || 'Watch our latest travel video';
+      const published = new Date(entry.querySelector('published').textContent);
+
+      if (videoId) {
+        html += `
+          <div class="card card--video">
+            <div class="card--video-thumb">
+              <img
+                src="https://img.youtube.com/vi/${videoId}/sddefault.jpg"
+                alt="${title}"
+                width="640"
+                height="360"
+                loading="lazy">
+              <div class="card--video-play">▶</div>
+            </div>
+            <div class="card--video-info">
+              <h3>${title}</h3>
+              <p style="font-size: 0.9rem; color: var(--ink-soft); margin: 0.5rem 0;">${description.substring(0, 80)}${description.length > 80 ? '...' : ''}</p>
+              <a href="https://www.youtube.com/watch?v=${videoId}" class="btn btn--yt" style="width: 100%; text-align: center; font-size: 0.9rem; margin-top: 12px;">Watch →</a>
+            </div>
+          </div>
+        `;
+      }
+    });
+
+    grid.innerHTML = html || '<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--ink-soft);">Unable to load videos. <a href="https://www.youtube.com/@loveandlayover">Visit YouTube channel</a></div>';
+  } catch (error) {
+    console.error('Error loading videos:', error);
+    grid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--ink-soft);">Unable to load videos. <a href="https://www.youtube.com/@loveandlayover">Visit YouTube channel</a></div>';
+  }
+}
+
+loadYouTubeVideos();
+</script>
 
 <!-- YouTube Subscribe CTA -->
 <section class="section section--alt">
