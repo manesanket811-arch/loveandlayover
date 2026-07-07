@@ -9,11 +9,13 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Travel Videos — Love and Layovers">
 <meta property="og:description" content="Watch our travel vlogs and destination guides. New episodes every week.">
-<meta property="og:image" content="https://placeholder.com/1200x630?text=Love+and+Layovers">
+<meta property="og:image" content="https://loveandlayover-website-604218333793.s3.us-east-1.amazonaws.com/preview.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Travel Videos — Love and Layovers">
 <meta name="twitter:description" content="Watch our travel vlogs and destination guides. New episodes every week.">
-<meta name="twitter:image" content="https://placeholder.com/1200x630?text=Love+and+Layovers">
+<meta name="twitter:image" content="https://loveandlayover-website-604218333793.s3.us-east-1.amazonaws.com/preview.jpg">
+<meta property="og:url" content="https://www.loveandlayover.in/videos.html">
+<meta name="robots" content="index, follow">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
 <!-- Design System -->
@@ -30,7 +32,7 @@
   "name": "Love and Layovers Travel Videos",
   "url": "https://www.loveandlayover.in/videos.html",
   "description": "Authentic travel vlogs, destination guides, and food tours from Love and Layovers",
-  "image": "https://placeholder.com/1200x630?text=Love+and+Layovers",
+  "image": "https://loveandlayover-website-604218333793.s3.us-east-1.amazonaws.com/preview.jpg",
   "isPartOf": {
     "@type": "Organization",
     "name": "Love and Layovers",
@@ -247,6 +249,21 @@
             thumb.onclick = () => {
               window.open(`https://www.youtube.com/watch?v=${video.id}`, '_blank');
             };
+
+            // Add VideoObject JSON-LD schema
+            const ld = document.createElement('script');
+            ld.type = 'application/ld+json';
+            ld.textContent = JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "VideoObject",
+              "name": video.title,
+              "description": video.description || video.title,
+              "thumbnailUrl": `https://i.ytimg.com/vi/${video.id}/maxresdefault.jpg`,
+              "uploadDate": video.published,
+              "contentUrl": `https://www.youtube.com/watch?v=${video.id}`,
+              "embedUrl": `https://www.youtube.com/embed/${video.id}`
+            });
+            document.head.appendChild(ld);
           });
         } catch (error) {
           console.error('Error loading videos:', error);
