@@ -126,27 +126,61 @@
 <section class="section section--alt">
   <div class="wrap">
     <h2>Start here: Our best work</h2>
-    <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center;">
-      <div>
-        <script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.js"></script>
-        <div style="position: relative; border-radius: 14px; overflow: hidden; box-shadow: 0 8px 30px rgba(31,27,22,0.08);">
-          <lite-youtube videoid="1h-4pUZcaF4" playlabel="Singapore in 5 days — watch"></lite-youtube>
-        </div>
-      </div>
-      <div>
-        <h3>Singapore in 5 Days</h3>
-        <p style="font-size: 1.05rem; color: var(--ink-soft); line-height: 1.7; margin-bottom: 20px;">
-          Temple-hopping, food markets, Gardens by the Bay—what $95/day actually buys you in Singapore. This is the episode that showed us what our audience really wants.
-        </p>
-        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-          <span class="badge badge--sea">18:42</span>
-          <span class="badge badge--accent">Featured</span>
-        </div>
-        <a href="https://www.youtube.com/watch?v=1h-4pUZcaF4" class="btn btn--yt" style="margin-top: 20px; display: inline-block;">Watch Full Video →</a>
-      </div>
+    <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center;" id="featuredVideoContainer">
+      <div style="text-align: center; padding: 40px;">Loading latest video...</div>
     </div>
   </div>
 </section>
+
+<script>
+  const loadFeaturedVideo = async () => {
+    const container = document.getElementById('featuredVideoContainer');
+
+    try {
+      const response = await fetch('/videos-data.json');
+      if (!response.ok) throw new Error('Failed to load videos');
+
+      const videos = await response.json();
+      if (videos.length === 0) throw new Error('No videos found');
+
+      const latestVideo = videos[0]; // Most recent video
+      const publishDate = new Date(latestVideo.published).toLocaleDateString('en-US', {
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric'
+      });
+
+      container.innerHTML = `
+        <div>
+          <div style="position: relative; border-radius: 14px; overflow: hidden; box-shadow: 0 8px 30px rgba(31,27,22,0.08);">
+            <lite-youtube videoid="${latestVideo.id}" playlabel="${latestVideo.title} — watch"></lite-youtube>
+          </div>
+        </div>
+        <div>
+          <h3>${latestVideo.title}</h3>
+          <p style="font-size: 1.05rem; color: var(--ink-soft); line-height: 1.7; margin-bottom: 20px;">
+            ${latestVideo.description || 'Watch our latest travel video on the Love and Layovers channel.'}
+          </p>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <span class="badge badge--sea">${latestVideo.type}</span>
+            <span class="badge badge--accent">${publishDate}</span>
+          </div>
+          <a href="https://www.youtube.com/watch?v=${latestVideo.id}" class="btn btn--yt" style="margin-top: 20px; display: inline-block;">Watch Full Video →</a>
+        </div>
+      `;
+    } catch (error) {
+      console.error('Error loading featured video:', error);
+      container.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--ink-soft);"><p>Unable to load video.</p></div>';
+    }
+  };
+
+  // Load featured video when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadFeaturedVideo);
+  } else {
+    loadFeaturedVideo();
+  }
+</script>
 
 <!-- Latest Videos Grid -->
 <section class="section">
