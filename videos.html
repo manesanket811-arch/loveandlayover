@@ -223,12 +223,12 @@
               <div class="card--video-thumb" style="position: relative; flex-shrink: 0; max-height: 126px; overflow: hidden;">
                 <lite-youtube videoid="${video.id}" style="width: 100%; height: 126px;"></lite-youtube>
               </div>
-              <div class="card--video-info" style="padding: 6px 8px 2px 8px !important; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+              <div class="card--video-info" style="padding: 2px 4px 1px 4px !important; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
                 <div>
-                  <h3 style="font-size: 0.9rem; margin: 0 0 3px 0; line-height: 1.2;">${video.title}</h3>
-                  <p style="font-size: 0.75rem; color: var(--ink-soft); margin: 0;">${video.type} • ${publishDate}</p>
+                  <h3 style="font-size: 0.7rem; margin: 0 0 0px 0; line-height: 1.0; font-weight: 600;">${video.title}</h3>
+                  <p style="font-size: 0.6rem; color: var(--ink-soft); margin: 0px 0 0 0;">${video.type} • ${publishDate}</p>
                 </div>
-                <a href="https://www.youtube.com/watch?v=${video.id}" class="btn btn--yt" style="width: 100%; text-align: center; font-size: 0.8rem; margin-top: 2px; padding: 4px 8px;">Watch</a>
+                <a href="https://www.youtube.com/watch?v=${video.id}" class="btn btn--yt" style="width: 100%; text-align: center; font-size: 0.65rem; margin-top: 1px; padding: 2px 4px; min-height: auto; height: 20px; display: flex; align-items: center; justify-content: center;">Watch</a>
               </div>
             `;
             grid.appendChild(card);
