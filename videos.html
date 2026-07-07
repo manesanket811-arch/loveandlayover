@@ -157,38 +157,49 @@
     </p>
 
     <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));" id="videosGrid">
-      <!-- Videos loaded by JavaScript below -->
+      <div style="grid-column: 1/-1; text-align: center; padding: 40px;">Loading videos from your channel...</div>
     </div>
 
     <script>
-      // Ensure lite-youtube is loaded first
-      const loadVideos = () => {
-        const videos = [
-          {id: '1h-4pUZcaF4', title: 'Singapore in 5 Days', desc: 'Marina Bay, food markets, temples'},
-          {id: '3ZuyHb8lAYg', title: 'Japan 5-Day Itinerary', desc: 'Tokyo, Kyoto, Mount Fuji'},
-          {id: 'dQw4w9WgXcQ', title: 'Thailand Food Tour', desc: 'Pad thai, street food, Bangkok'},
-          {id: 'aqz-KE-bpKQ', title: 'Vietnam Guide', desc: 'Ha Long Bay, Hanoi, Saigon'},
-          {id: '2Vv-a_3VC_s', title: 'Budget Travel Hacks', desc: 'Save money on flights and hotels'},
-          {id: 'jNQXAC9IVRw', title: 'India Travel Guide', desc: 'Taj Mahal, temples, street food'}
-        ];
-
+      const loadVideos = async () => {
         const grid = document.getElementById('videosGrid');
 
-        videos.forEach(video => {
-          const card = document.createElement('div');
-          card.className = 'card card--video';
-          card.innerHTML = `
-            <div class="card--video-thumb" style="position: relative;">
-              <lite-youtube videoid="${video.id}" style="width: 100%; height: 360px; border-radius: 12px;"></lite-youtube>
-            </div>
-            <div class="card--video-info">
-              <h3>${video.title}</h3>
-              <p style="font-size: 0.9rem; color: var(--ink-soft); margin: 0.5rem 0;">${video.desc}</p>
-              <a href="https://www.youtube.com/watch?v=${video.id}" class="btn btn--yt" style="width: 100%; text-align: center; font-size: 0.9rem; margin-top: 12px;">Watch →</a>
-            </div>
-          `;
-          grid.appendChild(card);
-        });
+        try {
+          const response = await fetch('/videos-data.json');
+          if (!response.ok) throw new Error('Failed to load videos');
+
+          const videos = await response.json();
+
+          // Clear loading message
+          grid.innerHTML = '';
+
+          if (videos.length === 0) {
+            grid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--ink-soft);">No videos found.</div>';
+            return;
+          }
+
+          // Display up to 6 videos
+          videos.slice(0, 6).forEach(video => {
+            const card = document.createElement('div');
+            card.className = 'card card--video';
+            const publishDate = new Date(video.published).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+
+            card.innerHTML = `
+              <div class="card--video-thumb" style="position: relative;">
+                <lite-youtube videoid="${video.id}" style="width: 100%; height: 360px; border-radius: 12px;"></lite-youtube>
+              </div>
+              <div class="card--video-info">
+                <h3>${video.title}</h3>
+                <p style="font-size: 0.9rem; color: var(--ink-soft); margin: 0.5rem 0;">${video.type} • ${publishDate}</p>
+                <a href="https://www.youtube.com/watch?v=${video.id}" class="btn btn--yt" style="width: 100%; text-align: center; font-size: 0.9rem; margin-top: 12px;">Watch →</a>
+              </div>
+            `;
+            grid.appendChild(card);
+          });
+        } catch (error) {
+          console.error('Error loading videos:', error);
+          grid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--ink-soft);"><p>Unable to load videos.</p><p style="font-size: 0.9rem; margin-top: 12px;"><a href="https://www.youtube.com/@loveandlayover">Visit YouTube channel →</a></p></div>';
+        }
       };
 
       // Load videos when DOM is ready
