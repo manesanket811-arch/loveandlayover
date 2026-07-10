@@ -214,58 +214,7 @@
       <p style="font-size: 1.05rem; color: var(--ink-soft); max-width: 600px; margin: 0 auto;">Trusted by leading travel and lifestyle brands for authentic content, engagement, and community building.</p>
     </div>
 
-    <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto;">
-
-      <!-- Brand Card Template - Edit these with your brand logos and names -->
-      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 30px; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(31,27,22,0.08); transition: all 0.3s;">
-        <div style="width: 100px; height: 80px; background: var(--sand); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; font-size: 0.9rem; color: var(--ink-soft); font-weight: 600;">
-          Brand Logo
-        </div>
-        <h3 style="font-size: 1.1rem; margin: 0 0 8px 0; text-align: center;">Brand Name</h3>
-        <p style="font-size: 0.9rem; color: var(--ink-soft); text-align: center; margin: 0;">Collaboration type or achievement</p>
-      </div>
-
-      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 30px; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(31,27,22,0.08); transition: all 0.3s;">
-        <div style="width: 100px; height: 80px; background: var(--sand); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; font-size: 0.9rem; color: var(--ink-soft); font-weight: 600;">
-          Brand Logo
-        </div>
-        <h3 style="font-size: 1.1rem; margin: 0 0 8px 0; text-align: center;">Brand Name</h3>
-        <p style="font-size: 0.9rem; color: var(--ink-soft); text-align: center; margin: 0;">Collaboration type or achievement</p>
-      </div>
-
-      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 30px; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(31,27,22,0.08); transition: all 0.3s;">
-        <div style="width: 100px; height: 80px; background: var(--sand); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; font-size: 0.9rem; color: var(--ink-soft); font-weight: 600;">
-          Brand Logo
-        </div>
-        <h3 style="font-size: 1.1rem; margin: 0 0 8px 0; text-align: center;">Brand Name</h3>
-        <p style="font-size: 0.9rem; color: var(--ink-soft); text-align: center; margin: 0;">Collaboration type or achievement</p>
-      </div>
-
-      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 30px; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(31,27,22,0.08); transition: all 0.3s;">
-        <div style="width: 100px; height: 80px; background: var(--sand); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; font-size: 0.9rem; color: var(--ink-soft); font-weight: 600;">
-          Brand Logo
-        </div>
-        <h3 style="font-size: 1.1rem; margin: 0 0 8px 0; text-align: center;">Brand Name</h3>
-        <p style="font-size: 0.9rem; color: var(--ink-soft); text-align: center; margin: 0;">Collaboration type or achievement</p>
-      </div>
-
-      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 30px; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(31,27,22,0.08); transition: all 0.3s;">
-        <div style="width: 100px; height: 80px; background: var(--sand); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; font-size: 0.9rem; color: var(--ink-soft); font-weight: 600;">
-          Brand Logo
-        </div>
-        <h3 style="font-size: 1.1rem; margin: 0 0 8px 0; text-align: center;">Brand Name</h3>
-        <p style="font-size: 0.9rem; color: var(--ink-soft); text-align: center; margin: 0;">Collaboration type or achievement</p>
-      </div>
-
-      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 30px; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(31,27,22,0.08); transition: all 0.3s;">
-        <div style="width: 100px; height: 80px; background: var(--sand); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; font-size: 0.9rem; color: var(--ink-soft); font-weight: 600;">
-          Brand Logo
-        </div>
-        <h3 style="font-size: 1.1rem; margin: 0 0 8px 0; text-align: center;">Brand Name</h3>
-        <p style="font-size: 0.9rem; color: var(--ink-soft); text-align: center; margin: 0;">Collaboration type or achievement</p>
-      </div>
-
-    </div>
+    <div id="brandsContainer" class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto;"></div>
 
     <div style="text-align: center; margin-top: 50px;">
       <p style="font-size: 1rem; color: var(--ink-soft); margin-bottom: 20px;">Want to collaborate with Love and Layovers?</p>
@@ -273,6 +222,47 @@
     </div>
   </div>
 </section>
+
+<script>
+const collaborations = [
+  {
+    brand: "Scentopia",
+    logo: "/assets/brands/scentopia-logo.png",
+    description: "Behind-the-scenes fragrance museum experience, featured across Instagram and YouTube.",
+    link: null
+  },
+  {
+    brand: "Imagica",
+    logo: "/assets/brands/imagica-logo.png",
+    description: "Full-day theme park collaboration and content recap.",
+    link: null
+  }
+];
+
+const brandsContainer = document.getElementById('brandsContainer');
+if (brandsContainer) {
+  collaborations.forEach(collab => {
+    const card = document.createElement('div');
+    const isLinked = collab.link ? true : false;
+    const cardContent = `
+      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 30px; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(31,27,22,0.08); transition: all 0.3s; height: 100%;">
+        <div style="width: 100px; height: 80px; background: var(--sand); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; overflow: hidden;">
+          <img src="${collab.logo}" alt="${collab.brand} — Love and Layovers collaboration" style="max-width: 90%; max-height: 90%; object-fit: contain;">
+        </div>
+        <h3 style="font-size: 1.1rem; margin: 0 0 8px 0; text-align: center;">${collab.brand}</h3>
+        <p style="font-size: 0.9rem; color: var(--ink-soft); text-align: center; margin: 0;">${collab.description}</p>
+      </div>
+    `;
+
+    if (isLinked) {
+      card.innerHTML = `<a href="${collab.link}" style="text-decoration: none; color: inherit; display: block; height: 100%;">${cardContent}</a>`;
+    } else {
+      card.innerHTML = cardContent;
+    }
+    brandsContainer.appendChild(card);
+  });
+}
+</script>
 
 </main>
 
