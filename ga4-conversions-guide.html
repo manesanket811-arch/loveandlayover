@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -54,7 +54,7 @@ main { padding-top:60px; }
 .code-block { background:#1a2332; color:#fff; padding:16px; border-radius:8px; overflow-x:auto; font-family:'Courier New',monospace; font-size:.9rem; margin:16px 0; word-break:break-all; }
 .checklist { background:#fff; padding:20px; border-radius:8px; border:2px solid var(--sky); margin:20px 0; }
 .checklist li { padding:8px 0; padding-left:28px; position:relative; list-style:none; }
-.checklist li:before { content:'☐'; position:absolute; left:0; color:var(--accent); font-weight:900; font-size:1.2rem; }
+.checklist li:before { content:'â˜'; position:absolute; left:0; color:var(--accent); font-weight:900; font-size:1.2rem; }
 .important { background:linear-gradient(135deg,rgba(255,107,53,.08),rgba(247,147,30,.08)); padding:20px; border-radius:8px; border-left:4px solid var(--secondary); margin:20px 0; }
 .important strong { color:var(--secondary); }
 .success-box { background:linear-gradient(135deg,rgba(15,182,168,.08),rgba(13,79,107,.08)); padding:20px; border-radius:8px; border-left:4px solid var(--teal); margin:20px 0; }
@@ -155,7 +155,7 @@ footer a { color:var(--secondary); text-decoration:none; }
 
 <div class="step-box">
 <h3><span class="step-num">1</span>Access GA4 Admin Settings</h3>
-<p>Go to <a href="https://analytics.google.com" target="_blank">Google Analytics</a> → Select your "Love and Layovers" property → Admin (bottom left) → Conversions</p>
+<p>Go to <a href="https://analytics.google.com" target="_blank">Google Analytics</a> â†’ Select your "Love and Layovers" property â†’ Admin (bottom left) â†’ Conversions</p>
 </div>
 
 <div class="step-box">
@@ -186,14 +186,14 @@ footer a { color:var(--secondary); text-decoration:none; }
 </div>
 
 <div class="success-box">
-<strong>✓ All conversions created:</strong> You now have 3 primary conversion events. In GA4, go to Reports → Conversions to monitor these events over time.
+<strong>âœ“ All conversions created:</strong> You now have 3 primary conversion events. In GA4, go to Reports â†’ Conversions to monitor these events over time.
 </div>
 </section>
 
 <section class="section">
 <h2>Step 2: Add Event Tracking Code to Website</h2>
 <div class="important">
-<strong>⚠️ Code Implementation:</strong> The code snippets below fire GA4 events when users submit forms. These need to be added to the website HTML files and deployed.
+<strong>âš ï¸ Code Implementation:</strong> The code snippets below fire GA4 events when users submit forms. These need to be added to the website HTML files and deployed.
 </div>
 
 <div class="step-box">
@@ -239,7 +239,7 @@ footer a { color:var(--secondary); text-decoration:none; }
 <h2>Step 3: Set Up Conversion Attribution</h2>
 <div class="step-box">
 <h3><span class="step-num">8</span>View Conversion Source</h3>
-<p>After deploying event tracking, go to GA4 → Reports → Conversions</p>
+<p>After deploying event tracking, go to GA4 â†’ Reports â†’ Conversions</p>
 <p style="margin-top:12px;">You'll see:</p>
 <ul style="margin-left:20px; margin-top:12px; color:#3a474e;">
 <li><strong>Total conversions:</strong> Sum of all events</li>
@@ -251,7 +251,7 @@ footer a { color:var(--secondary); text-decoration:none; }
 
 <div class="step-box">
 <h3><span class="step-num">9</span>Analyze Conversion Paths</h3>
-<p>Go to Reports → Exploration → Create new exploration</p>
+<p>Go to Reports â†’ Exploration â†’ Create new exploration</p>
 <p style="margin-top:12px;">Set up a path analysis:</p>
 <ul style="margin-left:20px; margin-top:12px; color:#3a474e;">
 <li><strong>Rows:</strong> Page path</li>
@@ -259,7 +259,7 @@ footer a { color:var(--secondary); text-decoration:none; }
 <li><strong>Filter:</strong> Only sessions with a newsletter_signup conversion</li>
 </ul>
 <p style="margin-top:12px;">This shows which pages users visited before signing up for the newsletter. Example:</p>
-<p style="margin-top:12px; color:#6a777c; font-size:.95rem;">Homepage → Blog → Newsletter page → Newsletter signup</p>
+<p style="margin-top:12px; color:#6a777c; font-size:.95rem;">Homepage â†’ Blog â†’ Newsletter page â†’ Newsletter signup</p>
 </div>
 </section>
 
@@ -267,7 +267,7 @@ footer a { color:var(--secondary); text-decoration:none; }
 <h2>Step 4: Create Monitoring Dashboard</h2>
 <div class="step-box">
 <h3><span class="step-num">10</span>Build Custom Dashboard</h3>
-<p>In GA4, go to Reports → Library → Create new report</p>
+<p>In GA4, go to Reports â†’ Library â†’ Create new report</p>
 <p style="margin-top:12px;"><strong>Add these cards to your dashboard:</strong></p>
 
 <table>
@@ -306,7 +306,7 @@ footer a { color:var(--secondary); text-decoration:none; }
 </tr>
 <tr>
 <td>Newsletter Conversion Rate</td>
-<td>Newsletter signups / Sessions × 100</td>
+<td>Newsletter signups / Sessions Ã— 100</td>
 <td>Date</td>
 <td>Daily</td>
 </tr>
@@ -349,7 +349,7 @@ footer a { color:var(--secondary); text-decoration:none; }
 <p><strong>Diagnosis:</strong> Event tracking code may not be firing. Check browser console for errors.</p>
 <p><strong>Solution:</strong></p>
 <ol style="margin-left:20px; margin-top:12px; color:#3a474e;">
-<li>Open browser DevTools (F12) → Console tab</li>
+<li>Open browser DevTools (F12) â†’ Console tab</li>
 <li>Submit a test form (newsletter or contact)</li>
 <li>Look for errors related to gtag or missing functions</li>
 <li>Verify gtag is properly initialized in page head</li>
@@ -366,7 +366,7 @@ footer a { color:var(--secondary); text-decoration:none; }
 <div class="step-box">
 <h4>Issue: Can't see breakdown by traffic source</h4>
 <p><strong>Diagnosis:</strong> Conversion report may not have the right dimensions.</p>
-<p><strong>Solution:</strong> In GA4 Conversions report, click the pencil icon → add "Source / medium" dimension to see which channels drive conversions.</p>
+<p><strong>Solution:</strong> In GA4 Conversions report, click the pencil icon â†’ add "Source / medium" dimension to see which channels drive conversions.</p>
 </div>
 
 </section>
@@ -390,7 +390,7 @@ footer a { color:var(--secondary); text-decoration:none; }
 <p style="margin-top:20px;"><strong>Ongoing (Monthly Review):</strong></p>
 <ul style="margin-left:20px; margin-top:12px; color:#3a474e;">
 <li>Check conversion rate trends every Monday</li>
-<li>Identify pages with high traffic but low conversion → optimize</li>
+<li>Identify pages with high traffic but low conversion â†’ optimize</li>
 <li>Review Google Search Console for new high-performing queries</li>
 <li>Update content based on user behavior (which pages engage most)</li>
 <li>A/B test newsletter signup placement for better conversion rate</li>
@@ -425,7 +425,7 @@ footer a { color:var(--secondary); text-decoration:none; }
 <div class="foot">
 <a href="/" class="logo"><span class="dot"></span>Love and Layovers</a>
 <div class="foot-links">
-<a href="/about.html">About</a>
+<a href="/about.html">About Me</a>
 <a href="/faq.html">FAQ</a>
 <a href="/blog.html">Blog</a>
 <a href="/destinations/">Destinations</a>
@@ -433,9 +433,10 @@ footer a { color:var(--secondary); text-decoration:none; }
 </div>
 </div>
 <div class="copy">
-<p>© 2026 Love and Layovers. All rights reserved. Free travel guides for Indian passport holders.</p>
+<p>Â© 2026 Love and Layovers. All rights reserved. Free travel guides for Indian passport holders.</p>
 </div>
 </div>
 </footer>
 </body>
 </html>
+
