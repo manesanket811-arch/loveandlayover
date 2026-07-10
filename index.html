@@ -120,37 +120,39 @@
 <!-- YouTube & Instagram Section -->
 <section class="section section--alt">
   <div class="wrap">
-    <div style="display: grid; grid-template-columns: 1fr 1.5fr 1fr; gap: 40px; align-items: start;">
-      <!-- YouTube Subscribe Column -->
-      <div>
-        <h2 style="font-size: 1.4rem;">Subscribe on YouTube</h2>
-        <a href="https://www.youtube.com/@loveandlayover?sub_confirmation=1" class="btn btn--yt" style="font-size: 1rem; padding: 12px 24px;">
-          Subscribe to Channel
-        </a>
-      </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
+      <!-- YouTube Column -->
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        <div>
+          <h2 style="font-size: 1.4rem;">Subscribe on YouTube</h2>
+          <a href="https://www.youtube.com/@loveandlayover?sub_confirmation=1" class="btn btn--yt" style="font-size: 1rem; padding: 12px 24px;">
+            Subscribe to Channel
+          </a>
+        </div>
 
-      <!-- Latest Video Column -->
-      <div style="display: grid; grid-template-columns: 1fr; gap: 16px;" id="latestVideoContainer">
-        <div class="card card--video">
-          <div class="card--video-thumb">
-            <img
-              id="latestVideoThumb"
-              src="https://img.youtube.com/vi/H82FkJ-0Dp8/sddefault.jpg"
-              alt="Latest video"
-              width="640"
-              height="360"
-              loading="lazy"
-              onerror="this.src='https://img.youtube.com/vi/H82FkJ-0Dp8/hqdefault.jpg'">
-            <div class="card--video-play"></div>
-          </div>
-          <div class="card--video-info">
-            <h3 id="latestVideoTitle">First Collaboration Vlog</h3>
-            <a id="latestVideoLink" href="https://www.youtube.com/watch?v=H82FkJ-0Dp8" class="btn btn--yt" style="width: 100%; text-align: center; font-size: 0.9rem; margin-top: 12px;">Watch</a>
+        <!-- Latest Video -->
+        <div style="display: grid; grid-template-columns: 1fr; gap: 16px;" id="latestVideoContainer">
+          <div class="card card--video">
+            <div class="card--video-thumb">
+              <img
+                id="latestVideoThumb"
+                src="https://img.youtube.com/vi/H82FkJ-0Dp8/sddefault.jpg"
+                alt="Latest video"
+                width="640"
+                height="360"
+                loading="lazy"
+                onerror="this.src='https://img.youtube.com/vi/H82FkJ-0Dp8/hqdefault.jpg'">
+              <div class="card--video-play"></div>
+            </div>
+            <div class="card--video-info">
+              <h3 id="latestVideoTitle">First Collaboration Vlog</h3>
+              <a id="latestVideoLink" href="https://www.youtube.com/watch?v=H82FkJ-0Dp8" class="btn btn--yt" style="width: 100%; text-align: center; font-size: 0.9rem; margin-top: 12px;">Watch</a>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Instagram Follow Column -->
+      <!-- Instagram Column -->
       <div style="display: flex; flex-direction: column; gap: 12px;">
         <h2 style="font-size: 1.4rem;">Follow on Instagram</h2>
         <a href="https://www.instagram.com/loveandlayover" class="btn btn--primary" style="font-size: 1rem; padding: 12px 24px;" target="_blank" rel="noopener noreferrer">
