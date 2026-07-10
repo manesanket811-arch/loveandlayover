@@ -132,43 +132,43 @@
           <div class="card--video-thumb">
             <img
               id="latestVideoThumb"
-              src="https://img.youtube.com/vi/1h-4pUZcaF4/sddefault.jpg"
+              src="https://img.youtube.com/vi/H82FkJ-0Dp8/sddefault.jpg"
               alt="Latest video"
               width="640"
               height="360"
-              loading="lazy">
+              loading="lazy"
+              onerror="this.src='https://img.youtube.com/vi/H82FkJ-0Dp8/hqdefault.jpg'">
             <div class="card--video-play"></div>
           </div>
           <div class="card--video-info">
-            <h3 id="latestVideoTitle">Loading...</h3>
-            <a id="latestVideoLink" href="#" class="btn btn--yt" style="width: 100%; text-align: center; font-size: 0.9rem; margin-top: 12px;">Watch</a>
+            <h3 id="latestVideoTitle">First Collaboration Vlog</h3>
+            <a id="latestVideoLink" href="https://www.youtube.com/watch?v=H82FkJ-0Dp8" class="btn btn--yt" style="width: 100%; text-align: center; font-size: 0.9rem; margin-top: 12px;">Watch</a>
           </div>
         </div>
       </div>
       <script>
-        fetch('https://www.youtube.com/feeds/videos.xml?channel_id=UCUABrODa0CNF5zgkesAlYeA')
-          .then(response => response.text())
-          .then(data => {
-            const parser = new DOMParser();
-            const xmlDoc = parser.parseFromString(data, 'text/xml');
-            const entries = xmlDoc.getElementsByTagName('entry');
-            if (entries.length > 0) {
-              const latestEntry = entries[0];
-              const videoId = latestEntry.getElementsByTagName('yt:videoId')[0]?.textContent;
-              const title = latestEntry.getElementsByTagName('title')[0]?.textContent;
-              const link = latestEntry.getElementsByTagName('link')[0]?.getAttribute('href');
+        const loadLatestVideo = async () => {
+          try {
+            const response = await fetch('/videos-data.json');
+            if (!response.ok) throw new Error('Failed to load videos');
 
-              if (videoId && title && link) {
-                document.getElementById('latestVideoThumb').src = `https://img.youtube.com/vi/${videoId}/sddefault.jpg`;
-                document.getElementById('latestVideoThumb').onerror = function() {
-                  this.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
-                };
-                document.getElementById('latestVideoTitle').textContent = title;
-                document.getElementById('latestVideoLink').href = link;
-              }
-            }
-          })
-          .catch(error => console.log('Error fetching latest video:', error));
+            const videos = await response.json();
+            if (videos.length === 0) throw new Error('No videos found');
+
+            const latestVideo = videos[0];
+            document.getElementById('latestVideoThumb').src = `https://img.youtube.com/vi/${latestVideo.id}/sddefault.jpg`;
+            document.getElementById('latestVideoTitle').textContent = latestVideo.title;
+            document.getElementById('latestVideoLink').href = `https://www.youtube.com/watch?v=${latestVideo.id}`;
+          } catch (error) {
+            console.error('Error loading latest video:', error);
+          }
+        };
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', loadLatestVideo);
+        } else {
+          loadLatestVideo();
+        }
       </script>
     </div>
   </div>
