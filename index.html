@@ -117,16 +117,19 @@
 
 <main>
 
-<!-- YouTube Channel Band -->
+<!-- YouTube & Instagram Section -->
 <section class="section section--alt">
   <div class="wrap">
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+    <div style="display: grid; grid-template-columns: 1fr 1.5fr 1fr; gap: 40px; align-items: start;">
+      <!-- YouTube Subscribe Column -->
       <div>
-        <h2>Subscribe on YouTube</h2>
-        <a href="https://www.youtube.com/@loveandlayover?sub_confirmation=1" class="btn btn--yt" style="font-size: 1.1rem; padding: 14px 32px;">
+        <h2 style="font-size: 1.4rem;">Subscribe on YouTube</h2>
+        <a href="https://www.youtube.com/@loveandlayover?sub_confirmation=1" class="btn btn--yt" style="font-size: 1rem; padding: 12px 24px;">
           Subscribe to Channel
         </a>
       </div>
+
+      <!-- Latest Video Column -->
       <div style="display: grid; grid-template-columns: 1fr; gap: 16px;" id="latestVideoContainer">
         <div class="card card--video">
           <div class="card--video-thumb">
@@ -146,6 +149,20 @@
           </div>
         </div>
       </div>
+
+      <!-- Instagram Follow Column -->
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <h2 style="font-size: 1.4rem;">Follow on Instagram</h2>
+        <a href="https://www.instagram.com/loveandlayover" class="btn btn--primary" style="font-size: 1rem; padding: 12px 24px;" target="_blank" rel="noopener noreferrer">
+          Follow on Instagram
+        </a>
+        <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(31,27,22,0.08); padding: 16px; text-align: center;">
+          <div style="font-size: 2.5rem; margin-bottom: 8px;">📸</div>
+          <h3 style="font-size: 1rem; margin: 0 0 6px 0; color: var(--ink);">Daily Updates</h3>
+          <p style="font-size: 0.85rem; color: var(--ink-soft); margin: 0; line-height: 1.5;">Travel tips & behind-the-scenes.</p>
+        </div>
+      </div>
+
       <script>
         const loadLatestVideo = async () => {
           try {
@@ -170,27 +187,6 @@
           loadLatestVideo();
         }
       </script>
-    </div>
-  </div>
-</section>
-
-<!-- Instagram Band -->
-<section class="section">
-  <div class="wrap">
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
-      <div>
-        <h2>Follow on Instagram</h2>
-        <a href="https://www.instagram.com/loveandlayover" class="btn btn--primary" style="font-size: 1.1rem; padding: 14px 32px;" target="_blank" rel="noopener noreferrer">
-          Follow on Instagram
-        </a>
-      </div>
-      <div style="display: grid; grid-template-columns: 1fr; gap: 16px;">
-        <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(31,27,22,0.08); padding: 20px; text-align: center;">
-          <div style="font-size: 3rem; margin-bottom: 10px;">📸</div>
-          <h3 style="font-size: 1.2rem; margin: 0 0 8px 0; color: var(--ink);">Latest Stories</h3>
-          <p style="font-size: 0.9rem; color: var(--ink-soft); margin: 0; line-height: 1.6;">Follow us for daily travel tips, destination highlights, and travel vlog updates.</p>
-        </div>
-      </div>
     </div>
   </div>
 </section>
