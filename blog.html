@@ -98,6 +98,9 @@ img { max-width:100%; display:block; }
 .wrap { max-width:var(--maxw); margin:0 auto; padding:0 24px; }
 header { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(255,250,242,.92); backdrop-filter:blur(12px); box-shadow:0 2px 24px var(--shadow); }
 nav { display:flex; align-items:center; justify-content:space-between; max-width:var(--maxw); margin:0 auto; padding:14px 24px; }
+.nav-links { display:flex; gap:30px; list-style:none; }
+.nav-links a { font-weight:500; color:var(--ink); text-decoration:none; border-bottom:2px solid transparent; transition:border-color 0.2s; padding-bottom:2px; }
+.nav-links a:hover { border-bottom-color:var(--accent); }
 .logo { font-family:'Fraunces',serif; font-weight:900; font-size:1.3rem; color:var(--ink); display:flex; align-items:center; gap:9px; }
 .logo .dot { width:32px; height:32px; border-radius:50%; background-image:url('https://loveandlayover-website-604218333793.s3.us-east-1.amazonaws.com/logo.jpg'); background-size:cover; background-position:center; border:2px solid var(--accent); }
 .back-link { font-weight:600; color:var(--accent); }
