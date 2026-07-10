@@ -102,7 +102,52 @@ footer a { color:var(--secondary); text-decoration:none; }
 .foot { display:flex; justify-content:space-between; align-items:center; margin-bottom:30px; flex-wrap:wrap; gap:20px; }
 .foot-links { display:flex; gap:24px; }
 .copy { margin-top:30px; padding-top:30px; border-top:1px solid rgba(255,255,255,.1); text-align:center; font-size:.9rem; }
-@media(max-width:600px) { .hero h1 { font-size:2rem; } .nav-links { gap:15px; font-size:.9rem; } .values-grid { grid-template-columns:1fr; } }
+@media(max-width:768px) {
+  nav { flex-wrap:wrap; }
+  .nav-links { gap:20px; font-size:.95rem; flex-wrap:wrap; }
+  .hero { padding:60px 0 40px; margin-top:70px; }
+  .hero h1 { font-size:clamp(1.8rem,4vw,2.8rem); }
+  .hero p { font-size:1rem; }
+  .section { padding:40px 0; }
+  .section h2 { font-size:clamp(1.6rem,3vw,2.2rem); }
+  .section p { font-size:1rem; }
+  .values-grid { grid-template-columns:1fr; }
+  .value-card { padding:24px; }
+  .cta-section { padding:40px 0; margin:40px 0; }
+  .footer { padding:30px 0; }
+  .foot { flex-direction:column; gap:15px; }
+  .foot-links { flex-direction:column; gap:12px; }
+}
+
+@media(max-width:600px) {
+  .wrap { padding:0 16px; }
+  header { position:sticky; }
+  nav { padding:12px 16px; }
+  .logo { font-size:1.1rem; }
+  .logo .dot { width:28px; height:28px; }
+  .nav-links { gap:12px; font-size:.85rem; }
+  .hero { padding:40px 0 30px; margin-top:60px; }
+  .hero h1 { font-size:1.6rem; }
+  .hero p { font-size:.95rem; }
+  .section { padding:30px 0; }
+  .section h2 { font-size:1.5rem; margin-bottom:16px; }
+  .section p { font-size:.95rem; margin-bottom:12px; }
+  .values-grid { grid-template-columns:1fr; gap:16px; }
+  .value-card { padding:20px; border-top-width:3px; }
+  .value-card h3 { font-size:1.1rem; }
+  .value-card p { font-size:.9rem; }
+  .timeline { padding:20px 0; }
+  .timeline-item { margin-bottom:30px; padding-left:30px; }
+  .timeline-item:before { width:20px; height:20px; left:-2px; }
+  .timeline-item h3 { font-size:1rem; }
+  .timeline-item .date { font-size:.8rem; }
+  .cta-section { padding:30px 20px; margin:30px 0; border-radius:8px; }
+  .cta-section h2 { font-size:1.4rem; }
+  .cta-section p { font-size:.95rem; }
+  .cta-btn { padding:12px 24px; font-size:.95rem; }
+  footer { padding:30px 0 20px; }
+  .copy { font-size:.85rem; padding-top:20px; margin-top:20px; }
+}
 </style>
 </head>
 <body>
@@ -125,34 +170,34 @@ footer a { color:var(--secondary); text-decoration:none; }
 <div class="wrap" style="max-width: 800px;">
 <h2 style="text-align: center; margin-bottom: 30px;">Meet Nikita & Sanket</h2>
 
-<p style="font-size: 1.05rem; line-height: 1.8; color: #3a474e; margin-bottom: 20px;">We are Singapore-based lifestyle creators who never quite settled into just one lane — one day we're curled up at a cafe hunting for the best flat white in the city, the next we're somewhere new, camera in hand, chasing whatever makes life feel a little more special. That's the thing about lifestyle content, really: it's less about a niche and more about noticing the good stuff — food, travel, wellness, little everyday moments — and sharing it in a way that feels honest.</p>
+<p style="font-size: clamp(0.95rem, 2vw, 1.05rem); line-height: 1.8; color: #3a474e; margin-bottom: 20px;">We are Singapore-based lifestyle creators who never quite settled into just one lane — one day we're curled up at a cafe hunting for the best flat white in the city, the next we're somewhere new, camera in hand, chasing whatever makes life feel a little more special. That's the thing about lifestyle content, really: it's less about a niche and more about noticing the good stuff — food, travel, wellness, little everyday moments — and sharing it in a way that feels honest.</p>
 
-<p style="font-size: 1.05rem; line-height: 1.8; color: #3a474e; margin-bottom: 20px;">We split our world across two spaces: <strong><a href="https://www.instagram.com/nikita.lagaskar" target="_blank" style="color: var(--accent); text-decoration: none;">@nikita.lagaskar</a></strong>, where we share everyday lifestyle, dining spots, and things we genuinely love, and <strong><a href="https://www.instagram.com/mi.punekar_" target="_blank" style="color: var(--accent); text-decoration: none;">@mi.punekar_</a></strong>, our more personal, rooted space that connects back to home and culture. Together, they reach a community of <strong>45,000+ people</strong> who trust our recommendations — not because we're chasing trends, but because we only talk about what we'd tell our own friends.</p>
+<p style="font-size: clamp(0.95rem, 2vw, 1.05rem); line-height: 1.8; color: #3a474e; margin-bottom: 20px;">We split our world across two spaces: <strong><a href="https://www.instagram.com/nikita.lagaskar" target="_blank" style="color: var(--accent); text-decoration: none;">@nikita.lagaskar</a></strong>, where we share everyday lifestyle, dining spots, and things we genuinely love, and <strong><a href="https://www.instagram.com/mi.punekar_" target="_blank" style="color: var(--accent); text-decoration: none;">@mi.punekar_</a></strong>, our more personal, rooted space that connects back to home and culture. Together, they reach a community of <strong>45,000+ people</strong> who trust our recommendations — not because we're chasing trends, but because we only talk about what we'd tell our own friends.</p>
 
-<p style="font-size: 1.05rem; line-height: 1.8; color: #3a474e; margin-bottom: 20px;">We've had the chance to collaborate with brands like <strong>Scentopia</strong> and <strong>Imagica</strong>, bringing their experiences to life for our audience in a way that felt real rather than scripted — and that's exactly the kind of partnership we love: ones where the brand's story and our voice actually fit together.</p>
+<p style="font-size: clamp(0.95rem, 2vw, 1.05rem); line-height: 1.8; color: #3a474e; margin-bottom: 20px;">We've had the chance to collaborate with brands like <strong>Scentopia</strong> and <strong>Imagica</strong>, bringing their experiences to life for our audience in a way that felt real rather than scripted — and that's exactly the kind of partnership we love: ones where the brand's story and our voice actually fit together.</p>
 
-<p style="font-size: 1.05rem; line-height: 1.8; color: #3a474e; margin-bottom: 30px;">If you're a cafe, restaurant, spa, or brand looking for creators who show up with genuine curiosity, bring an engaged community along for the ride, and treat every collaboration like a relationship rather than a transaction — we'd love to hear from you.</p>
+<p style="font-size: clamp(0.95rem, 2vw, 1.05rem); line-height: 1.8; color: #3a474e; margin-bottom: 30px;">If you're a cafe, restaurant, spa, or brand looking for creators who show up with genuine curiosity, bring an engaged community along for the ride, and treat every collaboration like a relationship rather than a transaction — we'd love to hear from you.</p>
 
-<div style="background: white; padding: 24px; border-radius: 12px; border-left: 4px solid var(--accent); text-align: center;">
-<p style="margin: 0 0 24px 0; font-size: 1rem; color: #3a474e;">
+<div style="background: white; padding: clamp(16px, 4vw, 24px); border-radius: 12px; border-left: 4px solid var(--accent); text-align: center;">
+<p style="margin: 0 0 clamp(16px, 3vw, 24px) 0; font-size: clamp(0.9rem, 2vw, 1rem); color: #3a474e;">
 📍 Based in Singapore<br>
 📸 45K+ across Instagram<br>
 💌 <strong>Open for collaborations</strong> — let's create something good together.
 </p>
 
-<div style="display: flex; justify-content: center; gap: 24px; margin-top: 20px;">
+<div style="display: flex; justify-content: center; gap: clamp(16px, 4vw, 24px); margin-top: clamp(12px, 3vw, 20px); flex-wrap: wrap;">
   <a href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener noreferrer" style="display: flex; flex-direction: column; align-items: center; gap: 8px; text-decoration: none; color: var(--accent); font-weight: 600; transition: transform 0.3s;">
-    <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" style="transform: scale(1); transition: transform 0.3s;">
+    <svg width="clamp(32, 8vw, 40)" height="clamp(32, 8vw, 40)" viewBox="0 0 24 24" fill="currentColor" style="transform: scale(1); transition: transform 0.3s;">
       <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
     </svg>
-    <span style="font-size: 0.85rem;">Instagram</span>
+    <span style="font-size: clamp(0.7rem, 2vw, 0.85rem);">Instagram</span>
   </a>
 
   <a href="https://www.youtube.com/@loveandlayover" target="_blank" rel="noopener noreferrer" style="display: flex; flex-direction: column; align-items: center; gap: 8px; text-decoration: none; color: var(--accent); font-weight: 600; transition: transform 0.3s;">
-    <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" style="transform: scale(1); transition: transform 0.3s;">
+    <svg width="clamp(32, 8vw, 40)" height="clamp(32, 8vw, 40)" viewBox="0 0 24 24" fill="currentColor" style="transform: scale(1); transition: transform 0.3s;">
       <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
     </svg>
-    <span style="font-size: 0.85rem;">YouTube</span>
+    <span style="font-size: clamp(0.7rem, 2vw, 0.85rem);">YouTube</span>
   </a>
 </div>
 </div>
@@ -163,14 +208,14 @@ footer a { color:var(--secondary); text-decoration:none; }
 
 <section class="section">
 <div class="wrap">
-<h2>Brands We Have Worked With</h2>
-<p>Trusted by leading travel and lifestyle brands for authentic content, engagement, and community building.</p>
+<h2 style="font-size: clamp(1.5rem, 4vw, 2.8rem);">Brands We Have Worked With</h2>
+<p style="font-size: clamp(0.95rem, 2vw, 1.05rem);">Trusted by leading travel and lifestyle brands for authentic content, engagement, and community building.</p>
 
-<div id="aboutBrandsContainer" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 40px; margin-bottom: 40px;"></div>
+<div id="aboutBrandsContainer" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(clamp(150px, 30vw, 200px), 1fr)); gap: clamp(20px, 3vw, 30px); margin-top: clamp(30px, 5vw, 40px); margin-bottom: clamp(30px, 5vw, 40px);"></div>
 
 <div style="text-align: center;">
-<p style="font-size: 1rem; color: var(--ink-soft); margin-bottom: 20px;">Interested in collaborating?</p>
-<a href="mailto:theloveandlayover@gmail.com?subject=Brand Collaboration - Love and Layovers" class="btn" style="background: var(--accent); color: white; padding: 12px 32px; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-block;">Let's Work Together</a>
+<p style="font-size: clamp(0.9rem, 2vw, 1rem); color: var(--ink-soft); margin-bottom: clamp(16px, 3vw, 20px);">Interested in collaborating?</p>
+<a href="mailto:theloveandlayover@gmail.com?subject=Brand Collaboration - Love and Layovers" class="btn" style="background: var(--accent); color: white; padding: clamp(10px, 2vw, 12px) clamp(20px, 4vw, 32px); border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-block; font-size: clamp(0.9rem, 2vw, 1rem);">Let's Work Together</a>
 </div>
 </div>
 </section>
@@ -239,12 +284,12 @@ if (aboutBrandsContainer) {
     const card = document.createElement('div');
     const isLinked = collab.link ? true : false;
     const cardContent = `
-      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 30px; background: var(--sand); border-radius: 12px; box-shadow: 0 2px 8px rgba(31,27,22,0.08); height: 100%;">
-        <div style="width: 100px; height: 80px; background: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; overflow: hidden;">
+      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: clamp(20px, 4vw, 30px); background: var(--sand); border-radius: 12px; box-shadow: 0 2px 8px rgba(31,27,22,0.08); height: 100%;">
+        <div style="width: clamp(80px, 15vw, 100px); height: clamp(60px, 12vw, 80px); background: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: clamp(12px, 2vw, 16px); overflow: hidden;">
           <img src="${collab.logo}" alt="${collab.brand} — Love and Layovers collaboration" style="max-width: 90%; max-height: 90%; object-fit: contain;">
         </div>
-        <h3 style="font-size: 1.1rem; margin: 0 0 8px 0; text-align: center;">${collab.brand}</h3>
-        <p style="font-size: 0.9rem; color: var(--ink-soft); text-align: center; margin: 0;">${collab.description}</p>
+        <h3 style="font-size: clamp(0.95rem, 2vw, 1.1rem); margin: 0 0 8px 0; text-align: center;">${collab.brand}</h3>
+        <p style="font-size: clamp(0.8rem, 1.8vw, 0.9rem); color: var(--ink-soft); text-align: center; margin: 0; line-height: 1.5;">${collab.description}</p>
       </div>
     `;
 
