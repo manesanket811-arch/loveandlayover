@@ -124,10 +124,19 @@
     <div class="hero--split">
       <div class=”hero--split-content”>
         <h1>We film the trip.<br>You get the plan.</h1>
-        <div style=”display: flex; gap: 24px; margin-top: 30px;”>
-          <a class=”btn btn--yt” href=”https://www.youtube.com/@loveandlayover” target=”_blank”>YouTube</a>
-          <a class=”btn btn--primary” href=”https://www.instagram.com/loveandlayover” target=”_blank”>Instagram</a>
+        <div style=”display: flex; gap: 24px; margin-top: 30px;” id=”social-links”>
+          <button class=”btn btn--yt” data-url=”youtube”>YouTube</button>
+          <button class=”btn btn--primary” data-url=”instagram”>Instagram</button>
         </div>
+        <script>
+          document.getElementById('social-links').addEventListener('click', function(e) {
+            if (e.target.dataset.url == 'youtube') {
+              window.open('https://www.youtube.com/@loveandlayover', '_blank');
+            } else if (e.target.dataset.url == 'instagram') {
+              window.open('https://www.instagram.com/loveandlayover', '_blank');
+            }
+          });
+        </script>
       </div>
       <div style="flex: 1;">
         <script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.js"></script>
