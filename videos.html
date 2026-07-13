@@ -172,7 +172,7 @@
       `;
     } catch (error) {
       console.error('Error loading featured video:', error);
-      container.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--ink-soft);"><p>Unable to load video.</p></div>';
+      container.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--ink-soft);"><p>Unable to load video: ${error.message}</p></div>`;
     }
   };
 
