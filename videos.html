@@ -178,11 +178,11 @@
     }
   };
 
-  // Load featured video when DOM is ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', loadFeaturedVideo);
-  } else {
+  // Wait for lite-youtube component to be defined, then load featured video
+  if (customElements.get('lite-youtube')) {
     loadFeaturedVideo();
+  } else {
+    customElements.whenDefined('lite-youtube').then(loadFeaturedVideo);
   }
 </script>
 
