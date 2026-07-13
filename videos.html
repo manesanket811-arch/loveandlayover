@@ -152,24 +152,58 @@
         year: 'numeric'
       });
 
-      container.innerHTML = `
-        <div>
-          <div style=”position: relative; border-radius: 14px; overflow: hidden; box-shadow: 0 8px 30px rgba(31,27,22,0.08); aspect-ratio: 16 / 9;”>
-            <iframe style=”position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 14px;” src=”https://www.youtube.com/embed/${latestVideo.id}” title=”${latestVideo.title}” allow=”accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture” allowfullscreen></iframe>
-          </div>
-        </div>
-        <div>
-          <h3>${latestVideo.title}</h3>
-          <p style="font-size: 1.05rem; color: var(--ink-soft); line-height: 1.7; margin-bottom: 20px;">
-            ${latestVideo.description || 'Watch our latest travel video on the Love and Layovers channel.'}
-          </p>
-          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-            <span class="badge badge--sea">${latestVideo.type}</span>
-            <span class="badge badge--accent">${publishDate}</span>
-          </div>
-          <a href="https://www.youtube.com/watch?v=${latestVideo.id}" class="btn btn--yt" style="margin-top: 20px; display: inline-block;">Watch Full Video →</a>
-        </div>
-      `;
+      // Create iframe element properly to avoid attribute escaping issues
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.youtube.com/embed/${latestVideo.id}`;
+      iframe.title = latestVideo.title;
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+      iframe.allowFullscreen = true;
+      iframe.style.cssText = 'position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 14px;';
+
+      const videoDiv = document.createElement('div');
+      videoDiv.style.cssText = 'position: relative; border-radius: 14px; overflow: hidden; box-shadow: 0 8px 30px rgba(31,27,22,0.08); aspect-ratio: 16 / 9;';
+      videoDiv.appendChild(iframe);
+
+      const mainDiv = document.createElement('div');
+      mainDiv.appendChild(videoDiv);
+
+      const infoDiv = document.createElement('div');
+
+      const titleH3 = document.createElement('h3');
+      titleH3.textContent = latestVideo.title;
+
+      const descP = document.createElement('p');
+      descP.style.cssText = 'font-size: 1.05rem; color: var(--ink-soft); line-height: 1.7; margin-bottom: 20px;';
+      descP.textContent = latestVideo.description || 'Watch our latest travel video on the Love and Layovers channel.';
+
+      const badgeDiv = document.createElement('div');
+      badgeDiv.style.cssText = 'display: flex; gap: 12px; flex-wrap: wrap;';
+
+      const typeBadge = document.createElement('span');
+      typeBadge.className = 'badge badge--sea';
+      typeBadge.textContent = latestVideo.type;
+
+      const dateBadge = document.createElement('span');
+      dateBadge.className = 'badge badge--accent';
+      dateBadge.textContent = publishDate;
+
+      badgeDiv.appendChild(typeBadge);
+      badgeDiv.appendChild(dateBadge);
+
+      const watchLink = document.createElement('a');
+      watchLink.href = `https://www.youtube.com/watch?v=${latestVideo.id}`;
+      watchLink.className = 'btn btn--yt';
+      watchLink.style.cssText = 'margin-top: 20px; display: inline-block;';
+      watchLink.textContent = 'Watch Full Video →';
+
+      infoDiv.appendChild(titleH3);
+      infoDiv.appendChild(descP);
+      infoDiv.appendChild(badgeDiv);
+      infoDiv.appendChild(watchLink);
+
+      mainDiv.appendChild(infoDiv);
+      container.innerHTML = '';
+      container.appendChild(mainDiv);
     } catch (error) {
       console.error('Error loading featured video:', error);
       container.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--ink-soft);"><p>Unable to load video: ${error.message}</p></div>`;
