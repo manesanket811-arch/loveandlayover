@@ -7,11 +7,11 @@
 <meta name="description" content="Watch authentic travel vlogs, destination guides, and food tours on the Love and Layovers YouTube channel. New episodes every week featuring real travel experiences and insider tips.">
 <link rel="canonical" href="https://www.loveandlayover.in/videos.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Travel Videos â€” Love and Layovers">
+<meta property=”og:title” content=”Travel Videos – Love and Layovers”>
 <meta property="og:description" content="Watch our travel vlogs and destination guides. New episodes every week.">
 <meta property="og:image" content="https://www.loveandlayover.in/public/images/banner.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Travel Videos â€” Love and Layovers">
+<meta name=”twitter:title” content=”Travel Videos – Love and Layovers”>
 <meta name="twitter:description" content="Watch our travel vlogs and destination guides. New episodes every week.">
 <meta name="twitter:image" content="https://www.loveandlayover.in/public/images/banner.png">
 <meta property="og:url" content="https://www.loveandlayover.in/videos.html">
@@ -155,7 +155,7 @@
       container.innerHTML = `
         <div>
           <div style="position: relative; border-radius: 14px; overflow: hidden; box-shadow: 0 8px 30px rgba(31,27,22,0.08);">
-            <lite-youtube videoid="${latestVideo.id}" playlabel="${latestVideo.title} â€” watch"></lite-youtube>
+            <lite-youtube videoid=”${latestVideo.id}” playlabel=”${latestVideo.title} – watch”></lite-youtube>
           </div>
         </div>
         <div>
@@ -167,7 +167,7 @@
             <span class="badge badge--sea">${latestVideo.type}</span>
             <span class="badge badge--accent">${publishDate}</span>
           </div>
-          <a href="https://www.youtube.com/watch?v=${latestVideo.id}" class="btn btn--yt" style="margin-top: 20px; display: inline-block;">Watch Full Video â†’</a>
+          <a href="https://www.youtube.com/watch?v=${latestVideo.id}" class="btn btn--yt" style="margin-top: 20px; display: inline-block;">Watch Full Video →</a>
         </div>
       `;
     } catch (error) {
@@ -224,7 +224,7 @@
             card.innerHTML = `
               <div class="card--video-thumb" style="position: relative; aspect-ratio: 16 / 9; width: 100%; overflow: hidden;">
                 <img src="https://i.ytimg.com/vi/${video.id}/maxresdefault.jpg" alt="${video.title}" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; background: rgba(255, 0, 0, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; cursor: pointer;">â–¶</div>
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; background: rgba(255, 0, 0, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; cursor: pointer;">▶</div>
               </div>
               <div class="card--video-info" style="padding: 2px 4px 1px 4px !important; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
                 <div>
@@ -236,7 +236,7 @@
             `;
             grid.appendChild(card);
 
-            // Add onerror fallback for maxresdefault â†’ hqdefault
+            // Add onerror fallback for maxresdefault → hqdefault
             const img = card.querySelector('img');
             img.onerror = () => {
               img.onerror = null;
@@ -267,7 +267,7 @@
           });
         } catch (error) {
           console.error('Error loading videos:', error);
-          grid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--ink-soft);"><p>Unable to load videos.</p><p style="font-size: 0.9rem; margin-top: 12px;"><a href="https://www.youtube.com/@loveandlayover">Visit YouTube channel â†’</a></p></div>';
+          grid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--ink-soft);"><p>Unable to load videos.</p><p style="font-size: 0.9rem; margin-top: 12px;"><a href="https://www.youtube.com/@loveandlayover">Visit YouTube channel →</a></p></div>';
         }
       };
 
@@ -280,7 +280,7 @@
     </script>
 
     <div style="text-align: center; margin-top: 40px;">
-      <a href="https://www.youtube.com/@loveandlayover" class="btn btn--secondary">View all videos on YouTube â†’</a>
+      <a href="https://www.youtube.com/@loveandlayover" class="btn btn--secondary">View all videos on YouTube →</a>
     </div>
   </div>
 </section>
@@ -297,7 +297,7 @@
         Subscribe to Channel
       </a>
       <p style="font-size: 0.9rem; color: var(--ink-soft); margin-top: 20px;">
-        ðŸ”” Turn on notifications for new episodes
+        📹” Turn on notifications for new episodes
       </p>
     </div>
   </div>
