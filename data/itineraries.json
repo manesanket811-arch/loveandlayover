@@ -1,344 +1,460 @@
 {
   "itineraries": [
     {
-      "name": "Singapore",
-      "slug": "singapore",
-      "url": "/destinations/singapore.html",
-      "3days": {
-        "title": "Singapore 3-Day Itinerary",
-        "days": ["Marina Bay & Gardens by the Bay", "Chinatown & Street Food Tour", "Sentosa Island & Beach"]
-      },
-      "5days": {
-        "title": "Singapore 5-Day Itinerary",
-        "days": ["Marina Bay & Gardens by the Bay", "Chinatown & Street Food Tour", "Sentosa Island & Beach", "Botanic Gardens & Singapore Zoo", "Local Markets & Night Safari"]
-      },
-      "10days": {
-        "title": "Singapore 10-Day Itinerary",
-        "days": ["Marina Bay & Gardens by the Bay", "Chinatown & Street Food Tour", "Sentosa Island & Beach", "Botanic Gardens & Singapore Zoo", "Local Markets & Night Safari", "Day trip to Malacca", "East Coast & Changi Beach", "Kampong Glam & Arab Street", "Sri Mariamman Temple & Cultural Sites", "Shopping & Departure"]
-      }
+      "id": "singapore-3",
+      "country": "Singapore",
+      "duration": 3,
+      "title": "Singapore 3-Day Itinerary",
+      "badge": "Quick Escape",
+      "days": ["Day 1: Arrival & Marina Bay area - Visit Marina Bay Sands, Gardens by the Bay, and ArtScience Museum", "Day 2: Chinatown & Street Food - Explore Chinatown, visit Sri Mariamman Temple, enjoy street food tours", "Day 3: Sentosa Island - Beach day at Sentosa, Universal Studios, cable car rides"]
     },
     {
-      "name": "Japan",
-      "slug": "japan",
-      "url": "/destinations/japan.html",
-      "3days": {
-        "title": "Japan 3-Day Itinerary",
-        "days": ["Tokyo - Shibuya & Shinjuku", "Mt. Fuji & Hakone", "Tokyo - Asakusa & Senso-ji"]
-      },
-      "5days": {
-        "title": "Japan 5-Day Itinerary",
-        "days": ["Tokyo - Shibuya & Shinjuku", "Mt. Fuji & Hakone", "Kyoto - Temples & Traditions", "Kyoto - Geisha District", "Tokyo - Asakusa & Senso-ji"]
-      },
-      "10days": {
-        "title": "Japan 10-Day Itinerary",
-        "days": ["Tokyo - Shibuya & Shinjuku", "Mt. Fuji & Hakone", "Kyoto - Temples & Traditions", "Kyoto - Geisha District", "Osaka - Street Food & Culture", "Nara - Deer Park & Temples", "Tokyo - Asakusa & Senso-ji", "Tokyo - Tech & Shopping", "Tokyo - Side trips", "Departure"]
-      }
+      "id": "singapore-5",
+      "country": "Singapore",
+      "duration": 5,
+      "title": "Singapore 5-Day Itinerary",
+      "badge": "Classic",
+      "days": ["Day 1: Arrival & Marina Bay area - Visit Marina Bay Sands, Gardens by the Bay, and ArtScience Museum", "Day 2: Chinatown & Street Food - Explore Chinatown, visit Sri Mariamman Temple, enjoy street food tours", "Day 3: Sentosa Island - Beach day at Sentosa, Universal Studios, cable car rides", "Day 4: Botanic Gardens & Zoo - Singapore Botanic Gardens, Singapore Zoo & Night Safari", "Day 5: Local Markets & Departure - Visit Mustafa Centre, Bugis Street, last-minute shopping"]
     },
     {
-      "name": "Australia",
-      "slug": "australia",
-      "url": "/destinations/australia.html",
-      "3days": {
-        "title": "Australia 3-Day Itinerary",
-        "days": ["Sydney - Opera House & Beaches", "Blue Mountains Day Trip", "Sydney - Coastal Walks"]
-      },
-      "5days": {
-        "title": "Australia 5-Day Itinerary",
-        "days": ["Sydney - Opera House & Beaches", "Blue Mountains Day Trip", "Sydney - Coastal Walks", "Taronga Zoo & Manly Beach", "Bondi Beach & Local Culture"]
-      },
-      "10days": {
-        "title": "Australia 10-Day Itinerary",
-        "days": ["Sydney - Opera House & Beaches", "Blue Mountains Day Trip", "Sydney - Coastal Walks", "Taronga Zoo & Manly Beach", "Bondi Beach & Local Culture", "Uluru - Ayers Rock", "Alice Springs - Desert Experience", "Great Barrier Reef", "Tropical Rainforest", "Return to Sydney"]
-      }
+      "id": "singapore-10",
+      "country": "Singapore",
+      "duration": 10,
+      "title": "Singapore 10-Day Itinerary",
+      "badge": "Explorer",
+      "days": ["Day 1: Arrival & Marina Bay area - Visit Marina Bay Sands, Gardens by the Bay", "Day 2: Chinatown & Temples - Explore Chinatown, Sri Mariamman Temple, street food", "Day 3: Sentosa Island - Universal Studios, cable cars, beaches", "Day 4: Botanic Gardens & Zoo - Singapore Zoo, Night Safari, Botanic Gardens", "Day 5: Local Markets - Mustafa Centre, Bugis Street, shopping", "Day 6: Day trip to Malacca, Malaysia - Historical colonial city, street art, local food", "Day 7: East Coast & Changi - Changi Beach, East Coast Park", "Day 8: Kampong Glam - Arab Street, Masjid Sultan, boutiques", "Day 9: Cultural Heritage - Thian Hock Keng Temple, Buddha Tooth Temple", "Day 10: Relaxation & Departure - Spa day, last-minute activities"]
     },
     {
-      "name": "Bali",
-      "slug": "bali",
-      "url": "/destinations/bali.html",
-      "3days": {
-        "title": "Bali 3-Day Itinerary",
-        "days": ["Ubud - Rice Terraces & Culture", "Temples & Waterfalls", "Beaches & Nightlife"]
-      },
-      "5days": {
-        "title": "Bali 5-Day Itinerary",
-        "days": ["Ubud - Rice Terraces & Culture", "Temples & Waterfalls", "Mount Batur Sunrise", "Beaches & Seaside Villages", "Nightlife & Relaxation"]
-      },
-      "10days": {
-        "title": "Bali 10-Day Itinerary",
-        "days": ["Ubud - Rice Terraces & Culture", "Temples & Waterfalls", "Mount Batur Sunrise", "Beaches & Seaside Villages", "Nightlife & Relaxation", "Spiritual Retreats", "Local Cooking Classes", "Diving & Water Sports", "Meditation & Wellness", "Departure"]
-      }
+      "id": "japan-3",
+      "country": "Japan",
+      "duration": 3,
+      "title": "Japan 3-Day Itinerary",
+      "badge": "Quick Escape",
+      "days": ["Day 1: Tokyo Arrival - Shibuya Crossing, shopping, nightlife", "Day 2: Mt. Fuji Day Trip - Hakone, Lake Ashi, hot springs", "Day 3: Tokyo Culture - Asakusa Temple, Senso-ji, traditional Tokyo"]
     },
     {
-      "name": "Egypt",
-      "slug": "egypt",
-      "url": "/destinations/egypt.html",
-      "3days": {
-        "title": "Egypt 3-Day Itinerary",
-        "days": ["Cairo - Egyptian Museum & Mosques", "Giza Pyramids & Sphinx", "Saqqara & Dahshur"]
-      },
-      "5days": {
-        "title": "Egypt 5-Day Itinerary",
-        "days": ["Cairo - Egyptian Museum & Mosques", "Giza Pyramids & Sphinx", "Saqqara & Dahshur", "Nile River Cruise", "Valley of the Kings"]
-      },
-      "10days": {
-        "title": "Egypt 10-Day Itinerary",
-        "days": ["Cairo - Egyptian Museum & Mosques", "Giza Pyramids & Sphinx", "Saqqara & Dahshur", "Nile River Cruise", "Valley of the Kings", "Karnak Temples", "Luxor - City of Palaces", "Aswan & Philae Temple", "Abu Simbel", "Return to Cairo"]
-      }
+      "id": "japan-5",
+      "country": "Japan",
+      "duration": 5,
+      "title": "Japan 5-Day Itinerary",
+      "badge": "Classic",
+      "days": ["Day 1: Tokyo Arrival - Shibuya Crossing, shopping, nightlife", "Day 2: Mt. Fuji Day Trip - Hakone, Lake Ashi, hot springs", "Day 3: Kyoto - Temples & Traditions - Arashiyama Bamboo Grove, temple visits", "Day 4: Kyoto - Geisha District - Gion district, traditional experiences", "Day 5: Return to Tokyo - Asakusa Temple, Senso-ji, departure"]
     },
     {
-      "name": "France",
-      "slug": "france",
-      "url": "/destinations/france.html",
-      "3days": {
-        "title": "France 3-Day Itinerary",
-        "days": ["Paris - Eiffel Tower & Louvre", "Paris - Notre-Dame & Latin Quarter", "Versailles Palace"]
-      },
-      "5days": {
-        "title": "France 5-Day Itinerary",
-        "days": ["Paris - Eiffel Tower & Louvre", "Paris - Notre-Dame & Latin Quarter", "Versailles Palace", "Montmartre & Arc de Triomphe", "Seine River Cruise & Museums"]
-      },
-      "10days": {
-        "title": "France 10-Day Itinerary",
-        "days": ["Paris - Eiffel Tower & Louvre", "Paris - Notre-Dame & Latin Quarter", "Versailles Palace", "Montmartre & Arc de Triomphe", "Seine River Cruise & Museums", "Provence - Lavender Fields", "French Riviera - Nice", "Cannes & Monaco", "Wine Country", "Return to Paris"]
-      }
+      "id": "japan-10",
+      "country": "Japan",
+      "duration": 10,
+      "title": "Japan 10-Day Itinerary",
+      "badge": "Explorer",
+      "days": ["Day 1: Tokyo Arrival - Shibuya Crossing, Shinjuku", "Day 2: Mt. Fuji Day Trip - Hakone, Lake Ashi", "Day 3: Kyoto Arrival - Temples, Arashiyama Bamboo Grove", "Day 4: Kyoto - Geisha District & Culture", "Day 5: Osaka - Street Food & Culture", "Day 6: Nara - Deer Park & Temples", "Day 7: Back to Tokyo - Asakusa, Senso-ji", "Day 8: Tokyo - Tech & Shopping - Akihabara, Harajuku", "Day 9: Tokyo - Day trips & side exploration", "Day 10: Departure"]
     },
     {
-      "name": "Germany",
-      "slug": "germany",
-      "url": "/destinations/germany.html",
-      "3days": {
-        "title": "Germany 3-Day Itinerary",
-        "days": ["Berlin - Brandenburg Gate & History", "Neuschwanstein Castle Day Trip", "Munich - Marienplatz"]
-      },
-      "5days": {
-        "title": "Germany 5-Day Itinerary",
-        "days": ["Berlin - Brandenburg Gate & History", "Neuschwanstein Castle Day Trip", "Munich - Marienplatz", "Beer Halls & Bavarian Culture", "Rothenburg ob der Tauber"]
-      },
-      "10days": {
-        "title": "Germany 10-Day Itinerary",
-        "days": ["Berlin - Brandenburg Gate & History", "Neuschwanstein Castle Day Trip", "Munich - Marienplatz", "Beer Halls & Bavarian Culture", "Rothenburg ob der Tauber", "Rhine River Valley", "Cologne Cathedral", "Black Forest", "Frankfurt", "Return to Berlin"]
-      }
+      "id": "australia-3",
+      "country": "Australia",
+      "duration": 3,
+      "title": "Australia 3-Day Itinerary",
+      "badge": "Quick Escape",
+      "days": ["Day 1: Sydney Arrival - Opera House, Harbour Bridge, beaches", "Day 2: Blue Mountains - Day trip to scenic mountain landscapes", "Day 3: Coastal Walks - Bondi to Coogee coastal walk"]
     },
     {
-      "name": "Greece",
-      "slug": "greece",
-      "url": "/destinations/greece.html",
-      "3days": {
-        "title": "Greece 3-Day Itinerary",
-        "days": ["Athens - Acropolis & Parthenon", "Greek Islands - Mykonos", "Santorini - Sunset & White Houses"]
-      },
-      "5days": {
-        "title": "Greece 5-Day Itinerary",
-        "days": ["Athens - Acropolis & Parthenon", "Delphi Archaeological Site", "Greek Islands - Mykonos", "Santorini - Sunset & White Houses", "Caldera Views & Wine Tasting"]
-      },
-      "10days": {
-        "title": "Greece 10-Day Itinerary",
-        "days": ["Athens - Acropolis & Parthenon", "Delphi Archaeological Site", "Greek Islands - Mykonos", "Santorini - Sunset & White Houses", "Caldera Views & Wine Tasting", "Crete - Beaches", "Rhodes - Medieval Town", "Paros & Naxos", "Island Hopping", "Return to Athens"]
-      }
+      "id": "australia-5",
+      "country": "Australia",
+      "duration": 5,
+      "title": "Australia 5-Day Itinerary",
+      "badge": "Classic",
+      "days": ["Day 1: Sydney Arrival - Opera House, Harbour Bridge, beaches", "Day 2: Blue Mountains - Day trip to scenic mountain landscapes", "Day 3: Coastal Walks - Bondi to Coogee coastal walk", "Day 4: Taronga Zoo & Manly Beach - Wildlife and northern beaches", "Day 5: Bondi Beach & Local Culture - Shopping, dining, departure"]
     },
     {
-      "name": "Iceland",
-      "slug": "iceland",
-      "url": "/destinations/iceland.html",
-      "3days": {
-        "title": "Iceland 3-Day Itinerary",
-        "days": ["Golden Circle Tour", "Blue Lagoon & Geothermal Spas", "Reykjavik - City Exploration"]
-      },
-      "5days": {
-        "title": "Iceland 5-Day Itinerary",
-        "days": ["Golden Circle Tour", "Blue Lagoon & Geothermal Spas", "South Coast - Waterfalls", "Black Sand Beaches", "Glacier Hiking"]
-      },
-      "10days": {
-        "title": "Iceland 10-Day Itinerary",
-        "days": ["Golden Circle Tour", "Blue Lagoon & Geothermal Spas", "South Coast - Waterfalls", "Black Sand Beaches", "Glacier Hiking", "North Coast - Akureyri", "Lake Myvatn", "Goðafoss Waterfall", "Canyon Exploration", "Return to Reykjavik"]
-      }
+      "id": "australia-10",
+      "country": "Australia",
+      "duration": 10,
+      "title": "Australia 10-Day Itinerary",
+      "badge": "Explorer",
+      "days": ["Day 1: Sydney Arrival - Opera House, Harbour Bridge", "Day 2: Blue Mountains - Mountain landscapes", "Day 3: Coastal Walks - Bondi to Coogee", "Day 4: Taronga Zoo & Manly", "Day 5: Local Culture - Shopping, dining", "Day 6: Flight to Uluru - Ayers Rock sunset", "Day 7: Alice Springs - Desert experience, Indigenous culture", "Day 8: Flight to Great Barrier Reef - Snorkeling & diving", "Day 9: Tropical Rainforest - Daintree National Park", "Day 10: Return to Sydney & Departure"]
     },
     {
-      "name": "India",
-      "slug": "india",
-      "url": "/destinations/india.html",
-      "3days": {
-        "title": "India 3-Day Itinerary",
-        "days": ["Delhi - Red Fort & Old Delhi", "Agra - Taj Mahal", "Local Markets & Food"]
-      },
-      "5days": {
-        "title": "India 5-Day Itinerary",
-        "days": ["Delhi - Red Fort & Old Delhi", "Agra - Taj Mahal", "Local Markets & Food", "Mathura - Krishna Temples", "Jaipur - City Palace"]
-      },
-      "10days": {
-        "title": "India 10-Day Itinerary",
-        "days": ["Delhi - Red Fort & Old Delhi", "Agra - Taj Mahal", "Local Markets & Food", "Mathura - Krishna Temples", "Jaipur - City Palace", "Hawa Mahal & Forts", "Udaipur - Lake City", "Pushkar - Holy Lake", "Jodhpur - Blue City", "Return to Delhi"]
-      }
+      "id": "bali-3",
+      "country": "Indonesia",
+      "duration": 3,
+      "title": "Bali 3-Day Itinerary",
+      "badge": "Quick Escape",
+      "days": ["Day 1: Ubud Arrival - Rice terraces, cultural villages, arts", "Day 2: Temples & Waterfalls - Tegallalang rice paddies, water temples", "Day 3: Beaches & Nightlife - Kuta Beach, beach clubs, nightlife"]
     },
     {
-      "name": "Indonesia",
-      "slug": "indonesia",
-      "url": "/destinations/indonesia.html",
-      "3days": {
-        "title": "Indonesia 3-Day Itinerary",
-        "days": ["Jakarta - National Monuments", "Bandung - Tea Plantations", "Local Culture & Food"]
-      },
-      "5days": {
-        "title": "Indonesia 5-Day Itinerary",
-        "days": ["Jakarta - National Monuments", "Bandung - Tea Plantations", "Yogyakarta - Borobudur Temple", "Lombok - Island Beaches", "Snorkeling & Water Sports"]
-      },
-      "10days": {
-        "title": "Indonesia 10-Day Itinerary",
-        "days": ["Jakarta - National Monuments", "Bandung - Tea Plantations", "Yogyakarta - Borobudur Temple", "Lombok - Island Beaches", "Snorkeling & Water Sports", "Gili Islands", "Komodo Dragon Safari", "Flores Island", "Timor Diving", "Return to Jakarta"]
-      }
+      "id": "bali-5",
+      "country": "Indonesia",
+      "duration": 5,
+      "title": "Bali 5-Day Itinerary",
+      "badge": "Classic",
+      "days": ["Day 1: Ubud Arrival - Rice terraces, cultural villages", "Day 2: Temples & Waterfalls - Temple tours, nature hikes", "Day 3: Mount Batur Sunrise - Early morning trek & breakfast", "Day 4: Beaches & Seaside Villages - Coastal exploration", "Day 5: Relaxation & Nightlife - Spa, beach clubs, departure"]
     },
     {
-      "name": "Italy",
-      "slug": "italy",
-      "url": "/destinations/italy.html",
-      "3days": {
-        "title": "Italy 3-Day Itinerary",
-        "days": ["Rome - Colosseum & Roman Forum", "Vatican City & St. Peter's Basilica", "Venice - Grand Canal & Gondolas"]
-      },
-      "5days": {
-        "title": "Italy 5-Day Itinerary",
-        "days": ["Rome - Colosseum & Roman Forum", "Vatican City & St. Peter's Basilica", "Venice - Grand Canal & Gondolas", "Florence - Duomo & Uffizi Gallery", "Tuscan Countryside"]
-      },
-      "10days": {
-        "title": "Italy 10-Day Itinerary",
-        "days": ["Rome - Colosseum & Roman Forum", "Vatican City & St. Peter's Basilica", "Venice - Grand Canal & Gondolas", "Florence - Duomo & Uffizi Gallery", "Tuscan Countryside", "Amalfi Coast", "Positano - Cliffside Towns", "Pompeii - Ancient Ruins", "Naples - Street Food", "Return to Rome"]
-      }
+      "id": "bali-10",
+      "country": "Indonesia",
+      "duration": 10,
+      "title": "Bali 10-Day Itinerary",
+      "badge": "Explorer",
+      "days": ["Day 1: Ubud Arrival - Rice terraces", "Day 2: Temples & Waterfalls", "Day 3: Mount Batur Sunrise", "Day 4: Beaches & Villages", "Day 5: Relaxation & Nightlife", "Day 6: Spiritual Retreats - Yoga & meditation", "Day 7: Cooking Classes - Traditional Balinese cuisine", "Day 8: Diving & Water Sports - Underwater exploration", "Day 9: Wellness Spa Days", "Day 10: Departure"]
     },
     {
-      "name": "Mexico",
-      "slug": "mexico",
-      "url": "/destinations/mexico.html",
-      "3days": {
-        "title": "Mexico 3-Day Itinerary",
-        "days": ["Mexico City - Zócalo & Museums", "Chichen Itza - Mayan Ruins", "Cancún - Beach Resort"]
-      },
-      "5days": {
-        "title": "Mexico 5-Day Itinerary",
-        "days": ["Mexico City - Zócalo & Museums", "Chichen Itza - Mayan Ruins", "Cancún - Beach Resort", "Playa del Carmen - Cenotes", "Cozumel - Snorkeling"]
-      },
-      "10days": {
-        "title": "Mexico 10-Day Itinerary",
-        "days": ["Mexico City - Zócalo & Museums", "Chichen Itza - Mayan Ruins", "Cancún - Beach Resort", "Playa del Carmen - Cenotes", "Cozumel - Snorkeling", "Tulum - Clifftop Ruins", "Xel-Há - Natural Park", "Puerto Vallarta", "Guadalajara - Cultural City", "Return to Mexico City"]
-      }
+      "id": "egypt-3",
+      "country": "Egypt",
+      "duration": 3,
+      "title": "Egypt 3-Day Itinerary",
+      "badge": "Quick Escape",
+      "days": ["Day 1: Cairo Arrival - Egyptian Museum, Islamic Cairo, mosques", "Day 2: Giza Pyramids & Sphinx - Great Pyramids, Sphinx", "Day 3: Saqqara & Dahshur - Step Pyramid, bent pyramid exploration"]
     },
     {
-      "name": "Peru",
-      "slug": "peru",
-      "url": "/destinations/peru.html",
-      "3days": {
-        "title": "Peru 3-Day Itinerary",
-        "days": ["Lima - Colonial City", "Machu Picchu - Inca Wonder", "Cusco - Sacred Valley"]
-      },
-      "5days": {
-        "title": "Peru 5-Day Itinerary",
-        "days": ["Lima - Colonial City", "Machu Picchu - Inca Wonder", "Cusco - Sacred Valley", "Pisac - Terraces & Market", "Ollantaytambo - Inca Fortress"]
-      },
-      "10days": {
-        "title": "Peru 10-Day Itinerary",
-        "days": ["Lima - Colonial City", "Machu Picchu - Inca Wonder", "Cusco - Sacred Valley", "Pisac - Terraces & Market", "Ollantaytambo - Inca Fortress", "Amazon Rainforest", "Manu National Park", "Lake Titicaca", "Puno - Cultural Heritage", "Return to Lima"]
-      }
+      "id": "egypt-5",
+      "country": "Egypt",
+      "duration": 5,
+      "title": "Egypt 5-Day Itinerary",
+      "badge": "Classic",
+      "days": ["Day 1: Cairo Arrival - Egyptian Museum, Islamic Cairo", "Day 2: Giza Pyramids & Sphinx", "Day 3: Saqqara & Dahshur", "Day 4: Nile River Cruise - Luxury cruise experience", "Day 5: Valley of the Kings - Flight to Luxor, ancient tombs"]
     },
     {
-      "name": "Portugal",
-      "slug": "portugal",
-      "url": "/destinations/portugal.html",
-      "3days": {
-        "title": "Portugal 3-Day Itinerary",
-        "days": ["Lisbon - Belém & Alfama", "Sintra - Palaces & Beaches", "Cascais - Coastal Town"]
-      },
-      "5days": {
-        "title": "Portugal 5-Day Itinerary",
-        "days": ["Lisbon - Belém & Alfama", "Sintra - Palaces & Beaches", "Cascais - Coastal Town", "Porto - Wine & Ribeira", "Aveiro - Canals"]
-      },
-      "10days": {
-        "title": "Portugal 10-Day Itinerary",
-        "days": ["Lisbon - Belém & Alfama", "Sintra - Palaces & Beaches", "Cascais - Coastal Town", "Porto - Wine & Ribeira", "Aveiro - Canals", "Covilhã - Mountain Town", "Batalha - Gothic Monastery", "Nazaré - Giant Waves", "Obidos - Medieval Village", "Return to Lisbon"]
-      }
+      "id": "egypt-10",
+      "country": "Egypt",
+      "duration": 10,
+      "title": "Egypt 10-Day Itinerary",
+      "badge": "Explorer",
+      "days": ["Day 1: Cairo Arrival", "Day 2: Giza Pyramids & Sphinx", "Day 3: Saqqara & Dahshur", "Day 4: Nile River Cruise", "Day 5: Valley of the Kings", "Day 6: Karnak Temples", "Day 7: Luxor - City of Palaces", "Day 8: Aswan & Philae Temple", "Day 9: Abu Simbel - Ancient temples", "Day 10: Return to Cairo & Departure"]
     },
     {
-      "name": "Spain",
-      "slug": "spain",
-      "url": "/destinations/spain.html",
-      "3days": {
-        "title": "Spain 3-Day Itinerary",
-        "days": ["Madrid - Prado Museum & Royal Palace", "Barcelona - Sagrada Familia", "Seville - Flamenco & Alcázar"]
-      },
-      "5days": {
-        "title": "Spain 5-Day Itinerary",
-        "days": ["Madrid - Prado Museum & Royal Palace", "Barcelona - Sagrada Familia", "Park Güell & Gothic Quarter", "Seville - Flamenco & Alcázar", "Granada - Alhambra Palace"]
-      },
-      "10days": {
-        "title": "Spain 10-Day Itinerary",
-        "days": ["Madrid - Prado Museum & Royal Palace", "Barcelona - Sagrada Familia", "Park Güell & Gothic Quarter", "Seville - Flamenco & Alcázar", "Granada - Alhambra Palace", "Costa del Sol - Beaches", "Málaga - Mediterranean", "Toledo - Medieval Town", "Córdoba - Mosques", "Return to Madrid"]
-      }
+      "id": "france-3",
+      "country": "France",
+      "duration": 3,
+      "title": "France 3-Day Itinerary",
+      "badge": "Quick Escape",
+      "days": ["Day 1: Paris Arrival - Eiffel Tower, Louvre Museum", "Day 2: Paris - Notre-Dame, Latin Quarter, Sacré-Cœur", "Day 3: Versailles Palace - Full day at Palace of Versailles"]
     },
     {
-      "name": "South Korea",
-      "slug": "south-korea",
-      "url": "/destinations/south-korea.html",
-      "3days": {
-        "title": "South Korea 3-Day Itinerary",
-        "days": ["Seoul - Palaces & Markets", "Gyeongbokgung Palace", "Gangnam & Nightlife"]
-      },
-      "5days": {
-        "title": "South Korea 5-Day Itinerary",
-        "days": ["Seoul - Palaces & Markets", "Gyeongbokgung Palace", "Gangnam & Nightlife", "N Seoul Tower & Views", "Bukchon Hanok Village"]
-      },
-      "10days": {
-        "title": "South Korea 10-Day Itinerary",
-        "days": ["Seoul - Palaces & Markets", "Gyeongbokgung Palace", "Gangnam & Nightlife", "N Seoul Tower & Views", "Bukchon Hanok Village", "Busan - Port City", "Jeju Island - Nature", "Hiking & Volcanic Landscapes", "Korean Cuisine Tour", "Return to Seoul"]
-      }
+      "id": "france-5",
+      "country": "France",
+      "duration": 5,
+      "title": "France 5-Day Itinerary",
+      "badge": "Classic",
+      "days": ["Day 1: Paris Arrival - Eiffel Tower, Louvre", "Day 2: Paris - Notre-Dame, Latin Quarter", "Day 3: Versailles Palace", "Day 4: Montmartre & Arc de Triomphe", "Day 5: Seine River Cruise & Museums"]
     },
     {
-      "name": "Thailand",
-      "slug": "thailand",
-      "url": "/destinations/thailand.html",
-      "3days": {
-        "title": "Thailand 3-Day Itinerary",
-        "days": ["Bangkok - Grand Palace & Temples", "Chiang Mai - Ancient City", "Beach Resort - Phuket"]
-      },
-      "5days": {
-        "title": "Thailand 5-Day Itinerary",
-        "days": ["Bangkok - Grand Palace & Temples", "Chiang Mai - Ancient City", "Elephant Sanctuaries", "Phuket - Beach Resort", "Phi Phi Islands - Island Hopping"]
-      },
-      "10days": {
-        "title": "Thailand 10-Day Itinerary",
-        "days": ["Bangkok - Grand Palace & Temples", "Chiang Mai - Ancient City", "Elephant Sanctuaries", "Phuket - Beach Resort", "Phi Phi Islands - Island Hopping", "Krabi - Cliff Beaches", "Ao Nang - Water Sports", "Koh Samui - Island Life", "Thai Cooking Classes", "Return to Bangkok"]
-      }
+      "id": "france-10",
+      "country": "France",
+      "duration": 10,
+      "title": "France 10-Day Itinerary",
+      "badge": "Explorer",
+      "days": ["Day 1: Paris Arrival", "Day 2: Louvre & Eiffel Tower", "Day 3: Notre-Dame & Latin Quarter", "Day 4: Versailles Palace", "Day 5: Montmartre & Arc de Triomphe", "Day 6: Provence - Lavender Fields", "Day 7: French Riviera - Nice", "Day 8: Cannes & Monaco", "Day 9: Wine Country", "Day 10: Return to Paris & Departure"]
     },
     {
-      "name": "Turkey",
-      "slug": "turkey",
-      "url": "/destinations/turkey.html",
-      "3days": {
-        "title": "Turkey 3-Day Itinerary",
-        "days": ["Istanbul - Blue Mosque & Hagia Sophia", "Bosphorus Cruise", "Cappadocia - Hot Air Balloon"]
-      },
-      "5days": {
-        "title": "Turkey 5-Day Itinerary",
-        "days": ["Istanbul - Blue Mosque & Hagia Sophia", "Bosphorus Cruise", "Cappadocia - Hot Air Balloon", "Underground Cities", "Turkish Carpet Weaving"]
-      },
-      "10days": {
-        "title": "Turkey 10-Day Itinerary",
-        "days": ["Istanbul - Blue Mosque & Hagia Sophia", "Bosphorus Cruise", "Cappadocia - Hot Air Balloon", "Underground Cities", "Turkish Carpet Weaving", "Ephesus - Ancient Ruins", "Troy - Historical Site", "Aegean Coast - Bodrum", "Turquoise Waters - Antalya", "Return to Istanbul"]
-      }
+      "id": "germany-3",
+      "country": "Germany",
+      "duration": 3,
+      "title": "Germany 3-Day Itinerary",
+      "badge": "Quick Escape",
+      "days": ["Day 1: Berlin Arrival - Brandenburg Gate, historical sites", "Day 2: Neuschwanstein Castle - Day trip to fairy-tale castle", "Day 3: Munich - Marienplatz, beer halls"]
     },
     {
-      "name": "Vietnam",
-      "slug": "vietnam",
-      "url": "/destinations/vietnam.html",
-      "3days": {
-        "title": "Vietnam 3-Day Itinerary",
-        "days": ["Hanoi - Old Quarter & Temples", "Halong Bay Cruise", "Ho Chi Minh City - War History"]
-      },
-      "5days": {
-        "title": "Vietnam 5-Day Itinerary",
-        "days": ["Hanoi - Old Quarter & Temples", "Halong Bay Cruise", "Ninh Binh - Karst Landscape", "Ho Chi Minh City - War History", "Mekong Delta - Floating Markets"]
-      },
-      "10days": {
-        "title": "Vietnam 10-Day Itinerary",
-        "days": ["Hanoi - Old Quarter & Temples", "Halong Bay Cruise", "Ninh Binh - Karst Landscape", "Ho Chi Minh City - War History", "Mekong Delta - Floating Markets", "Hoi An - Ancient Town", "Da Nang - Beaches", "Sapa - Mountain Trekking", "Rice Terraces & Minority Villages", "Return to Hanoi"]
-      }
+      "id": "germany-5",
+      "country": "Germany",
+      "duration": 5,
+      "title": "Germany 5-Day Itinerary",
+      "badge": "Classic",
+      "days": ["Day 1: Berlin Arrival - Brandenburg Gate", "Day 2: Neuschwanstein Castle", "Day 3: Munich - Marienplatz", "Day 4: Bavarian Beer Culture", "Day 5: Rothenburg ob der Tauber - Medieval town"]
+    },
+    {
+      "id": "germany-10",
+      "country": "Germany",
+      "duration": 10,
+      "title": "Germany 10-Day Itinerary",
+      "badge": "Explorer",
+      "days": ["Day 1: Berlin Arrival", "Day 2: Neuschwanstein Castle", "Day 3: Munich", "Day 4: Bavarian Culture", "Day 5: Rothenburg ob der Tauber", "Day 6: Rhine River Valley", "Day 7: Cologne Cathedral", "Day 8: Black Forest", "Day 9: Frankfurt", "Day 10: Return & Departure"]
+    },
+    {
+      "id": "greece-3",
+      "country": "Greece",
+      "duration": 3,
+      "title": "Greece 3-Day Itinerary",
+      "badge": "Quick Escape",
+      "days": ["Day 1: Athens Arrival - Acropolis, Parthenon", "Day 2: Greek Islands - Mykonos island experience", "Day 3: Santorini - Sunset, white houses, caldera views"]
+    },
+    {
+      "id": "greece-5",
+      "country": "Greece",
+      "duration": 5,
+      "title": "Greece 5-Day Itinerary",
+      "badge": "Classic",
+      "days": ["Day 1: Athens - Acropolis & Parthenon", "Day 2: Delphi - Archaeological site", "Day 3: Mykonos - Island hopping", "Day 4: Santorini - Sunset & villages", "Day 5: Caldera Views & Wine Tasting"]
+    },
+    {
+      "id": "greece-10",
+      "country": "Greece",
+      "duration": 10,
+      "title": "Greece 10-Day Itinerary",
+      "badge": "Explorer",
+      "days": ["Day 1: Athens", "Day 2: Delphi", "Day 3: Mykonos", "Day 4: Santorini", "Day 5: Caldera & Wine", "Day 6: Crete - Beaches", "Day 7: Rhodes - Medieval town", "Day 8: Paros & Naxos", "Day 9: Island Hopping", "Day 10: Return & Departure"]
+    },
+    {
+      "id": "iceland-3",
+      "country": "Iceland",
+      "duration": 3,
+      "title": "Iceland 3-Day Itinerary",
+      "badge": "Quick Escape",
+      "days": ["Day 1: Reykjavik Arrival - City exploration", "Day 2: Golden Circle Tour - Geysers, waterfalls, tectonic plates", "Day 3: Blue Lagoon & Geothermal Spas"]
+    },
+    {
+      "id": "iceland-5",
+      "country": "Iceland",
+      "duration": 5,
+      "title": "Iceland 5-Day Itinerary",
+      "badge": "Classic",
+      "days": ["Day 1: Reykjavik - City exploration", "Day 2: Golden Circle Tour", "Day 3: Blue Lagoon & Spas", "Day 4: South Coast - Waterfalls & black sand beaches", "Day 5: Glacier Hiking & Ice Exploration"]
+    },
+    {
+      "id": "iceland-10",
+      "country": "Iceland",
+      "duration": 10,
+      "title": "Iceland 10-Day Itinerary",
+      "badge": "Explorer",
+      "days": ["Day 1: Reykjavik", "Day 2: Golden Circle", "Day 3: Blue Lagoon", "Day 4: South Coast Waterfalls", "Day 5: Black Sand Beaches", "Day 6: Glacier Hiking", "Day 7: North Coast - Akureyri", "Day 8: Lake Myvatn", "Day 9: Goðafoss Waterfall", "Day 10: Return & Departure"]
+    },
+    {
+      "id": "india-3",
+      "country": "India",
+      "duration": 3,
+      "title": "India 3-Day Itinerary",
+      "badge": "Quick Escape",
+      "days": ["Day 1: Delhi Arrival - Red Fort, Old Delhi street food", "Day 2: Agra - Taj Mahal, architectural wonder", "Day 3: Local Markets - Shopping, street food exploration"]
+    },
+    {
+      "id": "india-5",
+      "country": "India",
+      "duration": 5,
+      "title": "India 5-Day Itinerary",
+      "badge": "Classic",
+      "days": ["Day 1: Delhi - Red Fort, Old Delhi", "Day 2: Agra - Taj Mahal", "Day 3: Local Markets & Food", "Day 4: Mathura - Krishna Temples", "Day 5: Jaipur - City Palace, Hawa Mahal"]
+    },
+    {
+      "id": "india-10",
+      "country": "India",
+      "duration": 10,
+      "title": "India 10-Day Itinerary",
+      "badge": "Explorer",
+      "days": ["Day 1: Delhi", "Day 2: Agra - Taj Mahal", "Day 3: Local Food & Markets", "Day 4: Mathura", "Day 5: Jaipur - City Palace", "Day 6: Hawa Mahal & Forts", "Day 7: Udaipur - Lake City", "Day 8: Pushkar - Holy Lake", "Day 9: Jodhpur - Blue City", "Day 10: Return to Delhi & Departure"]
+    },
+    {
+      "id": "italy-3",
+      "country": "Italy",
+      "duration": 3,
+      "title": "Italy 3-Day Itinerary",
+      "badge": "Quick Escape",
+      "days": ["Day 1: Rome Arrival - Colosseum, Roman Forum", "Day 2: Vatican City & St. Peter's Basilica", "Day 3: Venice - Grand Canal, gondolas"]
+    },
+    {
+      "id": "italy-5",
+      "country": "Italy",
+      "duration": 5,
+      "title": "Italy 5-Day Itinerary",
+      "badge": "Classic",
+      "days": ["Day 1: Rome - Colosseum, Roman Forum", "Day 2: Vatican City", "Day 3: Venice - Grand Canal, gondolas", "Day 4: Florence - Duomo, Uffizi Gallery", "Day 5: Tuscan Countryside"]
+    },
+    {
+      "id": "italy-10",
+      "country": "Italy",
+      "duration": 10,
+      "title": "Italy 10-Day Itinerary",
+      "badge": "Explorer",
+      "days": ["Day 1: Rome - Colosseum", "Day 2: Vatican City", "Day 3: Venice - Gondolas", "Day 4: Florence - Art & Culture", "Day 5: Tuscany", "Day 6: Amalfi Coast", "Day 7: Positano - Cliffside towns", "Day 8: Pompeii - Ancient ruins", "Day 9: Naples - Street food", "Day 10: Return & Departure"]
+    },
+    {
+      "id": "mexico-3",
+      "country": "Mexico",
+      "duration": 3,
+      "title": "Mexico 3-Day Itinerary",
+      "badge": "Quick Escape",
+      "days": ["Day 1: Mexico City - Zócalo, museums", "Day 2: Chichen Itza - Mayan ruins", "Day 3: Cancún - Beach resort"]
+    },
+    {
+      "id": "mexico-5",
+      "country": "Mexico",
+      "duration": 5,
+      "title": "Mexico 5-Day Itinerary",
+      "badge": "Classic",
+      "days": ["Day 1: Mexico City - Zócalo, museums", "Day 2: Chichen Itza - Mayan ruins", "Day 3: Cancún - Beach resort", "Day 4: Playa del Carmen - Cenotes", "Day 5: Cozumel - Snorkeling"]
+    },
+    {
+      "id": "mexico-10",
+      "country": "Mexico",
+      "duration": 10,
+      "title": "Mexico 10-Day Itinerary",
+      "badge": "Explorer",
+      "days": ["Day 1: Mexico City", "Day 2: Chichen Itza", "Day 3: Cancún", "Day 4: Playa del Carmen", "Day 5: Cozumel - Snorkeling", "Day 6: Tulum - Clifftop ruins", "Day 7: Xel-Há - Natural park", "Day 8: Puerto Vallarta", "Day 9: Guadalajara - Culture", "Day 10: Return & Departure"]
+    },
+    {
+      "id": "peru-3",
+      "country": "Peru",
+      "duration": 3,
+      "title": "Peru 3-Day Itinerary",
+      "badge": "Quick Escape",
+      "days": ["Day 1: Lima Arrival - Colonial city, museums", "Day 2: Machu Picchu - Inca wonder", "Day 3: Cusco - Sacred Valley"]
+    },
+    {
+      "id": "peru-5",
+      "country": "Peru",
+      "duration": 5,
+      "title": "Peru 5-Day Itinerary",
+      "badge": "Classic",
+      "days": ["Day 1: Lima - Colonial city", "Day 2: Machu Picchu - Inca wonder", "Day 3: Cusco - Sacred Valley", "Day 4: Pisac - Terraces & market", "Day 5: Ollantaytambo - Inca fortress"]
+    },
+    {
+      "id": "peru-10",
+      "country": "Peru",
+      "duration": 10,
+      "title": "Peru 10-Day Itinerary",
+      "badge": "Explorer",
+      "days": ["Day 1: Lima", "Day 2: Machu Picchu", "Day 3: Cusco", "Day 4: Pisac", "Day 5: Ollantaytambo", "Day 6: Amazon Rainforest", "Day 7: Manu National Park", "Day 8: Lake Titicaca", "Day 9: Puno - Cultural heritage", "Day 10: Return & Departure"]
+    },
+    {
+      "id": "portugal-3",
+      "country": "Portugal",
+      "duration": 3,
+      "title": "Portugal 3-Day Itinerary",
+      "badge": "Quick Escape",
+      "days": ["Day 1: Lisbon - Belém, Alfama", "Day 2: Sintra - Palaces, beaches", "Day 3: Cascais - Coastal town"]
+    },
+    {
+      "id": "portugal-5",
+      "country": "Portugal",
+      "duration": 5,
+      "title": "Portugal 5-Day Itinerary",
+      "badge": "Classic",
+      "days": ["Day 1: Lisbon - Belém, Alfama", "Day 2: Sintra - Palaces, beaches", "Day 3: Cascais - Coastal town", "Day 4: Porto - Wine, Ribeira", "Day 5: Aveiro - Canals"]
+    },
+    {
+      "id": "portugal-10",
+      "country": "Portugal",
+      "duration": 10,
+      "title": "Portugal 10-Day Itinerary",
+      "badge": "Explorer",
+      "days": ["Day 1: Lisbon", "Day 2: Sintra", "Day 3: Cascais", "Day 4: Porto", "Day 5: Aveiro", "Day 6: Covilhã", "Day 7: Batalha Monastery", "Day 8: Nazaré", "Day 9: Óbidos", "Day 10: Return & Departure"]
+    },
+    {
+      "id": "spain-3",
+      "country": "Spain",
+      "duration": 3,
+      "title": "Spain 3-Day Itinerary",
+      "badge": "Quick Escape",
+      "days": ["Day 1: Madrid - Prado Museum, Royal Palace", "Day 2: Barcelona - Sagrada Familia", "Day 3: Seville - Flamenco, Alcázar"]
+    },
+    {
+      "id": "spain-5",
+      "country": "Spain",
+      "duration": 5,
+      "title": "Spain 5-Day Itinerary",
+      "badge": "Classic",
+      "days": ["Day 1: Madrid - Prado, Royal Palace", "Day 2: Barcelona - Sagrada Familia", "Day 3: Park Güell & Gothic Quarter", "Day 4: Seville - Flamenco, Alcázar", "Day 5: Granada - Alhambra Palace"]
+    },
+    {
+      "id": "spain-10",
+      "country": "Spain",
+      "duration": 10,
+      "title": "Spain 10-Day Itinerary",
+      "badge": "Explorer",
+      "days": ["Day 1: Madrid", "Day 2: Barcelona", "Day 3: Park Güell", "Day 4: Seville", "Day 5: Granada", "Day 6: Costa del Sol", "Day 7: Málaga", "Day 8: Toledo", "Day 9: Córdoba", "Day 10: Return & Departure"]
+    },
+    {
+      "id": "south-korea-3",
+      "country": "South Korea",
+      "duration": 3,
+      "title": "South Korea 3-Day Itinerary",
+      "badge": "Quick Escape",
+      "days": ["Day 1: Seoul - Palaces, markets", "Day 2: Gyeongbokgung Palace", "Day 3: Gangnam & Nightlife"]
+    },
+    {
+      "id": "south-korea-5",
+      "country": "South Korea",
+      "duration": 5,
+      "title": "South Korea 5-Day Itinerary",
+      "badge": "Classic",
+      "days": ["Day 1: Seoul - Palaces, markets", "Day 2: Gyeongbokgung Palace", "Day 3: Gangnam & Nightlife", "Day 4: N Seoul Tower & Views", "Day 5: Bukchon Hanok Village"]
+    },
+    {
+      "id": "south-korea-10",
+      "country": "South Korea",
+      "duration": 10,
+      "title": "South Korea 10-Day Itinerary",
+      "badge": "Explorer",
+      "days": ["Day 1: Seoul", "Day 2: Gyeongbokgung", "Day 3: Gangnam", "Day 4: N Seoul Tower", "Day 5: Bukchon", "Day 6: Busan", "Day 7: Jeju Island", "Day 8: Hiking", "Day 9: Korean Cuisine", "Day 10: Return & Departure"]
+    },
+    {
+      "id": "thailand-3",
+      "country": "Thailand",
+      "duration": 3,
+      "title": "Thailand 3-Day Itinerary",
+      "badge": "Quick Escape",
+      "days": ["Day 1: Bangkok - Grand Palace, temples", "Day 2: Chiang Mai - Ancient city", "Day 3: Phuket - Beach resort"]
+    },
+    {
+      "id": "thailand-5",
+      "country": "Thailand",
+      "duration": 5,
+      "title": "Thailand 5-Day Itinerary",
+      "badge": "Classic",
+      "days": ["Day 1: Bangkok - Grand Palace", "Day 2: Chiang Mai - Ancient city", "Day 3: Elephant Sanctuaries", "Day 4: Phuket - Beach resort", "Day 5: Phi Phi Islands"]
+    },
+    {
+      "id": "thailand-10",
+      "country": "Thailand",
+      "duration": 10,
+      "title": "Thailand 10-Day Itinerary",
+      "badge": "Explorer",
+      "days": ["Day 1: Bangkok", "Day 2: Chiang Mai", "Day 3: Elephant Sanctuaries", "Day 4: Phuket", "Day 5: Phi Phi Islands", "Day 6: Krabi", "Day 7: Ao Nang", "Day 8: Koh Samui", "Day 9: Cooking Classes", "Day 10: Return & Departure"]
+    },
+    {
+      "id": "turkey-3",
+      "country": "Turkey",
+      "duration": 3,
+      "title": "Turkey 3-Day Itinerary",
+      "badge": "Quick Escape",
+      "days": ["Day 1: Istanbul - Blue Mosque, Hagia Sophia", "Day 2: Bosphorus Cruise", "Day 3: Cappadocia - Hot Air Balloon"]
+    },
+    {
+      "id": "turkey-5",
+      "country": "Turkey",
+      "duration": 5,
+      "title": "Turkey 5-Day Itinerary",
+      "badge": "Classic",
+      "days": ["Day 1: Istanbul - Blue Mosque", "Day 2: Bosphorus Cruise", "Day 3: Cappadocia - Hot Air Balloon", "Day 4: Underground Cities", "Day 5: Turkish Carpet Weaving"]
+    },
+    {
+      "id": "turkey-10",
+      "country": "Turkey",
+      "duration": 10,
+      "title": "Turkey 10-Day Itinerary",
+      "badge": "Explorer",
+      "days": ["Day 1: Istanbul", "Day 2: Bosphorus", "Day 3: Cappadocia", "Day 4: Underground Cities", "Day 5: Carpets", "Day 6: Ephesus", "Day 7: Troy", "Day 8: Bodrum", "Day 9: Antalya", "Day 10: Return & Departure"]
+    },
+    {
+      "id": "vietnam-3",
+      "country": "Vietnam",
+      "duration": 3,
+      "title": "Vietnam 3-Day Itinerary",
+      "badge": "Quick Escape",
+      "days": ["Day 1: Hanoi - Old Quarter, temples", "Day 2: Halong Bay Cruise", "Day 3: Ho Chi Minh City - War history"]
+    },
+    {
+      "id": "vietnam-5",
+      "country": "Vietnam",
+      "duration": 5,
+      "title": "Vietnam 5-Day Itinerary",
+      "badge": "Classic",
+      "days": ["Day 1: Hanoi - Old Quarter", "Day 2: Halong Bay Cruise", "Day 3: Ninh Binh - Karst landscape", "Day 4: Ho Chi Minh City - War history", "Day 5: Mekong Delta - Markets"]
+    },
+    {
+      "id": "vietnam-10",
+      "country": "Vietnam",
+      "duration": 10,
+      "title": "Vietnam 10-Day Itinerary",
+      "badge": "Explorer",
+      "days": ["Day 1: Hanoi", "Day 2: Halong Bay", "Day 3: Ninh Binh", "Day 4: Ho Chi Minh City", "Day 5: Mekong Delta", "Day 6: Hoi An", "Day 7: Da Nang", "Day 8: Sapa", "Day 9: Rice Terraces", "Day 10: Return & Departure"]
     }
   ]
 }
