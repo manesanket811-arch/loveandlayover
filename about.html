@@ -132,7 +132,6 @@ footer a { color:var(--secondary); text-decoration:none; }
   .section { padding:30px 0; }
   .section h2 { font-size:1.5rem; margin-bottom:16px; }
   .section p { font-size:.95rem; margin-bottom:12px; }
-  .meet-section-image { display:none !important; }
   .values-grid { grid-template-columns:1fr; gap:16px; }
   .value-card { padding:20px; border-top-width:3px; }
   .value-card h3 { font-size:1.1rem; }
@@ -169,19 +168,11 @@ footer a { color:var(--secondary); text-decoration:none; }
 
 <main>
 
-<section class="section" style="background: linear-gradient(135deg, rgba(255,107,53,0.05), rgba(247,147,30,0.05)); position: relative; padding-top: 60px; padding-bottom: 60px; overflow: hidden;">
-<div class="meet-section-image" style="position: absolute; left: 0; top: 35%; transform: translateY(-50%); width: clamp(330px, 38vw, 550px); height: clamp(330px, 38vw, 550px); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(31,27,22,0.12);">
-  <img src="/assets/self/nikita1.jpeg" alt="Nikita & Sanket - Travel Creators" style="width: 100%; height: 100%; object-fit: cover;">
-</div>
+<section class="section" style="background: linear-gradient(135deg, rgba(255,107,53,0.05), rgba(247,147,30,0.05)); padding-top: 60px; padding-bottom: 60px;">
+<div class="wrap">
+<h2 style="text-align: center; margin-top: 40px; margin-bottom: 30px;">Meet Nikita & Sanket</h2>
 
-<div class="meet-section-image" style="position: absolute; right: 0; top: 35%; transform: translateY(-50%); width: clamp(330px, 38vw, 550px); height: clamp(330px, 38vw, 550px); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(31,27,22,0.12);">
-  <img src="/assets/self/nikitasanket.jpeg" alt="Nikita & Sanket - Travel Duo" style="width: 100%; height: 100%; object-fit: cover;">
-</div>
-
-<div class="wrap" style="position: relative; z-index: 1;">
-<h2 style="text-align: center; margin-top: 40px; margin-bottom: 30px; padding-left: clamp(20px, 25vw, 120px); padding-right: clamp(20px, 25vw, 120px);">Meet Nikita & Sanket</h2>
-
-<div style="max-width: 800px; margin: 0 auto; padding-left: clamp(20px, 25vw, 120px); padding-right: clamp(20px, 25vw, 120px);">
+<div style="max-width: 800px; margin: 0 auto;">
   <p style="font-size: clamp(0.95rem, 2vw, 1.05rem); line-height: 1.8; color: #3a474e; margin-bottom: 20px;">We are Singapore-based lifestyle creators who never quite settled into just one lane — one day we're curled up at a cafe hunting for the best flat white in the city, the next we're somewhere new, camera in hand, chasing whatever makes life feel a little more special. That's the thing about lifestyle content, really: it's less about a niche and more about noticing the good stuff — food, travel, wellness, little everyday moments — and sharing it in a way that feels honest.</p>
 
   <p style="font-size: clamp(0.95rem, 2vw, 1.05rem); line-height: 1.8; color: #3a474e; margin-bottom: 20px;">We split our world across two spaces: <strong><a href="https://www.instagram.com/nikita.lagaskar" target="_blank" style="color: var(--accent); text-decoration: none;">@nikita.lagaskar</a></strong>, where we share everyday lifestyle, dining spots, and things we genuinely love, and <strong><a href="https://www.instagram.com/mi.punekar_" target="_blank" style="color: var(--accent); text-decoration: none;">@mi.punekar_</a></strong>, our more personal, rooted space that connects back to home and culture. Together, they reach a community of <strong>45,000+ people</strong> who trust our recommendations — not because we're chasing trends, but because we only talk about what we'd tell our own friends.</p>
@@ -191,7 +182,7 @@ footer a { color:var(--secondary); text-decoration:none; }
   <p style="font-size: clamp(0.95rem, 2vw, 1.05rem); line-height: 1.8; color: #3a474e; margin-bottom: 0;">If you're a cafe, restaurant, spa, or brand looking for creators who show up with genuine curiosity, bring an engaged community along for the ride, and treat every collaboration like a relationship rather than a transaction — we'd love to hear from you.</p>
 </div>
 
-<div style="background: white; padding: clamp(16px, 4vw, 24px); border-radius: 12px; border-left: 4px solid var(--accent); text-align: center; margin-left: clamp(20px, 25vw, 120px); margin-right: clamp(20px, 25vw, 120px);">
+<div style="background: white; padding: clamp(16px, 4vw, 24px); border-radius: 12px; border-left: 4px solid var(--accent); text-align: center; margin-top: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
 <p style="margin: 0 0 clamp(16px, 3vw, 24px) 0; font-size: clamp(0.9rem, 2vw, 1rem); color: #3a474e;">
 📍 Based in Singapore<br>
 📸 45K+ across Instagram<br>
@@ -213,6 +204,15 @@ footer a { color:var(--secondary); text-decoration:none; }
     <span style="font-size: clamp(0.7rem, 2vw, 0.85rem);">YouTube</span>
   </a>
 </div>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(clamp(300px, 45vw, 550px), 1fr)); gap: clamp(20px, 4vw, 40px); margin-top: 60px; margin-bottom: 0;">
+  <div style="width: clamp(330px, 38vw, 550px); height: clamp(330px, 38vw, 550px); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(31,27,22,0.12);">
+    <img src="/assets/self/nikita1.jpeg" alt="Nikita & Sanket - Travel Creators" style="width: 100%; height: 100%; object-fit: cover;">
+  </div>
+  <div style="width: clamp(330px, 38vw, 550px); height: clamp(330px, 38vw, 550px); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(31,27,22,0.12);">
+    <img src="/assets/self/nikitasanket.jpeg" alt="Nikita & Sanket - Travel Duo" style="width: 100%; height: 100%; object-fit: cover;">
+  </div>
 </div>
 </div>
 </section>
