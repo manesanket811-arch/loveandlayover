@@ -144,8 +144,39 @@
       <a href="/blog.html">Blog</a>
       <a href="/faq.html">FAQ</a>
     </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+  <nav class="nav-menu" id="navMenu">
+    <a href="/about.html">About Us</a>
+    <a href="/videos.html">Videos</a>
+    <a href="/destinations/">Destinations</a>
+    <a href="/blog.html">Blog</a>
+    <a href="/faq.html">FAQ</a>
   </nav>
 </header>
+
+<script>
+  // Mobile menu toggle
+  const navToggle = document.getElementById('navToggle');
+  const navMenu = document.getElementById('navMenu');
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+    // Close menu when a link is clicked
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+  }
+</script>
 
 <main>
 
