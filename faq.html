@@ -4,6 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Travel FAQ - Budget, Visas, Safety & More | Love and Layovers</title>
+
+<!-- Webkit bridge polyfill for iOS WebView compatibility -->
+<script>
+  if (!window.webkit) {
+    window.webkit = {
+      messageHandlers: new Proxy({}, {
+        get: function() {
+          return { postMessage: function() {} };
+        }
+      })
+    };
+  }
+</script>
 <meta name="description" content="Comprehensive travel FAQ for 16 destinations. Get answers on budgets, visa requirements, best travel seasons, food, safety, transport, accommodation, and trip planning.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Travel FAQ - Budget, Visas, Safety & More | Love and Layovers">

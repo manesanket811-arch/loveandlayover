@@ -4,6 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Free Itinerary Builder - 16 Destination Guides, 3/5/10 Day Plans | Love and Layovers</title>
+
+<!-- Webkit bridge polyfill for iOS WebView compatibility -->
+<script>
+  if (!window.webkit) {
+    window.webkit = {
+      messageHandlers: new Proxy({}, {
+        get: function() {
+          return { postMessage: function() {} };
+        }
+      })
+    };
+  }
+</script>
 <meta name="description" content="Build free itineraries for 16 destinations. Choose your destination and duration (3, 5, or 10 days) for detailed daily plans with costs, attractions, and travel tips.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Free Itinerary Builder - 16 Destination Guides, 3/5/10 Day Plans | Love and Layovers">

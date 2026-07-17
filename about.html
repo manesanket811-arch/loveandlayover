@@ -4,6 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Love and Layovers - Authentic Travel Guides for Indian Travelers</title>
+
+<!-- Webkit bridge polyfill for iOS WebView compatibility -->
+<script>
+  if (!window.webkit) {
+    window.webkit = {
+      messageHandlers: new Proxy({}, {
+        get: function() {
+          return { postMessage: function() {} };
+        }
+      })
+    };
+  }
+</script>
 <meta name="description" content="Love and Layovers is a travel resource created for Indian passport holders. Free destination guides, real itineraries, honest travel costs, and authentic insider tips. Learn our story.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="About Love and Layovers - Real Travel Guides">

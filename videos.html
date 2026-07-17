@@ -4,6 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Travel Videos & YouTube Channel | Love and Layovers</title>
+
+<!-- Webkit bridge polyfill for iOS WebView compatibility -->
+<script>
+  if (!window.webkit) {
+    window.webkit = {
+      messageHandlers: new Proxy({}, {
+        get: function() {
+          return { postMessage: function() {} };
+        }
+      })
+    };
+  }
+</script>
 <meta name="description" content="Watch authentic travel vlogs, destination guides, and food tours on the Love and Layovers YouTube channel. New episodes every week featuring real travel experiences and insider tips.">
 <link rel="canonical" href="https://www.loveandlayover.in/videos.html">
 <meta property="og:type" content="website">

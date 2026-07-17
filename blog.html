@@ -4,6 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Travel Blog | Destination Guides & Itineraries | Love and Layovers</title>
+
+<!-- Webkit bridge polyfill for iOS WebView compatibility -->
+<script>
+  if (!window.webkit) {
+    window.webkit = {
+      messageHandlers: new Proxy({}, {
+        get: function() {
+          return { postMessage: function() {} };
+        }
+      })
+    };
+  }
+</script>
 <meta name="description" content="Travel blog with destination guides for 16 destinations. Real costs, insider tips, day-by-day itineraries, honest reviews, and food guides for independent travelers.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Travel Blog | Destination Guides & Itineraries | Love and Layovers">
