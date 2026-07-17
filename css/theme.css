@@ -545,26 +545,6 @@ header {
   flex-shrink: 0;
 }
 
-.nav-links {
-  display: none !important;
-}
-
-.nav-links a {
-  font-weight: 500;
-  color: var(--ink);
-  text-decoration: none;
-  border-bottom: 2px solid transparent;
-  transition: border-color 0.2s;
-  padding-bottom: 2px;
-  font-size: 0.95rem;
-}
-
-@media (hover: hover) {
-  .nav-links a:hover {
-    border-bottom-color: var(--accent);
-  }
-}
-
 /* Mobile hamburger menu */
 .nav-toggle {
   display: flex;
@@ -658,10 +638,13 @@ header {
     border-bottom: 2px solid transparent;
     padding-bottom: 2px;
     font-size: 0.95rem;
+    transition: border-color 0.2s;
   }
 
-  .nav-menu a:hover {
-    border-bottom-color: var(--accent);
+  @media (hover: hover) {
+    .nav-menu a:hover {
+      border-bottom-color: var(--accent);
+    }
   }
 
   .logo {
