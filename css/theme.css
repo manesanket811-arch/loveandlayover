@@ -657,17 +657,26 @@ header {
 footer {
   background: var(--ink);
   color: #fff;
-  padding: 40px 0 30px;
+  padding: 40px 16px 30px;
   margin-top: 60px;
   text-align: center;
+}
+
+@media (min-width: 769px) {
+  footer {
+    padding: 40px 24px 30px;
+  }
 }
 
 footer .wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
   max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
 }
 
 footer a {
