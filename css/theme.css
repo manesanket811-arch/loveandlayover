@@ -546,9 +546,7 @@ header {
 }
 
 .nav-links {
-  display: none;
-  gap: 24px;
-  list-style: none;
+  display: none !important;
 }
 
 .nav-links a {
@@ -655,14 +653,20 @@ header {
     padding: 0;
     border: none;
     display: inline;
+    font-weight: 500;
+    color: var(--ink);
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+    font-size: 0.95rem;
   }
 
-  .nav-links {
-    display: flex;
+  .nav-menu a:hover {
+    border-bottom-color: var(--accent);
   }
 
   .logo {
     font-size: 1.3rem;
+    margin-right: auto;
   }
 }
 
