@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -17,25 +17,25 @@
     };
   }
 </script>
-<meta name=”description” content=”Free travel itineraries from real trips. Explore 16 destination guides with budgets, food tours, and insider tips from travel creators Sanket & Nikita.”>
-<link rel=”canonical” href=”https://www.loveandlayover.in/”>
-<meta property=”og:type” content=”website”>
-<meta property=”og:title” content=”Love and Layovers - Sanket & Nikita Travel Duo & Content Creators”>
-<meta property="og:description" content="Free itineraries from real trips. Explore 16 destinations worldwide.">
+<meta name="description" content="Authentic travel guides, brand collaborations, and engaging content. Sanket & Nikita - Travel creators trusted by leading global brands.">
+<link rel="canonical" href="https://www.loveandlayover.in/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Love and Layovers - Sanket & Nikita Travel Duo & Content Creators">
+<meta property="og:description" content="Authentic travel guides and brand collaborations from trusted travel creators.">
 <meta property="og:image" content="https://www.loveandlayover.in/public/images/banner.png">
 <meta property="og:url" content="https://www.loveandlayover.in/">
 <meta property="og:site_name" content="Love and Layovers">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Love and Layovers â€” Travel Tips & Itineraries">
-<meta name="twitter:description" content="Free itineraries from real trips for 16 destinations.">
+<meta name="twitter:title" content="Love and Layovers – Travel & Brand Collaborations">
+<meta name="twitter:description" content="Authentic travel guides and brand partnerships.">
 <meta name="twitter:image" content="https://www.loveandlayover.in/public/images/banner.png">
 <meta name="robots" content="index, follow">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="me" href="https://www.instagram.com/loveandlayover">
 <link rel="me" href="https://www.youtube.com/@nikita_sanket_mane">
 
-<!-- Design System -->
-<link rel="stylesheet" href="/css/theme.css">
+<!-- Modern Design System -->
+<link rel="stylesheet" href="/css/modern-theme.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -48,7 +48,7 @@
   "name": "Love and Layovers",
   "url": "https://www.loveandlayover.in",
   "logo": "https://loveandlayover-website-604218333793.s3.us-east-1.amazonaws.com/logo.jpg",
-  "description": "Real travel tips, honest reviews, and ready-to-use itineraries for 16 destinations worldwide",
+  "description": "Authentic travel guides and brand collaborations",
   "sameAs": [
     "https://www.youtube.com/@nikita_sanket_mane",
     "https://www.instagram.com/loveandlayover"
@@ -56,22 +56,6 @@
   "contactPoint": {
     "@type": "ContactPoint",
     "email": "theloveandlayover@gmail.com"
-  }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Love and Layovers",
-  "url": "https://www.loveandlayover.in",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": "https://www.loveandlayover.in/itinerary-builder.html?country={search_term_string}"
-    },
-    "query-input": "required name=search_term_string"
   }
 }
 </script>
@@ -95,7 +79,7 @@
     site: 'us5.datadoghq.com',
     service: 'love-and-layovers',
     env: 'production',
-    version: '1.0.0',
+    version: '2.0.0',
     sessionSampleRate: 100,
     sessionReplaySampleRate: 100,
     trackResources: true,
@@ -110,126 +94,184 @@
     site: 'us5.datadoghq.com',
     service: 'love-and-layovers',
     env: 'production',
-    forwardErrorsToLogs: true,
-    loggerProvider: 'browser'
+    forwardErrorsToLogs: true
   });
 
-  // Log page navigation
   window.DD_LOGS && window.DD_LOGS.logger.info('Page loaded: ' + document.title, {
     url: window.location.href,
     page: 'homepage'
   });
-
-  // Track page navigation via history API
-  const originalPushState = window.history.pushState;
-  window.history.pushState = function() {
-    originalPushState.apply(window.history, arguments);
-    window.DD_LOGS && window.DD_LOGS.logger.info('Page navigation', {
-      url: window.location.href,
-      timestamp: new Date().toISOString()
-    });
-  };
 </script>
+
 </head>
 <body>
 
-<!-- Header & Navigation -->
+<!-- HEADER & NAVIGATION -->
 <header>
-  <nav class="wrap nav">
-    <a href="/" class="logo">Love and Layovers<br><span style="font-size: 0.7em; font-weight: 500; opacity: 0.8;">Sanket & Nikita Travel Duo & Content Creators</span></a>
-    <nav class="nav-menu" id="navMenu">
-      <a href="/about.html">About Us</a>
-      <a href="/videos.html">Videos</a>
-      <a href="/destinations/">Destinations</a>
-      <a href="/blog.html">Blog</a>
-      <a href="/faq.html">FAQ</a>
-    </nav>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </nav>
+  <div class="wrap">
+    <div class="nav">
+      <a href="/" class="logo">Love & Layovers</a>
+      <nav class="nav-menu" id="navMenu">
+        <a href="/about.html">About</a>
+        <a href="/destinations/">Destinations</a>
+        <a href="/videos.html">Videos</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/faq.html">FAQ</a>
+        <a href="mailto:theloveandlayover@gmail.com?subject=Brand%20Collaboration" class="btn btn-primary" style="font-size: 0.9rem; padding: 10px 20px;">Collaborate</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
 </header>
 
-<script>
-  // Mobile menu toggle
-  const navToggle = document.getElementById('navToggle');
-  const navMenu = document.getElementById('navMenu');
-  if (navToggle && navMenu) {
-    navToggle.addEventListener('click', () => {
-      navToggle.classList.toggle('active');
-      navMenu.classList.toggle('active');
-    });
-    // Close menu when a link is clicked
-    navMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navToggle.classList.remove('active');
-        navMenu.classList.remove('active');
-      });
-    });
-  }
-</script>
-
-<main>
-
-<!-- About Intro Section -->
-<section class="section" style="background: linear-gradient(135deg, rgba(255,107,53,0.05), rgba(247,147,30,0.05)); padding-top: 60px; padding-bottom: 60px;">
-<div class="wrap">
-<h2 style="text-align: center; margin-top: 40px; margin-bottom: 30px;">Meet Nikita & Sanket</h2>
-
-<div style="max-width: 800px; margin: 0 auto;">
-  <p style="font-size: clamp(0.95rem, 2vw, 1.05rem); line-height: 1.8; color: #3a474e; margin-bottom: 20px;">We are Singapore-based lifestyle creators who never quite settled into just one lane — one day we're curled up at a cafe hunting for the best flat white in the city, the next we're somewhere new, camera in hand, chasing whatever makes life feel a little more special. That's the thing about lifestyle content, really: it's less about a niche and more about noticing the good stuff — food, travel, wellness, little everyday moments — and sharing it in a way that feels honest.</p>
-
-  <p style="font-size: clamp(0.95rem, 2vw, 1.05rem); line-height: 1.8; color: #3a474e; margin-bottom: 20px;">We split our world across two spaces: <strong><a href="https://www.instagram.com/nikita.lagaskar" target="_blank" style="color: var(--accent); text-decoration: none;">@nikita.lagaskar</a></strong>, where we share everyday lifestyle, dining spots, and things we genuinely love, and <strong><a href="https://www.instagram.com/mi.punekar_" target="_blank" style="color: var(--accent); text-decoration: none;">@mi.punekar_</a></strong>, our more personal, rooted space that connects back to home and culture. Together, they reach a community of <strong>45,000+ people</strong> who trust our recommendations — not because we're chasing trends, but because we only talk about what we'd tell our own friends.</p>
-
-  <p style="font-size: clamp(0.95rem, 2vw, 1.05rem); line-height: 1.8; color: #3a474e; margin-bottom: 20px;">We've had the chance to collaborate with multiple brands, bringing their experiences to life for our audience in a way that felt real rather than scripted — and that's exactly the kind of partnership we love: ones where the brand's story and our voice actually fit together.</p>
-
-  <p style="font-size: clamp(0.95rem, 2vw, 1.05rem); line-height: 1.8; color: #3a474e; margin-bottom: 0;">If you're a cafe, restaurant, spa, or brand looking for creators who show up with genuine curiosity, bring an engaged community along for the ride, and treat every collaboration like a relationship rather than a transaction — we'd love to hear from you.</p>
-</div>
-
-<div style="background: white; padding: clamp(16px, 4vw, 24px); border-radius: 12px; border-left: 4px solid var(--accent); text-align: center; margin-top: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
-<p style="margin: 0 0 clamp(16px, 3vw, 24px) 0; font-size: clamp(0.9rem, 2vw, 1rem); color: #3a474e;">
-📍 Based in Singapore<br>
-📸 45K+ across Instagram<br>
-💌 <strong>Open for collaborations</strong> — let's create something good together.
-</p>
-
-<div style="display: flex; justify-content: center; gap: clamp(16px, 4vw, 24px); margin-top: clamp(12px, 3vw, 20px); flex-wrap: wrap;">
-  <a href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener noreferrer" style="display: flex; flex-direction: column; align-items: center; gap: 8px; text-decoration: none; color: var(--accent); font-weight: 600; transition: transform 0.3s;">
-    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" style="transform: scale(1); transition: transform 0.3s;">
-      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
-    </svg>
-    <span style="font-size: clamp(0.7rem, 2vw, 0.85rem);">Instagram</span>
-  </a>
-
-  <a href="https://www.youtube.com/@nikita_sanket_mane" target="_blank" rel="noopener noreferrer" style="display: flex; flex-direction: column; align-items: center; gap: 8px; text-decoration: none; color: var(--accent); font-weight: 600; transition: transform 0.3s;">
-    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" style="transform: scale(1); transition: transform 0.3s;">
-      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-    </svg>
-    <span style="font-size: clamp(0.7rem, 2vw, 0.85rem);">YouTube</span>
-  </a>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Brands Section -->
-<section class="section">
+<!-- HERO SECTION -->
+<section class="hero">
   <div class="wrap">
-    <h2>Brands We Have Worked With</h2>
-    <p>Trusted by leading travel and lifestyle brands for authentic content, engagement, and community building.</p>
-
-    <div id="brandsContainer" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 40px; margin-bottom: 40px;"></div>
-
-    <div style="text-align: center;">
-      <p style="font-size: 1rem; color: var(--ink-soft); margin-bottom: 20px;">Want to collaborate with Love and Layovers?</p>
-      <a href="mailto:theloveandlayover@gmail.com?subject=Brand Collaboration - Love and Layovers" class="btn btn--primary">Get In Touch</a>
+    <div class="hero-content">
+      <h1>Authentic Travel Stories & Brand Partnerships</h1>
+      <p>Trusted by leading global brands. Real travel experiences, engaging content, and community building.</p>
+      <div class="hero-cta">
+        <a href="mailto:theloveandlayover@gmail.com?subject=Brand%20Collaboration%20-%20Love%20and%20Layovers" class="btn btn-primary">Start a Collaboration</a>
+        <a href="/destinations/" class="btn btn-ghost">Explore Destinations</a>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- BRAND COLLABORATIONS SECTION -->
+<section>
+  <div class="wrap">
+    <div class="section-header text-center">
+      <h2>Brands We Have Worked With</h2>
+      <p>Trusted by leading travel and lifestyle brands for authentic content, engagement, and community building.</p>
+    </div>
+    <div id="brandsContainer" class="grid grid-4"></div>
+    <div class="text-center mt-2xl">
+      <p class="text-muted">Want to collaborate with Love and Layovers?</p>
+      <a href="mailto:theloveandlayover@gmail.com?subject=Brand%20Collaboration%20-%20Love%20and%20Layovers" class="btn btn-primary">Get In Touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- DESTINATIONS SECTION -->
+<section class="alt">
+  <div class="wrap">
+    <div class="section-header">
+      <h2>Explore 16 Destination Guides</h2>
+      <p>Comprehensive travel guides with food recommendations, best times to visit, and daily budgets.</p>
+    </div>
+    <div style="display: flex; gap: var(--spacing-md); margin-bottom: var(--spacing-2xl); flex-wrap: wrap;">
+      <button class="filter-btn active" onclick="filterRegion('all')">All Destinations (16)</button>
+      <button class="filter-btn" onclick="filterRegion('asia')">Asia (8)</button>
+      <button class="filter-btn" onclick="filterRegion('europe')">Europe (8)</button>
+      <button class="filter-btn" onclick="filterRegion('americas')">Americas (4)</button>
+    </div>
+    <a href="/destinations/" class="btn btn-primary">View All Destinations</a>
+  </div>
+</section>
+
+<!-- VIDEOS SECTION -->
+<section>
+  <div class="wrap">
+    <div class="section-header text-center">
+      <h2>Latest Videos</h2>
+      <p>Follow us for authentic travel vlogs, food guides, and destination reviews.</p>
+    </div>
+    <div style="text-align: center;">
+      <a href="/videos.html" class="btn btn-primary">Watch on YouTube</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="alt" style="text-align: center;">
+  <div class="wrap" style="max-width: 700px;">
+    <h2>Ready to Collaborate?</h2>
+    <p style="font-size: 1.125rem; margin-bottom: var(--spacing-2xl);">Join our community of trusted brand partners. We create authentic, engaging content that resonates with our audience.</p>
+    <a href="mailto:theloveandlayover@gmail.com?subject=Brand%20Collaboration%20-%20Love%20and%20Layovers" class="btn btn-primary">Start Your Campaign</a>
+  </div>
+</section>
+
+<!-- SOCIAL LINKS -->
+<section>
+  <div class="wrap text-center">
+    <h2 style="margin-bottom: var(--spacing-2xl);">Follow Us</h2>
+    <div style="display: flex; justify-content: center; gap: var(--spacing-2xl); flex-wrap: wrap;">
+      <a href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: var(--spacing-sm); font-weight: 600;">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/>
+        </svg>
+        Instagram
+      </a>
+      <a href="https://www.youtube.com/@nikita_sanket_mane" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: var(--spacing-sm); font-weight: 600;">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+        </svg>
+        YouTube
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-3xl); margin-bottom: var(--spacing-3xl);">
+      <div class="footer-col">
+        <h3>Love & Layovers</h3>
+        <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: var(--spacing-lg);">Authentic travel guides and brand partnerships from Sanket & Nikita.</p>
+        <a href="mailto:theloveandlayover@gmail.com" style="color: var(--accent); font-weight: 600;">theloveandlayover@gmail.com</a>
+      </div>
+      <div class="footer-col">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/destinations/">Destinations</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/videos.html">Videos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="/itinerary-builder.html">Itinerary Builder</a></li>
+          <li><a href="/faq.html">FAQ</a></li>
+          <li><a href="/">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Love and Layovers · Sanket & Nikita Travel Duo & Content Creators
+    </div>
+  </div>
+</footer>
+
+<style>
+.filter-btn {
+  padding: 8px 20px;
+  border: 2px solid var(--grey-300);
+  border-radius: 8px;
+  background: white;
+  color: var(--grey-700);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(255, 107, 53, 0.05);
+}
+</style>
+
 <script>
+// Brand Collaborations
 const collaborations = [
   {
     brand: "Scentopia",
@@ -321,69 +363,50 @@ const brandsContainer = document.getElementById('brandsContainer');
 if (brandsContainer) {
   collaborations.forEach(collab => {
     const card = document.createElement('div');
+    card.className = 'brand-card';
     const isLinked = collab.link ? true : false;
     const cardContent = `
-      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 30px; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(31,27,22,0.08); transition: all 0.3s; height: 100%;">
-        <div style="width: 100px; height: 80px; background: var(--sand); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; overflow: hidden;">
-          <img src="${collab.logo}" alt="${collab.brand} — Love and Layovers collaboration" style="max-width: 90%; max-height: 90%; object-fit: contain;">
-        </div>
-        <h3 style="font-size: 1.1rem; margin: 0 0 8px 0; text-align: center;">${collab.brand}</h3>
-        <p style="font-size: 0.9rem; color: var(--ink-soft); text-align: center; margin: 0;">${collab.description}</p>
+      <div class="brand-logo">
+        <img src="${collab.logo}" alt="${collab.brand}" loading="lazy">
       </div>
+      <h3>${collab.brand}</h3>
+      <p>${collab.description}</p>
     `;
 
     if (isLinked) {
-      card.innerHTML = `<a href="${collab.link}" style="text-decoration: none; color: inherit; display: block; height: 100%;">${cardContent}</a>`;
+      card.innerHTML = `<a href="${collab.link}" style="text-decoration: none; color: inherit; display: block; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: var(--spacing-xl);">${cardContent}</a>`;
     } else {
       card.innerHTML = cardContent;
     }
     brandsContainer.appendChild(card);
   });
 }
+
+// Mobile Navigation Toggle
+const navToggle = document.getElementById('navToggle');
+const navMenu = document.getElementById('navMenu');
+
+navToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+});
+
+// Close menu on link click
+navMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+  });
+});
+
+// Analytics
+if(window.gtag) {
+  document.querySelectorAll('.brand-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const brand = card.querySelector('h3').textContent;
+      gtag('event', 'brand_view', {brand});
+    });
+  });
+}
 </script>
-
-</main>
-
-<!-- Social Links -->
-<section style="text-align: center; padding: 60px 0; background: var(--paper);">
-  <div class="wrap">
-    <h2 style="margin-bottom: 30px;">Follow Us on Social</h2>
-    <div style="display: flex; justify-content: center; gap: 24px;">
-      <a href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener noreferrer" style="display: flex; flex-direction: column; align-items: center; gap: 8px; text-decoration: none; color: var(--accent); font-weight: 600; transition: transform 0.3s;">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" style="transform: scale(1); transition: transform 0.3s;">
-          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
-        </svg>
-        <span style="font-size: 0.85rem;">Instagram</span>
-      </a>
-
-      <a href="https://www.youtube.com/@nikita_sanket_mane" target="_blank" rel="noopener noreferrer" style="display: flex; flex-direction: column; align-items: center; gap: 8px; text-decoration: none; color: var(--accent); font-weight: 600; transition: transform 0.3s;">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" style="transform: scale(1); transition: transform 0.3s;">
-          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-        </svg>
-        <span style="font-size: 0.85rem;">YouTube</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class=”wrap” style=”text-align:center; display:flex; flex-direction:column; align-items:center;”>
-    <div style=”color:white; display:inline-flex; align-items:center; gap:9px; margin-bottom:20px;”>
-      <span class=”dot”></span>
-      <span style=”font-family:Fraunces,serif; font-weight:900; font-size:1.3rem;”>Love and Layovers</span>
-    </div>
-    <div style=”padding-top:24px; border-top:1px solid rgba(255,255,255,0.1); font-size:0.85rem; color:rgba(255,255,255,0.7); width:100%;”>
-      &copy; 2026 Love and Layovers · Sanket & Nikita Travel Duo & Content Creators
-    </div>
-  </div>
-</footer>
 
 </body>
 </html>
-
-
-
-
-
-
-
