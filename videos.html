@@ -580,7 +580,10 @@
         return;
       }
 
-      videos.slice(0, 6).forEach(video => {
+      // Skip the first video — it's already shown above in the Featured section
+      const remaining = videos.slice(1).length > 0 ? videos.slice(1) : videos;
+
+      remaining.forEach(video => {
         const publishDate = new Date(video.published).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
 
         const card = document.createElement('div');
