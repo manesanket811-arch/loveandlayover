@@ -1,11 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Travel Videos & YouTube Channel | Love and Layovers</title>
 
-<!-- Webkit bridge polyfill for iOS WebView compatibility -->
 <script>
   if (!window.webkit) {
     window.webkit = {
@@ -17,14 +16,15 @@
     };
   }
 </script>
+
 <meta name="description" content="Watch authentic travel vlogs, destination guides, and food tours on the Love and Layovers YouTube channel. New episodes every week featuring real travel experiences and insider tips.">
 <link rel="canonical" href="https://www.loveandlayover.in/videos.html">
 <meta property="og:type" content="website">
-<meta property=”og:title” content=”Travel Videos – Love and Layovers”>
+<meta property="og:title" content="Travel Videos – Love and Layovers">
 <meta property="og:description" content="Watch our travel vlogs and destination guides. New episodes every week.">
 <meta property="og:image" content="https://www.loveandlayover.in/public/images/banner.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name=”twitter:title” content=”Travel Videos – Love and Layovers”>
+<meta name="twitter:title" content="Travel Videos – Love and Layovers">
 <meta name="twitter:description" content="Watch our travel vlogs and destination guides. New episodes every week.">
 <meta name="twitter:image" content="https://www.loveandlayover.in/public/images/banner.png">
 <meta property="og:url" content="https://www.loveandlayover.in/videos.html">
@@ -32,13 +32,11 @@
 <meta name="robots" content="index, follow">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
-<!-- Design System -->
-<link rel="stylesheet" href="/css/modern-theme.css">
+<link rel="stylesheet" href="/css/premium.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<!-- Schema Markup -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -46,7 +44,6 @@
   "name": "Love and Layovers Travel Videos",
   "url": "https://www.loveandlayover.in/videos.html",
   "description": "Authentic travel vlogs, destination guides, and food tours from Love and Layovers",
-  "image": "/banner.png",
   "isPartOf": {
     "@type": "Organization",
     "name": "Love and Layovers",
@@ -65,7 +62,6 @@
 }
 </script>
 
-<!-- Google Analytics -->
 <script defer src="https://www.googletagmanager.com/gtag/js?id=G-5D7GNE6JQL"></script>
 <script defer>
   window.dataLayer = window.dataLayer || [];
@@ -74,7 +70,6 @@
   gtag('config', 'G-5D7GNE6JQL');
 </script>
 
-<!-- Datadog RUM + Logs -->
 <script src="https://www.datadoghq-browser-agent.com/us5/v7/datadog-rum.js"></script>
 <script src="https://www.datadoghq-browser-agent.com/us5/v7/datadog-logs.js"></script>
 <script>
@@ -84,7 +79,7 @@
     site: 'us5.datadoghq.com',
     service: 'love-and-layovers',
     env: 'production',
-    version: '1.0.0',
+    version: '3.0.0',
     sessionSampleRate: 100,
     sessionReplaySampleRate: 100,
     trackResources: true,
@@ -99,326 +94,548 @@
     site: 'us5.datadoghq.com',
     service: 'love-and-layovers',
     env: 'production',
-    forwardErrorsToLogs: true,
-    loggerProvider: 'browser'
+    forwardErrorsToLogs: true
   });
 
-  // Log page navigation
-  window.DD_LOGS && window.DD_LOGS.logger.info('Page loaded: ' + document.title, {
+  window.DD_LOGS && window.DD_LOGS.logger.info('Page loaded: Videos - Love and Layovers', {
     url: window.location.href,
     page: 'videos'
   });
-
-  // Track page navigation via history API
-  const originalPushState = window.history.pushState;
-  window.history.pushState = function() {
-    originalPushState.apply(window.history, arguments);
-    window.DD_LOGS && window.DD_LOGS.logger.info('Page navigation', {
-      url: window.location.href,
-      timestamp: new Date().toISOString()
-    });
-  };
 </script>
+
+<style>
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  [data-reveal].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .videos-hero {
+    margin-top: 80px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: white;
+    padding: var(--spacing-3xl) 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .videos-hero::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    left: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(212, 105, 29, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: float 20s ease-in-out infinite;
+  }
+
+  .videos-hero .container {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+  }
+
+  .videos-hero .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--tertiary);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .videos-hero h1 {
+    color: white;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .videos-hero p {
+    font-size: clamp(1.05rem, 2vw, 1.2rem);
+    color: rgba(255,255,255,0.85);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  /* Featured video */
+  .featured-video {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: var(--spacing-3xl);
+    align-items: center;
+  }
+
+  @media (max-width: 900px) {
+    .featured-video {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .video-frame {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    box-shadow: var(--shadow-xl);
+    background: var(--grey-900);
+  }
+
+  .video-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .video-skeleton {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 14px;
+    background: linear-gradient(90deg, var(--grey-100) 25%, var(--grey-200) 50%, var(--grey-100) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .badge-series {
+    background: rgba(26, 155, 142, 0.12);
+    color: var(--secondary);
+  }
+
+  .badge-date {
+    background: rgba(212, 105, 29, 0.1);
+    color: var(--accent-dark);
+  }
+
+  /* Video grid — properly proportioned cards */
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+  }
+
+  .video-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--grey-200);
+    transition: all var(--duration-base) var(--easing-smooth);
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .video-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--accent);
+  }
+
+  .video-thumb {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    overflow: hidden;
+    background: var(--grey-100);
+  }
+
+  .video-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform var(--duration-slow) var(--easing-smooth);
+  }
+
+  .video-card:hover .video-thumb img {
+    transform: scale(1.08);
+  }
+
+  .video-thumb::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.55) 100%);
+    opacity: 0;
+    transition: opacity var(--duration-base) var(--easing-smooth);
+  }
+
+  .video-card:hover .video-thumb::after {
+    opacity: 1;
+  }
+
+  .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.85);
+    width: 52px;
+    height: 52px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    font-size: 18px;
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    transition: all var(--duration-base) var(--easing-smooth);
+    z-index: 2;
+  }
+
+  .video-card:hover .play-icon {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .video-info {
+    padding: var(--spacing-lg);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .video-info h3 {
+    font-size: 1rem;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1.4;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    letter-spacing: -0.2px;
+  }
+
+  .video-meta {
+    font-size: 0.825rem;
+    color: var(--grey-500);
+    font-weight: 500;
+  }
+
+  .video-watch-link {
+    margin-top: auto;
+    padding-top: var(--spacing-sm);
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap var(--duration-base) var(--easing-smooth);
+  }
+
+  .video-card:hover .video-watch-link {
+    gap: 10px;
+  }
+
+  .video-grid-loading {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: var(--spacing-3xl) 0;
+    color: var(--grey-500);
+  }
+
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--spacing-sm);
+  }
+
+  .nav-toggle span {
+    width: 24px;
+    height: 2px;
+    background: var(--primary);
+    border-radius: 2px;
+    transition: all var(--duration-base) var(--easing-smooth);
+  }
+
+  @media (max-width: 900px) {
+    nav ul {
+      position: fixed;
+      top: 72px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: white;
+      flex-direction: column;
+      padding: var(--spacing-2xl);
+      gap: var(--spacing-xl);
+      transform: translateX(100%);
+      transition: transform var(--duration-base) var(--easing-smooth);
+      align-items: flex-start;
+      overflow-y: auto;
+    }
+    nav ul.active { transform: translateX(0); }
+    .nav-toggle { display: flex; }
+  }
+</style>
 </head>
 <body>
 
-<!-- Header & Navigation -->
 <header>
-  <nav class="wrap nav">
-    <a href="/" class="logo">Love and Layovers</a>
-    <nav class="nav-menu" id="navMenu">
-      <a href="/about.html">About Us</a>
-      <a href="/destinations/">Destinations</a>
-      <a href="/blog.html">Blog</a>
-      <a href="/videos.html">Videos</a>
-      <a href="/faq.html">FAQ</a>
+  <div class="container">
+    <a href="/" class="logo">Love & Layovers</a>
+    <nav>
+      <ul id="navMenu">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/destinations/">Destinations</a></li>
+        <li><a href="/videos.html">Videos</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="mailto:theloveandlayover@gmail.com?subject=Brand%20Collaboration" class="nav-cta">Work With Us</a></li>
+      </ul>
     </nav>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
-      <span></span>
-      <span></span>
-      <span></span>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
     </button>
-  </nav>
+  </div>
 </header>
 
-<script>
-  const navToggle = document.getElementById('navToggle');
-  const navMenu = document.getElementById('navMenu');
-  if (navToggle && navMenu) {
-    navToggle.addEventListener('click', () => {
-      navToggle.classList.toggle('active');
-      navMenu.classList.toggle('active');
-    });
-    navMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navToggle.classList.remove('active');
-        navMenu.classList.remove('active');
-      });
-    });
-  }
-</script>
+<section class="videos-hero">
+  <div class="container">
+    <div class="eyebrow">YouTube Channel</div>
+    <h1>Travel Videos & Vlogs</h1>
+    <p>Authentic destination guides, food tours, and real travel experiences. New episodes every week.</p>
+    <a href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1" class="btn btn-secondary btn-magnetic">Subscribe on YouTube →</a>
+  </div>
+</section>
 
-<main>
-
-<!-- Hero Section -->
-<section class="hero">
-  <div class="wrap">
-    <div style="text-align: center;">
-      <p style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft); margin-bottom: 12px;">
-        YouTube Channel
-      </p>
-      <h1>Travel Videos & Vlogs</h1>
-      <p style="font-size: 1.05rem; color: var(--ink-soft); margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">
-        Authentic destination guides, food tours, and real travel experiences. New episodes every week.
-      </p>
-      <a href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1" class="btn btn--yt" style="font-size: 1.1rem; padding: 14px 32px;">
-        Subscribe on YouTube
-      </a>
+<section>
+  <div class="container">
+    <div class="section-header" data-reveal>
+      <h2>Start Here: Our Latest Video</h2>
+    </div>
+    <div class="featured-video" id="featuredVideoContainer" data-reveal>
+      <div class="video-skeleton"></div>
+      <div>
+        <div class="video-skeleton" style="aspect-ratio: auto; height: 24px; width: 80%; margin-bottom: 12px; border-radius: 4px;"></div>
+        <div class="video-skeleton" style="aspect-ratio: auto; height: 80px; border-radius: 4px;"></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Featured "Start Here" Video -->
-<section class="section section--alt">
-  <div class="wrap">
-    <h2>Start here: Our Latest Video</h2>
-    <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center;" id="featuredVideoContainer">
-      <div style="text-align: center; padding: 40px;">Loading latest video...</div>
+<section class="alt">
+  <div class="container">
+    <div class="section-header" data-reveal>
+      <h2>Latest Episodes</h2>
+      <p>Destination guides, food tours, and travel tips. Subscribe for new videos every week.</p>
+    </div>
+    <div class="video-grid" id="videosGrid" data-stagger>
+      <div class="video-grid-loading">Loading videos from the channel…</div>
+    </div>
+    <div class="text-center mt-3xl" data-reveal>
+      <a href="https://www.youtube.com/@nikita_sanket_mane" class="btn btn-primary btn-magnetic">View All Videos on YouTube →</a>
     </div>
   </div>
 </section>
 
-<script>
-  const loadFeaturedVideo = async () => {
-    const container = document.getElementById('featuredVideoContainer');
-
-    try {
-      const response = await fetch('/videos-data.json');
-      if (!response.ok) throw new Error('Failed to load videos');
-
-      const videos = await response.json();
-      if (videos.length === 0) throw new Error('No videos found');
-
-      const latestVideo = videos[0]; // Most recent video
-      const publishDate = new Date(latestVideo.published).toLocaleDateString('en-US', {
-        month: 'short',
-        day: 'numeric',
-        year: 'numeric'
-      });
-
-      // Create iframe element properly to avoid attribute escaping issues
-      const iframe = document.createElement('iframe');
-      iframe.src = `https://www.youtube.com/embed/${latestVideo.id}`;
-      iframe.title = latestVideo.title;
-      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
-      iframe.allowFullscreen = true;
-      iframe.style.cssText = 'position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 14px;';
-
-      const videoDiv = document.createElement('div');
-      videoDiv.style.cssText = 'position: relative; border-radius: 14px; overflow: hidden; box-shadow: 0 8px 30px rgba(31,27,22,0.08); aspect-ratio: 16 / 9;';
-      videoDiv.appendChild(iframe);
-
-      const mainDiv = document.createElement('div');
-      mainDiv.appendChild(videoDiv);
-
-      const infoDiv = document.createElement('div');
-
-      const titleH3 = document.createElement('h3');
-      titleH3.textContent = latestVideo.title;
-
-      const descP = document.createElement('p');
-      descP.style.cssText = 'font-size: 1.05rem; color: var(--ink-soft); line-height: 1.7; margin-bottom: 20px;';
-      descP.textContent = latestVideo.description || 'Watch our latest travel video on the Love and Layovers channel.';
-
-      const badgeDiv = document.createElement('div');
-      badgeDiv.style.cssText = 'display: flex; gap: 12px; flex-wrap: wrap;';
-
-      const typeBadge = document.createElement('span');
-      typeBadge.className = 'badge badge--sea';
-      typeBadge.textContent = latestVideo.type;
-
-      const dateBadge = document.createElement('span');
-      dateBadge.className = 'badge badge--accent';
-      dateBadge.textContent = publishDate;
-
-      badgeDiv.appendChild(typeBadge);
-      badgeDiv.appendChild(dateBadge);
-
-      const watchLink = document.createElement('a');
-      watchLink.href = `https://www.youtube.com/watch?v=${latestVideo.id}`;
-      watchLink.className = 'btn btn--yt';
-      watchLink.style.cssText = 'margin-top: 20px; display: inline-block;';
-      watchLink.textContent = 'Watch Full Video →';
-
-      infoDiv.appendChild(titleH3);
-      infoDiv.appendChild(descP);
-      infoDiv.appendChild(badgeDiv);
-      infoDiv.appendChild(watchLink);
-
-      mainDiv.appendChild(infoDiv);
-      container.innerHTML = '';
-      container.appendChild(mainDiv);
-    } catch (error) {
-      console.error('Error loading featured video:', error);
-      container.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--ink-soft);"><p>Unable to load video: ${error.message}</p></div>`;
-    }
-  };
-
-  // Load featured video when DOM is ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', loadFeaturedVideo);
-  } else {
-    loadFeaturedVideo();
-  }
-</script>
-
-<!-- Latest Videos Grid -->
-<section class="section">
-  <div class="wrap">
-    <h2>Latest episodes</h2>
-    <p style="font-size: 1.05rem; color: var(--ink-soft); margin-bottom: 30px;">
-      Destination guides, food tours, and travel tips. Subscribe for new videos every week.
-    </p>
-
-    <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;" id="videosGrid">
-      <div style="grid-column: 1/-1; text-align: center; padding: 40px;">Loading videos from your channel...</div>
-    </div>
-
-    <script>
-      const loadVideos = async () => {
-        const grid = document.getElementById('videosGrid');
-
-        try {
-          const response = await fetch('/videos-data.json');
-          if (!response.ok) throw new Error('Failed to load videos');
-
-          const videos = await response.json();
-
-          // Clear loading message
-          grid.innerHTML = '';
-
-          if (videos.length === 0) {
-            grid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--ink-soft);">No videos found.</div>';
-            return;
-          }
-
-          // Display up to 6 videos
-          videos.slice(0, 6).forEach(video => {
-            const card = document.createElement('div');
-            card.className = 'card card--video';
-            card.style.cssText = 'display: flex; flex-direction: column; padding: 0; overflow: hidden;';
-            const publishDate = new Date(video.published).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-
-            card.innerHTML = `
-              <div class="card--video-thumb" style="position: relative; aspect-ratio: 16 / 9; width: 100%; overflow: hidden;">
-                <img src="https://i.ytimg.com/vi/${video.id}/maxresdefault.jpg" alt="${video.title}" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; background: rgba(255, 0, 0, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; cursor: pointer;">▶</div>
-              </div>
-              <div class="card--video-info" style="padding: 2px 4px 1px 4px !important; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                  <h3 style="font-size: 0.7rem; margin: 0 0 0px 0; line-height: 1.0; font-weight: 600;">${video.title}</h3>
-                  <p style="font-size: 0.6rem; color: var(--ink-soft); margin: 0px 0 0 0;">${video.type} • ${publishDate}</p>
-                </div>
-                <a href="https://www.youtube.com/watch?v=${video.id}" class="btn btn--yt" style="width: 100%; text-align: center; font-size: 0.65rem; margin-top: 1px; padding: 2px 4px; min-height: auto; height: 20px; display: flex; align-items: center; justify-content: center;">Watch</a>
-              </div>
-            `;
-            grid.appendChild(card);
-
-            // Add onerror fallback for maxresdefault → hqdefault
-            const img = card.querySelector('img');
-            img.onerror = () => {
-              img.onerror = null;
-              img.src = img.src.replace('maxresdefault', 'hqdefault');
-            };
-
-            // Make thumbnail clickable
-            const thumb = card.querySelector('.card--video-thumb');
-            thumb.style.cursor = 'pointer';
-            thumb.onclick = () => {
-              window.open(`https://www.youtube.com/watch?v=${video.id}`, '_blank');
-            };
-
-            // Add VideoObject JSON-LD schema
-            const ld = document.createElement('script');
-            ld.type = 'application/ld+json';
-            ld.textContent = JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "VideoObject",
-              "name": video.title,
-              "description": video.description || video.title,
-              "thumbnailUrl": `https://i.ytimg.com/vi/${video.id}/maxresdefault.jpg`,
-              "uploadDate": video.published,
-              "contentUrl": `https://www.youtube.com/watch?v=${video.id}`,
-              "embedUrl": `https://www.youtube.com/embed/${video.id}`
-            });
-            document.head.appendChild(ld);
-          });
-        } catch (error) {
-          console.error('Error loading videos:', error);
-          grid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--ink-soft);"><p>Unable to load videos.</p><p style="font-size: 0.9rem; margin-top: 12px;"><a href="https://www.youtube.com/@nikita_sanket_mane">Visit YouTube channel →</a></p></div>';
-        }
-      };
-
-      // Load videos when DOM is ready
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', loadVideos);
-      } else {
-        loadVideos();
-      }
-    </script>
-
-    <div style="text-align: center; margin-top: 40px;">
-      <a href="https://www.youtube.com/@nikita_sanket_mane" class="btn btn--secondary">View all videos on YouTube →</a>
-    </div>
+<section style="background: var(--primary); color: white; text-align: center;">
+  <div class="container" style="max-width: 700px;" data-reveal>
+    <h2 style="color: white;">Join thousands of fellow travelers</h2>
+    <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; margin-bottom: var(--spacing-2xl);">New destination guides every week. Subscribe for real travel experiences and insider tips.</p>
+    <a href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1" class="btn btn-secondary btn-magnetic">Subscribe to Channel →</a>
   </div>
 </section>
 
-<!-- YouTube Subscribe CTA -->
-<section class="section section--alt">
-  <div class="wrap">
-    <div style="text-align: center; max-width: 700px; margin: 0 auto;">
-      <h2>Join 50K+ travelers</h2>
-      <p style="font-size: 1.05rem; color: var(--ink-soft); margin-bottom: 30px;">
-        New destination guide every week. Subscribe for travel tips, food tours, and real travel experiences from around the world.
-      </p>
-      <a href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1" class="btn btn--yt" style="font-size: 1.1rem; padding: 14px 32px;">
-        Subscribe to Channel
-      </a>
-      <p style="font-size: 0.9rem; color: var(--ink-soft); margin-top: 20px;">
-        📹” Turn on notifications for new episodes
-      </p>
-    </div>
+<section>
+  <div class="container text-center" data-reveal>
+    <h2>Follow on Instagram</h2>
+    <p style="max-width: 600px; margin-left: auto; margin-right: auto;">Daily travel moments, behind-the-scenes content, and travel inspiration.</p>
+    <a href="https://www.instagram.com/loveandlayover" class="btn btn-secondary btn-magnetic">Follow @loveandlayover →</a>
   </div>
 </section>
 
-<!-- Instagram Section -->
-<section class="section">
-  <div class="wrap">
-    <div style="text-align: center;">
-      <h2>Follow on Instagram</h2>
-      <p style="font-size: 1.05rem; color: var(--ink-soft); margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">
-        Daily travel moments, behind-the-scenes content, and travel inspiration.
-      </p>
-      <a href="https://www.instagram.com/loveandlayover" class="btn btn--secondary" style="font-size: 1rem;">Follow @loveandlayover</a>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<!-- Footer -->
 <footer>
-  <div class=”wrap”>
-    <div class=”footer-copy” style=”text-align: center;”>
-      &copy; 2026 Love and Layovers · Travel tips with heart ✈
+  <div class="container">
+    <div class="footer-col">
+      <h3 style="font-family: var(--font-serif); font-size: 1.25rem;">Love & Layovers</h3>
+      <p style="color: rgba(255,255,255,0.65); margin-bottom: var(--spacing-lg);">Travel content creators and brand collaboration partners.</p>
+      <a href="mailto:theloveandlayover@gmail.com" style="color: var(--accent); font-weight: 600;">theloveandlayover@gmail.com</a>
     </div>
+    <div class="footer-col">
+      <h3>Explore</h3>
+      <ul>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/destinations/">Destinations</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/videos.html">Videos</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Follow</h3>
+      <ul>
+        <li><a href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="https://www.youtube.com/@nikita_sanket_mane" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 Love and Layovers · Sanket & Nikita Travel Duo & Content Creators
   </div>
 </footer>
 
+<script>
+  // Featured video
+  const loadFeaturedVideo = async () => {
+    const container = document.getElementById('featuredVideoContainer');
+    try {
+      const response = await fetch('/videos-data.json');
+      if (!response.ok) throw new Error('Failed to load videos');
+      const videos = await response.json();
+      if (videos.length === 0) throw new Error('No videos found');
+
+      const latest = videos[0];
+      const publishDate = new Date(latest.published).toLocaleDateString('en-US', {
+        month: 'short', day: 'numeric', year: 'numeric'
+      });
+
+      container.innerHTML = '';
+
+      const frame = document.createElement('div');
+      frame.className = 'video-frame';
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.youtube.com/embed/${latest.id}`;
+      iframe.title = latest.title;
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+      iframe.allowFullscreen = true;
+      frame.appendChild(iframe);
+
+      const info = document.createElement('div');
+
+      const title = document.createElement('h3');
+      title.style.marginBottom = 'var(--spacing-md)';
+      title.textContent = latest.title;
+
+      const desc = document.createElement('p');
+      desc.textContent = latest.description || 'Watch our latest travel video on the Love and Layovers channel.';
+
+      const badges = document.createElement('div');
+      badges.style.cssText = 'display:flex; gap:10px; flex-wrap:wrap; margin: var(--spacing-md) 0 var(--spacing-lg);';
+      badges.innerHTML = `
+        <span class="badge badge-series">${latest.type}</span>
+        <span class="badge badge-date">${publishDate}</span>
+      `;
+
+      const watch = document.createElement('a');
+      watch.href = `https://www.youtube.com/watch?v=${latest.id}`;
+      watch.className = 'btn btn-primary btn-magnetic';
+      watch.target = '_blank';
+      watch.rel = 'noopener noreferrer';
+      watch.textContent = 'Watch Full Video →';
+
+      info.appendChild(title);
+      info.appendChild(badges);
+      info.appendChild(desc);
+      info.appendChild(watch);
+
+      container.appendChild(frame);
+      container.appendChild(info);
+    } catch (error) {
+      console.error('Error loading featured video:', error);
+      container.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--grey-500);">Unable to load video.</div>`;
+    }
+  };
+
+  // Video grid
+  const loadVideos = async () => {
+    const grid = document.getElementById('videosGrid');
+    try {
+      const response = await fetch('/videos-data.json');
+      if (!response.ok) throw new Error('Failed to load videos');
+      const videos = await response.json();
+
+      grid.innerHTML = '';
+
+      if (videos.length === 0) {
+        grid.innerHTML = '<div class="video-grid-loading">No videos found.</div>';
+        return;
+      }
+
+      videos.slice(0, 6).forEach(video => {
+        const publishDate = new Date(video.published).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+
+        const card = document.createElement('div');
+        card.className = 'video-card';
+        card.innerHTML = `
+          <div class="video-thumb">
+            <img src="https://i.ytimg.com/vi/${video.id}/maxresdefault.jpg" alt="${video.title}" loading="lazy">
+            <div class="play-icon">▶</div>
+          </div>
+          <div class="video-info">
+            <h3>${video.title}</h3>
+            <div class="video-meta">${video.type} · ${publishDate}</div>
+            <span class="video-watch-link">Watch now →</span>
+          </div>
+        `;
+
+        const img = card.querySelector('img');
+        img.onerror = () => {
+          img.onerror = null;
+          img.src = img.src.replace('maxresdefault', 'hqdefault');
+        };
+
+        card.onclick = () => window.open(`https://www.youtube.com/watch?v=${video.id}`, '_blank');
+
+        grid.appendChild(card);
+
+        const ld = document.createElement('script');
+        ld.type = 'application/ld+json';
+        ld.textContent = JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "VideoObject",
+          "name": video.title,
+          "description": video.description || video.title,
+          "thumbnailUrl": `https://i.ytimg.com/vi/${video.id}/maxresdefault.jpg`,
+          "uploadDate": video.published,
+          "contentUrl": `https://www.youtube.com/watch?v=${video.id}`,
+          "embedUrl": `https://www.youtube.com/embed/${video.id}`
+        });
+        document.head.appendChild(ld);
+      });
+    } catch (error) {
+      console.error('Error loading videos:', error);
+      grid.innerHTML = '<div class="video-grid-loading">Unable to load videos.<br><a href="https://www.youtube.com/@nikita_sanket_mane">Visit YouTube channel →</a></div>';
+    }
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => { loadFeaturedVideo(); loadVideos(); });
+  } else {
+    loadFeaturedVideo();
+    loadVideos();
+  }
+</script>
+
+<script src="/js/premium-interactions.js"></script>
+
 </body>
 </html>
-
-
-
-
-
