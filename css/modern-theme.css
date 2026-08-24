@@ -700,8 +700,41 @@ footer .wrap {
     display: flex;
   }
 
+  /* Destination guides / blog index / 404 page use .nav-links instead
+     of .nav-menu; mirror the same mobile collapse/toggle behavior here. */
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    background: white;
+    padding: var(--spacing-lg);
+    gap: var(--spacing-md);
+    border-bottom: 1px solid var(--grey-200);
+    box-shadow: var(--shadow-md);
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
   .nav-toggle {
     display: flex;
+  }
+
+  .nav-toggle.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
   }
 
   .hero-cta {

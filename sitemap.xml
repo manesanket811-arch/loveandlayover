@@ -182,21 +182,4 @@
     <lastmod>2026-07-07</lastmod>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://www.loveandlayover.in/resources.html</loc>
-    <lastmod>2026-07-07</lastmod>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Utility Pages (0.6 priority) -->
-  <url>
-    <loc>https://www.loveandlayover.in/testimonials.html</loc>
-    <lastmod>2026-07-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.loveandlayover.in/newsletter.html</loc>
-    <lastmod>2026-07-07</lastmod>
-    <priority>0.6</priority>
-  </url>
 </urlset>
