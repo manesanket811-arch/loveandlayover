@@ -1,5 +1,23 @@
 [
   {
+    "id": "3tBmUOTjOSc",
+    "title": "Trip to Kuala Lumpur Vlog | Day 1 #travel #marathi couple #vlog",
+    "category": "Travel",
+    "type": "Travel Vlog",
+    "published": "2026-09-04T14:30:35+00:00",
+    "description": "",
+    "duration": "5-15 min",
+    "keywords": [
+      "trip",
+      "vlog",
+      "#travel",
+      "#vlog",
+      "itinerary",
+      "adventure"
+    ],
+    "series": "Travel Vlog"
+  },
+  {
     "id": "rVnx0DQk6Fw",
     "title": "GRWM &amp; The Outfit I Actually Wore ✨ #grwm #oufits #travel #ootd #yotubeshorts",
     "category": "Travel",
@@ -112,7 +130,7 @@
   },
   {
     "id": "1oH2of1Y4KI",
-    "title": "Singapore in 2 Hours! 🇸🇬🚌 | FunVee Hop-On Hop-Off City Tour #marathi #couple",
+    "title": "Singapore in 2 Hours! 🇸��🚌 | FunVee Hop-On Hop-Off City Tour #marathi #couple",
     "category": "Travel",
     "type": "Travel",
     "published": "2026-08-12T01:35:40+00:00",
@@ -151,18 +169,5 @@
       "adventure"
     ],
     "series": "Travel Shorts"
-  },
-  {
-    "id": "RFB4bFz76ls",
-    "title": "Singapore Nightlife You Can’t Miss! | Clarke Quay, Boat Quay",
-    "category": "Travel",
-    "type": "Travel",
-    "published": "2026-08-02T04:35:35+00:00",
-    "description": "",
-    "duration": "5-15 min",
-    "keywords": [
-      "adventure"
-    ],
-    "series": "Travel"
   }
 ]
