@@ -69,7 +69,7 @@
 <script src="https://www.datadoghq-browser-agent.com/us5/v7/datadog-rum.js"></script>
 <script src="https://www.datadoghq-browser-agent.com/us5/v7/datadog-logs.js"></script>
 <script>
-  window.DD_RUM && window.DD_RUM.init({
+  window.DD_RUM && window.DD_RUM.init({ beforeSend: function(event) { if (event.type === "error" && event.error && event.error.resource && event.error.resource.url && (event.error.resource.url.indexOf("google-analytics.com") !== -1 || event.error.resource.url.indexOf("googletagmanager.com") !== -1)) { return false; } return true; },
     applicationId: '2b36cb95-5c53-4b4c-afd7-5cc7207d8d8c',
     clientToken: 'pub398e9055d3a8e18d44a22e64e505b1fa',
     site: 'us5.datadoghq.com',
@@ -85,7 +85,7 @@
   });
   window.DD_RUM && window.DD_RUM.startSessionReplayRecording();
 
-  window.DD_LOGS && window.DD_LOGS.init({
+  window.DD_LOGS && window.DD_LOGS.init({ beforeSend: function(log) { if (log.http && log.http.url && (log.http.url.indexOf("google-analytics.com") !== -1 || log.http.url.indexOf("googletagmanager.com") !== -1)) { return false; } return true; },
     clientToken: 'pub398e9055d3a8e18d44a22e64e505b1fa',
     site: 'us5.datadoghq.com',
     service: 'love-and-layovers',

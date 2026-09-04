@@ -29,7 +29,7 @@
     n=o.getElementsByTagName(u)[0];n.parentNode.insertBefore(d,n)
   })(window,document,'script','https://www.datadoghq-browser-agent.com/us5/v7/datadog-rum.js','DD_RUM')
   window.DD_RUM.onReady(function() {
-    window.DD_RUM.init({
+    window.DD_RUM.init({ beforeSend: function(event) { if (event.type === "error" && event.error && event.error.resource && event.error.resource.url && (event.error.resource.url.indexOf("google-analytics.com") !== -1 || event.error.resource.url.indexOf("googletagmanager.com") !== -1)) { return false; } return true; },
         applicationId: '2b36cb95-5c53-4b4c-afd7-5cc7207d8d8c',
         clientToken: 'pub398e9055d3a8e18d44a22e64e505b1fa',
         site: 'us5.datadoghq.com',
