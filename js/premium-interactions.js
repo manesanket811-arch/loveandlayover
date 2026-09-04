@@ -75,6 +75,10 @@
   // Smooth counter animation
   // ============================================
   function animateCounter(el, target, duration = 2000) {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      el.textContent = target.toLocaleString();
+      return;
+    }
     let start = 0;
     const startTime = performance.now();
 
@@ -151,25 +155,37 @@
   const navMenu = document.getElementById('navMenu');
 
   if (navToggle && navMenu) {
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.setAttribute('aria-controls', 'navMenu');
+
+    const setOpen = (open) => {
+      navMenu.classList.toggle('active', open);
+      navToggle.classList.toggle('active', open);
+      document.body.classList.toggle('nav-open', open);
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    };
+
     navToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-      navToggle.classList.toggle('active');
-      document.body.classList.toggle('nav-open');
+      setOpen(!navMenu.classList.contains('active'));
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+        setOpen(false);
+        navToggle.focus();
+      }
     });
 
     navMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        navToggle.classList.remove('active');
-        document.body.classList.remove('nav-open');
-      });
+      link.addEventListener('click', () => setOpen(false));
     });
   }
 
   // ============================================
   // Cursor trail effect (premium touch)
   // ============================================
-  if (window.innerWidth > 1024 && !('ontouchstart' in window)) {
+  if (window.innerWidth > 1024 && !('ontouchstart' in window) &&
+      !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const cursor = document.createElement('div');
     cursor.className = 'cursor-glow';
     cursor.style.cssText = `

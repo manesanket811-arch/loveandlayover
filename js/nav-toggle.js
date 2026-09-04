@@ -10,18 +10,32 @@
 
   function init() {
     var toggle = document.getElementById('navToggle');
-    var menu = document.querySelector('.nav-links');
+    var menu = document.querySelector('.nav-links') || document.getElementById('navMenu');
     if (!toggle || !menu) return;
 
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-controls', menu.id || 'navMenu');
+
+    function setOpen(open) {
+      menu.classList.toggle('active', open);
+      toggle.classList.toggle('active', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+
     toggle.addEventListener('click', function() {
-      menu.classList.toggle('active');
-      toggle.classList.toggle('active');
+      setOpen(!menu.classList.contains('active'));
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && menu.classList.contains('active')) {
+        setOpen(false);
+        toggle.focus();
+      }
     });
 
     menu.querySelectorAll('a').forEach(function(link) {
       link.addEventListener('click', function() {
-        menu.classList.remove('active');
-        toggle.classList.remove('active');
+        setOpen(false);
       });
     });
   }

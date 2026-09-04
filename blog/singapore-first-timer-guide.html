@@ -23,7 +23,7 @@
 <link rel="canonical" href="https://www.loveandlayover.in/blog/singapore-first-timer-guide.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5D7GNE6JQL"></script>
 <script>
@@ -47,9 +47,9 @@
 </script>
 
 <style>
-:root { --ink:#1a2332; --paper:#fefaf5; --accent:#ff6b35; --secondary:#f7931e; }
+:root { --ink:#1a2332; --paper:#fefaf5; --accent:#d4691d; --secondary:#f0a559; }
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:'Outfit',sans-serif; background:var(--paper); color:var(--ink); line-height:1.6; }
+body { font-family:'Inter',sans-serif; background:var(--paper); color:var(--ink); line-height:1.6; }
 h1,h2,h3 { font-family:'Fraunces',serif; font-weight:900; }
 .wrap { max-width:1000px; margin:0 auto; padding:0 24px; }
 header { background:rgba(255,250,242,.92); padding:14px 0; }
@@ -73,21 +73,49 @@ header { background:rgba(255,250,242,.92); padding:14px 0; }
 .cta-box a { color:#fff; font-weight:600; text-decoration:underline; }
 footer { background:var(--ink); color:#fff; padding:40px 0; margin-top:60px; }
 footer a { color:var(--secondary); text-decoration:none; }
+
+/* --- unified nav & a11y (site design system) --- */
+.nav { display:flex; align-items:center; justify-content:space-between; gap:24px; }
+.nav-links { display:flex; gap:24px; align-items:center; }
+.nav-links a { font-weight:500; color:var(--ink, #0a1628); }
+.nav-links a:hover { color:var(--accent); }
+.nav-toggle { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:8px; }
+.nav-toggle span { width:24px; height:2px; background:var(--ink, #0a1628); border-radius:2px; transition:all .15s ease; }
+.nav-toggle.active span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+.nav-toggle.active span:nth-child(2) { opacity:0; }
+.nav-toggle.active span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+@media (max-width:768px) {
+  .nav-toggle { display:flex; }
+  .nav-links { display:none; position:absolute; top:100%; left:0; right:0; flex-direction:column; align-items:flex-start; background:var(--paper, #fefaf5); padding:20px 24px; box-shadow:0 12px 24px rgba(0,0,0,.12); gap:16px; }
+  .nav-links.active { display:flex; }
+  header { position:relative; }
+}
+.skip-link { position:absolute; top:-48px; left:16px; z-index:2000; background:var(--ink, #0a1628); color:#fff; padding:10px 18px; border-radius:0 0 8px 8px; font-weight:600; }
+.skip-link:focus { top:0; color:#fff; }
+a:focus-visible, button:focus-visible { outline:3px solid var(--accent); outline-offset:2px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration:.01ms !important; transition-duration:.01ms !important; scroll-behavior:auto !important; }
+}
+/* --- end unified nav & a11y --- */
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <header>
-<nav class="wrap nav">
+<nav class="wrap nav" aria-label="Main navigation">
 <a href="/" class="logo"><img src="/public/images/brand/logo-mark.svg" alt="" width="34" height="34" style="vertical-align:-0.55em; margin-right:0.4em;">Love and Layovers</a>
 <div class="nav-links">
+<a href="/about.html">About Us</a>
+<a href="/destinations/">Destinations</a>
 <a href="/blog.html">Blog</a>
-<a href="/about.html">About Me</a><a href="/testimonials.html">Testimonials</a>
+<a href="/videos.html">Videos</a>
 </div>
+<button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
 </nav>
 </header>
 
-<main>
+<main id="main">
 <div class="hero">
 <div class="wrap">
 <h1>Singapore First-Timer Guide</h1>
@@ -202,6 +230,7 @@ footer a { color:var(--secondary); text-decoration:none; }
 </div>
 </div>
 
+</main>
 <footer>
 <div class="wrap">
 <p><a href="/blog.html">Blog</a> | <a href="/destinations/singapore.html">Singapore Guide</a></p>
@@ -209,6 +238,7 @@ footer a { color:var(--secondary); text-decoration:none; }
 </div>
 </footer>
 
+<script src="/js/nav-toggle.js" defer></script>
 </body>
 </html>
 

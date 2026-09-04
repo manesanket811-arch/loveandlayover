@@ -4,30 +4,45 @@
    ============================================ */
 
 :root {
-  /* Primary Colors */
-  --primary: #0f172e;
-  --primary-light: #1a2844;
-  --accent: #ff6b35;
-  --accent-light: #ff8555;
-  --accent-dark: #e55a2b;
+  /* Primary Colors — unified premium palette */
+  --primary: #0a1628;
+  --primary-light: #1a2840;
+  --accent: #d4691d;
+  --accent-light: #e07c2e;
+  --accent-dark: #b8541a;
 
   /* Secondary Colors */
-  --secondary: #00d4ff;
+  --secondary: #1a9b8e;
+  --tertiary: #f0a559;
   --success: #10b981;
   --warning: #f59e0b;
 
-  /* Neutrals */
+  /* Neutrals — warm ramp shared with premium.css */
   --white: #ffffff;
-  --grey-50: #f9fafb;
-  --grey-100: #f3f4f6;
-  --grey-200: #e5e7eb;
-  --grey-300: #d1d5db;
-  --grey-400: #9ca3af;
-  --grey-500: #6b7280;
-  --grey-600: #4b5563;
-  --grey-700: #374151;
-  --grey-800: #1f2937;
-  --grey-900: #111827;
+  --off-white: #fafaf8;
+  --grey-50: #f5f5f3;
+  --grey-100: #ebe8e3;
+  --grey-200: #ddd9d0;
+  --grey-300: #c4bdb2;
+  --grey-400: #a89a8a;
+  --grey-500: #8b7f74;
+  --grey-600: #6b6560;
+  --grey-700: #504b44;
+  --grey-800: #3a3530;
+  --grey-900: #1f1b18;
+
+  /* Legacy tokens still referenced by destination/404 markup
+     (previously defined only in the unlinked theme.css) */
+  --ink: #0a1628;
+  --ink-soft: #504b44;
+  --sea: #1a9b8e;
+  --sand: #f0ece4;
+  --yt-red: #ff0000;
+  --radius: 14px;
+  --radius-pill: 999px;
+  --shadow: 0 8px 30px rgba(31, 27, 22, 0.08);
+  --maxw: 1140px;
+  --maxw-prose: 720px;
 
   /* Spacing */
   --spacing-xs: 4px;
@@ -341,6 +356,55 @@ header {
   color: var(--primary);
 }
 
+/* BEM-style button aliases — destination pages and 404 use these names
+   (previously styled only by the unlinked theme.css) */
+.btn--primary {
+  background: var(--accent);
+  color: white;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius-pill);
+}
+
+.btn--primary:hover {
+  background: var(--accent-dark);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn--ghost {
+  border: 2px solid var(--ink);
+  color: var(--ink);
+  background: transparent;
+  border-radius: var(--radius-pill);
+}
+
+.btn--ghost:hover {
+  background: var(--ink);
+  color: white;
+}
+
+.btn--yt {
+  background: var(--yt-red);
+  color: #fff;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius-pill);
+}
+
+.btn--yt::before {
+  content: '▶';
+  font-size: 0.9em;
+  position: static;
+  background: none;
+  transform: none;
+}
+
+.btn--yt:hover {
+  background: #e00000;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
 /* ============================================
    CARD COMPONENTS
    ============================================ */
@@ -540,7 +604,6 @@ section.alt {
   height: 280px;
   cursor: pointer;
   transition: all var(--transition-base);
-  group: true;
 }
 
 .destination-card::before {
@@ -790,3 +853,45 @@ footer .wrap {
 .gap-md { gap: var(--spacing-md); }
 .gap-lg { gap: var(--spacing-lg); }
 .gap-xl { gap: var(--spacing-xl); }
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+.skip-link {
+  position: absolute;
+  top: -48px;
+  left: var(--spacing-md);
+  z-index: 2000;
+  background: var(--primary);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 0 0 8px 8px;
+  font-weight: 600;
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: 0;
+  color: #fff;
+}
+
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
