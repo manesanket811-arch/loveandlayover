@@ -384,52 +384,30 @@
     white-space: nowrap;
   }
 
-  /* Compact cards in the two-column listing */
   .video-columns .video-grid {
-    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-    gap: var(--spacing-md);
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
   }
 
   .video-columns .shorts-grid {
-    grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
-  }
-
-  .video-columns .video-card:hover {
-    transform: translateY(-3px);
-  }
-
-  .video-columns .play-icon {
-    width: 36px;
-    height: 36px;
-    font-size: 13px;
-  }
-
-  .video-columns .video-info {
-    padding: var(--spacing-sm) var(--spacing-md) var(--spacing-md);
-    gap: 4px;
-  }
-
-  .video-columns .video-info h3 {
-    font-size: 0.85rem;
-    line-height: 1.35;
-  }
-
-  .video-columns .video-meta {
-    font-size: 0.75rem;
-  }
-
-  .video-columns .video-watch-link {
-    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
 
   .shorts-grid .video-thumb {
     aspect-ratio: 9 / 16;
   }
 
+  .shorts-grid .video-info {
+    padding: var(--spacing-md);
+  }
+
+  .shorts-grid .video-info h3 {
+    font-size: 0.9rem;
+  }
+
   @media (max-width: 900px) {
     .video-columns { grid-template-columns: 1fr; }
-    .video-columns .video-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .video-columns .shorts-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .video-columns .shorts-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
   }
 
   .video-grid-loading {
@@ -606,7 +584,6 @@
 
 <script>
   const isShort = (video) => video.duration === '< 1 min';
-  const PER_COLUMN = 5; // latest N shown in each of the Videos / Shorts columns
 
   // Featured video
   const loadFeaturedVideo = async () => {
@@ -681,8 +658,8 @@
 
       // The featured section already shows the latest long-form video
       const featured = videos.find(v => !isShort(v)) || videos[0];
-      const longForm = videos.filter(v => !isShort(v) && v !== featured).slice(0, PER_COLUMN);
-      const shorts = videos.filter(isShort).slice(0, PER_COLUMN);
+      const longForm = videos.filter(v => !isShort(v) && v !== featured);
+      const shorts = videos.filter(isShort);
 
       const fill = (target, list, emptyText, short) => {
         target.innerHTML = '';
