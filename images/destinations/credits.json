@@ -286,5 +286,45 @@
     "license": "Public domain",
     "licenseUrl": "",
     "query": "intitle:\"Pavlova dessert\""
+  },
+  "little-india-hero": {
+    "title": "Little India, Singapore (LRM 20230818 202704-RR).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Little_India,_Singapore_(LRM_20230818_202704-RR).jpg",
+    "artist": "Matti Blume",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "query": "intitle:\"Little India Singapore\" incategory:Quality_images"
+  },
+  "universal-studios-singapore-hero": {
+    "title": "Canopy Flyer entrance and station (Universal Studios Singapore).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Canopy_Flyer_entrance_and_station_(Universal_Studios_Singapore).jpg",
+    "artist": "Rojypala",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "query": "intitle:\"Universal Studios Singapore\""
+  },
+  "sentosa-hero": {
+    "title": "Kelongs forming part of the Songs of the Sea, Sentosa, Singapore - 20101201.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Kelongs_forming_part_of_the_Songs_of_the_Sea,_Sentosa,_Singapore_-_20101201.jpg",
+    "artist": "Diego Delso",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "query": "intitle:\"Sentosa\" incategory:Quality_images"
+  },
+  "gardens-by-the-bay-hero": {
+    "title": "Supertree Grove, Gardens by the Bay, Singapore1.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Supertree_Grove,_Gardens_by_the_Bay,_Singapore1.jpg",
+    "artist": "Mustang Joe",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "query": "intitle:\"Supertree Grove\" incategory:Featured_pictures_on_Wikimedia_Commons"
+  },
+  "jewel-changi-hero": {
+    "title": "Rain Vortex Jewel Changi Airport.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Rain_Vortex_Jewel_Changi_Airport.jpg",
+    "artist": "kallerna",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "query": "intitle:\"Jewel Changi Airport\" incategory:Quality_images"
   }
 }
