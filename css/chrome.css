@@ -78,7 +78,13 @@ footer.ftr ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10p
 footer.ftr li { margin: 0; }
 footer.ftr a.mail { color: var(--c-accent); font-weight: 600; display: inline-block; margin-top: 14px; }
 .ftr-bottom { border-top: 1px solid rgba(255,255,255,.1); margin-top: 48px; padding-top: 24px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: .85rem; }
-@media (max-width: 800px) { .ftr-grid { grid-template-columns: 1fr 1fr; } .ftr-grid > :first-child { grid-column: span 2; } }
+@media (max-width: 800px) {
+  .ftr-grid { grid-template-columns: 1fr 1fr; gap: 32px 24px; }
+  .ftr-grid > :first-child, .ftr-grid > :last-child { grid-column: span 2; }
+  /* "Follow" links sit in one wrapped row instead of a lone tall column */
+  .ftr-grid > :last-child ul { display: flex; flex-wrap: wrap; gap: 10px 22px; }
+  .ftr-bottom { flex-direction: column; gap: 6px; margin-top: 36px; }
+}
 
 @media (prefers-reduced-motion: reduce) {
   header.hdr *, footer.ftr * { transition: none !important; }

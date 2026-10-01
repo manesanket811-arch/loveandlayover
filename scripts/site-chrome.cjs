@@ -32,7 +32,7 @@ function footer() {
   <div class="ftr-wrap">
     <div class="ftr-grid">
       <div>
-        <a href="/" class="site-brand"><img src="/public/images/brand/icon-dark.svg" alt="" width="36" height="36">Love &amp; Layovers</a>
+        <a href="/" class="site-brand"><img src="/public/images/brand/logo-mark-light.svg" alt="" width="36" height="36">Love &amp; Layovers</a>
         <p>Travel &amp; lifestyle content creators in Singapore — films, Reels and free travel guides.</p>
         <a class="mail" href="mailto:theloveandlayover@gmail.com">theloveandlayover@gmail.com</a>
       </div>
@@ -57,7 +57,7 @@ function footer() {
 </footer>`;
 }
 
-const HEAD_LINKS = '<link rel="stylesheet" href="/css/chrome.css?v=1">';
+const HEAD_LINKS = '<link rel="stylesheet" href="/css/chrome.css?v=2">';
 const SCRIPT = '<script src="/js/site.js?v=2"></script>';
 
 module.exports = { header, footer, HEAD_LINKS, SCRIPT };

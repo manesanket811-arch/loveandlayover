@@ -8,7 +8,7 @@ const path = require('path');
 const { header, footer, HEAD_LINKS, SCRIPT } = require('./site-chrome.cjs');
 
 const ROOT = path.join(__dirname, '..');
-const REFRESH = '<link rel="stylesheet" href="/css/refresh.css?v=1">';
+const REFRESH = '<link rel="stylesheet" href="/css/refresh.css?v=2">';
 // Pages already built on css/site.css don't need the refresh layer
 const MODERN = new Set(['index.html', 'about.html', 'videos.html', 'blog.html', 'work-with-us.html']);
 
