@@ -105,3 +105,17 @@ section.hero { background: radial-gradient(70% 120% at 85% 0%, rgba(240,165,89,.
 @media (max-width: 700px) {
   main table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
 }
+
+/* Follow buttons (replaced the unconnected newsletter forms) */
+.follow-btns { display: flex; flex-wrap: wrap; gap: 10px; }
+.follow-btns.centered { justify-content: center; }
+.follow-btns.stacked { flex-direction: column; margin-top: 14px; }
+.follow-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 20px; border-radius: 999px; font-weight: 700; font-size: .92rem; line-height: 1; color: #fff !important; text-decoration: none !important; transition: transform .2s ease, box-shadow .2s ease; }
+.follow-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(10,22,40,.18); }
+.follow-btn.yt { background: #ff0033; }
+.follow-btn.ig { background: linear-gradient(45deg, #f09433, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888); }
+.cta-box .follow-btn.yt { background: #fff; color: #d4691d !important; }
+.cta-box .follow-btn.ig { background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.6); }
+.follow-btns.stacked .follow-btn { font-size: .84rem; padding: 11px 12px; white-space: nowrap; gap: 6px; }
+.guide-sidebar h3 { font-size: 1rem; margin: 0 0 12px; }
+.guide-sidebar p { margin: 0; font-size: .9rem; color: var(--r-ink-soft); }

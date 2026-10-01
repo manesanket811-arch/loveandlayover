@@ -115,7 +115,7 @@ function layout({ title, description, canonical, image, head = '', body }) {
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/css/modern-theme.css">
 ${chrome.HEAD_LINKS}
-<link rel="stylesheet" href="/css/refresh.css?v=2">
+<link rel="stylesheet" href="/css/refresh.css?v=5">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
