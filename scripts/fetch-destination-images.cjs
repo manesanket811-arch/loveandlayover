@@ -52,6 +52,8 @@ const WANT = {
   'peru-food': ['Ceviche', 'Peruvian cuisine', 'Lomo saltado'],
   'egypt-hero': ['Giza pyramids', 'Pyramids of Giza', 'Abu Simbel'],
   'egypt-food': ['Koshary', 'Egyptian cuisine', 'Ful medames'],
+  'malaysia-hero': ['Petronas Twin Towers', 'Petronas Towers', 'Kuala Lumpur skyline', 'Batu Caves'],
+  'malaysia-food': ['Nasi lemak', 'Roti canai', 'Char kway teow'],
   'australia-hero': ['Sydney Opera House', 'Uluru', 'Twelve Apostles'],
   // Singapore blog posts
   'little-india-hero': ['Sri Veeramakaliamman', 'Little India Arcade', 'Deepavali Little India', 'Tekka Centre'],
