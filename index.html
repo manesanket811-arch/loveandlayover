@@ -294,13 +294,13 @@
   .filter[aria-pressed="true"] { background: var(--navy); border-color: var(--navy); color: #fff; }
   .dest-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
   .dest { position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: 230px; padding: 20px; border-radius: var(--radius); color: #fff; overflow: hidden; isolation: isolate; box-shadow: var(--shadow-sm); transition: transform .25s ease, box-shadow .25s ease; }
-  .dest::before { content: ''; position: absolute; inset: 0; z-index: -2; background: var(--g); transition: transform .5s ease; }
-  .dest::after { content: ''; position: absolute; inset: 0; z-index: -1; background: radial-gradient(120% 80% at 100% 0%, rgba(255,255,255,.22), transparent 60%); }
+  .dest::before { content: ''; position: absolute; inset: 0; z-index: -2; background: var(--img, none) center / cover no-repeat, var(--g); transition: transform .6s ease; }
+  .dest::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(10,22,40,.10) 0%, rgba(10,22,40,.15) 35%, rgba(10,22,40,.82) 100%); }
   .dest:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
   .dest:hover::before { transform: scale(1.06); }
-  .dest .flag { position: absolute; top: 16px; left: 18px; font-size: 2rem; line-height: 1; }
+  .dest .flag { position: absolute; top: 16px; left: 18px; font-size: 1.8rem; line-height: 1; filter: drop-shadow(0 2px 6px rgba(0,0,0,.35)); }
   .dest .tag { position: absolute; top: 18px; right: 16px; font-size: .7rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; background: rgba(255,255,255,.2); padding: 5px 9px; border-radius: 99px; backdrop-filter: blur(6px); }
-  .dest h3 { font-size: 1.5rem; font-weight: 900; }
+  .dest h3 { font-size: 1.5rem; font-weight: 900; text-shadow: 0 2px 12px rgba(0,0,0,.35); }
   .dest p { font-size: .88rem; opacity: .88; margin-top: 4px; }
   .dest .go { margin-top: 14px; font-size: .85rem; font-weight: 700; display: inline-flex; gap: 6px; }
   .dest[hidden] { display: none; }
@@ -514,26 +514,26 @@
     </div>
 
     <div class="dest-grid reveal" id="destGrid" data-filter="all">
-      <a class="dest" data-region="asia" href="/destinations/singapore.html" style="--g:linear-gradient(150deg,#d4691d,#7a2e12)"><span class="flag">🇸🇬</span><span class="tag">Our home</span><h3>Singapore</h3><p>Hawker food, Marina Bay &amp; easy layovers</p><span class="go">3 · 5 · 10-day plans →</span></a>
-      <a class="dest" data-region="asia" href="/destinations/japan.html" style="--g:linear-gradient(150deg,#e11d48,#5b1027)"><span class="flag">🇯🇵</span><h3>Japan</h3><p>Tokyo, Kyoto &amp; Mt. Fuji</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="asia" href="/destinations/thailand.html" style="--g:linear-gradient(150deg,#0ea5a4,#0b3b4c)"><span class="flag">🇹🇭</span><h3>Thailand</h3><p>Bangkok streets to Phuket beaches</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="asia" href="/destinations/bali.html" style="--g:linear-gradient(150deg,#16a34a,#0f3d2a)"><span class="flag">🇮🇩</span><h3>Bali</h3><p>Temples, rice terraces &amp; sunsets</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="asia" href="/destinations/vietnam.html" style="--g:linear-gradient(150deg,#dc2626,#4c1212)"><span class="flag">🇻🇳</span><h3>Vietnam</h3><p>Hanoi, Ha Long Bay &amp; pho</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="asia" href="/destinations/south-korea.html" style="--g:linear-gradient(150deg,#4f46e5,#1e1b4b)"><span class="flag">🇰🇷</span><h3>South Korea</h3><p>Seoul palaces &amp; street food</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="asia" href="/destinations/india.html" style="--g:linear-gradient(150deg,#f59e0b,#7c2d12)"><span class="flag">🇮🇳</span><h3>India</h3><p>Taj Mahal, Delhi &amp; Rajasthan</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="asia" href="/destinations/indonesia.html" style="--g:linear-gradient(150deg,#b45309,#3b1d0a)"><span class="flag">🇮🇩</span><h3>Indonesia</h3><p>Borobudur &amp; Yogyakarta</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="more" href="/destinations/turkey.html" style="--g:linear-gradient(150deg,#e11d48,#450a0a)"><span class="flag">🇹🇷</span><h3>Turkey</h3><p>Istanbul &amp; Cappadocia balloons</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="europe" href="/destinations/italy.html" style="--g:linear-gradient(150deg,#059669,#7f1d1d)"><span class="flag">🇮🇹</span><h3>Italy</h3><p>Rome, Venice &amp; Tuscany</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="europe" href="/destinations/greece.html" style="--g:linear-gradient(150deg,#0284c7,#0c2a4a)"><span class="flag">🇬🇷</span><h3>Greece</h3><p>Athens &amp; Santorini sunsets</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="europe" href="/destinations/france.html" style="--g:linear-gradient(150deg,#2563eb,#831843)"><span class="flag">🇫🇷</span><h3>France</h3><p>Paris, cafés &amp; the Louvre</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="europe" href="/destinations/spain.html" style="--g:linear-gradient(150deg,#ea580c,#7f1d1d)"><span class="flag">🇪🇸</span><h3>Spain</h3><p>Barcelona, Madrid &amp; tapas</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="europe" href="/destinations/portugal.html" style="--g:linear-gradient(150deg,#15803d,#7f1d1d)"><span class="flag">🇵🇹</span><h3>Portugal</h3><p>Lisbon trams &amp; Porto wine</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="europe" href="/destinations/germany.html" style="--g:linear-gradient(150deg,#475569,#111827)"><span class="flag">🇩🇪</span><h3>Germany</h3><p>Berlin, Munich &amp; castles</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="europe" href="/destinations/iceland.html" style="--g:linear-gradient(150deg,#06b6d4,#0f172a)"><span class="flag">🇮🇸</span><h3>Iceland</h3><p>Northern Lights &amp; waterfalls</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="americas" href="/destinations/mexico.html" style="--g:linear-gradient(150deg,#16a34a,#7f1d1d)"><span class="flag">🇲🇽</span><h3>Mexico</h3><p>Mexico City &amp; ancient ruins</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="americas" href="/destinations/peru.html" style="--g:linear-gradient(150deg,#b91c1c,#422006)"><span class="flag">🇵🇪</span><h3>Peru</h3><p>Machu Picchu &amp; Cusco</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="more" href="/destinations/egypt.html" style="--g:linear-gradient(150deg,#d97706,#451a03)"><span class="flag">🇪🇬</span><h3>Egypt</h3><p>Pyramids &amp; the Nile</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="more" href="/destinations/australia.html" style="--g:linear-gradient(150deg,#0369a1,#172554)"><span class="flag">🇦🇺</span><h3>Australia</h3><p>Sydney &amp; the Great Barrier Reef</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="asia" href="/destinations/singapore.html" style="--g:linear-gradient(150deg,#d4691d,#7a2e12)" data-bg="/images/destinations/thumbs/singapore-hero.webp"><span class="flag">🇸🇬</span><span class="tag">Our home</span><h3>Singapore</h3><p>Hawker food, Marina Bay &amp; easy layovers</p><span class="go">3 · 5 · 10-day plans →</span></a>
+      <a class="dest" data-region="asia" href="/destinations/japan.html" style="--g:linear-gradient(150deg,#e11d48,#5b1027)" data-bg="/images/destinations/thumbs/japan-hero.webp"><span class="flag">🇯🇵</span><h3>Japan</h3><p>Tokyo, Kyoto &amp; Mt. Fuji</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="asia" href="/destinations/thailand.html" style="--g:linear-gradient(150deg,#0ea5a4,#0b3b4c)" data-bg="/images/destinations/thumbs/thailand-hero.webp"><span class="flag">🇹🇭</span><h3>Thailand</h3><p>Bangkok streets to Phuket beaches</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="asia" href="/destinations/bali.html" style="--g:linear-gradient(150deg,#16a34a,#0f3d2a)" data-bg="/images/destinations/thumbs/bali-hero.webp"><span class="flag">🇮🇩</span><h3>Bali</h3><p>Temples, rice terraces &amp; sunsets</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="asia" href="/destinations/vietnam.html" style="--g:linear-gradient(150deg,#dc2626,#4c1212)" data-bg="/images/destinations/thumbs/vietnam-hero.webp"><span class="flag">🇻🇳</span><h3>Vietnam</h3><p>Hanoi, Ha Long Bay &amp; pho</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="asia" href="/destinations/south-korea.html" style="--g:linear-gradient(150deg,#4f46e5,#1e1b4b)" data-bg="/images/destinations/thumbs/south-korea-hero.webp"><span class="flag">🇰🇷</span><h3>South Korea</h3><p>Seoul palaces &amp; street food</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="asia" href="/destinations/india.html" style="--g:linear-gradient(150deg,#f59e0b,#7c2d12)" data-bg="/images/destinations/thumbs/india-hero.webp"><span class="flag">🇮🇳</span><h3>India</h3><p>Taj Mahal, Delhi &amp; Rajasthan</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="asia" href="/destinations/indonesia.html" style="--g:linear-gradient(150deg,#b45309,#3b1d0a)" data-bg="/images/destinations/thumbs/indonesia-hero.webp"><span class="flag">🇮🇩</span><h3>Indonesia</h3><p>Borobudur &amp; Yogyakarta</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="more" href="/destinations/turkey.html" style="--g:linear-gradient(150deg,#e11d48,#450a0a)" data-bg="/images/destinations/thumbs/turkey-hero.webp"><span class="flag">🇹🇷</span><h3>Turkey</h3><p>Istanbul &amp; Cappadocia balloons</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="europe" href="/destinations/italy.html" style="--g:linear-gradient(150deg,#059669,#7f1d1d)" data-bg="/images/destinations/thumbs/italy-hero.webp"><span class="flag">🇮🇹</span><h3>Italy</h3><p>Rome, Venice &amp; Tuscany</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="europe" href="/destinations/greece.html" style="--g:linear-gradient(150deg,#0284c7,#0c2a4a)" data-bg="/images/destinations/thumbs/greece-hero.webp"><span class="flag">🇬🇷</span><h3>Greece</h3><p>Athens &amp; Santorini sunsets</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="europe" href="/destinations/france.html" style="--g:linear-gradient(150deg,#2563eb,#831843)" data-bg="/images/destinations/thumbs/france-hero.webp"><span class="flag">🇫🇷</span><h3>France</h3><p>Paris, cafés &amp; the Louvre</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="europe" href="/destinations/spain.html" style="--g:linear-gradient(150deg,#ea580c,#7f1d1d)" data-bg="/images/destinations/thumbs/spain-hero.webp"><span class="flag">🇪🇸</span><h3>Spain</h3><p>Barcelona, Madrid &amp; tapas</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="europe" href="/destinations/portugal.html" style="--g:linear-gradient(150deg,#15803d,#7f1d1d)" data-bg="/images/destinations/thumbs/portugal-hero.webp"><span class="flag">🇵🇹</span><h3>Portugal</h3><p>Lisbon trams &amp; Porto wine</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="europe" href="/destinations/germany.html" style="--g:linear-gradient(150deg,#475569,#111827)" data-bg="/images/destinations/thumbs/germany-hero.webp"><span class="flag">🇩🇪</span><h3>Germany</h3><p>Berlin, Munich &amp; castles</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="europe" href="/destinations/iceland.html" style="--g:linear-gradient(150deg,#06b6d4,#0f172a)" data-bg="/images/destinations/thumbs/iceland-hero.webp"><span class="flag">🇮🇸</span><h3>Iceland</h3><p>Northern Lights &amp; waterfalls</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="americas" href="/destinations/mexico.html" style="--g:linear-gradient(150deg,#16a34a,#7f1d1d)" data-bg="/images/destinations/thumbs/mexico-hero.webp"><span class="flag">🇲🇽</span><h3>Mexico</h3><p>Mexico City &amp; ancient ruins</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="americas" href="/destinations/peru.html" style="--g:linear-gradient(150deg,#b91c1c,#422006)" data-bg="/images/destinations/thumbs/peru-hero.webp"><span class="flag">🇵🇪</span><h3>Peru</h3><p>Machu Picchu &amp; Cusco</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="more" href="/destinations/egypt.html" style="--g:linear-gradient(150deg,#d97706,#451a03)" data-bg="/images/destinations/thumbs/egypt-hero.webp"><span class="flag">🇪🇬</span><h3>Egypt</h3><p>Pyramids &amp; the Nile</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="more" href="/destinations/australia.html" style="--g:linear-gradient(150deg,#0369a1,#172554)" data-bg="/images/destinations/thumbs/australia-hero.webp"><span class="flag">🇦🇺</span><h3>Australia</h3><p>Sydney &amp; the Great Barrier Reef</p><span class="go">Read guide →</span></a>
     </div>
     <div class="dest-foot reveal"><a href="/destinations/" class="btn btn-ghost">Browse all destinations <span aria-hidden="true">→</span></a></div>
   </div>
@@ -662,7 +662,7 @@
       </div>
       <div>
         <h4>Follow</h4>
-        <ul><li><a href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1" target="_blank" rel="noopener">YouTube</a></li><li><a href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener">Instagram</a></li><li><a href="/about.html">About us</a></li><li><a href="#work-with-us">Work with us</a></li></ul>
+        <ul><li><a href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1" target="_blank" rel="noopener">YouTube</a></li><li><a href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener">Instagram</a></li><li><a href="/about.html">About us</a></li><li><a href="#work-with-us">Work with us</a></li><li><a href="/credits.html">Photo credits</a></li></ul>
       </div>
     </div>
     <div class="ftr-bottom">
@@ -706,6 +706,23 @@
     reveals.forEach(function (el) { io.observe(el); });
   } else {
     reveals.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  // Destination photos: load when the grid nears the viewport
+  var destGrid = document.getElementById('destGrid');
+  var loadBgs = function () {
+    destGrid.querySelectorAll('[data-bg]').forEach(function (c) {
+      c.style.setProperty('--img', 'url("' + c.getAttribute('data-bg') + '")');
+      c.removeAttribute('data-bg');
+    });
+  };
+  if ('IntersectionObserver' in window) {
+    var bgObs = new IntersectionObserver(function (entries) {
+      if (entries.some(function (e) { return e.isIntersecting; })) { loadBgs(); bgObs.disconnect(); }
+    }, { rootMargin: '600px 0px' });
+    bgObs.observe(destGrid);
+  } else {
+    loadBgs();
   }
 
   // Destination filter

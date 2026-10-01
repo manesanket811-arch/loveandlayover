@@ -30,9 +30,12 @@ jobs:
           ONLY: ${{ inputs.only }}
         run: node scripts/fetch-destination-images.cjs
 
+      - name: Build photo credits page
+        run: node scripts/build-photo-credits.cjs
+
       - name: Commit images
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add images/destinations
+          git add images/destinations credits.html
           git diff --staged --quiet || (git commit -m "chore: fetch destination images from Wikimedia Commons" && git pull --rebase && git push)
