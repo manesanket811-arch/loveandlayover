@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>16 Destination Guides | Asia • Europe • Americas | Love and Layovers</title>
-<meta name="description" content="Explore 16 destination guides organized by region: Asia (7), Europe (6), Americas & Others (3). Free itineraries with food guides, best times to visit, neighborhood guides, and budgets for each destination.">
+<title>20 Destination Guides | Asia • Europe • Americas | Love and Layovers</title>
+<meta name="description" content="Explore 20 destination guides organized by region: Asia (8), Europe (8), Americas & Others (4). Free itineraries with food guides, best times to visit, neighborhood guides, and budgets for each destination.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="16 Destination Guides | Asia • Europe • Americas | Love and Layovers">
-<meta property="og:description" content="Explore 16 destination guides organized by region: Asia (7), Europe (6), Americas & Others (3). Free itineraries with food guides, best times to visit, neighborhood guides, and budgets for each destination.">
+<meta property="og:title" content="20 Destination Guides | Asia • Europe • Americas | Love and Layovers">
+<meta property="og:description" content="Explore 20 destination guides organized by region: Asia (8), Europe (8), Americas & Others (4). Free itineraries with food guides, best times to visit, neighborhood guides, and budgets for each destination.">
 <meta property="og:image" content="https://www.loveandlayover.in/public/images/banner.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="16 Destination Guides | Asia • Europe • Americas | Love and Layovers">
-<meta name="twitter:description" content="Explore 16 destination guides organized by region: Asia (7), Europe (6), Americas & Others (3). Free itineraries with food guides, best times to visit, neighborhood guides, and budgets for each destination.">
+<meta name="twitter:title" content="20 Destination Guides | Asia • Europe • Americas | Love and Layovers">
+<meta name="twitter:description" content="Explore 20 destination guides organized by region: Asia (8), Europe (8), Americas & Others (4). Free itineraries with food guides, best times to visit, neighborhood guides, and budgets for each destination.">
 <meta name="twitter:image" content="https://www.loveandlayover.in/public/images/banner.png">
 <meta name="pinterest-rich-pin" content="true">
 <meta property="og:url" content="https://www.loveandlayover.in/destinations/">
@@ -48,8 +48,8 @@
 {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "name": "16 Destination Travel Guides",
-  "description": "Complete destination guides with itineraries, food guides, neighborhood explorations, and budgets for 16 travel destinations across Asia, Europe, and the Americas.",
+  "name": "20 Destination Travel Guides",
+  "description": "Complete destination guides with itineraries, food guides, neighborhood explorations, and budgets for 20 travel destinations across Asia, Europe, and the Americas.",
   "url": "https://www.loveandlayover.in/destinations/"
 }
 </script>
@@ -398,6 +398,13 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--accent); outline
   *, *::before, *::after { animation-duration:.01ms !important; transition-duration:.01ms !important; scroll-behavior:auto !important; }
 }
 /* --- end unified a11y --- */
+/* Breadcrumb (same as modern-theme.css) */
+.breadcrumb { list-style:none; display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin:0; padding:0; font-size:.88rem; font-weight:500; line-height:1.4; }
+.breadcrumb li { display:inline-flex; align-items:center; gap:6px; }
+.breadcrumb li + li::before { content:'›'; opacity:.7; }
+.breadcrumb a { text-decoration:none; }
+.breadcrumb a:hover { text-decoration:underline; }
+.breadcrumb li:last-child { font-weight:600; }
 </style>
 </head>
 <body>
@@ -422,7 +429,13 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--accent); outline
 <!-- HERO -->
 <section class="hero">
   <div class="wrap">
-    <h1>Explore 16 Destination Guides</h1>
+    <nav aria-label="Breadcrumb" style="display:flex; justify-content:center; margin-bottom: 16px; color: var(--muted, #6b7280);">
+      <ul class="breadcrumb">
+        <li><a href="/" style="color: inherit;">Home</a></li>
+        <li aria-current="page">Destinations</li>
+      </ul>
+    </nav>
+    <h1>Explore 20 Destination Guides</h1>
     <p class="tagline">Comprehensive travel guides organized by region. Each destination includes food guides, neighborhood explorations, best times to visit, getting around tips, and daily budget breakdowns.</p>
     <div class="hero-cta">
       <a href="#guides" class="btn secondary">Browse All Guides</a>
@@ -435,9 +448,9 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--accent); outline
   <div class="filter-section">
     <h3>Filter by Region</h3>
     <div class="filter-area">
-      <button class="filter-btn active" onclick="filterRegion('all')">All Destinations (16)</button>
-      <button class="filter-btn" onclick="filterRegion('asia')">Asia (9)</button>
-      <button class="filter-btn" onclick="filterRegion('europe')">Europe (6)</button>
+      <button class="filter-btn active" onclick="filterRegion('all')">All Destinations (20)</button>
+      <button class="filter-btn" onclick="filterRegion('asia')">Asia (8)</button>
+      <button class="filter-btn" onclick="filterRegion('europe')">Europe (8)</button>
       <button class="filter-btn" onclick="filterRegion('americas')">Americas & Others (4)</button>
     </div>
   </div>
