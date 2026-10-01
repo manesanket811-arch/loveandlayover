@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Love and Layovers — Travel Content Creators & Brand Partnerships</title>
+<title>Love and Layovers — Free Travel Guides &amp; Vlogs by an Indian Couple in Singapore</title>
 
 <script>
   if (!window.webkit) {
@@ -17,7 +17,7 @@
   }
 </script>
 
-<meta name="description" content="Sanket & Nikita — travel content creators trusted by global brands including KOMO Wellness, Sunnystep, and Funvee. Authentic storytelling, real engagement.">
+<meta name="description" content="Sanket &amp; Nikita — an Indian travel couple in Singapore. Free destination guides with real costs, day-by-day itineraries, daily travel vlogs, and brand collaborations.">
 <link rel="canonical" href="https://www.loveandlayover.in/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Love and Layovers — Travel Content Creators & Brand Partnerships">
@@ -36,10 +36,10 @@
 <link rel="me" href="https://www.instagram.com/loveandlayover">
 <link rel="me" href="https://www.youtube.com/@nikita_sanket_mane">
 
-<link rel="stylesheet" href="/css/premium.css">
+<link rel="preload" as="image" href="/assets/self/couple-hero.webp" type="image/webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,900;1,9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
@@ -102,422 +102,700 @@
 </script>
 
 <style>
-  /* Page-specific refinements */
-  .stats-bar {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: var(--spacing-2xl);
-    padding: var(--spacing-2xl) 0;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    margin-top: var(--spacing-3xl);
+  :root {
+    --navy: #0a1628;
+    --navy-2: #13233d;
+    --ink: #0a1628;
+    --ink-soft: #4a5568;
+    --muted: #6b7280;
+    --accent: #d4691d;
+    --accent-dark: #b4531a;
+    --accent-soft: #fbe9db;
+    --teal: #1a9b8e;
+    --cream: #fefaf5;
+    --sand: #f6efe6;
+    --line: #ece4d9;
+    --white: #ffffff;
+    --radius: 18px;
+    --shadow-sm: 0 2px 8px rgba(10, 22, 40, .06);
+    --shadow: 0 14px 40px rgba(10, 22, 40, .10);
+    --shadow-lg: 0 24px 60px rgba(10, 22, 40, .18);
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --wrap: 1200px;
   }
 
-  .stat-item {
-    text-align: left;
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { margin: 0; font-family: var(--sans); color: var(--ink); background: var(--cream); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: inherit; text-decoration: none; }
+  h1, h2, h3 { font-family: var(--serif); line-height: 1.12; margin: 0; letter-spacing: -0.02em; }
+  p { margin: 0; }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+
+  .wrap { width: 100%; max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
+  .skip-link { position: absolute; left: -999px; top: 12px; background: var(--navy); color: #fff; padding: 10px 16px; border-radius: 8px; z-index: 200; }
+  .skip-link:focus { left: 12px; }
+
+  /* ---------- Buttons ---------- */
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 24px; border-radius: 999px; font-weight: 600; font-size: .98rem; line-height: 1; border: 2px solid transparent; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease, border-color .2s ease; white-space: nowrap; }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-primary { background: var(--accent); color: #fff; box-shadow: 0 8px 22px rgba(212, 105, 29, .32); }
+  .btn-primary:hover { background: var(--accent-dark); box-shadow: 0 12px 28px rgba(212, 105, 29, .38); }
+  .btn-ghost { border-color: var(--ink); color: var(--ink); background: transparent; }
+  .btn-ghost:hover { background: var(--ink); color: #fff; }
+  .btn-light { background: #fff; color: var(--navy); }
+  .btn-light:hover { box-shadow: var(--shadow); }
+  .btn-outline-light { border-color: rgba(255,255,255,.5); color: #fff; }
+  .btn-outline-light:hover { background: #fff; color: var(--navy); border-color: #fff; }
+  .btn-yt { background: #ff0033; color: #fff; }
+  .btn-yt:hover { background: #d9002b; }
+  .link-arrow { font-weight: 600; color: var(--accent); display: inline-flex; align-items: center; gap: 6px; }
+  .link-arrow span { transition: transform .2s ease; }
+  .link-arrow:hover span { transform: translateX(4px); }
+
+  /* ---------- Header ---------- */
+  .hdr { position: sticky; top: 0; z-index: 100; background: rgba(254, 250, 245, .82); backdrop-filter: saturate(160%) blur(14px); -webkit-backdrop-filter: saturate(160%) blur(14px); border-bottom: 1px solid transparent; transition: border-color .2s ease, box-shadow .2s ease; }
+  .hdr.scrolled { border-color: var(--line); box-shadow: 0 4px 20px rgba(10,22,40,.05); }
+  .hdr-in { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 24px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-family: var(--serif); font-weight: 900; font-size: 1.25rem; letter-spacing: -0.01em; }
+  .brand img { width: 36px; height: 36px; }
+  .nav { display: flex; align-items: center; gap: 30px; }
+  .nav a:not(.btn) { font-weight: 500; font-size: .95rem; color: var(--ink-soft); position: relative; padding: 6px 0; }
+  .nav a:not(.btn)::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform .25s ease; }
+  .nav a:not(.btn):hover { color: var(--ink); }
+  .nav a:not(.btn):hover::after { transform: scaleX(1); }
+  .nav .btn { padding: 11px 20px; font-size: .9rem; }
+  .menu-btn { display: none; width: 44px; height: 44px; border: 0; background: transparent; cursor: pointer; border-radius: 10px; align-items: center; justify-content: center; flex-direction: column; gap: 5px; }
+  .menu-btn span { width: 22px; height: 2px; background: var(--ink); border-radius: 2px; transition: transform .25s ease, opacity .25s ease; }
+  .menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  @media (max-width: 860px) {
+    .menu-btn { display: inline-flex; }
+    .nav { position: fixed; top: 72px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: 12px 24px 24px; background: var(--cream); border-bottom: 1px solid var(--line); box-shadow: var(--shadow); transform: translateY(-8px); opacity: 0; visibility: hidden; transition: opacity .2s ease, transform .2s ease, visibility .2s; }
+    .nav.open { transform: none; opacity: 1; visibility: visible; }
+    .nav a:not(.btn) { padding: 14px 0; font-size: 1.05rem; border-bottom: 1px solid var(--line); }
+    .nav a:not(.btn)::after { display: none; }
+    .nav .btn { margin-top: 16px; padding: 14px 20px; }
   }
 
-  .stat-number {
-    font-family: var(--font-serif);
-    font-size: 1.75rem;
-    font-weight: 900;
-    color: var(--tertiary);
-    display: block;
-    line-height: 1;
+  /* ---------- Hero ---------- */
+  .hero { position: relative; padding: 56px 0 88px; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; width: 720px; height: 720px; right: -220px; top: -260px; background: radial-gradient(closest-side, rgba(240, 165, 89, .30), transparent); pointer-events: none; }
+  .hero::after { content: ''; position: absolute; width: 520px; height: 520px; left: -260px; bottom: -280px; background: radial-gradient(closest-side, rgba(26, 155, 142, .14), transparent); pointer-events: none; }
+  .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.08fr .92fr; gap: 56px; align-items: center; }
+  .eyebrow { max-width: 100%; display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px; background: #fff; border: 1px solid var(--line); font-size: .85rem; font-weight: 600; color: var(--ink-soft); box-shadow: var(--shadow-sm); }
+  .eyebrow .dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 0 4px rgba(34,197,94,.18); }
+  .hero h1 { font-size: clamp(2.5rem, 5.4vw, 4.4rem); font-weight: 900; margin: 22px 0 20px; }
+  .hero h1 em { font-style: italic; font-weight: 600; color: var(--accent); }
+  .hero-lead { font-size: clamp(1.05rem, 1.6vw, 1.2rem); color: var(--ink-soft); max-width: 540px; }
+  .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; margin: 32px 0 36px; }
+  .trust { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .trust-logos { display: flex; }
+  .trust-logos span { width: 42px; height: 42px; border-radius: 50%; border: 3px solid var(--cream); background: #fff center / 70% no-repeat; box-shadow: var(--shadow-sm); margin-left: -10px; }
+  .trust-logos span:first-child { margin-left: 0; }
+  .trust p { font-size: .9rem; color: var(--muted); line-height: 1.4; }
+  .trust strong { color: var(--ink); }
+
+  .hero-visual { position: relative; aspect-ratio: 4 / 4.6; max-width: 520px; justify-self: end; width: 100%; }
+  .hero-photo { position: absolute; right: 0; top: 0; width: 78%; height: 88%; border-radius: 220px 220px 28px 28px; overflow: hidden; box-shadow: var(--shadow-lg); background: var(--sand); }
+  .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+  .hero-art { position: absolute; left: 0; bottom: 0; width: 58%; aspect-ratio: 16 / 9; border-radius: 18px; overflow: hidden; border: 6px solid #fff; box-shadow: var(--shadow-lg); transform: rotate(-4deg); }
+  .hero-art img { width: 100%; height: 100%; object-fit: cover; }
+  .float-card { position: absolute; background: #fff; border-radius: 16px; box-shadow: var(--shadow); padding: 12px 14px; display: flex; align-items: center; gap: 12px; animation: bob 6s ease-in-out infinite; }
+  .float-card small { display: block; font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+  .float-card b { display: block; font-size: .88rem; line-height: 1.3; }
+  .float-new { left: 2%; top: 10%; max-width: 270px; }
+  .float-new .thumb { width: 64px; height: 44px; border-radius: 8px; background: var(--navy) center / cover; flex: none; position: relative; }
+  .float-new .thumb::after { content: '▶'; position: absolute; inset: 0; display: grid; place-items: center; color: #fff; font-size: .8rem; }
+  .float-new b { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .float-guides { right: -4%; bottom: 20%; animation-delay: -3s; }
+  .float-guides .big { font-family: var(--serif); font-size: 1.9rem; font-weight: 900; color: var(--accent); line-height: 1; }
+  @keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+
+  @media (max-width: 960px) {
+    .hero { padding: 32px 0 64px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+    .hero-visual { justify-self: center; max-width: 460px; }
+  }
+  @media (max-width: 480px) {
+    .eyebrow { font-size: .78rem; padding: 7px 12px; }
+    .float-new { max-width: 220px; left: -2%; }
+    .float-guides { right: -2%; }
+    .hero-cta .btn { flex: 1 1 100%; }
   }
 
-  .stat-label {
-    font-size: 0.75rem;
-    color: rgba(255,255,255,0.7);
-    margin-top: var(--spacing-sm);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+  /* ---------- Stats ---------- */
+  .stats { background: #fff; border-block: 1px solid var(--line); }
+  .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+  .stat { padding: 30px 20px; text-align: center; border-right: 1px solid var(--line); }
+  .stat:last-child { border-right: 0; }
+  .stat b { display: block; font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 900; color: var(--navy); line-height: 1; }
+  .stat span { display: block; margin-top: 8px; font-size: .85rem; color: var(--muted); font-weight: 500; }
+  @media (max-width: 700px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .stat:nth-child(2) { border-right: 0; }
+    .stat:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
   }
 
-  [data-reveal] {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-  }
+  /* ---------- Sections ---------- */
+  .section { padding: 96px 0; }
+  .section-sand { background: var(--sand); }
+  .sec-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 40px; flex-wrap: wrap; }
+  .kicker { font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; display: block; }
+  .sec-head h2 { font-size: clamp(1.9rem, 3.6vw, 2.8rem); font-weight: 900; }
+  .sec-head p { color: var(--ink-soft); margin-top: 12px; max-width: 560px; }
+  @media (max-width: 700px) { .section { padding: 68px 0; } }
 
-  [data-reveal].is-visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  /* ---------- Videos ---------- */
+  .videos { background: var(--navy); color: #fff; position: relative; overflow: hidden; }
+  .videos::before { content: ''; position: absolute; width: 700px; height: 700px; right: -300px; top: -300px; background: radial-gradient(closest-side, rgba(212,105,29,.22), transparent); }
+  .videos .sec-head p { color: rgba(255,255,255,.72); }
+  .videos .wrap { position: relative; }
+  .video-layout { display: grid; grid-template-columns: 1.55fr 1fr; gap: 28px; }
+  .feature { border-radius: var(--radius); overflow: hidden; background: var(--navy-2); box-shadow: var(--shadow-lg); }
+  .player { position: relative; aspect-ratio: 16 / 9; background: #000 center / cover; display: block; width: 100%; border: 0; padding: 0; cursor: pointer; }
+  .player::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,.55)); transition: opacity .2s; }
+  .player .play { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 78px; height: 78px; border-radius: 50%; background: rgba(255,255,255,.95); color: var(--accent); display: grid; place-items: center; font-size: 1.6rem; box-shadow: 0 10px 30px rgba(0,0,0,.35); transition: transform .2s ease; padding-left: 5px; }
+  .player:hover .play { transform: translate(-50%, -50%) scale(1.08); }
+  .player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .feature-body { padding: 20px 24px 24px; }
+  .feature-body small { color: var(--accent); font-weight: 700; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; }
+  .feature-body h3 { font-family: var(--sans); font-size: 1.2rem; font-weight: 700; margin: 6px 0 8px; letter-spacing: -0.01em; }
+  .feature-body p { color: rgba(255,255,255,.68); font-size: .92rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .feature-body a { margin-top: 12px; }
 
-  .split-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-3xl);
-    align-items: center;
-  }
+  .side { display: flex; flex-direction: column; gap: 18px; }
+  .shorts-head { display: flex; justify-content: space-between; align-items: center; font-weight: 700; }
+  .shorts-head a { font-size: .88rem; color: var(--accent); font-weight: 600; }
+  .shorts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .short { position: relative; aspect-ratio: 9 / 15; border-radius: 14px; overflow: hidden; background: var(--navy-2) center / cover; transition: transform .2s ease; }
+  .short:hover { transform: translateY(-4px); }
+  .short::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 45%, rgba(0,0,0,.8)); }
+  .short span { position: absolute; left: 10px; right: 10px; bottom: 10px; z-index: 1; font-size: .78rem; font-weight: 600; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .series { margin-top: auto; display: block; padding: 20px; border-radius: var(--radius); background: linear-gradient(135deg, rgba(212,105,29,.95), rgba(240,165,89,.9)); transition: transform .2s ease; }
+  .series:hover { transform: translateY(-3px); }
+  .series small { font-weight: 700; font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; opacity: .9; }
+  .series b { display: block; font-family: var(--serif); font-size: 1.3rem; margin: 4px 0 12px; }
+  .bar { height: 8px; border-radius: 99px; background: rgba(255,255,255,.3); overflow: hidden; }
+  .bar i { display: block; height: 100%; width: 0; background: #fff; border-radius: 99px; transition: width 1.2s ease; }
+  .series-meta { display: flex; justify-content: space-between; margin-top: 8px; font-size: .82rem; font-weight: 600; }
+  .skeleton { background: linear-gradient(90deg, rgba(255,255,255,.04), rgba(255,255,255,.1), rgba(255,255,255,.04)); background-size: 200% 100%; animation: shimmer 1.4s infinite; }
+  @keyframes shimmer { to { background-position: -200% 0; } }
+  @media (max-width: 960px) { .video-layout { grid-template-columns: 1fr; } }
 
-  @media (max-width: 900px) {
-    .split-section {
-      grid-template-columns: 1fr;
-    }
-  }
+  /* ---------- Destinations ---------- */
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; }
+  .filter { padding: 9px 16px; border-radius: 999px; border: 1px solid var(--line); background: #fff; font: inherit; font-size: .88rem; font-weight: 600; color: var(--ink-soft); cursor: pointer; transition: all .2s ease; }
+  .filter:hover { border-color: var(--accent); color: var(--accent); }
+  .filter[aria-pressed="true"] { background: var(--navy); border-color: var(--navy); color: #fff; }
+  .dest-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .dest { position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: 230px; padding: 20px; border-radius: var(--radius); color: #fff; overflow: hidden; isolation: isolate; box-shadow: var(--shadow-sm); transition: transform .25s ease, box-shadow .25s ease; }
+  .dest::before { content: ''; position: absolute; inset: 0; z-index: -2; background: var(--g); transition: transform .5s ease; }
+  .dest::after { content: ''; position: absolute; inset: 0; z-index: -1; background: radial-gradient(120% 80% at 100% 0%, rgba(255,255,255,.22), transparent 60%); }
+  .dest:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+  .dest:hover::before { transform: scale(1.06); }
+  .dest .flag { position: absolute; top: 16px; left: 18px; font-size: 2rem; line-height: 1; }
+  .dest .tag { position: absolute; top: 18px; right: 16px; font-size: .7rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; background: rgba(255,255,255,.2); padding: 5px 9px; border-radius: 99px; backdrop-filter: blur(6px); }
+  .dest h3 { font-size: 1.5rem; font-weight: 900; }
+  .dest p { font-size: .88rem; opacity: .88; margin-top: 4px; }
+  .dest .go { margin-top: 14px; font-size: .85rem; font-weight: 700; display: inline-flex; gap: 6px; }
+  .dest[hidden] { display: none; }
+  @media (max-width: 720px) { .dest-grid[data-filter="all"] .dest:nth-child(n+9) { display: none; } }
+  .dest-foot { margin-top: 36px; text-align: center; }
+  @media (max-width: 1000px) { .dest-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 720px) { .dest-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; } .dest { min-height: 190px; padding: 16px; } .dest h3 { font-size: 1.2rem; } .dest p { display: none; } }
 
-  .visual-card {
-    background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
-    border-radius: 16px;
-    padding: var(--spacing-3xl);
-    color: white;
-    position: relative;
-    overflow: hidden;
-    min-height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+  /* ---------- Guides ---------- */
+  .guide-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 22px; }
+  .guide { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+  .guide:hover { transform: translateY(-5px); box-shadow: var(--shadow); border-color: transparent; }
+  .guide-art { height: 150px; background: var(--g); display: grid; place-items: center; font-size: 3.2rem; }
+  .guide:first-child { grid-row: span 2; }
+  .guide:first-child .guide-art { height: auto; flex: 1; min-height: 220px; font-size: 5rem; }
+  .guide-photo { position: relative; overflow: hidden; }
+  .guide-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% 50%; transition: transform .5s ease; }
+  .guide:hover .guide-photo img { transform: scale(1.05); }
+  .guide-body { padding: 22px; }
+  .chip { display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--accent); background: var(--accent-soft); padding: 4px 10px; border-radius: 99px; }
+  .guide h3 { font-family: var(--sans); font-size: 1.12rem; font-weight: 700; letter-spacing: -0.01em; margin: 12px 0 8px; line-height: 1.35; }
+  .guide:first-child h3 { font-family: var(--serif); font-size: 1.6rem; font-weight: 900; }
+  .guide p { color: var(--ink-soft); font-size: .92rem; }
+  .guide .meta { margin-top: 14px; font-size: .82rem; color: var(--muted); }
+  @media (max-width: 960px) { .guide-grid { grid-template-columns: 1fr 1fr; } .guide:first-child { grid-column: span 2; grid-row: auto; } }
+  @media (max-width: 620px) { .guide-grid { grid-template-columns: 1fr; } .guide:first-child { grid-column: auto; } }
 
-  .visual-card::before {
-    content: '"';
-    position: absolute;
-    top: -40px;
-    left: 20px;
-    font-family: var(--font-serif);
-    font-size: 200px;
-    color: rgba(255,255,255,0.08);
-    line-height: 1;
-  }
+  /* ---------- About ---------- */
+  .about-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 64px; align-items: center; }
+  .about-photo { position: relative; }
+  .about-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 60%; border-radius: 28px; box-shadow: var(--shadow-lg); }
+  .about-photo .stamp { position: absolute; right: -18px; bottom: 36px; background: var(--navy); color: #fff; padding: 16px 18px; border-radius: 16px; box-shadow: var(--shadow); font-size: .85rem; line-height: 1.35; }
+  .about-photo .stamp b { display: block; font-family: var(--serif); font-size: 1.2rem; }
+  .about-text h2 { font-size: clamp(2rem, 3.6vw, 2.8rem); font-weight: 900; margin-bottom: 20px; }
+  .about-text p { color: var(--ink-soft); font-size: 1.05rem; margin-bottom: 16px; }
+  .ticks { list-style: none; padding: 0; margin: 24px 0 30px; display: grid; gap: 12px; }
+  .ticks li { display: flex; gap: 12px; align-items: flex-start; font-weight: 500; }
+  .ticks li::before { content: '✓'; flex: none; width: 24px; height: 24px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); display: grid; place-items: center; font-size: .8rem; font-weight: 800; margin-top: 1px; }
+  .about-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+  @media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; gap: 40px; } .about-photo { max-width: 420px; margin: 0 auto; } .about-photo .stamp { right: 12px; } }
 
-  .quote-text {
-    font-family: var(--font-serif);
-    font-size: 1.15rem;
-    font-weight: 600;
-    line-height: 1.4;
-    position: relative;
-    z-index: 2;
-    margin-bottom: var(--spacing-lg);
-  }
+  /* ---------- Brands ---------- */
+  .brands { padding: 96px 0; }
+  .brand-panel { background: var(--navy); color: #fff; border-radius: 28px; padding: 64px 56px; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; position: relative; overflow: hidden; }
+  .brand-panel::before { content: ''; position: absolute; width: 500px; height: 500px; left: -200px; bottom: -260px; background: radial-gradient(closest-side, rgba(26,155,142,.28), transparent); }
+  .brand-panel > * { position: relative; }
+  .brand-panel h2 { font-size: clamp(1.9rem, 3.4vw, 2.6rem); font-weight: 900; margin-bottom: 16px; }
+  .brand-panel p { color: rgba(255,255,255,.75); }
+  .steps { list-style: none; padding: 0; margin: 28px 0 32px; display: grid; gap: 16px; counter-reset: s; }
+  .steps li { display: flex; gap: 16px; align-items: flex-start; counter-increment: s; }
+  .steps li::before { content: '0' counter(s); font-family: var(--serif); font-weight: 900; color: var(--accent); font-size: 1.2rem; min-width: 32px; }
+  .steps b { display: block; }
+  .steps span { color: rgba(255,255,255,.65); font-size: .92rem; }
+  .logo-wall { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  .logo-tile { aspect-ratio: 3 / 2; background: #fff; border-radius: 14px; padding: 12px; overflow: hidden; transition: transform .2s ease; }
+  .logo-tile:hover { transform: scale(1.04); }
+  .logo-tile img { width: 100%; height: 100%; object-fit: contain; }
+  .logo-more { aspect-ratio: 3 / 2; border-radius: 14px; border: 1px dashed rgba(255,255,255,.35); display: grid; place-items: center; text-align: center; font-weight: 700; font-size: .9rem; color: rgba(255,255,255,.85); }
+  @media (max-width: 960px) { .brand-panel { grid-template-columns: 1fr; padding: 44px 28px; gap: 36px; } }
+  @media (max-width: 480px) { .logo-wall { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
-  .process-step {
-    display: flex;
-    gap: var(--spacing-lg);
-    align-items: flex-start;
-    padding: var(--spacing-xl) 0;
-    border-bottom: 1px solid var(--grey-200);
-  }
+  /* ---------- Follow band ---------- */
+  .follow { text-align: center; padding: 88px 0; background: radial-gradient(80% 120% at 50% 0%, #fff3e6, var(--cream)); }
+  .follow h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; max-width: 760px; margin: 0 auto 16px; }
+  .follow p { color: var(--ink-soft); max-width: 560px; margin: 0 auto 30px; font-size: 1.05rem; }
+  .follow .row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn-ig { background: linear-gradient(45deg, #f09433, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888); color: #fff; }
 
-  .process-step:last-child {
-    border-bottom: none;
-  }
+  /* ---------- Footer ---------- */
+  .ftr { background: var(--navy); color: rgba(255,255,255,.7); padding: 64px 0 28px; font-size: .92rem; }
+  .ftr-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 40px; }
+  .ftr .brand { color: #fff; margin-bottom: 14px; }
+  .ftr h4 { color: #fff; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; margin: 0 0 16px; }
+  .ftr ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+  .ftr a:hover { color: #fff; }
+  .ftr .mail { color: var(--accent); font-weight: 600; display: inline-block; margin-top: 14px; }
+  .ftr-bottom { border-top: 1px solid rgba(255,255,255,.1); margin-top: 48px; padding-top: 24px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: .85rem; }
+  @media (max-width: 800px) { .ftr-grid { grid-template-columns: 1fr 1fr; } .ftr-grid > :first-child { grid-column: span 2; } }
 
-  .process-number {
-    font-family: var(--font-serif);
-    font-size: 1.5rem;
-    font-weight: 900;
-    color: var(--accent);
-    min-width: 50px;
-  }
-
-  .destination-strip {
-    display: flex;
-    gap: var(--spacing-lg);
-    overflow-x: auto;
-    padding: var(--spacing-md) 0 var(--spacing-2xl);
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .destination-strip::-webkit-scrollbar {
-    height: 6px;
-  }
-
-  .destination-strip::-webkit-scrollbar-track {
-    background: var(--grey-100);
-    border-radius: 3px;
-  }
-
-  .destination-strip::-webkit-scrollbar-thumb {
-    background: var(--accent);
-    border-radius: 3px;
-  }
-
-  .destination-chip {
-    scroll-snap-align: start;
-    min-width: 200px;
-    background: white;
-    border-radius: 10px;
-    padding: var(--spacing-lg);
-    box-shadow: var(--shadow-sm);
-    transition: all var(--duration-base) var(--easing-smooth);
-    border: 1px solid var(--grey-200);
-    flex-shrink: 0;
-  }
-
-  .destination-chip:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-lg);
-    border-color: var(--accent);
-  }
-
-  .filter-btn {
-    padding: 10px 22px;
-    border: 2px solid var(--grey-300);
-    border-radius: 8px;
-    background: white;
-    color: var(--grey-700);
-    font-weight: 600;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: all var(--duration-base) var(--easing-smooth);
-  }
-
-  .filter-btn:hover,
-  .filter-btn.active {
-    border-color: var(--accent);
-    color: white;
-    background: var(--accent);
-  }
-
-  .nav-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: var(--spacing-sm);
-  }
-
-  .nav-toggle span {
-    width: 24px;
-    height: 2px;
-    background: var(--primary);
-    border-radius: 2px;
-    transition: all var(--duration-base) var(--easing-smooth);
-  }
-
-  @media (max-width: 900px) {
-    nav ul {
-      position: fixed;
-      top: 72px;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: white;
-      flex-direction: column;
-      padding: var(--spacing-2xl);
-      gap: var(--spacing-xl);
-      transform: translateX(100%);
-      transition: transform var(--duration-base) var(--easing-smooth);
-      align-items: flex-start;
-      overflow-y: auto;
-    }
-
-    nav ul.active {
-      transform: translateX(0);
-    }
-
-    .nav-toggle {
-      display: flex;
-    }
+  /* ---------- Reveal (only when JS is running) ---------- */
+  .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+  .js .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .js .reveal { opacity: 1; transform: none; }
   }
 </style>
-
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
-<header>
-  <div class="container">
-    <a href="/" class="logo"><img src="/public/images/brand/logo-mark.svg" alt="" width="34" height="34" style="vertical-align:-0.55em; margin-right:0.4em;">Love & Layovers</a>
-    <nav aria-label="Main navigation">
-      <ul id="navMenu">
-        <li><a href="/about.html">About</a></li>
-        <li><a href="/destinations/">Destinations</a></li>
-        <li><a href="/videos.html">Videos</a></li>
-        <li><a href="/blog.html">Blog</a></li>
-        <li><a href="mailto:theloveandlayover@gmail.com?subject=Brand%20Collaboration" class="nav-cta">Work With Us</a></li>
-      </ul>
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <a href="/" class="brand" aria-label="Love and Layovers home"><img src="/public/images/brand/logo-mark.svg" alt="" width="36" height="36">Love &amp; Layovers</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav"><span></span><span></span><span></span></button>
+    <nav class="nav" id="siteNav" aria-label="Main navigation">
+      <a href="/destinations/">Destinations</a>
+      <a href="/videos.html">Videos</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/about.html">About</a>
+      <a href="#work-with-us" class="btn btn-primary">Work with us</a>
     </nav>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-      <span></span><span></span><span></span>
-    </button>
   </div>
 </header>
 
 <main id="main">
 
+<!-- ===== Hero ===== -->
 <section class="hero">
-  <div class="container">
-    <h1>We turn travel into stories brands trust.</h1>
-    <p>Sanket & Nikita — a travel duo creating authentic content that global brands like KOMO Wellness, Sunnystep, and Funvee have partnered with to reach engaged, real audiences.</p>
-    <div class="hero-cta">
-      <a href="mailto:theloveandlayover@gmail.com?subject=Brand%20Collaboration%20-%20Love%20and%20Layovers" class="btn btn-primary btn-magnetic">Start a Collaboration →</a>
-      <a href="/destinations/" class="btn btn-outline btn-magnetic">Explore Our Guides</a>
-    </div>
-
-    <div class="stats-bar">
-      <div class="stat-item">
-        <span class="stat-number" data-counter="16">0</span>
-        <span class="stat-label">Destinations Covered</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number" data-counter="14">0</span>
-        <span class="stat-label">Brand Partnerships</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number" data-counter="100">0</span>
-        <span class="stat-label">Videos Published</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="section-header center" data-reveal>
-      <h2>Brands We've Partnered With</h2>
-      <p>From wellness to hospitality to lifestyle — trusted by brands that value authentic storytelling and real audience engagement.</p>
-    </div>
-    <div id="brandsContainer" class="brand-showcase" data-stagger></div>
-    <div class="text-center mt-3xl" data-reveal>
-      <p class="text-muted mb-lg">Looking to partner with us?</p>
-      <a href="mailto:theloveandlayover@gmail.com?subject=Brand%20Collaboration%20-%20Love%20and%20Layovers" class="btn btn-primary btn-magnetic">Let's Talk →</a>
-    </div>
-  </div>
-</section>
-
-<section class="alt">
-  <div class="container">
-    <div class="split-section">
-      <div data-reveal>
-        <h2>Content that converts curiosity into bookings.</h2>
-        <p>We don't just post pretty pictures. Every collaboration is built around a story — the kind that makes our audience trust a recommendation enough to act on it.</p>
-        <p>That's why brands come back for repeat partnerships.</p>
-        <a href="/about.html" class="btn btn-secondary btn-magnetic mt-lg">Learn Our Story</a>
-      </div>
-      <div class="visual-card" data-reveal>
-        <p class="quote-text">Real trips. Real experiences. Real results for the brands who trust us to tell their story.</p>
-        <div style="position: relative; z-index: 2; font-weight: 600;">— Sanket & Nikita</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="section-header" data-reveal>
-      <h2>How a Collaboration Works</h2>
-      <p>A simple, transparent process from first message to published content.</p>
-    </div>
+  <div class="wrap hero-grid">
     <div>
-      <div class="process-step" data-reveal>
-        <div class="process-number">01</div>
-        <div>
-          <h4>Reach Out</h4>
-          <p>Send us your brand details and campaign goals. We reply within 48 hours.</p>
-        </div>
+      <span class="eyebrow"><span class="dot" aria-hidden="true"></span>Indian travel couple · based in Singapore</span>
+      <h1>Real trips, honest guides &amp; a little <em>love</em> on every layover.</h1>
+      <p class="hero-lead">We're Sanket &amp; Nikita. We film our travels, then turn them into free, budget-honest guides — itineraries, food spots and costs — so your next trip is easier than our first.</p>
+      <div class="hero-cta">
+        <a href="/destinations/" class="btn btn-primary">Explore free guides <span aria-hidden="true">→</span></a>
+        <a href="#videos" class="btn btn-ghost"><span aria-hidden="true">▶</span> Watch our latest</a>
       </div>
-      <div class="process-step" data-reveal>
-        <div class="process-number">02</div>
-        <div>
-          <h4>Plan the Story</h4>
-          <p>We co-design a content approach that fits your brand and feels authentic to our audience.</p>
+      <div class="trust">
+        <div class="trust-logos" aria-hidden="true">
+          <span style="background-image:url('/assets/brands/komowellness.png')"></span>
+          <span style="background-image:url('/assets/brands/sunnystep.png')"></span>
+          <span style="background-image:url('/assets/brands/funvee.png')"></span>
+          <span style="background-image:url('/assets/brands/imagica-logo.png')"></span>
         </div>
+        <p>Trusted by <strong>KOMO Wellness, Sunnystep, Funvee</strong><br>and 11 more brands</p>
       </div>
-      <div class="process-step" data-reveal>
-        <div class="process-number">03</div>
-        <div>
-          <h4>Create & Publish</h4>
-          <p>We film, edit, and publish across Instagram and YouTube — with performance tracking included.</p>
-        </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-photo"><img src="/assets/self/couple-hero.webp" alt="" width="640" height="800" fetchpriority="high"></div>
+      <div class="hero-art"><img src="/public/images/banner-1200.webp" alt="" width="1200" height="670" loading="lazy"></div>
+      <a class="float-card float-new" id="heroLatest" href="/videos.html" tabindex="-1">
+        <span class="thumb"></span>
+        <span><small>New on YouTube</small><b>Fresh travel vlogs every week</b></span>
+      </a>
+      <div class="float-card float-guides">
+        <span class="big">20</span>
+        <span><small>Free guides</small><b>Asia · Europe · Americas</b></span>
       </div>
     </div>
   </div>
 </section>
 
-<section class="alt">
-  <div class="container">
-    <div class="section-header center" data-reveal>
-      <h2>Explore Our Destination Guides</h2>
-      <p>16 in-depth guides covering Asia, Europe, and the Americas — food, budgets, and neighborhoods included.</p>
+<!-- ===== Stats ===== -->
+<section class="stats" aria-label="At a glance">
+  <div class="wrap stats-grid">
+    <div class="stat"><b>20</b><span>Destination guides</span></div>
+    <div class="stat"><b>10</b><span>In-depth blog posts</span></div>
+    <div class="stat"><b>14</b><span>Brand partners</span></div>
+    <div class="stat"><b>Daily</b><span>New vlogs on YouTube</span></div>
+  </div>
+</section>
+
+<!-- ===== Videos ===== -->
+<section class="section videos" id="videos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <span class="kicker">Fresh from YouTube</span>
+        <h2>Watch where we've been</h2>
+        <p>Cinematic travel films, honest day trips and our everyday life in Singapore — new episodes every day.</p>
+      </div>
+      <a href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1" class="btn btn-yt" target="_blank" rel="noopener"><span aria-hidden="true">▶</span> Subscribe</a>
     </div>
-    <div class="destination-strip" data-reveal>
-      <div class="destination-chip"><h4>🇸🇬 Singapore</h4><p style="margin:0; font-size:0.9rem;">Ultra-modern city-state</p></div>
-      <div class="destination-chip"><h4>🇯🇵 Japan</h4><p style="margin:0; font-size:0.9rem;">Tokyo, Kyoto & beyond</p></div>
-      <div class="destination-chip"><h4>🇹🇭 Thailand</h4><p style="margin:0; font-size:0.9rem;">Islands & street food</p></div>
-      <div class="destination-chip"><h4>🇻🇳 Vietnam</h4><p style="margin:0; font-size:0.9rem;">Hanoi to Halong Bay</p></div>
-      <div class="destination-chip"><h4>🇮🇹 Italy</h4><p style="margin:0; font-size:0.9rem;">Rome, Venice, Tuscany</p></div>
-      <div class="destination-chip"><h4>🇬🇷 Greece</h4><p style="margin:0; font-size:0.9rem;">Island hopping guide</p></div>
-      <div class="destination-chip"><h4>🇮🇸 Iceland</h4><p style="margin:0; font-size:0.9rem;">Northern Lights & more</p></div>
-      <div class="destination-chip"><h4>🇪🇬 Egypt</h4><p style="margin:0; font-size:0.9rem;">Pyramids & the Nile</p></div>
+
+    <div class="video-layout reveal">
+      <article class="feature">
+        <button class="player skeleton" id="featurePlayer" type="button" aria-label="Play latest video"><span class="play" aria-hidden="true">▶</span></button>
+        <div class="feature-body">
+          <small>Latest video</small>
+          <h3 id="featureTitle">Loading our latest video…</h3>
+          <p id="featureDesc"></p>
+          <a href="/videos.html" id="featureLink" class="link-arrow">Watch &amp; read more <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+
+      <div class="side">
+        <div class="shorts-head"><span>Latest Shorts</span><a href="/videos.html">See all →</a></div>
+        <div class="shorts" id="shortsRail">
+          <span class="short skeleton"></span><span class="short skeleton"></span><span class="short skeleton"></span>
+        </div>
+        <a class="series" href="/videos/life-in-singapore.html">
+          <small>Daily series</small>
+          <b>Life in Singapore · 30 days</b>
+          <div class="bar"><i id="seriesBar"></i></div>
+          <div class="series-meta"><span id="seriesDay">Follow along</span><span>Binge it →</span></div>
+        </a>
+      </div>
     </div>
-    <div class="text-center" data-reveal>
-      <a href="/destinations/" class="btn btn-primary btn-magnetic">View All 16 Guides →</a>
+  </div>
+</section>
+
+<!-- ===== Destinations ===== -->
+<section class="section" id="destinations">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <span class="kicker">Destination guides</span>
+        <h2>Where to next?</h2>
+        <p>Day-by-day itineraries, real costs and the food we'd go back for — 20 countries and counting.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filter destinations by region">
+        <button class="filter" type="button" data-region="all" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-region="asia" aria-pressed="false">Asia</button>
+        <button class="filter" type="button" data-region="europe" aria-pressed="false">Europe</button>
+        <button class="filter" type="button" data-region="americas" aria-pressed="false">Americas</button>
+        <button class="filter" type="button" data-region="more" aria-pressed="false">Africa &amp; Oceania</button>
+      </div>
+    </div>
+
+    <div class="dest-grid reveal" id="destGrid" data-filter="all">
+      <a class="dest" data-region="asia" href="/destinations/singapore.html" style="--g:linear-gradient(150deg,#d4691d,#7a2e12)"><span class="flag">🇸🇬</span><span class="tag">Our home</span><h3>Singapore</h3><p>Hawker food, Marina Bay &amp; easy layovers</p><span class="go">3 · 5 · 10-day plans →</span></a>
+      <a class="dest" data-region="asia" href="/destinations/japan.html" style="--g:linear-gradient(150deg,#e11d48,#5b1027)"><span class="flag">🇯🇵</span><h3>Japan</h3><p>Tokyo, Kyoto &amp; Mt. Fuji</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="asia" href="/destinations/thailand.html" style="--g:linear-gradient(150deg,#0ea5a4,#0b3b4c)"><span class="flag">🇹🇭</span><h3>Thailand</h3><p>Bangkok streets to Phuket beaches</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="asia" href="/destinations/bali.html" style="--g:linear-gradient(150deg,#16a34a,#0f3d2a)"><span class="flag">🇮🇩</span><h3>Bali</h3><p>Temples, rice terraces &amp; sunsets</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="asia" href="/destinations/vietnam.html" style="--g:linear-gradient(150deg,#dc2626,#4c1212)"><span class="flag">🇻🇳</span><h3>Vietnam</h3><p>Hanoi, Ha Long Bay &amp; pho</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="asia" href="/destinations/south-korea.html" style="--g:linear-gradient(150deg,#4f46e5,#1e1b4b)"><span class="flag">🇰🇷</span><h3>South Korea</h3><p>Seoul palaces &amp; street food</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="asia" href="/destinations/india.html" style="--g:linear-gradient(150deg,#f59e0b,#7c2d12)"><span class="flag">🇮🇳</span><h3>India</h3><p>Taj Mahal, Delhi &amp; Rajasthan</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="asia" href="/destinations/indonesia.html" style="--g:linear-gradient(150deg,#b45309,#3b1d0a)"><span class="flag">🇮🇩</span><h3>Indonesia</h3><p>Borobudur &amp; Yogyakarta</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="more" href="/destinations/turkey.html" style="--g:linear-gradient(150deg,#e11d48,#450a0a)"><span class="flag">🇹🇷</span><h3>Turkey</h3><p>Istanbul &amp; Cappadocia balloons</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="europe" href="/destinations/italy.html" style="--g:linear-gradient(150deg,#059669,#7f1d1d)"><span class="flag">🇮🇹</span><h3>Italy</h3><p>Rome, Venice &amp; Tuscany</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="europe" href="/destinations/greece.html" style="--g:linear-gradient(150deg,#0284c7,#0c2a4a)"><span class="flag">🇬🇷</span><h3>Greece</h3><p>Athens &amp; Santorini sunsets</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="europe" href="/destinations/france.html" style="--g:linear-gradient(150deg,#2563eb,#831843)"><span class="flag">🇫🇷</span><h3>France</h3><p>Paris, cafés &amp; the Louvre</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="europe" href="/destinations/spain.html" style="--g:linear-gradient(150deg,#ea580c,#7f1d1d)"><span class="flag">🇪🇸</span><h3>Spain</h3><p>Barcelona, Madrid &amp; tapas</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="europe" href="/destinations/portugal.html" style="--g:linear-gradient(150deg,#15803d,#7f1d1d)"><span class="flag">🇵🇹</span><h3>Portugal</h3><p>Lisbon trams &amp; Porto wine</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="europe" href="/destinations/germany.html" style="--g:linear-gradient(150deg,#475569,#111827)"><span class="flag">🇩🇪</span><h3>Germany</h3><p>Berlin, Munich &amp; castles</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="europe" href="/destinations/iceland.html" style="--g:linear-gradient(150deg,#06b6d4,#0f172a)"><span class="flag">🇮🇸</span><h3>Iceland</h3><p>Northern Lights &amp; waterfalls</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="americas" href="/destinations/mexico.html" style="--g:linear-gradient(150deg,#16a34a,#7f1d1d)"><span class="flag">🇲🇽</span><h3>Mexico</h3><p>Mexico City &amp; ancient ruins</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="americas" href="/destinations/peru.html" style="--g:linear-gradient(150deg,#b91c1c,#422006)"><span class="flag">🇵🇪</span><h3>Peru</h3><p>Machu Picchu &amp; Cusco</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="more" href="/destinations/egypt.html" style="--g:linear-gradient(150deg,#d97706,#451a03)"><span class="flag">🇪🇬</span><h3>Egypt</h3><p>Pyramids &amp; the Nile</p><span class="go">Read guide →</span></a>
+      <a class="dest" data-region="more" href="/destinations/australia.html" style="--g:linear-gradient(150deg,#0369a1,#172554)"><span class="flag">🇦🇺</span><h3>Australia</h3><p>Sydney &amp; the Great Barrier Reef</p><span class="go">Read guide →</span></a>
+    </div>
+    <div class="dest-foot reveal"><a href="/destinations/" class="btn btn-ghost">Browse all destinations <span aria-hidden="true">→</span></a></div>
+  </div>
+</section>
+
+<!-- ===== Guides ===== -->
+<section class="section section-sand" id="guides">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <span class="kicker">From the blog</span>
+        <h2>Start planning here</h2>
+        <p>Our most-read guides — written from trips we actually took, with the costs to prove it.</p>
+      </div>
+      <a href="/blog.html" class="link-arrow">Read all posts <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="guide-grid reveal">
+      <a class="guide" href="/blog/singapore-first-timer-guide.html">
+        <div class="guide-art guide-photo" aria-hidden="true"><img src="/public/images/banner-1200.webp" alt="" width="1200" height="670" loading="lazy"></div>
+        <div class="guide-body"><span class="chip">First-timers</span><h3>Singapore first-timer's guide: everything we wish we'd known</h3><p>Visas, transport, where to stay and the mistakes to skip — from people who live here.</p><div class="meta">Singapore · Guide</div></div>
+      </a>
+      <a class="guide" href="/blog/japan-10-day-itinerary.html">
+        <div class="guide-art" style="--g:linear-gradient(135deg,#ffe0e6,#fda4af)" aria-hidden="true">🗻</div>
+        <div class="guide-body"><span class="chip">Itinerary</span><h3>Japan in 10 days</h3><p>Tokyo, Kyoto, Osaka and Mt. Fuji, day by day.</p><div class="meta">Japan · 10 days</div></div>
+      </a>
+      <a class="guide" href="/blog/singapore-food-guide.html">
+        <div class="guide-art" style="--g:linear-gradient(135deg,#fff1c2,#fbbf24)" aria-hidden="true">🍜</div>
+        <div class="guide-body"><span class="chip">Food</span><h3>Singapore food guide</h3><p>The hawker centres and dishes worth the queue.</p><div class="meta">Singapore · Food</div></div>
+      </a>
+      <a class="guide" href="/blog/southeast-asia-budget-tips.html">
+        <div class="guide-art" style="--g:linear-gradient(135deg,#d1fae5,#5eead4)" aria-hidden="true">🎒</div>
+        <div class="guide-body"><span class="chip">Budget</span><h3>Southeast Asia on a budget</h3><p>How we travel the region for less.</p><div class="meta">Southeast Asia · Tips</div></div>
+      </a>
+      <a class="guide" href="/blog/singapore-layover-guide.html">
+        <div class="guide-art" style="--g:linear-gradient(135deg,#dbeafe,#93c5fd)" aria-hidden="true">✈️</div>
+        <div class="guide-body"><span class="chip">Layovers</span><h3>Make the most of a Singapore layover</h3><p>6, 12, 24 and 48-hour plans from Changi.</p><div class="meta">Singapore · Layover</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== About ===== -->
+<section class="section" id="about">
+  <div class="wrap about-grid">
+    <div class="about-photo reveal">
+      <img src="/assets/self/nikita-about.webp" alt="Nikita at Sentosa beach in Singapore at blue hour" width="600" height="1067" loading="lazy">
+      <div class="stamp"><b>Sentosa, SG</b>Where the layovers began</div>
+    </div>
+    <div class="about-text reveal">
+      <span class="kicker">Hi, we're Sanket &amp; Nikita</span>
+      <h2>Two Indians, one carry-on habit, and a lot of layovers.</h2>
+      <p>We moved to Singapore and started using every long weekend and layover to explore. Love &amp; Layovers is where we share what actually worked — and what didn't.</p>
+      <ul class="ticks">
+        <li>Guides written from our own trips, with real prices</li>
+        <li>Visa and budget tips for Indian passport holders</li>
+        <li>Every place we recommend, we've filmed first</li>
+      </ul>
+      <div class="about-cta">
+        <a href="/about.html" class="btn btn-primary">Our story <span aria-hidden="true">→</span></a>
+        <a href="https://www.instagram.com/loveandlayover" class="btn btn-ghost" target="_blank" rel="noopener">Say hi on Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Brands ===== -->
+<section class="brands" id="work-with-us">
+  <div class="wrap">
+    <div class="brand-panel reveal">
+      <div>
+        <span class="kicker">For brands</span>
+        <h2>Stories your audience actually trusts.</h2>
+        <p>We create authentic travel and lifestyle content across YouTube and Instagram — the kind that turns curiosity into bookings.</p>
+        <ol class="steps">
+          <li><div><b>Reach out</b><span>Share your brand and goals — we reply within 48 hours.</span></div></li>
+          <li><div><b>Plan the story</b><span>We co-design a concept that feels native to our audience.</span></div></li>
+          <li><div><b>Create &amp; publish</b><span>Filmed, edited and published, with performance reporting.</span></div></li>
+        </ol>
+        <a href="mailto:theloveandlayover@gmail.com?subject=Brand%20Collaboration%20-%20Love%20and%20Layovers" class="btn btn-light">Start a collaboration <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="logo-wall" aria-label="Brands we've worked with">
+        <div class="logo-tile"><img src="/assets/brands/komowellness.png" alt="KOMO Wellness" loading="lazy"></div>
+        <div class="logo-tile"><img src="/assets/brands/sunnystep.png" alt="Sunnystep" loading="lazy"></div>
+        <div class="logo-tile"><img src="/assets/brands/funvee.png" alt="Funvee City Tour" loading="lazy"></div>
+        <div class="logo-tile"><img src="/assets/brands/scentopia-logo.png" alt="Scentopia" loading="lazy"></div>
+        <div class="logo-tile"><img src="/assets/brands/imagica-logo.png" alt="Imagica" loading="lazy"></div>
+        <div class="logo-tile"><img src="/assets/brands/tomacado.png" alt="Tomacado" loading="lazy"></div>
+        <div class="logo-tile"><img src="/assets/brands/serrano.png" alt="Serrano Resort" loading="lazy"></div>
+        <div class="logo-tile"><img src="/assets/brands/bikanerwala.png" alt="Bikanerwala" loading="lazy"></div>
+        <a class="logo-more" href="/about.html">+6 more<br>partners →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Follow ===== -->
+<section class="follow">
+  <div class="wrap reveal">
+    <span class="kicker">Come along</span>
+    <h2>New adventures every week — don't miss the next one.</h2>
+    <p>Daily vlogs on YouTube, behind-the-scenes on Instagram, and free guides right here.</p>
+    <div class="row">
+      <a href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1" class="btn btn-yt" target="_blank" rel="noopener"><span aria-hidden="true">▶</span> Subscribe on YouTube</a>
+      <a href="https://www.instagram.com/loveandlayover" class="btn btn-ig" target="_blank" rel="noopener">Follow on Instagram</a>
     </div>
   </div>
 </section>
 
 </main>
 
-<footer>
-  <div class="container">
-    <div class="footer-col">
-      <h3 style="font-family: var(--font-serif); font-size: 1.25rem;">Love & Layovers</h3>
-      <p style="color: rgba(255,255,255,0.65); margin-bottom: var(--spacing-lg);">Travel content creators and brand collaboration partners.</p>
-      <a href="mailto:theloveandlayover@gmail.com" style="color: var(--accent); font-weight: 600;">theloveandlayover@gmail.com</a>
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-grid">
+      <div>
+        <a href="/" class="brand"><img src="/public/images/brand/logo-mark.svg" alt="" width="36" height="36">Love &amp; Layovers</a>
+        <p>Free travel guides and vlogs from an Indian couple living in Singapore.</p>
+        <a class="mail" href="mailto:theloveandlayover@gmail.com">theloveandlayover@gmail.com</a>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul><li><a href="/destinations/">Destinations</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/videos.html">Videos</a></li><li><a href="/videos/life-in-singapore.html">Life in Singapore</a></li></ul>
+      </div>
+      <div>
+        <h4>Popular</h4>
+        <ul><li><a href="/destinations/singapore.html">Singapore guide</a></li><li><a href="/destinations/japan.html">Japan guide</a></li><li><a href="/blog/singapore-layover-guide.html">Singapore layover</a></li><li><a href="/blog/southeast-asia-budget-tips.html">SE Asia budget</a></li></ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul><li><a href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1" target="_blank" rel="noopener">YouTube</a></li><li><a href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener">Instagram</a></li><li><a href="/about.html">About us</a></li><li><a href="#work-with-us">Work with us</a></li></ul>
+      </div>
     </div>
-    <div class="footer-col">
-      <h3>Explore</h3>
-      <ul>
-        <li><a href="/about.html">About Us</a></li>
-        <li><a href="/destinations/">Destinations</a></li>
-        <li><a href="/blog.html">Blog</a></li>
-        <li><a href="/videos.html">Videos</a></li>
-      </ul>
+    <div class="ftr-bottom">
+      <span>&copy; <span id="year">2026</span> Love and Layovers · Sanket &amp; Nikita</span>
+      <span>Made with ♥ between flights</span>
     </div>
-    <div class="footer-col">
-      <h3>Follow</h3>
-      <ul>
-        <li><a href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-        <li><a href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1" target="_blank" rel="noopener noreferrer">YouTube</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    &copy; 2026 Love and Layovers · Sanket & Nikita Travel Duo & Content Creators
   </div>
 </footer>
 
 <script>
-const collaborations = [
-  { brand: "Scentopia", logo: "/assets/brands/scentopia-logo.png", description: "Behind-the-scenes fragrance museum experience, featured across Instagram and YouTube." },
-  { brand: "Imagica", logo: "/assets/brands/imagica-logo.png", description: "Full-day theme park collaboration and content recap." },
-  { brand: "Biryani by Kilo", logo: "/assets/brands/biryanibykilo.png", description: "Culinary collaboration featuring authentic biryani experiences and food storytelling." },
-  { brand: "Pratha Jewellery", logo: "/assets/brands/pratha%20Jewellery.png", description: "Luxury jewellery collaboration showcasing craftsmanship and elegance." },
-  { brand: "Wetn Joy", logo: "/assets/brands/wetnjoy.png", description: "Adventure and lifestyle brand partnership for travel experiences." },
-  { brand: "Serrano Resort", logo: "/assets/brands/serrano.png", description: "Luxury resort collaboration showcasing hospitality and travel experiences." },
-  { brand: "Mauji Cafe", logo: "/assets/brands/maujicafe.png", description: "Cafe collaboration featuring unique culinary and lifestyle experiences." },
-  { brand: "Bangalore Cafe", logo: "/assets/brands/banglorecafe.png", description: "Cafe collaboration featuring unique culinary and lifestyle experiences." },
-  { brand: "Kailash Parbat", logo: "/assets/brands/kailashparbat.png", description: "Culinary collaboration featuring authentic regional cuisine and dining experiences." },
-  { brand: "Bikanerwala", logo: "/assets/brands/bikanerwala.png", description: "Traditional Indian sweets and snacks collaboration featuring authentic culinary experiences." },
-  { brand: "KOMO Wellness", logo: "/assets/brands/komowellness.png", description: "Global scalp and hair wellness brand from Singapore integrating AI analysis, botanical science, and refined service rituals to restore scalp health." },
-  { brand: "Funvee City Tour", logo: "/assets/brands/funvee.png", description: "Singapore's premier open-top bus tour experience. Discover iconic landmarks and explore the city's rich cultural heritage." },
-  { brand: "Tomacado", logo: "/assets/brands/tomacado.png", description: "Flower-themed lifestyle restaurant and florist from China, bringing elegant floral experiences to Paragon Shopping Centre on Orchard Road." },
-  { brand: "Sunnystep", logo: "/assets/brands/sunnystep.png", description: "Popular Singapore-based ergonomic footwear brand centered around the joy of movement." }
-];
+(function () {
+  'use strict';
+  var root = document.documentElement;
+  root.classList.add('js');
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-const brandsContainer = document.getElementById('brandsContainer');
-if (brandsContainer) {
-  collaborations.forEach(collab => {
-    const card = document.createElement('div');
-    card.className = 'brand-card';
-    card.innerHTML = `
-      <div class="brand-logo">
-        <img src="${collab.logo}" alt="${collab.brand}" loading="lazy">
-      </div>
-      <h3>${collab.brand}</h3>
-      <p>${collab.description}</p>
-    `;
-    brandsContainer.appendChild(card);
+  // Header shadow on scroll
+  var hdr = document.getElementById('hdr');
+  var onScroll = function () { hdr.classList.toggle('scrolled', window.scrollY > 8); };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Mobile menu
+  var btn = document.getElementById('menuBtn');
+  var nav = document.getElementById('siteNav');
+  var setMenu = function (open) {
+    nav.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  };
+  btn.addEventListener('click', function () { setMenu(!nav.classList.contains('open')); });
+  nav.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && nav.classList.contains('open')) { setMenu(false); btn.focus(); } });
+
+  // Scroll reveal
+  var reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  // Destination filter
+  var filters = document.querySelectorAll('.filter');
+  var cards = document.querySelectorAll('#destGrid .dest');
+  filters.forEach(function (f) {
+    f.addEventListener('click', function () {
+      var region = f.getAttribute('data-region');
+      filters.forEach(function (x) { x.setAttribute('aria-pressed', x === f ? 'true' : 'false'); });
+      document.getElementById('destGrid').setAttribute('data-filter', region);
+      cards.forEach(function (c) { c.hidden = region !== 'all' && c.getAttribute('data-region') !== region; });
+    });
   });
-}
-</script>
 
-<script src="/js/premium-interactions.js"></script>
+  // Latest videos from the YouTube sync (videos-data.json)
+  var isShort = function (v) { return v.duration === '< 1 min'; };
+  var clean = function (t) { return t.replace(/#[\p{L}\p{N}_]+/gu, '').replace(/\s*\|\s*$/, '').replace(/\s{2,}/g, ' ').trim() || t; };
+  var thumb = function (v) { return 'https://i.ytimg.com/vi/' + encodeURIComponent(v.id) + '/hqdefault.jpg'; };
+  var page = function (v) { return '/videos/' + encodeURIComponent(v.id) + '.html'; };
+  var seriesDay = function (v) {
+    var m = v.title.match(/\b(\d{1,2})\s*\/\s*30\b/) || String(v.fullDescription || v.description || '').match(/\bday (\d{1,2}) of (?:my|our) daily vlog series/i);
+    return m ? parseInt(m[1], 10) : null;
+  };
+
+  fetch('/videos-data.json')
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (videos) {
+      if (!videos.length) return;
+      var feature = videos.filter(function (v) { return !isShort(v); })[0] || videos[0];
+      var shorts = videos.filter(isShort).slice(0, 3);
+
+      // Featured player (click to load YouTube)
+      var player = document.getElementById('featurePlayer');
+      player.classList.remove('skeleton');
+      player.style.backgroundImage = 'url("' + thumb(feature) + '")';
+      player.setAttribute('aria-label', 'Play video: ' + clean(feature.title));
+      player.addEventListener('click', function () {
+        var iframe = document.createElement('iframe');
+        iframe.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(feature.id) + '?autoplay=1';
+        iframe.title = feature.title;
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        iframe.allowFullscreen = true;
+        player.textContent = '';
+        player.appendChild(iframe);
+        if (window.gtag) window.gtag('event', 'video_play', { video_id: feature.id, placement: 'homepage_feature' });
+      }, { once: true });
+      document.getElementById('featureTitle').textContent = clean(feature.title);
+      document.getElementById('featureDesc').textContent = String(feature.fullDescription || feature.description || '').split('\n')[0];
+      document.getElementById('featureLink').href = page(feature);
+
+      // Shorts rail
+      var rail = document.getElementById('shortsRail');
+      if (shorts.length) {
+        rail.textContent = '';
+        shorts.forEach(function (v) {
+          var a = document.createElement('a');
+          a.className = 'short';
+          a.href = page(v);
+          a.style.backgroundImage = 'url("' + thumb(v) + '")';
+          var s = document.createElement('span');
+          s.textContent = clean(v.title);
+          a.appendChild(s);
+          rail.appendChild(a);
+        });
+      }
+
+      // Series progress
+      var days = videos.map(seriesDay).filter(function (d) { return d !== null; });
+      if (days.length) {
+        var latest = Math.max.apply(null, days);
+        document.getElementById('seriesDay').textContent = 'Day ' + latest + ' of 30';
+        requestAnimationFrame(function () { document.getElementById('seriesBar').style.width = Math.min(100, latest / 30 * 100) + '%'; });
+      }
+
+      // Hero "new on YouTube" chip
+      var newest = videos[0];
+      var chip = document.getElementById('heroLatest');
+      chip.href = page(newest);
+      chip.querySelector('.thumb').style.backgroundImage = 'url("' + thumb(newest) + '")';
+      chip.querySelector('b').textContent = clean(newest.title);
+    })
+    .catch(function () {
+      var player = document.getElementById('featurePlayer');
+      player.classList.remove('skeleton');
+      document.getElementById('featureTitle').textContent = 'Watch our travel films on YouTube';
+      player.addEventListener('click', function () { window.open('https://www.youtube.com/@nikita_sanket_mane', '_blank', 'noopener'); });
+      document.getElementById('shortsRail').textContent = '';
+    });
+})();
+</script>
 
 </body>
 </html>
