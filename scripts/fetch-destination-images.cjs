@@ -41,9 +41,9 @@ const WANT = {
   'spain-hero': ['Alhambra', 'Plaza de España', 'Park Güell'],
   'spain-food': ['Paella', 'Tapas', 'Churros'],
   'portugal-hero': ['Lisbon tram', 'Porto Ribeira', 'Belém Tower'],
-  'portugal-food': ['Pastéis de Belém', 'Pastéis de nata', 'Pastel de nata', 'Francesinha'],
+  'portugal-food': ['Pastéis de nata', 'Pastel de nata', 'Francesinha', 'Bacalhau'],
   'germany-hero': ['Neuschwanstein Castle', 'Brandenburg Gate', 'Rothenburg ob der Tauber'],
-  'germany-food': ['Brezel', 'Pretzel', 'Currywurst', 'Schweinshaxe'],
+  'germany-food': ['Currywurst', 'Schweinshaxe', 'Laugenbrezel', 'Bratwurst'],
   'iceland-hero': ['Skógafoss', 'Seljalandsfoss', 'Kirkjufell'],
   'iceland-food': ['Plokkfiskur', 'Kjötsúpa', 'Pylsur', 'Hákarl', 'Skyr'],
   'mexico-hero': ['Chichen Itza', 'Teotihuacan', 'Mexico City Zocalo'],
@@ -60,7 +60,7 @@ const CATEGORIES = ['Featured_pictures_on_Wikimedia_Commons', 'Quality_images', 
 const FREE = /^(CC0( 1\.0)?|CC BY(-SA)?( \d\.\d)?( [a-z]{2,3})?|Public domain|PD\b.*)$/i;
 
 // Titles that make poor hero/food shots
-const SKIP = /interior|ceiling|nave|vault|inflating|aircraft|grumman|hawkeye|portrait|map\b|diagram|logo|stamp|coin|sorrir|smil|geniet|journalist|restaurant|häusle|portland/i;
+const SKIP = /interior|ceiling|nave|vault|inflating|aircraft|grumman|hawkeye|portrait|map\b|diagram|logo|stamp|coin|sorrir|smil|geniet|journalist|restaurant|häusle|portland|löwen|relief|facade|takeout|shop|store/i;
 
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 const stripHtml = (s = '') => s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
@@ -88,8 +88,8 @@ async function search(term, category, kind) {
     const license = (meta.LicenseShortName && meta.LicenseShortName.value) || '';
     if (!FREE.test(license.trim()) || /NC|ND/.test(license)) continue;
     const ratio = ii.width / ii.height;
-    if (kind === 'hero' && (ratio < 1.3 || ii.width < 1800)) continue;
-    if (kind === 'food' && (ratio < 1.0 || ii.width < 900)) continue;
+    if (kind === 'hero' && (ratio < 1.3 || ratio > 2.2 || ii.width < 1800)) continue;
+    if (kind === 'food' && (ratio < 1.0 || ratio > 2 || ii.width < 900)) continue;
     return {
       title: p.title.replace(/^File:/, ''),
       thumb: ii.thumburl || ii.url,
