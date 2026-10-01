@@ -326,5 +326,21 @@
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "query": "intitle:\"Jewel Changi Airport\" incategory:Quality_images"
+  },
+  "malaysia-hero": {
+    "title": "Kuala Lumpur Malaysia Petronas-Twin-Towers-01.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Kuala_Lumpur_Malaysia_Petronas-Twin-Towers-01.jpg",
+    "artist": "CEphoto, Uwe Aranas",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "query": "intitle:\"Petronas Twin Towers\" incategory:Quality_images"
+  },
+  "malaysia-food": {
+    "title": "Nasi lemak joh.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Nasi_lemak_joh.jpg",
+    "artist": "مانفی",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "query": "intitle:\"Nasi lemak\" incategory:Quality_images"
   }
 }
