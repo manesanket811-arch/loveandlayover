@@ -5,6 +5,7 @@
 // Run by .github/workflows/update-videos.yml after fetch-videos.cjs; safe to re-run.
 const fs = require('fs');
 const path = require('path');
+const chrome = require('./site-chrome.cjs');
 
 const ROOT = path.join(__dirname, '..');
 const SITE = 'https://www.loveandlayover.in';
@@ -105,6 +106,8 @@ function layout({ title, description, canonical, image, head = '', body }) {
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/css/modern-theme.css">
+${chrome.HEAD_LINKS}
+<link rel="stylesheet" href="/css/refresh.css?v=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -142,35 +145,12 @@ ${head}
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<header>
-  <nav class="wrap nav" aria-label="Main navigation">
-    <a href="/" class="logo"><img src="/public/images/brand/logo-mark.svg" alt="" width="34" height="34" style="vertical-align:-0.55em; margin-right:0.4em;">Love and Layovers</a>
-    <div class="nav-links">
-      <a href="/about.html">About Us</a>
-      <a href="/destinations/">Destinations</a>
-      <a href="/blog.html">Blog</a>
-      <a href="/videos.html">Videos</a>
-    </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
-  </nav>
-</header>
+${chrome.header('videos')}
 <main id="main" class="vp">
 ${body}
 </main>
-<footer>
-  <div class="wrap">
-    <p>
-      <strong>Love and Layovers</strong> — Free travel guides from real trips.<br>
-      <a href="/destinations/">Guides</a> | <a href="/blog.html">Blog</a> | <a href="/videos.html">Videos</a> |
-      <a href="/about.html">About Us</a> | <a href="mailto:theloveandlayover@gmail.com">Contact</a>
-    </p>
-    <p style="margin-top: 20px; margin-bottom: 0;">
-      <a href="${SUBSCRIBE}">YouTube</a> | <a href="https://www.instagram.com/loveandlayover">Instagram</a>
-    </p>
-    <div class="footer-copy">&copy; ${new Date().getUTCFullYear()} Love and Layovers · Travel tips with heart ✈</div>
-  </div>
-</footer>
-<script src="/js/nav-toggle.js"></script>
+${chrome.footer()}
+${chrome.SCRIPT}
 </body>
 </html>
 `;

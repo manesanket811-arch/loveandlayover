@@ -114,21 +114,24 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--accent); outline
 }
 /* --- end unified nav & a11y --- */
 </style>
+<link rel="stylesheet" href="/css/chrome.css?v=1">
+<link rel="stylesheet" href="/css/refresh.css?v=1">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
-<header>
-<nav class="wrap nav" aria-label="Main navigation">
-<a href="/" class="logo"><img src="/public/images/brand/logo-mark.svg" alt="" width="34" height="34" style="vertical-align:-0.55em; margin-right:0.4em;">Love and Layovers</a>
-<div class="nav-links">
-<a href="/about.html">About Us</a>
-<a href="/destinations/">Destinations</a>
-<a href="/blog.html">Blog</a>
-<a href="/videos.html">Videos</a>
-</div>
-<button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
-</nav>
+<header class="hdr" id="hdr">
+  <div class="hdr-wrap hdr-in">
+    <a href="/" class="site-brand" aria-label="Love and Layovers home"><img src="/public/images/brand/logo-mark.svg" alt="" width="36" height="36">Love &amp; Layovers</a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav"><span></span><span></span><span></span></button>
+    <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+      <a href="/destinations/">Destinations</a>
+      <a href="/videos.html">Videos</a>
+      <a href="/blog.html" aria-current="page">Blog</a>
+      <a href="/about.html">About</a>
+      <a href="/about.html#work-with-us" class="site-cta">Work with us</a>
+    </nav>
+  </div>
 </header>
 <main id="main">
 
@@ -145,7 +148,7 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--accent); outline
       <p>Japan is on everyone's bucket list, and for good reason. A 5-day Japan trip gives you enough time to experience Tokyo's electric energy, climb Mount Fuji, and understand why this country is so special. This is our tested itinerary that balances iconic attractions with hidden gems.</p>
 
       <h2>Day 1: Arrive in Tokyo, Shibuya & Harajuku</h2>
-      <p>After landing at Narita or Haneda, grab the Narita Express (N'EX) to your hotel in Shinjuku or Shibuya (Â¥3,070/$21). Drop your bags and head straight into the action.</p>
+      <p>After landing at Narita or Haneda, grab the Narita Express (N'EX) to your hotel in Shinjuku or Shibuya (¥3,070/$21). Drop your bags and head straight into the action.</p>
       <h3>Attractions:</h3>
       <ul>
         <li><strong>Shibuya Crossing</strong> — The world's busiest intersection. Go during evening for the best energy (free)</li>
@@ -185,7 +188,7 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--accent); outline
       <ul>
         <li>From Shinjuku Station, take a direct bus to Mt. Fuji 5th Station (2.5 hours, ¥2,600/$18)</li>
         <li>Hike for 1-2 hours to views</li>
-        <li>Return bus to Tokyo (Â¥2,600)</li>
+        <li>Return bus to Tokyo (¥2,600)</li>
       </ul>
       <p><strong>Daily Cost:</strong> ¥8,000-10,000 ($55-70)</p>
       <p><strong>Pro Tip:</strong> Bring layers. Mt. Fuji is cold even in summer. Start your hike by 1pm at the latest so you're back before dark.</p>
@@ -211,7 +214,7 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--accent); outline
         <li><strong>Don Quijote</strong> — Everything. Multiple locations, crazy deals</li>
         <li><strong>Depachika Food Halls</strong> — High-quality snacks for gift-giving</li>
       </ul>
-      <p>Head to the airport with enough time (3 hours for international flights). Take the N'EX back to Haneda/Narita (Â¥3,070).</p>
+      <p>Head to the airport with enough time (3 hours for international flights). Take the N'EX back to Haneda/Narita (¥3,070).</p>
       <p><strong>Daily Cost:</strong> ¥3,000-8,000 ($20-55)</p>
 
       <h2>5-Day Budget Breakdown</h2>
@@ -223,33 +226,33 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--accent); outline
         </tr>
         <tr>
           <td>Accommodation (4 nights)</td>
-          <td>Â¥12,000 ($80)</td>
-          <td>Â¥24,000 ($160)</td>
+          <td>¥12,000 ($80)</td>
+          <td>¥24,000 ($160)</td>
         </tr>
         <tr>
           <td>Food & Drinks</td>
-          <td>Â¥12,000 ($80)</td>
-          <td>Â¥18,000 ($120)</td>
+          <td>¥12,000 ($80)</td>
+          <td>¥18,000 ($120)</td>
         </tr>
         <tr>
           <td>Transportation (incl. Mt. Fuji)</td>
-          <td>Â¥10,000 ($67)</td>
-          <td>Â¥15,000 ($100)</td>
+          <td>¥10,000 ($67)</td>
+          <td>¥15,000 ($100)</td>
         </tr>
         <tr>
           <td>Activities & Museums</td>
-          <td>Â¥8,000 ($55)</td>
-          <td>Â¥15,000 ($100)</td>
+          <td>¥8,000 ($55)</td>
+          <td>¥15,000 ($100)</td>
         </tr>
         <tr>
           <td>Airport Transfer</td>
-          <td>Â¥6,000 ($40)</td>
-          <td>Â¥6,000 ($40)</td>
+          <td>¥6,000 ($40)</td>
+          <td>¥6,000 ($40)</td>
         </tr>
         <tr>
           <td><strong>Total</strong></td>
-          <td><strong>Â¥48,000 ($320)</strong></td>
-          <td><strong>Â¥78,000 ($520)</strong></td>
+          <td><strong>¥48,000 ($320)</strong></td>
+          <td><strong>¥78,000 ($520)</strong></td>
         </tr>
       </table>
 
@@ -294,28 +297,37 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--accent); outline
 </section>
 
 </main>
-<footer>
-  <div class="wrap">
-    <div class="foot">
-      <a href="/" class="logo"><img src="/public/images/brand/logo-mark.svg" alt="" width="34" height="34" style="vertical-align:-0.55em; margin-right:0.4em;">Love and Layovers</a>
-      <div class="foot-links">
-        <a href="/#videos">Videos</a>
-        <a href="/#guides">Destinations</a>
-        <a href="/blog.html">Blog</a>
-        
-        <a href="/#contact">Contact</a>
+<footer class="ftr">
+  <div class="ftr-wrap">
+    <div class="ftr-grid">
+      <div>
+        <a href="/" class="site-brand"><img src="/public/images/brand/icon-dark.svg" alt="" width="36" height="36">Love &amp; Layovers</a>
+        <p>Travel &amp; lifestyle content creators in Singapore — films, Reels and free travel guides.</p>
+        <a class="mail" href="mailto:theloveandlayover@gmail.com">theloveandlayover@gmail.com</a>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul><li><a href="/destinations/">Destinations</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/videos.html">Videos</a></li><li><a href="/videos/life-in-singapore.html">Life in Singapore</a></li></ul>
+      </div>
+      <div>
+        <h4>Popular</h4>
+        <ul><li><a href="/destinations/singapore.html">Singapore guide</a></li><li><a href="/destinations/japan.html">Japan guide</a></li><li><a href="/blog/singapore-layover-guide.html">Singapore layover</a></li><li><a href="/blog/southeast-asia-budget-tips.html">SE Asia budget</a></li></ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul><li><a href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1" target="_blank" rel="noopener">YouTube</a></li><li><a href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener">Instagram</a></li><li><a href="/about.html">About us</a></li><li><a href="/credits.html">Photo credits</a></li></ul>
       </div>
     </div>
-    <div class="copy">© <span id="yr"></span> Love and Layovers · Travel tips with heart ✈</div>
+    <div class="ftr-bottom">
+      <span>&copy; <span id="year">2026</span> Love and Layovers · Sanket &amp; Nikita</span>
+      <span>Made with ♥ between flights</span>
+    </div>
   </div>
 </footer>
 
-<script>
-document.getElementById('yr').textContent = new Date().getFullYear();
-</script>
 
-<script src="/js/nav-toggle.js" defer></script>
 <script src="/js/related-video.js" defer></script>
+<script src="/js/site.js?v=2"></script>
 </body>
 </html>
 

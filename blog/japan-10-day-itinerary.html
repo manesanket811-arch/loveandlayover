@@ -97,21 +97,24 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--accent); outline
 }
 /* --- end unified nav & a11y --- */
 </style>
+<link rel="stylesheet" href="/css/chrome.css?v=1">
+<link rel="stylesheet" href="/css/refresh.css?v=1">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
-<header>
-<nav class="wrap nav" aria-label="Main navigation">
-<a href="/" class="logo"><img src="/public/images/brand/logo-mark.svg" alt="" width="34" height="34" style="vertical-align:-0.55em; margin-right:0.4em;">Love and Layovers</a>
-<div class="nav-links">
-<a href="/about.html">About Us</a>
-<a href="/destinations/">Destinations</a>
-<a href="/blog.html">Blog</a>
-<a href="/videos.html">Videos</a>
-</div>
-<button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
-</nav>
+<header class="hdr" id="hdr">
+  <div class="hdr-wrap hdr-in">
+    <a href="/" class="site-brand" aria-label="Love and Layovers home"><img src="/public/images/brand/logo-mark.svg" alt="" width="36" height="36">Love &amp; Layovers</a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav"><span></span><span></span><span></span></button>
+    <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+      <a href="/destinations/">Destinations</a>
+      <a href="/videos.html">Videos</a>
+      <a href="/blog.html" aria-current="page">Blog</a>
+      <a href="/about.html">About</a>
+      <a href="/about.html#work-with-us" class="site-cta">Work with us</a>
+    </nav>
+  </div>
 </header>
 
 <main id="main">
@@ -191,7 +194,7 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--accent); outline
 <div class="day-box">
 <h3>Day 8: Central Kyoto & Gion</h3>
 <p><strong>Route:</strong> Golden Pavilion (Kinkaku-ji, ¥400) → Ryoan-ji rock garden → Gion district walking tour → possible geisha spotting at dusk</p>
-<p><strong>Eat:</strong> Kaiseki dinner in Gion (Â¥5,000-15,000)</p>
+<p><strong>Eat:</strong> Kaiseki dinner in Gion (¥5,000-15,000)</p>
 <p><strong>Cost:</strong> ¥1,500-2,500</p>
 </div>
 
@@ -200,7 +203,7 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--accent); outline
 <div class="day-box">
 <h3>Day 9: Kyoto to Osaka</h3>
 <p><strong>Transport:</strong> Shinkansen Kyoto → Osaka (15 min, ¥2,800)</p>
-<p><strong>Do:</strong> Osaka Castle (Â¥600), explore Dotonbori district (street food paradise), karaoke night</p>
+<p><strong>Do:</strong> Osaka Castle (¥600), explore Dotonbori district (street food paradise), karaoke night</p>
 <p><strong>Eat:</strong> Okonomiyaki (savory pancake, ¥800-1,500), takoyaki (octopus balls, ¥500), ramen</p>
 <p><strong>Cost:</strong> ¥2,000-3,500</p>
 </div>
@@ -224,7 +227,7 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--accent); outline
 - Book accommodations in advance during peak seasons
 - Convenience stores (7-Eleven, Lawson) have incredible cheap food
 - Most places don't take credit cards - carry cash
-- Pocket WiFi rental at airport (Â¥1,000-2,000/day) or SIM card
+- Pocket WiFi rental at airport (¥1,000-2,000/day) or SIM card
 - English is limited outside Tokyo/Kyoto - learn basic phrases or use Google Translate
 </div>
 
@@ -237,15 +240,36 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--accent); outline
 </div>
 
 </main>
-<footer>
-<div class="wrap">
-<p><a href="/blog.html">Blog</a> | <a href="/destinations/japan.html">Japan Guide</a></p>
-<div style="margin-top:20px; padding-top:20px; border-top:1px solid rgba(255,255,255,.1); text-align:center; font-size:.9rem;">&copy; 2026 Love and Layovers · Travel tips with heart ✈</div>
-</div>
+<footer class="ftr">
+  <div class="ftr-wrap">
+    <div class="ftr-grid">
+      <div>
+        <a href="/" class="site-brand"><img src="/public/images/brand/icon-dark.svg" alt="" width="36" height="36">Love &amp; Layovers</a>
+        <p>Travel &amp; lifestyle content creators in Singapore — films, Reels and free travel guides.</p>
+        <a class="mail" href="mailto:theloveandlayover@gmail.com">theloveandlayover@gmail.com</a>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul><li><a href="/destinations/">Destinations</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/videos.html">Videos</a></li><li><a href="/videos/life-in-singapore.html">Life in Singapore</a></li></ul>
+      </div>
+      <div>
+        <h4>Popular</h4>
+        <ul><li><a href="/destinations/singapore.html">Singapore guide</a></li><li><a href="/destinations/japan.html">Japan guide</a></li><li><a href="/blog/singapore-layover-guide.html">Singapore layover</a></li><li><a href="/blog/southeast-asia-budget-tips.html">SE Asia budget</a></li></ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul><li><a href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1" target="_blank" rel="noopener">YouTube</a></li><li><a href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener">Instagram</a></li><li><a href="/about.html">About us</a></li><li><a href="/credits.html">Photo credits</a></li></ul>
+      </div>
+    </div>
+    <div class="ftr-bottom">
+      <span>&copy; <span id="year">2026</span> Love and Layovers · Sanket &amp; Nikita</span>
+      <span>Made with ♥ between flights</span>
+    </div>
+  </div>
 </footer>
 
-<script src="/js/nav-toggle.js" defer></script>
 <script src="/js/related-video.js" defer></script>
+<script src="/js/site.js?v=2"></script>
 </body>
 </html>
 

@@ -1,0 +1,102 @@
+/* Love & Layovers — refresh layer for the older page templates (destination
+   guides, blog posts, destinations index, 404). Loaded after each page's own
+   styles; brings colours, type and spacing in line with css/site.css without
+   touching page content. */
+
+:root {
+  --r-navy: #0a1628;
+  --r-ink-soft: #4a5568;
+  --r-accent: #d4691d;
+  --r-cream: #fefaf5;
+  --r-sand: #f6efe6;
+  --r-line: #ece4d9;
+}
+
+body { background: var(--r-cream); font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; letter-spacing: -0.02em; }
+::selection { background: rgba(212, 105, 29, .18); }
+
+/* ---------- Destination guides ---------- */
+.guide-header { height: 520px; }
+.guide-header-overlay { background: linear-gradient(to top, rgba(10, 22, 40, .85) 0%, rgba(10, 22, 40, .35) 45%, rgba(10, 22, 40, .05) 100%); }
+.guide-header h1 { font-weight: 900; text-shadow: 0 2px 18px rgba(0,0,0,.35); }
+.guide-header-badge { box-shadow: 0 4px 14px rgba(0,0,0,.15); }
+
+.guide-container { grid-template-columns: 190px minmax(0, 1fr) 260px; gap: 48px; padding-top: 48px; padding-bottom: 72px; }
+.guide-content { max-width: 760px; font-size: 1.04rem; line-height: 1.75; color: #1f2937; }
+/* Article sub-sections are <section>s; the theme pads every section like a full page band */
+.guide-content > section { padding: 0; margin: 0 0 8px; background: none; }
+.guide-content > section:first-child > h2:first-child { margin-top: 0; }
+.guide-content h2 { font-size: clamp(1.7rem, 3vw, 2.2rem); font-weight: 900; margin-top: 3.2rem; }
+.guide-content h3 { font-family: 'Inter', sans-serif; font-weight: 700; letter-spacing: -0.01em; }
+.guide-content a { color: var(--r-accent); font-weight: 600; }
+
+.guide-toc { top: 96px; }
+.guide-toc h3 { font-family: 'Inter', sans-serif; color: var(--r-accent); font-weight: 700; letter-spacing: .12em; font-size: .75rem; }
+.guide-toc a { color: var(--r-ink-soft); border-left: 2px solid var(--r-line); padding: 6px 0 6px 12px; transition: color .2s, border-color .2s; }
+.guide-toc a:hover { color: var(--r-navy); border-left-color: var(--r-accent); font-weight: 500; }
+.guide-sidebar { top: 96px; }
+.guide-sidebar .card { background: #fff; border: 1px solid var(--r-line); border-radius: 18px; box-shadow: 0 2px 8px rgba(10,22,40,.05); }
+
+.itinerary-day { background: #fff; border: 1px solid var(--r-line); border-radius: 18px; padding: 26px 28px; box-shadow: 0 2px 8px rgba(10,22,40,.04); }
+.itinerary-day h4 { font-family: 'Fraunces', serif; font-weight: 900; }
+.itinerary-period { border-top: 1px dashed var(--r-line); padding-top: 12px; }
+.itinerary-period-label { color: var(--r-accent); text-transform: uppercase; letter-spacing: .06em; font-size: .78rem; padding-top: 3px; }
+.cost-chip { border-radius: 999px; }
+
+/* Full-width bands after the article (Read Next, related destinations, newsletter) */
+main > section.section { padding-top: 72px; padding-bottom: 72px; }
+.section--alt, section.alt { background: var(--r-sand); }
+.card-grid > a.card { border: 1px solid var(--r-line); border-radius: 18px; box-shadow: 0 2px 8px rgba(10,22,40,.05); }
+.card-grid > a.card:hover { border-color: transparent; box-shadow: 0 14px 40px rgba(10,22,40,.10); transform: translateY(-4px); }
+
+/* Mobile "▶ Watch" bar sits above the new footer */
+.sticky-action-bar { z-index: 900; }
+
+@media (max-width: 1200px) {
+  .guide-container { grid-template-columns: 1fr; gap: 28px; }
+  .guide-toc ul { display: flex; flex-wrap: wrap; gap: 6px 8px; }
+  .guide-toc li { margin: 0; }
+  .guide-toc a { border: 1px solid var(--r-line); border-radius: 999px; padding: 6px 14px; background: #fff; font-size: .85rem; }
+  .guide-toc a:hover { border-color: var(--r-accent); }
+}
+@media (max-width: 700px) { .guide-header { height: 440px; } }
+
+/* ---------- Blog posts ---------- */
+/* The old header was position:fixed, so posts padded their tops to clear it */
+div.breadcrumb { padding: 22px 0 18px; font-size: .88rem; }
+div.breadcrumb a { color: var(--r-accent); font-weight: 600; }
+.hero-section { position: relative; overflow: hidden; padding: 56px 0 64px; background: var(--r-navy); }
+.hero-section::before { content: ''; position: absolute; width: 620px; height: 620px; right: -200px; top: -280px; background: radial-gradient(closest-side, rgba(212,105,29,.38), transparent); pointer-events: none; }
+.hero-section .wrap { position: relative; }
+.hero-section h1 { color: #fff; font-size: clamp(2.1rem, 4.6vw, 3.4rem); font-weight: 900; max-width: 900px; }
+.hero-section p { color: rgba(255,255,255,.78); max-width: 720px; }
+.article-meta span { color: rgba(255,255,255,.75); }
+.article-content { font-size: 1.04rem; line-height: 1.75; }
+.article-content h2 { font-size: clamp(1.6rem, 2.8vw, 2.1rem); font-weight: 900; }
+.article-content h3 { font-weight: 700; }
+.toc { background: #fff; border: 1px solid var(--r-line); border-radius: 18px; box-shadow: 0 2px 8px rgba(10,22,40,.05); top: 96px; }
+@media (max-width: 560px) { .hero-section { padding: 40px 0 44px; } }
+
+/* Posts with a plain <div class="hero"> title block get the same navy band */
+main > div.hero { position: relative; overflow: hidden; padding: 56px 0 60px; margin: 0; background: var(--r-navy); color: #fff; text-align: left; }
+main > div.hero::before { content: ''; position: absolute; width: 620px; height: 620px; right: -200px; top: -280px; background: radial-gradient(closest-side, rgba(212,105,29,.38), transparent); pointer-events: none; }
+main > div.hero .wrap { position: relative; }
+main > div.hero h1 { color: #fff; font-size: clamp(2.1rem, 4.6vw, 3.4rem); font-weight: 900; margin: 0 0 14px; max-width: 900px; }
+main > div.hero .meta { color: rgba(255,255,255,.7); font-size: .9rem; margin-bottom: 12px; }
+main > div.hero p, main > div.hero p[style] { color: rgba(255,255,255,.8) !important; max-width: 720px; }
+/* Posts whose title opens the article */
+section.article { padding-top: 48px; }
+section.article > .wrap > h1:first-child { font-size: clamp(2.1rem, 4.6vw, 3.2rem); font-weight: 900; margin-bottom: 18px; }
+section.article .article-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+section.article .meta-item { background: #fff; border: 1px solid var(--r-line); border-radius: 999px; padding: 6px 14px; font-size: .85rem; font-weight: 600; color: var(--r-ink-soft); }
+
+/* ---------- Destinations index ---------- */
+section.hero { background: radial-gradient(70% 120% at 85% 0%, rgba(240,165,89,.22), transparent 60%), var(--r-cream); }
+.section-title { font-weight: 900; }
+
+/* Wide tables scroll inside the article on small screens instead of widening the page */
+.article-wrapper > *, .guide-container > * { min-width: 0; }
+@media (max-width: 700px) {
+  main table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+}

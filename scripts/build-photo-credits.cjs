@@ -3,6 +3,7 @@
 // Run by .github/workflows/fetch-destination-images.yml after fetching.
 const fs = require('fs');
 const path = require('path');
+const chrome = require('./site-chrome.cjs');
 
 const ROOT = path.join(__dirname, '..');
 const credits = JSON.parse(fs.readFileSync(path.join(ROOT, 'images', 'destinations', 'credits.json'), 'utf8'));
@@ -36,6 +37,8 @@ const html = `<!DOCTYPE html>
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/css/modern-theme.css">
+${chrome.HEAD_LINKS}
+<link rel="stylesheet" href="/css/refresh.css?v=1">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <style>
   .credits { max-width: 900px; margin: 0 auto; padding: 40px 24px 72px; }
@@ -49,18 +52,7 @@ const html = `<!DOCTYPE html>
 </style>
 </head>
 <body>
-<header>
-  <nav class="wrap nav" aria-label="Main navigation">
-    <a href="/" class="logo"><img src="/public/images/brand/logo-mark.svg" alt="" width="34" height="34" style="vertical-align:-0.55em; margin-right:0.4em;">Love and Layovers</a>
-    <div class="nav-links">
-      <a href="/about.html">About Us</a>
-      <a href="/destinations/">Destinations</a>
-      <a href="/blog.html">Blog</a>
-      <a href="/videos.html">Videos</a>
-    </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
-  </nav>
-</header>
+${chrome.header('')}
 <main class="credits">
   <h1>Photo credits</h1>
   <p>Destination photos on this site come from Wikimedia Commons and are used under the free licences listed below. Thank you to every photographer.</p>
@@ -68,7 +60,8 @@ const html = `<!DOCTYPE html>
 ${rows}
   </ul>
 </main>
-<script src="/js/nav-toggle.js"></script>
+${chrome.footer()}
+${chrome.SCRIPT}
 </body>
 </html>
 `;

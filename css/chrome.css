@@ -1,0 +1,85 @@
+/* Love & Layovers — site header and footer ("chrome").
+   Self-contained so it renders the same on every page, including older pages
+   whose own stylesheets set rules on bare header/nav/footer elements: the
+   selectors below are element+class (higher specificity) and reset those
+   properties explicitly. */
+
+header.hdr, footer.ftr {
+  --c-navy: #0a1628;
+  --c-ink: #0a1628;
+  --c-ink-soft: #4a5568;
+  --c-accent: #d4691d;
+  --c-accent-dark: #b4531a;
+  --c-cream: #fefaf5;
+  --c-line: #ece4d9;
+  --c-serif: 'Fraunces', Georgia, serif;
+  --c-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-family: var(--c-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+header.hdr *, header.hdr *::before, header.hdr *::after,
+footer.ftr *, footer.ftr *::before, footer.ftr *::after { box-sizing: border-box; }
+header.hdr a, footer.ftr a { text-decoration: none; }
+
+.hdr-wrap, .ftr-wrap { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+/* ---------- Header ---------- */
+header.hdr {
+  position: sticky; top: 0; left: auto; right: auto; z-index: 1000;
+  margin: 0; padding: 0;
+  background: rgba(254, 250, 245, .86);
+  backdrop-filter: saturate(160%) blur(14px); -webkit-backdrop-filter: saturate(160%) blur(14px);
+  border: 0; border-bottom: 1px solid transparent; box-shadow: none;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+header.hdr.scrolled { border-bottom-color: var(--c-line); box-shadow: 0 4px 20px rgba(10,22,40,.05); }
+.hdr-in { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 24px; }
+
+a.site-brand { display: flex; align-items: center; gap: 10px; font-family: var(--c-serif); font-weight: 900; font-size: 1.25rem; letter-spacing: -0.01em; line-height: 1.1; color: var(--c-ink); }
+a.site-brand img { width: 36px; height: 36px; display: block; margin: 0; }
+
+nav.site-nav { display: flex; align-items: center; gap: 30px; margin: 0; padding: 0; max-width: none; background: none; box-shadow: none; position: static; }
+nav.site-nav a:not(.site-cta) { font-weight: 500; font-size: .95rem; color: var(--c-ink-soft); position: relative; padding: 6px 0; background: none; }
+nav.site-nav a:not(.site-cta)::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--c-accent); transform: scaleX(0); transform-origin: left; transition: transform .25s ease; }
+nav.site-nav a:not(.site-cta):hover, nav.site-nav a[aria-current="page"] { color: var(--c-ink); }
+nav.site-nav a:not(.site-cta):hover::after, nav.site-nav a[aria-current="page"]::after { transform: scaleX(1); }
+
+a.site-cta { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 11px 20px; border-radius: 999px; border: 0; background: var(--c-accent); color: #fff; font-weight: 600; font-size: .9rem; line-height: 1; white-space: nowrap; box-shadow: 0 8px 22px rgba(212, 105, 29, .32); transition: transform .2s ease, background .2s ease; }
+a.site-cta:hover { background: var(--c-accent-dark); color: #fff; transform: translateY(-2px); }
+a.site-cta::before, a.site-cta::after { display: none; }
+
+button.menu-btn { display: none; width: 44px; height: 44px; padding: 0; margin: 0; border: 0; background: transparent; cursor: pointer; border-radius: 10px; align-items: center; justify-content: center; flex-direction: column; gap: 5px; }
+button.menu-btn span { display: block; width: 22px; height: 2px; background: var(--c-ink); border-radius: 2px; transition: transform .25s ease, opacity .25s ease; }
+button.menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+button.menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+button.menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+header.hdr :focus-visible, footer.ftr :focus-visible { outline: 3px solid var(--c-accent); outline-offset: 3px; border-radius: 6px; }
+
+@media (max-width: 860px) {
+  button.menu-btn { display: inline-flex; }
+  nav.site-nav { position: fixed; top: 72px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: 12px 24px 24px; background: var(--c-cream); border-bottom: 1px solid var(--c-line); box-shadow: 0 14px 40px rgba(10, 22, 40, .10); transform: translateY(-8px); opacity: 0; visibility: hidden; transition: opacity .2s ease, transform .2s ease, visibility .2s; }
+  nav.site-nav.open { transform: none; opacity: 1; visibility: visible; }
+  nav.site-nav a:not(.site-cta) { padding: 14px 0; font-size: 1.05rem; border-bottom: 1px solid var(--c-line); }
+  nav.site-nav a:not(.site-cta)::after { display: none; }
+  nav.site-nav a.site-cta { margin-top: 16px; padding: 14px 20px; }
+}
+
+/* ---------- Footer ---------- */
+footer.ftr { display: block; margin: 0; background: var(--c-navy); color: rgba(255,255,255,.7); padding: 64px 0 28px; font-size: .92rem; text-align: left; }
+footer.ftr .ftr-wrap { display: block; margin-bottom: 0; }
+footer.ftr p { margin: 0; color: rgba(255,255,255,.7); font-size: .92rem; }
+footer.ftr a { color: rgba(255,255,255,.7); }
+footer.ftr a:hover { color: #fff; }
+.ftr-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 40px; }
+footer.ftr a.site-brand { color: #fff; margin-bottom: 14px; }
+footer.ftr h4 { font-family: var(--c-sans); color: #fff; font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin: 0 0 16px; }
+footer.ftr ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+footer.ftr li { margin: 0; }
+footer.ftr a.mail { color: var(--c-accent); font-weight: 600; display: inline-block; margin-top: 14px; }
+.ftr-bottom { border-top: 1px solid rgba(255,255,255,.1); margin-top: 48px; padding-top: 24px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: .85rem; }
+@media (max-width: 800px) { .ftr-grid { grid-template-columns: 1fr 1fr; } .ftr-grid > :first-child { grid-column: span 2; } }
+
+@media (prefers-reduced-motion: reduce) {
+  header.hdr *, footer.ftr * { transition: none !important; }
+}

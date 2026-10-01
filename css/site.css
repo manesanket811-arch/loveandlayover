@@ -52,33 +52,6 @@ p { margin: 0; }
 .link-arrow span { transition: transform .2s ease; }
 .link-arrow:hover span { transform: translateX(4px); }
 
-/* ---------- Header ---------- */
-.hdr { position: sticky; top: 0; z-index: 100; background: rgba(254, 250, 245, .82); backdrop-filter: saturate(160%) blur(14px); -webkit-backdrop-filter: saturate(160%) blur(14px); border-bottom: 1px solid transparent; transition: border-color .2s ease, box-shadow .2s ease; }
-.hdr.scrolled { border-color: var(--line); box-shadow: 0 4px 20px rgba(10,22,40,.05); }
-.hdr-in { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 24px; }
-.brand { display: flex; align-items: center; gap: 10px; font-family: var(--serif); font-weight: 900; font-size: 1.25rem; letter-spacing: -0.01em; }
-.brand img { width: 36px; height: 36px; }
-.nav { display: flex; align-items: center; gap: 30px; }
-.nav a:not(.btn) { font-weight: 500; font-size: .95rem; color: var(--ink-soft); position: relative; padding: 6px 0; }
-.nav a:not(.btn)::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform .25s ease; }
-.nav a:not(.btn):hover { color: var(--ink); }
-.nav a:not(.btn):hover::after { transform: scaleX(1); }
-.nav .btn { padding: 11px 20px; font-size: .9rem; }
-.menu-btn { display: none; width: 44px; height: 44px; border: 0; background: transparent; cursor: pointer; border-radius: 10px; align-items: center; justify-content: center; flex-direction: column; gap: 5px; }
-.menu-btn span { width: 22px; height: 2px; background: var(--ink); border-radius: 2px; transition: transform .25s ease, opacity .25s ease; }
-.menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
-.menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-@media (max-width: 860px) {
-  .menu-btn { display: inline-flex; }
-  .nav { position: fixed; top: 72px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: 12px 24px 24px; background: var(--cream); border-bottom: 1px solid var(--line); box-shadow: var(--shadow); transform: translateY(-8px); opacity: 0; visibility: hidden; transition: opacity .2s ease, transform .2s ease, visibility .2s; }
-  .nav.open { transform: none; opacity: 1; visibility: visible; }
-  .nav a:not(.btn) { padding: 14px 0; font-size: 1.05rem; border-bottom: 1px solid var(--line); }
-  .nav a:not(.btn)::after { display: none; }
-  .nav .btn { margin-top: 16px; padding: 14px 20px; }
-}
-
 /* ---------- Hero ---------- */
 .hero { position: relative; padding: 56px 0 88px; overflow: hidden; }
 .hero::before { content: ''; position: absolute; width: 720px; height: 720px; right: -220px; top: -260px; background: radial-gradient(closest-side, rgba(240, 165, 89, .30), transparent); pointer-events: none; }
@@ -287,17 +260,6 @@ p { margin: 0; }
 .follow p { color: var(--ink-soft); max-width: 560px; margin: 0 auto 30px; font-size: 1.05rem; }
 .follow .row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 .btn-ig { background: linear-gradient(45deg, #f09433, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888); color: #fff; }
-
-/* ---------- Footer ---------- */
-.ftr { background: var(--navy); color: rgba(255,255,255,.7); padding: 64px 0 28px; font-size: .92rem; }
-.ftr-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 40px; }
-.ftr .brand { color: #fff; margin-bottom: 14px; }
-.ftr h4 { color: #fff; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; margin: 0 0 16px; }
-.ftr ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
-.ftr a:hover { color: #fff; }
-.ftr .mail { color: var(--accent); font-weight: 600; display: inline-block; margin-top: 14px; }
-.ftr-bottom { border-top: 1px solid rgba(255,255,255,.1); margin-top: 48px; padding-top: 24px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: .85rem; }
-@media (max-width: 800px) { .ftr-grid { grid-template-columns: 1fr 1fr; } .ftr-grid > :first-child { grid-column: span 2; } }
 
 /* ---------- Reveal (only when JS is running) ---------- */
 .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }

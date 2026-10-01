@@ -101,21 +101,24 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--accent); outline
 }
 /* --- end unified nav & a11y --- */
 </style>
+<link rel="stylesheet" href="/css/chrome.css?v=1">
+<link rel="stylesheet" href="/css/refresh.css?v=1">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
-<header>
-<nav class="wrap nav" aria-label="Main navigation">
-<a href="/" class="logo"><img src="/public/images/brand/logo-mark.svg" alt="" width="34" height="34" style="vertical-align:-0.55em; margin-right:0.4em;">Love and Layovers</a>
-<div class="nav-links">
-<a href="/about.html">About Us</a>
-<a href="/destinations/">Destinations</a>
-<a href="/blog.html">Blog</a>
-<a href="/videos.html">Videos</a>
-</div>
-<button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
-</nav>
+<header class="hdr" id="hdr">
+  <div class="hdr-wrap hdr-in">
+    <a href="/" class="site-brand" aria-label="Love and Layovers home"><img src="/public/images/brand/logo-mark.svg" alt="" width="36" height="36">Love &amp; Layovers</a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav"><span></span><span></span><span></span></button>
+    <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+      <a href="/destinations/">Destinations</a>
+      <a href="/videos.html">Videos</a>
+      <a href="/blog.html" aria-current="page">Blog</a>
+      <a href="/about.html">About</a>
+      <a href="/about.html#work-with-us" class="site-cta">Work with us</a>
+    </nav>
+  </div>
 </header>
 
 <div class="breadcrumb"><div class="wrap"><a href="/">Home</a> <span>/</span> <a href="/blog.html">Blog</a> <span>/</span> <span>Singapore Layover Guide</span></div></div>
@@ -307,10 +310,36 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--accent); outline
 </aside>
 </div>
 
-<footer><div class="wrap" style="color:#9fb0b5;padding:30px 0"><p style="margin-bottom:16px">© 2026 Love and Layovers. Real travel tips with heart ✈</p></div></footer>
+<footer class="ftr">
+  <div class="ftr-wrap">
+    <div class="ftr-grid">
+      <div>
+        <a href="/" class="site-brand"><img src="/public/images/brand/icon-dark.svg" alt="" width="36" height="36">Love &amp; Layovers</a>
+        <p>Travel &amp; lifestyle content creators in Singapore — films, Reels and free travel guides.</p>
+        <a class="mail" href="mailto:theloveandlayover@gmail.com">theloveandlayover@gmail.com</a>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul><li><a href="/destinations/">Destinations</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/videos.html">Videos</a></li><li><a href="/videos/life-in-singapore.html">Life in Singapore</a></li></ul>
+      </div>
+      <div>
+        <h4>Popular</h4>
+        <ul><li><a href="/destinations/singapore.html">Singapore guide</a></li><li><a href="/destinations/japan.html">Japan guide</a></li><li><a href="/blog/singapore-layover-guide.html">Singapore layover</a></li><li><a href="/blog/southeast-asia-budget-tips.html">SE Asia budget</a></li></ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul><li><a href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1" target="_blank" rel="noopener">YouTube</a></li><li><a href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener">Instagram</a></li><li><a href="/about.html">About us</a></li><li><a href="/credits.html">Photo credits</a></li></ul>
+      </div>
+    </div>
+    <div class="ftr-bottom">
+      <span>&copy; <span id="year">2026</span> Love and Layovers · Sanket &amp; Nikita</span>
+      <span>Made with ♥ between flights</span>
+    </div>
+  </div>
+</footer>
 
-<script src="/js/nav-toggle.js" defer></script>
 <script src="/js/related-video.js" defer></script>
+<script src="/js/site.js?v=2"></script>
 </body>
 </html>
 

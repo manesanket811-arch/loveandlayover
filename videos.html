@@ -151,20 +151,21 @@
   .series-band .series-meta { font-size: .9rem; margin: 10px 0 18px; }
   @media (max-width: 800px) { .series-band { grid-template-columns: 1fr; padding: 32px 26px; } }
 </style>
+<link rel="stylesheet" href="/css/chrome.css?v=1">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
 <header class="hdr" id="hdr">
-  <div class="wrap hdr-in">
-    <a href="/" class="brand" aria-label="Love and Layovers home"><img src="/public/images/brand/logo-mark.svg" alt="" width="36" height="36">Love &amp; Layovers</a>
-    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav"><span></span><span></span><span></span></button>
-    <nav class="nav" id="siteNav" aria-label="Main navigation">
+  <div class="hdr-wrap hdr-in">
+    <a href="/" class="site-brand" aria-label="Love and Layovers home"><img src="/public/images/brand/logo-mark.svg" alt="" width="36" height="36">Love &amp; Layovers</a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav"><span></span><span></span><span></span></button>
+    <nav class="site-nav" id="siteNav" aria-label="Main navigation">
       <a href="/destinations/">Destinations</a>
       <a href="/videos.html" aria-current="page">Videos</a>
       <a href="/blog.html">Blog</a>
       <a href="/about.html">About</a>
-      <a href="/about.html#work-with-us" class="btn btn-primary">Work with us</a>
+      <a href="/about.html#work-with-us" class="site-cta">Work with us</a>
     </nav>
   </div>
 </header>
@@ -271,10 +272,10 @@
 </main>
 
 <footer class="ftr">
-  <div class="wrap">
+  <div class="ftr-wrap">
     <div class="ftr-grid">
       <div>
-        <a href="/" class="brand"><img src="/public/images/brand/icon-dark.svg" alt="" width="36" height="36">Love &amp; Layovers</a>
+        <a href="/" class="site-brand"><img src="/public/images/brand/icon-dark.svg" alt="" width="36" height="36">Love &amp; Layovers</a>
         <p>Travel &amp; lifestyle content creators in Singapore — films, Reels and free travel guides.</p>
         <a class="mail" href="mailto:theloveandlayover@gmail.com">theloveandlayover@gmail.com</a>
       </div>
@@ -298,7 +299,7 @@
   </div>
 </footer>
 
-<script src="/js/site.js?v=1"></script>
+<script src="/js/site.js?v=2"></script>
 <script>
 (function () {
   'use strict';
