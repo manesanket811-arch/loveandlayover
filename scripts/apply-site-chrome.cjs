@@ -10,10 +10,10 @@ const { header, footer, HEAD_LINKS, SCRIPT } = require('./site-chrome.cjs');
 const ROOT = path.join(__dirname, '..');
 const REFRESH = '<link rel="stylesheet" href="/css/refresh.css?v=1">';
 // Pages already built on css/site.css don't need the refresh layer
-const MODERN = new Set(['index.html', 'about.html', 'videos.html', 'blog.html']);
+const MODERN = new Set(['index.html', 'about.html', 'videos.html', 'blog.html', 'work-with-us.html']);
 
 function defaultFiles() {
-  const list = ['index.html', 'about.html', 'videos.html', 'blog.html', '404.html'];
+  const list = ['index.html', 'about.html', 'videos.html', 'blog.html', 'work-with-us.html', '404.html'];
   for (const dir of ['destinations', 'blog']) {
     for (const f of fs.readdirSync(path.join(ROOT, dir))) if (f.endsWith('.html')) list.push(`${dir}/${f}`);
   }
@@ -25,6 +25,7 @@ function section(file) {
   if (file.startsWith('blog')) return 'blog';
   if (file.startsWith('videos')) return 'videos';
   if (file === 'about.html') return 'about';
+  if (file === 'work-with-us.html') return 'work';
   return '';
 }
 
@@ -35,8 +36,7 @@ function apply(file) {
   let s = raw.toString('utf8').replace(/^﻿/, '');
   const before = s;
 
-  const cta = (file === 'index.html' || file === 'about.html') ? '#work-with-us' : '/about.html#work-with-us';
-  s = s.replace(/<header\b[^>]*>[\s\S]*?<\/header>/, header(section(file), { cta }));
+  s = s.replace(/<header\b[^>]*>[\s\S]*?<\/header>/, header(section(file)));
   if (/<footer\b/.test(s)) s = s.replace(/<footer\b[^>]*>[\s\S]*?<\/footer>/, footer());
   else s = s.replace(/<\/main>/, `</main>\n\n${footer()}`);
 

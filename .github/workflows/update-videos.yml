@@ -18,6 +18,8 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # build-sitemap reads each page's last commit date
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -27,12 +29,15 @@ jobs:
       - name: Fetch YouTube Videos
         run: node scripts/fetch-videos.cjs
 
-      - name: Build video pages and sitemap
+      - name: Build video pages and video sitemap
         run: node scripts/build-video-pages.cjs
+
+      - name: Build sitemap
+        run: node scripts/build-sitemap.cjs
 
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add videos-data.json videos/ sitemap_videos.xml
+          git add videos-data.json videos/ sitemap_videos.xml sitemap.xml
           git diff --staged --quiet || (git commit -m "chore: update YouTube videos" && git pull --rebase && git push)

@@ -30,6 +30,14 @@ const fmtDate = (iso) => new Date(iso).toLocaleDateString('en-US', { month: 'lon
 // Hashtags stripped, for headings and meta tags
 const cleanTitle = (t) => t.replace(/#[\p{L}\p{N}_]+/gu, '').replace(/\s*\|\s*$/, '').replace(/\s{2,}/g, ' ').trim() || t;
 
+// <title> within ~60 chars: keep the brand suffix when it fits, else trim the title at a word
+function pageTitle(t) {
+  const full = `${t} | Love and Layovers`;
+  if (full.length <= 60) return full;
+  if (t.length <= 60) return t;
+  return t.slice(0, 58).replace(/\s+\S*$/, '').replace(/[\s|,:;—-]+$/, '') + '…';
+}
+
 // Description lines minus comma-separated tag dumps ("reach, feed, foryoupage, ...")
 function descriptionLines(v) {
   const text = v.fullDescription || v.description || '';
@@ -211,7 +219,7 @@ ${more.length ? `<h2>More ${isShort(v) ? 'Shorts' : 'videos'}</h2>
 `;
 
   const html = layout({
-    title: `${title} | Love and Layovers`,
+    title: pageTitle(title),
     description: metaDesc,
     canonical: pageUrl(v),
     image: thumb(v),
@@ -248,7 +256,7 @@ ${latest ? `<div class="vp-player${isShort(latest) ? ' is-short' : ''}" style="m
     itemListElement: series.map((v, i) => ({ '@type': 'ListItem', position: i + 1, url: `${SITE}${pageUrl(v)}` })),
   };
   fs.writeFileSync(path.join(OUT_DIR, `${SERIES_SLUG}.html`), layout({
-    title: 'Life in Singapore: 30-Day Couple Vlog Series | Love and Layovers',
+    title: 'Life in Singapore: 30-Day Couple Vlog | Love and Layovers',
     description: 'Daily vlogs of an Indian couple living in Singapore: routines, dates, food and festivals. Watch all episodes of our 30-day series in order.',
     canonical: `/videos/${SERIES_SLUG}.html`,
     image: latest ? thumb(latest) : `${SITE}/public/images/banner.png`,

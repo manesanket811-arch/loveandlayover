@@ -17,15 +17,17 @@
   }
 </script>
 
-<meta name="description" content="Meet Sanket & Nikita — Singapore-based lifestyle creators with a 45,000+ engaged community, trusted by global brands for authentic content and real collaborations.">
+<meta name="description" content="Meet Sanket &amp; Nikita: Singapore-based travel and lifestyle creators with a 45K+ community, trusted by 14+ brands for honest, story-led content.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="About Sanket & Nikita — Love and Layovers">
-<meta property="og:description" content="Singapore-based lifestyle creators trusted by global brands for authentic storytelling.">
-<meta property="og:image" content="https://www.loveandlayover.in/public/images/banner.png">
+<meta property="og:description" content="Meet Sanket &amp; Nikita: Singapore-based travel and lifestyle creators with a 45K+ community, trusted by 14+ brands for honest, story-led content.">
+<meta property="og:image" content="https://www.loveandlayover.in/images/og/default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="About Sanket & Nikita">
-<meta name="twitter:description" content="Singapore-based lifestyle creators with a 45,000+ engaged community.">
-<meta name="twitter:image" content="https://www.loveandlayover.in/public/images/banner.png">
+<meta name="twitter:description" content="Meet Sanket &amp; Nikita: Singapore-based travel and lifestyle creators with a 45K+ community, trusted by 14+ brands for honest, story-led content.">
+<meta name="twitter:image" content="https://www.loveandlayover.in/images/og/default.jpg">
 <meta property="og:url" content="https://www.loveandlayover.in/about.html">
 <meta property="og:site_name" content="Love and Layovers">
 <meta name="robots" content="index, follow">
@@ -41,20 +43,91 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Love and Layovers",
-  "url": "https://www.loveandlayover.in",
-  "logo": "https://www.loveandlayover.in/public/images/brand/logo-512.png",
-  "description": "Authentic travel and lifestyle content from Singapore-based creators",
-  "sameAs": [
-    "https://www.youtube.com/@nikita_sanket_mane",
-    "https://www.instagram.com/loveandlayover"
-  ],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "Customer Support",
-    "email": "theloveandlayover@gmail.com"
-  }
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.loveandlayover.in/#organization",
+      "name": "Love and Layovers",
+      "url": "https://www.loveandlayover.in/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.loveandlayover.in/public/images/brand/logo-512.png",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://www.loveandlayover.in/images/og/default.jpg",
+      "description": "Singapore-based travel and lifestyle content creators Sanket & Nikita: travel films, Reels and brand storytelling, plus free travel guides.",
+      "email": "theloveandlayover@gmail.com",
+      "founder": [
+        {
+          "@id": "https://www.loveandlayover.in/#sanket"
+        },
+        {
+          "@id": "https://www.loveandlayover.in/#nikita"
+        }
+      ],
+      "sameAs": [
+        "https://www.youtube.com/@nikita_sanket_mane",
+        "https://www.instagram.com/loveandlayover",
+        "https://www.instagram.com/nikita.lagaskar",
+        "https://www.instagram.com/mi.punekar_"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "partnerships",
+        "email": "theloveandlayover@gmail.com",
+        "url": "https://www.loveandlayover.in/work-with-us.html"
+      },
+      "areaServed": [
+        "SG",
+        "IN"
+      ],
+      "knowsAbout": [
+        "Travel",
+        "Food and cafés",
+        "Wellness",
+        "Lifestyle content",
+        "Brand storytelling",
+        "Singapore"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.loveandlayover.in/#sanket",
+      "name": "Sanket Mane",
+      "jobTitle": "Travel & lifestyle content creator",
+      "worksFor": {
+        "@id": "https://www.loveandlayover.in/#organization"
+      },
+      "homeLocation": {
+        "@type": "Place",
+        "name": "Singapore"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.loveandlayover.in/#nikita",
+      "name": "Nikita",
+      "jobTitle": "Travel & lifestyle content creator",
+      "worksFor": {
+        "@id": "https://www.loveandlayover.in/#organization"
+      },
+      "homeLocation": {
+        "@type": "Place",
+        "name": "Singapore"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.loveandlayover.in/#website",
+      "name": "Love and Layovers",
+      "url": "https://www.loveandlayover.in/",
+      "publisher": {
+        "@id": "https://www.loveandlayover.in/#organization"
+      },
+      "inLanguage": "en"
+    }
+  ]
 }
 </script>
 
@@ -88,7 +161,7 @@
     env: 'production',
     version: '3.0.0',
     sessionSampleRate: 100,
-    sessionReplaySampleRate: 100,
+    sessionReplaySampleRate: 10,
     trackResources: true,
     trackUserInteractions: true,
     trackLongTasks: true,
@@ -184,7 +257,7 @@
       <a href="/videos.html">Videos</a>
       <a href="/blog.html">Blog</a>
       <a href="/about.html" aria-current="page">About</a>
-      <a href="#work-with-us" class="site-cta">Work with us</a>
+      <a href="/work-with-us.html" class="site-cta">Work with us</a>
     </nav>
   </div>
 </header>
@@ -199,7 +272,7 @@
       <h1>Two curious people, one shared obsession with noticing the <em>good stuff</em>.</h1>
       <p class="hero-lead">We're Sanket &amp; Nikita — Singapore-based lifestyle creators who never quite settled into one lane. This is how we got here, and why brands trust us to tell their story.</p>
       <div class="hero-cta">
-        <a href="#work-with-us" class="btn btn-primary">Work with us <span aria-hidden="true">→</span></a>
+        <a href="/work-with-us.html" class="btn btn-primary">Work with us <span aria-hidden="true">→</span></a>
         <a href="/videos.html" class="btn btn-ghost"><span aria-hidden="true">▶</span> Watch our films</a>
       </div>
     </div>
@@ -321,7 +394,7 @@
       <div class="row">
         <a href="mailto:theloveandlayover@gmail.com?subject=Brand%20Collaboration%20-%20Love%20and%20Layovers" class="btn btn-light">Get in touch <span aria-hidden="true">→</span></a>
         <a href="https://www.instagram.com/loveandlayover" class="btn btn-outline-light" target="_blank" rel="noopener">DM us on Instagram</a>
-        <a href="/" class="btn btn-outline-light">See what we create</a>
+        <a href="/work-with-us.html" class="btn btn-outline-light">Formats &amp; how we work</a>
       </div>
     </div>
   </div>
@@ -347,7 +420,7 @@
       </div>
       <div>
         <h4>Follow</h4>
-        <ul><li><a href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1" target="_blank" rel="noopener">YouTube</a></li><li><a href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener">Instagram</a></li><li><a href="/about.html">About us</a></li><li><a href="/credits.html">Photo credits</a></li></ul>
+        <ul><li><a href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1" target="_blank" rel="noopener">YouTube</a></li><li><a href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener">Instagram</a></li><li><a href="/work-with-us.html">Work with us</a></li><li><a href="/about.html">About us</a></li><li><a href="/credits.html">Photo credits</a></li></ul>
       </div>
     </div>
     <div class="ftr-bottom">

@@ -12,7 +12,7 @@ const NAV = [
   ['about', '/about.html', 'About'],
 ];
 
-function header(current = '', { cta = '/about.html#work-with-us' } = {}) {
+function header(current = '', { cta = '/work-with-us.html' } = {}) {
   const links = NAV.map(([key, href, label]) =>
     `      <a href="${href}"${key === current ? ' aria-current="page"' : ''}>${label}</a>`).join('\n');
   return `<header class="hdr" id="hdr">
@@ -21,7 +21,7 @@ function header(current = '', { cta = '/about.html#work-with-us' } = {}) {
     <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav"><span></span><span></span><span></span></button>
     <nav class="site-nav" id="siteNav" aria-label="Main navigation">
 ${links}
-      <a href="${cta}" class="site-cta">Work with us</a>
+      <a href="${cta}" class="site-cta"${current === 'work' ? ' aria-current="page"' : ''}>Work with us</a>
     </nav>
   </div>
 </header>`;
@@ -46,7 +46,7 @@ function footer() {
       </div>
       <div>
         <h4>Follow</h4>
-        <ul><li><a href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1" target="_blank" rel="noopener">YouTube</a></li><li><a href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener">Instagram</a></li><li><a href="/about.html">About us</a></li><li><a href="/credits.html">Photo credits</a></li></ul>
+        <ul><li><a href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1" target="_blank" rel="noopener">YouTube</a></li><li><a href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener">Instagram</a></li><li><a href="/work-with-us.html">Work with us</a></li><li><a href="/about.html">About us</a></li><li><a href="/credits.html">Photo credits</a></li></ul>
       </div>
     </div>
     <div class="ftr-bottom">
