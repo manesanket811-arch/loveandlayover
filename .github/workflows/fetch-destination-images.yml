@@ -1,0 +1,38 @@
+name: Fetch Destination Images
+
+# Manual: downloads freely licensed destination photos from Wikimedia Commons
+# into images/destinations/ (see scripts/fetch-destination-images.cjs).
+on:
+  workflow_dispatch:
+    inputs:
+      only:
+        description: 'Comma-separated keys to re-fetch (e.g. japan-hero,peru-food). Empty = fetch missing only.'
+        required: false
+        default: ''
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install sharp
+        run: npm install --no-save --no-package-lock sharp@0.33
+
+      - name: Fetch images
+        env:
+          ONLY: ${{ inputs.only }}
+        run: node scripts/fetch-destination-images.cjs
+
+      - name: Commit images
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add images/destinations
+          git diff --staged --quiet || (git commit -m "chore: fetch destination images from Wikimedia Commons" && git pull --rebase && git push)
