@@ -355,6 +355,61 @@
     gap: 10px;
   }
 
+  /* Two-column listing: long-form videos | vertical Shorts */
+  .video-columns {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: var(--spacing-2xl);
+    align-items: start;
+  }
+
+  .video-column-title {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .video-column-title h3 {
+    margin: 0;
+    font-size: 1.35rem;
+    color: var(--primary);
+  }
+
+  .video-column-title a {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+
+  .video-columns .video-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .video-columns .shorts-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .shorts-grid .video-thumb {
+    aspect-ratio: 9 / 16;
+  }
+
+  .shorts-grid .video-info {
+    padding: var(--spacing-md);
+  }
+
+  .shorts-grid .video-info h3 {
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 900px) {
+    .video-columns { grid-template-columns: 1fr; }
+    .video-columns .shorts-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+  }
+
   .video-grid-loading {
     grid-column: 1 / -1;
     text-align: center;
@@ -454,8 +509,25 @@
       <h2>Latest Episodes</h2>
       <p>Destination guides, food tours, and travel tips. Subscribe for new videos every week.</p>
     </div>
-    <div class="video-grid" id="videosGrid" data-stagger>
-      <div class="video-grid-loading">Loading videos from the channel…</div>
+    <div class="video-columns">
+      <div class="video-column">
+        <div class="video-column-title">
+          <h3>Videos</h3>
+          <a href="https://www.youtube.com/@nikita_sanket_mane/videos" target="_blank" rel="noopener noreferrer">All videos →</a>
+        </div>
+        <div class="video-grid" id="videosGrid" data-stagger>
+          <div class="video-grid-loading">Loading videos from the channel…</div>
+        </div>
+      </div>
+      <div class="video-column">
+        <div class="video-column-title">
+          <h3>Shorts</h3>
+          <a href="https://www.youtube.com/@nikita_sanket_mane/shorts" target="_blank" rel="noopener noreferrer">All Shorts →</a>
+        </div>
+        <div class="video-grid shorts-grid" id="shortsGrid" data-stagger>
+          <div class="video-grid-loading">Loading Shorts…</div>
+        </div>
+      </div>
     </div>
     <div class="text-center mt-3xl" data-reveal>
       <a href="https://www.youtube.com/@nikita_sanket_mane" class="btn btn-primary btn-magnetic">View All Videos on YouTube →</a>
@@ -511,6 +583,8 @@
 </footer>
 
 <script>
+  const isShort = (video) => video.duration === '< 1 min';
+
   // Featured video
   const loadFeaturedVideo = async () => {
     const container = document.getElementById('featuredVideoContainer');
@@ -520,7 +594,7 @@
       const videos = await response.json();
       if (videos.length === 0) throw new Error('No videos found');
 
-      const latest = videos[0];
+      const latest = videos.find(v => !isShort(v)) || videos[0];
       const publishDate = new Date(latest.published).toLocaleDateString('en-US', {
         month: 'short', day: 'numeric', year: 'numeric'
       });
@@ -572,73 +646,86 @@
     }
   };
 
-  // Video grid
+  // Video listing — long-form videos and Shorts in separate columns
   const loadVideos = async () => {
     const grid = document.getElementById('videosGrid');
+    const shortsGrid = document.getElementById('shortsGrid');
+    const errorHtml = '<div class="video-grid-loading">Unable to load videos.<br><a href="https://www.youtube.com/@nikita_sanket_mane">Visit YouTube channel →</a></div>';
     try {
       const response = await fetch('/videos-data.json');
       if (!response.ok) throw new Error('Failed to load videos');
       const videos = await response.json();
 
-      grid.innerHTML = '';
+      // The featured section already shows the latest long-form video
+      const featured = videos.find(v => !isShort(v)) || videos[0];
+      const longForm = videos.filter(v => !isShort(v) && v !== featured);
+      const shorts = videos.filter(isShort);
 
-      if (videos.length === 0) {
-        grid.innerHTML = '<div class="video-grid-loading">No videos found.</div>';
-        return;
-      }
+      const fill = (target, list, emptyText, short) => {
+        target.innerHTML = '';
+        if (list.length === 0) {
+          target.innerHTML = `<div class="video-grid-loading">${emptyText}</div>`;
+          return;
+        }
+        list.forEach(video => target.appendChild(buildCard(video, short)));
+      };
 
-      // Skip the first video — it's already shown above in the Featured section
-      const remaining = videos.slice(1).length > 0 ? videos.slice(1) : videos;
-
-      remaining.forEach(video => {
-        const publishDate = new Date(video.published).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-
-        const card = document.createElement('div');
-        card.className = 'video-card';
-        card.innerHTML = `
-          <div class="video-thumb">
-            <img src="https://i.ytimg.com/vi/${encodeURIComponent(video.id)}/maxresdefault.jpg" loading="lazy">
-            <div class="play-icon">▶</div>
-          </div>
-          <div class="video-info">
-            <h3></h3>
-            <div class="video-meta"></div>
-            <span class="video-watch-link">Watch now →</span>
-          </div>
-        `;
-        // Titles come from the YouTube feed — set as text, never as HTML
-        card.querySelector('h3').textContent = video.title;
-        card.querySelector('.video-meta').textContent = `${video.type} · ${publishDate}`;
-
-        const img = card.querySelector('img');
-        img.alt = video.title;
-        img.onerror = () => {
-          img.onerror = null;
-          img.src = img.src.replace('maxresdefault', 'hqdefault');
-        };
-
-        card.onclick = () => window.open(`https://www.youtube.com/watch?v=${video.id}`, '_blank');
-
-        grid.appendChild(card);
-
-        const ld = document.createElement('script');
-        ld.type = 'application/ld+json';
-        ld.textContent = JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "VideoObject",
-          "name": video.title,
-          "description": video.description || video.title,
-          "thumbnailUrl": `https://i.ytimg.com/vi/${video.id}/maxresdefault.jpg`,
-          "uploadDate": video.published,
-          "contentUrl": `https://www.youtube.com/watch?v=${video.id}`,
-          "embedUrl": `https://www.youtube.com/embed/${video.id}`
-        });
-        document.head.appendChild(ld);
-      });
+      fill(grid, longForm, 'More videos coming soon.', false);
+      fill(shortsGrid, shorts, 'No Shorts yet.', true);
     } catch (error) {
       console.error('Error loading videos:', error);
-      grid.innerHTML = '<div class="video-grid-loading">Unable to load videos.<br><a href="https://www.youtube.com/@nikita_sanket_mane">Visit YouTube channel →</a></div>';
+      grid.innerHTML = errorHtml;
+      shortsGrid.innerHTML = '';
     }
+  };
+
+  const buildCard = (video, short) => {
+    const publishDate = new Date(video.published).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+    const watchUrl = short
+      ? `https://www.youtube.com/shorts/${video.id}`
+      : `https://www.youtube.com/watch?v=${video.id}`;
+
+    const card = document.createElement('div');
+    card.className = 'video-card';
+    card.innerHTML = `
+      <div class="video-thumb">
+        <img src="https://i.ytimg.com/vi/${encodeURIComponent(video.id)}/maxresdefault.jpg" loading="lazy">
+        <div class="play-icon">▶</div>
+      </div>
+      <div class="video-info">
+        <h3></h3>
+        <div class="video-meta"></div>
+        <span class="video-watch-link">Watch now →</span>
+      </div>
+    `;
+    // Titles come from the YouTube feed — set as text, never as HTML
+    card.querySelector('h3').textContent = video.title;
+    card.querySelector('.video-meta').textContent = short ? publishDate : `${video.type} · ${publishDate}`;
+
+    const img = card.querySelector('img');
+    img.alt = video.title;
+    img.onerror = () => {
+      img.onerror = null;
+      img.src = img.src.replace('maxresdefault', 'hqdefault');
+    };
+
+    card.onclick = () => window.open(watchUrl, '_blank');
+
+    const ld = document.createElement('script');
+    ld.type = 'application/ld+json';
+    ld.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": video.title,
+      "description": video.description || video.title,
+      "thumbnailUrl": `https://i.ytimg.com/vi/${video.id}/maxresdefault.jpg`,
+      "uploadDate": video.published,
+      "contentUrl": watchUrl,
+      "embedUrl": `https://www.youtube.com/embed/${video.id}`
+    });
+    document.head.appendChild(ld);
+
+    return card;
   };
 
   if (document.readyState === 'loading') {
