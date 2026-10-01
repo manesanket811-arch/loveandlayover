@@ -934,3 +934,19 @@ button:focus-visible,
 .breadcrumb li:last-child {
   font-weight: 600;
 }
+
+/* ============================================
+   Card grid (guide "Read Next" / related destinations)
+   ============================================ */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg, 24px);
+}
+
+.card-grid > a.card {
+  display: block;
+  color: inherit;
+  padding: 0;
+  overflow: hidden;
+}
