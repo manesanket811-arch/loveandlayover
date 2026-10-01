@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Love and Layovers — Free Travel Guides &amp; Vlogs by an Indian Couple in Singapore</title>
+<title>Love and Layovers — Travel &amp; Lifestyle Content Creators in Singapore | Free Travel Guides</title>
 
 <script>
   if (!window.webkit) {
@@ -17,17 +17,17 @@
   }
 </script>
 
-<meta name="description" content="Sanket &amp; Nikita — an Indian travel couple in Singapore. Free destination guides with real costs, day-by-day itineraries, daily travel vlogs, and brand collaborations.">
+<meta name="description" content="Sanket &amp; Nikita — Singapore-based travel and lifestyle content creators with a 45K+ community. Travel films, Reels and brand storytelling, plus free destination guides with real costs.">
 <link rel="canonical" href="https://www.loveandlayover.in/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Love and Layovers — Travel Content Creators & Brand Partnerships">
-<meta property="og:description" content="Travel content creators trusted by global brands. Authentic storytelling, real engagement.">
+<meta property="og:title" content="Love and Layovers — Travel &amp; Lifestyle Content Creators">
+<meta property="og:description" content="Singapore-based creators making travel films, Reels and brand stories for a 45K+ community — plus free, honest travel guides.">
 <meta property="og:image" content="https://www.loveandlayover.in/public/images/banner.png">
 <meta property="og:url" content="https://www.loveandlayover.in/">
 <meta property="og:site_name" content="Love and Layovers">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Love and Layovers — Travel Content Creators">
-<meta name="twitter:description" content="Trusted by global brands for authentic content.">
+<meta name="twitter:title" content="Love and Layovers — Travel &amp; Lifestyle Content Creators">
+<meta name="twitter:description" content="Travel films, Reels and brand storytelling for a 45K+ community — plus free travel guides.">
 <meta name="twitter:image" content="https://www.loveandlayover.in/public/images/banner.png">
 <meta name="robots" content="index, follow">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
@@ -287,6 +287,28 @@
   @keyframes shimmer { to { background-position: -200% 0; } }
   @media (max-width: 960px) { .video-layout { grid-template-columns: 1fr; } }
 
+  /* ---------- What we create ---------- */
+  .create-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .create-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; display: flex; flex-direction: column; gap: 10px; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+  .create-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: transparent; }
+  .create-icon { width: 52px; height: 52px; border-radius: 14px; background: var(--accent-soft); display: grid; place-items: center; font-size: 1.6rem; }
+  .create-card h3 { font-family: var(--sans); font-size: 1.12rem; font-weight: 700; letter-spacing: -0.01em; margin-top: 6px; }
+  .create-card p { color: var(--ink-soft); font-size: .94rem; }
+  .create-eg { margin-top: auto; padding-top: 10px; font-size: .8rem; font-weight: 600; color: var(--accent); }
+  .channels { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 28px; }
+  .channel { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-radius: 14px; background: var(--sand); border: 1px solid var(--line); transition: background .2s ease, transform .2s ease; min-width: 0; }
+  .channel:hover { background: #fff; transform: translateY(-2px); }
+  .channel b { display: block; font-size: .92rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .channel small { display: block; font-size: .78rem; color: var(--muted); }
+  .channel > span:last-child { min-width: 0; }
+  .channel-icon { flex: none; width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center; color: #fff; font-weight: 800; }
+  .channel-icon.yt { background: #ff0033; font-size: .85rem; }
+  .channel-icon.ig { background: linear-gradient(45deg, #f09433, #dc2743 50%, #bc1888); font-size: 1.1rem; }
+  .formats { list-style: none; padding: 0; margin: 20px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .formats li { font-size: .8rem; font-weight: 600; padding: 6px 12px; border-radius: 99px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); }
+  @media (max-width: 960px) { .create-grid { grid-template-columns: repeat(2, 1fr); } .channels { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) { .create-grid { grid-template-columns: 1fr; } .channels { grid-template-columns: 1fr; } }
+
   /* ---------- Destinations ---------- */
   .filters { display: flex; flex-wrap: wrap; gap: 8px; }
   .filter { padding: 9px 16px; border-radius: 999px; border: 1px solid var(--line); background: #fff; font: inherit; font-size: .88rem; font-weight: 600; color: var(--ink-soft); cursor: pointer; transition: all .2s ease; }
@@ -413,12 +435,12 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow"><span class="dot" aria-hidden="true"></span>Indian travel couple · based in Singapore</span>
-      <h1>Real trips, honest guides &amp; a little <em>love</em> on every layover.</h1>
-      <p class="hero-lead">We're Sanket &amp; Nikita. We film our travels, then turn them into free, budget-honest guides — itineraries, food spots and costs — so your next trip is easier than our first.</p>
+      <span class="eyebrow"><span class="dot" aria-hidden="true"></span>Travel &amp; lifestyle creators · Singapore</span>
+      <h1>Travel, food &amp; everyday stories, told with <em>love</em>.</h1>
+      <p class="hero-lead">We're Sanket &amp; Nikita — content creators filming travel, food and everyday life for a 45K+ community. We turn every trip into films and Reels, then into free, budget-honest guides so your next trip is easier than our first.</p>
       <div class="hero-cta">
         <a href="/destinations/" class="btn btn-primary">Explore free guides <span aria-hidden="true">→</span></a>
-        <a href="#videos" class="btn btn-ghost"><span aria-hidden="true">▶</span> Watch our latest</a>
+        <a href="#create" class="btn btn-ghost">What we create</a>
       </div>
       <div class="trust">
         <div class="trust-logos" aria-hidden="true">
@@ -439,8 +461,8 @@
         <span><small>New on YouTube</small><b>Fresh travel vlogs every week</b></span>
       </a>
       <div class="float-card float-guides">
-        <span class="big">20</span>
-        <span><small>Free guides</small><b>Asia · Europe · Americas</b></span>
+        <span class="big">45K+</span>
+        <span><small>Community</small><b>YouTube &amp; Instagram</b></span>
       </div>
     </div>
   </div>
@@ -449,10 +471,10 @@
 <!-- ===== Stats ===== -->
 <section class="stats" aria-label="At a glance">
   <div class="wrap stats-grid">
-    <div class="stat"><b>20</b><span>Destination guides</span></div>
-    <div class="stat"><b>10</b><span>In-depth blog posts</span></div>
-    <div class="stat"><b>14</b><span>Brand partners</span></div>
-    <div class="stat"><b>Daily</b><span>New vlogs on YouTube</span></div>
+    <div class="stat"><b>45K+</b><span>Community reach</span></div>
+    <div class="stat"><b>14+</b><span>Brand partners</span></div>
+    <div class="stat"><b>Daily</b><span>New vlogs &amp; Reels</span></div>
+    <div class="stat"><b>20</b><span>Free destination guides</span></div>
   </div>
 </section>
 
@@ -491,6 +513,78 @@
           <div class="series-meta"><span id="seriesDay">Follow along</span><span>Binge it →</span></div>
         </a>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== What we create ===== -->
+<section class="section" id="create">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <span class="kicker">Content creators</span>
+        <h2>What we create</h2>
+        <p>Travel is where it started — but we film everything that makes life feel a little more special: food, cafés, wellness, experiences and the little everyday moments.</p>
+      </div>
+      <a href="#work-with-us" class="link-arrow">Work with us <span aria-hidden="true">→</span></a>
+    </div>
+
+    <div class="create-grid reveal">
+      <article class="create-card">
+        <span class="create-icon" aria-hidden="true">🎬</span>
+        <h3>Travel films &amp; vlogs</h3>
+        <p>Cinematic trip films, honest day trips and our daily life-in-Singapore series on YouTube.</p>
+        <span class="create-eg">Genting SkyWay · Apple Marina Bay Sands</span>
+      </article>
+      <article class="create-card">
+        <span class="create-icon" aria-hidden="true">📱</span>
+        <h3>Reels &amp; Shorts</h3>
+        <p>Snappy, scroll-stopping vertical videos made for Instagram Reels and YouTube Shorts.</p>
+        <span class="create-eg">Daily mini-vlogs · 30-day series</span>
+      </article>
+      <article class="create-card">
+        <span class="create-icon" aria-hidden="true">🍜</span>
+        <h3>Food &amp; café features</h3>
+        <p>Restaurant, café and dessert features that make people book a table that weekend.</p>
+        <span class="create-eg">Kailash Parbat · Bikanerwala · Tomacado</span>
+      </article>
+      <article class="create-card">
+        <span class="create-icon" aria-hidden="true">🌿</span>
+        <h3>Wellness &amp; lifestyle</h3>
+        <p>Spa, self-care, fashion and lifestyle stories told the way we'd tell a friend.</p>
+        <span class="create-eg">KOMO Wellness · Sunnystep · Pratha</span>
+      </article>
+      <article class="create-card">
+        <span class="create-icon" aria-hidden="true">🏨</span>
+        <h3>Stays &amp; experiences</h3>
+        <p>Resorts, theme parks, tours and attractions — experienced first, then filmed honestly.</p>
+        <span class="create-eg">Serrano Resort · Imagica · Funvee · Scentopia</span>
+      </article>
+      <article class="create-card">
+        <span class="create-icon" aria-hidden="true">📸</span>
+        <h3>Brand stories &amp; UGC</h3>
+        <p>Product stories, launches and photo/video content your brand can reuse on its own channels.</p>
+        <span class="create-eg">Instagram · YouTube · your channels</span>
+      </article>
+    </div>
+
+    <div class="channels reveal">
+      <a class="channel" href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1" target="_blank" rel="noopener">
+        <span class="channel-icon yt" aria-hidden="true">▶</span>
+        <span><b>@nikita_sanket_mane</b><small>YouTube · travel films &amp; daily vlogs</small></span>
+      </a>
+      <a class="channel" href="https://www.instagram.com/nikita.lagaskar" target="_blank" rel="noopener">
+        <span class="channel-icon ig" aria-hidden="true">◎</span>
+        <span><b>@nikita.lagaskar</b><small>Instagram · lifestyle &amp; dining</small></span>
+      </a>
+      <a class="channel" href="https://www.instagram.com/mi.punekar_" target="_blank" rel="noopener">
+        <span class="channel-icon ig" aria-hidden="true">◎</span>
+        <span><b>@mi.punekar_</b><small>Instagram · culture &amp; roots</small></span>
+      </a>
+      <a class="channel" href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener">
+        <span class="channel-icon ig" aria-hidden="true">◎</span>
+        <span><b>@loveandlayover</b><small>Instagram · travel together</small></span>
+      </a>
     </div>
   </div>
 </section>
@@ -585,11 +679,12 @@
     <div class="about-text reveal">
       <span class="kicker">Hi, we're Sanket &amp; Nikita</span>
       <h2>Two Indians, one carry-on habit, and a lot of layovers.</h2>
-      <p>We moved to Singapore and started using every long weekend and layover to explore. Love &amp; Layovers is where we share what actually worked — and what didn't.</p>
+      <p>We moved to Singapore and started using every long weekend and layover to explore — camera always in hand. Today we create travel and lifestyle content for brands and a community that trusts our recommendations, and Love &amp; Layovers is where we share what actually worked.</p>
       <ul class="ticks">
         <li>Guides written from our own trips, with real prices</li>
         <li>Visa and budget tips for Indian passport holders</li>
         <li>Every place we recommend, we've filmed first</li>
+        <li>Content creators for cafés, resorts and lifestyle brands</li>
       </ul>
       <div class="about-cta">
         <a href="/about.html" class="btn btn-primary">Our story <span aria-hidden="true">→</span></a>
@@ -606,7 +701,10 @@
       <div>
         <span class="kicker">For brands</span>
         <h2>Stories your audience actually trusts.</h2>
-        <p>We create authentic travel and lifestyle content across YouTube and Instagram — the kind that turns curiosity into bookings.</p>
+        <p>We create authentic travel and lifestyle content across YouTube and Instagram for a 45K+ community — the kind that turns curiosity into bookings.</p>
+        <ul class="formats" aria-label="Collaboration formats">
+          <li>Instagram Reels</li><li>Stories</li><li>Dedicated YouTube vlogs</li><li>YouTube integrations</li><li>Shorts</li><li>UGC photo &amp; video</li><li>Event &amp; launch coverage</li>
+        </ul>
         <ol class="steps">
           <li><div><b>Reach out</b><span>Share your brand and goals — we reply within 48 hours.</span></div></li>
           <li><div><b>Plan the story</b><span>We co-design a concept that feels native to our audience.</span></div></li>
@@ -649,7 +747,7 @@
     <div class="ftr-grid">
       <div>
         <a href="/" class="brand"><img src="/public/images/brand/logo-mark.svg" alt="" width="36" height="36">Love &amp; Layovers</a>
-        <p>Free travel guides and vlogs from an Indian couple living in Singapore.</p>
+        <p>Travel &amp; lifestyle content creators in Singapore — films, Reels and free travel guides.</p>
         <a class="mail" href="mailto:theloveandlayover@gmail.com">theloveandlayover@gmail.com</a>
       </div>
       <div>
