@@ -288,28 +288,28 @@
     "query": "intitle:\"Pavlova dessert\""
   },
   "little-india-hero": {
-    "title": "Little India, Singapore (LRM 20230818 202704-RR).jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Little_India,_Singapore_(LRM_20230818_202704-RR).jpg",
-    "artist": "Matti Blume",
+    "title": "2016 Singapur, Little India, Świątynia Sri Veeramakaliamman (13).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:2016_Singapur,_Little_India,_%C5%9Awi%C4%85tynia_Sri_Veeramakaliamman_(13).jpg",
+    "artist": "Marcin Konsek",
     "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
-    "query": "intitle:\"Little India Singapore\" incategory:Quality_images"
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "query": "intitle:\"Sri Veeramakaliamman\" incategory:Quality_images"
   },
   "universal-studios-singapore-hero": {
-    "title": "Canopy Flyer entrance and station (Universal Studios Singapore).jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Canopy_Flyer_entrance_and_station_(Universal_Studios_Singapore).jpg",
-    "artist": "Rojypala",
-    "license": "CC BY-SA 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "query": "intitle:\"Universal Studios Singapore\""
+    "title": "Universal Globe.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Universal_Globe.jpg",
+    "artist": "Eden, Janine and Jim",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "query": "intitle:\"Universal Globe\""
   },
   "sentosa-hero": {
-    "title": "Kelongs forming part of the Songs of the Sea, Sentosa, Singapore - 20101201.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Kelongs_forming_part_of_the_Songs_of_the_Sea,_Sentosa,_Singapore_-_20101201.jpg",
-    "artist": "Diego Delso",
-    "license": "CC BY 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
-    "query": "intitle:\"Sentosa\" incategory:Quality_images"
+    "title": "Singapore Palawan Beach 12.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Singapore_Palawan_Beach_12.jpg",
+    "artist": "Zairon",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "query": "intitle:\"Palawan Beach\""
   },
   "gardens-by-the-bay-hero": {
     "title": "Supertree Grove, Gardens by the Bay, Singapore1.jpg",
