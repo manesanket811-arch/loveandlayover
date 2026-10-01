@@ -40,7 +40,7 @@ function apply(file) {
   if (/<footer\b/.test(s)) s = s.replace(/<footer\b[^>]*>[\s\S]*?<\/footer>/, footer());
   else s = s.replace(/<\/main>/, `</main>\n\n${footer()}`);
 
-  const links = MODERN.has(file) ? HEAD_LINKS : `${HEAD_LINKS}\n${REFRESH}`;
+  const links = (MODERN.has(file) || s.includes('/css/site.css')) ? HEAD_LINKS : `${HEAD_LINKS}\n${REFRESH}`;
   if (!s.includes('/css/chrome.css')) s = s.replace(/<\/head>/, `${links}\n</head>`);
 
   s = s.replace(/<script src="\/js\/nav-toggle\.js"[^>]*><\/script>\n?/g, '');
