@@ -27,9 +27,12 @@ jobs:
       - name: Fetch YouTube Videos
         run: node scripts/fetch-videos.cjs
 
+      - name: Build video pages and sitemap
+        run: node scripts/build-video-pages.cjs
+
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add videos-data.json
+          git add videos-data.json videos/ sitemap_videos.xml
           git diff --staged --quiet || (git commit -m "chore: update YouTube videos" && git pull --rebase && git push)

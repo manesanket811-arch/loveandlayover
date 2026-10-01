@@ -508,6 +508,7 @@
     <div class="section-header" data-reveal>
       <h2>Latest Episodes</h2>
       <p>Destination guides, food tours, and travel tips. Subscribe for new videos every week.</p>
+      <p><a href="/videos/life-in-singapore.html" class="btn btn-secondary">🇸🇬 Binge our 30-day Life in Singapore series →</a></p>
     </div>
     <div class="video-columns">
       <div class="video-column">
@@ -530,7 +531,7 @@
       </div>
     </div>
     <div class="text-center mt-3xl" data-reveal>
-      <a href="https://www.youtube.com/@nikita_sanket_mane" class="btn btn-primary btn-magnetic">View All Videos on YouTube →</a>
+      <a href="https://www.youtube.com/@nikita_sanket_mane/videos" class="btn btn-primary btn-magnetic">View All Videos on YouTube →</a>
     </div>
   </div>
 </section>
@@ -573,7 +574,7 @@
       <h3>Follow</h3>
       <ul>
         <li><a href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-        <li><a href="https://www.youtube.com/@nikita_sanket_mane" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+        <li><a href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1" target="_blank" rel="noopener noreferrer">YouTube</a></li>
       </ul>
     </div>
   </div>
@@ -650,7 +651,7 @@
   const loadVideos = async () => {
     const grid = document.getElementById('videosGrid');
     const shortsGrid = document.getElementById('shortsGrid');
-    const errorHtml = '<div class="video-grid-loading">Unable to load videos.<br><a href="https://www.youtube.com/@nikita_sanket_mane">Visit YouTube channel →</a></div>';
+    const errorHtml = '<div class="video-grid-loading">Unable to load videos.<br><a href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1">Visit YouTube channel →</a></div>';
     try {
       const response = await fetch('/videos-data.json');
       if (!response.ok) throw new Error('Failed to load videos');
@@ -709,7 +710,8 @@
       img.src = img.src.replace('maxresdefault', 'hqdefault');
     };
 
-    card.onclick = () => window.open(watchUrl, '_blank');
+    // Open the video's page on this site (embedded player + related guides)
+    card.onclick = () => { window.location.href = `/videos/${encodeURIComponent(video.id)}.html`; };
 
     const ld = document.createElement('script');
     ld.type = 'application/ld+json';

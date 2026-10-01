@@ -110,6 +110,7 @@ async function main() {
       type: series,
       published: tag(entry, 'published') || new Date().toISOString(),
       description: tag(entry, 'media:description').substring(0, 150),
+      fullDescription: tag(entry, 'media:description'),
       duration: isShort ? '< 1 min' : '5-15 min',
       keywords: extractKeywords(title),
       series

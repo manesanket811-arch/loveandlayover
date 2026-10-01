@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.loveandlayover.in/sitemap.xml
+Sitemap: https://www.loveandlayover.in/sitemap_videos.xml
