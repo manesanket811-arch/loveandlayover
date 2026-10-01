@@ -36,7 +36,6 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 <!-- Design System -->
-<link rel="stylesheet" href="/css/modern-theme.css">
 
 <!-- Schema Markup -->
 <script type="application/ld+json">
@@ -78,7 +77,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,900;1,9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <!-- Datadog RUM -->
 <script>
   (function(h,o,u,n,d) {
@@ -102,202 +101,218 @@
     });
   })
 </script>
+<link rel="stylesheet" href="/css/site.css?v=1">
 <style>
-:root { --ink:#1a2332; --paper:#fefaf5; --accent:#d4691d; --secondary:#f0a559; --teal:#0fb6a8; --deep:#0d4f6b; --sky:#ffe9d6; --shadow:rgba(26,35,50,.12); --maxw:1180px; }
-* { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior:smooth; }
-body { font-family:'Inter',sans-serif; background:var(--paper); color:var(--ink); overflow-x:hidden; line-height:1.6; }
-h1,h2,h3 { font-family:'Fraunces',serif; line-height:1.1; font-weight:900; letter-spacing:-.02em; }
-a { color:inherit; text-decoration:none; }
-img { max-width:100%; display:block; }
-.wrap { max-width:var(--maxw); margin:0 auto; padding:0 24px; }
-header { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(255,250,242,.92); backdrop-filter:blur(12px); box-shadow:0 2px 24px var(--shadow); }
-nav { display:flex; align-items:center; justify-content:space-between; max-width:var(--maxw); margin:0 auto; padding:14px 24px; }
-.nav-links { display:flex; gap:30px; list-style:none; }
-.nav-links a { font-weight:500; color:var(--ink); text-decoration:none; border-bottom:2px solid transparent; transition:border-color 0.2s; padding-bottom:2px; }
-.nav-links a:hover { border-bottom-color:var(--accent); }
-.logo { font-family:'Fraunces',serif; font-weight:900; font-size:1.3rem; color:var(--ink); display:flex; align-items:center; gap:9px; }
-.back-link { font-weight:600; color:var(--accent); }
-.hero-page { padding:140px 0 60px; background:linear-gradient(135deg,var(--accent),var(--secondary)); color:#fff; }
-.hero-page h1 { font-size:clamp(2.2rem,5vw,3.5rem); margin-bottom:12px; }
-.blog-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:32px; padding:80px 0; }
-.blog-card { background:#fff; border-radius:18px; overflow:hidden; box-shadow:0 10px 40px var(--shadow); transition:.3s; }
-.blog-card:hover { transform:translateY(-8px); box-shadow:0 22px 55px rgba(13,38,43,.18); }
-.blog-img { aspect-ratio:16/10; width:100%; }
-.blog-body { padding:32px; }
-.blog-body h2 { font-size:1.4rem; margin-bottom:12px; color:var(--ink); }
-.blog-body p { font-size:.95rem; color:#56646a; margin-bottom:16px; line-height:1.7; }
-.blog-meta { display:flex; justify-content:space-between; align-items:center; font-size:.85rem; color:#9fb0b5; margin-bottom:16px; }
-.blog-link { font-weight:600; color:var(--accent); display:inline-flex; gap:6px; transition:.2s; }
-.blog-card:hover .blog-link { gap:10px; }
-footer { background:var(--ink); color:#9fb0b5; padding:50px 0 30px; margin-top:60px; }
-.foot { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px; }
-footer .logo { color:var(--paper); }
-.foot-links { display:flex; gap:24px; flex-wrap:wrap; }
-.foot-links a:hover { color:var(--secondary); }
-.copy { text-align:center; margin-top:30px; padding-top:24px; border-top:1px solid rgba(255,255,255,.08); font-size:.85rem; }
-@media(max-width:900px) { .blog-grid { grid-template-columns:1fr; } }
-@media(max-width:560px) { .hero-page { padding:100px 0 40px; } }
+  /* ---------- Blog page ---------- */
+  .bhero { padding: 56px 0 28px; position: relative; overflow: hidden; }
+  .bhero::before { content: ''; position: absolute; width: 640px; height: 640px; right: -240px; top: -300px; background: radial-gradient(closest-side, rgba(240,165,89,.26), transparent); pointer-events: none; }
+  .bhero .wrap { position: relative; }
+  .bhero h1 { font-size: clamp(2.3rem, 4.8vw, 3.6rem); font-weight: 900; margin: 16px 0 14px; }
+  .bhero h1 em { font-style: italic; font-weight: 600; color: var(--accent); }
+  .bhero p { color: var(--ink-soft); max-width: 600px; font-size: 1.1rem; }
+
+  .featured { display: grid; grid-template-columns: 1.25fr 1fr; background: #fff; border: 1px solid var(--line); border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-sm); transition: box-shadow .25s ease, transform .25s ease; }
+  .featured:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
+  .featured-img { position: relative; min-height: 340px; overflow: hidden; }
+  .featured-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+  .featured:hover .featured-img img { transform: scale(1.04); }
+  .featured-body { padding: 40px; display: flex; flex-direction: column; justify-content: center; gap: 14px; }
+  .featured-body h2 { font-size: clamp(1.6rem, 2.8vw, 2.2rem); font-weight: 900; }
+  .featured-body p { color: var(--ink-soft); }
+  .post-meta { font-size: .84rem; color: var(--muted); display: flex; gap: 14px; flex-wrap: wrap; }
+  @media (max-width: 860px) { .featured { grid-template-columns: 1fr; } .featured-img { min-height: 240px; } .featured-body { padding: 26px; } }
+
+  .blog-tools { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; margin: 56px 0 24px; }
+  .blog-tools h2 { font-size: 1.7rem; font-weight: 900; }
+  .posts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .post { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+  .post:hover { transform: translateY(-5px); box-shadow: var(--shadow); border-color: transparent; }
+  .post[hidden] { display: none; }
+  .post-img { aspect-ratio: 16 / 10; overflow: hidden; background: var(--sand); }
+  .post-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+  .post:hover .post-img img { transform: scale(1.05); }
+  .post-body { padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+  .post-body h3 { font-family: var(--sans); font-size: 1.1rem; font-weight: 700; letter-spacing: -0.01em; line-height: 1.35; }
+  .post-body p { color: var(--ink-soft); font-size: .92rem; }
+  .post-body .post-meta { margin-top: auto; padding-top: 6px; }
+  .chips { display: flex; gap: 6px; flex-wrap: wrap; }
+  .no-posts { grid-column: 1 / -1; text-align: center; color: var(--muted); padding: 40px; }
+  @media (max-width: 960px) { .posts { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 620px) { .posts { grid-template-columns: 1fr; } }
+
+  .guides-band { display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center; background: var(--navy); color: #fff; border-radius: 28px; padding: 48px 52px; position: relative; overflow: hidden; }
+  .guides-band::before { content: ''; position: absolute; width: 460px; height: 460px; right: -160px; top: -220px; background: radial-gradient(closest-side, rgba(212,105,29,.32), transparent); }
+  .guides-band > * { position: relative; }
+  .guides-band h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); font-weight: 900; margin-bottom: 10px; }
+  .guides-band p { color: rgba(255,255,255,.75); max-width: 560px; }
+  .guide-flags { display: flex; gap: 6px; margin-top: 18px; flex-wrap: wrap; }
+  .guide-flags img { width: 30px; height: 22px; border-radius: 3px; box-shadow: 0 1px 3px rgba(0,0,0,.3); object-fit: cover; }
+  @media (max-width: 760px) { .guides-band { grid-template-columns: 1fr; padding: 36px 26px; } }
 </style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
-<header>
-  <nav class="wrap nav" aria-label="Main navigation">
-    <a href="/" class="logo"><img src="/public/images/brand/logo-mark.svg" alt="" width="34" height="34" style="vertical-align:-0.55em; margin-right:0.4em;">Love and Layovers</a>
-    <div class="nav-links">
-      <a href="/about.html">About Us</a>
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <a href="/" class="brand" aria-label="Love and Layovers home"><img src="/public/images/brand/logo-mark.svg" alt="" width="36" height="36">Love &amp; Layovers</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav"><span></span><span></span><span></span></button>
+    <nav class="nav" id="siteNav" aria-label="Main navigation">
       <a href="/destinations/">Destinations</a>
-      <a href="/blog.html">Blog</a>
       <a href="/videos.html">Videos</a>
-    </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-      <span></span><span></span><span></span>
-    </button>
+      <a href="/blog.html" aria-current="page">Blog</a>
+      <a href="/about.html">About</a>
+      <a href="/about.html#work-with-us" class="btn btn-primary">Work with us</a>
     </nav>
+  </div>
 </header>
 
 <main id="main">
 
-<section class="hero-page">
+<section class="bhero">
   <div class="wrap">
-    <h1>Travel Guides & Tips</h1>
-    <p>Detailed guides, insider tips, and travel planning resources for your next adventure.</p>
+    <span class="eyebrow"><span class="dot" aria-hidden="true"></span>The blog · written from real trips</span>
+    <h1>Travel guides &amp; <em>honest</em> tips</h1>
+    <p>Itineraries, food guides and budget breakdowns from trips we actually took — with the costs to prove it.</p>
   </div>
 </section>
 
-<div class="wrap">
-  <div class="blog-grid">
-    <a href="blog/singapore-5-day-itinerary.html" class="blog-card">
-      <img src="/public/images/banner.png" alt="Marina Bay Singapore" class="blog-img">
-      <div class="blog-body">
-        <h2>The Complete 5-Day Singapore Itinerary</h2>
-        <p>Day-by-day guide covering Marina Bay, Gardens by the Bay, Chinatown, Sentosa Island, and more. Includes costs, timings, and insider tips.</p>
-        <div class="blog-meta"><span>8 min read</span><span>May 2026</span></div>
-        <a href="blog/singapore-5-day-itinerary.html" class="blog-link">Read article →</a>
+<section class="section" style="padding-top: 24px;">
+  <div class="wrap">
+
+    <a class="featured reveal" href="/blog/singapore-first-timer-guide.html">
+      <div class="featured-img"><img src="/images/destinations/singapore-hero.webp" alt="Marina Bay and the ArtScience Museum in Singapore" width="1800" height="1012"></div>
+      <div class="featured-body">
+        <div class="chips"><span class="chip">Featured</span><span class="chip">Singapore</span></div>
+        <h2>Singapore First-Timer Guide</h2>
+        <p>Must-see attractions, neighbourhoods, the food scene, budget tips, transport and the best days to visit — everything we wish we'd known, from people who live here.</p>
+        <div class="post-meta"><span>10 min read</span><span>June 2026</span></div>
+        <span class="link-arrow">Read the guide <span aria-hidden="true">→</span></span>
       </div>
     </a>
 
-    <a href="blog/singapore-food-guide.html" class="blog-card">
-      <img src="/public/images/banner.png" alt="Singapore Food Hawker Center" class="blog-img">
-      <div class="blog-body">
-        <h2>Ultimate Singapore Food Guide</h2>
-        <p>Discover hawker centers, must-try dishes, local restaurants, and where to find the best eats in Singapore. Complete food tour guide.</p>
-        <div class="blog-meta"><span>6 min read</span><span>May 2026</span></div>
-        <a href="blog/singapore-food-guide.html" class="blog-link">Read article →</a>
+    <div class="blog-tools reveal">
+      <h2>All posts</h2>
+      <div class="filters" role="group" aria-label="Filter posts">
+        <button class="filter" type="button" data-tag="all" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-tag="singapore" aria-pressed="false">Singapore</button>
+        <button class="filter" type="button" data-tag="japan" aria-pressed="false">Japan</button>
+        <button class="filter" type="button" data-tag="sea" aria-pressed="false">Southeast Asia</button>
+        <button class="filter" type="button" data-tag="itinerary" aria-pressed="false">Itineraries</button>
+        <button class="filter" type="button" data-tag="food" aria-pressed="false">Food</button>
+        <button class="filter" type="button" data-tag="budget" aria-pressed="false">Budget</button>
       </div>
-    </a>
+    </div>
 
-    <a href="blog/singapore-budget-travel.html" class="blog-card">
-      <img src="/public/images/banner.png" alt="Singapore Cheap Travel" class="blog-img">
-      <div class="blog-body">
-        <h2>Budget Singapore Travel Guide</h2>
-        <p>How to visit Singapore cheaply. Includes budget breakdown, free activities, cheap eats vs splurges, and money-saving hacks.</p>
-        <div class="blog-meta"><span>7 min read</span><span>May 2026</span></div>
-        <a href="blog/singapore-budget-travel.html" class="blog-link">Read article →</a>
-      </div>
-    </a>
-
-    <a href="blog/singapore-layover-guide.html" class="blog-card">
-      <img src="/public/images/banner.png" alt="Singapore Airport Layover" class="blog-img">
-      <div class="blog-body">
-        <h2>Singapore Layover Guide (6h-48h)</h2>
-        <p>Make the most of your layover. Complete guides for 6-hour, 12-hour, 24-hour, and 48-hour stopovers with Changi Airport tips.</p>
-        <div class="blog-meta"><span>5 min read</span><span>May 2026</span></div>
-        <a href="blog/singapore-layover-guide.html" class="blog-link">Read article →</a>
-      </div>
-    </a>
-
-    <a href="blog/japan-5-day-itinerary.html" class="blog-card">
-      <img src="/public/images/banner.png" alt="Mt. Fuji Japan" class="blog-img">
-      <div class="blog-body">
-        <h2>Japan 5-Day Itinerary: Tokyo to Mt. Fuji</h2>
-        <p>Complete 5-day Japan itinerary with Tokyo highlights, Mt. Fuji day trip, temples, food, budget breakdown, and insider tips.</p>
-        <div class="blog-meta"><span>10 min read</span><span>May 2026</span></div>
-        <a href="blog/japan-5-day-itinerary.html" class="blog-link">Read article →</a>
-      </div>
-    </a>
-
-    <a href="blog/vietnam-travel-guide.html" class="blog-card">
-      <img src="/public/images/banner.png" alt="Halong Bay Vietnam" class="blog-img">
-      <div class="blog-body">
-        <h2>Vietnam Travel Guide: Hanoi to Ho Chi Minh</h2>
-        <p>Complete Vietnam itinerary covering Hanoi, Halong Bay, Hoi An, Ho Chi Minh City, and Mekong Delta. Budget tips and food guide.</p>
-        <div class="blog-meta"><span>12 min read</span><span>May 2026</span></div>
-        <a href="blog/vietnam-travel-guide.html" class="blog-link">Read article →</a>
-      </div>
-    </a>
-
-    <a href="destinations/singapore.html" class="blog-card">
-      <img src="/public/images/banner.png" alt="Singapore Destination Guide" class="blog-img">
-      <div class="blog-body">
-        <h2>Singapore Complete Travel Guide 2026</h2>
-        <p>Comprehensive Singapore destination guide with 3/5/10-day itineraries, budget breakdown in SGD, neighborhoods, food, and travel essentials.</p>
-        <div class="blog-meta"><span>Destination Guide</span><span>2026</span></div>
-        <a href="destinations/singapore.html" class="blog-link">View guide →</a>
-      </div>
-    </a>
-
-    <a href="destinations/japan.html" class="blog-card">
-      <img src="/public/images/banner.png" alt="Japan Destination Guide" class="blog-img">
-      <div class="blog-body">
-        <h2>Japan Travel Guide: Tokyo to Kyoto</h2>
-        <p>Complete Japan destination guide covering Tokyo highlights, Mt. Fuji, Kyoto temples, and a full 10-day grand tour with budgets in JPY.</p>
-        <div class="blog-meta"><span>Destination Guide</span><span>2026</span></div>
-        <a href="destinations/japan.html" class="blog-link">View guide →</a>
-      </div>
-    </a>
-
-    <a href="destinations/australia.html" class="blog-card">
-      <img src="/public/images/banner.png" alt="Sydney Australia" class="blog-img">
-      <div class="blog-body">
-        <h2>Australia Travel Guide: Sydney to the Outback</h2>
-        <p>Full Australia destination guide with Sydney, Great Barrier Reef, Uluru, and comprehensive itineraries for 3/5/10 days in AUD.</p>
-        <div class="blog-meta"><span>Destination Guide</span><span>2026</span></div>
-        <a href="destinations/australia.html" class="blog-link">View guide →</a>
-      </div>
-    </a>
-
-    <a href="destinations/" class="blog-card">
-      <img src="/public/images/banner.png" alt="Travel Destinations" class="blog-img">
-      <div class="blog-body">
-        <h2>Browse All 20 Destination Guides</h2>
-        <p>Explore our complete collection of destination guides with itineraries, budgets, travel tips, and insider recommendations for your next adventure.</p>
-        <div class="blog-meta"><span>Destination Hub</span><span>2026</span></div>
-        <a href="destinations/" class="blog-link">View all →</a>
-      </div>
-    </a>
+    <div class="posts reveal" id="posts">
+      <a class="post" href="/blog/japan-10-day-itinerary.html" data-tags="japan itinerary">
+        <div class="post-img"><img src="/images/destinations/thumbs/japan-hero.webp" alt="Kiyomizu-dera temple in Kyoto in autumn" loading="lazy" width="640" height="360"></div>
+        <div class="post-body"><div class="chips"><span class="chip">Japan</span><span class="chip">Itinerary</span></div><h3>Perfect 10-Day Japan Itinerary</h3><p>Tokyo, Kyoto, Mt. Fuji and Osaka day by day — transport, costs in JPY, neighbourhoods, temples and food.</p><div class="post-meta"><span>12 min read</span><span>June 2026</span></div></div>
+      </a>
+      <a class="post" href="/blog/singapore-5-day-itinerary.html" data-tags="singapore itinerary">
+        <div class="post-img"><img src="/assets/self/couple-hero.webp" alt="Sanket and Nikita in a Singapore café" loading="lazy" width="640" height="800" style="object-position:50% 35%"></div>
+        <div class="post-body"><div class="chips"><span class="chip">Singapore</span><span class="chip">Itinerary</span></div><h3>The Complete 5-Day Singapore Itinerary</h3><p>Marina Bay, Gardens by the Bay, Chinatown, Sentosa and Orchard Road — perfect for first-time visitors.</p><div class="post-meta"><span>8 min read</span><span>May 2026</span></div></div>
+      </a>
+      <a class="post" href="/blog/singapore-food-guide.html" data-tags="singapore food">
+        <div class="post-img"><img src="/images/destinations/singapore-food.webp" alt="A bowl of laksa" loading="lazy" width="1000" height="750"></div>
+        <div class="post-body"><div class="chips"><span class="chip">Singapore</span><span class="chip">Food</span></div><h3>Ultimate Singapore Food Guide</h3><p>Must-try dishes, hawker centres, restaurants and a food tour — with costs and neighbourhoods.</p><div class="post-meta"><span>6 min read</span><span>May 2026</span></div></div>
+      </a>
+      <a class="post" href="/blog/singapore-layover-guide.html" data-tags="singapore">
+        <div class="post-img"><img src="/public/images/banner-1200.webp" alt="Illustration of a couple at Changi Airport" loading="lazy" width="1200" height="670"></div>
+        <div class="post-body"><div class="chips"><span class="chip">Singapore</span><span class="chip">Layovers</span></div><h3>Singapore Layover Guide (6h–48h)</h3><p>How to make the most of a 6, 12, 24 or 48-hour stopover — with Changi Airport tips.</p><div class="post-meta"><span>5 min read</span><span>May 2026</span></div></div>
+      </a>
+      <a class="post" href="/blog/singapore-budget-travel.html" data-tags="singapore budget">
+        <div class="post-img"><img src="/assets/self/nikita-about.webp" alt="Nikita on Sentosa beach at blue hour" loading="lazy" width="600" height="1067" style="object-position:50% 45%"></div>
+        <div class="post-body"><div class="chips"><span class="chip">Singapore</span><span class="chip">Budget</span></div><h3>How to Visit Singapore on a Budget</h3><p>Budget breakdown, free activities, cheap eats and money-saving tips for budget travellers.</p><div class="post-meta"><span>7 min read</span><span>May 2026</span></div></div>
+      </a>
+      <a class="post" href="/blog/southeast-asia-budget-tips.html" data-tags="sea budget">
+        <div class="post-img"><img src="/images/destinations/thumbs/bali-hero.webp" alt="Rice terraces in Bali" loading="lazy" width="640" height="360"></div>
+        <div class="post-body"><div class="chips"><span class="chip">Southeast Asia</span><span class="chip">Budget</span></div><h3>Southeast Asia Budget Travel</h3><p>Save on food, transport and stays across Thailand, Vietnam, Indonesia and more.</p><div class="post-meta"><span>10 min read</span><span>June 2026</span></div></div>
+      </a>
+      <a class="post" href="/blog/thailand-food-guide.html" data-tags="sea food">
+        <div class="post-img"><img src="/images/destinations/thumbs/thailand-hero.webp" alt="Wat Arun temple in Bangkok" loading="lazy" width="640" height="360"></div>
+        <div class="post-body"><div class="chips"><span class="chip">Thailand</span><span class="chip">Food</span></div><h3>Thailand Food Guide 2026</h3><p>Street food must-tries, Bangkok markets, budget dining and the best neighbourhoods to eat.</p><div class="post-meta"><span>8 min read</span><span>June 2026</span></div></div>
+      </a>
+      <a class="post" href="/blog/vietnam-travel-guide.html" data-tags="sea itinerary budget">
+        <div class="post-img"><img src="/images/destinations/thumbs/vietnam-hero.webp" alt="Ha Long Bay in Vietnam" loading="lazy" width="640" height="360"></div>
+        <div class="post-body"><div class="chips"><span class="chip">Vietnam</span><span class="chip">Itinerary</span></div><h3>Vietnam Travel Guide: Best Itinerary &amp; Budget Tips</h3><p>Hanoi, Ha Long Bay and Ho Chi Minh City — food, attractions and real travel costs.</p><div class="post-meta"><span>4 min read</span><span>May 2026</span></div></div>
+      </a>
+      <a class="post" href="/blog/japan-5-day-itinerary.html" data-tags="japan itinerary">
+        <div class="post-img"><img src="/images/destinations/thumbs/japan-hero.webp" alt="Kiyomizu-dera temple in Kyoto" loading="lazy" width="640" height="360" style="object-position:0% 50%"></div>
+        <div class="post-body"><div class="chips"><span class="chip">Japan</span><span class="chip">Itinerary</span></div><h3>Japan 5-Day Itinerary: Tokyo to Mt. Fuji</h3><p>Tokyo highlights, a Mt. Fuji day trip, budget breakdown and what to eat.</p><div class="post-meta"><span>5 min read</span><span>May 2026</span></div></div>
+      </a>
+      <p class="no-posts" id="noPosts" hidden>No posts in this category yet — more coming soon.</p>
+    </div>
   </div>
-</div>
+</section>
+
+<section class="brands" style="padding-top: 0;">
+  <div class="wrap">
+    <div class="guides-band reveal">
+      <div>
+        <span class="kicker">Destination guides</span>
+        <h2>20 free destination guides</h2>
+        <p>Day-by-day itineraries, food, best time to visit and daily budgets — from Singapore and Japan to Iceland and Peru.</p>
+        <div class="guide-flags" aria-hidden="true">
+          <img src="/images/flags/sg.svg" alt=""><img src="/images/flags/jp.svg" alt=""><img src="/images/flags/th.svg" alt=""><img src="/images/flags/vn.svg" alt=""><img src="/images/flags/id.svg" alt=""><img src="/images/flags/kr.svg" alt=""><img src="/images/flags/in.svg" alt=""><img src="/images/flags/tr.svg" alt=""><img src="/images/flags/it.svg" alt=""><img src="/images/flags/gr.svg" alt=""><img src="/images/flags/fr.svg" alt=""><img src="/images/flags/es.webp" alt=""><img src="/images/flags/pt.svg" alt=""><img src="/images/flags/de.svg" alt=""><img src="/images/flags/is.svg" alt=""><img src="/images/flags/mx.webp" alt=""><img src="/images/flags/pe.svg" alt=""><img src="/images/flags/eg.svg" alt=""><img src="/images/flags/au.svg" alt="">
+        </div>
+      </div>
+      <a href="/destinations/" class="btn btn-light">Browse all guides <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
 
 </main>
 
-<footer>
+<footer class="ftr">
   <div class="wrap">
-    <div class="foot">
-      <a href="/" class="logo"><img src="/public/images/brand/logo-mark.svg" alt="" width="34" height="34" style="vertical-align:-0.55em; margin-right:0.4em;">Love and Layovers</a>
-      <div class="foot-links">
-        <a href="/about.html">About Us</a>
-        <a href="/destinations/">Destinations</a>
-        <a href="/blog.html">Blog</a>
-        <a href="/videos.html">Videos</a>
+    <div class="ftr-grid">
+      <div>
+        <a href="/" class="brand"><img src="/public/images/brand/icon-dark.svg" alt="" width="36" height="36">Love &amp; Layovers</a>
+        <p>Travel &amp; lifestyle content creators in Singapore — films, Reels and free travel guides.</p>
+        <a class="mail" href="mailto:theloveandlayover@gmail.com">theloveandlayover@gmail.com</a>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul><li><a href="/destinations/">Destinations</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/videos.html">Videos</a></li><li><a href="/videos/life-in-singapore.html">Life in Singapore</a></li></ul>
+      </div>
+      <div>
+        <h4>Popular</h4>
+        <ul><li><a href="/destinations/singapore.html">Singapore guide</a></li><li><a href="/destinations/japan.html">Japan guide</a></li><li><a href="/blog/singapore-layover-guide.html">Singapore layover</a></li><li><a href="/blog/southeast-asia-budget-tips.html">SE Asia budget</a></li></ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul><li><a href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1" target="_blank" rel="noopener">YouTube</a></li><li><a href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener">Instagram</a></li><li><a href="/about.html">About us</a></li><li><a href="/credits.html">Photo credits</a></li></ul>
       </div>
     </div>
-    <div class="copy">© <span id="yr"></span> Love and Layovers · Travel tips with heart ✈</div>
+    <div class="ftr-bottom">
+      <span>&copy; <span id="year">2026</span> Love and Layovers · Sanket &amp; Nikita</span>
+      <span>Made with ♥ between flights</span>
+    </div>
   </div>
 </footer>
 
+<script src="/js/site.js?v=1"></script>
 <script>
-  document.getElementById('yr').textContent=new Date().getFullYear();
+(function () {
+  'use strict';
+  var filters = document.querySelectorAll('.filter');
+  var posts = document.querySelectorAll('#posts .post');
+  var empty = document.getElementById('noPosts');
+  filters.forEach(function (f) {
+    f.addEventListener('click', function () {
+      var tag = f.getAttribute('data-tag');
+      var shown = 0;
+      filters.forEach(function (x) { x.setAttribute('aria-pressed', x === f ? 'true' : 'false'); });
+      posts.forEach(function (p) {
+        var match = tag === 'all' || p.getAttribute('data-tags').split(' ').indexOf(tag) !== -1;
+        p.hidden = !match;
+        if (match) shown++;
+      });
+      empty.hidden = shown > 0;
+    });
+  });
+})();
 </script>
-
-<script src="/js/nav-toggle.js"></script>
-
 </body>
 </html>
-
-
-
-
-

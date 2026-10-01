@@ -34,10 +34,9 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-<link rel="stylesheet" href="/css/premium.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,900;1,9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
@@ -105,640 +104,283 @@
   });
 </script>
 
+<link rel="stylesheet" href="/css/site.css?v=1">
 <style>
-  [data-reveal] {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  [data-reveal].is-visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  /* ---------- Videos page ---------- */
+  .vhero { padding: 64px 0 72px; }
+  .vhero .sec-head { margin-bottom: 36px; }
+  .vhero h1 { font-size: clamp(2.3rem, 4.8vw, 3.6rem); font-weight: 900; }
+  .vhero h1 em { font-style: italic; font-weight: 600; color: var(--accent); }
+  .vhero .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .vfeature { display: grid; grid-template-columns: 1.6fr 1fr; gap: 0; border-radius: var(--radius); overflow: hidden; background: var(--navy-2); box-shadow: var(--shadow-lg); }
+  .vfeature .player { border-radius: 0; }
+  .vfeature .feature-body { display: flex; flex-direction: column; justify-content: center; padding: 32px; }
+  .vfeature .feature-body h2 { font-family: var(--sans); font-size: 1.45rem; font-weight: 700; letter-spacing: -0.01em; margin: 8px 0 12px; line-height: 1.3; }
+  .vfeature .feature-body p { -webkit-line-clamp: 5; margin-bottom: 8px; }
+  .vfeature .meta { color: rgba(255,255,255,.55); font-size: .85rem; margin-bottom: 14px; }
+  @media (max-width: 900px) { .vfeature { grid-template-columns: 1fr; } .vfeature .feature-body { padding: 22px 24px 26px; } }
 
-  .videos-hero {
-    margin-top: 80px;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-    color: white;
-    padding: var(--spacing-3xl) 0;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
+  .vcols { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: start; }
+  .vcol-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 18px; }
+  .vcol-head h2 { font-size: 1.7rem; font-weight: 900; }
+  .vcol-head a { font-weight: 600; font-size: .9rem; color: var(--accent); }
+  .vlist { display: grid; gap: 18px; }
+  .vlist.shorts-list { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  .vcard { display: block; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+  .vcard:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: transparent; }
+  .vthumb { position: relative; aspect-ratio: 16 / 9; background: var(--sand) center / cover; }
+  .shorts-list .vthumb { aspect-ratio: 9 / 16; }
+  .vthumb::after { content: '▶'; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) scale(.9); width: 54px; height: 54px; border-radius: 50%; background: rgba(255,255,255,.95); color: var(--accent); display: grid; place-items: center; font-size: 1.1rem; padding-left: 4px; box-shadow: 0 8px 22px rgba(0,0,0,.3); opacity: 0; transition: opacity .2s ease, transform .2s ease; }
+  .vcard:hover .vthumb::after { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  .shorts-list .vthumb::after { width: 40px; height: 40px; font-size: .85rem; }
+  .vinfo { padding: 16px 18px 18px; }
+  .shorts-list .vinfo { padding: 10px 12px 12px; }
+  .vinfo h3 { font-family: var(--sans); font-size: 1.02rem; font-weight: 700; letter-spacing: -0.01em; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .shorts-list .vinfo h3 { font-size: .84rem; -webkit-line-clamp: 3; }
+  .vinfo small { display: block; margin-top: 6px; font-size: .8rem; color: var(--muted); }
+  .vempty { padding: 40px 20px; text-align: center; color: var(--muted); background: #fff; border: 1px dashed var(--line); border-radius: var(--radius); grid-column: 1 / -1; }
+  .vskel { background: linear-gradient(90deg, var(--sand), #fff, var(--sand)); background-size: 200% 100%; animation: shimmer 1.4s infinite; border-radius: var(--radius); }
+  @media (max-width: 900px) { .vcols { grid-template-columns: 1fr; gap: 48px; } }
+  @media (max-width: 420px) { .vlist.shorts-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
-  .videos-hero::before {
-    content: '';
-    position: absolute;
-    top: -30%;
-    left: -10%;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(212, 105, 29, 0.15) 0%, transparent 70%);
-    border-radius: 50%;
-    animation: float 20s ease-in-out infinite;
-  }
-
-  .videos-hero .container {
-    position: relative;
-    z-index: 2;
-    max-width: 700px;
-  }
-
-  .videos-hero .eyebrow {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--tertiary);
-    margin-bottom: var(--spacing-md);
-  }
-
-  .videos-hero h1 {
-    color: white;
-    margin-bottom: var(--spacing-lg);
-  }
-
-  .videos-hero p {
-    font-size: clamp(1.05rem, 2vw, 1.2rem);
-    color: rgba(255,255,255,0.85);
-    margin-bottom: var(--spacing-xl);
-  }
-
-  /* Featured video */
-  .featured-video {
-    display: grid;
-    grid-template-columns: 1.3fr 1fr;
-    gap: var(--spacing-3xl);
-    align-items: center;
-  }
-
-  @media (max-width: 900px) {
-    .featured-video {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  .video-frame {
-    position: relative;
-    border-radius: 14px;
-    overflow: hidden;
-    aspect-ratio: 16 / 9;
-    box-shadow: var(--shadow-xl);
-    background: var(--grey-900);
-  }
-
-  .video-frame iframe {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
-
-  .video-skeleton {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border-radius: 14px;
-    background: linear-gradient(90deg, var(--grey-100) 25%, var(--grey-200) 50%, var(--grey-100) 75%);
-    background-size: 200% 100%;
-    animation: shimmer 1.5s infinite;
-  }
-
-  @keyframes shimmer {
-    0% { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
-  }
-
-  .badge {
-    display: inline-flex;
-    align-items: center;
-    padding: 5px 14px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-  }
-
-  .badge-series {
-    background: rgba(26, 155, 142, 0.12);
-    color: var(--secondary);
-  }
-
-  .badge-date {
-    background: rgba(212, 105, 29, 0.1);
-    color: var(--accent-dark);
-  }
-
-  /* Video grid — properly proportioned cards */
-  .video-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-xl);
-  }
-
-  .video-card {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: var(--shadow-sm);
-    border: 1px solid var(--grey-200);
-    transition: all var(--duration-base) var(--easing-smooth);
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-  }
-
-  .video-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-xl);
-    border-color: var(--accent);
-  }
-
-  .video-thumb {
-    position: relative;
-    aspect-ratio: 16 / 9;
-    width: 100%;
-    overflow: hidden;
-    background: var(--grey-100);
-  }
-
-  .video-thumb img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform var(--duration-slow) var(--easing-smooth);
-  }
-
-  .video-card:hover .video-thumb img {
-    transform: scale(1.08);
-  }
-
-  .video-thumb::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.55) 100%);
-    opacity: 0;
-    transition: opacity var(--duration-base) var(--easing-smooth);
-  }
-
-  .video-card:hover .video-thumb::after {
-    opacity: 1;
-  }
-
-  .play-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.85);
-    width: 52px;
-    height: 52px;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--accent);
-    font-size: 18px;
-    box-shadow: var(--shadow-lg);
-    opacity: 0;
-    transition: all var(--duration-base) var(--easing-smooth);
-    z-index: 2;
-  }
-
-  .video-card:hover .play-icon {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-
-  .video-info {
-    padding: var(--spacing-lg);
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-sm);
-  }
-
-  .video-info h3 {
-    font-size: 1rem;
-    font-family: var(--font-sans);
-    font-weight: 700;
-    color: var(--primary);
-    line-height: 1.4;
-    margin: 0;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    letter-spacing: -0.2px;
-  }
-
-  .video-meta {
-    font-size: 0.825rem;
-    color: var(--grey-500);
-    font-weight: 500;
-  }
-
-  .video-watch-link {
-    margin-top: auto;
-    padding-top: var(--spacing-sm);
-    font-size: 0.875rem;
-    font-weight: 700;
-    color: var(--accent);
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    transition: gap var(--duration-base) var(--easing-smooth);
-  }
-
-  .video-card:hover .video-watch-link {
-    gap: 10px;
-  }
-
-  /* Two-column listing: long-form videos | vertical Shorts */
-  .video-columns {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: var(--spacing-2xl);
-    align-items: start;
-  }
-
-  .video-column-title {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-lg);
-  }
-
-  .video-column-title h3 {
-    margin: 0;
-    font-size: 1.35rem;
-    color: var(--primary);
-  }
-
-  .video-column-title a {
-    font-size: 0.875rem;
-    font-weight: 700;
-    color: var(--accent);
-    white-space: nowrap;
-  }
-
-  .video-columns .video-grid {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
-  }
-
-  .video-columns .shorts-grid {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  }
-
-  .shorts-grid .video-thumb {
-    aspect-ratio: 9 / 16;
-  }
-
-  .shorts-grid .video-info {
-    padding: var(--spacing-md);
-  }
-
-  .shorts-grid .video-info h3 {
-    font-size: 0.9rem;
-  }
-
-  @media (max-width: 900px) {
-    .video-columns { grid-template-columns: 1fr; }
-    .video-columns .shorts-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
-  }
-
-  .video-grid-loading {
-    grid-column: 1 / -1;
-    text-align: center;
-    padding: var(--spacing-3xl) 0;
-    color: var(--grey-500);
-  }
-
-  .nav-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: var(--spacing-sm);
-  }
-
-  .nav-toggle span {
-    width: 24px;
-    height: 2px;
-    background: var(--primary);
-    border-radius: 2px;
-    transition: all var(--duration-base) var(--easing-smooth);
-  }
-
-  @media (max-width: 900px) {
-    nav ul {
-      position: fixed;
-      top: 72px;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: white;
-      flex-direction: column;
-      padding: var(--spacing-2xl);
-      gap: var(--spacing-xl);
-      transform: translateX(100%);
-      transition: transform var(--duration-base) var(--easing-smooth);
-      align-items: flex-start;
-      overflow-y: auto;
-    }
-    nav ul.active { transform: translateX(0); }
-    .nav-toggle { display: flex; }
-  }
+  .series-band { display: grid; grid-template-columns: 1.3fr 1fr; gap: 32px; align-items: center; padding: 40px 44px; border-radius: 28px; color: #fff; background: linear-gradient(135deg, #d4691d, #f0a559); box-shadow: var(--shadow); }
+  .series-band h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); font-weight: 900; margin: 6px 0 10px; }
+  .series-band p { opacity: .92; }
+  .series-band .kicker { color: #fff; opacity: .9; margin: 0; }
+  .series-band .bar { height: 10px; background: rgba(255,255,255,.3); }
+  .series-band .series-meta { font-size: .9rem; margin: 10px 0 18px; }
+  @media (max-width: 800px) { .series-band { grid-template-columns: 1fr; padding: 32px 26px; } }
 </style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
-<header>
-  <div class="container">
-    <a href="/" class="logo"><img src="/public/images/brand/logo-mark.svg" alt="" width="34" height="34" style="vertical-align:-0.55em; margin-right:0.4em;">Love & Layovers</a>
-    <nav aria-label="Main navigation">
-      <ul id="navMenu">
-        <li><a href="/about.html">About</a></li>
-        <li><a href="/destinations/">Destinations</a></li>
-        <li><a href="/videos.html">Videos</a></li>
-        <li><a href="/blog.html">Blog</a></li>
-        <li><a href="mailto:theloveandlayover@gmail.com?subject=Brand%20Collaboration" class="nav-cta">Work With Us</a></li>
-      </ul>
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <a href="/" class="brand" aria-label="Love and Layovers home"><img src="/public/images/brand/logo-mark.svg" alt="" width="36" height="36">Love &amp; Layovers</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav"><span></span><span></span><span></span></button>
+    <nav class="nav" id="siteNav" aria-label="Main navigation">
+      <a href="/destinations/">Destinations</a>
+      <a href="/videos.html" aria-current="page">Videos</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/about.html">About</a>
+      <a href="/about.html#work-with-us" class="btn btn-primary">Work with us</a>
     </nav>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-      <span></span><span></span><span></span>
-    </button>
   </div>
 </header>
 
 <main id="main">
 
-<section class="videos-hero">
-  <div class="container">
-    <div class="eyebrow">YouTube Channel</div>
-    <h1>Travel Videos & Vlogs</h1>
-    <p>Authentic destination guides, food tours, and real travel experiences. New episodes every week.</p>
-    <a href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1" class="btn btn-secondary btn-magnetic">Subscribe on YouTube →</a>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="section-header" data-reveal>
-      <h2>Start Here: Our Latest Video</h2>
-    </div>
-    <div class="featured-video" id="featuredVideoContainer" data-reveal>
-      <div class="video-skeleton"></div>
+<!-- ===== Hero + latest video ===== -->
+<section class="videos vhero">
+  <div class="wrap">
+    <div class="sec-head">
       <div>
-        <div class="video-skeleton" style="aspect-ratio: auto; height: 24px; width: 80%; margin-bottom: 12px; border-radius: 4px;"></div>
-        <div class="video-skeleton" style="aspect-ratio: auto; height: 80px; border-radius: 4px;"></div>
+        <span class="kicker">YouTube · Instagram</span>
+        <h1>Travel films, vlogs &amp; <em>Shorts</em></h1>
+        <p>Honest trip films, day trips and our everyday life in Singapore — new episodes every day.</p>
+      </div>
+      <div class="actions">
+        <a href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1" class="btn btn-yt" target="_blank" rel="noopener"><span aria-hidden="true">▶</span> Subscribe</a>
+        <a href="https://www.instagram.com/loveandlayover" class="btn btn-outline-light" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+
+    <article class="vfeature">
+      <button class="player skeleton" id="featurePlayer" type="button" aria-label="Play latest video"><span class="play" aria-hidden="true">▶</span></button>
+      <div class="feature-body">
+        <small>Latest video</small>
+        <h2 id="featureTitle">Loading our latest video…</h2>
+        <div class="meta" id="featureMeta"></div>
+        <p id="featureDesc"></p>
+        <a href="/videos.html" id="featureLink" class="link-arrow">Watch &amp; read more <span aria-hidden="true">→</span></a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== Videos | Shorts ===== -->
+<section class="section" id="latest">
+  <div class="wrap">
+    <div class="vcols">
+      <div>
+        <div class="vcol-head"><h2>Videos</h2><a href="https://www.youtube.com/@nikita_sanket_mane/videos" target="_blank" rel="noopener">All videos →</a></div>
+        <div class="vlist" id="videosGrid">
+          <div class="vskel" style="aspect-ratio:16/10"></div>
+        </div>
+      </div>
+      <div>
+        <div class="vcol-head"><h2>Shorts</h2><a href="https://www.youtube.com/@nikita_sanket_mane/shorts" target="_blank" rel="noopener">All Shorts →</a></div>
+        <div class="vlist shorts-list" id="shortsGrid">
+          <div class="vskel" style="aspect-ratio:9/16"></div><div class="vskel" style="aspect-ratio:9/16"></div><div class="vskel" style="aspect-ratio:9/16"></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="alt">
-  <div class="container">
-    <div class="section-header" data-reveal>
-      <h2>Latest Episodes</h2>
-      <p>Destination guides, food tours, and travel tips. Subscribe for new videos every week.</p>
-      <p><a href="/videos/life-in-singapore.html" class="btn btn-secondary"><img src="/images/flags/sg.svg" alt="" width="20" height="15" style="display:inline-block; vertical-align:-2px; border-radius:2px; margin-right:4px;"> Binge our 30-day Life in Singapore series →</a></p>
-    </div>
-    <div class="video-columns">
-      <div class="video-column">
-        <div class="video-column-title">
-          <h3>Videos</h3>
-          <a href="https://www.youtube.com/@nikita_sanket_mane/videos" target="_blank" rel="noopener noreferrer">All videos →</a>
-        </div>
-        <div class="video-grid" id="videosGrid" data-stagger>
-          <div class="video-grid-loading">Loading videos from the channel…</div>
-        </div>
+<!-- ===== Series ===== -->
+<section class="section section-sand">
+  <div class="wrap">
+    <div class="series-band reveal">
+      <div>
+        <span class="kicker"><img src="/images/flags/sg.svg" alt="" width="20" height="15" style="display:inline-block; vertical-align:-2px; border-radius:2px; margin-right:6px;">Daily series</span>
+        <h2>Life in Singapore · 30 days</h2>
+        <p>Our everyday life as an Indian couple in Singapore — morning routines, small dates, rainy chai evenings and weekend plans. One episode a day.</p>
       </div>
-      <div class="video-column">
-        <div class="video-column-title">
-          <h3>Shorts</h3>
-          <a href="https://www.youtube.com/@nikita_sanket_mane/shorts" target="_blank" rel="noopener noreferrer">All Shorts →</a>
-        </div>
-        <div class="video-grid shorts-grid" id="shortsGrid" data-stagger>
-          <div class="video-grid-loading">Loading Shorts…</div>
-        </div>
+      <div>
+        <div class="bar"><i id="seriesBar"></i></div>
+        <div class="series-meta" id="seriesDay">Follow along</div>
+        <a href="/videos/life-in-singapore.html" class="btn btn-light">Binge the series <span aria-hidden="true">→</span></a>
       </div>
-    </div>
-    <div class="text-center mt-3xl" data-reveal>
-      <a href="https://www.youtube.com/@nikita_sanket_mane/videos" class="btn btn-primary btn-magnetic">View All Videos on YouTube →</a>
     </div>
   </div>
 </section>
 
-<section style="background: var(--primary); color: white; text-align: center;">
-  <div class="container" style="max-width: 700px;" data-reveal>
-    <h2 style="color: white;">Join thousands of fellow travelers</h2>
-    <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; margin-bottom: var(--spacing-2xl);">New destination guides every week. Subscribe for real travel experiences and insider tips.</p>
-    <a href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1" class="btn btn-secondary btn-magnetic">Subscribe to Channel →</a>
-  </div>
-</section>
-
-<section>
-  <div class="container text-center" data-reveal>
-    <h2>Follow on Instagram</h2>
-    <p style="max-width: 600px; margin-left: auto; margin-right: auto;">Daily travel moments, behind-the-scenes content, and travel inspiration.</p>
-    <a href="https://www.instagram.com/loveandlayover" class="btn btn-secondary btn-magnetic">Follow @loveandlayover →</a>
+<!-- ===== Channels ===== -->
+<section class="section" id="channels">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <span class="kicker">Follow along</span>
+        <h2>Find us everywhere we create</h2>
+        <p>Travel films on YouTube, lifestyle and food on Instagram — and the stories behind them.</p>
+      </div>
+    </div>
+    <div class="channels reveal" style="margin-top:0">
+      <a class="channel" href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1" target="_blank" rel="noopener">
+        <span class="channel-icon yt" aria-hidden="true">▶</span>
+        <span><b>@nikita_sanket_mane</b><small>YouTube · travel films &amp; daily vlogs</small></span>
+      </a>
+      <a class="channel" href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener">
+        <span class="channel-icon ig" aria-hidden="true">◎</span>
+        <span><b>@loveandlayover</b><small>Instagram · travel together</small></span>
+      </a>
+      <a class="channel" href="https://www.instagram.com/nikita.lagaskar" target="_blank" rel="noopener">
+        <span class="channel-icon ig" aria-hidden="true">◎</span>
+        <span><b>@nikita.lagaskar</b><small>Instagram · lifestyle &amp; dining</small></span>
+      </a>
+      <a class="channel" href="https://www.instagram.com/mi.punekar_" target="_blank" rel="noopener">
+        <span class="channel-icon ig" aria-hidden="true">◎</span>
+        <span><b>@mi.punekar_</b><small>Instagram · culture &amp; roots</small></span>
+      </a>
+    </div>
   </div>
 </section>
 
 </main>
 
-<footer>
-  <div class="container">
-    <div class="footer-col">
-      <h3 style="font-family: var(--font-serif); font-size: 1.25rem;">Love & Layovers</h3>
-      <p style="color: rgba(255,255,255,0.65); margin-bottom: var(--spacing-lg);">Travel content creators and brand collaboration partners.</p>
-      <a href="mailto:theloveandlayover@gmail.com" style="color: var(--accent); font-weight: 600;">theloveandlayover@gmail.com</a>
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-grid">
+      <div>
+        <a href="/" class="brand"><img src="/public/images/brand/icon-dark.svg" alt="" width="36" height="36">Love &amp; Layovers</a>
+        <p>Travel &amp; lifestyle content creators in Singapore — films, Reels and free travel guides.</p>
+        <a class="mail" href="mailto:theloveandlayover@gmail.com">theloveandlayover@gmail.com</a>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul><li><a href="/destinations/">Destinations</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/videos.html">Videos</a></li><li><a href="/videos/life-in-singapore.html">Life in Singapore</a></li></ul>
+      </div>
+      <div>
+        <h4>Popular</h4>
+        <ul><li><a href="/destinations/singapore.html">Singapore guide</a></li><li><a href="/destinations/japan.html">Japan guide</a></li><li><a href="/blog/singapore-layover-guide.html">Singapore layover</a></li><li><a href="/blog/southeast-asia-budget-tips.html">SE Asia budget</a></li></ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul><li><a href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1" target="_blank" rel="noopener">YouTube</a></li><li><a href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener">Instagram</a></li><li><a href="/about.html">About us</a></li><li><a href="/credits.html">Photo credits</a></li></ul>
+      </div>
     </div>
-    <div class="footer-col">
-      <h3>Explore</h3>
-      <ul>
-        <li><a href="/about.html">About Us</a></li>
-        <li><a href="/destinations/">Destinations</a></li>
-        <li><a href="/blog.html">Blog</a></li>
-        <li><a href="/videos.html">Videos</a></li>
-      </ul>
+    <div class="ftr-bottom">
+      <span>&copy; <span id="year">2026</span> Love and Layovers · Sanket &amp; Nikita</span>
+      <span>Made with ♥ between flights</span>
     </div>
-    <div class="footer-col">
-      <h3>Follow</h3>
-      <ul>
-        <li><a href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-        <li><a href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1" target="_blank" rel="noopener noreferrer">YouTube</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    &copy; 2026 Love and Layovers · Sanket & Nikita Travel Duo & Content Creators
   </div>
 </footer>
 
+<script src="/js/site.js?v=1"></script>
 <script>
-  const isShort = (video) => video.duration === '< 1 min';
-
-  // Featured video
-  const loadFeaturedVideo = async () => {
-    const container = document.getElementById('featuredVideoContainer');
-    try {
-      const response = await fetch('/videos-data.json');
-      if (!response.ok) throw new Error('Failed to load videos');
-      const videos = await response.json();
-      if (videos.length === 0) throw new Error('No videos found');
-
-      const latest = videos.find(v => !isShort(v)) || videos[0];
-      const publishDate = new Date(latest.published).toLocaleDateString('en-US', {
-        month: 'short', day: 'numeric', year: 'numeric'
-      });
-
-      container.innerHTML = '';
-
-      const frame = document.createElement('div');
-      frame.className = 'video-frame';
-      const iframe = document.createElement('iframe');
-      iframe.src = `https://www.youtube.com/embed/${latest.id}`;
-      iframe.title = latest.title;
-      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
-      iframe.allowFullscreen = true;
-      frame.appendChild(iframe);
-
-      const info = document.createElement('div');
-
-      const title = document.createElement('h3');
-      title.style.marginBottom = 'var(--spacing-md)';
-      title.textContent = latest.title;
-
-      const desc = document.createElement('p');
-      desc.textContent = latest.description || 'Watch our latest travel video on the Love and Layovers channel.';
-
-      const badges = document.createElement('div');
-      badges.style.cssText = 'display:flex; gap:10px; flex-wrap:wrap; margin: var(--spacing-md) 0 var(--spacing-lg);';
-      badges.innerHTML = `
-        <span class="badge badge-series">${latest.type}</span>
-        <span class="badge badge-date">${publishDate}</span>
-      `;
-
-      const watch = document.createElement('a');
-      watch.href = `https://www.youtube.com/watch?v=${latest.id}`;
-      watch.className = 'btn btn-primary btn-magnetic';
-      watch.target = '_blank';
-      watch.rel = 'noopener noreferrer';
-      watch.textContent = 'Watch Full Video →';
-
-      info.appendChild(title);
-      info.appendChild(badges);
-      info.appendChild(desc);
-      info.appendChild(watch);
-
-      container.appendChild(frame);
-      container.appendChild(info);
-    } catch (error) {
-      console.error('Error loading featured video:', error);
-      container.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--grey-500);">Unable to load video.</div>`;
-    }
+(function () {
+  'use strict';
+  var isShort = function (v) { return v.duration === '< 1 min'; };
+  var clean = function (t) { return t.replace(/#[\p{L}\p{N}_]+/gu, '').replace(/\s*\|\s*$/, '').replace(/\s{2,}/g, ' ').trim() || t; };
+  var thumb = function (v, size) { return 'https://i.ytimg.com/vi/' + encodeURIComponent(v.id) + '/' + (size || 'hqdefault') + '.jpg'; };
+  var page = function (v) { return '/videos/' + encodeURIComponent(v.id) + '.html'; };
+  var fmt = function (iso, opts) { return new Date(iso).toLocaleDateString('en-US', opts || { month: 'short', day: 'numeric', year: 'numeric' }); };
+  var seriesDay = function (v) {
+    var m = v.title.match(/\b(\d{1,2})\s*\/\s*30\b/) || String(v.fullDescription || v.description || '').match(/\bday (\d{1,2}) of (?:my|our) daily vlog series/i);
+    return m ? parseInt(m[1], 10) : null;
   };
 
-  // Video listing — long-form videos and Shorts in separate columns
-  const loadVideos = async () => {
-    const grid = document.getElementById('videosGrid');
-    const shortsGrid = document.getElementById('shortsGrid');
-    const errorHtml = '<div class="video-grid-loading">Unable to load videos.<br><a href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1">Visit YouTube channel →</a></div>';
-    try {
-      const response = await fetch('/videos-data.json');
-      if (!response.ok) throw new Error('Failed to load videos');
-      const videos = await response.json();
-
-      // The featured section already shows the latest long-form video
-      const featured = videos.find(v => !isShort(v)) || videos[0];
-      const longForm = videos.filter(v => !isShort(v) && v !== featured);
-      const shorts = videos.filter(isShort);
-
-      const fill = (target, list, emptyText, short) => {
-        target.innerHTML = '';
-        if (list.length === 0) {
-          target.innerHTML = `<div class="video-grid-loading">${emptyText}</div>`;
-          return;
-        }
-        list.forEach(video => target.appendChild(buildCard(video, short)));
-      };
-
-      fill(grid, longForm, 'More videos coming soon.', false);
-      fill(shortsGrid, shorts, 'No Shorts yet.', true);
-    } catch (error) {
-      console.error('Error loading videos:', error);
-      grid.innerHTML = errorHtml;
-      shortsGrid.innerHTML = '';
-    }
+  var card = function (v, short) {
+    var a = document.createElement('a');
+    a.className = 'vcard';
+    a.href = page(v);
+    var t = document.createElement('div');
+    t.className = 'vthumb';
+    t.style.backgroundImage = 'url("' + thumb(v, short ? 'hqdefault' : 'mqdefault') + '")';
+    var info = document.createElement('div');
+    info.className = 'vinfo';
+    var h = document.createElement('h3');
+    h.textContent = clean(v.title);
+    var s = document.createElement('small');
+    s.textContent = short ? fmt(v.published, { month: 'short', day: 'numeric' }) : v.type + ' · ' + fmt(v.published);
+    info.appendChild(h); info.appendChild(s);
+    a.appendChild(t); a.appendChild(info);
+    return a;
   };
 
-  const buildCard = (video, short) => {
-    const publishDate = new Date(video.published).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-    const watchUrl = short
-      ? `https://www.youtube.com/shorts/${video.id}`
-      : `https://www.youtube.com/watch?v=${video.id}`;
+  var fill = function (el, list, short, empty) {
+    el.textContent = '';
+    if (!list.length) {
+      var d = document.createElement('div'); d.className = 'vempty'; d.textContent = empty; el.appendChild(d); return;
+    }
+    list.forEach(function (v) { el.appendChild(card(v, short)); });
+  };
 
-    const card = document.createElement('div');
-    card.className = 'video-card';
-    card.innerHTML = `
-      <div class="video-thumb">
-        <img src="https://i.ytimg.com/vi/${encodeURIComponent(video.id)}/maxresdefault.jpg" loading="lazy">
-        <div class="play-icon">▶</div>
-      </div>
-      <div class="video-info">
-        <h3></h3>
-        <div class="video-meta"></div>
-        <span class="video-watch-link">Watch now →</span>
-      </div>
-    `;
-    // Titles come from the YouTube feed — set as text, never as HTML
-    card.querySelector('h3').textContent = video.title;
-    card.querySelector('.video-meta').textContent = short ? publishDate : `${video.type} · ${publishDate}`;
+  fetch('/videos-data.json')
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (videos) {
+      var feature = videos.filter(function (v) { return !isShort(v); })[0] || videos[0];
+      if (feature) {
+        var player = document.getElementById('featurePlayer');
+        player.classList.remove('skeleton');
+        player.style.backgroundImage = 'url("' + thumb(feature) + '")';
+        player.setAttribute('aria-label', 'Play video: ' + clean(feature.title));
+        player.addEventListener('click', function () {
+          var iframe = document.createElement('iframe');
+          iframe.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(feature.id) + '?autoplay=1';
+          iframe.title = feature.title;
+          iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+          iframe.allowFullscreen = true;
+          player.textContent = '';
+          player.appendChild(iframe);
+          if (window.gtag) window.gtag('event', 'video_play', { video_id: feature.id, placement: 'videos_feature' });
+        }, { once: true });
+        document.getElementById('featureTitle').textContent = clean(feature.title);
+        document.getElementById('featureMeta').textContent = feature.type + ' · ' + fmt(feature.published);
+        document.getElementById('featureDesc').textContent = String(feature.fullDescription || feature.description || '').split('\n')[0];
+        document.getElementById('featureLink').href = page(feature);
+      }
 
-    const img = card.querySelector('img');
-    img.alt = video.title;
-    img.onerror = () => {
-      img.onerror = null;
-      img.src = img.src.replace('maxresdefault', 'hqdefault');
-    };
+      fill(document.getElementById('videosGrid'), videos.filter(function (v) { return !isShort(v) && v !== feature; }), false, 'More videos coming soon.');
+      fill(document.getElementById('shortsGrid'), videos.filter(isShort), true, 'No Shorts yet.');
 
-    // Open the video's page on this site (embedded player + related guides)
-    card.onclick = () => { window.location.href = `/videos/${encodeURIComponent(video.id)}.html`; };
-
-    const ld = document.createElement('script');
-    ld.type = 'application/ld+json';
-    ld.textContent = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "VideoObject",
-      "name": video.title,
-      "description": video.description || video.title,
-      "thumbnailUrl": `https://i.ytimg.com/vi/${video.id}/maxresdefault.jpg`,
-      "uploadDate": video.published,
-      "contentUrl": watchUrl,
-      "embedUrl": `https://www.youtube.com/embed/${video.id}`
+      var days = videos.map(seriesDay).filter(function (d) { return d !== null; });
+      if (days.length) {
+        var latest = Math.max.apply(null, days);
+        document.getElementById('seriesDay').textContent = 'Day ' + latest + ' of 30 · ' + days.length + ' episodes so far';
+        requestAnimationFrame(function () { document.getElementById('seriesBar').style.width = Math.min(100, latest / 30 * 100) + '%'; });
+      }
+    })
+    .catch(function () {
+      var msg = 'Unable to load videos right now — watch them on YouTube.';
+      document.getElementById('featureTitle').textContent = msg;
+      document.getElementById('featurePlayer').classList.remove('skeleton');
+      fill(document.getElementById('videosGrid'), [], false, msg);
+      fill(document.getElementById('shortsGrid'), [], true, '');
     });
-    document.head.appendChild(ld);
-
-    return card;
-  };
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => { loadFeaturedVideo(); loadVideos(); });
-  } else {
-    loadFeaturedVideo();
-    loadVideos();
-  }
+})();
 </script>
-
-<script src="/js/premium-interactions.js"></script>
-
 </body>
 </html>
