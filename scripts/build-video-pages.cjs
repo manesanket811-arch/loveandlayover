@@ -54,7 +54,8 @@ function seriesDay(v) {
 // ---------- guide catalog (for "related guides" links) ----------
 const STOP = new Set(['guide', 'itinerary', 'food', 'budget', 'travel', 'day', 'tips', 'first', 'timer', 'layover', 'index']);
 const ALIASES = {
-  singapore: ['singapore', 'marina bay', 'sentosa', 'changi', 'hawker', 'genting'],
+  singapore: ['singapore', 'marina bay', 'sentosa', 'changi', 'hawker'],
+  malaysia: ['malaysia', 'genting', 'kuala lumpur', 'penang', 'langkawi', 'malacca', 'batu caves'],
   'south korea': ['korea', 'seoul'],
   'southeast asia': ['southeast asia', 'singapore', 'malaysia', 'genting', 'thailand', 'vietnam', 'bali'],
   india: ['india', 'marathi', 'ganpati', 'mumbai', 'pune'],
