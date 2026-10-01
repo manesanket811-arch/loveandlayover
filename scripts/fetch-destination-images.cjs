@@ -53,6 +53,12 @@ const WANT = {
   'egypt-hero': ['Giza pyramids', 'Pyramids of Giza', 'Abu Simbel'],
   'egypt-food': ['Koshary', 'Egyptian cuisine', 'Ful medames'],
   'australia-hero': ['Sydney Opera House', 'Uluru', 'Twelve Apostles'],
+  // Singapore blog posts
+  'little-india-hero': ['Little India Singapore', 'Serangoon Road', 'Tekka Centre'],
+  'universal-studios-singapore-hero': ['Universal Studios Singapore', 'Resorts World Sentosa'],
+  'sentosa-hero': ['Siloso Beach', 'Sentosa', 'Palawan Beach'],
+  'gardens-by-the-bay-hero': ['Supertree Grove', 'Gardens by the Bay'],
+  'jewel-changi-hero': ['Jewel Changi Airport', 'Rain Vortex', 'Changi Airport'],
   'australia-food': ['Pavlova dessert', 'Pavlova (food)', 'Meat pie', 'Lamington'],
 };
 
