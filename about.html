@@ -34,10 +34,9 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-<link rel="stylesheet" href="/css/premium.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,900;1,9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
@@ -111,382 +110,252 @@
   });
 </script>
 
+<link rel="stylesheet" href="/css/site.css?v=1">
 <style>
-  [data-reveal] {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  [data-reveal].is-visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  /* ---------- About page ---------- */
+  .about-hero { position: relative; padding: 56px 0 88px; overflow: hidden; }
+  .about-hero::before { content: ''; position: absolute; width: 680px; height: 680px; right: -240px; top: -260px; background: radial-gradient(closest-side, rgba(240, 165, 89, .28), transparent); pointer-events: none; }
+  .about-hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; }
+  .about-hero h1 { font-size: clamp(2.3rem, 4.8vw, 3.9rem); font-weight: 900; margin: 22px 0 20px; }
+  .about-hero h1 em { font-style: italic; font-weight: 600; color: var(--accent); }
 
-  .about-hero {
-    margin-top: 80px;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-    color: white;
-    padding: var(--spacing-3xl) 0 var(--spacing-3xl);
-    position: relative;
-    overflow: hidden;
-  }
+  .collage { position: relative; aspect-ratio: 1 / 1.05; max-width: 500px; width: 100%; justify-self: end; }
+  .collage img { position: absolute; object-fit: cover; box-shadow: var(--shadow-lg); }
+  .collage .c-main { right: 0; top: 0; width: 66%; height: 86%; border-radius: 200px 200px 24px 24px; object-position: 50% 30%; }
+  .collage .c-side { left: 0; bottom: 0; width: 46%; height: 62%; border-radius: 22px; border: 6px solid #fff; object-position: 50% 62%; transform: rotate(-3deg); }
+  .collage .float-card { left: 4%; top: 6%; }
+  .collage .float-card .big { font-family: var(--serif); font-size: 1.7rem; font-weight: 900; color: var(--accent); line-height: 1; }
 
-  .about-hero::before {
-    content: '';
-    position: absolute;
-    top: -30%;
-    right: -10%;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(212, 105, 29, 0.15) 0%, transparent 70%);
-    border-radius: 50%;
-    animation: float 20s ease-in-out infinite;
-  }
+  .story { display: grid; grid-template-columns: 1.15fr .85fr; gap: 56px; align-items: start; }
+  .story-text p { font-size: 1.1rem; color: var(--ink-soft); margin-bottom: 20px; }
+  .story-text p:first-of-type::first-letter { font-family: var(--serif); font-weight: 900; font-size: 3.4rem; float: left; line-height: .9; margin: 6px 10px 0 0; color: var(--accent); }
+  .story-text a { color: var(--accent); font-weight: 600; }
+  .quote-card { position: sticky; top: 100px; background: var(--navy); color: #fff; border-radius: 24px; padding: 40px 34px; box-shadow: var(--shadow-lg); overflow: hidden; }
+  .quote-card::before { content: '“'; position: absolute; top: -30px; left: 18px; font-family: var(--serif); font-size: 11rem; line-height: 1; color: rgba(255,255,255,.08); }
+  .quote-card blockquote { position: relative; margin: 0; font-family: var(--serif); font-size: 1.35rem; font-weight: 600; line-height: 1.45; }
+  .quote-card cite { display: block; margin-top: 20px; font-style: normal; font-weight: 600; color: var(--accent); font-size: .92rem; }
+  @media (max-width: 900px) { .story { grid-template-columns: 1fr; gap: 36px; } .quote-card { position: static; } }
 
-  .about-hero .container {
-    position: relative;
-    z-index: 2;
-    max-width: 760px;
-  }
+  .facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 56px; }
+  .fact { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 26px 22px; text-align: center; }
+  .fact b { display: block; font-family: var(--serif); font-size: 2.3rem; font-weight: 900; color: var(--navy); line-height: 1; }
+  .fact span { display: block; margin-top: 8px; font-size: .88rem; color: var(--muted); font-weight: 500; }
+  @media (max-width: 700px) { .facts { grid-template-columns: repeat(2, 1fr); } }
 
-  .about-hero .eyebrow {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--tertiary);
-    margin-bottom: var(--spacing-md);
-  }
+  .loves { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .love { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+  .love .create-icon { margin-bottom: 14px; }
+  .love h3 { font-family: var(--sans); font-size: 1.05rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 6px; }
+  .love p { color: var(--ink-soft); font-size: .92rem; }
+  @media (max-width: 960px) { .loves { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .loves { grid-template-columns: 1fr; } }
 
-  .about-hero h1 {
-    color: white;
-    margin-bottom: var(--spacing-lg);
-  }
+  .partners { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; }
+  .partner { display: flex; gap: 16px; align-items: flex-start; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+  .partner:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: transparent; }
+  .partner-logo { flex: none; width: 72px; height: 72px; border-radius: 14px; background: var(--sand); padding: 8px; display: grid; place-items: center; }
+  .partner-logo img { width: 100%; height: 100%; object-fit: contain; }
+  .partner h3 { font-family: var(--sans); font-size: 1rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 4px; }
+  .partner .tag { display: inline-block; font-size: .7rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+  .partner p { color: var(--ink-soft); font-size: .86rem; line-height: 1.5; }
 
-  .about-hero p {
-    font-size: clamp(1.05rem, 2vw, 1.25rem);
-    color: rgba(255,255,255,0.85);
-    max-width: 620px;
-  }
-
-  .photo-collage {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-lg);
-  }
-
-  .photo-collage img {
-    width: 100%;
-    aspect-ratio: 1;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: var(--shadow-lg);
-    transition: transform var(--duration-base) var(--easing-smooth);
-  }
-
-  .photo-collage img:hover {
-    transform: scale(1.03) translateY(-6px);
-  }
-
-  .bio-quote {
-    background: white;
-    border-left: 4px solid var(--accent);
-    border-radius: 4px;
-    padding: var(--spacing-xl) var(--spacing-2xl);
-    box-shadow: var(--shadow-md);
-    margin: var(--spacing-2xl) 0;
-  }
-
-  .bio-quote p {
-    font-family: var(--font-serif);
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--primary);
-    line-height: 1.5;
-    margin: 0;
-  }
-
-  .facts-row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: var(--spacing-lg);
-    margin: var(--spacing-3xl) 0;
-  }
-
-  .fact-card {
-    background: white;
-    border-radius: 10px;
-    padding: var(--spacing-xl);
-    text-align: center;
-    box-shadow: var(--shadow-sm);
-    border: 1px solid var(--grey-200);
-    transition: all var(--duration-base) var(--easing-smooth);
-  }
-
-  .fact-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-lg);
-    border-color: var(--accent);
-  }
-
-  .fact-number {
-    font-family: var(--font-serif);
-    font-size: 2rem;
-    font-weight: 900;
-    color: var(--accent);
-    display: block;
-    line-height: 1;
-    margin-bottom: var(--spacing-sm);
-  }
-
-  .fact-label {
-    font-size: 0.875rem;
-    color: var(--grey-600);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-weight: 600;
-  }
-
-  .social-links {
-    display: flex;
-    gap: var(--spacing-xl);
-    flex-wrap: wrap;
-  }
-
-  .social-links a {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-    font-weight: 600;
-    color: var(--primary);
-    padding: 10px 20px;
-    border-radius: 8px;
-    border: 2px solid var(--grey-200);
-    transition: all var(--duration-base) var(--easing-smooth);
-  }
-
-  .social-links a:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
-  }
-
-  .nav-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: var(--spacing-sm);
-  }
-
-  .nav-toggle span {
-    width: 24px;
-    height: 2px;
-    background: var(--primary);
-    border-radius: 2px;
-    transition: all var(--duration-base) var(--easing-smooth);
-  }
-
-  @media (max-width: 900px) {
-    nav ul {
-      position: fixed;
-      top: 72px;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: white;
-      flex-direction: column;
-      padding: var(--spacing-2xl);
-      gap: var(--spacing-xl);
-      transform: translateX(100%);
-      transition: transform var(--duration-base) var(--easing-smooth);
-      align-items: flex-start;
-      overflow-y: auto;
-    }
-    nav ul.active { transform: translateX(0); }
-    .nav-toggle { display: flex; }
-    .photo-collage { grid-template-columns: 1fr; max-width: 320px; margin: 0 auto; }
-  }
+  .collab { background: var(--navy); color: #fff; border-radius: 28px; padding: 64px 56px; position: relative; overflow: hidden; display: grid; grid-template-columns: 1.2fr .8fr; gap: 48px; align-items: center; }
+  .collab::before { content: ''; position: absolute; width: 520px; height: 520px; right: -200px; top: -240px; background: radial-gradient(closest-side, rgba(212,105,29,.30), transparent); }
+  .collab > * { position: relative; }
+  .collab h2 { font-size: clamp(1.9rem, 3.4vw, 2.6rem); font-weight: 900; margin-bottom: 16px; }
+  .collab p { color: rgba(255,255,255,.78); margin-bottom: 14px; }
+  .collab .row { display: flex; flex-direction: column; gap: 12px; }
+  .collab .row .btn { width: 100%; }
+  @media (max-width: 900px) { .collab { grid-template-columns: 1fr; padding: 44px 28px; gap: 28px; } }
+  @media (max-width: 960px) { .about-hero-grid { grid-template-columns: 1fr; gap: 44px; } .collage { justify-self: center; max-width: 440px; } }
+  @media (max-width: 480px) { .about-hero .hero-cta .btn { flex: 1 1 100%; } }
 </style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
-<header>
-  <div class="container">
-    <a href="/" class="logo"><img src="/public/images/brand/logo-mark.svg" alt="" width="34" height="34" style="vertical-align:-0.55em; margin-right:0.4em;">Love & Layovers</a>
-    <nav aria-label="Main navigation">
-      <ul id="navMenu">
-        <li><a href="/about.html">About</a></li>
-        <li><a href="/destinations/">Destinations</a></li>
-        <li><a href="/videos.html">Videos</a></li>
-        <li><a href="/blog.html">Blog</a></li>
-        <li><a href="mailto:theloveandlayover@gmail.com?subject=Brand%20Collaboration" class="nav-cta">Work With Us</a></li>
-      </ul>
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <a href="/" class="brand" aria-label="Love and Layovers home"><img src="/public/images/brand/logo-mark.svg" alt="" width="36" height="36">Love &amp; Layovers</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav"><span></span><span></span><span></span></button>
+    <nav class="nav" id="siteNav" aria-label="Main navigation">
+      <a href="/destinations/">Destinations</a>
+      <a href="/videos.html">Videos</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/about.html" aria-current="page">About</a>
+      <a href="#work-with-us" class="btn btn-primary">Work with us</a>
     </nav>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-      <span></span><span></span><span></span>
-    </button>
   </div>
 </header>
 
 <main id="main">
 
+<!-- ===== Hero ===== -->
 <section class="about-hero">
-  <div class="container">
-    <div class="eyebrow">Our Story</div>
-    <h1>Two curious people, one shared obsession with noticing the good stuff.</h1>
-    <p>We're Sanket & Nikita — Singapore-based lifestyle creators who never quite settled into one lane. This is how we got here, and why brands trust us to tell their story.</p>
+  <div class="wrap about-hero-grid">
+    <div>
+      <span class="eyebrow"><span class="dot" aria-hidden="true"></span>Our story · Sanket &amp; Nikita</span>
+      <h1>Two curious people, one shared obsession with noticing the <em>good stuff</em>.</h1>
+      <p class="hero-lead">We're Sanket &amp; Nikita — Singapore-based lifestyle creators who never quite settled into one lane. This is how we got here, and why brands trust us to tell their story.</p>
+      <div class="hero-cta">
+        <a href="#work-with-us" class="btn btn-primary">Work with us <span aria-hidden="true">→</span></a>
+        <a href="/videos.html" class="btn btn-ghost"><span aria-hidden="true">▶</span> Watch our films</a>
+      </div>
+    </div>
+    <div class="collage" aria-hidden="true">
+      <img class="c-main" src="/assets/self/couple-hero.webp" alt="" width="640" height="800" fetchpriority="high">
+      <img class="c-side" src="/assets/self/nikita-about.webp" alt="" width="600" height="1067">
+      <div class="float-card">
+        <span class="big">SG</span>
+        <span><small>Based in</small><b>Singapore</b></span>
+      </div>
+    </div>
   </div>
 </section>
 
-<section>
-  <div class="container">
-    <div class="split-section" data-reveal>
-      <div>
+<!-- ===== Story ===== -->
+<section class="section section-sand" id="story">
+  <div class="wrap">
+    <div class="story">
+      <div class="story-text reveal">
+        <span class="kicker">How we got here</span>
         <p>We are Singapore-based lifestyle creators who never quite settled into just one lane — one day we're curled up at a cafe hunting for the best flat white in the city, the next we're somewhere new, camera in hand, chasing whatever makes life feel a little more special.</p>
         <p>That's the thing about lifestyle content, really: it's less about a niche and more about noticing the good stuff — food, travel, wellness, little everyday moments — and sharing it in a way that feels honest.</p>
-        <p>We split our world across two spaces: <a href="https://www.instagram.com/nikita.lagaskar" target="_blank" rel="noopener noreferrer"><strong>@nikita.lagaskar</strong></a>, where we share everyday lifestyle, dining spots, and things we genuinely love, and <a href="https://www.instagram.com/mi.punekar_" target="_blank" rel="noopener noreferrer"><strong>@mi.punekar_</strong></a>, our more personal, rooted space that connects back to home and culture.</p>
+        <p>We split our world across two spaces: <a href="https://www.instagram.com/nikita.lagaskar" target="_blank" rel="noopener">@nikita.lagaskar</a>, where we share everyday lifestyle, dining spots, and things we genuinely love, and <a href="https://www.instagram.com/mi.punekar_" target="_blank" rel="noopener">@mi.punekar_</a>, our more personal, rooted space that connects back to home and culture.</p>
       </div>
-      <div class="photo-collage">
-        <img src="/assets/self/nikita1.jpeg" alt="Nikita & Sanket - Travel Creators" loading="lazy">
-        <img src="/assets/self/nikitasanket.jpeg" alt="Nikita & Sanket - Travel Duo" loading="lazy">
-      </div>
+      <aside class="quote-card reveal">
+        <blockquote>Together, our two spaces reach a community of 45,000+ people who trust our recommendations — not because we're chasing trends, but because we only talk about what we'd tell our own friends.</blockquote>
+        <cite>— Sanket &amp; Nikita</cite>
+      </aside>
     </div>
 
-    <div class="bio-quote" data-reveal>
-      <p>"Together, our two spaces reach a community of 45,000+ people who trust our recommendations — not because we're chasing trends, but because we only talk about what we'd tell our own friends."</p>
+    <div class="facts reveal">
+      <div class="fact"><b>45K+</b><span>Community reach</span></div>
+      <div class="fact"><b>14+</b><span>Brand partners</span></div>
+      <div class="fact"><b>SG</b><span>Based in Singapore</span></div>
+      <div class="fact"><b>2</b><span>Voices, one story</span></div>
     </div>
+  </div>
+</section>
 
-    <div class="facts-row" data-stagger>
-      <div class="fact-card">
-        <span class="fact-number">45K+</span>
-        <span class="fact-label">Community Reach</span>
-      </div>
-      <div class="fact-card">
-        <span class="fact-number">14+</span>
-        <span class="fact-label">Brand Partners</span>
-      </div>
-      <div class="fact-card">
-        <span class="fact-number">SG</span>
-        <span class="fact-label">Based in Singapore</span>
-      </div>
-      <div class="fact-card">
-        <span class="fact-number">2</span>
-        <span class="fact-label">Voices, One Story</span>
+<!-- ===== What we love ===== -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <span class="kicker">Noticing the good stuff</span>
+        <h2>What we love creating</h2>
+        <p>Less a niche, more a way of seeing — the moments that make life feel a little more special.</p>
       </div>
     </div>
-
-    <div data-reveal style="max-width: 760px;">
-      <p>We've had the chance to collaborate with multiple brands, bringing their experiences to life for our audience in a way that felt real rather than scripted — and that's exactly the kind of partnership we love: ones where the brand's story and our voice actually fit together.</p>
-      <p>If you're a cafe, restaurant, spa, or brand looking for creators who show up with genuine curiosity, bring an engaged community along for the ride, and treat every collaboration like a relationship rather than a transaction — we'd love to hear from you.</p>
+    <div class="loves reveal">
+      <div class="love"><span class="create-icon" aria-hidden="true">☕</span><h3>Food &amp; cafés</h3><p>Hunting the best flat white, hawker gems and restaurants worth a weekend plan.</p></div>
+      <div class="love"><span class="create-icon" aria-hidden="true">✈️</span><h3>Travel</h3><p>Trip films, layovers and day trips — then free guides so you can do it too.</p></div>
+      <div class="love"><span class="create-icon" aria-hidden="true">🌿</span><h3>Wellness</h3><p>Spas, self-care and slow moments, shared honestly.</p></div>
+      <div class="love"><span class="create-icon" aria-hidden="true">🫶</span><h3>Everyday life</h3><p>Our daily life in Singapore, culture and the roots we carry from home.</p></div>
     </div>
 
-    <div class="social-links mt-2xl" data-reveal>
-      <a href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener noreferrer">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/></svg>
-        Instagram
+    <div class="channels reveal">
+      <a class="channel" href="https://www.instagram.com/nikita.lagaskar" target="_blank" rel="noopener">
+        <span class="channel-icon ig" aria-hidden="true">◎</span>
+        <span><b>@nikita.lagaskar</b><small>Instagram · lifestyle &amp; dining</small></span>
       </a>
-      <a href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1" target="_blank" rel="noopener noreferrer">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-        YouTube
+      <a class="channel" href="https://www.instagram.com/mi.punekar_" target="_blank" rel="noopener">
+        <span class="channel-icon ig" aria-hidden="true">◎</span>
+        <span><b>@mi.punekar_</b><small>Instagram · culture &amp; roots</small></span>
+      </a>
+      <a class="channel" href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1" target="_blank" rel="noopener">
+        <span class="channel-icon yt" aria-hidden="true">▶</span>
+        <span><b>@nikita_sanket_mane</b><small>YouTube · travel films &amp; daily vlogs</small></span>
+      </a>
+      <a class="channel" href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener">
+        <span class="channel-icon ig" aria-hidden="true">◎</span>
+        <span><b>@loveandlayover</b><small>Instagram · travel together</small></span>
       </a>
     </div>
   </div>
 </section>
 
-<section class="alt">
-  <div class="container">
-    <div class="section-header center" data-reveal>
-      <h2>Brands We've Partnered With</h2>
-      <p>Trusted by leading travel and lifestyle brands for authentic content, engagement, and community building.</p>
+<!-- ===== Brands ===== -->
+<section class="section section-sand" id="brands">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <span class="kicker">Partnerships</span>
+        <h2>Brands we've partnered with</h2>
+        <p>Experiences brought to life for our audience in a way that felt real rather than scripted — where the brand's story and our voice actually fit together.</p>
+      </div>
     </div>
-    <div id="aboutBrandsContainer" class="brand-showcase" data-stagger></div>
-    <div class="text-center mt-3xl" data-reveal>
-      <p class="text-muted mb-lg">Interested in collaborating?</p>
-      <a href="mailto:theloveandlayover@gmail.com?subject=Brand%20Collaboration%20-%20Love%20and%20Layovers" class="btn btn-primary btn-magnetic">Let's Work Together →</a>
+    <div class="partners reveal">
+      <article class="partner"><div class="partner-logo"><img src="/assets/brands/komowellness.png" alt="KOMO Wellness logo" loading="lazy"></div><div><span class="tag">Wellness</span><h3>KOMO Wellness</h3><p>Global scalp and hair wellness brand from Singapore integrating AI analysis, botanical science, and refined service rituals.</p></div></article>
+      <article class="partner"><div class="partner-logo"><img src="/assets/brands/sunnystep.png" alt="Sunnystep logo" loading="lazy"></div><div><span class="tag">Lifestyle</span><h3>Sunnystep</h3><p>Popular Singapore-based ergonomic footwear brand centered around the joy of movement.</p></div></article>
+      <article class="partner"><div class="partner-logo"><img src="/assets/brands/funvee.png" alt="Funvee City Tour logo" loading="lazy"></div><div><span class="tag">Experience</span><h3>Funvee City Tour</h3><p>Singapore's open-top bus tour — iconic landmarks and the city's rich cultural heritage.</p></div></article>
+      <article class="partner"><div class="partner-logo"><img src="/assets/brands/scentopia-logo.png" alt="Scentopia logo" loading="lazy"></div><div><span class="tag">Experience</span><h3>Scentopia</h3><p>Behind-the-scenes fragrance museum experience, featured across Instagram and YouTube.</p></div></article>
+      <article class="partner"><div class="partner-logo"><img src="/assets/brands/imagica-logo.png" alt="Imagica logo" loading="lazy"></div><div><span class="tag">Experience</span><h3>Imagica</h3><p>Full-day theme park collaboration and content recap.</p></div></article>
+      <article class="partner"><div class="partner-logo"><img src="/assets/brands/serrano.png" alt="Serrano Resort logo" loading="lazy"></div><div><span class="tag">Stay</span><h3>Serrano Resort</h3><p>Luxury resort collaboration showcasing hospitality and travel experiences.</p></div></article>
+      <article class="partner"><div class="partner-logo"><img src="/assets/brands/wetnjoy.png" alt="Wet'n Joy logo" loading="lazy"></div><div><span class="tag">Experience</span><h3>Wet'n Joy</h3><p>Adventure and lifestyle brand partnership for travel experiences.</p></div></article>
+      <article class="partner"><div class="partner-logo"><img src="/assets/brands/tomacado.png" alt="Tomacado logo" loading="lazy"></div><div><span class="tag">Food</span><h3>Tomacado</h3><p>Flower-themed lifestyle restaurant and florist bringing floral experiences to Paragon, Orchard Road.</p></div></article>
+      <article class="partner"><div class="partner-logo"><img src="/assets/brands/kailashparbat.png" alt="Kailash Parbat logo" loading="lazy"></div><div><span class="tag">Food</span><h3>Kailash Parbat</h3><p>Culinary collaboration featuring authentic regional cuisine and dining experiences.</p></div></article>
+      <article class="partner"><div class="partner-logo"><img src="/assets/brands/bikanerwala.png" alt="Bikanerwala logo" loading="lazy"></div><div><span class="tag">Food</span><h3>Bikanerwala</h3><p>Traditional Indian sweets and snacks featuring authentic culinary experiences.</p></div></article>
+      <article class="partner"><div class="partner-logo"><img src="/assets/brands/biryanibykilo.png" alt="Biryani by Kilo logo" loading="lazy"></div><div><span class="tag">Food</span><h3>Biryani by Kilo</h3><p>Authentic biryani experiences and food storytelling.</p></div></article>
+      <article class="partner"><div class="partner-logo"><img src="/assets/brands/maujicafe.png" alt="Mauji Cafe logo" loading="lazy"></div><div><span class="tag">Café</span><h3>Mauji Cafe</h3><p>Café collaboration featuring unique culinary and lifestyle experiences.</p></div></article>
+      <article class="partner"><div class="partner-logo"><img src="/assets/brands/banglorecafe.png" alt="Bangalore Cafe logo" loading="lazy"></div><div><span class="tag">Café</span><h3>Bangalore Cafe</h3><p>Café collaboration featuring unique culinary and lifestyle experiences.</p></div></article>
+      <article class="partner"><div class="partner-logo"><img src="/assets/brands/pratha%20Jewellery.png" alt="Pratha Jewellery logo" loading="lazy"></div><div><span class="tag">Lifestyle</span><h3>Pratha Jewellery</h3><p>Luxury jewellery collaboration showcasing craftsmanship and elegance.</p></div></article>
     </div>
   </div>
 </section>
 
-<section style="background: var(--primary); color: white; text-align: center;">
-  <div class="container" style="max-width: 700px;" data-reveal>
-    <h2 style="color: white;">Let's create something real together.</h2>
-    <p style="color: rgba(255,255,255,0.8); font-size: 1.15rem; margin-bottom: var(--spacing-2xl);">Whether you're a cafe, resort, or global brand — if the story fits, we want to tell it.</p>
-    <a href="mailto:theloveandlayover@gmail.com?subject=Brand%20Collaboration%20-%20Love%20and%20Layovers" class="btn btn-secondary btn-magnetic">Get In Touch →</a>
+<!-- ===== Work with us ===== -->
+<section class="brands" id="work-with-us">
+  <div class="wrap">
+    <div class="collab reveal">
+      <div>
+        <span class="kicker">Let's work together</span>
+        <h2>Let's create something real together.</h2>
+        <p>If you're a cafe, restaurant, spa, or brand looking for creators who show up with genuine curiosity, bring an engaged community along for the ride, and treat every collaboration like a relationship rather than a transaction — we'd love to hear from you.</p>
+        <ul class="formats" aria-label="Collaboration formats">
+          <li>Instagram Reels</li><li>Stories</li><li>Dedicated YouTube vlogs</li><li>YouTube integrations</li><li>UGC photo &amp; video</li><li>Event &amp; launch coverage</li>
+        </ul>
+      </div>
+      <div class="row">
+        <a href="mailto:theloveandlayover@gmail.com?subject=Brand%20Collaboration%20-%20Love%20and%20Layovers" class="btn btn-light">Get in touch <span aria-hidden="true">→</span></a>
+        <a href="https://www.instagram.com/loveandlayover" class="btn btn-outline-light" target="_blank" rel="noopener">DM us on Instagram</a>
+        <a href="/" class="btn btn-outline-light">See what we create</a>
+      </div>
+    </div>
   </div>
 </section>
 
 </main>
 
-<footer>
-  <div class="container">
-    <div class="footer-col">
-      <h3 style="font-family: var(--font-serif); font-size: 1.25rem;">Love & Layovers</h3>
-      <p style="color: rgba(255,255,255,0.65); margin-bottom: var(--spacing-lg);">Travel content creators and brand collaboration partners.</p>
-      <a href="mailto:theloveandlayover@gmail.com" style="color: var(--accent); font-weight: 600;">theloveandlayover@gmail.com</a>
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-grid">
+      <div>
+        <a href="/" class="brand"><img src="/public/images/brand/logo-mark.svg" alt="" width="36" height="36">Love &amp; Layovers</a>
+        <p>Travel &amp; lifestyle content creators in Singapore — films, Reels and free travel guides.</p>
+        <a class="mail" href="mailto:theloveandlayover@gmail.com">theloveandlayover@gmail.com</a>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul><li><a href="/destinations/">Destinations</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/videos.html">Videos</a></li><li><a href="/videos/life-in-singapore.html">Life in Singapore</a></li></ul>
+      </div>
+      <div>
+        <h4>Popular</h4>
+        <ul><li><a href="/destinations/singapore.html">Singapore guide</a></li><li><a href="/destinations/japan.html">Japan guide</a></li><li><a href="/blog/singapore-layover-guide.html">Singapore layover</a></li><li><a href="/blog/southeast-asia-budget-tips.html">SE Asia budget</a></li></ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul><li><a href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1" target="_blank" rel="noopener">YouTube</a></li><li><a href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener">Instagram</a></li><li><a href="/about.html">About us</a></li><li><a href="/credits.html">Photo credits</a></li></ul>
+      </div>
     </div>
-    <div class="footer-col">
-      <h3>Explore</h3>
-      <ul>
-        <li><a href="/about.html">About Us</a></li>
-        <li><a href="/destinations/">Destinations</a></li>
-        <li><a href="/blog.html">Blog</a></li>
-        <li><a href="/videos.html">Videos</a></li>
-      </ul>
+    <div class="ftr-bottom">
+      <span>&copy; <span id="year">2026</span> Love and Layovers · Sanket &amp; Nikita</span>
+      <span>Made with ♥ between flights</span>
     </div>
-    <div class="footer-col">
-      <h3>Follow</h3>
-      <ul>
-        <li><a href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-        <li><a href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1" target="_blank" rel="noopener noreferrer">YouTube</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    &copy; 2026 Love and Layovers · Sanket & Nikita Travel Duo & Content Creators
   </div>
 </footer>
 
-<script>
-const aboutCollaborations = [
-  { brand: "Scentopia", logo: "/assets/brands/scentopia-logo.png", description: "Behind-the-scenes fragrance museum experience, featured across Instagram and YouTube." },
-  { brand: "Imagica", logo: "/assets/brands/imagica-logo.png", description: "Full-day theme park collaboration and content recap." },
-  { brand: "Biryani by Kilo", logo: "/assets/brands/biryanibykilo.png", description: "Culinary collaboration featuring authentic biryani experiences and food storytelling." },
-  { brand: "Pratha Jewellery", logo: "/assets/brands/pratha%20Jewellery.png", description: "Luxury jewellery collaboration showcasing craftsmanship and elegance." },
-  { brand: "Wetn Joy", logo: "/assets/brands/wetnjoy.png", description: "Adventure and lifestyle brand partnership for travel experiences." },
-  { brand: "Serrano Resort", logo: "/assets/brands/serrano.png", description: "Luxury resort collaboration showcasing hospitality and travel experiences." },
-  { brand: "Mauji Cafe", logo: "/assets/brands/maujicafe.png", description: "Cafe collaboration featuring unique culinary and lifestyle experiences." },
-  { brand: "Bangalore Cafe", logo: "/assets/brands/banglorecafe.png", description: "Cafe collaboration featuring unique culinary and lifestyle experiences." },
-  { brand: "Kailash Parbat", logo: "/assets/brands/kailashparbat.png", description: "Culinary collaboration featuring authentic regional cuisine and dining experiences." },
-  { brand: "Bikanerwala", logo: "/assets/brands/bikanerwala.png", description: "Traditional Indian sweets and snacks collaboration featuring authentic culinary experiences." },
-  { brand: "KOMO Wellness", logo: "/assets/brands/komowellness.png", description: "Global scalp and hair wellness brand from Singapore integrating AI analysis, botanical science, and refined service rituals to restore scalp health." },
-  { brand: "Funvee City Tour", logo: "/assets/brands/funvee.png", description: "Singapore's premier open-top bus tour experience. Discover iconic landmarks and explore the city's rich cultural heritage." },
-  { brand: "Tomacado", logo: "/assets/brands/tomacado.png", description: "Flower-themed lifestyle restaurant and florist from China, bringing elegant floral experiences to Paragon Shopping Centre on Orchard Road." },
-  { brand: "Sunnystep", logo: "/assets/brands/sunnystep.png", description: "Popular Singapore-based ergonomic footwear brand centered around the joy of movement." }
-];
-
-const aboutBrandsContainer = document.getElementById('aboutBrandsContainer');
-if (aboutBrandsContainer) {
-  aboutCollaborations.forEach(collab => {
-    const card = document.createElement('div');
-    card.className = 'brand-card';
-    card.innerHTML = `
-      <div class="brand-logo">
-        <img src="${collab.logo}" alt="${collab.brand}" loading="lazy">
-      </div>
-      <h3>${collab.brand}</h3>
-      <p>${collab.description}</p>
-    `;
-    aboutBrandsContainer.appendChild(card);
-  });
-}
-</script>
-
-<script src="/js/premium-interactions.js"></script>
-
+<script src="/js/site.js?v=1"></script>
 </body>
 </html>
