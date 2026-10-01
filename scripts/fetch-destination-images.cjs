@@ -19,45 +19,48 @@ const UA = 'LoveAndLayoversSite/1.0 (https://www.loveandlayover.in; theloveandla
 // Search terms per image, best first
 const WANT = {
   'singapore-hero': ['Marina Bay Sands skyline', 'Singapore skyline night', 'Gardens by the Bay'],
-  'singapore-food': ['Hainanese chicken rice', 'Hawker centre Singapore', 'Satay'],
-  'japan-hero': ['Mount Fuji', 'Kiyomizu-dera', 'Fushimi Inari'],
+  'singapore-food': ['Hainanese chicken rice', 'Chicken rice', 'Laksa', 'Satay'],
+  'japan-hero': ['Chureito Pagoda', 'Kiyomizu-dera', 'Fushimi Inari', 'Mount Fuji'],
   'thailand-hero': ['Wat Arun', 'Phi Phi islands', 'Bangkok temple'],
-  'vietnam-hero': ['Ha Long Bay', 'Hoi An', 'Vietnam rice terraces'],
+  'vietnam-hero': ['Ha Long Bay', 'Halong Bay', 'Hoi An'],
   'south-korea-hero': ['Gyeongbokgung', 'Seoul skyline', 'Bukchon Hanok Village'],
   'india-hero': ['Taj Mahal', 'Hawa Mahal', 'Jaipur'],
   'india-food': ['Thali', 'Indian cuisine', 'Masala dosa'],
   'indonesia-hero': ['Borobudur', 'Mount Bromo', 'Prambanan'],
-  'indonesia-food': ['Nasi goreng', 'Rendang', 'Indonesian cuisine'],
+  'indonesia-food': ['Nasi goreng', 'Rendang', 'Gado-gado'],
   'bali-hero': ['Tegallalang rice terrace', 'Pura Ulun Danu Bratan', 'Bali rice terraces'],
   'bali-food': ['Babi guling', 'Balinese cuisine', 'Nasi campur'],
-  'turkey-hero': ['Cappadocia hot air balloons', 'Hagia Sophia', 'Istanbul skyline'],
-  'turkey-food': ['Turkish breakfast', 'Baklava', 'Turkish cuisine'],
+  'turkey-hero': ['Göreme', 'Cappadocia', 'Hagia Sophia'],
+  'turkey-food': ['Baklava', 'Turkish breakfast', 'Kebab'],
   'italy-hero': ['Colosseum Rome', 'Venice Grand Canal', 'Florence cathedral'],
-  'italy-food': ['Pizza Margherita', 'Italian pasta', 'Gelato'],
+  'italy-food': ['Pizza Margherita', 'Pizza', 'Spaghetti', 'Gelato'],
   'greece-hero': ['Oia Santorini', 'Acropolis of Athens', 'Santorini'],
   'greece-food': ['Greek salad', 'Souvlaki', 'Moussaka'],
   'france-hero': ['Eiffel Tower', 'Paris skyline', 'Mont Saint-Michel'],
-  'france-food': ['Croissant', 'French cuisine', 'Macarons'],
-  'spain-hero': ['Sagrada Familia', 'Alhambra', 'Plaza de España Seville'],
-  'spain-food': ['Paella', 'Tapas', 'Spanish cuisine'],
+  'france-food': ['Croissant', 'Macarons', 'Crêpe'],
+  'spain-hero': ['Sagrada Familia', 'Alhambra', 'Plaza de España'],
+  'spain-food': ['Paella', 'Tapas', 'Churros'],
   'portugal-hero': ['Lisbon tram', 'Porto Ribeira', 'Belém Tower'],
-  'portugal-food': ['Pastel de nata', 'Portuguese cuisine', 'Francesinha'],
+  'portugal-food': ['Pastel de nata', 'Pastéis de nata', 'Francesinha'],
   'germany-hero': ['Neuschwanstein Castle', 'Brandenburg Gate', 'Rothenburg ob der Tauber'],
-  'germany-food': ['Bratwurst', 'Pretzel', 'German cuisine'],
+  'germany-food': ['Bratwurst', 'Pretzel', 'Brezel'],
   'iceland-hero': ['Skógafoss', 'Seljalandsfoss', 'Kirkjufell'],
-  'iceland-food': ['Icelandic cuisine', 'Reykjavik', 'Plokkfiskur'],
+  'iceland-food': ['Skyr', 'Plokkfiskur', 'Icelandic lamb soup', 'Pylsur'],
   'mexico-hero': ['Chichen Itza', 'Teotihuacan', 'Mexico City Zocalo'],
-  'mexico-food': ['Tacos', 'Mexican cuisine', 'Guacamole'],
+  'mexico-food': ['Tacos al pastor', 'Tacos', 'Guacamole'],
   'peru-hero': ['Machu Picchu', 'Rainbow Mountain Peru', 'Cusco'],
   'peru-food': ['Ceviche', 'Peruvian cuisine', 'Lomo saltado'],
   'egypt-hero': ['Giza pyramids', 'Pyramids of Giza', 'Abu Simbel'],
   'egypt-food': ['Koshary', 'Egyptian cuisine', 'Ful medames'],
   'australia-hero': ['Sydney Opera House', 'Uluru', 'Twelve Apostles'],
-  'australia-food': ['Pavlova', 'Meat pie Australia', 'Australian cuisine'],
+  'australia-food': ['Pavlova dessert', 'Pavlova (food)', 'Meat pie', 'Lamington'],
 };
 
 const CATEGORIES = ['Featured_pictures_on_Wikimedia_Commons', 'Quality_images', null];
 const FREE = /^(CC0( 1\.0)?|CC BY(-SA)?( \d\.\d)?( [a-z]{2,3})?|Public domain|PD\b.*)$/i;
+
+// Titles that make poor hero/food shots
+const SKIP = /interior|ceiling|nave|vault|inflating|aircraft|grumman|hawkeye|portrait|map\b|diagram|logo|stamp|coin/i;
 
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 const stripHtml = (s = '') => s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
@@ -70,7 +73,8 @@ async function api(params) {
 }
 
 async function search(term, category, kind) {
-  const q = category ? `${term} incategory:${category}` : term;
+  // Match the file title, not just its description text
+  const q = `intitle:"${term}"` + (category ? ` incategory:${category}` : '');
   const data = await api({
     action: 'query', generator: 'search', gsrnamespace: '6', gsrsearch: q, gsrlimit: '25',
     prop: 'imageinfo', iiprop: 'url|size|mime|extmetadata', iiurlwidth: kind === 'hero' ? '2000' : '1200',
@@ -79,6 +83,7 @@ async function search(term, category, kind) {
   for (const p of pages) {
     const ii = p.imageinfo && p.imageinfo[0];
     if (!ii || !/image\/(jpeg|png)/.test(ii.mime)) continue;
+    if (SKIP.test(p.title)) continue;
     const meta = ii.extmetadata || {};
     const license = (meta.LicenseShortName && meta.LicenseShortName.value) || '';
     if (!FREE.test(license.trim()) || /NC|ND/.test(license)) continue;
