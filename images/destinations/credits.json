@@ -160,11 +160,11 @@
     "query": "intitle:\"Macarons\" incategory:Quality_images"
   },
   "spain-hero": {
-    "title": "Alhambra evening panorama Mirador San Nicolas sRGB-1.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Alhambra_evening_panorama_Mirador_San_Nicolas_sRGB-1.jpg",
-    "artist": "Slaunger",
-    "license": "CC BY-SA 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "title": "Toit salle Abencerrages Alhambra Espagne.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Toit_salle_Abencerrages_Alhambra_Espagne.jpg",
+    "artist": "Jebulon",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "query": "intitle:\"Alhambra\" incategory:Featured_pictures_on_Wikimedia_Commons"
   },
   "spain-food": {
@@ -184,12 +184,12 @@
     "query": "Lisbon tram incategory:Featured_pictures_on_Wikimedia_Commons"
   },
   "portugal-food": {
-    "title": "Takeout • Original Pastéis de Belém (1837) (50660175068).jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Takeout_%E2%80%A2_Original_Past%C3%A9is_de_Bel%C3%A9m_(1837)_(50660175068).jpg",
-    "artist": "Sonse",
+    "title": "Madeira - Coffee and Pastéis de Nata custard tarts (33407953361).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Madeira_-_Coffee_and_Past%C3%A9is_de_Nata_custard_tarts_(33407953361).jpg",
+    "artist": "muffinn from Worcester, UK",
     "license": "CC BY 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-    "query": "intitle:\"Pastéis de Belém\""
+    "query": "intitle:\"Pastéis de nata\""
   },
   "germany-hero": {
     "title": "Neuschwanstein Castle 2024-02.jpg",
@@ -200,12 +200,12 @@
     "query": "Neuschwanstein Castle incategory:Featured_pictures_on_Wikimedia_Commons"
   },
   "germany-food": {
-    "title": "Brezel mit Löwen 20230129 HOF08614 RAW-Export.png",
-    "page": "https://commons.wikimedia.org/wiki/File:Brezel_mit_L%C3%B6wen_20230129_HOF08614_RAW-Export.png",
-    "artist": "PantheraLeo1359531",
+    "title": "Xanten, Currywurst mit Pommes.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Xanten,_Currywurst_mit_Pommes.jpg",
+    "artist": "Palickap",
     "license": "CC BY 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-    "query": "intitle:\"Brezel\" incategory:Quality_images"
+    "query": "intitle:\"Currywurst\""
   },
   "iceland-hero": {
     "title": "Skógafoss July 2014.JPG",
