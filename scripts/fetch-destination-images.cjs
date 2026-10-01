@@ -19,7 +19,7 @@ const UA = 'LoveAndLayoversSite/1.0 (https://www.loveandlayover.in; theloveandla
 // Search terms per image, best first
 const WANT = {
   'singapore-hero': ['Marina Bay Sands skyline', 'Singapore skyline night', 'Gardens by the Bay'],
-  'singapore-food': ['Hainanese chicken rice', 'Chicken rice', 'Laksa', 'Satay'],
+  'singapore-food': ['Laksa', 'Hainanese chicken rice', 'Chilli crab', 'Satay'],
   'japan-hero': ['Chureito Pagoda', 'Kiyomizu-dera', 'Fushimi Inari', 'Mount Fuji'],
   'thailand-hero': ['Wat Arun', 'Phi Phi islands', 'Bangkok temple'],
   'vietnam-hero': ['Ha Long Bay', 'Halong Bay', 'Hoi An'],
@@ -38,14 +38,14 @@ const WANT = {
   'greece-food': ['Greek salad', 'Souvlaki', 'Moussaka'],
   'france-hero': ['Eiffel Tower', 'Paris skyline', 'Mont Saint-Michel'],
   'france-food': ['Croissant', 'Macarons', 'Crêpe'],
-  'spain-hero': ['Sagrada Familia', 'Alhambra', 'Plaza de España'],
+  'spain-hero': ['Alhambra', 'Plaza de España', 'Park Güell'],
   'spain-food': ['Paella', 'Tapas', 'Churros'],
   'portugal-hero': ['Lisbon tram', 'Porto Ribeira', 'Belém Tower'],
-  'portugal-food': ['Pastel de nata', 'Pastéis de nata', 'Francesinha'],
+  'portugal-food': ['Pastéis de Belém', 'Pastéis de nata', 'Pastel de nata', 'Francesinha'],
   'germany-hero': ['Neuschwanstein Castle', 'Brandenburg Gate', 'Rothenburg ob der Tauber'],
-  'germany-food': ['Bratwurst', 'Pretzel', 'Brezel'],
+  'germany-food': ['Brezel', 'Pretzel', 'Currywurst', 'Schweinshaxe'],
   'iceland-hero': ['Skógafoss', 'Seljalandsfoss', 'Kirkjufell'],
-  'iceland-food': ['Skyr', 'Plokkfiskur', 'Icelandic lamb soup', 'Pylsur'],
+  'iceland-food': ['Plokkfiskur', 'Kjötsúpa', 'Pylsur', 'Hákarl', 'Skyr'],
   'mexico-hero': ['Chichen Itza', 'Teotihuacan', 'Mexico City Zocalo'],
   'mexico-food': ['Tacos al pastor', 'Tacos', 'Guacamole'],
   'peru-hero': ['Machu Picchu', 'Rainbow Mountain Peru', 'Cusco'],
@@ -60,7 +60,7 @@ const CATEGORIES = ['Featured_pictures_on_Wikimedia_Commons', 'Quality_images', 
 const FREE = /^(CC0( 1\.0)?|CC BY(-SA)?( \d\.\d)?( [a-z]{2,3})?|Public domain|PD\b.*)$/i;
 
 // Titles that make poor hero/food shots
-const SKIP = /interior|ceiling|nave|vault|inflating|aircraft|grumman|hawkeye|portrait|map\b|diagram|logo|stamp|coin/i;
+const SKIP = /interior|ceiling|nave|vault|inflating|aircraft|grumman|hawkeye|portrait|map\b|diagram|logo|stamp|coin|sorrir|smil|geniet|journalist|restaurant|häusle|portland/i;
 
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 const stripHtml = (s = '') => s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
