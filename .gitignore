@@ -86,3 +86,4 @@ backups/
 # Local testing
 local-test/
 test-data/
+*.pid

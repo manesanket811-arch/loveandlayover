@@ -6,7 +6,7 @@ const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 
-const REPO = 'C:/Users/T0282643/Repositories/website';
+const REPO = path.join(__dirname, '..');
 const OUT = path.join(REPO, 'public/images/brand');
 fs.mkdirSync(OUT, { recursive: true });
 

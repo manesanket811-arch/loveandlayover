@@ -597,17 +597,21 @@
         card.className = 'video-card';
         card.innerHTML = `
           <div class="video-thumb">
-            <img src="https://i.ytimg.com/vi/${video.id}/maxresdefault.jpg" alt="${video.title}" loading="lazy">
+            <img src="https://i.ytimg.com/vi/${encodeURIComponent(video.id)}/maxresdefault.jpg" loading="lazy">
             <div class="play-icon">▶</div>
           </div>
           <div class="video-info">
-            <h3>${video.title}</h3>
-            <div class="video-meta">${video.type} · ${publishDate}</div>
+            <h3></h3>
+            <div class="video-meta"></div>
             <span class="video-watch-link">Watch now →</span>
           </div>
         `;
+        // Titles come from the YouTube feed — set as text, never as HTML
+        card.querySelector('h3').textContent = video.title;
+        card.querySelector('.video-meta').textContent = `${video.type} · ${publishDate}`;
 
         const img = card.querySelector('img');
+        img.alt = video.title;
         img.onerror = () => {
           img.onerror = null;
           img.src = img.src.replace('maxresdefault', 'hqdefault');
