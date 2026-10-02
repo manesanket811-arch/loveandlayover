@@ -65,7 +65,7 @@ const WANT = {
   'singapore-zoo-hero': ['Singapore Zoo', 'River Wonders', 'Night Safari Singapore', 'S.E.A. Aquarium'],
   'johor-causeway-hero': ['Johor–Singapore Causeway', 'Johor-Singapore Causeway', 'Woodlands Checkpoint', 'Johor Bahru skyline'],
   'singapore-hdb-hero': ['HDB flats', 'HDB estate', 'Pinnacle@Duxton', 'Tiong Bahru'],
-  'clarke-quay-hero': ['Clarke Quay', 'Boat Quay', 'Singapore River'],
+  'clarke-quay-hero': ['Boat Quay', 'Clarke Quay at night', 'Singapore River', 'Clarke Quay'],
   'australia-food': ['Pavlova dessert', 'Pavlova (food)', 'Meat pie', 'Lamington'],
 };
 
@@ -73,7 +73,7 @@ const CATEGORIES = ['Featured_pictures_on_Wikimedia_Commons', 'Quality_images', 
 const FREE = /^(CC0( 1\.0)?|CC BY(-SA)?( \d\.\d)?( [a-z]{2,3})?|Public domain|PD\b.*)$/i;
 
 // Titles that make poor hero/food shots
-const SKIP = /interior|ceiling|nave|vault|inflating|aircraft|grumman|hawkeye|portrait|map\b|diagram|logo|stamp|coin|sorrir|smil|geniet|journalist|restaurant|häusle|portland|löwen|relief|facade|takeout|shop|store/i;
+const SKIP = /interior|ceiling|nave|vault|inflating|aircraft|grumman|hawkeye|portrait|map\b|diagram|logo|stamp|coin|sorrir|smil|geniet|journalist|restaurant|häusle|portland|löwen|relief|facade|takeout|shop|store|juice|mrt|station/i;
 
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 const stripHtml = (s = '') => s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
