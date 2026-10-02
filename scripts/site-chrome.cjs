@@ -5,6 +5,9 @@
 //   HEAD_LINKS: stylesheet tags to put in <head>
 //   SCRIPT: script tag to put before </body>
 
+// Opens a WhatsApp chat with us (+65 8896 4156) with a short greeting filled in
+const WHATSAPP = 'https://wa.me/6588964156?text=Hi%20Sanket%20%26%20Nikita%21%20I%20found%20you%20on%20loveandlayover.in%20and%20wanted%20to%20get%20in%20touch.';
+
 const NAV = [
   ['destinations', '/destinations/', 'Destinations'],
   ['videos', '/videos.html', 'Videos'],
@@ -38,6 +41,7 @@ function footer() {
       <div class="ftr-social">
         <a href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1" target="_blank" rel="noopener" aria-label="YouTube">▶ YouTube</a>
         <a href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener" aria-label="Instagram">◎ Instagram</a>
+        <a href="${WHATSAPP}" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:-2px"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.5.3-.5a.6.6 0 0 0 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c1.9.8 2.7.9 3.6.7a3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.4M12 21.8a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.9 9.9 0 1 1 12 21.8m8.4-18.3A11.8 11.8 0 0 0 1.8 17.7L.1 24l6.4-1.7A11.8 11.8 0 0 0 12 23.7 11.8 11.8 0 0 0 20.4 3.5"/></svg> WhatsApp</a>
       </div>
     </div>
     <div class="ftr-bottom">
@@ -48,10 +52,10 @@ function footer() {
 </footer>`;
 }
 
-const HEAD_LINKS = '<link rel="stylesheet" href="/css/chrome.css?v=3">';
-const SCRIPT = '<script src="/js/site.js?v=2"></script>';
+const HEAD_LINKS = '<link rel="stylesheet" href="/css/chrome.css?v=4">';
+const SCRIPT = '<script src="/js/site.js?v=3"></script>';
 
-module.exports = { header, footer, HEAD_LINKS, SCRIPT };
+module.exports = { header, footer, HEAD_LINKS, SCRIPT, WHATSAPP };
 
 // CLI: node scripts/site-chrome.cjs header <current> [cta] | footer
 if (require.main === module) {

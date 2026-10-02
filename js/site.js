@@ -41,4 +41,10 @@
   } else {
     reveals.forEach(function (el) { el.classList.add('in'); });
   }
+
+  // Count WhatsApp chats started from the site
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="wa.me/"]');
+    if (a && window.gtag) window.gtag('event', 'whatsapp_click', { page_path: location.pathname });
+  });
 })();

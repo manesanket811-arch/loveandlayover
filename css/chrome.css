@@ -76,7 +76,7 @@ footer.ftr a.site-brand { color: #fff; font-size: 1.1rem; gap: 8px; margin: 0; }
 footer.ftr a.site-brand img { width: 30px; height: 30px; }
 nav.ftr-links { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: 0; padding: 0; background: none; position: static; }
 nav.ftr-links a { font-weight: 500; }
-.ftr-social { display: flex; gap: 8px; }
+.ftr-social { display: flex; flex-wrap: wrap; gap: 8px; }
 .ftr-social a { padding: 7px 14px; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; font-size: .82rem; font-weight: 600; line-height: 1; white-space: nowrap; }
 .ftr-social a:hover { border-color: rgba(255,255,255,.5); }
 .ftr-bottom { display: flex; justify-content: space-between; gap: 6px 16px; flex-wrap: wrap; margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.1); font-size: .8rem; color: rgba(255,255,255,.55); }
