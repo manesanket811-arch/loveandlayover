@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Singapore Trip Cost Calculator from India (in ₹)</title>
+<meta name="description" content="Work out what your Singapore trip will cost from India in rupees: flights, visa, hotel, food, MRT and attractions, for your dates, group and budget style.">
+<link rel="canonical" href="https://www.loveandlayover.in/singapore-trip-cost-calculator.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Singapore Trip Cost Calculator from India (in ₹)">
+<meta property="og:description" content="Work out what your Singapore trip will cost from India in rupees: flights, visa, hotel, food, MRT and attractions, for your dates, group and budget style.">
+<meta property="og:url" content="https://www.loveandlayover.in/singapore-trip-cost-calculator.html">
+<meta property="og:site_name" content="Love and Layovers">
+<meta property="og:image" content="https://www.loveandlayover.in/images/og/singapore-trip-cost-calculator.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Singapore Trip Cost Calculator from India (in ₹)">
+<meta name="twitter:description" content="Work out what your Singapore trip will cost from India in rupees: flights, visa, hotel, food, MRT and attractions, for your dates, group and budget style.">
+<meta name="twitter:image" content="https://www.loveandlayover.in/images/og/singapore-trip-cost-calculator.jpg">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,900;1,9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Singapore Trip Cost Calculator",
+  "url": "https://www.loveandlayover.in/singapore-trip-cost-calculator.html",
+  "description": "Estimate the cost of a Singapore trip from India in rupees, including flights, visa, hotel, food, transport and attractions.",
+  "applicationCategory": "TravelApplication",
+  "operatingSystem": "Any",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"},
+  "creator": {"@type": "Organization", "@id": "https://www.loveandlayover.in/#organization", "name": "Love and Layovers"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.loveandlayover.in/"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.loveandlayover.in/blog.html"},
+    {"@type": "ListItem", "position": 3, "name": "Singapore trip cost calculator", "item": "https://www.loveandlayover.in/singapore-trip-cost-calculator.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "How much does a 5-day Singapore trip cost from India?", "acceptedAnswer": {"@type": "Answer", "text": "Roughly ₹50,000–65,000 per person on a tight budget, about ₹1,00,000 for a mid-range trip and ₹1.5 lakh or more for a comfort trip, including return flights, visa, hotel, food, transport and a few attractions. Use the calculator to match your own dates and group."}},
+    {"@type": "Question", "name": "How accurate is this calculator?", "acceptedAnswer": {"@type": "Answer", "text": "It uses typical prices as of October 2026 and an exchange rate you can change. Flights, hotels and tickets vary by season and how early you book, so treat the result as a planning estimate."}},
+    {"@type": "Question", "name": "Is it cheaper to travel to Singapore as a group?", "acceptedAnswer": {"@type": "Answer", "text": "Partly. Sharing a hotel room roughly halves the cost of the stay per person, but flights, visa, food and tickets are paid per person."}}
+  ]
+}
+</script>
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-5D7GNE6JQL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5D7GNE6JQL');
+</script>
+<link rel="stylesheet" href="/css/site.css?v=1">
+<link rel="stylesheet" href="/css/article.css?v=2">
+<style>
+  .calc-hero { background: var(--navy) url('/images/destinations/singapore-hero.webp') center / cover; position: relative; color: #fff; }
+  .calc-hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(100deg, rgba(10,22,40,.94) 0%, rgba(10,22,40,.75) 55%, rgba(10,22,40,.35) 100%); }
+  .calc-hero .wrap { position: relative; padding-top: 56px; padding-bottom: 48px; }
+  .calc-hero h1 { font-size: clamp(2rem, 4.4vw, 3.2rem); font-weight: 900; max-width: 760px; }
+  .calc-hero h1 em { font-style: italic; color: #f0a559; }
+  .calc-hero p { margin-top: 12px; max-width: 640px; font-size: 1.08rem; color: rgba(255,255,255,.85); }
+
+  .calc { display: grid; grid-template-columns: minmax(0, 1fr) 400px; gap: 32px; align-items: start; padding-top: 36px; padding-bottom: 56px; }
+  .panel { background: #fff; border: 1px solid var(--line); border-radius: 22px; padding: 26px; box-shadow: var(--shadow-sm); }
+  .panel + .panel { margin-top: 18px; }
+  .panel h2 { font-family: var(--sans); font-size: .78rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+  .field { margin-bottom: 22px; }
+  .field:last-child { margin-bottom: 0; }
+  .field > label, .field > .lbl { display: flex; justify-content: space-between; align-items: baseline; font-weight: 700; margin-bottom: 10px; }
+  .field output { font-family: var(--serif); font-size: 1.35rem; font-weight: 900; color: var(--navy); }
+  input[type=range] { width: 100%; accent-color: var(--accent); }
+  .seg { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .seg input { position: absolute; opacity: 0; pointer-events: none; }
+  .seg label { display: block; text-align: center; padding: 12px 8px; border: 1.5px solid var(--line); border-radius: 14px; cursor: pointer; font-weight: 700; font-size: .92rem; line-height: 1.25; background: var(--cream); transition: border-color .15s, background .15s; }
+  .seg label small { display: block; font-weight: 500; font-size: .74rem; color: var(--muted); margin-top: 3px; }
+  .seg input:checked + label { border-color: var(--accent); background: var(--accent-soft); }
+  .seg input:focus-visible + label { outline: 3px solid rgba(212,105,29,.35); outline-offset: 2px; }
+  .checks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .check { display: flex; gap: 10px; align-items: flex-start; padding: 11px 12px; border: 1.5px solid var(--line); border-radius: 12px; cursor: pointer; font-size: .92rem; font-weight: 600; line-height: 1.3; }
+  .check input { margin-top: 2px; accent-color: var(--accent); width: 17px; height: 17px; flex: none; }
+  .check small { display: block; font-weight: 500; color: var(--muted); font-size: .78rem; }
+  .check:has(input:checked) { border-color: var(--accent); background: #fffaf5; }
+  .toggles { display: grid; gap: 10px; }
+  .rate { display: flex; align-items: center; gap: 10px; font-size: .92rem; }
+  .rate input { width: 84px; padding: 9px 10px; border: 1.5px solid var(--line); border-radius: 10px; font: inherit; font-weight: 700; }
+
+  .result { position: sticky; top: 92px; background: var(--navy); color: #fff; border-radius: 22px; padding: 26px; box-shadow: var(--shadow-lg); overflow: hidden; }
+  .result::before { content: ''; position: absolute; width: 360px; height: 360px; right: -160px; top: -180px; background: radial-gradient(closest-side, rgba(212,105,29,.4), transparent); }
+  .result > * { position: relative; }
+  .result .k { font-size: .76rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #f0a559; }
+  .result .total { font-family: var(--serif); font-size: clamp(2.3rem, 5vw, 3rem); font-weight: 900; line-height: 1.05; margin: 6px 0 4px; }
+  .result .sub { color: rgba(255,255,255,.78); font-size: .95rem; }
+  .result .pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 18px; }
+  .result .pills span { font-size: .82rem; font-weight: 700; padding: 6px 11px; border-radius: 999px; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2); }
+  .breakdown { width: 100%; border-collapse: collapse; font-size: .9rem; }
+  .breakdown td { padding: 8px 0; border-top: 1px solid rgba(255,255,255,.12); vertical-align: top; }
+  .breakdown td small { display: block; color: rgba(255,255,255,.6); font-size: .76rem; }
+  .breakdown td:last-child { text-align: right; font-weight: 700; white-space: nowrap; padding-left: 12px; }
+  .breakdown tr.sum td { border-top: 1px solid rgba(255,255,255,.35); font-weight: 800; font-size: 1rem; }
+  .share { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 18px; }
+  .share .btn { padding: 12px 10px; font-size: .88rem; white-space: normal; }
+  .btn-wa { background: #25d366; color: #0a1628; }
+  .btn-wa:hover { background: #1fbb59; }
+  .result .fine { margin-top: 14px; font-size: .76rem; color: rgba(255,255,255,.6); line-height: 1.5; }
+
+  .mbar { display: none; }
+  @media (max-width: 980px) {
+    .calc { grid-template-columns: minmax(0, 1fr); }
+    .result { position: relative; top: auto; }
+    .mbar { display: flex; position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 40; justify-content: space-between; align-items: center; gap: 12px; background: var(--navy); color: #fff; border-radius: 16px; padding: 12px 16px; box-shadow: var(--shadow-lg); }
+    .mbar b { font-family: var(--serif); font-size: 1.3rem; }
+    .mbar small { display: block; font-size: .72rem; color: rgba(255,255,255,.7); }
+    .mbar a { color: #f0a559; font-weight: 700; font-size: .9rem; }
+    body { padding-bottom: 84px; }
+  }
+  @media (max-width: 560px) { .checks { grid-template-columns: minmax(0, 1fr); } .seg label { padding: 10px 4px; font-size: .86rem; } }
+
+  .more { padding-bottom: 72px; }
+  .more .post-body { max-width: 760px; }
+  .links { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; margin-top: 16px !important; padding: 0 !important; list-style: none; }
+  .links li + li { margin-top: 0 !important; }
+  .links a { display: block; padding: 14px 16px; border: 1px solid var(--line); border-radius: 14px; background: #fff; font-weight: 700; color: var(--ink) !important; text-decoration: none !important; }
+  .links a:hover { border-color: var(--accent); color: var(--accent) !important; }
+</style>
+<link rel="stylesheet" href="/css/chrome.css?v=4">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="hdr" id="hdr">
+  <div class="hdr-wrap hdr-in">
+    <a href="/" class="site-brand" aria-label="Love and Layovers home"><img src="/public/images/brand/logo-mark.svg" alt="" width="36" height="36">Love &amp; Layovers</a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav"><span></span><span></span><span></span></button>
+    <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+      <a href="/destinations/">Destinations</a>
+      <a href="/videos.html">Videos</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/about.html">About</a>
+      <a href="/work-with-us.html" class="site-cta">Work with us</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="calc-hero">
+  <div class="wrap">
+    <nav class="post-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/blog.html">Blog</a> › Singapore trip cost calculator</nav>
+    <h1>Singapore Trip Cost <em>Calculator</em></h1>
+    <p>What will your Singapore trip cost from India? Pick your nights, group and travel style to get an instant estimate in rupees, with flights, visa, hotel, food, MRT and attractions.</p>
+  </div>
+</section>
+
+<form class="wrap calc" id="calc" onsubmit="return false" novalidate>
+  <div>
+    <div class="panel">
+      <h2>Your trip</h2>
+      <div class="field">
+        <label for="nights">Nights in Singapore <output id="nightsOut" for="nights">4</output></label>
+        <input type="range" id="nights" name="n" min="2" max="10" value="4">
+      </div>
+      <div class="field">
+        <label for="people">Travellers <output id="peopleOut" for="people">2</output></label>
+        <input type="range" id="people" name="p" min="1" max="8" value="2">
+      </div>
+      <div class="field">
+        <div class="lbl" id="styleLbl">Travel style</div>
+        <div class="seg" role="radiogroup" aria-labelledby="styleLbl">
+          <input type="radio" name="s" id="s-budget" value="budget"><label for="s-budget">Budget<small>Hostel, hawkers</small></label>
+          <input type="radio" name="s" id="s-mid" value="mid" checked><label for="s-mid">Mid-range<small>3–4★ hotel</small></label>
+          <input type="radio" name="s" id="s-comfort" value="comfort"><label for="s-comfort">Comfort<small>4–5★, restaurants</small></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Flights &amp; visa</h2>
+      <div class="field">
+        <div class="lbl" id="fareLbl">When you book flights</div>
+        <div class="seg" role="radiogroup" aria-labelledby="fareLbl">
+          <input type="radio" name="f" id="f-early" value="early" checked><label for="f-early">6–8 weeks ahead<small>Off-season</small></label>
+          <input type="radio" name="f" id="f-peak" value="peak"><label for="f-peak">Peak season<small>Diwali, May–June</small></label>
+          <input type="radio" name="f" id="f-late" value="late"><label for="f-late">Last minute<small>Under 2 weeks</small></label>
+        </div>
+      </div>
+      <div class="toggles">
+        <label class="check"><input type="checkbox" name="fl" id="flights" checked><span>Include return flights from India<small>Typical economy fare per person</small></span></label>
+        <label class="check"><input type="checkbox" name="v" id="visa" checked><span>Include Singapore visa<small>About ₹3,000 per person via an agent</small></span></label>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Paid attractions</h2>
+      <div class="checks" id="attractions">
+        <label class="check"><input type="checkbox" name="a" value="uss" checked><span>Universal Studios<small>about S$88</small></span></label>
+        <label class="check"><input type="checkbox" name="a" value="gardens" checked><span>Gardens by the Bay domes<small>about S$50</small></span></label>
+        <label class="check"><input type="checkbox" name="a" value="skypark" checked><span>Marina Bay Sands SkyPark<small>about S$36</small></span></label>
+        <label class="check"><input type="checkbox" name="a" value="safari" checked><span>Night Safari<small>about S$58</small></span></label>
+        <label class="check"><input type="checkbox" name="a" value="zoo"><span>Singapore Zoo<small>about S$48</small></span></label>
+        <label class="check"><input type="checkbox" name="a" value="flyer"><span>Singapore Flyer<small>about S$38</small></span></label>
+      </div>
+      <p style="margin:14px 0 0;font-size:.88rem;color:var(--muted)">Free extras: the Supertree light show, Spectra, Merlion Park, Botanic Gardens, Jewel's Rain Vortex, Chinatown and Little India.</p>
+    </div>
+
+    <div class="panel">
+      <div class="rate"><label for="rate">Exchange rate: ₹</label><input type="number" id="rate" name="r" min="40" max="100" step="0.5" value="65" inputmode="decimal"><span>per S$1 (check the live rate)</span></div>
+    </div>
+  </div>
+
+  <aside class="result" id="result" aria-live="polite">
+    <div class="k">Estimated total</div>
+    <div class="total" id="total">₹0</div>
+    <div class="sub" id="totalSub">for 2 travellers</div>
+    <div class="pills"><span id="perPerson">₹0 per person</span><span id="perDay">₹0 per person per day</span></div>
+    <table class="breakdown"><tbody id="rows"></tbody></table>
+    <div class="share">
+      <a class="btn btn-wa" id="shareWa" href="#" target="_blank" rel="noopener">Share on WhatsApp</a>
+      <button class="btn btn-outline-light" id="copyLink" type="button">Copy link</button>
+    </div>
+    <p class="fine">Approximate prices as of October 2026, from our <a href="/blog/singapore-trip-cost-from-india.html" style="color:#f0a559">Singapore trip cost guide</a>. Flights, hotels and tickets change with the season; check before you book.</p>
+  </aside>
+</form>
+
+<div class="mbar" aria-hidden="true"><div><small>Estimated total</small><b id="mTotal">₹0</b></div><a href="#result">See breakdown ↓</a></div>
+
+<section class="more">
+  <div class="wrap">
+    <div class="post-body">
+      <h2>How we calculate it</h2>
+      <p>The estimate adds up typical prices for each part of the trip, using the same figures as our <a href="/blog/singapore-trip-cost-from-india.html">Singapore trip cost from India</a> guide:</p>
+      <ul>
+        <li><strong>Flights:</strong> a typical return economy fare per person: about ₹23,000 booked 6–8 weeks ahead off-season, ₹37,500 in peak season and ₹50,000 last minute.</li>
+        <li><strong>Stay:</strong> a hostel bed (about S$45 a night per person) on a budget, a 3–4★ room (about S$220) or a 4–5★ room (about S$450) shared by two.</li>
+        <li><strong>Food:</strong> about S$30, S$50 or S$90 per person a day, from mostly hawker centres to mostly restaurants.</li>
+        <li><strong>Getting around:</strong> about S$10–15 a day by MRT, or S$30 if you mostly use Grab.</li>
+        <li><strong>Extras:</strong> SIM or eSIM, small shopping and a buffer: ₹4,000, ₹8,000 or ₹15,000 per person.</li>
+      </ul>
+      <h2>Plan the rest of your trip</h2>
+      <ul class="links">
+        <li><a href="/blog/singapore-visa-for-indians.html">Singapore visa for Indians →</a></li>
+        <li><a href="/blog/places-to-visit-in-singapore.html">Best places to visit →</a></li>
+        <li><a href="/blog/universal-studios-sentosa-guide.html">Universal Studios &amp; Sentosa →</a></li>
+        <li><a href="/blog/indian-restaurants-singapore.html">Indian restaurants in Singapore →</a></li>
+        <li><a href="/blog/singapore-with-parents-and-kids.html">Singapore with parents or kids →</a></li>
+        <li><a href="/blog/singapore-malaysia-7-day-itinerary.html">7-day Singapore + Malaysia →</a></li>
+      </ul>
+      <div class="post-follow" style="margin-top:32px">
+        <h2>See Singapore before you go</h2>
+        <p>We live here and film it every week: food finds, guides and our Life in Singapore series.</p>
+        <div class="row">
+          <a class="btn btn-yt" href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1" target="_blank" rel="noopener"><span aria-hidden="true">▶</span> Subscribe on YouTube</a>
+          <a class="btn btn-ig" href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener">Follow on Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ftr">
+  <div class="ftr-wrap">
+    <div class="ftr-top">
+      <a href="/" class="site-brand"><img src="/public/images/brand/logo-mark-light.svg" alt="" width="30" height="30">Love &amp; Layovers</a>
+      <nav class="ftr-links" aria-label="Footer">
+        <a href="/destinations/">Destinations</a><a href="/blog.html">Blog</a><a href="/videos.html">Videos</a><a href="/videos/life-in-singapore.html">Life in Singapore</a><a href="/work-with-us.html">Work with us</a><a href="/about.html">About</a>
+      </nav>
+      <div class="ftr-social">
+        <a href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1" target="_blank" rel="noopener" aria-label="YouTube">▶ YouTube</a>
+        <a href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener" aria-label="Instagram">◎ Instagram</a>
+        <a href="https://wa.me/6588964156?text=Hi%20Sanket%20%26%20Nikita%21%20I%20found%20you%20on%20loveandlayover.in%20and%20wanted%20to%20get%20in%20touch." target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:-2px"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.5.3-.5a.6.6 0 0 0 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c1.9.8 2.7.9 3.6.7a3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.4M12 21.8a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.9 9.9 0 1 1 12 21.8m8.4-18.3A11.8 11.8 0 0 0 1.8 17.7L.1 24l6.4-1.7A11.8 11.8 0 0 0 12 23.7 11.8 11.8 0 0 0 20.4 3.5"/></svg> WhatsApp</a>
+      </div>
+    </div>
+    <div class="ftr-bottom">
+      <span>&copy; <span id="year">2026</span> Love and Layovers · Sanket &amp; Nikita · <a href="/credits.html">Photo credits</a></span>
+      <a class="mail" href="mailto:theloveandlayover@gmail.com">theloveandlayover@gmail.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  // Typical prices (S$ unless noted), matching blog/singapore-trip-cost-from-india.html
+  var STYLE = {
+    budget:  { label: 'Budget',    stay: 45,  perRoom: false, food: 30, transport: 10, extras: 4000 },
+    mid:     { label: 'Mid-range', stay: 220, perRoom: true,  food: 50, transport: 15, extras: 8000 },
+    comfort: { label: 'Comfort',   stay: 450, perRoom: true,  food: 90, transport: 30, extras: 15000 }
+  };
+  var FARE = { early: 23000, peak: 37500, late: 50000 };
+  var VISA = 3000;
+  var TICKETS = { uss: ['Universal Studios', 88], gardens: ['Gardens by the Bay domes', 50], skypark: ['SkyPark Observation Deck', 36], safari: ['Night Safari', 58], zoo: ['Singapore Zoo', 48], flyer: ['Singapore Flyer', 38] };
+
+  var form = document.getElementById('calc');
+  var $ = function (id) { return document.getElementById(id); };
+  var inr = function (v) { return '₹' + Math.round(v).toLocaleString('en-IN'); };
+  var round = function (v) { return Math.round(v / 100) * 100; };
+
+  function state() {
+    return {
+      n: +form.n.value, p: +form.p.value, s: form.s.value, f: form.f.value,
+      fl: form.fl.checked, v: form.v.checked,
+      a: [].slice.call(form.querySelectorAll('input[name=a]:checked')).map(function (i) { return i.value; }),
+      r: Math.min(100, Math.max(40, parseFloat(form.r.value) || 65))
+    };
+  }
+
+  function calc(st) {
+    var S = STYLE[st.s], rows = [], rate = st.r;
+    var rooms = Math.ceil(st.p / 2);
+    var stayTotal = S.perRoom ? S.stay * rooms * st.n : S.stay * st.p * st.n;
+    var days = st.n + 1;
+    if (st.fl) rows.push(['Return flights', st.p + ' × ' + inr(FARE[st.f]), FARE[st.f] * st.p]);
+    if (st.v) rows.push(['Singapore visa', st.p + ' × ' + inr(VISA), VISA * st.p]);
+    rows.push(['Hotel, ' + st.n + ' nights', S.perRoom ? rooms + ' room' + (rooms > 1 ? 's' : '') + ' × S$' + S.stay + '/night' : 'Hostel bed S$' + S.stay + '/night each', stayTotal * rate]);
+    rows.push(['Food, ' + days + ' days', 'S$' + S.food + ' per person a day', S.food * days * st.p * rate]);
+    rows.push(['MRT & Grab', 'S$' + S.transport + ' per person a day', S.transport * days * st.p * rate]);
+    var t = st.a.reduce(function (sum, k) { return sum + TICKETS[k][1]; }, 0);
+    if (t) rows.push(['Attractions', st.a.map(function (k) { return TICKETS[k][0]; }).join(', '), t * st.p * rate]);
+    rows.push(['SIM, shopping & buffer', inr(S.extras) + ' per person', S.extras * st.p]);
+    var total = rows.reduce(function (s, r) { return s + r[2]; }, 0);
+    return { rows: rows, total: total, days: days };
+  }
+
+  function query(st) {
+    return '?n=' + st.n + '&p=' + st.p + '&s=' + st.s + '&f=' + st.f + '&fl=' + (st.fl ? 1 : 0) + '&v=' + (st.v ? 1 : 0) + '&a=' + st.a.join('.') + '&r=' + st.r;
+  }
+
+  function render() {
+    var st = state(), out = calc(st);
+    $('nightsOut').textContent = st.n;
+    $('peopleOut').textContent = st.p;
+    $('total').textContent = inr(round(out.total));
+    $('mTotal').textContent = inr(round(out.total));
+    $('totalSub').textContent = 'for ' + st.p + ' traveller' + (st.p > 1 ? 's' : '') + ' · ' + st.n + ' nights · ' + STYLE[st.s].label;
+    $('perPerson').textContent = inr(round(out.total / st.p)) + ' per person';
+    $('perDay').textContent = inr(round(out.total / st.p / out.days)) + ' per person per day';
+    $('rows').innerHTML = out.rows.map(function (r) {
+      return '<tr><td>' + r[0] + '<small>' + r[1] + '</small></td><td>' + inr(round(r[2])) + '</td></tr>';
+    }).join('') + '<tr class="sum"><td>Total</td><td>' + inr(round(out.total)) + '</td></tr>';
+    var url = location.origin + location.pathname + query(st);
+    try { history.replaceState(null, '', query(st)); } catch (e) {}
+    var msg = 'Our Singapore trip estimate: ' + inr(round(out.total)) + ' for ' + st.p + ' (' + inr(round(out.total / st.p)) + ' each), ' + st.n + ' nights, ' + STYLE[st.s].label.toLowerCase() + '. Work out yours: ' + url;
+    $('shareWa').href = 'https://wa.me/?text=' + encodeURIComponent(msg);
+    $('copyLink').dataset.url = url;
+  }
+
+  // Restore a shared link
+  var q = new URLSearchParams(location.search);
+  if (q.has('n')) {
+    var set = function (name, v) { var el = form.querySelector('input[name=' + name + '][value="' + v + '"]'); if (el) el.checked = true; };
+    form.n.value = q.get('n'); form.p.value = q.get('p') || 2;
+    set('s', q.get('s')); set('f', q.get('f'));
+    form.fl.checked = q.get('fl') !== '0'; form.v.checked = q.get('v') !== '0';
+    var picks = (q.get('a') || '').split('.');
+    [].forEach.call(form.querySelectorAll('input[name=a]'), function (i) { i.checked = picks.indexOf(i.value) !== -1; });
+    if (q.get('r')) form.r.value = q.get('r');
+  }
+
+  form.addEventListener('input', render);
+  form.addEventListener('change', render);
+  $('shareWa').addEventListener('click', function () { if (window.gtag) window.gtag('event', 'calculator_share', { method: 'whatsapp' }); });
+  $('copyLink').addEventListener('click', function () {
+    var b = this, url = b.dataset.url;
+    var done = function () { b.textContent = 'Link copied ✓'; setTimeout(function () { b.textContent = 'Copy link'; }, 2000); };
+    if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, function () { prompt('Copy this link:', url); });
+    else prompt('Copy this link:', url);
+    if (window.gtag) window.gtag('event', 'calculator_share', { method: 'copy' });
+  });
+  render();
+})();
+</script>
+<script src="/js/site.js?v=3"></script>
+<script src="/js/datadog.js" defer></script>
+</body>
+</html>

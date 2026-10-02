@@ -38,10 +38,25 @@ function pageTitle(t) {
   return t.slice(0, 58).replace(/\s+\S*$/, '').replace(/[\s|,:;—-]+$/, '') + '…';
 }
 
-// Description lines minus comma-separated tag dumps ("reach, feed, foryoupage, ...")
+// Chapters from description timestamps ("00:00 – Intro", "1:02:03 Finale"). Like YouTube,
+// only counted when they start at 0:00 and there are at least three.
+const STAMP = /^\(?((?:\d{1,2}:)?\d{1,2}:\d{2})\)?\s*[-–—:|]?\s*(.+)$/;
+const toSeconds = (t) => t.split(':').reduce((acc, n) => acc * 60 + parseInt(n, 10), 0);
+function chapters(v) {
+  if (isShort(v)) return [];
+  const list = (v.fullDescription || '').split(/\n/).map(l => l.trim().match(STAMP)).filter(Boolean)
+    .map(m => ({ stamp: m[1], start: toSeconds(m[1]), label: m[2].trim() }));
+  if (list.length < 3 || list[0].start !== 0) return [];
+  return list.filter((c, i) => i === 0 || c.start > list[i - 1].start);
+}
+
+// Description lines minus comma-separated tag dumps ("reach, feed, foryoupage, ...") and,
+// when the video has chapters, minus the timestamp lines (shown as a chapter list instead)
 function descriptionLines(v) {
   const text = v.fullDescription || v.description || '';
-  return text.split(/\n+/).map(l => l.trim()).filter(l => l && (l.match(/,/g) || []).length < 6);
+  const hasChapters = chapters(v).length > 0;
+  return text.split(/\n+/).map(l => l.trim()).filter(l => l && (l.match(/,/g) || []).length < 6)
+    .filter(l => !hasChapters || (!STAMP.test(l) && !/^timestamps?:?$/i.test(l)));
 }
 
 // Day number in the 30-day series ("day 19/30", "Vlog 14/30", "9/30")
@@ -148,6 +163,10 @@ ${chrome.HEAD_LINKS}
   .vp-card img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; display: block; background: #eee; }
   .vp-card span { display: block; padding: 10px 12px 12px; font-size: .88rem; font-weight: 600; line-height: 1.35; }
   .vp-card small { display: block; color: var(--grey-500, #6b7280); font-weight: 500; margin-top: 4px; }
+  .vp-chapters { list-style: none; padding: 0; margin: 0 0 8px; display: grid; gap: 6px; }
+  .vp-chapters a { display: flex; gap: 14px; align-items: baseline; padding: 10px 14px; border: 1px solid var(--grey-200, #e5e7eb); border-radius: 10px; background: #fff; color: var(--primary, #0a1628); font-weight: 600; font-size: .95rem; }
+  .vp-chapters a:hover { border-color: var(--accent); color: var(--accent); }
+  .vp-stamp { flex: none; min-width: 52px; font-variant-numeric: tabular-nums; color: var(--accent); font-weight: 700; }
   .vp-series-note { background: var(--sky, #fff4ea); border-left: 4px solid var(--accent); padding: 14px 16px; border-radius: 8px; margin-bottom: 24px; }
 </style>
 ${head}
@@ -180,6 +199,13 @@ function videoLd(v, url) {
     contentUrl: watchUrl(v),
     embedUrl: `https://www.youtube.com/embed/${v.id}`,
     url,
+    ...(chapters(v).length ? { hasPart: chapters(v).map((c, i, all) => ({
+      '@type': 'Clip',
+      name: c.label,
+      startOffset: c.start,
+      ...(all[i + 1] ? { endOffset: all[i + 1].start } : {}),
+      url: `https://www.youtube.com/watch?v=${v.id}&t=${c.start}s`,
+    })) } : {}),
     publisher: { '@type': 'Organization', name: 'Love and Layovers', logo: { '@type': 'ImageObject', url: `${SITE}/public/images/brand/logo-512.png` } },
   };
 }
@@ -211,6 +237,19 @@ ${day !== null ? `<p class="vp-series-note">Day ${day} of our 30-day <a href="/v
   <a class="btn btn-primary" href="${SUBSCRIBE}" target="_blank" rel="noopener">▶ Subscribe on YouTube</a>
   <a class="btn btn-secondary" href="${watchUrl(v)}" target="_blank" rel="noopener">Watch on YouTube</a>
 </div>
+${chapters(v).length ? `<h2>Chapters</h2>
+<ol class="vp-chapters">${chapters(v).map(c => `<li><a href="https://www.youtube.com/watch?v=${v.id}&amp;t=${c.start}s" data-t="${c.start}" target="_blank" rel="noopener"><span class="vp-stamp">${esc(c.stamp)}</span>${esc(c.label)}</a></li>`).join('')}</ol>
+<script>
+  // Jump the embedded player to a chapter instead of leaving the page
+  document.querySelector('.vp-chapters').addEventListener('click', function (e) {
+    var a = e.target.closest('a[data-t]'); if (!a) return;
+    var f = document.querySelector('.vp-player iframe'); if (!f) return;
+    e.preventDefault();
+    f.src = f.src.split('?')[0] + '?start=' + a.dataset.t + '&autoplay=1';
+    f.closest('.vp-player').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    if (window.gtag) window.gtag('event', 'chapter_click', { video_id: '${v.id}', start: +a.dataset.t });
+  });
+</script>` : ''}
 ${lines.length ? `<div class="vp-desc">${lines.map(l => `<p>${esc(l)}</p>`).join('\n')}</div>` : ''}
 ${related.length ? `<h2>Plan your own trip</h2>
 <ul class="vp-guides">${related.map(g => `<li><a href="${g.url}">${esc(g.title)} →</a></li>`).join('')}</ul>` : `<h2>Plan your own trip</h2>
