@@ -1,0 +1,116 @@
+{
+  "slug": "france",
+  "title": "France Travel Guide 2026: Paris, Louvre & Versailles",
+  "description": "Paris itineraries with the Eiffel Tower, Louvre and Versailles, plus French food, a EUR budget breakdown and Schengen visa tips for Indian travellers.",
+  "h1": "France Travel Guide 2026",
+  "country": "France",
+  "datePublished": "2026-01-01",
+  "dateModified": "2026-10-02",
+  "faq": [],
+  "badges": {
+    "budget": "EUR 80-150/day",
+    "best": "Apr-Oct",
+    "visa": "Schengen visa"
+  },
+  "videoKeywords": "france",
+  "foodImage": {
+    "src": "/images/destinations/france-food.webp",
+    "alt": "Macarons from a French pâtisserie",
+    "caption": "Macarons from a French pâtisserie"
+  },
+  "sections": [
+    {
+      "id": "why-visit",
+      "title": "Why Visit France?",
+      "html": "<p><strong>France</strong> is the world's most visited country, offering iconic landmarks, world-class museums, charming cafes, and refined culture. From the Eiffel Tower and Louvre in Paris to the palaces of Versailles and historic beauty of Provence, France captivates with art, architecture, and cuisine. Perfect for culture lovers, history enthusiasts, and romantics.</p>"
+    },
+    {
+      "id": "itineraries",
+      "title": "3-Day France Itinerary",
+      "html": "<p>A 3-day plan with morning, afternoon and evening ideas and an approximate daily cost per person. Use it as a starting point and adjust to your pace.</p>",
+      "after": "",
+      "days": [
+        {
+          "title": "Paris: Iconic Landmarks",
+          "periods": [
+            [
+              "Morning",
+              "Arrive at Paris CDG Airport. Metro to hotel (EUR 11.45). Visit Eiffel Tower - climb stairs (EUR 11) or elevator (EUR 16.50). Walk around Trocadéro for views. Breakfast/lunch at cafe (EUR 15-25)."
+            ],
+            [
+              "Afternoon",
+              "Explore Seine riverside walking. Visit Arc de Triomphe (EUR 13). Walk Champs-Élysées. Grab coffee and pastry at Parisian cafe (EUR 5-8)."
+            ],
+            [
+              "Evening",
+              "Seine river cruise (EUR 15). Walk Notre-Dame area (cathedral currently under restoration). Dinner at bistro (EUR 25-45). Explore Montmartre district - walk up Sacré-Cœur basilica (free entry, EUR 9 dome)."
+            ]
+          ],
+          "cost": "EUR 100-150/day",
+          "note": ""
+        },
+        {
+          "title": "Louvre Museum & Latin Quarter",
+          "periods": [
+            [
+              "Morning",
+              "Visit Louvre Museum (EUR 17 entry, free first Friday monthly evening). Must-see: Mona Lisa, Winged Victory, Venus de Milo. Book timed entry online to skip queues. Take 2-3 hours minimum. Breakfast nearby (EUR 12-18)."
+            ],
+            [
+              "Afternoon",
+              "Explore Île de la Cité - Sainte-Chapelle with stained glass (EUR 11). Walk around Marais district - historic Jewish quarter with galleries and cafes. Lunch at falafel stand (EUR 8-12)."
+            ],
+            [
+              "Evening",
+              "Walk Left Bank (Latin Quarter) - explore bookshops, art galleries. Dinner at traditional bistro (EUR 30-50). Evening stroll through Luxembourg Gardens (free, perfect for sunset)."
+            ]
+          ],
+          "cost": "EUR 95-135/day",
+          "note": ""
+        },
+        {
+          "title": "Versailles Day Trip",
+          "periods": [
+            [
+              "Early Morning",
+              "Train from Paris to Versailles (EUR 3.50 return). Visit Palace of Versailles (EUR 20 entry). Explore ornate rooms, Hall of Mirrors, royal apartments. Allow 2-3 hours. Audio guide available (EUR 6)."
+            ],
+            [
+              "Afternoon",
+              "Walk Versailles Gardens (free, 800+ hectares). Rent bike (EUR 6) or walk to Grand Canal, Marie-Antoinette's estate. Grab lunch at garden cafe (EUR 15-25)."
+            ],
+            [
+              "Evening",
+              "Return to Paris by train. Optional: musical fountain show if in season. Evening dinner in neighborhood restaurant (EUR 30-50). Visit local wine bar (EUR 5-10 per glass)."
+            ]
+          ],
+          "cost": "EUR 100-140/day",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "title": "France Food Guide",
+      "html": "<p>French cuisine is refined, regional, and uses fresh seasonal ingredients. Cafes culture is central to French life - perfect for people-watching and enjoying leisurely meals.</p>\n<h3>Must-Try Dishes & Foods</h3>\n<ul>\n<li><strong>Croissant</strong> – Buttery pastry, best at boulangeries. Cost: EUR 1.50-3</li>\n<li><strong>Macarons</strong> – Delicate almond meringue cookies. Cost: EUR 2-4 each</li>\n<li><strong>Coq au Vin</strong> – Chicken braised in Burgundy wine. Cost: EUR 18-30</li>\n<li><strong>Beef Bourguignon</strong> – Classic slow-cooked beef stew. Cost: EUR 20-35</li>\n<li><strong>French Onion Soup</strong> – Gratineed with Gruyère cheese. Cost: EUR 12-18</li>\n<li><strong>Crêpes</strong> – Sweet or savory pancakes. Cost: EUR 6-12</li>\n<li><strong>Escargot</strong> – Snails with garlic butter. Cost: EUR 15-25</li>\n<li><strong>Cheese & Charcuterie Board</strong> – Artisanal selections. Cost: EUR 20-40</li>\n</ul>\n<h3>Best Food Spots</h3>\n<ul>\n<li><strong>Parisian Cafes</strong> – Sit down for people-watching (premium seating)</li>\n<li><strong>Boulangeries</strong> – Best fresh pastries and bread for breakfast</li>\n<li><strong>Local Wine Bars</strong> – Casual dining, wine, cheese, charcuterie</li>\n<li><strong>Bistros</strong> – Affordable traditional French cuisine</li>\n</ul>"
+    },
+    {
+      "id": "getting-around",
+      "title": "Getting Around France",
+      "html": "<h3>Paris Metro & Buses</h3>\n<p>Efficient metro system. Day pass: EUR 8. 10-ticket carnet: EUR 16.90. Best value for multiple journeys.</p>\n<h3>Trains</h3>\n<p>SNCF trains connect major cities. Book in advance for discounts. Paris to Versailles: EUR 3.50. Paris to Lyon: EUR 20-80.</p>\n<h3>Taxis & Ride-share</h3>\n<p>Uber available in Paris. Traditional taxis regulated by meter. More expensive than public transport.</p>"
+    },
+    {
+      "id": "essentials",
+      "title": "Travel Essentials",
+      "html": "<h3>Visa &amp; Entry</h3>\n<p><strong>Visa for Indians:</strong> a Schengen short-stay visa is required. Apply through the France visa centre in India (VFS Global or the appointed provider) if France is your main destination, up to 6 months and at least 15 days before you travel. The fee is €90 for adults, processing usually takes about 15 days (longer in summer), and you need travel insurance with at least €30,000 medical cover. The visa allows up to 90 days in any 180-day period across the Schengen area. Rules as of October 2026; always check the official website before you apply.</p>\n<h3>Currency & Money</h3>\n<p><strong>Euro (EUR).</strong> Exchange rate: 1 EUR ≈ 1.10 USD. ATMs widespread. Tipping not expected but appreciated.</p>\n<h3>Budget Breakdown (per day, budget traveler)</h3>\n<ul>\n<li>Accommodation: EUR 35-70 (hostels, budget hotels)</li>\n<li>Food: EUR 30-60 (mix of cafes, bistros, street food)</li>\n<li>Transport: EUR 10-20 (metro day pass)</li>\n<li>Activities: EUR 20-40 (museums, attractions)</li>\n<li><strong>Total: EUR 95-190/day (~$105-210 USD)</strong></li>\n</ul>\n<h3>Important Notes</h3>\n<ul>\n<li>Many museums closed Mondays or Tuesdays - check hours.</li>\n<li>Many restaurants close 2-7pm for afternoon break.</li>\n<li>Paris is expensive - consider visiting off-season.</li>\n<li>Keep valuables secure - pickpockets in tourist areas.</li>\n<li>Card payments common but cash still useful in small places.</li>\n</ul>"
+    }
+  ],
+  "related": [
+    "italy",
+    "spain",
+    "germany",
+    "portugal"
+  ],
+  "readNext": [],
+  "filmed": false
+}

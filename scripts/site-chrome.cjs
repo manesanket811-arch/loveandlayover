@@ -53,7 +53,7 @@ function footer() {
 }
 
 const HEAD_LINKS = '<link rel="stylesheet" href="/css/chrome.css?v=4">';
-const SCRIPT = '<script src="/js/site.js?v=3"></script>';
+const SCRIPT = '<script src="/js/site.js?v=3"></script>\n<script src="/js/datadog.js" defer></script>';
 
 module.exports = { header, footer, HEAD_LINKS, SCRIPT, WHATSAPP };
 

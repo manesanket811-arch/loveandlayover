@@ -85,3 +85,8 @@
   .toc { position: static; order: -1; margin-bottom: 28px; }
 }
 @media (max-width: 600px) { .post-hero { min-height: 400px; } .post-body { font-size: 1.02rem; } }
+
+/* Buttons and video cards inside articles keep their own colours */
+.post-body a.btn { color: #fff; text-decoration: none; }
+.post-body a.btn-ghost { color: var(--ink); }
+.post-body a.trip-video { text-decoration: none; color: var(--ink); font-weight: 400; }

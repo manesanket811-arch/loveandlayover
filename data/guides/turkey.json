@@ -1,0 +1,121 @@
+{
+  "slug": "turkey",
+  "title": "Turkey Travel Guide 2026: Istanbul & Cappadocia",
+  "description": "Turkey itineraries covering Istanbul's Blue Mosque, bazaars and Cappadocia hot-air balloons, with Turkish food, a TRY budget and visa tips for Indians.",
+  "h1": "Turkey Travel Guide 2026",
+  "country": "Turkey",
+  "datePublished": "2026-01-01",
+  "dateModified": "2026-10-02",
+  "faq": [],
+  "badges": {
+    "budget": "TRY 800-1400/day",
+    "best": "Apr-May, Sep-Oct",
+    "visa": "e-Visa with a US/UK/Schengen visa, otherwise visa"
+  },
+  "videoKeywords": "turkey",
+  "foodImage": {
+    "src": "/images/destinations/turkey-food.webp",
+    "alt": "Sultan kebab served at a Turkish restaurant",
+    "caption": "Sultan kebab served at a Turkish restaurant"
+  },
+  "sections": [
+    {
+      "id": "why-visit",
+      "title": "Why Visit Turkey?",
+      "html": "<p><strong>Turkey</strong> bridges Asia and Europe, offering Byzantine history, Ottoman grandeur, whimsical fairy-tale landscapes, and warm hospitality. From Istanbul's blue Mosque and Grand Bazaar to Cappadocia's surreal hot air balloons, from Ephesus' ancient ruins to Mediterranean beaches, Turkey captivates with culture, history, and adventure. Perfect for explorers, food lovers, adventure seekers, and culture enthusiasts.</p>\n<p>Explore ancient temples, float over fairy chimneys, shop in vibrant bazaars, taste Turkish delights and kebabs, cruise the Aegean, and experience where East meets West. Turkey is truly special.</p>"
+    },
+    {
+      "id": "itineraries",
+      "title": "3-Day Turkey Itinerary",
+      "html": "<p>A 3-day plan with morning, afternoon and evening ideas and an approximate daily cost per person. Use it as a starting point and adjust to your pace.</p>",
+      "after": "",
+      "days": [
+        {
+          "title": "Istanbul: Blue Mosque & Bazaars",
+          "periods": [
+            [
+              "Morning",
+              "Arrive Istanbul airport. Metro to city (TRY 25). Visit Blue Mosque - iconic with six minarets (free, 10 TRY suggested donation). Hagia Sophia - stunning Byzantine church (TRY 60). Walk Sultanahmet historic district (free). Turkish tea and pastry (TRY 20-40)."
+            ],
+            [
+              "Afternoon",
+              "Topkapi Palace - Ottoman sultan's residence (TRY 100). Walk historic rooms and gardens. Grand Bazaar - massive covered market (free entry, shopping TRY 50-300). Browse carpets, spices, Turkish delight. Bargaining encouraged and expected."
+            ],
+            [
+              "Evening",
+              "Bosphorus sunset cruise (TRY 150-250, includes dinner). See European and Asian sides. Dinner at waterfront restaurant (TRY 100-250). Turkish coffee and dessert. Explore Galata district nightlife."
+            ]
+          ],
+          "cost": "TRY 700-1300/day",
+          "note": ""
+        },
+        {
+          "title": "Cappadocia: Hot Air Balloons & Fairy Chimneys",
+          "periods": [
+            [
+              "Early Morning",
+              "Flight Istanbul to Cappadocia (TRY 300-600, 1 hour). Hot air balloon ride at sunrise (TRY 800-1500). Float over surreal fairy chimney rock formations. Breathtaking views and unforgettable experience. Champagne toast at landing."
+            ],
+            [
+              "Afternoon",
+              "Explore Rose Valley, Red Valley (free walking). Visit underground cities carved in rock (TRY 80-150). Göreme Open-Air Museum with cave churches (TRY 75). Local pottery demonstration (free watching, TRY 200-500 for purchases)."
+            ],
+            [
+              "Evening",
+              "Turkish dinner at guesthouse - kebabs, pide, mezze (TRY 100-200). Watch sunset from hillside cafe (free seating, TRY 20-50 for drinks). Evening hammam (Turkish bath) optional (TRY 150-300)."
+            ]
+          ],
+          "cost": "TRY 1500-2500/day",
+          "note": ""
+        },
+        {
+          "title": "Ephesus & Ancient Ruins",
+          "periods": [
+            [
+              "Morning",
+              "Flight or bus Cappadocia to Izmir/Ephesus (TRY 200-400). Visit Ephesus ancient city - UNESCO World Heritage (TRY 120). See Temple of Hadrian, Library of Celsus, amphitheater. Guided tour recommended (TRY 150-300). Breakfast at local cafe (TRY 30-60)."
+            ],
+            [
+              "Afternoon",
+              "Visit Virgin Mary House (TRY 50). Selçuk town exploration (free walking). Turkish carpet weaving demonstration (free viewing). Local market browsing (TRY 50-150 for souvenirs)."
+            ],
+            [
+              "Evening",
+              "Dinner overlooking Aegean Sea (TRY 150-300). Fresh seafood - grilled fish, mussels. Turkish wine tasting (TRY 50-100 per bottle). Sunset beach walk or return travel."
+            ]
+          ],
+          "cost": "TRY 800-1300/day",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "title": "Turkey Food Guide",
+      "html": "<p>Turkish cuisine is world-class, Mediterranean-influenced, and incredibly varied. Kebabs, fresh vegetables, herbs, olive oil, and cheese create authentic dishes. Street food culture vibrant and affordable.</p>\n<h3>Must-Try Dishes</h3>\n<ul>\n<li><strong>Kebab</strong> – Grilled meat specialties (Doner, Shish, Adana). Cost: TRY 50-150</li>\n<li><strong>Mezze</strong> – Mixed appetizer platter (hummus, baba ganoush, dolma). Cost: TRY 80-200</li>\n<li><strong>Pide</strong> – Turkish flatbread, topped with cheese or meat. Cost: TRY 40-100</li>\n<li><strong>Manti</strong> – Turkish dumplings with yogurt sauce. Cost: TRY 60-120</li>\n<li><strong>Turkish Delight (Lokum)</strong> – Sweet candy with nuts. Cost: TRY 20-60</li>\n<li><strong>Baklava</strong> – Honey-soaked pastry with pistachio. Cost: TRY 30-80</li>\n<li><strong>Turkish Breakfast</strong> – Cheese, bread, olives, honey, eggs. Cost: TRY 50-120</li>\n<li><strong>Börek</strong> – Cheese or meat pastry rolls. Cost: TRY 20-50</li>\n</ul>\n<h3>Best Food Spots</h3>\n<ul>\n<li><strong>Kebab Stands</strong> – Street food, authentic, super cheap</li>\n<li><strong>Meyhanes</strong> – Traditional Turkish taverns with mezze</li>\n<li><strong>Markets</strong> – Fresh produce, spices, local foods</li>\n<li><strong>Breakfast Spots</strong> – Turkish breakfast culture unique and hearty</li>\n</ul>"
+    },
+    {
+      "id": "best-time",
+      "title": "Best Time to Visit Turkey",
+      "html": "<p><strong>Best overall:</strong> April-May and September-October (warm 18-28°C, pleasant, fewer crowds)</p>\n<p><strong>Summer:</strong> June-August (hot 28-35°C, crowded, perfect for beaches)</p>\n<p><strong>Avoid:</strong> July-August peak (extremely crowded, expensive, intense heat)</p>\n<p><strong>Budget tip:</strong> November-March (mild 8-18°C, rainy, lowest prices)</p>"
+    },
+    {
+      "id": "getting-around",
+      "title": "Getting Around Turkey",
+      "html": "<h3>Domestic Flights</h3>\n<p>Turkish Airlines, Pegasus, Atlasjet operate routes. Istanbul-Cappadocia: TRY 300-600. Book in advance for deals.</p>\n<h3>Buses</h3>\n<p>Extensive intercity bus network. Istanbul-Cappadocia: TRY 150-300 (10+ hours). Overnight buses popular and affordable.</p>\n<h3>Metro & Trams</h3>\n<p>Istanbul has metro and trams. Single ticket: TRY 9. Day pass: TRY 50. Very convenient and cheap.</p>\n<h3>Local Transport</h3>\n<p>DolmuÅŸes (shared minibuses) throughout Turkey, very affordable. Taxis metered in cities. Ride costs: TRY 30-100 per trip.</p>"
+    },
+    {
+      "id": "essentials",
+      "title": "Travel Essentials",
+      "html": "<h3>Visa &amp; Entry</h3>\n<p><strong>Visa for Indians:</strong> if you hold a valid US, UK, Schengen or Irish visa or residence permit, you can apply for a Turkish e-Visa online at evisa.gov.tr (use only the official site). Otherwise, apply for a regular visa through the Turkish visa centre in India. Rules as of October 2026; always check the official website before you apply.</p>\n<h3>Currency & Money</h3>\n<p><strong>Turkish Lira (TRY).</strong> Exchange rate: 1 USD ≈ 32 TRY. ATMs widely available. Tipping customary (10-15% at restaurants).</p>\n<h3>Budget Breakdown (per day, budget traveler)</h3>\n<ul>\n<li>Accommodation: TRY 200-400 (hostels, budget hotels)</li>\n<li>Food: TRY 200-400 (street food, casual restaurants, mezze)</li>\n<li>Transport: TRY 100-200 (metro, taxis, buses)</li>\n<li>Activities: TRY 200-400 (museums, tours, attractions)</li>\n<li><strong>Total: TRY 700-1400/day (~$22-44 USD)</strong></li>\n</ul>\n<h3>Important Notes</h3>\n<ul>\n<li>Hot air balloon rides book in advance - popular and limited spots.</li>\n<li>Bargaining expected in bazaars - friendly negotiation is normal.</li>\n<li>Turkish hospitality warm and welcoming - locals appreciate politeness.</li>\n<li>Ramadan affects dining hours and local customs - respect fasting.</li>\n<li>Tap water generally potable in cities but bottled water safer.</li>\n</ul>"
+    }
+  ],
+  "related": [
+    "greece",
+    "egypt",
+    "italy",
+    "spain"
+  ],
+  "readNext": [],
+  "filmed": false
+}

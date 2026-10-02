@@ -145,10 +145,9 @@ async function main() {
       .resize({ width: kind === 'hero' ? 1800 : 1000, withoutEnlargement: true })
       .webp({ quality: kind === 'hero' ? 72 : 75 })
       .toFile(file);
-    if (kind === 'hero') {
-      fs.mkdirSync(path.join(OUT, 'thumbs'), { recursive: true });
-      await sharp(file).resize({ width: 640 }).webp({ quality: 70 }).toFile(path.join(OUT, 'thumbs', `${key}.webp`));
-    }
+    // 640px copies for cards, listings and the credits page
+    fs.mkdirSync(path.join(OUT, 'thumbs'), { recursive: true });
+    await sharp(file).resize({ width: 640 }).webp({ quality: 70 }).toFile(path.join(OUT, 'thumbs', `${key}.webp`));
 
     const { thumb, ...credit } = pick;
     credits[key] = credit;

@@ -1,0 +1,118 @@
+{
+  "slug": "singapore",
+  "title": "Singapore Travel Guide 2026: 3-Day Itinerary & Tips",
+  "description": "A free 3-day Singapore itinerary from creators who live here: hawker food, MRT tips, an SGD budget and visa requirements for Indians.",
+  "h1": "Singapore Travel Guide 2026",
+  "country": "Singapore",
+  "datePublished": "2026-01-01",
+  "dateModified": "2026-10-02",
+  "faq": [],
+  "badges": {
+    "budget": "S$95–150/day",
+    "best": "Feb–Apr",
+    "visa": "Visa required (via an agent)"
+  },
+  "videoKeywords": "singapore,marina bay,sentosa,changi,hawker",
+  "foodImage": {
+    "src": "/images/destinations/singapore-food.webp",
+    "alt": "A bowl of laksa, spicy coconut curry noodle soup",
+    "caption": "A bowl of laksa, spicy coconut curry noodle soup"
+  },
+  "sections": [
+    {
+      "id": "why-visit",
+      "title": "Why Visit Singapore?",
+      "html": "<p><strong>Singapore</strong> is a fascinating blend of ultra-modern city-state and cultural traditions. From Marina Bay's iconic skyline to authentic hawker centers, tropical gardens, and diverse neighborhoods, Singapore offers incredible experiences in a compact, easy-to-navigate package. Perfect for 3-10 day trips with excellent public transport and world-class food.</p>\n<p>We live here and film it every week, and it still surprises us. The energy, the food, the accessibility for first-time travelers... it's the perfect base for exploring Southeast Asia.</p>"
+    },
+    {
+      "id": "itineraries",
+      "title": "3-Day Singapore Itinerary",
+      "html": "<p>A 3-day plan with morning, afternoon and evening ideas and an approximate daily cost per person. Use it as a starting point and adjust to your pace.</p>",
+      "after": "",
+      "days": [
+        {
+          "title": "Arrival & Marina Bay",
+          "periods": [
+            [
+              "Morning",
+              "Arrive at Changi Airport. Take MRT to your hotel (SGD 2–4, 30 mins). Check in and rest or explore your neighborhood."
+            ],
+            [
+              "Afternoon",
+              "Head to Marina Bay Sands observation deck (SGD 25–29, free if staying at hotel). Walk around Gardens by the Bay, see the Supertree Grove. Snap photos at the Merlion."
+            ],
+            [
+              "Evening",
+              "Dinner at a hawker center (SGD 4–8). Visit the Supertree light show (8:45 PM & 10:45 PM, free). Explore Boat Quay or Clarke Quay for drinks."
+            ]
+          ],
+          "cost": "S$60–90/day",
+          "note": ""
+        },
+        {
+          "title": "Neighborhoods & Culture",
+          "periods": [
+            [
+              "Morning",
+              "Explore Chinatown. Visit Thian Hock Keng Temple (oldest Chinese temple, free). Browse souvenir shops and tea houses. Breakfast at Maxwell Food Centre (Hainanese chicken rice, SGD 4)."
+            ],
+            [
+              "Afternoon",
+              "Take MRT to Orchard Road (Singapore's main shopping street, free to walk). Visit Arab Street (colorful buildings, Malay culture) and Little India (spice shops, temples)."
+            ],
+            [
+              "Evening",
+              "Dinner at Zion Riverside Food Centre (authentic, less touristy). Optional: Visit a local bar or lounge."
+            ]
+          ],
+          "cost": "S$50–80/day",
+          "note": ""
+        },
+        {
+          "title": "Nature & Islands",
+          "periods": [
+            [
+              "Full Day",
+              "Take MRT to Sentosa Island (SGD 4 round trip). Relax at Palawan Beach or adventure at Skyline Luge (SGD 10–25). Visit S.E.A. Aquarium or try Wing Suit Flying if adventurous. Dinner back at Lau Pa Sat (chili crab or satay)."
+            ]
+          ],
+          "cost": "S$70–110/day",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "title": "Singapore Food Guide",
+      "html": "<p>Singapore is a food lover's paradise where incredible flavors blend across Chinese, Malay, and Indian cuisines. Hawker centers serve authentic, world-class meals at budget prices, making Singapore an unmissable culinary destination.</p>\n<h3>Must-Try Dishes</h3>\n<ul>\n<li><strong>Hainanese Chicken Rice</strong> — Poached chicken, fragrant rice, ginger sauce. Cost: SGD 3–5</li>\n<li><strong>Laksa</strong> — Spicy curry noodle soup with coconut milk, seafood. Cost: SGD 4–7</li>\n<li><strong>Chili Crab</strong> — Mud crab in sweet, spicy tomato-chili sauce. Cost: SGD 25–50 (sharing)</li>\n<li><strong>Char Kway Teow</strong> — Stir-fried rice noodles with soy, wok hei. Cost: SGD 3–5</li>\n<li><strong>Kaya Toast</strong> — Butter toast with kaya (coconut jam) and soft-boiled eggs. Cost: SGD 3–5</li>\n<li><strong>Roti Prata</strong> — Flaky Indian flatbread, curry dipping. Cost: SGD 1–3</li>\n</ul>\n<h3>Best Food Centers</h3>\n<ul>\n<li><strong>Maxwell Food Centre</strong> (Chinatown) — Historic hub, famous Tian Tian Hainanese chicken rice</li>\n<li><strong>Lau Pa Sat</strong> (Financial District) — Historic wet market, satay stalls at night</li>\n<li><strong>Zion Riverside Food Centre</strong> — Hidden gem, authentic local spot, less touristy</li>\n<li><strong>Tekka Centre</strong> (Little India) — Indian and Muslim food, excellent roti prata</li>\n</ul>"
+    },
+    {
+      "id": "best-time",
+      "title": "Best Time to Visit Singapore",
+      "html": "<p><strong>Best overall:</strong> February–April (dry, 24–31°C, Chinese New Year festivities)</p>\n<p><strong>Budget travelers:</strong> September–October (lowest prices, fewer crowds, 24–30°C)</p>\n<p><strong>Avoid:</strong> May–August (humid, afternoon rain, peak school holidays, higher prices)</p>"
+    },
+    {
+      "id": "getting-around",
+      "title": "Getting Around Singapore",
+      "html": "<h3>MRT (Mass Rapid Transit) — Best Option</h3>\n<p><strong>Cost:</strong> SGD 1.50–3.50 per journey. Buy an EZ-Link card (rechargeable, SGD 12) for slight discounts.</p>\n<p><strong>All-day pass:</strong> SGD 11 for unlimited rides (best if taking 4+ journeys).</p>\n<p><strong>Why use it:</strong> Fastest, cheapest, air-conditioned, safe, covers all major attractions.</p>\n<h3>Taxis & Grab (Ride-Share)</h3>\n<p><strong>Taxis:</strong> Metered, flag drop SGD 3.60. Good for late nights or luggage, but expensive for longer distances.</p>\n<p><strong>Grab (app-based):</strong> Cheaper than taxis, surge pricing during peak hours (7–9am, 5–7pm).</p>\n<h3>Walking</h3>\n<p>Singapore is walkable. Chinatown to Marina Bay is a pleasant 1km walk. Downtown areas are pedestrian-friendly.</p>"
+    },
+    {
+      "id": "essentials",
+      "title": "Travel Essentials",
+      "html": "<h3>Visa & Entry</h3>\n<p><strong>For Indian passport holders:</strong> a visa is required, applied for through an authorised visa agent (usually ₹2,500–3,500 all-in, a few working days). Submit the free SG Arrival Card within 3 days before arrival. Full walkthrough: <a href=\"/blog/singapore-visa-for-indians.html\">Singapore visa for Indians, step by step</a>. Check ica.gov.sg for the latest rules.</p>\n<p><strong>Travelling with family or adding Malaysia?</strong> See <a href=\"/blog/singapore-with-parents-and-kids.html\">Singapore with parents or kids</a> and our <a href=\"/blog/singapore-malaysia-7-day-itinerary.html\">7-day Singapore and Malaysia itinerary</a>.</p>\n<h3>Currency & Money</h3>\n<p><strong>Singapore Dollar (SGD).</strong> Exchange rate: 1 USD ≈ 1.35 SGD.</p>\n<p><strong>ATMs:</strong> Widespread, accept Visa/Mastercard. No forex needed.</p>\n<p><strong>Tipping:</strong> NOT expected in hawker centers or casual restaurants. 10% optional in fine dining.</p>\n<h3>Budget Breakdown (per day, budget traveler)</h3>\n<ul>\n<li>Accommodation: SGD 40–80 (hostels, budget hotels)</li>\n<li>Food: SGD 20–40 (mostly hawker centers)</li>\n<li>Transport: SGD 5–10 (MRT/buses)</li>\n<li>Activities: SGD 10–30 (gardens free/cheap, museums SGD 10–20)</li>\n<li><strong>Total: SGD 75–160/day (~$55–120 USD)</strong></li>\n</ul>\n<h3>Getting a SIM Card</h3>\n<p>Buy at Changi Airport or any convenience store. Prepaid plans: SGD 10–30 for 3–7 days unlimited data.</p>"
+    }
+  ],
+  "related": [
+    "malaysia",
+    "thailand",
+    "bali",
+    "vietnam"
+  ],
+  "readNext": [
+    "/destinations/thailand.html",
+    "/destinations/japan.html",
+    "/destinations/vietnam.html"
+  ],
+  "filmed": true,
+  "watchIntro": "We live in Singapore and film it every week: food finds, guides and our <a href=\"/videos/life-in-singapore.html\">Life in Singapore series</a>. Watch before you plan to see what the city is really like."
+}

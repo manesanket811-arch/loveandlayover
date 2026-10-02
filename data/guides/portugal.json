@@ -1,0 +1,121 @@
+{
+  "slug": "portugal",
+  "title": "Portugal Travel Guide 2026: Lisbon, Porto & Port Wine",
+  "description": "Portugal itineraries covering Lisbon, Porto wine cellars and azulejo tiles, with pastéis de nata, a EUR budget and Schengen visa tips for Indians.",
+  "h1": "Portugal Travel Guide 2026",
+  "country": "Portugal",
+  "datePublished": "2026-01-01",
+  "dateModified": "2026-10-02",
+  "faq": [],
+  "badges": {
+    "budget": "EUR 45-90/day",
+    "best": "Apr-May, Sep-Oct",
+    "visa": "Schengen visa"
+  },
+  "videoKeywords": "portugal",
+  "foodImage": {
+    "src": "/images/destinations/portugal-food.webp",
+    "alt": "Pasteis de Nata Portuguese pastry",
+    "caption": "Traditional Pasteis de Nata - crispy pastry with custard"
+  },
+  "sections": [
+    {
+      "id": "why-visit",
+      "title": "Why Visit Portugal?",
+      "html": "<p><strong>Portugal</strong> is Europe's best-kept secret - offering stunning coastal beauty, historic azulejo tiles, world-class port wine, and warm Portuguese hospitality. From Lisbon's vibrant energy to Porto's wine cellars, from Sintra's fairy-tale palaces to Algarve's golden beaches, Portugal captivates with authenticity and charm. Perfect for beach lovers, history enthusiasts, wine tasters, and budget-conscious travelers.</p>\n<p>Explore medieval hilltop towns, taste pasteis de nata, cruise the Douro Valley, hike coastal cliffs, and experience authentic Portuguese culture. Portugal offers incredible value and unforgettable memories.</p>"
+    },
+    {
+      "id": "itineraries",
+      "title": "3-Day Portugal Itinerary",
+      "html": "<p>A 3-day plan with morning, afternoon and evening ideas and an approximate daily cost per person. Use it as a starting point and adjust to your pace.</p>",
+      "after": "",
+      "days": [
+        {
+          "title": "Lisbon: Belém & Historic Districts",
+          "periods": [
+            [
+              "Morning",
+              "Arrive at Lisbon airport. Metro to hotel (EUR 1.50). Visit Belém Tower (EUR 6). Walk Jeronimos Monastery (EUR 10). Grab pasteis de nata at Pastéis de Belém (EUR 2-4 each). Historic pastry shop since 1837."
+            ],
+            [
+              "Afternoon",
+              "Explore Alfama district - historic medieval streets, street art (free wandering). Cable car rides for views (EUR 3-6). Visit Sao Jorge Castle (EUR 8.50) - panoramic city views. Browse local shops and galleries."
+            ],
+            [
+              "Evening",
+              "Fado dinner experience (EUR 40-65, book ahead). Traditional Portuguese music, seafood dinner. Or casual dinner at tascas - local eateries (EUR 8-15). Ginjinha (cherry liqueur shot, EUR 2) at historic bars. Evening stroll along Tagus River."
+            ]
+          ],
+          "cost": "EUR 60-110/day",
+          "note": ""
+        },
+        {
+          "title": "Sintra: Fairy-Tale Palaces",
+          "periods": [
+            [
+              "Early Morning",
+              "Train Lisbon to Sintra (EUR 2.30, 30 mins). Visit Pena Palace - colorful romantic palace (EUR 14). UNESCO World Heritage site. Spectacular views. Shuttle bus from station (EUR 6 round trip)."
+            ],
+            [
+              "Afternoon",
+              "Explore Quinta da Regaleira - mystical gardens (EUR 10). Initiation wells and secret passages. Walk through Sintra town (free). Visit local cafes. Lunch at local restaurant (EUR 8-15)."
+            ],
+            [
+              "Evening",
+              "Return to Lisbon by train. Dinner in Chiado neighborhood (EUR 12-25). Explore street art and local wine bars. Sunset views from Miradouro viewpoints (free)."
+            ]
+          ],
+          "cost": "EUR 55-95/day",
+          "note": ""
+        },
+        {
+          "title": "Porto: Wine Cellars & Douro River",
+          "periods": [
+            [
+              "Morning",
+              "Flight or bus Lisbon to Porto (EUR 30-50, 3 hours). Visit Livraria Lello - world's most beautiful library (EUR 4 entry). Explore Ribeira district - colorful riverside buildings (free walking). Grab ginjinha or espresso (EUR 2-4)."
+            ],
+            [
+              "Afternoon",
+              "Port wine cellar tour in Vila Nova de Gaia (EUR 15-25). Taste authentic Port wine. Walk Dom Luis Bridge (free). Climb upper deck for views (EUR 2-4). Seafood lunch at riverside restaurants (EUR 12-20)."
+            ],
+            [
+              "Evening",
+              "Sunset from Douro River - boat cruise optional (EUR 15-20). Traditional francesinha sandwich - Porto specialty (EUR 8-12). Wine tasting at local bars (EUR 4-6 per glass). Evening riverside walk."
+            ]
+          ],
+          "cost": "EUR 75-135/day",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "title": "Portugal Food Guide",
+      "html": "<p>Portuguese cuisine is hearty, seafood-focused, and underrated. Atlantic fish, olive oil, and spices create simple, delicious dishes. Food is affordable and authentic.</p>\n<h3>Must-Try Dishes</h3>\n<ul>\n<li><strong>Pasteis de Nata</strong> – Crispy custard pastry. Cost: EUR 2-4 each</li>\n<li><strong>Francesinha</strong> – Portuguese sandwich with meat, beer sauce. Cost: EUR 8-12</li>\n<li><strong>Cataplana</strong> – Seafood stew in copper vessel. Cost: EUR 15-25</li>\n<li><strong>Bacalau à Brás</strong> – Shredded cod, potatoes, eggs. Cost: EUR 12-18</li>\n<li><strong>Caldo Verde</strong> – Kale and potato soup. Cost: EUR 4-7</li>\n<li><strong>Arroz de Marisco</strong> – Seafood rice. Cost: EUR 12-20</li>\n<li><strong>Pão de Queijo</strong> – Cheese bread. Cost: EUR 2-4</li>\n<li><strong>Tarte de Amêndoa</strong> – Almond tart dessert. Cost: EUR 3-6</li>\n</ul>\n<h3>Best Food Spots</h3>\n<ul>\n<li><strong>Tascas</strong> – Small traditional eateries, authentic local food</li>\n<li><strong>Mercados</strong> – Markets with fresh produce and prepared meals</li>\n<li><strong>Marisqueiras</strong> – Seafood specialist restaurants</li>\n<li><strong>Pastelarias</strong> – Bakeries and pastry shops</li>\n</ul>"
+    },
+    {
+      "id": "best-time",
+      "title": "Best Time to Visit Portugal",
+      "html": "<p><strong>Best overall:</strong> April-May and September-October (warm 16-25°C, fewer crowds)</p>\n<p><strong>Summer:</strong> June-August (hot 25-32°C, crowded, expensive, perfect for beaches)</p>\n<p><strong>Avoid:</strong> July-August peak (extremely crowded, very hot, highest prices)</p>\n<p><strong>Budget tip:</strong> November-March (cool 8-16°C, rainy, lowest prices and authentic experience)</p>"
+    },
+    {
+      "id": "getting-around",
+      "title": "Getting Around Portugal",
+      "html": "<h3>Metro & Buses</h3>\n<p>Lisbon metro affordable. Single ticket: EUR 1.50. Day pass: EUR 6.30. Buses also available (EUR 1.95 per ticket).</p>\n<h3>Trains</h3>\n<p>Good regional train network. Lisbon to Porto: EUR 20-35. CP Comboios trains connect major cities. Book in advance for discounts.</p>\n<h3>Taxis & Ride-share</h3>\n<p>Taxis metered. Uber available in Lisbon. Within cities: EUR 5-12 typical fare.</p>\n<h3>Organized Tours</h3>\n<p>Walking tours: EUR 12-18. Wine tours: EUR 35-55. Douro Valley tours: EUR 60-100.</p>"
+    },
+    {
+      "id": "essentials",
+      "title": "Travel Essentials",
+      "html": "<h3>Visa &amp; Entry</h3>\n<p><strong>Visa for Indians:</strong> a Schengen short-stay visa is required. Apply through the Portugal visa centre in India (VFS Global or the appointed provider) if Portugal is your main destination, up to 6 months and at least 15 days before you travel. The fee is €90 for adults, processing usually takes about 15 days (longer in summer), and you need travel insurance with at least €30,000 medical cover. The visa allows up to 90 days in any 180-day period across the Schengen area. Rules as of October 2026; always check the official website before you apply.</p>\n<h3>Currency & Money</h3>\n<p><strong>Euro (EUR).</strong> Exchange rate: 1 EUR ≈ 1.10 USD. ATMs widely available. Tipping optional but appreciated (5-10%).</p>\n<h3>Budget Breakdown (per day, budget traveler)</h3>\n<ul>\n<li>Accommodation: EUR 20-40 (hostels, budget hotels)</li>\n<li>Food: EUR 12-25 (tascas, markets, pastries)</li>\n<li>Transport: EUR 2-5 (metro/train)</li>\n<li>Activities: EUR 10-25 (attractions, museums)</li>\n<li><strong>Total: EUR 45-95/day (~$50-105 USD)</strong></li>\n</ul>\n<h3>Important Notes</h3>\n<ul>\n<li>Portuguese people warm and helpful - effort to speak Portuguese appreciated.</li>\n<li>Meal times: lunch 12-2pm, dinner 7-10pm.</li>\n<li>Many sites closed Mondays - check hours.</li>\n<li>Public transport very affordable - buy ticket or day pass.</li>\n<li>Weather changeable even in summer - pack layers.</li>\n</ul>"
+    }
+  ],
+  "related": [
+    "spain",
+    "france",
+    "italy",
+    "greece"
+  ],
+  "readNext": [],
+  "filmed": false
+}

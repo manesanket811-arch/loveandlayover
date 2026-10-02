@@ -150,38 +150,6 @@
   gtag('config', 'G-5D7GNE6JQL');
 </script>
 
-<script src="https://www.datadoghq-browser-agent.com/us5/v7/datadog-rum.js"></script>
-<script src="https://www.datadoghq-browser-agent.com/us5/v7/datadog-logs.js"></script>
-<script>
-  window.DD_RUM && window.DD_RUM.init({ beforeSend: function(event) { if (event.type === "error" && event.error && event.error.resource && event.error.resource.url && (event.error.resource.url.indexOf("google-analytics.com") !== -1 || event.error.resource.url.indexOf("googletagmanager.com") !== -1)) { return false; } return true; },
-    applicationId: '2b36cb95-5c53-4b4c-afd7-5cc7207d8d8c',
-    clientToken: 'pub398e9055d3a8e18d44a22e64e505b1fa',
-    site: 'us5.datadoghq.com',
-    service: 'love-and-layovers',
-    env: 'production',
-    version: '3.0.0',
-    sessionSampleRate: 100,
-    sessionReplaySampleRate: 10,
-    trackResources: true,
-    trackUserInteractions: true,
-    trackLongTasks: true,
-    defaultPrivacyLevel: 'mask-user-input'
-  });
-  window.DD_RUM && window.DD_RUM.startSessionReplayRecording();
-
-  window.DD_LOGS && window.DD_LOGS.init({ beforeSend: function(log) { if (log.http && log.http.url && (log.http.url.indexOf("google-analytics.com") !== -1 || log.http.url.indexOf("googletagmanager.com") !== -1)) { return false; } return true; },
-    clientToken: 'pub398e9055d3a8e18d44a22e64e505b1fa',
-    site: 'us5.datadoghq.com',
-    service: 'love-and-layovers',
-    env: 'production',
-    forwardErrorsToLogs: true
-  });
-
-  window.DD_LOGS && window.DD_LOGS.logger.info('Page loaded: About - Sanket & Nikita Travel Duo & Content Creators', {
-    url: window.location.href,
-    page: 'about'
-  });
-</script>
 
 <link rel="stylesheet" href="/css/site.css?v=1">
 <style>
@@ -361,20 +329,20 @@
       </div>
     </div>
     <div class="partners reveal">
-      <article class="partner"><div class="partner-logo"><img src="/assets/brands/komowellness.png" alt="KOMO Wellness logo" loading="lazy"></div><div><span class="tag">Wellness</span><h3>KOMO Wellness</h3><p>Global scalp and hair wellness brand from Singapore integrating AI analysis, botanical science, and refined service rituals.</p></div></article>
-      <article class="partner"><div class="partner-logo"><img src="/assets/brands/sunnystep.png" alt="Sunnystep logo" loading="lazy"></div><div><span class="tag">Lifestyle</span><h3>Sunnystep</h3><p>Popular Singapore-based ergonomic footwear brand centered around the joy of movement.</p></div></article>
-      <article class="partner"><div class="partner-logo"><img src="/assets/brands/funvee.png" alt="Funvee City Tour logo" loading="lazy"></div><div><span class="tag">Experience</span><h3>Funvee City Tour</h3><p>Singapore's open-top bus tour — iconic landmarks and the city's rich cultural heritage.</p></div></article>
-      <article class="partner"><div class="partner-logo"><img src="/assets/brands/scentopia-logo.png" alt="Scentopia logo" loading="lazy"></div><div><span class="tag">Experience</span><h3>Scentopia</h3><p>Behind-the-scenes fragrance museum experience, featured across Instagram and YouTube.</p></div></article>
-      <article class="partner"><div class="partner-logo"><img src="/assets/brands/imagica-logo.png" alt="Imagica logo" loading="lazy"></div><div><span class="tag">Experience</span><h3>Imagica</h3><p>Full-day theme park collaboration and content recap.</p></div></article>
-      <article class="partner"><div class="partner-logo"><img src="/assets/brands/serrano.png" alt="Serrano Resort logo" loading="lazy"></div><div><span class="tag">Stay</span><h3>Serrano Resort</h3><p>Luxury resort collaboration showcasing hospitality and travel experiences.</p></div></article>
-      <article class="partner"><div class="partner-logo"><img src="/assets/brands/wetnjoy.png" alt="Wet'n Joy logo" loading="lazy"></div><div><span class="tag">Experience</span><h3>Wet'n Joy</h3><p>Adventure and lifestyle brand partnership for travel experiences.</p></div></article>
-      <article class="partner"><div class="partner-logo"><img src="/assets/brands/tomacado.png" alt="Tomacado logo" loading="lazy"></div><div><span class="tag">Food</span><h3>Tomacado</h3><p>Flower-themed lifestyle restaurant and florist bringing floral experiences to Paragon, Orchard Road.</p></div></article>
-      <article class="partner"><div class="partner-logo"><img src="/assets/brands/kailashparbat.png" alt="Kailash Parbat logo" loading="lazy"></div><div><span class="tag">Food</span><h3>Kailash Parbat</h3><p>Culinary collaboration featuring authentic regional cuisine and dining experiences.</p></div></article>
-      <article class="partner"><div class="partner-logo"><img src="/assets/brands/bikanerwala.png" alt="Bikanerwala logo" loading="lazy"></div><div><span class="tag">Food</span><h3>Bikanerwala</h3><p>Traditional Indian sweets and snacks featuring authentic culinary experiences.</p></div></article>
-      <article class="partner"><div class="partner-logo"><img src="/assets/brands/biryanibykilo.png" alt="Biryani by Kilo logo" loading="lazy"></div><div><span class="tag">Food</span><h3>Biryani by Kilo</h3><p>Authentic biryani experiences and food storytelling.</p></div></article>
-      <article class="partner"><div class="partner-logo"><img src="/assets/brands/maujicafe.png" alt="Mauji Cafe logo" loading="lazy"></div><div><span class="tag">Café</span><h3>Mauji Cafe</h3><p>Café collaboration featuring unique culinary and lifestyle experiences.</p></div></article>
-      <article class="partner"><div class="partner-logo"><img src="/assets/brands/banglorecafe.png" alt="Bangalore Cafe logo" loading="lazy"></div><div><span class="tag">Café</span><h3>Bangalore Cafe</h3><p>Café collaboration featuring unique culinary and lifestyle experiences.</p></div></article>
-      <article class="partner"><div class="partner-logo"><img src="/assets/brands/pratha%20Jewellery.png" alt="Pratha Jewellery logo" loading="lazy"></div><div><span class="tag">Lifestyle</span><h3>Pratha Jewellery</h3><p>Luxury jewellery collaboration showcasing craftsmanship and elegance.</p></div></article>
+      <article class="partner"><div class="partner-logo"><img width="447" height="447" src="/assets/brands/komowellness.png" alt="KOMO Wellness logo" loading="lazy"></div><div><span class="tag">Wellness</span><h3>KOMO Wellness</h3><p>Global scalp and hair wellness brand from Singapore integrating AI analysis, botanical science, and refined service rituals.</p></div></article>
+      <article class="partner"><div class="partner-logo"><img width="1800" height="1354" src="/assets/brands/sunnystep.png" alt="Sunnystep logo" loading="lazy"></div><div><span class="tag">Lifestyle</span><h3>Sunnystep</h3><p>Popular Singapore-based ergonomic footwear brand centered around the joy of movement.</p></div></article>
+      <article class="partner"><div class="partner-logo"><img width="600" height="397" src="/assets/brands/funvee.png" alt="Funvee City Tour logo" loading="lazy"></div><div><span class="tag">Experience</span><h3>Funvee City Tour</h3><p>Singapore's open-top bus tour — iconic landmarks and the city's rich cultural heritage.</p></div></article>
+      <article class="partner"><div class="partner-logo"><img width="490" height="625" src="/assets/brands/scentopia-logo.png" alt="Scentopia logo" loading="lazy"></div><div><span class="tag">Experience</span><h3>Scentopia</h3><p>Behind-the-scenes fragrance museum experience, featured across Instagram and YouTube.</p></div></article>
+      <article class="partner"><div class="partner-logo"><img width="800" height="415" src="/assets/brands/imagica-logo.png" alt="Imagica logo" loading="lazy"></div><div><span class="tag">Experience</span><h3>Imagica</h3><p>Full-day theme park collaboration and content recap.</p></div></article>
+      <article class="partner"><div class="partner-logo"><img width="447" height="447" src="/assets/brands/serrano.png" alt="Serrano Resort logo" loading="lazy"></div><div><span class="tag">Stay</span><h3>Serrano Resort</h3><p>Luxury resort collaboration showcasing hospitality and travel experiences.</p></div></article>
+      <article class="partner"><div class="partner-logo"><img width="400" height="160" src="/assets/brands/wetnjoy.png" alt="Wet'n Joy logo" loading="lazy"></div><div><span class="tag">Experience</span><h3>Wet'n Joy</h3><p>Adventure and lifestyle brand partnership for travel experiences.</p></div></article>
+      <article class="partner"><div class="partner-logo"><img width="447" height="447" src="/assets/brands/tomacado.png" alt="Tomacado logo" loading="lazy"></div><div><span class="tag">Food</span><h3>Tomacado</h3><p>Flower-themed lifestyle restaurant and florist bringing floral experiences to Paragon, Orchard Road.</p></div></article>
+      <article class="partner"><div class="partner-logo"><img width="447" height="447" src="/assets/brands/kailashparbat.png" alt="Kailash Parbat logo" loading="lazy"></div><div><span class="tag">Food</span><h3>Kailash Parbat</h3><p>Culinary collaboration featuring authentic regional cuisine and dining experiences.</p></div></article>
+      <article class="partner"><div class="partner-logo"><img width="447" height="447" src="/assets/brands/bikanerwala.png" alt="Bikanerwala logo" loading="lazy"></div><div><span class="tag">Food</span><h3>Bikanerwala</h3><p>Traditional Indian sweets and snacks featuring authentic culinary experiences.</p></div></article>
+      <article class="partner"><div class="partner-logo"><img width="447" height="447" src="/assets/brands/biryanibykilo.png" alt="Biryani by Kilo logo" loading="lazy"></div><div><span class="tag">Food</span><h3>Biryani by Kilo</h3><p>Authentic biryani experiences and food storytelling.</p></div></article>
+      <article class="partner"><div class="partner-logo"><img width="200" height="200" src="/assets/brands/maujicafe.png" alt="Mauji Cafe logo" loading="lazy"></div><div><span class="tag">Café</span><h3>Mauji Cafe</h3><p>Café collaboration featuring unique culinary and lifestyle experiences.</p></div></article>
+      <article class="partner"><div class="partner-logo"><img width="225" height="225" src="/assets/brands/banglorecafe.png" alt="Bangalore Cafe logo" loading="lazy"></div><div><span class="tag">Café</span><h3>Bangalore Cafe</h3><p>Café collaboration featuring unique culinary and lifestyle experiences.</p></div></article>
+      <article class="partner"><div class="partner-logo"><img width="447" height="447" src="/assets/brands/pratha%20Jewellery.png" alt="Pratha Jewellery logo" loading="lazy"></div><div><span class="tag">Lifestyle</span><h3>Pratha Jewellery</h3><p>Luxury jewellery collaboration showcasing craftsmanship and elegance.</p></div></article>
     </div>
   </div>
 </section>
@@ -424,5 +392,6 @@
 </footer>
 
 <script src="/js/site.js?v=3"></script>
+<script src="/js/datadog.js" defer></script>
 </body>
 </html>

@@ -19,7 +19,7 @@ const rows = Object.keys(credits).sort().map(key => {
   const c = credits[key];
   const license = c.licenseUrl ? `<a href="${esc(c.licenseUrl)}" rel="license noopener" target="_blank">${esc(c.license)}</a>` : esc(c.license);
   return `      <li>
-        <img src="/images/destinations/${esc(key)}.webp" alt="" loading="lazy" width="160" height="100">
+        <img src="/images/destinations/thumbs/${esc(key)}.webp" alt="" loading="lazy" width="160" height="100">
         <div><strong>${esc(label(key))}</strong><br>
         <a href="${esc(c.page)}" rel="noopener" target="_blank">${esc(c.title)}</a> by ${esc(c.artist)}, ${license}, via Wikimedia Commons</div>
       </li>`;

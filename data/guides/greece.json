@@ -1,0 +1,121 @@
+{
+  "slug": "greece",
+  "title": "Greece Travel Guide 2026: Athens, Santorini & Islands",
+  "description": "Greece itineraries covering the Acropolis, Santorini sunsets and island hopping, with Greek food, a EUR budget and Schengen visa tips for Indians.",
+  "h1": "Greece Travel Guide 2026",
+  "country": "Greece",
+  "datePublished": "2026-01-01",
+  "dateModified": "2026-10-02",
+  "faq": [],
+  "badges": {
+    "budget": "EUR 50-100/day",
+    "best": "May-Jun, Sep-Oct",
+    "visa": "Schengen visa"
+  },
+  "videoKeywords": "greece",
+  "foodImage": {
+    "src": "/images/destinations/greece-food.webp",
+    "alt": "Greek Salad with Feta and Olives",
+    "caption": "Authentic Greek Horiatiki salad with Feta cheese, olives, and olive oil"
+  },
+  "sections": [
+    {
+      "id": "why-visit",
+      "title": "Why Visit Greece?",
+      "html": "<p><strong>Greece</strong> is a land of ancient history, stunning natural beauty, and island paradise. From the Acropolis overlooking Athens to Santorini's legendary blue-domed sunset views, from ancient ruins of Delphi to island-hopping adventures, Greece captivates with myths, history, and Mediterranean charm. Perfect for history buffs, beach lovers, culture seekers, and romantics.</p>\n<p>Explore ancient temples, swim in crystal-clear turquoise seas, enjoy legendary Greek hospitality, taste Mediterranean cuisine, and experience timeless island life. Greece is unforgettable.</p>"
+    },
+    {
+      "id": "itineraries",
+      "title": "3-Day Greece Itinerary",
+      "html": "<p>A 3-day plan with morning, afternoon and evening ideas and an approximate daily cost per person. Use it as a starting point and adjust to your pace.</p>",
+      "after": "",
+      "days": [
+        {
+          "title": "Athens: Acropolis & Ancient Ruins",
+          "periods": [
+            [
+              "Morning",
+              "Arrive at Athens airport. Metro to hotel (EUR 10). Visit Acropolis (EUR 20). See Parthenon, Erechtheion - ancient temples. Grab Greek coffee and loukoumades (fried pastry, EUR 4-6)."
+            ],
+            [
+              "Afternoon",
+              "Explore Acropolis Museum (EUR 9). Walk historic Plaka neighborhood - charming streets, tavernas (free). Visit Temple of Olympian Zeus (EUR 6). Browse local shops and galleries."
+            ],
+            [
+              "Evening",
+              "Traditional Greek dinner at taverna (EUR 15-25) - moussaka, souvlaki, Greek salad. Greek wine (EUR 4-8 per glass). Evening walk through Syntagma Square. Sunset from Areopagus Hill (free)."
+            ]
+          ],
+          "cost": "EUR 65-110/day",
+          "note": ""
+        },
+        {
+          "title": "Delphi Day Trip: Ancient Oracle",
+          "periods": [
+            [
+              "Early Morning",
+              "Coach/rental car to Delphi (EUR 20-40 round trip, 2 hours). Visit Delphi Archaeological Site (EUR 12) - ancient sanctuary of Apollo. Dramatic clifftop setting. Museum included (EUR 6 separate). Breakfast en route (EUR 6-10)."
+            ],
+            [
+              "Afternoon",
+              "Walk Theater of Delphi ruins (included). Visit Delphi Museum to see treasures. Explore nearby town of Delphi (free wandering). Lunch at local taverna (EUR 12-18)."
+            ],
+            [
+              "Evening",
+              "Return to Athens. Dinner (EUR 15-25). Rest from travel day or explore Psyrri district for nightlife."
+            ]
+          ],
+          "cost": "EUR 75-135/day",
+          "note": ""
+        },
+        {
+          "title": "Santorini: Sunset & Island Life",
+          "periods": [
+            [
+              "Morning",
+              "Ferry Athens to Santorini (EUR 40-60, 7 hours or fly EUR 50-80, 1 hour). Arrive, check into Oia or Fira. Relax at volcanic black sand beach (free). Grab Greek yogurt with honey (EUR 4-6)."
+            ],
+            [
+              "Afternoon",
+              "Explore Fira town - whitewashed buildings, blue domes (free wandering). Cable car down to beach (EUR 4) or walk volcanic steps (free). Swimming in Aegean Sea (free). Wine tasting at winery (EUR 15-25)."
+            ],
+            [
+              "Evening",
+              "Watch famous Santorini sunset from Oia (free, arrive early). Dinner overlooking caldera (EUR 20-40). Feta saganaki, fresh fish, Santorini wine. Late-night walk through village squares."
+            ]
+          ],
+          "cost": "EUR 100-180/day",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "title": "Greece Food Guide",
+      "html": "<p>Greek cuisine is fresh, healthy, and celebrated worldwide. Mediterranean ingredients - olive oil, feta, olives, fresh vegetables - form the foundation. Food is social, meant for sharing.</p>\n<h3>Must-Try Dishes</h3>\n<ul>\n<li><strong>Moussaka</strong> – Eggplant, meat, béchamel layered bake. Cost: EUR 10-15</li>\n<li><strong>Souvlaki</strong> – Grilled meat on skewers. Cost: EUR 6-12</li>\n<li><strong>Horiatiki Salad</strong> – Greek salad with feta and olives. Cost: EUR 8-12</li>\n<li><strong>Saganaki</strong> – Fried cheese. Cost: EUR 6-9</li>\n<li><strong>Spanakopita</strong> – Spinach and feta pie. Cost: EUR 4-8</li>\n<li><strong>Gyros</strong> – Rotisserie meat wrap. Cost: EUR 3-6</li>\n<li><strong>Loukoumades</strong> – Honey puffs dessert. Cost: EUR 4-6</li>\n<li><strong>Baklava</strong> – Nut and honey pastry. Cost: EUR 3-5</li>\n</ul>\n<h3>Best Food Spots</h3>\n<ul>\n<li><strong>Tavernas</strong> – Traditional family dining, communal atmosphere</li>\n<li><strong>Fish Restaurants</strong> – Fresh Mediterranean seafood</li>\n<li><strong>Street Food</strong> – Gyros, souvlaki, affordable quick bites</li>\n<li><strong>Local Markets</strong> – Fresh produce, cheeses, olives</li>\n</ul>"
+    },
+    {
+      "id": "best-time",
+      "title": "Best Time to Visit Greece",
+      "html": "<p><strong>Best overall:</strong> May-June and September-October (sunny, warm 22-28°C, fewer crowds than summer)</p>\n<p><strong>Summer swimming:</strong> July-August (hot 28-35°C, crowded, expensive, perfect for islands)</p>\n<p><strong>Avoid:</strong> July-August peak (extremely crowded, very hot, highest prices)</p>\n<p><strong>Budget tip:</strong> November-March (mild 10-16°C, rainy, lowest prices and fewer tourists)</p>"
+    },
+    {
+      "id": "getting-around",
+      "title": "Getting Around Greece",
+      "html": "<h3>Metro & Buses</h3>\n<p>Athens metro well-developed. Single ticket: EUR 1.40. Day pass: EUR 4.50. Island buses are affordable (EUR 1-3 per ride).</p>\n<h3>Ferries</h3>\n<p>Extensive ferry network. Athens to Santorini: EUR 40-80. Many ferry companies - book ahead in peak season to save 20-30%.</p>\n<h3>Taxis & Ride-share</h3>\n<p>Taxis metered in cities. Grab available in Athens. Within cities: EUR 5-12 typical fare.</p>\n<h3>Organized Tours</h3>\n<p>Island hopping tours: EUR 50-80. Walking tours: EUR 15-25. Sunset boat cruises: EUR 30-50.</p>"
+    },
+    {
+      "id": "essentials",
+      "title": "Travel Essentials",
+      "html": "<h3>Visa &amp; Entry</h3>\n<p><strong>Visa for Indians:</strong> a Schengen short-stay visa is required. Apply through the Greece visa centre in India (VFS Global or the appointed provider) if Greece is your main destination, up to 6 months and at least 15 days before you travel. The fee is €90 for adults, processing usually takes about 15 days (longer in summer), and you need travel insurance with at least €30,000 medical cover. The visa allows up to 90 days in any 180-day period across the Schengen area. Rules as of October 2026; always check the official website before you apply.</p>\n<h3>Currency & Money</h3>\n<p><strong>Euro (EUR).</strong> Exchange rate: 1 EUR ≈ 1.10 USD. ATMs widely available. Tipping optional (5-10% appreciated).</p>\n<h3>Budget Breakdown (per day, budget traveler)</h3>\n<ul>\n<li>Accommodation: EUR 20-40 (hostels, budget hotels)</li>\n<li>Food: EUR 15-30 (tavernas, street food)</li>\n<li>Transport: EUR 3-8 (buses, metro)</li>\n<li>Activities: EUR 15-35 (museums, attractions)</li>\n<li><strong>Total: EUR 55-115/day (~$60-127 USD)</strong></li>\n</ul>\n<h3>Important Notes</h3>\n<ul>\n<li>Greek siesta culture - many shops close 2-5pm.</li>\n<li>Dinner typically 8-11pm. Don't expect restaurants full before 9pm.</li>\n<li>Islands can be windy - pack light layers.</li>\n<li>Ferry schedules change seasonally - check in advance.</li>\n<li>Greek hospitality warm and welcoming - locals appreciate effort to speak Greek.</li>\n</ul>"
+    }
+  ],
+  "related": [
+    "italy",
+    "turkey",
+    "spain",
+    "portugal"
+  ],
+  "readNext": [],
+  "filmed": false
+}

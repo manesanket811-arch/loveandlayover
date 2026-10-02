@@ -44,6 +44,7 @@ function apply(file) {
   if (!s.includes('/css/chrome.css')) s = s.replace(/<\/head>/, `${links}\n</head>`);
 
   s = s.replace(/<script src="\/js\/nav-toggle\.js"[^>]*><\/script>\n?/g, '');
+  s = s.replace(/<script src="\/js\/datadog\.js" defer><\/script>\n?/g, '');
   s = s.replace(/<script src="\/js\/site\.js(\?v=\d+)?"><\/script>/, SCRIPT);
   if (!s.includes('/js/site.js')) s = s.replace(/<\/body>/, `${SCRIPT}\n</body>`);
 

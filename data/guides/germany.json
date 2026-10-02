@@ -1,0 +1,121 @@
+{
+  "slug": "germany",
+  "title": "Germany Travel Guide 2026: Berlin, Munich & Castles",
+  "description": "Germany itineraries covering Berlin, Munich and Neuschwanstein Castle, with German food, a EUR budget breakdown and Schengen visa tips for Indians.",
+  "h1": "Germany Travel Guide 2026",
+  "country": "Germany",
+  "datePublished": "2026-01-01",
+  "dateModified": "2026-10-02",
+  "faq": [],
+  "badges": {
+    "budget": "EUR 65-130/day",
+    "best": "May-Jun, Sep-Oct",
+    "visa": "Schengen visa"
+  },
+  "videoKeywords": "germany",
+  "foodImage": {
+    "src": "/images/destinations/germany-food.webp",
+    "alt": "Currywurst with fries, a German street-food classic",
+    "caption": "Currywurst with fries, a German street-food classic"
+  },
+  "sections": [
+    {
+      "id": "why-visit",
+      "title": "Why Visit Germany?",
+      "html": "<p><strong>Germany</strong> offers a perfect blend of modern cities and fairy-tale castles, world-class beer culture, engineering marvels, and rich history. From Berlin's vibrant energy and historical significance to Munich's beer halls and Bavarian charm, from the dreamy Neuschwanstein Castle to Rhine Valley vineyards, Germany captivates with culture, efficiency, and authenticity. Perfect for history buffs, beer enthusiasts, nature lovers, and architecture admirers.</p>\n<p>Explore medieval towns, sip Oktoberfest beer, hike Alpine mountains, enjoy hearty cuisine, and experience German precision and hospitality. Germany is unforgettable.</p>"
+    },
+    {
+      "id": "itineraries",
+      "title": "3-Day Germany Itinerary",
+      "html": "<p>A 3-day plan with morning, afternoon and evening ideas and an approximate daily cost per person. Use it as a starting point and adjust to your pace.</p>",
+      "after": "",
+      "days": [
+        {
+          "title": "Berlin: History & Modern Culture",
+          "periods": [
+            [
+              "Morning",
+              "Arrive at Berlin Tegel/Brandenburg Airport. S-Bahn to city (EUR 3.40). Visit Brandenburg Gate - free landmark. Walk Berlin Wall Memorial (free). Grab German breakfast - bratwurst and coffee (EUR 6-10)."
+            ],
+            [
+              "Afternoon",
+              "Museum Island complex (EUR 14-24 combined). Explore Reichstag glass dome (free, book ahead). Walk historic districts - Mitte, Kreuzberg (free). Visit Checkpoint Charlie (free to view, paid museums nearby)."
+            ],
+            [
+              "Evening",
+              "German dinner - schnitzel or sauerbraten (EUR 15-25). Beer hall experience at Prater Garten (EUR 6-8 per beer). Explore nightlife in Friedrichshain or Neukölln (free bar hopping)."
+            ]
+          ],
+          "cost": "EUR 75-130/day",
+          "note": ""
+        },
+        {
+          "title": "Munich: Bavarian Beer & Culture",
+          "periods": [
+            [
+              "Morning",
+              "Train Berlin to Munich (EUR 40-60, 7 hours). U-Bahn to hotel (EUR 2.90). Visit Marienplatz - historic town square (free). See Neuschwanstein Castle on Alps day trip (EUR 70-90 total with train and entry). English Garden - massive beer garden (free entry, beers EUR 7-9)."
+            ],
+            [
+              "Afternoon",
+              "Nymphenburg Palace (EUR 11.50). Royal gardens walk (free). Munich Residenz museum (EUR 9). Browse Viktualienmarkt - food and flower market (free browsing, food purchases EUR 5-15)."
+            ],
+            [
+              "Evening",
+              "Traditional Bavarian dinner - schnitzel, pretzels, sauerkraut (EUR 18-30). Hofbräuhaus beer hall (EUR 8-12 per beer, reservations recommended). Lederhosen spotting if Oktoberfest season!"
+            ]
+          ],
+          "cost": "EUR 100-170/day",
+          "note": ""
+        },
+        {
+          "title": "Neuschwanstein Day Trip & Castles",
+          "periods": [
+            [
+              "Early Morning",
+              "Day trip from Munich to Füssen (train EUR 20 return). Visit Neuschwanstein Castle - King Ludwig's fairy-tale palace (EUR 13 guided tour). Spectacular mountain views. Tour lasts 1.5 hours. Book tickets in advance."
+            ],
+            [
+              "Afternoon",
+              "Visit Hohenschwangau Castle nearby (EUR 13). Hiking around castles (free). Local Bavarian village exploration (free). Lunch at mountain lodge (EUR 12-20)."
+            ],
+            [
+              "Evening",
+              "Return to Munich. Dinner at casual restaurant (EUR 15-25). Sunset photos from castle viewpoints (free). Evening rest after hiking day."
+            ]
+          ],
+          "cost": "EUR 85-145/day",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "title": "Germany Food Guide",
+      "html": "<p>German cuisine is hearty, meat-focused, and pairs perfectly with beer. Sausages, schnitzel, and pretzels are staples. Each region has specialties - Bavarian comfort food is iconic.</p>\n<h3>Must-Try Dishes</h3>\n<ul>\n<li><strong>Schnitzel</strong> – Breaded, fried pork cutlet. Cost: EUR 12-18</li>\n<li><strong>Sauerbraten</strong> – Marinated pot roast. Cost: EUR 14-22</li>\n<li><strong>Currywurst</strong> – Sausage with curry sauce. Cost: EUR 4-7</li>\n<li><strong>Pretzels (Brezel)</strong> – Soft, salty bread. Cost: EUR 2-4</li>\n<li><strong>Spätzle</strong> – Egg noodles, often with cheese. Cost: EUR 9-15</li>\n<li><strong>Eintopf</strong> – German stew. Cost: EUR 7-12</li>\n<li><strong>Black Forest Cake</strong> – Chocolate, cherries, cream. Cost: EUR 5-8</li>\n<li><strong>Käsespätzle</strong> – Cheese noodles with onions. Cost: EUR 10-16</li>\n</ul>\n<h3>Best Food Spots</h3>\n<ul>\n<li><strong>Beer Halls</strong> – Hofbräuhaus in Munich, traditional atmosphere</li>\n<li><strong>Biergärten</strong> – Outdoor beer gardens with food</li>\n<li><strong>Traditional Restaurants</strong> – Gasthaus or Weinstube</li>\n<li><strong>Street Food</strong> – Currywurst stands, döners</li>\n</ul>"
+    },
+    {
+      "id": "best-time",
+      "title": "Best Time to Visit Germany",
+      "html": "<p><strong>Best overall:</strong> May-June and September-October (pleasant 15-20°C, fewer crowds than summer)</p>\n<p><strong>Oktoberfest:</strong> September-October (crowded, expensive, but iconic beer festival)</p>\n<p><strong>Christmas Markets:</strong> November-December (festive, magical, cold 0-5°C)</p>\n<p><strong>Budget tip:</strong> January-March (cold -5 to 5°C, snowy, lowest prices and fewer tourists)</p>"
+    },
+    {
+      "id": "getting-around",
+      "title": "Getting Around Germany",
+      "html": "<h3>Trains</h3>\n<p>Excellent train network. Deutsche Bahn operates most routes. Berlin-Munich: EUR 40-60. Rail pass available for unlimited travel.</p>\n<h3>U-Bahn & S-Bahn</h3>\n<p>Modern metro/commuter rail in major cities. Single ticket: EUR 2-3.50. Day pass: EUR 6-8. Very reliable and efficient.</p>\n<h3>Taxis & Ride-share</h3>\n<p>Taxis metered in cities. Uber available. Within cities: EUR 6-15 typical fare.</p>\n<h3>Organized Tours</h3>\n<p>Walking tours: EUR 12-18. Neuschwanstein tours: EUR 70-90. Oktoberfest tours: EUR 50-80.</p>"
+    },
+    {
+      "id": "essentials",
+      "title": "Travel Essentials",
+      "html": "<h3>Visa &amp; Entry</h3>\n<p><strong>Visa for Indians:</strong> a Schengen short-stay visa is required. Apply through the Germany visa centre in India (VFS Global or the appointed provider) if Germany is your main destination, up to 6 months and at least 15 days before you travel. The fee is €90 for adults, processing usually takes about 15 days (longer in summer), and you need travel insurance with at least €30,000 medical cover. The visa allows up to 90 days in any 180-day period across the Schengen area. Rules as of October 2026; always check the official website before you apply.</p>\n<h3>Currency & Money</h3>\n<p><strong>Euro (EUR).</strong> Exchange rate: 1 EUR ≈ 1.10 USD. ATMs widely available. Tipping not mandatory (5-10% appreciated at restaurants).</p>\n<h3>Budget Breakdown (per day, budget traveler)</h3>\n<ul>\n<li>Accommodation: EUR 30-70 (hostels, budget hotels)</li>\n<li>Food: EUR 15-30 (restaurants, street food, markets)</li>\n<li>Transport: EUR 5-10 (local transit)</li>\n<li>Activities: EUR 20-40 (museums, castles, attractions)</li>\n<li><strong>Total: EUR 70-150/day (~$77-165 USD)</strong></li>\n</ul>\n<h3>Important Notes</h3>\n<ul>\n<li>Germans value punctuality - trains almost always on time.</li>\n<li>Many shops closed on Sundays - plan accordingly.</li>\n<li>Cash still preferred in some establishments - ATMs widely available.</li>\n<li>Oktoberfest (Sep-Oct) highly crowded and expensive - book in advance.</li>\n<li>Winter weather cold - pack warm layers, especially Nov-Mar.</li>\n</ul>"
+    }
+  ],
+  "related": [
+    "france",
+    "italy",
+    "spain",
+    "portugal"
+  ],
+  "readNext": [],
+  "filmed": false
+}

@@ -1,0 +1,121 @@
+{
+  "slug": "spain",
+  "title": "Spain Travel Guide 2026: Barcelona, Madrid & Seville",
+  "description": "Spain itineraries covering Barcelona's Sagrada Familia, Madrid museums and flamenco, with tapas, a EUR budget and Schengen visa tips for Indians.",
+  "h1": "Spain Travel Guide 2026",
+  "country": "Spain",
+  "datePublished": "2026-01-01",
+  "dateModified": "2026-10-02",
+  "faq": [],
+  "badges": {
+    "budget": "EUR 60-120/day",
+    "best": "Apr-May, Sep-Oct",
+    "visa": "Schengen visa"
+  },
+  "videoKeywords": "spain",
+  "foodImage": {
+    "src": "/images/destinations/spain-food.webp",
+    "alt": "Paella cooking in a large pan",
+    "caption": "Paella cooking in a large pan"
+  },
+  "sections": [
+    {
+      "id": "why-visit",
+      "title": "Why Visit Spain?",
+      "html": "<p><strong>Spain</strong> offers vibrant culture, stunning architecture, passionate flamenco dancing, and some of Europe's best beaches. From Gaudi's whimsical structures in Barcelona to Madrid's world-class museums and Spain's golden coastal shores, the country exudes energy and romance. Perfect for art lovers, architecture enthusiasts, beach seekers, and culture immersion travelers.</p>\n<p>Experience the energy of Madrid, explore Barcelona's Gothic Quarter and Sagrada Familia, dance to flamenco rhythms, enjoy Mediterranean beaches, and taste world-class Spanish wine and tapas. Spain is unforgettable.</p>"
+    },
+    {
+      "id": "itineraries",
+      "title": "3-Day Spain Itinerary",
+      "html": "<p>A 3-day plan with morning, afternoon and evening ideas and an approximate daily cost per person. Use it as a starting point and adjust to your pace.</p>",
+      "after": "",
+      "days": [
+        {
+          "title": "Barcelona: Gaudí & Gothic Quarter",
+          "periods": [
+            [
+              "Morning",
+              "Arrive at Barcelona airport. Metro to hotel (EUR 5.15). Visit Sagrada Familia - reserve pre-booked tickets (EUR 26 basic entry). Marvel at Gaudí's masterpiece. Grab café con leche and churros (EUR 5-8)."
+            ],
+            [
+              "Afternoon",
+              "Explore Park Güell (EUR 14 with guide route). See colorful mosaics, panoramic city views. Walk Las Ramblas - famous tree-lined boulevard (free). Browse street performers, shops, cafes. Visit Gothic Quarter - medieval architecture (free walking)."
+            ],
+            [
+              "Evening",
+              "Flamenco show with dinner (EUR 50-80, book ahead). Alternatively: tapas crawl in El Born (EUR 20-35 for multiple small plates). Experience lively Spanish nightlife. Walk Montjuïc at dusk for sunset city views."
+            ]
+          ],
+          "cost": "EUR 85-150/day",
+          "note": ""
+        },
+        {
+          "title": "Barcelona Beaches & Montjuïc",
+          "periods": [
+            [
+              "Morning",
+              "Relax at Barceloneta Beach (free entry). Swim in Mediterranean. Grab paella or seafood lunch at beachfront (EUR 15-25). Try Spanish cava or horchata (EUR 3-6)."
+            ],
+            [
+              "Afternoon",
+              "Visit Montjuïc fortress (EUR 5 entry or free during hours). Explore Joan Miró Museum (EUR 12) or MNAC art museum (EUR 12). Cable car rides for views (EUR 7-9). Gardens are free to walk."
+            ],
+            [
+              "Evening",
+              "Magic Fountain light show at Montjuïc (free viewing, 8-10pm May-Sep). Dinner at seafood restaurant (EUR 20-40). Enjoy vermouth in El Xampanyet bar (EUR 3-4 per glass)."
+            ]
+          ],
+          "cost": "EUR 70-130/day",
+          "note": ""
+        },
+        {
+          "title": "Madrid: Museums & Royal Palace",
+          "periods": [
+            [
+              "Morning",
+              "Train Barcelona to Madrid (EUR 25-50, 2.5 hours). Metro to hotel (EUR 3). Visit Prado Museum (EUR 15, one of world's finest). See masterpieces by Velázquez, Goya. Coffee and ensaimada pastry (EUR 5-8)."
+            ],
+            [
+              "Afternoon",
+              "Walk Retiro Park - peaceful oasis (free). Royal Palace tour (EUR 12 with audio guide). Plaza Mayor - historic central square (free). Explore Sol district for shopping (free browsing)."
+            ],
+            [
+              "Evening",
+              "Traditional Spanish dinner with wine (EUR 25-45). Tapas bar crawl on Cava Baja street (EUR 15-30 for multiple) or late-night churros (EUR 4-6). Experience Madrid's vibrant nightlife."
+            ]
+          ],
+          "cost": "EUR 95-155/day",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "title": "Spain Food Guide",
+      "html": "<p>Spanish cuisine is regional, vibrant, and celebrates fresh ingredients. Tapas culture allows trying many dishes affordably. Spanish wine (especially Rioja and Tempranillo) pairs perfectly with food.</p>\n<h3>Must-Try Dishes</h3>\n<ul>\n<li><strong>Paella Valenciana</strong> – Saffron rice with seafood or chicken. Cost: EUR 14-25</li>\n<li><strong>Tapas Platter</strong> – Mixed small plates: jamón, queso, aceitunas. Cost: EUR 8-15</li>\n<li><strong>Patatas Bravas</strong> – Crispy fried potatoes with spicy sauce. Cost: EUR 5-8</li>\n<li><strong>Gambas al Ajillo</strong> – Garlic shrimp. Cost: EUR 12-18</li>\n<li><strong>Churros con Chocolate</strong> – Fried pastry with hot chocolate. Cost: EUR 4-6</li>\n<li><strong>Jamón Ibérico</strong> – Cured Iberian ham. Cost: EUR 4-8 per serving</li>\n<li><strong>Gazpacho</strong> – Cold tomato soup (summer). Cost: EUR 5-9</li>\n<li><strong>Flan</strong> – Caramel custard dessert. Cost: EUR 5-7</li>\n</ul>\n<h3>Best Food Spots</h3>\n<ul>\n<li><strong>Tapas Bars</strong> – Traditional social eating experience</li>\n<li><strong>Mercados (Markets)</strong> – Fresh produce, local specialties, casual dining</li>\n<li><strong>Marisquerías</strong> – Seafood specialist restaurants</li>\n<li><strong>Churrerías</strong> – For churros and hot chocolate breakfasts</li>\n</ul>"
+    },
+    {
+      "id": "best-time",
+      "title": "Best Time to Visit Spain",
+      "html": "<p><strong>Best overall:</strong> April-May and September-October (pleasant 15-25°C, fewer crowds than summer)</p>\n<p><strong>Summer:</strong> June-August (hot 28-35°C, crowded, expensive, ideal for beaches)</p>\n<p><strong>Avoid:</strong> July-August peak (extremely crowded, very hot, highest prices)</p>\n<p><strong>Budget tip:</strong> November-February (cold 5-15°C, rainy, lowest prices and fewer tourists)</p>"
+    },
+    {
+      "id": "getting-around",
+      "title": "Getting Around Spain",
+      "html": "<h3>Metro & Buses</h3>\n<p>Modern metro systems in Barcelona and Madrid. Metro tickets: EUR 2-3 per ride. T-Casual 10-ticket card: EUR 11-12. Buses also available (EUR 2-2.45).</p>\n<h3>Trains</h3>\n<p>Renfe operates intercity trains. Barcelona-Madrid: EUR 25-50. Book in advance for discounts. Scenic routes available.</p>\n<h3>Taxis & Ride-share</h3>\n<p>Taxis metered in major cities. Uber available. Within cities: EUR 5-15 typical fare.</p>\n<h3>Organized Tours</h3>\n<p>Walking tours: EUR 10-20. Food tours: EUR 40-65. Skip-the-line museum tickets: EUR 15-30 extra.</p>"
+    },
+    {
+      "id": "essentials",
+      "title": "Travel Essentials",
+      "html": "<h3>Visa &amp; Entry</h3>\n<p><strong>Visa for Indians:</strong> a Schengen short-stay visa is required. Apply through the Spain visa centre in India (VFS Global or the appointed provider) if Spain is your main destination, up to 6 months and at least 15 days before you travel. The fee is €90 for adults, processing usually takes about 15 days (longer in summer), and you need travel insurance with at least €30,000 medical cover. The visa allows up to 90 days in any 180-day period across the Schengen area. Rules as of October 2026; always check the official website before you apply.</p>\n<h3>Currency & Money</h3>\n<p><strong>Euro (EUR).</strong> Exchange rate: 1 EUR ≈ 1.10 USD. ATMs widely available. Tipping not mandatory but appreciated (5-10% at restaurants).</p>\n<h3>Budget Breakdown (per day, budget traveler)</h3>\n<ul>\n<li>Accommodation: EUR 30-60 (hostels, budget hotels)</li>\n<li>Food: EUR 20-35 (tapas bars, casual dining)</li>\n<li>Transport: EUR 5-10 (metro tickets)</li>\n<li>Activities: EUR 25-50 (museums, attractions)</li>\n<li><strong>Total: EUR 80-155/day (~$88-171 USD)</strong></li>\n</ul>\n<h3>Important Notes</h3>\n<ul>\n<li>Meal times: lunch 2-3pm, dinner 8-11pm. Restaurants may close 3-7pm.</li>\n<li>Siesta culture - many shops close early afternoon.</li>\n<li>Pickpocketing in tourist areas - keep valuables secure.</li>\n<li>Museums often free during certain hours - check schedules.</li>\n<li>Flamenco shows book ahead - they sell out, especially weekends.</li>\n</ul>"
+    }
+  ],
+  "related": [
+    "portugal",
+    "france",
+    "italy",
+    "greece"
+  ],
+  "readNext": [],
+  "filmed": false
+}

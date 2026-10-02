@@ -1,0 +1,121 @@
+{
+  "slug": "mexico",
+  "title": "Mexico Travel Guide 2026: Mexico City, Cancun & Ruins",
+  "description": "Mexico itineraries covering Mexico City, Aztec temples, Cancun beaches and cenotes, with Mexican food, an MXN budget and visa tips for Indians.",
+  "h1": "Mexico Travel Guide 2026",
+  "country": "Mexico",
+  "datePublished": "2026-01-01",
+  "dateModified": "2026-10-02",
+  "faq": [],
+  "badges": {
+    "budget": "MXN 1000-1800/day",
+    "best": "Nov-Apr",
+    "visa": "Visa needed (unless you hold a US/UK/Schengen visa)"
+  },
+  "videoKeywords": "mexico",
+  "foodImage": {
+    "src": "/images/destinations/mexico-food.webp",
+    "alt": "Fresh guacamole",
+    "caption": "Fresh guacamole"
+  },
+  "sections": [
+    {
+      "id": "why-visit",
+      "title": "Why Visit Mexico?",
+      "html": "<p><strong>Mexico</strong> offers ancient Aztec ruins, pristine Caribbean beaches, vibrant colonial cities, and world-class cuisine. From Mexico City's bustling energy and pre-Columbian museums to Cancun's turquoise waters, from cenote swimming to Riviera Maya jungle exploration, Mexico captivates with culture, nature, and adventure. Perfect for history buffs, beach lovers, food enthusiasts, and budget-conscious travelers.</p>\n<p>Explore Aztec temples, snorkel in cenotes, relax on white-sand beaches, taste authentic street tacos, and experience Mexican warmth and colorful traditions. Mexico offers unforgettable experiences at great value.</p>"
+    },
+    {
+      "id": "itineraries",
+      "title": "3-Day Mexico Itinerary",
+      "html": "<p>A 3-day plan with morning, afternoon and evening ideas and an approximate daily cost per person. Use it as a starting point and adjust to your pace.</p>",
+      "after": "",
+      "days": [
+        {
+          "title": "Mexico City: Aztec History & Culture",
+          "periods": [
+            [
+              "Morning",
+              "Arrive at Mexico City International Airport. Metro to hotel (MXN 5). Visit Templo Mayor - Aztec pyramid ruins (MXN 85). Walk colonial historic center (free). Grab street tacos and horchata (MXN 30-50)."
+            ],
+            [
+              "Afternoon",
+              "Explore Zócalo - main plaza with National Palace murals by Diego Rivera (free). Visit National Museum of Anthropology (MXN 85, Sundays free). Coyoacán neighborhood - bohemian district with Frida Kahlo House Museum (MXN 250)."
+            ],
+            [
+              "Evening",
+              "Dinner at traditional restaurant - mole, chiles rellenos (MXN 100-180). Street food tour in Roma neighborhood (MXN 80-120 per meal). Mariachi music and drinks at local bars (MXN 50-100 per drink)."
+            ]
+          ],
+          "cost": "MXN 800-1400/day",
+          "note": ""
+        },
+        {
+          "title": "Cancun & Riviera Maya: Beaches & Cenotes",
+          "periods": [
+            [
+              "Morning",
+              "Fly Mexico City to Cancun (MXN 800-1500 return). Beach day at Hotel Zone (free entry to beach). Swim in Caribbean Sea. Grab fresh ceviche at beach restaurant (MXN 80-150)."
+            ],
+            [
+              "Afternoon",
+              "Cenote snorkeling tour (MXN 400-600, includes multiple cenotes). Swim in freshwater underground caves - magical experience. Tulum ruins nearby (MXN 60 entry). Playa del Carmen town exploration (free wandering)."
+            ],
+            [
+              "Evening",
+              "Sunset at Playa del Carmen beach (free). Fresh fish dinner - aguachile, ceviches (MXN 120-200). Beachfront drinks with Caribbean views (MXN 60-100 per drink)."
+            ]
+          ],
+          "cost": "MXN 1200-1900/day",
+          "note": ""
+        },
+        {
+          "title": "Chichen Itza: Mayan Wonders",
+          "periods": [
+            [
+              "Early Morning",
+              "Day trip to Chichen Itza from Cancun (organized tour MXN 600-900 or self-guided). Visit Chichen Itza archaeological site - UNESCO World Heritage (MXN 232 entry + guide MXN 400-600). See Pyramid of Kukulkan, Temple of Warriors."
+            ],
+            [
+              "Afternoon",
+              "Guided tour explains Mayan history and astronomy (1.5-2 hours). Explore El Caracol, temples, ball courts. Cenote Ik-Kil nearby for swimming (MXN 60 entry, refreshing break)."
+            ],
+            [
+              "Evening",
+              "Return to Cancun. Lunch at local restaurant en route (MXN 100-150). Dinner and rest. Pack in evening activities or relax on beach."
+            ]
+          ],
+          "cost": "MXN 1000-1600/day",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "title": "Mexico Food Guide",
+      "html": "<p>Mexican cuisine is diverse, flavorful, and affordable. UNESCO-recognized culinary heritage. Street tacos are legendary - authentic, fresh, incredible value.</p>\n<h3>Must-Try Dishes</h3>\n<ul>\n<li><strong>Tacos al Pastor</strong> – Marinated pork tacos. Cost: MXN 25-50</li>\n<li><strong>Mole Poblano</strong> – Complex sauce with chocolate. Cost: MXN 100-180</li>\n<li><strong>Chiles Rellenos</strong> – Stuffed poblano peppers. Cost: MXN 90-150</li>\n<li><strong>Ceviche</strong> – Fresh seafood cured in lime. Cost: MXN 80-150</li>\n<li><strong>Tamales</strong> – Corn dough wrapped in corn husks. Cost: MXN 30-60</li>\n<li><strong>Quesadillas</strong> – Cheese-filled tortillas. Cost: MXN 30-80</li>\n<li><strong>Flan</strong> – Caramel custard dessert. Cost: MXN 40-80</li>\n<li><strong>Elote</strong> – Mexican street corn with mayo and cheese. Cost: MXN 20-40</li>\n</ul>\n<h3>Best Food Spots</h3>\n<ul>\n<li><strong>Street Taquerias</strong> – Most authentic, cheapest, best quality</li>\n<li><strong>Mercados</strong> – Markets with fresh produce and local food courts</li>\n<li><strong>Marisquerías</strong> – Seafood restaurants near coasts</li>\n<li><strong>Fondas</strong> – Traditional family-style restaurants</li>\n</ul>"
+    },
+    {
+      "id": "best-time",
+      "title": "Best Time to Visit Mexico",
+      "html": "<p><strong>Best overall:</strong> November-April (dry, warm 22-28°C, perfect weather)</p>\n<p><strong>Hurricane season:</strong> June-October (hot, humid, rain risk, lower prices)</p>\n<p><strong>Avoid:</strong> September (peak hurricane season)</p>\n<p><strong>Budget tip:</strong> May, August, September (off-season, lowest prices, more rain)</p>"
+    },
+    {
+      "id": "getting-around",
+      "title": "Getting Around Mexico",
+      "html": "<h3>Buses</h3>\n<p>Extensive intercity bus network. First-class buses comfortable and safe. Mexico City to Cancun: MXN 1000-1500 (12-14 hours).</p>\n<h3>Domestic Flights</h3>\n<p>Cheap flights available. Mexico City to Cancun: MXN 800-1500 round trip. Book in advance for best prices.</p>\n<h3>Metro & Local Transit</h3>\n<p>Mexico City metro very affordable. Single ticket: MXN 5. Day pass: MXN 50. Buses also cheap (MXN 5-8).</p>\n<h3>Taxis & Ride-share</h3>\n<p>Uber available in major cities. Traditional taxis negotiable fare. Ride costs: MXN 30-100 per trip.</p>"
+    },
+    {
+      "id": "essentials",
+      "title": "Travel Essentials",
+      "html": "<h3>Visa &amp; Entry</h3>\n<p><strong>Visa for Indians:</strong> a Mexican visa is required, applied for through the Mexican Embassy in New Delhi. You can usually enter without one if you hold a valid US, UK, Canadian, Japanese or Schengen visa, or permanent residence in one of those countries; you then get an entry permit (FMM) on arrival. Rules as of October 2026; always check the official website before you apply.</p>\n<h3>Currency & Money</h3>\n<p><strong>Mexican Peso (MXN).</strong> Exchange rate: 1 USD ≈ 20 MXN. ATMs widespread. Tipping customary (10-15% at restaurants).</p>\n<h3>Budget Breakdown (per day, budget traveler)</h3>\n<ul>\n<li>Accommodation: MXN 400-800 (hostels, budget hotels)</li>\n<li>Food: MXN 300-600 (street food, taquerias, markets)</li>\n<li>Transport: MXN 100-200 (buses, metro)</li>\n<li>Activities: MXN 150-400 (museums, tours, attractions)</li>\n<li><strong>Total: MXN 1000-2000/day (~$50-100 USD)</strong></li>\n</ul>\n<h3>Important Notes</h3>\n<ul>\n<li>Street tacos safest with visible preparation - watch them made.</li>\n<li>Tap water not potable in most areas - drink bottled water.</li>\n<li>Petty theft in tourist areas - keep valuables secure.</li>\n<li>English limited outside major tourist areas - learn basic Spanish.</li>\n<li>Altitude in Mexico City (2250m) - allow acclimatization time.</li>\n</ul>"
+    }
+  ],
+  "related": [
+    "peru",
+    "spain",
+    "egypt",
+    "turkey"
+  ],
+  "readNext": [],
+  "filmed": false
+}

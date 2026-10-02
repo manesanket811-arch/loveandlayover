@@ -26,29 +26,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<!-- Datadog RUM -->
-<script>
-  (function(h,o,u,n,d) {
-    h=h[d]=h[d]||{q:[],onReady:function(c){h.q.push(c)}}
-    d=o.createElement(u);d.async=1;d.src=n;d.crossOrigin=''
-    n=o.getElementsByTagName(u)[0];n.parentNode.insertBefore(d,n)
-  })(window,document,'script','https://www.datadoghq-browser-agent.com/us5/v7/datadog-rum.js','DD_RUM')
-  window.DD_RUM.onReady(function() {
-    window.DD_RUM.init({ beforeSend: function(event) { if (event.type === "error" && event.error && event.error.resource && event.error.resource.url && (event.error.resource.url.indexOf("google-analytics.com") !== -1 || event.error.resource.url.indexOf("googletagmanager.com") !== -1)) { return false; } return true; },
-        applicationId: '2b36cb95-5c53-4b4c-afd7-5cc7207d8d8c',
-        clientToken: 'pub398e9055d3a8e18d44a22e64e505b1fa',
-        site: 'us5.datadoghq.com',
-        service: 'love-and-layovers',
-        env: 'production',
-        version: '1.0.0',
-        sessionSampleRate: 100,
-        sessionReplaySampleRate: 10,
-        trackResources: true,
-        trackUserInteractions: true,
-        trackLongTasks: true,
-    });
-  })
-</script>
 <style>
 :root { --ink:#1a2332; --paper:#fefaf5; --accent:#d4691d; --secondary:#f0a559; --teal:#0fb6a8; --deep:#0d4f6b; --sky:#ffe9d6; --shadow:rgba(26,35,50,.12); --maxw:1180px; }
 * { margin:0; padding:0; box-sizing:border-box; }
@@ -280,7 +257,7 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--accent); outline
       <ul>
         <li><strong>Get a SIM card</strong> — Buy at airport. Unlimited data for ₫200,000-300,000 ($8-12/month). Viettel is reliable</li>
         <li><strong>Cash is king</strong> — ATMs everywhere. Visa/Mastercard accepted at hotels and upscale places. Street vendors want cash</li>
-        <li><strong>Vietnam Visa</strong> — All nationalities use 90-day e-visa (USD 25). Apply at evisa.gov.vn (official site only). Processing: 24-48 hours. No visa-on-arrival without pre-approval.</li>
+        <li><strong>Vietnam Visa</strong> — All nationalities use 90-day e-visa (USD 25). Apply at evisa.gov.vn (official site only). Processing: usually 3–5 working days. No visa-on-arrival without pre-approval.</li>
         <li><strong>Scooter culture</strong> — Scooters are everywhere. You can rent one for $5-8/day. Only rent if you're confident</li>
         <li><strong>Bargain at markets</strong> — It's expected. Start at half the asking price</li>
         <li><strong>Respect temples</strong> — Cover shoulders and knees. Remove shoes when asked</li>
@@ -319,6 +296,7 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--accent); outline
 
 <script src="/js/related-video.js" defer></script>
 <script src="/js/site.js?v=3"></script>
+<script src="/js/datadog.js" defer></script>
 </body>
 </html>
 

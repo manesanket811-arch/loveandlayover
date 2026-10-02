@@ -1,0 +1,121 @@
+{
+  "slug": "italy",
+  "title": "Italy Travel Guide 2026: Rome, Venice & Florence",
+  "description": "Italy itineraries covering the Colosseum, Venice gondolas and Florence art, with Italian food, a EUR budget and Schengen visa tips for Indians.",
+  "h1": "Italy Travel Guide 2026",
+  "country": "Italy",
+  "datePublished": "2026-01-01",
+  "dateModified": "2026-10-02",
+  "faq": [],
+  "badges": {
+    "budget": "EUR 60-120/day",
+    "best": "Apr-Oct",
+    "visa": "Schengen visa"
+  },
+  "videoKeywords": "italy",
+  "foodImage": {
+    "src": "/images/destinations/italy-food.webp",
+    "alt": "A vegetarian pizza",
+    "caption": "A vegetarian pizza"
+  },
+  "sections": [
+    {
+      "id": "why-visit",
+      "title": "Why Visit Italy?",
+      "html": "<p><strong>Italy</strong> is a must-visit destination offering ancient Roman history, Renaissance art, charming coastal villages, and world-class cuisine. From the iconic Colosseum in Rome to romantic gondolas in Venice and the art galleries of Florence, Italy captivates with history, beauty, and authentic Italian culture. Perfect for art lovers, history enthusiasts, foodies, and romantic travelers.</p>\n<p>Explore ancient ruins, walk through medieval cities, taste authentic pasta and gelato, and experience the dolce vita lifestyle. Italy's blend of history, art, cuisine, and natural beauty makes it unforgettable.</p>"
+    },
+    {
+      "id": "itineraries",
+      "title": "3-Day Italy Itinerary",
+      "html": "<p>A 3-day plan with morning, afternoon and evening ideas and an approximate daily cost per person. Use it as a starting point and adjust to your pace.</p>",
+      "after": "",
+      "days": [
+        {
+          "title": "Rome: Ancient History & Landmarks",
+          "periods": [
+            [
+              "Morning",
+              "Arrive at Rome Fiumicino Airport. Train to city center (EUR 14). Check in. Visit Colosseum (EUR 18 with Forum). Walk through Roman Forum ruins (included). Grab espresso and cornetto breakfast (EUR 3-5)."
+            ],
+            [
+              "Afternoon",
+              "Explore Palatine Hill (included with Colosseum pass). Walk to Vatican - St. Peter's Basilica (free entry). Climb dome for views (EUR 10). Walk around Trastevere neighborhood - charming cobblestone streets, ivy-covered buildings."
+            ],
+            [
+              "Evening",
+              "Dinner at family-run trattoria (EUR 20-35) - try pasta carbonara or cacio e pepe. Gelato from artisanal gelateria (EUR 3-5). Evening walk through Spanish Steps and Pantheon area. Roman fountain hopping."
+            ]
+          ],
+          "cost": "EUR 80-120/day",
+          "note": ""
+        },
+        {
+          "title": "Vatican Museums & Art",
+          "periods": [
+            [
+              "Early Morning",
+              "Book Vatican Museums pre-booked ticket (EUR 21, online). Arrive early to beat crowds. Explore Sistine Chapel (included) - see Michelangelo's ceiling. Audio guide available (EUR 9). Tour takes 2-3 hours minimum."
+            ],
+            [
+              "Afternoon",
+              "Visit Galleria Borghese (EUR 13, requires booking). See masterpieces by Caravaggio, Raphael. Walk Villa Borghese gardens (free). Grab lunch at casual pizza place (EUR 12-18) - slice of pizza al taglio. Rest and relax."
+            ],
+            [
+              "Evening",
+              "Sunset from Gianicolo Hill - free panoramic views. Wine tasting and aperitivo at local bar (EUR 8-15 per drink). Dinner with Roman wine (EUR 25-40). Evening stroll through lit-up historic center."
+            ]
+          ],
+          "cost": "EUR 95-145/day",
+          "note": ""
+        },
+        {
+          "title": "Florence: Renaissance Art & Tuscan Landscapes",
+          "periods": [
+            [
+              "Morning",
+              "Train from Rome to Florence (EUR 30-50, 2.5 hours). Check in. Visit Uffizi Gallery (EUR 20, pre-book). See works by Botticelli, Leonardo, Raphael. Grab cappuccino and pastry (EUR 4-6)."
+            ],
+            [
+              "Afternoon",
+              "Cross Ponte Vecchio (free) - browse jewelry shops. Climb Duomo bell tower for city views (EUR 18). Walk to Piazzale Michelangelo for sunset panorama (free). Explore leather goods markets (USD 20-60 per item)."
+            ],
+            [
+              "Evening",
+              "Dinner with Tuscan specialties (EUR 25-45) - bistecca alla fiorentina, ribollita. Wine from Chianti region (EUR 5-12 per glass). Evening walk through Oltrarno district galleries and studios."
+            ]
+          ],
+          "cost": "EUR 110-160/day",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "title": "Italy Food Guide",
+      "html": "<p>Italian cuisine is simple, seasonal, and celebrates fresh local ingredients. Every region has unique specialties. Food is central to Italian culture - expect long, leisurely meals.</p>\n<h3>Must-Try Dishes</h3>\n<ul>\n<li><strong>Pasta Carbonara</strong> – Creamy Roman pasta with guanciale. Cost: EUR 12-18</li>\n<li><strong>Cacio e Pepe</strong> – Pecorino cheese and pepper pasta. Cost: EUR 10-15</li>\n<li><strong>Risotto alla Milanese</strong> – Creamy saffron rice. Cost: EUR 14-22</li>\n<li><strong>Lasagna Bolognese</strong> – Layered pasta with meat sauce. Cost: EUR 12-20</li>\n<li><strong>Margherita Pizza</strong> – Tomato, mozzarella, basil. Cost: EUR 8-14</li>\n<li><strong>Arancini</strong> – Fried rice balls, Sicilian specialty. Cost: EUR 3-6 each</li>\n<li><strong>Tiramisu</strong> – Coffee-soaked ladyfinger dessert. Cost: EUR 5-8</li>\n<li><strong>Gelato</strong> – Authentic Italian ice cream. Cost: EUR 3-5 per scoop</li>\n</ul>\n<h3>Best Food Spots</h3>\n<ul>\n<li><strong>Trattorias</strong> – Family-run, traditional Italian cuisine</li>\n<li><strong>Pizzerias</strong> – Casual, wood-fired ovens, authentic recipes</li>\n<li><strong>Markets</strong> – Fresh produce, cheese, cured meats, local specialties</li>\n<li><strong>Bars</strong> – Espresso, pastries, quick lunch at counter</li>\n</ul>"
+    },
+    {
+      "id": "best-time",
+      "title": "Best Time to Visit Italy",
+      "html": "<p><strong>Best overall:</strong> April-May and September-October (pleasant weather 18-24°C, fewer crowds, lower prices)</p>\n<p><strong>Beach season:</strong> June-August (warm 25-30°C, crowded, expensive, perfect for coastal destinations)</p>\n<p><strong>Avoid:</strong> July-August peak season (extremely crowded, very hot, highest prices)</p>\n<p><strong>Budget tip:</strong> November-March (cold 5-10°C, rainy, but lowest prices and fewer tourists)</p>"
+    },
+    {
+      "id": "getting-around",
+      "title": "Getting Around Italy",
+      "html": "<h3>Trains</h3>\n<p><strong>Trenitalia & Italo:</strong> Extensive network connecting all cities. Rome to Florence: EUR 30-50. Book in advance online for discounts.</p>\n<h3>Taxis & Ride-share</h3>\n<p>Taxis metered. Uber in major cities. Within cities: EUR 8-20 per ride.</p>\n<h3>Local Transport</h3>\n<p>Buses, trams, metro in major cities. Day pass: EUR 7-10. Venice water buses (vaporetto): EUR 8-15 per ride.</p>\n<h3>Organized Tours</h3>\n<p>Skip-the-line museum tours: EUR 45-80. Walking tours: EUR 15-25.</p>"
+    },
+    {
+      "id": "essentials",
+      "title": "Travel Essentials",
+      "html": "<h3>Visa &amp; Entry</h3>\n<p><strong>Visa for Indians:</strong> a Schengen short-stay visa is required. Apply through the Italy visa centre in India (VFS Global or the appointed provider) if Italy is your main destination, up to 6 months and at least 15 days before you travel. The fee is €90 for adults, processing usually takes about 15 days (longer in summer), and you need travel insurance with at least €30,000 medical cover. The visa allows up to 90 days in any 180-day period across the Schengen area. Rules as of October 2026; always check the official website before you apply.</p>\n<h3>Currency & Money</h3>\n<p><strong>Euro (EUR).</strong> Exchange rate: 1 EUR ≈ 1.10 USD. ATMs widely available. Tipping not expected but appreciated (round up or 5-10%).</p>\n<h3>Budget Breakdown (per day, budget traveler)</h3>\n<ul>\n<li>Accommodation: EUR 30-60 (hostels, budget hotels, Airbnb)</li>\n<li>Food: EUR 20-40 (mix of street food, casual eateries, gelato)</li>\n<li>Transport: EUR 8-15 (metro/train tickets)</li>\n<li>Activities: EUR 25-50 (museums, attractions, tours)</li>\n<li><strong>Total: EUR 85-165/day (~$94-182 USD)</strong></li>\n</ul>\n<h3>Important Notes</h3>\n<ul>\n<li>Many churches require modest dress - cover shoulders and knees.</li>\n<li>Pickpocketing common in Rome, Florence, Venice - use theft-proof bags.</li>\n<li>Water fountains safe to drink from - refill water bottles.</li>\n<li>Museums often closed Mondays - check hours in advance.</li>\n<li>Italian lunch typically 1-3pm, dinner 8-11pm. Many shops close 1-4pm.</li>\n</ul>"
+    }
+  ],
+  "related": [
+    "france",
+    "spain",
+    "greece",
+    "portugal"
+  ],
+  "readNext": [],
+  "filmed": false
+}

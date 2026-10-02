@@ -1,0 +1,121 @@
+{
+  "slug": "peru",
+  "title": "Peru Travel Guide 2026: Machu Picchu, Cusco & Lima",
+  "description": "Peru itineraries covering Machu Picchu, Cusco, the Sacred Valley and Lima, with Peruvian food, a PEN budget breakdown and visa tips for Indians.",
+  "h1": "Peru Travel Guide 2026",
+  "country": "Peru",
+  "datePublished": "2026-01-01",
+  "dateModified": "2026-10-02",
+  "faq": [],
+  "badges": {
+    "budget": "PEN 150-250/day",
+    "best": "May-Oct",
+    "visa": "Visa needed (unless you hold a US/UK/Schengen visa)"
+  },
+  "videoKeywords": "peru",
+  "foodImage": {
+    "src": "/images/destinations/peru-food.webp",
+    "alt": "A street food stall on Jirón Áncash in Lima",
+    "caption": "A street food stall on Jirón Áncash in Lima"
+  },
+  "sections": [
+    {
+      "id": "why-visit",
+      "title": "Why Visit Peru?",
+      "html": "<p><strong>Peru</strong> offers ancient Inca wonders, Amazon rainforest adventures, coastal charm, and world-class cuisine. From Machu Picchu's mystical mountain ruins to Cusco's colonial architecture, from Sacred Valley alpaca trekking to Lima's gastronomic revolution, Peru captivates with history, nature, and flavors. Perfect for adventure seekers, history enthusiasts, foodies, and nature lovers.</p>\n<p>Trek to Machu Picchu, explore Inca sites, hike mountain passes, visit local communities, taste authentic Peruvian food, and experience Andean culture. Peru is unforgettable.</p>"
+    },
+    {
+      "id": "itineraries",
+      "title": "3-Day Peru Itinerary",
+      "html": "<p>A 3-day plan with morning, afternoon and evening ideas and an approximate daily cost per person. Use it as a starting point and adjust to your pace.</p>",
+      "after": "",
+      "days": [
+        {
+          "title": "Lima: Culinary Capital & History",
+          "periods": [
+            [
+              "Morning",
+              "Arrive at Lima airport. Taxi to hotel (PEN 60-100). Visit Plaza Mayor colonial square (free). Explore historic center - UNESCO World Heritage (free walking). Grab ceviche for lunch (PEN 35-60)."
+            ],
+            [
+              "Afternoon",
+              "National Museum of Anthropology (PEN 45). Huaca Pucllana pre-Inca pyramid in Miraflores district (PEN 50). Walk cliffside neighborhood with ocean views (free). Browse art galleries in San Isidro."
+            ],
+            [
+              "Evening",
+              "Dinner at upscale restaurant - world-famous Peruvian cuisine (PEN 80-180). Or casual cevichería for budget option (PEN 30-50). Drinks with coastal views. Barranco neighborhood nightlife."
+            ]
+          ],
+          "cost": "PEN 150-280/day",
+          "note": ""
+        },
+        {
+          "title": "Cusco: Inca History & Sacred Valley",
+          "periods": [
+            [
+              "Morning",
+              "Flight Lima to Cusco (PEN 200-400, 1 hour). Arrive at high altitude (3400m) - take it slow. Visit Plaza de Armas historic square (free). Explore nearby Inca walls and temples. Grab coca tea to combat altitude (PEN 5-10)."
+            ],
+            [
+              "Afternoon",
+              "Sacred Valley day trip - visit local villages (tour PEN 80-120). Ollantaytambo Inca fortress (PEN 70). Pisac ruins and market (PEN 70). Meet alpaca herds. Lunch in mountain village (PEN 25-40)."
+            ],
+            [
+              "Evening",
+              "Return to Cusco. Peruvian dinner - guinea pig (cuy) specialty or chicken (PEN 40-90). Pisco sours at local bars (PEN 20-35 per drink). Rest for Machu Picchu trek ahead."
+            ]
+          ],
+          "cost": "PEN 200-320/day",
+          "note": ""
+        },
+        {
+          "title": "Machu Picchu: Inca Wonder",
+          "periods": [
+            [
+              "Early Morning",
+              "Train Cusco to Aguas Calientes (PEN 100-180, 3.5 hours). Arrive at Machu Picchu gate. Guided tour (PEN 150-250 including entry) explores temples, terraces, Intihuatana stone. Sunrise hike option for best light and views."
+            ],
+            [
+              "Afternoon",
+              "Continue exploring Machu Picchu - hiking around ruins (included). Photos at iconic angles. Understand Inca engineering and history. Rest at viewpoints. Snacks at site cafe (PEN 20-40)."
+            ],
+            [
+              "Evening",
+              "Return train to Cusco. Dinner to celebrate achievement (PEN 50-100). Evening rest and reflection on one of world's greatest wonders."
+            ]
+          ],
+          "cost": "PEN 250-450/day",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "title": "Peru Food Guide",
+      "html": "<p>Peruvian cuisine celebrated globally for innovation and regional diversity. UNESCO-recognized culinary heritage. Fresh seafood, potatoes, quinoa, and native spices create magical dishes.</p>\n<h3>Must-Try Dishes</h3>\n<ul>\n<li><strong>Ceviche</strong> – Fresh fish cured in lime. Cost: PEN 35-80</li>\n<li><strong>Lomo Saltado</strong> – Stir-fried beef with potatoes. Cost: PEN 40-70</li>\n<li><strong>Causa</strong> – Potato terrine with toppings. Cost: PEN 25-50</li>\n<li><strong>Aji de Gallina</strong> – Creamy chicken stew. Cost: PEN 30-60</li>\n<li><strong>Cuy (Guinea Pig)</strong> – Peruvian specialty. Cost: PEN 60-120</li>\n<li><strong>Anticuchos</strong> – Marinated meat skewers. Cost: PEN 20-40</li>\n<li><strong>Arroz con Pollo</strong> – Rice and chicken. Cost: PEN 25-50</li>\n<li><strong>Mazamorra Morada</strong> – Purple corn dessert. Cost: PEN 10-20</li>\n</ul>\n<h3>Best Food Spots</h3>\n<ul>\n<li><strong>Cevicherías</strong> – Casual seafood restaurants, authentic</li>\n<li><strong>Markets</strong> – San Isidro Market in Lima, local ingredients</li>\n<li><strong>Street Food</strong> – Anticuchos, street sandwiches, very affordable</li>\n<li><strong>Upscale Restaurants</strong> – Lima's famous gastronomic scene</li>\n</ul>"
+    },
+    {
+      "id": "best-time",
+      "title": "Best Time to Visit Peru",
+      "html": "<p><strong>Best overall:</strong> May-October (dry season, clear skies, perfect for Machu Picchu trekking)</p>\n<p><strong>Peak season:</strong> June-August (busiest, most expensive, clearest weather)</p>\n<p><strong>Shoulder season:</strong> April-May, September-October (fewer crowds, good weather)</p>\n<p><strong>Budget tip:</strong> November-March (rainy season, lower prices, more rain but fewer tourists)</p>"
+    },
+    {
+      "id": "getting-around",
+      "title": "Getting Around Peru",
+      "html": "<h3>Trains</h3>\n<p>PeruRail operates luxury and local trains. Cusco-Machu Picchu: PEN 100-300+ depending on class and speed.</p>\n<h3>Buses</h3>\n<p>Extensive intercity buses. Lima-Cusco: PEN 40-100 (10-12 hours). First-class buses have reclining seats.</p>\n<h3>Domestic Flights</h3>\n<p>Quick connections between major cities. Lima-Cusco: PEN 200-400. Book in advance for discounts.</p>\n<h3>Local Transport</h3>\n<p>Buses, collectivos, taxis in cities. Bus rides: PEN 1-3. Taxi negotiable or use Uber (available in Lima).</p>"
+    },
+    {
+      "id": "essentials",
+      "title": "Travel Essentials",
+      "html": "<h3>Visa &amp; Entry</h3>\n<p><strong>Visa for Indians:</strong> a Peruvian tourist visa is generally required. Indians holding a valid US, Canadian, UK, Schengen or Australian visa or residence may be able to enter visa-free for tourism; confirm eligibility, validity requirements and stay length with the Embassy of Peru in India before you fly. Rules as of October 2026; always check the official website before you apply.</p>\n<h3>Currency & Money</h3>\n<p><strong>Peruvian Sol (PEN).</strong> Exchange rate: 1 USD ≈ 3.8 PEN. ATMs widely available. Tipping customary (10% at restaurants).</p>\n<h3>Budget Breakdown (per day, budget traveler)</h3>\n<ul>\n<li>Accommodation: PEN 50-100 (hostels, budget hotels)</li>\n<li>Food: PEN 50-100 (street food, markets, casual restaurants)</li>\n<li>Transport: PEN 20-40 (local transit, taxis)</li>\n<li>Activities: PEN 50-100 (museums, tours, attractions)</li>\n<li><strong>Total: PEN 170-340/day (~$45-90 USD)</strong></li>\n</ul>\n<h3>Important Notes</h3>\n<ul>\n<li>Altitude sickness common in Cusco/Sacred Valley - take time to acclimatize, drink coca tea.</li>\n<li>Tap water not potable - drink bottled or filtered water.</li>\n<li>Machu Picchu book tickets in advance (daily limit 2,500 visitors).</li>\n<li>Peru's rainy season November-March affects mountain trekking.</li>\n<li>Spanish helpful - English limited outside tourist areas.</li>\n</ul>"
+    }
+  ],
+  "related": [
+    "mexico",
+    "spain",
+    "egypt",
+    "iceland"
+  ],
+  "readNext": [],
+  "filmed": false
+}

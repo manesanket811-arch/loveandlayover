@@ -80,29 +80,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,900;1,9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<!-- Datadog RUM -->
-<script>
-  (function(h,o,u,n,d) {
-    h=h[d]=h[d]||{q:[],onReady:function(c){h.q.push(c)}}
-    d=o.createElement(u);d.async=1;d.src=n;d.crossOrigin=''
-    n=o.getElementsByTagName(u)[0];n.parentNode.insertBefore(d,n)
-  })(window,document,'script','https://www.datadoghq-browser-agent.com/us5/v7/datadog-rum.js','DD_RUM')
-  window.DD_RUM.onReady(function() {
-    window.DD_RUM.init({ beforeSend: function(event) { if (event.type === "error" && event.error && event.error.resource && event.error.resource.url && (event.error.resource.url.indexOf("google-analytics.com") !== -1 || event.error.resource.url.indexOf("googletagmanager.com") !== -1)) { return false; } return true; },
-        applicationId: '2b36cb95-5c53-4b4c-afd7-5cc7207d8d8c',
-        clientToken: 'pub398e9055d3a8e18d44a22e64e505b1fa',
-        site: 'us5.datadoghq.com',
-        service: 'love-and-layovers',
-        env: 'production',
-        version: '1.0.0',
-        sessionSampleRate: 100,
-        sessionReplaySampleRate: 10,
-        trackResources: true,
-        trackUserInteractions: true,
-        trackLongTasks: true,
-    });
-  })
-</script>
 <link rel="stylesheet" href="/css/site.css?v=1">
 <style>
   /* ---------- Blog page ---------- */
@@ -294,7 +271,7 @@
         <h2>21 free destination guides</h2>
         <p>Day-by-day itineraries, food, best time to visit and daily budgets — from Singapore and Japan to Iceland and Peru.</p>
         <div class="guide-flags" aria-hidden="true">
-          <img src="/images/flags/sg.svg" alt=""><img src="/images/flags/jp.svg" alt=""><img src="/images/flags/th.svg" alt=""><img src="/images/flags/vn.svg" alt=""><img src="/images/flags/id.svg" alt=""><img src="/images/flags/kr.svg" alt=""><img src="/images/flags/in.svg" alt=""><img src="/images/flags/tr.svg" alt=""><img src="/images/flags/it.svg" alt=""><img src="/images/flags/gr.svg" alt=""><img src="/images/flags/fr.svg" alt=""><img src="/images/flags/es.webp" alt=""><img src="/images/flags/pt.svg" alt=""><img src="/images/flags/de.svg" alt=""><img src="/images/flags/is.svg" alt=""><img src="/images/flags/mx.webp" alt=""><img src="/images/flags/pe.svg" alt=""><img src="/images/flags/eg.svg" alt=""><img src="/images/flags/au.svg" alt="">
+          <img width="640" height="480" src="/images/flags/sg.svg" alt=""><img width="640" height="480" src="/images/flags/jp.svg" alt=""><img width="640" height="480" src="/images/flags/th.svg" alt=""><img width="640" height="480" src="/images/flags/vn.svg" alt=""><img width="640" height="480" src="/images/flags/id.svg" alt=""><img width="640" height="480" src="/images/flags/kr.svg" alt=""><img width="640" height="480" src="/images/flags/in.svg" alt=""><img width="640" height="480" src="/images/flags/tr.svg" alt=""><img width="640" height="480" src="/images/flags/it.svg" alt=""><img width="640" height="480" src="/images/flags/gr.svg" alt=""><img width="640" height="480" src="/images/flags/fr.svg" alt=""><img width="96" height="72" src="/images/flags/es.webp" alt=""><img width="640" height="480" src="/images/flags/pt.svg" alt=""><img width="640" height="480" src="/images/flags/de.svg" alt=""><img width="640" height="480" src="/images/flags/is.svg" alt=""><img width="96" height="72" src="/images/flags/mx.webp" alt=""><img width="640" height="480" src="/images/flags/pe.svg" alt=""><img width="640" height="480" src="/images/flags/eg.svg" alt=""><img width="640" height="480" src="/images/flags/au.svg" alt="">
         </div>
       </div>
       <a href="/destinations/" class="btn btn-light">Browse all guides <span aria-hidden="true">→</span></a>
@@ -325,6 +302,7 @@
 </footer>
 
 <script src="/js/site.js?v=3"></script>
+<script src="/js/datadog.js" defer></script>
 <script>
 (function () {
   'use strict';

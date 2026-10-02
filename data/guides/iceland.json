@@ -1,0 +1,121 @@
+{
+  "slug": "iceland",
+  "title": "Iceland Travel Guide 2026: Golden Circle & South Coast",
+  "description": "A 3-day Iceland itinerary: Reykjavík, the Golden Circle and the South Coast, with Icelandic food, driving tips, an ISK budget and visa tips for Indians.",
+  "h1": "Iceland Travel Guide 2026",
+  "country": "Iceland",
+  "datePublished": "2026-01-01",
+  "dateModified": "2026-10-02",
+  "faq": [],
+  "badges": {
+    "budget": "ISK 25,000–40,000/day",
+    "best": "Jun–Aug, Sep–Mar for auroras",
+    "visa": "Schengen visa"
+  },
+  "videoKeywords": "iceland,reykjavik,northern lights",
+  "foodImage": {
+    "src": "/images/destinations/iceland-food.webp",
+    "alt": "Plokkfiskur, a creamy Icelandic fish and potato stew",
+    "caption": "Plokkfiskur, a creamy Icelandic fish and potato stew"
+  },
+  "sections": [
+    {
+      "id": "why-visit",
+      "title": "Why Visit Iceland?",
+      "html": "<p><strong>Iceland</strong> feels like another planet: thundering waterfalls, black-sand beaches, glaciers, steaming geothermal lagoons and, in winter, the Northern Lights dancing overhead. In summer the sun barely sets, so you can explore late into the night.</p>\n<p>It is expensive and the weather changes by the hour, but it is compact enough that a few days around Reykjavík, the Golden Circle and the South Coast show you some of the most dramatic landscapes in Europe.</p>"
+    },
+    {
+      "id": "itineraries",
+      "title": "3-Day Iceland Itinerary",
+      "html": "<p>A 3-day plan with morning, afternoon and evening ideas and an approximate daily cost per person. Use it as a starting point and adjust to your pace.</p>",
+      "after": "",
+      "days": [
+        {
+          "title": "Reykjavík",
+          "cost": "ISK 25,000–35,000/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Land at Keflavík Airport and take an airport bus to Reykjavík (about 45 minutes). Drop your bags and grab breakfast at a bakery; try <strong>kleinur</strong>, Icelandic twisted doughnuts."
+            ],
+            [
+              "Afternoon",
+              "Ride the lift up <strong>Hallgrímskirkja</strong> church tower for city views, walk down Skólavörðustígur and Laugavegur, and visit the glass <strong>Harpa</strong> concert hall by the harbour."
+            ],
+            [
+              "Evening",
+              "Soak in a geothermal lagoon such as Sky Lagoon, or do as locals do at a neighbourhood swimming pool. Dinner in the Old Harbour area."
+            ]
+          ]
+        },
+        {
+          "title": "The Golden Circle",
+          "cost": "ISK 30,000–45,000/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Drive or join a tour to <strong>Þingvellir National Park</strong>, where you can walk between the North American and Eurasian tectonic plates."
+            ],
+            [
+              "Afternoon",
+              "Watch <strong>Strokkur</strong> erupt every few minutes at the Geysir area, then see the huge two-tiered <strong>Gullfoss</strong> waterfall. Optional stops: Kerið crater or a soak at a geothermal pool."
+            ],
+            [
+              "Evening",
+              "Between September and March, head away from city lights on a clear night to hunt for the <strong>Northern Lights</strong>; check the aurora forecast first."
+            ]
+          ]
+        },
+        {
+          "title": "The South Coast",
+          "cost": "ISK 30,000–45,000/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Drive south to <strong>Seljalandsfoss</strong>, the waterfall you can walk behind (bring a rain jacket), and nearby <strong>Skógafoss</strong>."
+            ],
+            [
+              "Afternoon",
+              "Continue to <strong>Reynisfjara</strong> black-sand beach near Vík. Stay well back from the water: sudden \"sneaker waves\" are dangerous. Optional: a guided glacier walk on Sólheimajökull."
+            ],
+            [
+              "Evening",
+              "Drive back to Reykjavík (about 2.5 hours) or stay overnight near Vík to break the journey."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "title": "Icelandic Food to Try",
+      "html": "<ul>\n<li><strong>Plokkfiskur</strong> — Creamy fish and potato stew, often served with dark rye bread.</li>\n<li><strong>Kjötsúpa</strong> — Hearty lamb and vegetable soup, perfect on a cold day.</li>\n<li><strong>Pylsur</strong> — Icelandic hot dogs with crispy onions and sweet mustard; one of the cheapest meals in Reykjavík.</li>\n<li><strong>Skyr</strong> — Thick, high-protein cultured dairy, eaten plain or with berries.</li>\n<li><strong>Rúgbrauð</strong> — Dense, slightly sweet rye bread, sometimes baked in geothermal ground.</li>\n<li><strong>Fresh seafood and langoustine</strong> — Especially good along the South Coast.</li>\n</ul>\n<p><strong>Saving money:</strong> eating out is expensive, so stock up at supermarkets like Bónus and Krónan. Reykjavík has Indian and vegetarian restaurants, and tap water is excellent, so never buy bottled.</p>"
+    },
+    {
+      "id": "best-time",
+      "title": "Best Time to Visit Iceland",
+      "html": "<p><strong>Summer (June–August):</strong> long daylight hours and the midnight sun, all roads open, best for hiking and road trips. Busiest and most expensive.</p>\n<p><strong>Northern Lights season (September–March):</strong> dark skies give you a chance to see the aurora on clear nights. Days are short (only a few hours of light in December) and winter driving can be hazardous, so many visitors choose guided tours.</p>\n<p><strong>Shoulder months (May and September):</strong> a good balance of daylight, prices and crowds. Whenever you go, check the weather (vedur.is) and road conditions (road.is) every day.</p>"
+    },
+    {
+      "id": "getting-around",
+      "title": "Getting Around Iceland",
+      "html": "<p><strong>Airport transfer:</strong> buses run from Keflavík Airport to Reykjavík in about 45 minutes.</p>\n<p><strong>Rental car:</strong> the most flexible way to see the Golden Circle and South Coast. Iceland drives on the right. Check with your rental company whether you need an International Driving Permit with your Indian licence. A 4x4 is required for mountain F-roads (summer only), and off-road driving is illegal.</p>\n<p><strong>Tours:</strong> if you don't want to drive, day tours from Reykjavík cover the Golden Circle, South Coast, glaciers and Northern Lights.</p>\n<p><strong>Buses and domestic flights:</strong> public buses are limited outside the capital area; domestic flights connect Reykjavík with Akureyri and other towns.</p>"
+    },
+    {
+      "id": "essentials",
+      "title": "Travel Essentials",
+      "html": "<p><strong>Visa for Indians:</strong> a Schengen short-stay visa is required. Apply through the visa centre that handles Iceland in India (currently represented by Denmark, via VFS Global) if Iceland is your main destination, up to 6 months and at least 15 days before you travel. The fee is €90 for adults, processing usually takes about 15 days (longer in summer), and you need travel insurance with at least €30,000 medical cover. The visa allows up to 90 days in any 180-day period across the Schengen area. Rules as of October 2026; always check the official website before you apply.</p>\n<p><strong>Money:</strong> Icelandic króna (ISK). Cards are accepted almost everywhere, even for small amounts, so you will rarely need cash. Tipping is not expected.</p>\n<p><strong>Daily budget (per person):</strong> accommodation ISK 12,000–25,000, food ISK 6,000–12,000, transport and tours ISK 8,000–20,000, so roughly <strong>ISK 25,000–40,000 a day</strong> for a mid-range trip.</p>\n<p><strong>SIM card:</strong> prepaid SIMs from Síminn, Nova and Vodafone are sold at the airport and in shops; eSIMs work well too.</p>\n<p><strong>Plugs:</strong> type C/F, 230V. Bring a European adapter.</p>\n<p><strong>Safety:</strong> dress in layers with a waterproof jacket, respect closed paths and beach warnings, and check safetravel.is for alerts before heading out.</p>"
+    }
+  ],
+  "related": [
+    "germany",
+    "france",
+    "italy",
+    "portugal"
+  ],
+  "readNext": [],
+  "filmed": false
+}

@@ -1,0 +1,125 @@
+{
+  "slug": "australia",
+  "title": "Australia Travel Guide 2026: Sydney, Melbourne & the Reef",
+  "description": "Australia itineraries covering the Sydney Opera House, Melbourne cafés and the Great Barrier Reef, with an AUD budget and tips for Indian travellers.",
+  "h1": "Australia Travel Guide 2026",
+  "country": "Australia",
+  "datePublished": "2026-01-01",
+  "dateModified": "2026-10-02",
+  "faq": [],
+  "badges": {
+    "budget": "A$80-150/day",
+    "best": "Oct-Apr",
+    "visa": "Visitor visa (subclass 600)"
+  },
+  "videoKeywords": "australia",
+  "foodImage": {
+    "src": "/images/destinations/australia-food.webp",
+    "alt": "Pavlova, a meringue dessert topped with cream and fresh fruit",
+    "caption": "Pavlova, a meringue dessert topped with cream and fresh fruit"
+  },
+  "sections": [
+    {
+      "id": "why-visit",
+      "title": "Why Visit Australia?",
+      "html": "<p><strong>Australia</strong> is the world's largest island-continent offering jaw-dropping natural wonders, world-class cities, and incredible wildlife. From the iconic Sydney Opera House to the turquoise waters of the Great Barrier Reef, ancient Aboriginal culture in the Outback, and Melbourne's vibrant laneways—Australia has something for every traveler. Perfect for nature lovers, beach enthusiasts, and adventure seekers.</p>\n<p>Whether you're diving on the reef, hiking through rainforests, or exploring cosmopolitan cities, Australia delivers unforgettable experiences with friendly locals, stunning beaches, and some of the world's most unique animals.</p>"
+    },
+    {
+      "id": "itineraries",
+      "title": "3-Day Australia Itinerary",
+      "html": "<p>A 3-day plan with morning, afternoon and evening ideas and an approximate daily cost per person. Use it as a starting point and adjust to your pace.</p>",
+      "after": "",
+      "days": [
+        {
+          "title": "Sydney: Opera House & Bondi Beach",
+          "periods": [
+            [
+              "Morning",
+              "Arrive at Sydney International Airport. Take train into the city (A$19.80, 13 mins). Check in and head to Circular Quay. Walk around Sydney Opera House, explore the forecourt (free). Take photos from different angles—no entry fee needed."
+            ],
+            [
+              "Afternoon",
+              "Walk to The Rocks (historic neighborhood) and Harbour Bridge. Have lunch at a local cafe (A$15-25). Relax at Bondi Beach or nearby Tamarama. Watch sunset over the water with a coffee (A$5-7)."
+            ],
+            [
+              "Evening",
+              "Dinner at Chinatown or Darling Harbour (A$20-40). Walk along Barangaroo Reserve. Explore the vibrant neighborhoods and street art in Surry Hills or Newtown."
+            ]
+          ],
+          "cost": "A$100-150/day",
+          "note": ""
+        },
+        {
+          "title": "Blue Mountains & Scenic World",
+          "periods": [
+            [
+              "Early Morning",
+              "Take train from Central Station to Katoomba in the Blue Mountains (A$15.20 return, 2 hours). The blue haze from eucalyptus trees makes these mountains stunning. Pick up coffee from a local cafe (A$5)."
+            ],
+            [
+              "Afternoon",
+              "Visit Scenic World (A$49): ride the Scenic Railway (steepest passenger railway), Cableway, and Railway. Walk Echo Point trail to see the Three Sisters rock formation (free). Explore Prince Henry Cliff Walk for panoramic views (free, 1-hour round trip)."
+            ],
+            [
+              "Evening",
+              "Return to Sydney by train. Dinner in Surry Hills or inner-city neighborhood (A$25-40). Early night to recover from travel."
+            ]
+          ],
+          "cost": "A$90-130/day",
+          "note": ""
+        },
+        {
+          "title": "Manly Beach & Coastal Walk",
+          "periods": [
+            [
+              "Morning",
+              "Catch the ferry from Circular Quay to Manly (A$8.80, 30 mins, scenic route). Breakfast at one of the beachfront cafes (A$12-18). Relax on Manly Beach—perfect for swimming and sunbathing."
+            ],
+            [
+              "Afternoon",
+              "Walk the Manly to Shelly Beach coastal trail (10km, 3 hours). Spot sea cliffs, rock pools, and beaches. Stop at quieter beaches like Shelly (great snorkeling if you have gear). Lunch at a beachside cafe (A$15-25)."
+            ],
+            [
+              "Evening",
+              "Take the ferry back to the city. Final dinner and explore more of Sydney's neighborhoods. Visit local pubs or night markets (A$20-40)."
+            ]
+          ],
+          "cost": "A$80-120/day",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "title": "Australia Food Guide",
+      "html": "<p>Australian cuisine is diverse and fresh, featuring world-class seafood, indigenous ingredients, and multicultural influences. From coastal fish to hearty meat pies, coffee culture, and Asian fusion—Australia's food scene is excellent and surprisingly affordable.</p>\n<h3>Must-Try Dishes</h3>\n<ul>\n<li><strong>Barramundi Fish</strong> – Grilled or pan-fried with lemon and herb. Cost: A$20-35</li>\n<li><strong>Chicken Parmigiana</strong> – Breaded chicken with tomato sauce and melted cheese. Cost: A$18-25</li>\n<li><strong>Lamingtons</strong> – Sponge cake coated in chocolate and coconut. Cost: A$4-6</li>\n<li><strong>Vegemite on Toast</strong> – Australian breakfast staple (acquired taste!). Cost: A$5-8</li>\n<li><strong>Meat Pie</strong> – Traditional Australian pastry with beef filling. Cost: A$6-10</li>\n<li><strong>Pavlova</strong> – Meringue dessert with cream and berries. Cost: A$8-12</li>\n<li><strong>Fresh Oysters</strong> – Especially in coastal areas like Sydney. Cost: A$3-5 each</li>\n<li><strong>Anzac Biscuits</strong> – Oat, coconut, and golden syrup cookies. Cost: A$4-6 per pack</li>\n</ul>\n<h3>Best Food Spots</h3>\n<ul>\n<li><strong>Sydney Fish Market</strong> (Pyrmont) – Fresh seafood, lunch spots, sushi, oyster bars</li>\n<li><strong>Queen Victoria Market</strong> (Melbourne) – Produce, food stalls, international cuisine</li>\n<li><strong>Paddington Markets</strong> (Sydney Saturdays) – Local goods, street food, fresh produce</li>\n<li><strong>Chinatown</strong> (Sydney & Melbourne) – Authentic Asian cuisine, budget-friendly</li>\n</ul>"
+    },
+    {
+      "id": "best-time",
+      "title": "Best Time to Visit Australia",
+      "html": "<p><strong>Best overall:</strong> October-April (spring/summer, 25-30°C, perfect weather, fewer crowds than peak season)</p>\n<p><strong>Budget travelers:</strong> May-September (winter, cooler, 15-20°C, cheaper flights and accommodation)</p>\n<p><strong>Great Barrier Reef:</strong> June-October (dry season, calm seas, excellent visibility)</p>\n<p><strong>Avoid:</strong> December-January (peak season, higher prices, summer holidays, cyclone risk in northern areas)</p>"
+    },
+    {
+      "id": "getting-around",
+      "title": "Getting Around Australia",
+      "html": "<h3>Public Transport (Best in Cities)</h3>\n<p><strong>Sydney:</strong> Opal card for trains, buses, ferries. A$9.80 daily cap on weekdays (unlimited travel). Ferries are scenic and fun.</p>\n<p><strong>Melbourne:</strong> Myki card. A$12.20 daily cap. Trams are iconic and free within the CBD (central business district).</p>\n<h3>Domestic Flights</h3>\n<p><strong>For long distances:</strong> Qantas, Virgin, or budget airlines like Jetstar. Book in advance for better rates (A$50-150 one-way).</p>\n<p><strong>Route examples:</strong> Sydney to Melbourne (A$60-100), Sydney to Cairns for reef access (A$100-180).</p>\n<h3>Rental Cars</h3>\n<p><strong>Useful for:</strong> Great Barrier Reef drives, Outback exploration, smaller towns. A$40-80/day.</p>\n<p><strong>Note:</strong> Australians drive on the LEFT. Roads are generally excellent. Long distances between towns require planning.</p>\n<h3>Taxis & Rideshare</h3>\n<p>Uber available in major cities. Yellow Cabs in Sydney and Melbourne. Generally 20-30% more expensive than public transport.</p>"
+    },
+    {
+      "id": "essentials",
+      "title": "Travel Essentials",
+      "html": "<h3>Visa &amp; Entry</h3>\n<p><strong>Visa for Indians:</strong> you need an Australian Visitor visa (subclass 600, tourist stream), applied for online through ImmiAccount on the Department of Home Affairs website. The eVisitor and ETA are not available to Indian passport holders. Processing can take several weeks, so apply well ahead. Rules as of October 2026; always check the official website before you apply.</p>\n<h3>Currency & Money</h3>\n<p><strong>Australian Dollar (A$).</strong> Exchange rate: 1 USD ≈ 1.50 A$.</p>\n<p><strong>ATMs:</strong> Widespread in cities and towns. Most accept Visa/Mastercard. No forex fees if using local bank ATMs.</p>\n<p><strong>Tipping:</strong> NOT expected. 10% optional in fine dining. Service staff are well-paid compared to other countries.</p>\n<h3>Budget Breakdown (per day, budget traveler)</h3>\n<ul>\n<li>Accommodation: A$40-80 (hostels, budget hotels, airbnb)</li>\n<li>Food: A$30-50 (mix of cheap eats, cafes, occasional restaurants)</li>\n<li>Transport: A$15-25 (public transport, some regional trains)</li>\n<li>Activities: A$20-40 (museums, national parks, scenic experiences)</li>\n<li><strong>Total: A$105-195/day (~$70-130 USD)</strong></li>\n</ul>\n<h3>Getting a SIM Card</h3>\n<p>Buy at Sydney Airport or any Woolworths/Coles supermarket. Prepaid plans: A$15-40 for 7-14 days unlimited data. Providers: Vodafone, Telstra, Optus.</p>\n<h3>Important Notes</h3>\n<ul>\n<li>Sunscreen is ESSENTIAL. UV index is very high. Pack SPF 50+.</li>\n<li>Australia has strict biosecurity. Don't bring fresh food, plants, or animal products.</li>\n<li>Debit cards work almost everywhere. Tipping is not a culture—don't feel obligated.</li>\n<li>Check wildlife warnings before swimming (sharks, stingrays in some areas).</li>\n</ul>"
+    }
+  ],
+  "related": [
+    "bali",
+    "singapore",
+    "indonesia",
+    "malaysia"
+  ],
+  "readNext": [
+    "/destinations/bali.html",
+    "/destinations/indonesia.html",
+    "/destinations/india.html"
+  ],
+  "filmed": false
+}

@@ -1,0 +1,125 @@
+{
+  "slug": "india",
+  "title": "India Travel Guide 2026: Taj Mahal, Delhi & Rajasthan",
+  "description": "India itineraries covering the Taj Mahal, Delhi, Agra and Rajasthan, with an INR budget breakdown, authentic food and cultural tips for travellers.",
+  "h1": "India Travel Guide 2026",
+  "country": "India",
+  "datePublished": "2026-01-01",
+  "dateModified": "2026-10-02",
+  "faq": [],
+  "badges": {
+    "budget": "2,000-3,500/day",
+    "best": "Oct-Mar",
+    "visa": "No visa for Indians; e-Visa for most foreigners"
+  },
+  "videoKeywords": "india,mumbai,pune,marathi",
+  "foodImage": {
+    "src": "/images/destinations/india-food.webp",
+    "alt": "A spicy anda (egg) curry",
+    "caption": "A spicy anda (egg) curry"
+  },
+  "sections": [
+    {
+      "id": "why-visit",
+      "title": "Why Visit India?",
+      "html": "<p><strong>India</strong> is a sensory explosion of colors, cultures, and ancient wonders. From the magnificent Taj Mahal to the chaotic streets of Delhi, spiritual temples in Rajasthan, and the vibrant chaos of Mumbai—India offers unmatched experiences. One of the world's oldest civilizations, India blends history, spirituality, street food, and hospitality like no other country.</p>\n<p>Whether you're exploring palace architecture, tasting incredible street food, getting massages in Ayurvedic wellness centers, or meditating at sacred temples, India is transformative and deeply rewarding for every traveler.</p>"
+    },
+    {
+      "id": "itineraries",
+      "title": "3-Day India Itinerary",
+      "html": "<p>A 3-day plan with morning, afternoon and evening ideas and an approximate daily cost per person. Use it as a starting point and adjust to your pace.</p>",
+      "after": "",
+      "days": [
+        {
+          "title": "Delhi: Red Fort & Chandni Chowk",
+          "periods": [
+            [
+              "Morning",
+              "Arrive at Delhi airport. Take prepaid taxi or Uber to your hotel in Connaught Place or Paharganj (300-600). Check in and freshen up. Visit Red Fort (UNESCO site, 250 entry). Explore the centuries-old structure and gardens."
+            ],
+            [
+              "Afternoon",
+              "Walk to the iconic Jama Masjid (free, beautiful courtyard). Visit Chandni Chowk market (chaotic, colorful, authentic). Try street food: samosas (5-10), jalebi (10-20), lassi (30-50). Shop at spice markets and old Delhi bookstalls."
+            ],
+            [
+              "Evening",
+              "Visit Raj Ghat (Mahatma Gandhi's memorial, free). Watch sunset from Feroz Shah Kotla ruins (free). Dinner at Karim's (famous street restaurant, 150-300) or a rooftop restaurant in New Delhi (500-1,000)."
+            ]
+          ],
+          "cost": "2,000-3,000/day",
+          "note": ""
+        },
+        {
+          "title": "Agra: Taj Mahal & Red Fort",
+          "periods": [
+            [
+              "Early Morning",
+              "Take train from Delhi to Agra (3 hours, 200-800 depending on class). Or drive (5-6 hours). Breakfast at hotel. Rest briefly. Start early to visit Taj Mahal at sunrise (750 entry, best time 6-7am, few crowds, magical light)."
+            ],
+            [
+              "Afternoon",
+              "Explore Agra Fort (300 entry), where Shah Jahan was imprisoned. Walk through marble halls and water gardens. Rest at hotel. Visit local marble inlay workshops to see artisans work (free, though they'll try to sell)."
+            ],
+            [
+              "Evening",
+              "Watch Taj Mahal at sunset (included in ticket, different view). Dinner at a rooftop restaurant overlooking the monument (400-800). Walk the Yamuna riverside promenade."
+            ]
+          ],
+          "cost": "2,500-3,500/day",
+          "note": ""
+        },
+        {
+          "title": "Jaipur: Pink City & Palaces",
+          "periods": [
+            [
+              "Morning",
+              "Train or drive from Agra to Jaipur (4.5 hours by train, 300-1,200). Visit Hawa Mahal (Palace of Winds, 300, iconic pink facade). Walk through the old city markets (free, shops have traditional crafts)."
+            ],
+            [
+              "Afternoon",
+              "City Palace (400, still home to the royal family, stunning architecture). Jantar Mantar (ancient astronomical observation site, 300). Walk through local bazaars and have lunch at a traditional Rajasthani thali restaurant (150-300)."
+            ],
+            [
+              "Evening",
+              "Visit Albert Hall Museum (250) or relax at a local spa/massage center (500-1,000 for full body Ayurvedic massage). Traditional Rajasthani dinner with folk dance performances (800-1,500)."
+            ]
+          ],
+          "cost": "2,000-3,000/day",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "title": "India Food Guide",
+      "html": "<p>Indian cuisine is diverse, flavorful, and incredibly affordable. From street food to fine dining, India offers regional specialties—North Indian curries, South Indian dosas, street snacks, and ancient Ayurvedic cooking traditions. Every region has unique flavors and culinary secrets.</p>\n<h3>Must-Try Dishes</h3>\n<ul>\n<li><strong>Butter Chicken (Murgh Makhani)</strong> – Tender chicken in creamy tomato sauce. Cost: 250-400</li>\n<li><strong>Biryani</strong> – Rice cooked with meat and aromatic spices. Cost: 200-350</li>\n<li><strong>Dosa</strong> – South Indian crepe with lentil batter, savory. Cost: 50-150</li>\n<li><strong>Samosa</strong> – Fried triangular pastry with spiced potato or meat. Cost: 5-15</li>\n<li><strong>Tandoori Chicken</strong> – Marinated and clay-oven baked. Cost: 250-400</li>\n<li><strong>Paneer Tikka</strong> – Cottage cheese marinated and grilled. Cost: 150-300</li>\n<li><strong>Masala Dosa</strong> – South Indian specialty with lentil crepe and sambar. Cost: 80-200</li>\n<li><strong>Chai</strong> – Spiced tea, an Indian ritual. Cost: 10-30 per cup</li>\n</ul>\n<h3>Best Food Spots</h3>\n<ul>\n<li><strong>Chandni Chowk</strong> (Delhi) – Street food hub, paratas, chaats, sweets</li>\n<li><strong>Karim's</strong> (Delhi) – Famous Mughlai food since 1913</li>\n<li><strong>Local Thali Restaurants</strong> – Affordable complete meals with vegetables, breads, rice, lentils</li>\n<li><strong>Street Food Stalls</strong> – Pani puri, chaat, samosas, dahi bhalle (budget-friendly)</li>\n</ul>"
+    },
+    {
+      "id": "best-time",
+      "title": "Best Time to Visit India",
+      "html": "<p><strong>Best overall:</strong> October-March (cool, dry weather 15-25°C, clear skies, perfect for sightseeing)</p>\n<p><strong>Summer:</strong> April-June (hot and dry, 35-45°C, fewer tourists, lower prices, manageable in mountain areas)</p>\n<p><strong>Monsoon:</strong> July-September (heavy rain, lush green landscapes, lower prices, but travel can be challenging)</p>\n<p><strong>Avoid:</strong> Peak tourist season December-January (higher prices, crowded monuments)</p>"
+    },
+    {
+      "id": "getting-around",
+      "title": "Getting Around India",
+      "html": "<h3>Trains (Best for Long Distances)</h3>\n<p><strong>Indian Railways:</strong> Extensive network, affordable. Book at indianrailways.gov.in. Classes: Sleeper (cheapest), AC 2-tier, AC 3-tier. 300-2,000 for 8-hour journeys depending on class.</p>\n<h3>Buses</h3>\n<p><strong>Intercity buses:</strong> Cheaper than trains. Deluxe sleeper buses common. Book through apps like MakeMyTrip or Redbus. 200-800 depending on distance.</p>\n<h3>Flights</h3>\n<p><strong>For long distances:</strong> IndiGo, SpiceJet, Air India. Book in advance. 3,000-8,000 for major routes.</p>\n<h3>Local Transport</h3>\n<p><strong>Metros:</strong> Delhi, Mumbai, Bangalore have metro systems. 5-30 per ride. Fast and efficient.</p>\n<p><strong>Taxis/Autos:</strong> Autorickshaws (3-wheeled) are cheap and ubiquitous. 30-100 for short distances. Use Ola/Uber in cities.</p>\n<h3>Taxis & Rideshare</h3>\n<p>Ola and Uber available in major cities. Generally affordable. Negotiate prices with auto-rickshaws.</p>"
+    },
+    {
+      "id": "essentials",
+      "title": "Travel Essentials",
+      "html": "<h3>Visa &amp; Entry</h3>\n<p><strong>Indian citizens:</strong> no visa needed; carry a government photo ID for flights and hotels.</p>\n<p><strong>Foreign visitors:</strong> most nationalities can apply for an Indian e-Visa online at the official indianvisaonline.gov.in portal. Check eligibility and fees for your passport before you apply.</p>\n<h3>Currency & Money</h3>\n<p><strong>Indian Rupee (₹).</strong> Exchange rate: 1 USD ≈ 83 INR.</p>\n<p><strong>ATMs:</strong> Widespread in cities and towns. ICICI, HDFC, SBI are reliable. Withdraw cash in advance for remote areas.</p>\n<p><strong>Tipping:</strong> NOT expected. 10% optional in fine dining restaurants. Staff are appreciated but not dependent on tips.</p>\n<h3>Budget Breakdown (per day, budget traveler)</h3>\n<ul>\n<li>Accommodation: 500-1,200 (hostels, budget hotels, homestays)</li>\n<li>Food: 400-800 (mix of street food, local restaurants, thalis)</li>\n<li>Transport: 200-400 (local buses, autos, trains for long distances)</li>\n<li>Activities: 300-800 (monument entries, experiences)</li>\n<li><strong>Total: 1,400-3,200/day (~$17-38 USD)</strong></li>\n</ul>\n<h3>Getting a SIM Card</h3>\n<p>Buy at airport or any Airtel/Jio/Vodafone store. Prepaid plans: 300-600 for 7-28 days unlimited data. Requires photo ID and address proof.</p>\n<h3>Important Notes</h3>\n<ul>\n<li>Drink only bottled water. Street water is unsafe for visitors.</li>\n<li>Respect local customs: Remove shoes at temples, dress modestly.</li>\n<li>Haggling is expected at markets and shops.</li>\n<li>Street food is safe if it's busy and freshly cooked. Look for crowds.</li>\n<li>Cash is king. Many places don't accept cards.</li>\n</ul>"
+    }
+  ],
+  "related": [
+    "singapore",
+    "thailand",
+    "malaysia",
+    "bali"
+  ],
+  "readNext": [
+    "/destinations/bali.html",
+    "/destinations/indonesia.html",
+    "/destinations/australia.html"
+  ],
+  "filmed": false
+}
