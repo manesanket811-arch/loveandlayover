@@ -8,12 +8,18 @@ const fs = require('fs');
 const path = require('path');
 
 const CHANNEL_ID = 'UCUABrODa0CNF5zgkesAlYeA';
-const FEED_URL = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`;
+// The channel feed sometimes returns 404 for hours at a time; the channel's
+// uploads playlist (UC… → UU…) carries the same entries and is tried next.
+const FEED_URLS = [
+  `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`,
+  `https://www.youtube.com/feeds/videos.xml?playlist_id=UU${CHANNEL_ID.slice(2)}`,
+];
+const UA = 'Mozilla/5.0 (compatible; LoveAndLayoversBot/1.0; +https://www.loveandlayover.in)';
 const DATA_FILE = path.join(__dirname, '..', 'videos-data.json');
 
 function get(url) {
   return new Promise((resolve, reject) => {
-    https.get(url, (res) => {
+    https.get(url, { headers: { 'User-Agent': UA } }, (res) => {
       let data = '';
       res.on('data', chunk => data += chunk);
       res.on('end', () => resolve({ status: res.statusCode, body: data }));
@@ -80,13 +86,33 @@ function extractKeywords(title) {
   return [...new Set([...keywords, 'adventure'])].slice(0, 6);
 }
 
+const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+
+// Try each feed URL a few times with backoff; null if YouTube never answers.
+async function fetchFeed() {
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    for (const url of FEED_URLS) {
+      try {
+        const { status, body } = await get(url);
+        if (status === 200 && body.includes('<feed')) return body;
+        console.log(`Attempt ${attempt}: HTTP ${status} from ${url}`);
+      } catch (e) {
+        console.log(`Attempt ${attempt}: ${e.message} from ${url}`);
+      }
+    }
+    if (attempt < 3) await sleep(attempt * 15000);
+  }
+  return null;
+}
+
 async function main() {
-  const xml = process.env.FEED_FILE
-    ? fs.readFileSync(process.env.FEED_FILE, 'utf8')
-    : await get(FEED_URL).then(({ status, body }) => {
-        if (status !== 200) throw new Error(`Feed request failed with HTTP ${status}`);
-        return body;
-      });
+  const xml = process.env.FEED_FILE ? fs.readFileSync(process.env.FEED_FILE, 'utf8') : await fetchFeed();
+  if (!xml) {
+    // A YouTube outage shouldn't fail the run: keep the current videos and let
+    // the next scheduled run pick up anything new.
+    console.log('::warning::YouTube feed unavailable; keeping existing videos-data.json');
+    return;
+  }
 
   const existing = fs.existsSync(DATA_FILE) ? JSON.parse(fs.readFileSync(DATA_FILE, 'utf8')) : [];
   const byId = new Map(existing.map(v => [v.id, v]));
