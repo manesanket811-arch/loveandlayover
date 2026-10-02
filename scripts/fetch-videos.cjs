@@ -105,27 +105,123 @@ async function fetchFeed() {
   return null;
 }
 
-async function main() {
-  const xml = process.env.FEED_FILE ? fs.readFileSync(process.env.FEED_FILE, 'utf8') : await fetchFeed();
-  if (!xml) {
-    // A YouTube outage shouldn't fail the run: keep the current videos and let
-    // the next scheduled run pick up anything new.
-    console.log('::warning::YouTube feed unavailable; keeping existing videos-data.json');
-    return;
-  }
+// ---------- fallback: read the channel pages when the feed is down ----------
+const PAGE_HEADERS = { 'Accept-Language': 'en-US,en;q=0.9', Cookie: 'CONSENT=YES+1; SOCS=CAI' };
 
+function getPage(url) {
+  return new Promise((resolve, reject) => {
+    https.get(url, { headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36', ...PAGE_HEADERS } }, (res) => {
+      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+        res.resume();
+        return resolve(getPage(new URL(res.headers.location, url).href));
+      }
+      let data = '';
+      res.on('data', chunk => data += chunk);
+      res.on('end', () => resolve({ status: res.statusCode, body: data }));
+    }).on('error', reject);
+  });
+}
+
+// Pull the JSON object assigned after `marker` out of a page's inline script.
+function extractJson(html, marker) {
+  const at = html.indexOf(marker);
+  if (at === -1) return null;
+  const start = html.indexOf('{', at);
+  let depth = 0, inStr = false, esc = false;
+  for (let i = start; i < html.length; i++) {
+    const c = html[i];
+    if (inStr) {
+      if (esc) esc = false;
+      else if (c === '\\') esc = true;
+      else if (c === '"') inStr = false;
+    } else if (c === '"') inStr = true;
+    else if (c === '{') depth++;
+    else if (c === '}' && --depth === 0) {
+      try { return JSON.parse(html.slice(start, i + 1)); } catch (e) { return null; }
+    }
+  }
+  return null;
+}
+
+// Video ids in page order from the channel's Videos or Shorts tab.
+async function channelTabIds(tab) {
+  const { status, body } = await getPage(`https://www.youtube.com/channel/${CHANNEL_ID}/${tab}`);
+  if (status !== 200) { console.log(`Channel ${tab} page: HTTP ${status}`); return []; }
+  const data = extractJson(body, 'ytInitialData');
+  const text = data ? JSON.stringify(data) : body;
+  return [...new Set([...text.matchAll(/"(?:videoId|contentId)":"([\w-]{11})"/g)].map(m => m[1]))];
+}
+
+// Title, exact date and full description from a video's watch page.
+async function watchDetails(id) {
+  const { status, body } = await getPage(`https://www.youtube.com/watch?v=${id}`);
+  if (status !== 200) return null;
+  const pr = extractJson(body, 'ytInitialPlayerResponse');
+  const vd = pr && pr.videoDetails;
+  if (!vd || vd.videoId !== id || vd.channelId !== CHANNEL_ID) return null;
+  const mf = (pr.microformat && pr.microformat.playerMicroformatRenderer) || {};
+  const date = mf.publishDate || mf.uploadDate;
+  if (!date) return null;
+  return {
+    id,
+    title: vd.title,
+    published: new Date(date).toISOString(),
+    description: vd.shortDescription || '',
+    seconds: Number(vd.lengthSeconds) || 0,
+  };
+}
+
+async function scrapeChannel(known) {
+  const longIds = await channelTabIds('videos');
+  const shortIds = await channelTabIds('shorts');
+  console.log(`Channel pages list ${longIds.length} videos and ${shortIds.length} Shorts`);
+  const shorts = new Set(shortIds);
+  const ids = [...new Set([...longIds.slice(0, 15), ...shortIds.slice(0, 15)])].filter(id => !known.has(id)).slice(0, 25);
+  const out = [];
+  for (const id of ids) {
+    const d = await watchDetails(id).catch(() => null);
+    if (!d) { console.log(`Skipped ${id}: no details on its watch page`); continue; }
+    d.isShort = shorts.has(id) ? true : (longIds.includes(id) ? false : null);
+    out.push(d);
+    await sleep(500);
+  }
+  return { listed: longIds.length + shortIds.length, entries: out };
+}
+
+async function main() {
   const existing = fs.existsSync(DATA_FILE) ? JSON.parse(fs.readFileSync(DATA_FILE, 'utf8')) : [];
   const byId = new Map(existing.map(v => [v.id, v]));
 
-  const entries = [...xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g)].map(m => m[1]);
+  // Normalise both sources to { id, title, published, description, isShort? }
+  let entries;
+  const xml = process.env.FEED_FILE ? fs.readFileSync(process.env.FEED_FILE, 'utf8') : await fetchFeed();
+  if (xml) {
+    entries = [...xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g)].map(m => m[1]).map(e => ({
+      id: tag(e, 'yt:videoId'),
+      title: tag(e, 'title'),
+      published: tag(e, 'published'),
+      description: tag(e, 'media:description'),
+    })).filter(e => e.id);
+    if (!entries.length) { console.log('No entries in feed, keeping existing data'); return; }
+  } else {
+    console.log('Feed unavailable; reading the channel pages instead');
+    const scraped = await scrapeChannel(byId).catch(err => { console.log(`Channel pages failed: ${err.message}`); return null; });
+    if (!scraped || !scraped.listed) {
+      // A YouTube outage shouldn't fail the run: keep the current videos and let
+      // the next scheduled run pick up anything new.
+      console.log('::warning::YouTube feed and channel pages unavailable; keeping existing videos-data.json');
+      return;
+    }
+    entries = scraped.entries;
+  }
+
   let fresh = 0;
-  for (const entry of entries) {
-    const id = tag(entry, 'yt:videoId');
-    if (!id) continue;
-    const title = tag(entry, 'title') || 'Untitled video';
+  for (const e of entries) {
+    const id = e.id;
+    const title = e.title || 'Untitled video';
     const series = determineSeries(title);
 
-    let isShort = await checkIsShort(id);
+    let isShort = e.isShort != null ? e.isShort : await checkIsShort(id);
     if (isShort === null) isShort = byId.has(id) ? byId.get(id).duration === '< 1 min' : /#?shorts?\b/i.test(title);
 
     if (!byId.has(id)) fresh++;
@@ -134,23 +230,18 @@ async function main() {
       title,
       category: 'Travel',
       type: series,
-      published: tag(entry, 'published') || new Date().toISOString(),
-      description: tag(entry, 'media:description').substring(0, 150),
-      fullDescription: tag(entry, 'media:description'),
+      published: e.published || new Date().toISOString(),
+      description: e.description.substring(0, 150),
+      fullDescription: e.description,
       duration: isShort ? '< 1 min' : '5-15 min',
       keywords: extractKeywords(title),
       series
     });
   }
 
-  if (entries.length === 0) {
-    console.log('No entries in feed, keeping existing data');
-    return;
-  }
-
   const videos = [...byId.values()].sort((a, b) => b.published.localeCompare(a.published));
   fs.writeFileSync(DATA_FILE, JSON.stringify(videos, null, 2) + '\n');
-  console.log(`Feed had ${entries.length} entries (${fresh} new); videos-data.json now holds ${videos.length} videos`);
+  console.log(`${xml ? 'Feed' : 'Channel pages'} gave ${entries.length} entries (${fresh} new); videos-data.json now holds ${videos.length} videos`);
 }
 
 main().catch(err => {
