@@ -143,49 +143,103 @@ function extractJson(html, marker) {
   return null;
 }
 
-// Video ids in page order from the channel's Videos or Shorts tab.
-async function channelTabIds(tab) {
+// Videos in page order (newest first) from the channel's Videos or Shorts tab,
+// with whatever the tab shows: title, "3 days ago" and a description snippet.
+async function channelTab(tab) {
   const { status, body } = await getPage(`https://www.youtube.com/channel/${CHANNEL_ID}/${tab}`);
   if (status !== 200) { console.log(`Channel ${tab} page: HTTP ${status}`); return []; }
   const data = extractJson(body, 'ytInitialData');
-  const text = data ? JSON.stringify(data) : body;
-  return [...new Set([...text.matchAll(/"(?:videoId|contentId)":"([\w-]{11})"/g)].map(m => m[1]))];
+  if (!data) { console.log(`Channel ${tab} page: no ytInitialData`); return []; }
+  const items = [];
+  const seen = new Set();
+  const text = (t) => t && (t.simpleText || t.content || (t.runs || []).map(r => r.text).join('')) || '';
+  (function walk(o) {
+    if (!o || typeof o !== 'object') return;
+    if (Array.isArray(o)) { o.forEach(walk); return; }
+    let item = null;
+    if (o.videoRenderer) {
+      const v = o.videoRenderer;
+      item = { id: v.videoId, title: text(v.title), ago: text(v.publishedTimeText), snippet: text(v.descriptionSnippet) };
+    } else if (o.reelItemRenderer) {
+      const v = o.reelItemRenderer;
+      item = { id: v.videoId, title: text(v.headline) };
+    } else if (o.shortsLockupViewModel) {
+      const v = o.shortsLockupViewModel;
+      const ep = v.onTap && v.onTap.innertubeCommand && v.onTap.innertubeCommand.reelWatchEndpoint;
+      item = { id: ep && ep.videoId, title: text(v.overlayMetadata && v.overlayMetadata.primaryText) };
+    } else if (o.lockupViewModel) {
+      const v = o.lockupViewModel;
+      const md = v.metadata && v.metadata.lockupMetadataViewModel;
+      const rows = JSON.stringify((md && md.metadata) || {});
+      const ago = (rows.match(/"content":"([^"]*\bago)"/) || [])[1] || '';
+      item = { id: v.contentId, title: text(md && md.title), ago };
+    }
+    if (item) {
+      if (item.id && /^[\w-]{11}$/.test(item.id) && !seen.has(item.id)) { seen.add(item.id); items.push(item); }
+      return;
+    }
+    Object.values(o).forEach(walk);
+  })(data);
+  return items;
+}
+
+// "3 days ago" → an approximate ISO date (now when the tab shows no date)
+function fromAgo(ago) {
+  const m = (ago || '').match(/(\d+)\s+(second|minute|hour|day|week|month|year)s?\s+ago/);
+  const ms = { second: 1e3, minute: 6e4, hour: 36e5, day: 864e5, week: 6048e5, month: 2592e6, year: 31536e6 };
+  return new Date(Date.now() - (m ? Number(m[1]) * ms[m[2]] : 0)).toISOString();
 }
 
 // Title, exact date and full description from a video's watch page.
 async function watchDetails(id) {
   const { status, body } = await getPage(`https://www.youtube.com/watch?v=${id}`);
-  if (status !== 200) return null;
+  if (status !== 200) return { why: `HTTP ${status}` };
   const pr = extractJson(body, 'ytInitialPlayerResponse');
-  const vd = pr && pr.videoDetails;
-  if (!vd || vd.videoId !== id || vd.channelId !== CHANNEL_ID) return null;
+  if (!pr) return { why: 'no player data' };
+  const vd = pr.videoDetails;
+  const ps = pr.playabilityStatus || {};
+  if (!vd) return { why: `no videoDetails (${ps.status || '?'}: ${ps.reason || ''})` };
+  if (vd.channelId !== CHANNEL_ID) return { why: `other channel ${vd.channelId}` };
   const mf = (pr.microformat && pr.microformat.playerMicroformatRenderer) || {};
   const date = mf.publishDate || mf.uploadDate;
-  if (!date) return null;
   return {
     id,
     title: vd.title,
-    published: new Date(date).toISOString(),
+    published: date ? new Date(date).toISOString() : null,
     description: vd.shortDescription || '',
-    seconds: Number(vd.lengthSeconds) || 0,
   };
 }
 
+// Only what's listed above the newest video we already have is new.
+function newOnes(items, known) {
+  const firstKnown = items.findIndex(it => known.has(it.id));
+  return firstKnown === -1 ? items.slice(0, 5) : items.slice(0, firstKnown);
+}
+
 async function scrapeChannel(known) {
-  const longIds = await channelTabIds('videos');
-  const shortIds = await channelTabIds('shorts');
-  console.log(`Channel pages list ${longIds.length} videos and ${shortIds.length} Shorts`);
-  const shorts = new Set(shortIds);
-  const ids = [...new Set([...longIds.slice(0, 15), ...shortIds.slice(0, 15)])].filter(id => !known.has(id)).slice(0, 25);
+  const longs = await channelTab('videos');
+  const shorts = await channelTab('shorts');
+  console.log(`Channel pages list ${longs.length} videos and ${shorts.length} Shorts`);
+  const fresh = [
+    ...newOnes(longs, known).map(it => ({ ...it, isShort: false })),
+    ...newOnes(shorts, known).map(it => ({ ...it, isShort: true })),
+  ];
   const out = [];
-  for (const id of ids) {
-    const d = await watchDetails(id).catch(() => null);
-    if (!d) { console.log(`Skipped ${id}: no details on its watch page`); continue; }
-    d.isShort = shorts.has(id) ? true : (longIds.includes(id) ? false : null);
-    out.push(d);
+  for (const it of fresh) {
+    const d = await watchDetails(it.id).catch(e => ({ why: e.message }));
+    if (d.why) console.log(`${it.id}: watch page unusable (${d.why}); using the channel listing`);
+    const title = (!d.why && d.title) || it.title;
+    if (!title) { console.log(`Skipped ${it.id}: no title`); continue; }
+    out.push({
+      id: it.id,
+      title,
+      published: (!d.why && d.published) || fromAgo(it.ago),
+      description: (!d.why && d.description) || it.snippet || '',
+      isShort: it.isShort,
+    });
     await sleep(500);
   }
-  return { listed: longIds.length + shortIds.length, entries: out };
+  return { listed: longs.length + shorts.length, entries: out };
 }
 
 async function main() {
