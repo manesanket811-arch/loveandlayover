@@ -61,6 +61,11 @@ const WANT = {
   'sentosa-hero': ['Palawan Beach', 'Siloso Beach', 'Tanjong Beach', 'Sentosa Island'],
   'gardens-by-the-bay-hero': ['Supertree Grove', 'Gardens by the Bay'],
   'jewel-changi-hero': ['Jewel Changi Airport', 'Rain Vortex', 'Changi Airport'],
+  'merlion-hero': ['Merlion Park', 'Merlion Singapore', 'Merlion'],
+  'singapore-zoo-hero': ['Singapore Zoo', 'River Wonders', 'Night Safari Singapore', 'S.E.A. Aquarium'],
+  'johor-causeway-hero': ['Johor–Singapore Causeway', 'Johor-Singapore Causeway', 'Woodlands Checkpoint', 'Johor Bahru skyline'],
+  'singapore-hdb-hero': ['HDB flats', 'HDB estate', 'Pinnacle@Duxton', 'Tiong Bahru'],
+  'clarke-quay-hero': ['Clarke Quay', 'Boat Quay', 'Singapore River'],
   'australia-food': ['Pavlova dessert', 'Pavlova (food)', 'Meat pie', 'Lamington'],
 };
 
