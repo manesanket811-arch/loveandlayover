@@ -1,11 +1,11 @@
 {
   "slug": "thailand",
-  "title": "Thailand Travel Guide 2026: Bangkok & Phuket Itinerary",
-  "description": "A free 3-day Bangkok and Phuket itinerary, a Thai food guide, metro tips, a THB budget and visa requirements for Indian travellers.",
+  "title": "Thailand Travel Guide 2026: 3, 5 & 7-Day Itineraries",
+  "description": "Free 3, 5 and 7-day Thailand itineraries covering Bangkok, Phuket, Krabi and Chiang Mai, with Thai food, a THB budget and visa tips for Indians.",
   "h1": "Thailand Travel Guide 2026",
   "country": "Thailand",
   "datePublished": "2026-01-01",
-  "dateModified": "2026-10-02",
+  "dateModified": "2026-10-06",
   "faq": [],
   "badges": {
     "budget": "฿1,500–2,500/day",
@@ -21,8 +21,8 @@
     },
     {
       "id": "itineraries",
-      "title": "3-Day Thailand Itinerary",
-      "html": "<p>A 3-day plan with morning, afternoon and evening ideas and an approximate daily cost per person. Use it as a starting point and adjust to your pace.</p>",
+      "title": "Thailand Itineraries: 3, 5 or 7 Days",
+      "html": "<p>Pick 3, 5 or 7 days. Each longer plan builds on the shorter one: the first days stay the same and the extra days add more places. Costs are approximate per person per day; prices and timings change, so check before you book.</p>",
       "after": "",
       "days": [
         {
@@ -81,7 +81,88 @@
           ],
           "cost": "฿1,500–2,500/day (including tours)",
           "note": ""
+        },
+        {
+          "title": "Phuket Old Town & Big Buddha",
+          "cost": "฿1,200–2,000/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Wander the Sino-Portuguese shophouses of <strong>Phuket Old Town</strong> (Thalang and Soi Romanee) and try a local breakfast of dim sum or roti."
+            ],
+            [
+              "Afternoon",
+              "Visit the hilltop <strong>Big Buddha</strong> (free; dress modestly) and Wat Chalong, Phuket's most important temple."
+            ],
+            [
+              "Evening",
+              "Watch the sunset from <strong>Promthep Cape</strong>, then dinner at a beach restaurant or the weekend night market in town."
+            ]
+          ]
+        },
+        {
+          "title": "Krabi & Railay Beach",
+          "cost": "฿1,500–2,500/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Take a ferry or minivan from Phuket to <strong>Krabi</strong> (about 2–3 hours), then a longtail boat from Ao Nang to <strong>Railay</strong>, which you can only reach by boat."
+            ],
+            [
+              "Afternoon",
+              "Swim at Phra Nang Beach beneath limestone cliffs, visit the cave, and watch rock climbers. Alternatively, join a four-islands tour from Ao Nang (about ฿1,000–1,500)."
+            ],
+            [
+              "Evening",
+              "Sunset at Railay West, then dinner in Ao Nang. Fly to Chiang Mai from Krabi or Phuket the next morning."
+            ]
+          ]
+        },
+        {
+          "title": "Chiang Mai Old City & Doi Suthep",
+          "cost": "฿1,000–1,800/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Fly to <strong>Chiang Mai</strong> (about 1.5–2 hours). Check in inside or near the old city moat."
+            ],
+            [
+              "Afternoon",
+              "Ride up to <strong>Wat Phra That Doi Suthep</strong> (about ฿30 entry plus a songthaew or Grab) for golden stupas and city views. Visit Wat Chedi Luang and Wat Phra Singh in the old city."
+            ],
+            [
+              "Evening",
+              "Browse the <strong>Night Bazaar</strong>, or the Sunday Walking Street if it's Sunday, and try khao soi, Chiang Mai's famous curry noodle soup."
+            ]
+          ]
+        },
+        {
+          "title": "Ethical elephant sanctuary & cooking class",
+          "cost": "฿2,000–3,500/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Visit an <strong>ethical elephant sanctuary</strong> that doesn't offer riding or shows, where you observe, feed and walk with the elephants (half or full day, usually with hotel pickup)."
+            ],
+            [
+              "Afternoon",
+              "Join a <strong>Thai cooking class</strong> (about ฿1,000–1,500) with a market tour; many have vegetarian options. Or relax with a Thai massage."
+            ],
+            [
+              "Evening",
+              "Final dinner in the Nimmanhaemin area, then fly home from Chiang Mai or via Bangkok."
+            ]
+          ]
         }
+      ],
+      "plans": [
+        3,
+        5,
+        7
       ]
     },
     {

@@ -1,11 +1,11 @@
 {
   "slug": "singapore",
-  "title": "Singapore Travel Guide 2026: 3-Day Itinerary & Tips",
-  "description": "A free 3-day Singapore itinerary from creators who live here: hawker food, MRT tips, an SGD budget and visa requirements for Indians.",
+  "title": "Singapore Travel Guide 2026: 3, 5 & 7-Day Itineraries",
+  "description": "Free 3, 5 and 7-day Singapore itineraries from creators who live here: hawker food, MRT tips, an SGD budget and visa requirements for Indians.",
   "h1": "Singapore Travel Guide 2026",
   "country": "Singapore",
   "datePublished": "2026-01-01",
-  "dateModified": "2026-10-02",
+  "dateModified": "2026-10-06",
   "faq": [],
   "badges": {
     "budget": "S$95–150/day",
@@ -26,8 +26,8 @@
     },
     {
       "id": "itineraries",
-      "title": "3-Day Singapore Itinerary",
-      "html": "<p>A 3-day plan with morning, afternoon and evening ideas and an approximate daily cost per person. Use it as a starting point and adjust to your pace.</p>",
+      "title": "Singapore Itineraries: 3, 5 or 7 Days",
+      "html": "<p>Pick 3, 5 or 7 days. Each longer plan builds on the shorter one: the first days stay the same and the extra days add more places. Costs are approximate per person per day; prices and timings change, so check before you book.</p>",
       "after": "",
       "days": [
         {
@@ -39,11 +39,11 @@
             ],
             [
               "Afternoon",
-              "Head to Marina Bay Sands observation deck (SGD 25–29, free if staying at hotel). Walk around Gardens by the Bay, see the Supertree Grove. Snap photos at the Merlion."
+              "Head up to the Marina Bay Sands SkyPark Observation Deck (about S$32–40). Walk around Gardens by the Bay and the Supertree Grove (free), and snap photos at the Merlion."
             ],
             [
               "Evening",
-              "Dinner at a hawker center (SGD 4–8). Visit the Supertree light show (8:45 PM & 10:45 PM, free). Explore Boat Quay or Clarke Quay for drinks."
+              "Dinner at a hawker centre (S$5–8). Watch the free Garden Rhapsody light show at the Supertrees (usually 7:45 PM and 8:45 PM) and the Spectra show at Marina Bay. Explore Boat Quay or Clarke Quay for drinks."
             ]
           ],
           "cost": "S$60–90/day",
@@ -78,7 +78,88 @@
           ],
           "cost": "S$70–110/day",
           "note": ""
+        },
+        {
+          "title": "Zoo, River Wonders & Night Safari",
+          "cost": "S$120–180/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Head to the <strong>Mandai Wildlife Reserve</strong> (bus from Khatib or Springleaf MRT, or a Grab). Start at <strong>Singapore Zoo</strong> early, when the animals are most active (about S$45–50)."
+            ],
+            [
+              "Afternoon",
+              "Visit <strong>River Wonders</strong> next door for the giant pandas and a gentle Amazon river ride, or rest at your hotel during the hottest hours."
+            ],
+            [
+              "Evening",
+              "Take the tram through the <strong>Night Safari</strong> (about S$55–60; book a time slot in advance) and catch the Creatures of the Night show."
+            ]
+          ]
+        },
+        {
+          "title": "Little India, Katong & East Coast",
+          "cost": "S$50–80/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Explore <strong>Little India</strong>: Sri Veeramakaliamman Temple, flower-garland stalls and Tekka Centre. Have a dosa or banana-leaf meal for breakfast."
+            ],
+            [
+              "Afternoon",
+              "Ride to <strong>Katong and Joo Chiat</strong> for colourful Peranakan shophouses and a bowl of Katong laksa."
+            ],
+            [
+              "Evening",
+              "Rent a bike or walk along <strong>East Coast Park</strong>, then have seafood or satay at East Coast Lagoon Food Village."
+            ]
+          ]
+        },
+        {
+          "title": "Botanic Gardens & Orchard Road",
+          "cost": "S$50–90/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Walk the UNESCO-listed <strong>Singapore Botanic Gardens</strong> (free) and the National Orchid Garden (small fee). Families can stop at the free Jacob Ballas Children's Garden."
+            ],
+            [
+              "Afternoon",
+              "Shop or window-shop along <strong>Orchard Road</strong>; ION Orchard's food hall is good for lunch. Alternatively, visit the National Gallery or ArtScience Museum."
+            ],
+            [
+              "Evening",
+              "Take a <strong>Singapore River cruise</strong> from Clarke Quay and have dinner by the river."
+            ]
+          ]
+        },
+        {
+          "title": "Jewel Changi & departure",
+          "cost": "S$40–80/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Pick up last souvenirs (Bengawan Solo, kaya, TWG tea) and check out. Mustafa Centre in Little India is open around the clock for budget shopping."
+            ],
+            [
+              "Afternoon",
+              "Go to Changi early and spend time at <strong>Jewel</strong>: the HSBC Rain Vortex, Shiseido Forest Valley and Canopy Park (small fee for some attractions)."
+            ],
+            [
+              "Evening",
+              "Check in for your flight. Allow at least 3 hours before an international departure, and use your last dollars on a hawker meal at the airport."
+            ]
+          ]
         }
+      ],
+      "plans": [
+        3,
+        5,
+        7
       ]
     },
     {

@@ -1,11 +1,11 @@
 {
   "slug": "japan",
-  "title": "Japan Travel Guide 2026: Tokyo & Kyoto Itinerary",
-  "description": "A free 3-day Tokyo itinerary, a Japanese food guide, JR rail tips, a JPY budget and visa requirements for Indian travellers.",
+  "title": "Japan Travel Guide 2026: 3, 5 & 7-Day Itineraries",
+  "description": "Free 3, 5 and 7-day Japan itineraries: Tokyo, Mount Fuji, Kyoto, Nara and Osaka, with Japanese food, rail tips, a JPY budget and visa info for Indians.",
   "h1": "Japan Travel Guide 2026",
   "country": "Japan",
   "datePublished": "2026-01-01",
-  "dateModified": "2026-10-02",
+  "dateModified": "2026-10-06",
   "faq": [],
   "badges": {
     "budget": "¥6,000–10,000/day",
@@ -21,8 +21,8 @@
     },
     {
       "id": "itineraries",
-      "title": "3-Day Japan Itinerary",
-      "html": "<p>A 3-day plan with morning, afternoon and evening ideas and an approximate daily cost per person. Use it as a starting point and adjust to your pace.</p>",
+      "title": "Japan Itineraries: 3, 5 or 7 Days",
+      "html": "<p>Pick 3, 5 or 7 days. Each longer plan builds on the shorter one: the first days stay the same and the extra days add more places. Costs are approximate per person per day; prices and timings change, so check before you book.</p>",
       "after": "<p><strong>Extend to Kyoto?</strong> Take the Shinkansen from Tokyo to Kyoto (2 hours, ¥13,320). Kyoto offers temples, geisha districts (Gion), bamboo forests, and traditional culture.</p>",
       "days": [
         {
@@ -81,7 +81,88 @@
           ],
           "cost": "¥8,000–12,000/day (including transport)",
           "note": ""
+        },
+        {
+          "title": "Kyoto: Fushimi Inari & Gion",
+          "cost": "¥15,000–22,000/day (incl. Shinkansen)",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Take the <strong>Shinkansen</strong> from Tokyo to Kyoto (about 2 hours 15 minutes, roughly ¥14,000 one way). Store luggage in coin lockers or send it ahead with a luggage service."
+            ],
+            [
+              "Afternoon",
+              "Walk through the thousands of red torii gates at <strong>Fushimi Inari Taisha</strong> (free, open all day)."
+            ],
+            [
+              "Evening",
+              "Stroll the lantern-lit lanes of <strong>Gion</strong> and Pontocho. Please don't photograph geiko or maiko without permission."
+            ]
+          ]
+        },
+        {
+          "title": "Kyoto: temples & Arashiyama",
+          "cost": "¥6,000–10,000/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Go early to the <strong>Arashiyama Bamboo Grove</strong> and Tenryu-ji Temple, before the crowds."
+            ],
+            [
+              "Afternoon",
+              "See <strong>Kinkaku-ji</strong>, the Golden Pavilion (about ¥500), and walk around Kiyomizu-dera and the old streets of Higashiyama."
+            ],
+            [
+              "Evening",
+              "Dinner at Nishiki Market or a vegetarian shojin ryori (Buddhist temple food) restaurant."
+            ]
+          ]
+        },
+        {
+          "title": "Nara day trip & Osaka",
+          "cost": "¥6,000–10,000/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Train to <strong>Nara</strong> (about 45 minutes). Meet the bowing deer in Nara Park and see the giant Buddha at Todai-ji."
+            ],
+            [
+              "Afternoon",
+              "Continue to <strong>Osaka</strong> (about 45 minutes) and check in."
+            ],
+            [
+              "Evening",
+              "Eat your way through <strong>Dotonbori</strong>: takoyaki, okonomiyaki and the Glico running man sign."
+            ]
+          ]
+        },
+        {
+          "title": "Osaka Castle & departure",
+          "cost": "¥5,000–9,000/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Visit <strong>Osaka Castle</strong> and its park, then snack at Kuromon Market."
+            ],
+            [
+              "Afternoon",
+              "Shop in Shinsaibashi or Umeda. Optional: Universal Studios Japan is in Osaka if you have an extra day."
+            ],
+            [
+              "Evening",
+              "Fly home from <strong>Kansai International Airport</strong> (about 1 hour by train). Booking an open-jaw ticket, into Tokyo and out of Osaka, saves backtracking."
+            ]
+          ]
         }
+      ],
+      "plans": [
+        3,
+        5,
+        7
       ]
     },
     {

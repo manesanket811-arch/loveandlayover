@@ -1,11 +1,11 @@
 {
   "slug": "indonesia",
-  "title": "Indonesia Travel Guide 2026: Yogyakarta & Borobudur",
-  "description": "Indonesia itineraries covering Borobudur, Yogyakarta and Jakarta, with Indonesian food, an IDR budget breakdown and visa tips for Indian travellers.",
+  "title": "Indonesia Travel Guide 2026: 3, 5 & 7-Day Java Itineraries",
+  "description": "Free 3, 5 and 7-day Java itineraries: Yogyakarta, Borobudur, Prambanan, Merapi and Mount Bromo, with Indonesian food, an IDR budget and visa tips.",
   "h1": "Indonesia Travel Guide 2026",
   "country": "Indonesia",
   "datePublished": "2026-01-01",
-  "dateModified": "2026-10-02",
+  "dateModified": "2026-10-06",
   "faq": [],
   "badges": {
     "budget": "IDR 600k-1M/day",
@@ -26,8 +26,8 @@
     },
     {
       "id": "itineraries",
-      "title": "3-Day Indonesia Itinerary",
-      "html": "<p>A 3-day plan with morning, afternoon and evening ideas and an approximate daily cost per person. Use it as a starting point and adjust to your pace.</p>",
+      "title": "Indonesia Itineraries: 3, 5 or 7 Days",
+      "html": "<p>Pick 3, 5 or 7 days. Each longer plan builds on the shorter one: the first days stay the same and the extra days add more places. Costs are approximate per person per day; prices and timings change, so check before you book.</p>",
       "after": "",
       "days": [
         {
@@ -86,7 +86,88 @@
           ],
           "cost": "IDR 750k-1M/day",
           "note": ""
+        },
+        {
+          "title": "Prambanan & Ratu Boko",
+          "cost": "IDR 800k–1.2M/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Visit <strong>Prambanan</strong>, the largest Hindu temple complex in Indonesia, about 40 minutes from Yogyakarta. Go early to beat the heat."
+            ],
+            [
+              "Afternoon",
+              "Explore the smaller Sewu and Plaosan temples nearby, then relax at your hotel."
+            ],
+            [
+              "Evening",
+              "Watch the sunset from the hilltop <strong>Ratu Boko</strong> ruins, or see the open-air Ramayana Ballet at Prambanan if you missed it earlier (seasonal schedule)."
+            ]
+          ]
+        },
+        {
+          "title": "Jomblang Cave & the south coast",
+          "cost": "IDR 900k–1.5M/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Descend by rope into <strong>Jomblang Cave</strong> with a guided group to see the \"light from heaven\" beam around midday (book ahead; limited daily spots)."
+            ],
+            [
+              "Afternoon",
+              "Drive to the beaches of the Gunungkidul coast such as Timang or Indrayanti."
+            ],
+            [
+              "Evening",
+              "Return to Yogyakarta and have dinner at an angkringan, a cheap street-side food cart."
+            ]
+          ]
+        },
+        {
+          "title": "Travel to Mount Bromo",
+          "cost": "IDR 600k–1M/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Take a train from Yogyakarta to <strong>Malang</strong> or Probolinggo (about 6–9 hours), or fly to Surabaya and drive."
+            ],
+            [
+              "Afternoon",
+              "Enjoy Java's countryside from the train. Book ahead and bring snacks."
+            ],
+            [
+              "Evening",
+              "Overnight near Bromo (Cemoro Lawang) or in Malang, with a very early start the next day. It gets cold at night, so pack a warm layer."
+            ]
+          ]
+        },
+        {
+          "title": "Bromo sunrise",
+          "cost": "IDR 900k–1.5M/day",
+          "note": "",
+          "periods": [
+            [
+              "Early Morning",
+              "Jeep tour around 3 AM to a viewpoint such as Penanjakan for <strong>sunrise over Mount Bromo</strong> and the Tengger caldera."
+            ],
+            [
+              "Afternoon",
+              "Cross the \"sea of sand\" and climb the steps to the Bromo crater rim, then head back to Malang or Surabaya."
+            ],
+            [
+              "Evening",
+              "Fly home from Surabaya or onward to Bali. Check volcano activity alerts before you go."
+            ]
+          ]
         }
+      ],
+      "plans": [
+        3,
+        5,
+        7
       ]
     },
     {

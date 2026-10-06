@@ -1,11 +1,11 @@
 {
   "slug": "vietnam",
-  "title": "Vietnam Travel Guide 2026: Hanoi to Ho Chi Minh City",
-  "description": "A free 3-day Vietnam itinerary, Vietnamese food, buses and trains, a VND budget and e-visa tips for Indian travellers.",
+  "title": "Vietnam Travel Guide 2026: 3, 5 & 7-Day Itineraries",
+  "description": "Free 3, 5 and 7-day Vietnam itineraries: Hanoi, Ha Long Bay, Ho Chi Minh City, the Mekong Delta and Hoi An, with a VND budget and e-visa tips for Indians.",
   "h1": "Vietnam Travel Guide 2026",
   "country": "Vietnam",
   "datePublished": "2026-01-01",
-  "dateModified": "2026-10-02",
+  "dateModified": "2026-10-06",
   "faq": [],
   "badges": {
     "budget": "₫500,000–800,000/day",
@@ -21,8 +21,8 @@
     },
     {
       "id": "itineraries",
-      "title": "3-Day Vietnam Itinerary",
-      "html": "<p>A 3-day plan with morning, afternoon and evening ideas and an approximate daily cost per person. Use it as a starting point and adjust to your pace.</p>",
+      "title": "Vietnam Itineraries: 3, 5 or 7 Days",
+      "html": "<p>Pick 3, 5 or 7 days. Each longer plan builds on the shorter one: the first days stay the same and the extra days add more places. Costs are approximate per person per day; prices and timings change, so check before you book.</p>",
       "after": "",
       "days": [
         {
@@ -72,7 +72,7 @@
             ],
             [
               "Afternoon",
-              "Visit War Remnants Museum (â'«100,000 entry). Explore Reunification Palace, Notre-Dame Cathedral (free). Walk around the city, try street food."
+              "Visit War Remnants Museum (₫100,000 entry). Explore Reunification Palace, Notre-Dame Cathedral (free). Walk around the city, try street food."
             ],
             [
               "Evening",
@@ -81,7 +81,88 @@
           ],
           "cost": "₫400,000–600,000/day",
           "note": ""
+        },
+        {
+          "title": "Cu Chi Tunnels",
+          "cost": "₫500,000–800,000/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Half-day tour to the <strong>Cu Chi Tunnels</strong> (about 1.5 hours from the city) to see the wartime tunnel network. Wear clothes you don't mind getting dusty."
+            ],
+            [
+              "Afternoon",
+              "Back in the city, visit the Central Post Office and Ben Thanh Market for lunch."
+            ],
+            [
+              "Evening",
+              "Have a drink at a rooftop bar, then a street-food dinner in District 1 or District 4."
+            ]
+          ]
+        },
+        {
+          "title": "Mekong Delta day trip",
+          "cost": "₫600,000–1,000,000/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Day trip to the <strong>Mekong Delta</strong> (towns such as Ben Tre or My Tho). Ride boats through coconut-palm canals."
+            ],
+            [
+              "Afternoon",
+              "Visit family workshops making coconut candy and rice paper, and sample tropical fruit."
+            ],
+            [
+              "Evening",
+              "Return to Ho Chi Minh City. Pack for an early flight to Da Nang."
+            ]
+          ]
+        },
+        {
+          "title": "Da Nang & Hoi An Ancient Town",
+          "cost": "₫500,000–900,000/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Fly to <strong>Da Nang</strong> (about 1.5 hours) and transfer to <strong>Hoi An</strong> (about 45 minutes)."
+            ],
+            [
+              "Afternoon",
+              "Explore Hoi An's UNESCO-listed old town (a ticket covers entry to the heritage sites): the Japanese Covered Bridge, merchant houses and tailor shops."
+            ],
+            [
+              "Evening",
+              "See the lanterns light up the riverside and release a paper lantern from a boat. Try cao lau, Hoi An's signature noodles."
+            ]
+          ]
+        },
+        {
+          "title": "Marble Mountains, An Bang Beach & departure",
+          "cost": "₫400,000–800,000/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Cycle through the rice fields or visit the <strong>Marble Mountains</strong> caves and pagodas between Hoi An and Da Nang."
+            ],
+            [
+              "Afternoon",
+              "Relax on <strong>An Bang</strong> or My Khe beach."
+            ],
+            [
+              "Evening",
+              "Fly home from Da Nang, which has direct flights to several Asian hubs."
+            ]
+          ]
         }
+      ],
+      "plans": [
+        3,
+        5,
+        7
       ]
     },
     {

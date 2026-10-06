@@ -56,15 +56,29 @@ function autoFaq(g) {
     const inr = rupees(b);
     out.push([`How much does a ${g.country} trip cost per day?`, `Plan for roughly ${b.replace(/\/day$/, '')} per person per day${inr ? ` (${inr.replace('≈ ', 'about ')})` : ''} for a mid-range trip, covering accommodation, food, local transport and sightseeing. Prices are approximate as of October 2026.`]);
   }
+  const it = g.sections.find(s => s.id === 'itineraries');
+  if (it && it.plans && it.plans.length > 1) {
+    const span = (a, b) => {
+      const t = it.days.slice(a, b).map(d => d.title.replace(/ & departure$/, ''));
+      return t.length > 1 ? `${t.slice(0, -1).join(', ')} and ${t[t.length - 1]}` : t[0];
+    };
+    const [p1, p2, p3] = it.plans;
+    out.push([`How many days do you need in ${g.country}?`, `${p1} days covers the highlights: ${span(0, p1)}. With ${p2} days you can add ${span(p1, p2)}${p3 ? `, and a full week adds ${span(p2, p3)}` : ''}. Our ${it.plans.join(', ').replace(/, (\d+)$/, ' and $1')}-day itineraries build on each other, so you can stop at any point.`]);
+  }
   const bt = g.sections.find(s => s.id === 'best-time');
   if (g.badges.best) out.push([`When is the best time to visit ${g.country}?`, `${g.badges.best}.${bt ? ' ' + plain((bt.html.match(/<p>[\s\S]*?<\/p>/) || [''])[0]) : ''}`.trim()]);
   return out;
 }
 
-function dayCard(d, i) {
+// Which plan a day first appears in, for guides with several trip lengths (e.g. [3, 5, 7])
+const planOf = (plans, i) => (plans || []).find(n => i < n);
+
+function dayCard(d, i, plans) {
   const rows = d.periods.map(([when, what]) => `<div class="day-row"><div class="when">${esc(when)}</div><div class="what">${fixAmp(what)}</div></div>`).join('\n');
+  const first = planOf(plans, i);
+  const tag = plans && first !== plans[0] ? `<span class="day-plan">${first}-day plan</span>` : '';
   return `<div class="day">
-  <div class="day-head"><span class="n">${i + 1}</span><h3>${esc(d.title)}</h3></div>
+  <div class="day-head"><span class="n">${i + 1}</span><h3>${esc(d.title)}</h3>${tag}</div>
 ${rows}
   <div class="day-foot"><span class="cost">${esc(d.cost)}</span>${d.note ? fixAmp(d.note) : ''}</div>
 </div>`;
@@ -89,7 +103,7 @@ function build(g) {
   <div><small>Daily budget</small><b>${esc(g.badges.budget || '—')}</b>${inr ? `<span>${esc(inr)} per person</span>` : ''}</div>
   <div><small>Best time</small><b>${esc(g.badges.best || 'Year-round')}</b></div>
   <div><small>Visa for Indians</small><b>${esc(g.badges.visa || 'Check before travel')}</b></div>
-  <div><small>Itinerary</small><b>${days ? days.days.length : 0}-day plan</b><span>Day by day, with costs</span></div>
+  <div><small>Itinerary</small><b>${days && days.plans ? days.plans.join(', ').replace(/, (\d+)$/, ' or $1') + ' days' : `${days ? days.days.length : 0}-day plan`}</b><span>Day by day, with costs</span></div>
 </div>`);
 
   for (const s of g.sections) {
@@ -111,7 +125,10 @@ function build(g) {
   </div>
 </div>`);
       toc.push([s.id, s.title.replace(/^Free\s+/, '')]);
-      body.push(`<h2 id="${s.id}">${esc(s.title)}</h2>\n${fixAmp(s.html)}\n<div class="days">\n${s.days.map(dayCard).join('\n')}\n</div>${s.after ? '\n' + fixAmp(s.after) : ''}`);
+      const tabs = s.plans && s.plans.length > 1
+        ? `<div class="plan-tabs" role="tablist" aria-label="Trip length">${s.plans.map((n, i) => `<button type="button" role="tab" id="itinerary-${n}" data-plan="${n}" aria-selected="${i === 0}">${n} days</button>`).join('')}</div>`
+        : '';
+      body.push(`<h2 id="${s.id}">${esc(s.title)}</h2>\n${fixAmp(s.html)}\n${tabs}<div class="days"${s.plans ? ` data-plans="${s.plans.join(',')}"` : ''}>\n${s.days.map((d, i) => dayCard(d, i, s.plans)).join('\n')}\n</div>${s.after ? '\n' + fixAmp(s.after) : ''}`);
       continue;
     }
     toc.push([s.id, s.title.replace(/\?$/, '').replace(/^Why Visit .*/, 'Why visit')]);
@@ -203,7 +220,7 @@ ${schema}
 </script>
 <link rel="stylesheet" href="/css/site.css?v=1">
 <link rel="stylesheet" href="/css/article.css?v=2">
-<link rel="stylesheet" href="/css/guide.css?v=2">
+<link rel="stylesheet" href="/css/guide.css?v=3">
 ${HEAD_LINKS}
 </head>
 <body>
@@ -220,7 +237,7 @@ ${header('destinations')}
     <div class="post-meta-row"><span>Budget: ${esc(g.badges.budget || '')}</span><span>Best: ${esc(g.badges.best || '')}</span><span>Visa: ${esc(g.badges.visa || '')}</span></div>
     <div class="guide-cta">
       ${g.filmed ? `<a class="btn btn-yt" href="#watch"><span aria-hidden="true">▶</span> Watch our ${esc(g.country)} videos</a>` : `<a class="btn btn-yt" href="${SUBSCRIBE}" target="_blank" rel="noopener"><span aria-hidden="true">▶</span> Subscribe for new trips</a>`}
-      <a class="btn btn-outline-light" href="#itineraries">See the ${days ? days.days.length : 3}-day plan ↓</a>
+      <a class="btn btn-outline-light" href="#itineraries">${days && days.plans ? `See the ${days.plans.join(', ').replace(/, (\d+)$/, ' &amp; $1')}-day plans` : `See the ${days ? days.days.length : 3}-day plan`} ↓</a>
     </div>
   </div>
 </section>
@@ -260,6 +277,26 @@ ${footer()}
 
 ${SCRIPT}
 <script src="/js/trip-videos.js" defer></script>
+${days && days.plans && days.plans.length > 1 ? `<script>
+  // Trip-length tabs: show the first N days (all days stay in the page for readers without JS)
+  (function () {
+    var box = document.querySelector('.days[data-plans]'); if (!box) return;
+    var tabs = [].slice.call(document.querySelectorAll('.plan-tabs [data-plan]'));
+    function pick(n, scroll) {
+      box.setAttribute('data-show', n);
+      [].forEach.call(box.children, function (d, i) { d.hidden = i >= n; });
+      tabs.forEach(function (t) { t.setAttribute('aria-selected', t.dataset.plan === String(n)); });
+      if (scroll) document.getElementById('itineraries').scrollIntoView({ behavior: 'smooth' });
+    }
+    tabs.forEach(function (t) { t.addEventListener('click', function () {
+      pick(+t.dataset.plan);
+      try { history.replaceState(null, '', '#itinerary-' + t.dataset.plan); } catch (e) {}
+      if (window.gtag) window.gtag('event', 'itinerary_tab', { days: +t.dataset.plan });
+    }); });
+    var m = location.hash.match(/^#itinerary-(\\d+)$/);
+    pick(m ? +m[1] : +tabs[0].dataset.plan, !!m);
+  })();
+</script>` : ''}
 </body>
 </html>
 `;

@@ -1,14 +1,14 @@
 {
   "slug": "india",
-  "title": "India Travel Guide 2026: Taj Mahal, Delhi & Rajasthan",
-  "description": "India itineraries covering the Taj Mahal, Delhi, Agra and Rajasthan, with an INR budget breakdown, authentic food and cultural tips for travellers.",
+  "title": "India Travel Guide 2026: 3, 5 & 7-Day Rajasthan Itineraries",
+  "description": "Free 3, 5 and 7-day India itineraries: Delhi, the Taj Mahal in Agra, Jaipur, Udaipur and Jodhpur, with an INR budget, food and travel tips.",
   "h1": "India Travel Guide 2026",
   "country": "India",
   "datePublished": "2026-01-01",
-  "dateModified": "2026-10-02",
+  "dateModified": "2026-10-06",
   "faq": [],
   "badges": {
-    "budget": "2,000-3,500/day",
+    "budget": "₹2,000–3,500/day",
     "best": "Oct-Mar",
     "visa": "No visa for Indians; e-Visa for most foreigners"
   },
@@ -26,8 +26,8 @@
     },
     {
       "id": "itineraries",
-      "title": "3-Day India Itinerary",
-      "html": "<p>A 3-day plan with morning, afternoon and evening ideas and an approximate daily cost per person. Use it as a starting point and adjust to your pace.</p>",
+      "title": "India Itineraries: 3, 5 or 7 Days",
+      "html": "<p>Pick 3, 5 or 7 days. Each longer plan builds on the shorter one: the first days stay the same and the extra days add more places. Costs are approximate per person per day; prices and timings change, so check before you book.</p>",
       "after": "",
       "days": [
         {
@@ -46,7 +46,7 @@
               "Visit Raj Ghat (Mahatma Gandhi's memorial, free). Watch sunset from Feroz Shah Kotla ruins (free). Dinner at Karim's (famous street restaurant, 150-300) or a rooftop restaurant in New Delhi (500-1,000)."
             ]
           ],
-          "cost": "2,000-3,000/day",
+          "cost": "₹2,000–3,000/day",
           "note": ""
         },
         {
@@ -65,7 +65,7 @@
               "Watch Taj Mahal at sunset (included in ticket, different view). Dinner at a rooftop restaurant overlooking the monument (400-800). Walk the Yamuna riverside promenade."
             ]
           ],
-          "cost": "2,500-3,500/day",
+          "cost": "₹2,500–3,500/day",
           "note": ""
         },
         {
@@ -84,9 +84,90 @@
               "Visit Albert Hall Museum (250) or relax at a local spa/massage center (500-1,000 for full body Ayurvedic massage). Traditional Rajasthani dinner with folk dance performances (800-1,500)."
             ]
           ],
-          "cost": "2,000-3,000/day",
+          "cost": "₹2,000–3,000/day",
           "note": ""
+        },
+        {
+          "title": "Jaipur: Amber Fort & Nahargarh",
+          "cost": "₹2,500–3,500/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Visit the hilltop <strong>Amber Fort</strong> early (about ₹100 for Indians; higher for foreigners). Walk up or take a jeep rather than an elephant ride."
+            ],
+            [
+              "Afternoon",
+              "Stop at <strong>Jal Mahal</strong> for photos and shop for block-printed textiles and blue pottery in the old city bazaars."
+            ],
+            [
+              "Evening",
+              "Watch the sunset over the Pink City from <strong>Nahargarh Fort</strong>, then a Rajasthani thali dinner."
+            ]
+          ]
+        },
+        {
+          "title": "Udaipur: City Palace & Lake Pichola",
+          "cost": "₹2,500–4,000/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Travel to <strong>Udaipur</strong> by train or a short flight. Check in near Lake Pichola."
+            ],
+            [
+              "Afternoon",
+              "Explore the <strong>City Palace</strong> complex overlooking the lake."
+            ],
+            [
+              "Evening",
+              "Take a sunset <strong>boat ride on Lake Pichola</strong>, then dinner at a rooftop restaurant facing the lake palace."
+            ]
+          ]
+        },
+        {
+          "title": "Udaipur gardens & folk dance",
+          "cost": "₹2,000–3,000/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Visit <strong>Saheliyon-ki-Bari</strong>, the garden of the maidens, and the Jagdish Temple."
+            ],
+            [
+              "Afternoon",
+              "Ride the ropeway up to Karni Mata temple for lake views, or take a cooking class."
+            ],
+            [
+              "Evening",
+              "Watch the Dharohar folk dance show at <strong>Bagore ki Haveli</strong>."
+            ]
+          ]
+        },
+        {
+          "title": "Ranakpur & Jodhpur",
+          "cost": "₹2,500–4,000/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Drive towards Jodhpur, stopping at the beautifully carved marble <strong>Ranakpur Jain Temple</strong> (dress modestly; leather items aren't allowed inside)."
+            ],
+            [
+              "Afternoon",
+              "Continue to <strong>Jodhpur</strong>, the Blue City (about 5–6 hours of driving in total), and see <strong>Mehrangarh Fort</strong>."
+            ],
+            [
+              "Evening",
+              "Dinner near the clock tower market, then fly or take an overnight train home from Jodhpur."
+            ]
+          ]
         }
+      ],
+      "plans": [
+        3,
+        5,
+        7
       ]
     },
     {

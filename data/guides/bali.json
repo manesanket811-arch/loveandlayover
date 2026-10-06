@@ -1,11 +1,11 @@
 {
   "slug": "bali",
-  "title": "Bali Travel Guide 2026: Ubud, Temples & Beaches",
-  "description": "Bali itineraries with Tanah Lot, Ubud rice terraces and beaches, plus Balinese food, an IDR budget breakdown and visa tips for Indian travellers.",
+  "title": "Bali Travel Guide 2026: 3, 5 & 7-Day Itineraries",
+  "description": "Free 3, 5 and 7-day Bali itineraries: Ubud, Tanah Lot, Nusa Penida, Uluwatu and Mount Batur, with Balinese food, an IDR budget and visa tips for Indians.",
   "h1": "Bali Travel Guide 2026",
   "country": "Bali",
   "datePublished": "2026-01-01",
-  "dateModified": "2026-10-02",
+  "dateModified": "2026-10-06",
   "faq": [],
   "badges": {
     "budget": "IDR 600k-1M/day",
@@ -26,8 +26,8 @@
     },
     {
       "id": "itineraries",
-      "title": "3-Day Bali Itinerary",
-      "html": "<p>A 3-day plan with morning, afternoon and evening ideas and an approximate daily cost per person. Use it as a starting point and adjust to your pace.</p>",
+      "title": "Bali Itineraries: 3, 5 or 7 Days",
+      "html": "<p>Pick 3, 5 or 7 days. Each longer plan builds on the shorter one: the first days stay the same and the extra days add more places. Costs are approximate per person per day; prices and timings change, so check before you book.</p>",
       "after": "",
       "days": [
         {
@@ -86,7 +86,88 @@
           ],
           "cost": "IDR 700k-1M/day",
           "note": ""
+        },
+        {
+          "title": "Nusa Penida day trip",
+          "cost": "IDR 900k–1.5M/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Take an early fast boat from Sanur to <strong>Nusa Penida</strong> (about 45 minutes). Most visitors join a day tour with a driver, as roads are rough."
+            ],
+            [
+              "Afternoon",
+              "See <strong>Kelingking Beach</strong> (the T-Rex cliff), Broken Beach and Angel's Billabong. The steep path down to Kelingking is only for the fit and well-shod."
+            ],
+            [
+              "Evening",
+              "Boat back to Sanur and dinner by the beach. Seas can be rough; check conditions and choose a reputable operator."
+            ]
+          ]
+        },
+        {
+          "title": "Uluwatu temple & Kecak dance",
+          "cost": "IDR 700k–1.1M/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Head south to the <strong>Bukit Peninsula</strong>. Swim at Padang Padang or Melasti beach."
+            ],
+            [
+              "Afternoon",
+              "Lunch at a clifftop café, then visit <strong>Uluwatu Temple</strong> perched above the ocean (sarong provided; watch your sunglasses around the monkeys)."
+            ],
+            [
+              "Evening",
+              "Watch the <strong>Kecak fire dance</strong> at sunset at the temple's amphitheatre (about IDR 150k), then seafood on Jimbaran Bay."
+            ]
+          ]
+        },
+        {
+          "title": "Mount Batur sunrise trek",
+          "cost": "IDR 800k–1.2M/day",
+          "note": "",
+          "periods": [
+            [
+              "Early Morning",
+              "Pickup around 2 AM for a guided <strong>Mount Batur sunrise trek</strong> (about 2 hours up). Watch the sun rise over Lake Batur and Mount Agung."
+            ],
+            [
+              "Afternoon",
+              "Soak in the natural <strong>hot springs</strong> at Toya Bungkah, then visit a coffee plantation on the way back to Ubud."
+            ],
+            [
+              "Evening",
+              "An easy evening after the early start: a Balinese massage and dinner in Ubud."
+            ]
+          ]
+        },
+        {
+          "title": "East Bali temples",
+          "cost": "IDR 700k–1.2M/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Drive east to <strong>Lempuyang Temple</strong> for the famous \"Gates of Heaven\" view of Mount Agung. Go early: queues for photos can be long."
+            ],
+            [
+              "Afternoon",
+              "Visit the water palace of <strong>Tirta Gangga</strong> with its stepping stones and koi ponds, and optionally the Tirta Empul water temple on the way back."
+            ],
+            [
+              "Evening",
+              "Return to your hotel or near the airport for your flight home."
+            ]
+          ]
         }
+      ],
+      "plans": [
+        3,
+        5,
+        7
       ]
     },
     {

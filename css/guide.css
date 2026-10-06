@@ -74,3 +74,10 @@
 }
 
 .watch-box .row .btn, .guide-cta .btn { white-space: normal; text-align: center; }
+
+/* Trip-length tabs (3 / 5 / 7 days) */
+.plan-tabs { display: inline-flex; gap: 4px; padding: 4px; background: var(--sand); border-radius: 999px; margin: 4px 0 18px; }
+.plan-tabs button { border: 0; background: transparent; font: inherit; font-weight: 700; font-size: .92rem; padding: 10px 18px; border-radius: 999px; cursor: pointer; color: var(--ink-soft); }
+.plan-tabs button[aria-selected="true"] { background: var(--navy); color: #fff; }
+.plan-tabs button:focus-visible { outline: 3px solid rgba(212,105,29,.4); outline-offset: 2px; }
+.day-plan { margin-left: auto; font-size: .7rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); background: var(--accent-soft); padding: 4px 9px; border-radius: 999px; white-space: nowrap; }

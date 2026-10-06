@@ -1,11 +1,11 @@
 {
   "slug": "south-korea",
-  "title": "South Korea Travel Guide 2026: Seoul Itinerary & Budget",
-  "description": "A free 3-day Seoul itinerary, a Korean food guide, metro tips, a KRW budget and visa requirements for Indian travellers.",
+  "title": "South Korea Travel Guide 2026: 3, 5 & 7-Day Itineraries",
+  "description": "3, 5 and 7-day South Korea itineraries: Seoul palaces, the DMZ and Busan, with Korean food, KTX and metro tips, a KRW budget and visa info for Indians",
   "h1": "South Korea Travel Guide 2026",
   "country": "South Korea",
   "datePublished": "2026-01-01",
-  "dateModified": "2026-10-02",
+  "dateModified": "2026-10-06",
   "faq": [],
   "badges": {
     "budget": "₩40,000–60,000/day",
@@ -21,8 +21,8 @@
     },
     {
       "id": "itineraries",
-      "title": "3-Day South Korea Itinerary",
-      "html": "<p>A 3-day plan with morning, afternoon and evening ideas and an approximate daily cost per person. Use it as a starting point and adjust to your pace.</p>",
+      "title": "South Korea Itineraries: 3, 5 or 7 Days",
+      "html": "<p>Pick 3, 5 or 7 days. Each longer plan builds on the shorter one: the first days stay the same and the extra days add more places. Costs are approximate per person per day; prices and timings change, so check before you book.</p>",
       "after": "",
       "days": [
         {
@@ -64,7 +64,7 @@
           "note": ""
         },
         {
-          "title": "Departure or Extended Stay",
+          "title": "Namsan Tower, Bukchon & Insadong",
           "periods": [
             [
               "Morning",
@@ -76,12 +76,93 @@
             ],
             [
               "Evening",
-              "Head to airport. Take Seoul Metro or Airport Bus from your hotel. Check in, relax in airport lounges, and fly home."
+              "Wander the hanok houses of <strong>Bukchon Hanok Village</strong> and the tea houses and craft shops of <strong>Insadong</strong>, then dinner at Gwangjang Market (bindaetteok and kimbap)."
             ]
           ],
-          "cost": "₩30,000–45,000/day (excluding airport transport)",
+          "cost": "₩35,000–55,000/day",
           "note": ""
+        },
+        {
+          "title": "DMZ tour",
+          "cost": "₩90,000–130,000/day (incl. tour)",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Join a guided tour to the <strong>DMZ</strong> (Demilitarized Zone) from Seoul: observatories, the Third Tunnel and Dorasan Station. Carry your passport; tours must be booked ahead and can change at short notice."
+            ],
+            [
+              "Afternoon",
+              "Return to Seoul and rest, or visit the War Memorial of Korea (free)."
+            ],
+            [
+              "Evening",
+              "Have a Korean fried chicken and drinks dinner, a local favourite known as chimaek."
+            ]
+          ]
+        },
+        {
+          "title": "Hongdae, Yeouido & the Han River",
+          "cost": "₩40,000–60,000/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Explore the cafés and street art of <strong>Hongdae</strong> and Yeonnam-dong."
+            ],
+            [
+              "Afternoon",
+              "Visit <strong>Yeouido Hangang Park</strong>; rent a bike or order delivery fried chicken to the riverside like locals do. The Hyundai Seoul mall is nearby."
+            ],
+            [
+              "Evening",
+              "Watch the Banpo Bridge Moonlight Rainbow Fountain (seasonal) or catch Hongdae's street performers."
+            ]
+          ]
+        },
+        {
+          "title": "KTX to Busan & Haeundae",
+          "cost": "₩80,000–120,000/day (incl. KTX)",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Take the <strong>KTX</strong> high-speed train from Seoul to Busan (about 2.5 hours, roughly ₩60,000 one way)."
+            ],
+            [
+              "Afternoon",
+              "Relax at <strong>Haeundae Beach</strong> and walk the coastal Dongbaekseom trail."
+            ],
+            [
+              "Evening",
+              "Ride the Haeundae Blueline Park sky capsule along the coast, or dinner at Gwangalli with views of the lit-up Gwangan Bridge."
+            ]
+          ]
+        },
+        {
+          "title": "Gamcheon Village, Jagalchi & departure",
+          "cost": "₩40,000–70,000/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Visit <strong>Haedong Yonggungsa</strong>, a temple on the seaside rocks."
+            ],
+            [
+              "Afternoon",
+              "Wander the colourful hillside lanes of <strong>Gamcheon Culture Village</strong> and see the fish market at <strong>Jagalchi</strong>."
+            ],
+            [
+              "Evening",
+              "Fly home from Gimhae Airport in Busan, or take the KTX back to Seoul for an Incheon flight."
+            ]
+          ]
         }
+      ],
+      "plans": [
+        3,
+        5,
+        7
       ]
     },
     {
