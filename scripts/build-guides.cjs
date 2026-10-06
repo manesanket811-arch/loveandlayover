@@ -14,11 +14,11 @@ const DATA = path.join(ROOT, 'data', 'guides');
 const credits = JSON.parse(fs.readFileSync(path.join(ROOT, 'images', 'destinations', 'credits.json'), 'utf8'));
 
 // Rough rupee rates for the "≈ ₹" budget hints. Update now and then; shown as approximate.
-const INR = { 'A$': 55, 'S$': 65, RM: 19.5, EUR: 95, '€': 95, IDR: 0.0053, EGP: 1.75, ISK: 0.62, '¥': 0.57, MXN: 4.5, PEN: 23, '₩': 0.062, '฿': 2.5, TRY: 2.1, '₫': 0.0034, LKR: 0.28, 'US$': 85, AED: 23, '₹': 1 };
+const INR = { 'A$': 55, 'S$': 65, RM: 19.5, EUR: 95, '€': 95, IDR: 0.0053, EGP: 1.75, ISK: 0.62, '¥': 0.57, MXN: 4.5, PEN: 23, '₩': 0.062, '฿': 2.5, TRY: 2.1, '₫': 0.0034, LKR: 0.28, 'US$': 85, AED: 23, NPR: 0.625, 'HK$': 10.8, '₱': 1.5, '₹': 1 };
 
 const esc = (s = '') => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const fixAmp = (h = '') => h.replace(/&(?![a-zA-Z]+;|#\d+;|#x[0-9a-f]+;)/gi, '&amp;');
-const plain = (h = '') => h.replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
+const plain = (h = '') => h.replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').replace(/ ([,.;:!?)])/g, '$1').trim();
 const ld = (o) => `<script type="application/ld+json">\n${JSON.stringify(o, null, 2)}\n</script>`;
 
 // Flags and one-line descriptions come from the homepage destination cards
@@ -29,7 +29,7 @@ for (const m of home.matchAll(/<a class="dest"[^>]*href="\/destinations\/([\w-]+
 }
 
 function rupees(budget) {
-  const m = budget.match(/^\s*(A\$|S\$|US\$|RM|EUR|€|IDR|EGP|ISK|¥|MXN|PEN|₩|฿|TRY|₫|LKR|AED|₹)?\s*([\d.,]+)\s*([kKmM])?\s*[–-]\s*([\d.,]+)\s*([kKmM])?/);
+  const m = budget.match(/^\s*(A\$|S\$|US\$|HK\$|NPR|₱|RM|EUR|€|IDR|EGP|ISK|¥|MXN|PEN|₩|฿|TRY|₫|LKR|AED|₹)?\s*([\d.,]+)\s*([kKmM])?\s*[–-]\s*([\d.,]+)\s*([kKmM])?/);
   if (!m) return null;
   const cur = m[1] || '₹';
   const num = (n, s) => parseFloat(n.replace(/,/g, '')) * (s ? (/k/i.test(s) ? 1e3 : 1e6) : 1);

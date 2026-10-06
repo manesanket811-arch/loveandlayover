@@ -1,0 +1,202 @@
+{
+  "slug": "nepal",
+  "title": "Nepal Travel Guide 2026: 3, 5 & 7-Day Itineraries",
+  "description": "3, 5 and 7-day Nepal itineraries: Kathmandu, Pashupatinath, Bhaktapur, Pokhara and Chitwan, with Nepali food, an NPR budget and entry rules for Indians.",
+  "h1": "Nepal Travel Guide 2026",
+  "country": "Nepal",
+  "datePublished": "2026-10-06",
+  "dateModified": "2026-10-06",
+  "faq": [],
+  "badges": {
+    "budget": "NPR 4,000–7,000/day",
+    "best": "Oct–Nov, Mar–Apr",
+    "visa": "No visa for Indians"
+  },
+  "videoKeywords": "nepal,kathmandu,pokhara,himalaya",
+  "foodImage": {
+    "src": "/images/destinations/nepal-food.webp",
+    "alt": "Steamed momos, the favourite snack across Nepal",
+    "caption": "Steamed momos, the favourite snack across Nepal"
+  },
+  "sections": [
+    {
+      "id": "why-visit",
+      "title": "Why Visit Nepal?",
+      "html": "<p><strong>Nepal</strong> is home to eight of the world's ten highest mountains, ancient Hindu and Buddhist temples, medieval Newari towns and jungle safaris, all close to India. Indians don't need a visa or even a passport, Indian rupee notes are widely accepted and the food feels familiar, which makes it one of the easiest international trips you can take.</p>\n<p>The classic first trip combines <strong>Kathmandu Valley</strong> (Pashupatinath, Boudhanath, Bhaktapur), the lakeside town of <strong>Pokhara</strong> with Himalayan sunrise views, and wildlife in <strong>Chitwan National Park</strong>.</p>"
+    },
+    {
+      "id": "itineraries",
+      "title": "Nepal Itineraries: 3, 5 or 7 Days",
+      "html": "<p>Pick 3, 5 or 7 days. Each longer plan builds on the shorter one: the first days stay the same and the extra days add more places. Costs are approximate per person per day; prices and timings change, so check before you book.</p>",
+      "after": "",
+      "plans": [
+        3,
+        5,
+        7
+      ],
+      "days": [
+        {
+          "title": "Kathmandu Durbar Square & Thamel",
+          "cost": "NPR 3,500–6,000/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Land at Tribhuvan International Airport and check in around <strong>Thamel</strong>, the lively traveller area."
+            ],
+            [
+              "Afternoon",
+              "Explore <strong>Kathmandu Durbar Square</strong>, with its palaces, temples and the Kumari Ghar, home of the living goddess (entry fee for foreigners; SAARC nationals pay less)."
+            ],
+            [
+              "Evening",
+              "Walk through Asan and Indra Chowk markets, then a dal bhat or momo dinner in Thamel."
+            ]
+          ]
+        },
+        {
+          "title": "Pashupatinath, Boudhanath & Swayambhunath",
+          "cost": "NPR 3,500–6,000/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Visit <strong>Pashupatinath Temple</strong> on the Bagmati river, one of the holiest Shiva temples. Only Hindus may enter the main temple courtyard."
+            ],
+            [
+              "Afternoon",
+              "Walk around the giant stupa of <strong>Boudhanath</strong>, one of the largest in the world, and have lunch at a rooftop café overlooking it."
+            ],
+            [
+              "Evening",
+              "Climb to <strong>Swayambhunath</strong> (the Monkey Temple) for sunset views over the valley. Watch your bags around the monkeys."
+            ]
+          ]
+        },
+        {
+          "title": "Bhaktapur & Nagarkot",
+          "cost": "NPR 4,000–7,000/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Drive to <strong>Bhaktapur</strong> (about 45 minutes), the best-preserved medieval town in the valley: Durbar Square, Nyatapola Temple and potters' square."
+            ],
+            [
+              "Afternoon",
+              "Try juju dhau, Bhaktapur's famous \"king of curds\", then continue to <strong>Nagarkot</strong> (about 1 hour)."
+            ],
+            [
+              "Evening",
+              "Watch the sunset over the Himalaya from Nagarkot and stay overnight for sunrise, or return to Kathmandu."
+            ]
+          ]
+        },
+        {
+          "title": "To Pokhara & Phewa Lake",
+          "cost": "NPR 5,000–9,000/day (incl. travel)",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Take a short flight to <strong>Pokhara</strong> (about 25 minutes, mountain views on the right side) or a tourist bus (about 6–8 hours)."
+            ],
+            [
+              "Afternoon",
+              "Rent a boat on <strong>Phewa Lake</strong> and visit the Tal Barahi temple on its island."
+            ],
+            [
+              "Evening",
+              "Stroll Lakeside with the Annapurna range glowing at sunset, and have dinner by the water."
+            ]
+          ]
+        },
+        {
+          "title": "Sarangkot sunrise & Pokhara",
+          "cost": "NPR 4,000–8,000/day",
+          "note": "",
+          "periods": [
+            [
+              "Early Morning",
+              "Drive up to <strong>Sarangkot</strong> before dawn to watch the sun rise over Machhapuchhre and the Annapurnas."
+            ],
+            [
+              "Afternoon",
+              "Visit the <strong>World Peace Pagoda</strong>, Davis Falls and Gupteshwor Cave. Adventure lovers can paraglide from Sarangkot."
+            ],
+            [
+              "Evening",
+              "Relax in Lakeside. Short treks such as Australian Camp or Poon Hill can extend your stay if you have more days."
+            ]
+          ]
+        },
+        {
+          "title": "Chitwan National Park",
+          "cost": "NPR 5,000–9,000/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Drive or take a tourist bus to <strong>Chitwan</strong> (about 5 hours) and check into a lodge in Sauraha."
+            ],
+            [
+              "Afternoon",
+              "Take a canoe ride on the Rapti river looking for crocodiles and birds, and walk to the riverbank for sunset."
+            ],
+            [
+              "Evening",
+              "Watch a Tharu cultural dance performance."
+            ]
+          ]
+        },
+        {
+          "title": "Jungle safari & departure",
+          "cost": "NPR 5,000–10,000/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Go on a <strong>jeep safari</strong> in Chitwan National Park to look for one-horned rhinos, deer and, if you're lucky, a tiger."
+            ],
+            [
+              "Afternoon",
+              "Fly from Bharatpur to Kathmandu (about 25 minutes), or drive to the Indian border crossings if you're heading home by road."
+            ],
+            [
+              "Evening",
+              "Last-minute shopping for pashmina, singing bowls and tea before your flight home."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "title": "Nepali Food to Try",
+      "html": "<ul>\n<li><strong>Dal bhat</strong> — Lentil soup, rice, vegetable curry and pickles, refilled until you're full. \"Dal bhat power, 24 hour!\"</li>\n<li><strong>Momos</strong> — Steamed or fried dumplings with spicy tomato achar; vegetarian versions are everywhere.</li>\n<li><strong>Thukpa</strong> — Tibetan-style noodle soup, perfect in the mountains.</li>\n<li><strong>Newari khaja set</strong> — Beaten rice with spiced potatoes, beans, pickles and more, a Kathmandu Valley speciality.</li>\n<li><strong>Sel roti</strong> — Ring-shaped sweet rice bread, popular during festivals.</li>\n<li><strong>Juju dhau</strong> — Rich, creamy curd from Bhaktapur.</li>\n</ul>\n<p><strong>For Indian travellers:</strong> vegetarian food is easy to find and very familiar, and many restaurants in Thamel and Pokhara serve North and South Indian dishes.</p>"
+    },
+    {
+      "id": "best-time",
+      "title": "Best Time to Visit Nepal",
+      "html": "<p><strong>Autumn (October–November):</strong> the best time, with clear skies, mountain views and festivals such as Dashain and Tihar.</p>\n<p><strong>Spring (March–April):</strong> warm days and blooming rhododendrons; a little hazier.</p>\n<p><strong>Monsoon (June–September):</strong> green and quiet but rainy, with landslides on mountain roads and clouds hiding the peaks.</p>\n<p><strong>Winter (December–February):</strong> cold nights in Kathmandu and Pokhara but often clear views; high trails can be snowed in.</p>"
+    },
+    {
+      "id": "getting-around",
+      "title": "Getting Around Nepal",
+      "html": "<p><strong>Domestic flights:</strong> the fastest way between Kathmandu, Pokhara and Bharatpur (Chitwan). Mountain weather causes delays, so leave a buffer day before your flight home.</p>\n<p><strong>Tourist buses:</strong> cheap and reliable between Kathmandu, Pokhara and Chitwan, though slow on winding roads.</p>\n<p><strong>Taxis and apps:</strong> agree fares before getting in, or use the Pathao or inDrive apps in Kathmandu and Pokhara.</p>\n<p><strong>By road from India:</strong> main crossings include Sunauli–Bhairahawa, Raxaul–Birgunj and Panitanki–Kakarbhitta.</p>"
+    },
+    {
+      "id": "essentials",
+      "title": "Travel Essentials",
+      "html": "<p><strong>Entry for Indians:</strong> Indian citizens don't need a visa for Nepal. Carry a valid <strong>passport</strong> or <strong>voter ID card</strong> (Aadhaar is generally not accepted as the main travel document for air travel). Children and minors have separate document rules, so check with your airline. Rules as of October 2026; always check the official website before you travel.</p>\n<p><strong>Money:</strong> Nepali rupee (NPR). ₹1 is about NPR 1.6, and Indian ₹100 notes are widely accepted; check current rules before carrying larger Indian notes. ATMs work in cities; carry cash for smaller towns.</p>\n<p><strong>Daily budget (per person):</strong> a mid-range hotel share, food, local transport and sightseeing come to about <strong>NPR 4,000–7,000 a day</strong>, plus domestic flights and safaris.</p>\n<p><strong>SIM card:</strong> Ncell and Nepal Telecom (NTC) sell SIMs at the airport and in town with your passport or ID and a photo.</p>\n<p><strong>Plugs:</strong> types C, D and M, 230V, so most Indian plugs fit. Power cuts are less common than before but carry a power bank.</p>\n<p><strong>Etiquette and safety:</strong> walk clockwise around stupas, remove shoes in temples and ask before photographing people. For treks above about 3,000 m, go slowly to avoid altitude sickness and buy insurance that covers trekking.</p>"
+    }
+  ],
+  "related": [
+    "india",
+    "bhutan",
+    "sri-lanka",
+    "thailand"
+  ],
+  "readNext": [],
+  "filmed": false
+}

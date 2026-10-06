@@ -1,0 +1,202 @@
+{
+  "slug": "hong-kong",
+  "title": "Hong Kong Travel Guide 2026: 3, 5 & 7-Day Itineraries",
+  "description": "3, 5 and 7-day Hong Kong itineraries: Victoria Peak, the Star Ferry, Lantau's Big Buddha, Disneyland and Macau, with dim sum, an HKD budget and visa tips.",
+  "h1": "Hong Kong Travel Guide 2026",
+  "country": "Hong Kong",
+  "datePublished": "2026-10-06",
+  "dateModified": "2026-10-06",
+  "faq": [],
+  "badges": {
+    "budget": "HK$800–1,400/day",
+    "best": "Oct–Dec",
+    "visa": "Visa-free (online pre-arrival registration)"
+  },
+  "videoKeywords": "hong kong,victoria peak,kowloon,macau",
+  "foodImage": {
+    "src": "/images/destinations/hong-kong-food.webp",
+    "alt": "A dim sum spread with dumplings and cheung fun",
+    "caption": "A dim sum spread with dumplings and cheung fun"
+  },
+  "sections": [
+    {
+      "id": "why-visit",
+      "title": "Why Visit Hong Kong?",
+      "html": "<p><strong>Hong Kong</strong> squeezes a dramatic skyline, harbour ferries, temples, night markets, hiking trails and some of the world's best dim sum into a small, safe and efficient city. It's about 5 hours from Delhi or Mumbai, and Indians can visit visa-free after a quick online registration.</p>\n<p>Base yourself in <strong>Tsim Sha Tsui</strong> or <strong>Central</strong>, then add Lantau Island, a theme park day and a side trip to <strong>Macau</strong> for a longer stay.</p>"
+    },
+    {
+      "id": "itineraries",
+      "title": "Hong Kong Itineraries: 3, 5 or 7 Days",
+      "html": "<p>Pick 3, 5 or 7 days. Each longer plan builds on the shorter one: the first days stay the same and the extra days add more places. Costs are approximate per person per day; prices and timings change, so check before you book.</p>",
+      "after": "",
+      "plans": [
+        3,
+        5,
+        7
+      ],
+      "days": [
+        {
+          "title": "Tsim Sha Tsui & the harbour",
+          "cost": "HK$700–1,200/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Land at Hong Kong International Airport and take the <strong>Airport Express</strong> train to Kowloon or Hong Kong station (about 25 minutes). Get an <strong>Octopus card</strong> for all transport."
+            ],
+            [
+              "Afternoon",
+              "Walk the Tsim Sha Tsui waterfront and the <strong>Avenue of Stars</strong>, with views across Victoria Harbour."
+            ],
+            [
+              "Evening",
+              "Watch the <strong>Symphony of Lights</strong> show (usually at 8 PM), then ride the historic <strong>Star Ferry</strong> across the harbour at night."
+            ]
+          ]
+        },
+        {
+          "title": "Victoria Peak & Central",
+          "cost": "HK$700–1,200/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Take the <strong>Peak Tram</strong> up Victoria Peak for the classic skyline view; walk the shaded Lugard Road loop."
+            ],
+            [
+              "Afternoon",
+              "Ride the <strong>Central–Mid-Levels escalators</strong> through SoHo, visit Man Mo Temple and browse PMQ and Tai Kwun."
+            ],
+            [
+              "Evening",
+              "Dinner in Central, then drinks around Lan Kwai Fong, or a ride on a double-decker tram (\"ding ding\")."
+            ]
+          ]
+        },
+        {
+          "title": "Lantau: Big Buddha & Tai O",
+          "cost": "HK$800–1,300/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Take the MTR to Tung Chung and the <strong>Ngong Ping 360</strong> cable car (a crystal cabin has a glass floor) to the <strong>Tian Tan Buddha</strong>."
+            ],
+            [
+              "Afternoon",
+              "Visit Po Lin Monastery (vegetarian lunch available), then a bus to <strong>Tai O</strong> fishing village with its stilt houses."
+            ],
+            [
+              "Evening",
+              "Head back to the city; have dinner at a dai pai dong (open-air food stall) in Temple Street."
+            ]
+          ]
+        },
+        {
+          "title": "Disneyland or Ocean Park",
+          "cost": "HK$1,000–1,800/day (incl. tickets)",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Spend the day at <strong>Hong Kong Disneyland</strong> (great for families) or <strong>Ocean Park</strong>, with rides, giant pandas and the cable car over the sea. Book tickets online."
+            ],
+            [
+              "Afternoon",
+              "Continue at the park; weekdays are much quieter."
+            ],
+            [
+              "Evening",
+              "Stay for the evening show, then rest."
+            ]
+          ]
+        },
+        {
+          "title": "Kowloon markets & temples",
+          "cost": "HK$600–1,000/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Visit <strong>Wong Tai Sin Temple</strong> and the peaceful <strong>Chi Lin Nunnery</strong> and Nan Lian Garden."
+            ],
+            [
+              "Afternoon",
+              "Explore Mong Kok's Ladies' Market, Goldfish Market and Flower Market. Chungking Mansions in Tsim Sha Tsui has many budget Indian eateries."
+            ],
+            [
+              "Evening",
+              "Browse the <strong>Temple Street Night Market</strong> for snacks, fortune tellers and street food."
+            ]
+          ]
+        },
+        {
+          "title": "Macau day trip",
+          "cost": "HK$800–1,500/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Take a ferry or the cross-border bus over the Hong Kong–Zhuhai–Macao Bridge to <strong>Macau</strong> (about an hour). Macau has its own entry rules, so check them for Indian passports before you go."
+            ],
+            [
+              "Afternoon",
+              "See the Ruins of St Paul's, Senado Square and the Portuguese-style old town, and eat Portuguese egg tarts."
+            ],
+            [
+              "Evening",
+              "Visit the Cotai Strip resorts, then return to Hong Kong."
+            ]
+          ]
+        },
+        {
+          "title": "Dragon's Back hike & departure",
+          "cost": "HK$500–900/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Hike the <strong>Dragon's Back</strong> trail on Hong Kong Island (about 2–3 hours) for sea views, ending at Big Wave Bay or Shek O beach."
+            ],
+            [
+              "Afternoon",
+              "Last dim sum lunch and shopping in Causeway Bay."
+            ],
+            [
+              "Evening",
+              "Take the Airport Express (you can check in bags at Hong Kong station for many airlines) for your flight home."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "title": "Hong Kong Food to Try",
+      "html": "<ul>\n<li><strong>Dim sum</strong> — Har gow (prawn dumplings), siu mai, char siu bao and cheung fun, best at a busy yum cha restaurant.</li>\n<li><strong>Roast goose and char siu</strong> — Cantonese roast meats over rice.</li>\n<li><strong>Wonton noodles</strong> — Springy noodles in broth with prawn wontons.</li>\n<li><strong>Egg tarts and pineapple buns</strong> — From a cha chaan teng (local café), with Hong Kong-style milk tea.</li>\n<li><strong>Claypot rice</strong> — A winter favourite with a crispy bottom.</li>\n<li><strong>Egg waffles</strong> — Bubble-shaped street snack.</li>\n</ul>\n<p><strong>For Indian travellers:</strong> Hong Kong has a long-established Indian community. Tsim Sha Tsui (especially Chungking Mansions) has many Indian restaurants, and Buddhist vegetarian restaurants are common.</p>"
+    },
+    {
+      "id": "best-time",
+      "title": "Best Time to Visit Hong Kong",
+      "html": "<p><strong>Autumn and early winter (October–December):</strong> the best time, with clear, dry and comfortable weather.</p>\n<p><strong>Spring (March–April):</strong> mild but often humid and foggy.</p>\n<p><strong>Summer (May–September):</strong> hot, humid and rainy, and typhoons are possible from about June to October. Check the Hong Kong Observatory for warnings.</p>\n<p><strong>Winter (January–February):</strong> cool and dry; Chinese New Year brings festivities but also crowds and some closures.</p>"
+    },
+    {
+      "id": "getting-around",
+      "title": "Getting Around Hong Kong",
+      "html": "<p><strong>MTR:</strong> fast and easy, covering most sights. Tap in with an Octopus card or a contactless card.</p>\n<p><strong>Ferries and trams:</strong> the Star Ferry and the Hong Kong Island trams are cheap and great for sightseeing.</p>\n<p><strong>Airport Express:</strong> the quickest way between the airport and the city.</p>\n<p><strong>Taxis:</strong> red (urban), green (New Territories) and blue (Lantau) taxis; have your destination written in Chinese if possible.</p>"
+    },
+    {
+      "id": "essentials",
+      "title": "Travel Essentials",
+      "html": "<p><strong>Visa for Indians:</strong> Indian nationals can visit Hong Kong visa-free for up to 14 days, but must complete the free online <strong>Pre-arrival Registration (PAR)</strong> on the Hong Kong Immigration Department website before travel. Approval is usually quick and the registration is valid for multiple visits within its validity period. Rules as of October 2026; always check the official website before you travel.</p>\n<p><strong>Money:</strong> Hong Kong dollar (HK$). HK$1 is roughly ₹11. Cards and Octopus work almost everywhere; carry some cash for small eateries and markets.</p>\n<p><strong>Daily budget (per person):</strong> Hong Kong hotels are expensive and small; with a mid-range room share, food and transport, expect about <strong>HK$800–1,400 a day</strong>.</p>\n<p><strong>SIM card:</strong> tourist SIMs and eSIMs from CSL, 3HK and China Mobile Hong Kong are sold at the airport and convenience stores.</p>\n<p><strong>Plugs:</strong> type G (three square pins), 220V.</p>\n<p><strong>Tips:</strong> many restaurants add a 10% service charge; tipping beyond that is optional. Stand on the right on escalators and keep MTR queues orderly.</p>"
+    }
+  ],
+  "related": [
+    "singapore",
+    "japan",
+    "south-korea",
+    "vietnam"
+  ],
+  "readNext": [],
+  "filmed": false
+}

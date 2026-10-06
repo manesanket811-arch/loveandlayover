@@ -1,0 +1,202 @@
+{
+  "slug": "bhutan",
+  "title": "Bhutan Travel Guide 2026: 3, 5 & 7-Day Itineraries",
+  "description": "3, 5 and 7-day Bhutan itineraries: Thimphu, Dochula, Punakha, Paro and Tiger's Nest, with Bhutanese food, a budget in rupees and entry rules for Indians.",
+  "h1": "Bhutan Travel Guide 2026",
+  "country": "Bhutan",
+  "datePublished": "2026-10-06",
+  "dateModified": "2026-10-06",
+  "faq": [],
+  "badges": {
+    "budget": "₹6,000–10,000/day + SDF",
+    "best": "Mar–May, Sep–Nov",
+    "visa": "No visa; entry permit for Indians"
+  },
+  "videoKeywords": "bhutan,thimphu,paro,tiger nest",
+  "foodImage": {
+    "src": "/images/destinations/bhutan-food.webp",
+    "alt": "Ema datshi, chillies in cheese, with steamed bread",
+    "caption": "Ema datshi, chillies in cheese, with steamed bread"
+  },
+  "sections": [
+    {
+      "id": "why-visit",
+      "title": "Why Visit Bhutan?",
+      "html": "<p><strong>Bhutan</strong>, the last great Himalayan kingdom, measures success in Gross National Happiness. Expect fortress-monasteries (dzongs), prayer flags on mountain passes, spotless forests and a culture that has changed little over centuries. Indians don't need a visa, the ngultrum is pegged to the rupee and you can fly in or arrive by road from West Bengal.</p>\n<p>A first trip usually covers <strong>Thimphu</strong>, the capital; <strong>Punakha</strong>, across the Dochula Pass; and <strong>Paro</strong>, home to the cliffside <strong>Tiger's Nest</strong> monastery.</p>"
+    },
+    {
+      "id": "itineraries",
+      "title": "Bhutan Itineraries: 3, 5 or 7 Days",
+      "html": "<p>Pick 3, 5 or 7 days. Each longer plan builds on the shorter one: the first days stay the same and the extra days add more places. Costs are approximate per person per day; prices and timings change, so check before you book.</p>",
+      "after": "",
+      "plans": [
+        3,
+        5,
+        7
+      ],
+      "days": [
+        {
+          "title": "Paro arrival & Thimphu",
+          "cost": "₹5,000–9,000/day + SDF",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Fly into <strong>Paro</strong> (one of the world's most dramatic airport approaches) or arrive by road via Jaigaon–Phuentsholing. Collect your entry permit with your passport or voter ID."
+            ],
+            [
+              "Afternoon",
+              "Drive to <strong>Thimphu</strong> (about 1 hour). Visit the giant <strong>Buddha Dordenma</strong> statue overlooking the valley."
+            ],
+            [
+              "Evening",
+              "See <strong>Tashichho Dzong</strong> lit up in the evening and walk Thimphu's main street, which has no traffic lights."
+            ]
+          ]
+        },
+        {
+          "title": "Thimphu culture",
+          "cost": "₹5,000–8,000/day + SDF",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Visit the <strong>National Memorial Chorten</strong>, where locals circle and spin prayer wheels, then the Folk Heritage Museum."
+            ],
+            [
+              "Afternoon",
+              "See the national animal at the <strong>Motithang Takin Preserve</strong> and the traditional arts at the Institute for Zorig Chusum (the painting school)."
+            ],
+            [
+              "Evening",
+              "On weekends, browse the Centenary Farmers' Market; have dinner with ema datshi and red rice."
+            ]
+          ]
+        },
+        {
+          "title": "Dochula Pass & Punakha Dzong",
+          "cost": "₹6,000–10,000/day + SDF",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Drive over <strong>Dochula Pass</strong> (about 3,100 m) with its 108 chortens and, on clear days, views of the Himalaya."
+            ],
+            [
+              "Afternoon",
+              "Visit <strong>Punakha Dzong</strong>, the most beautiful fortress in Bhutan, at the meeting of two rivers, and cross the long suspension bridge nearby."
+            ],
+            [
+              "Evening",
+              "Overnight in Punakha, which is warmer than Thimphu. Indian visitors usually need a route permit and a licensed guide for travel beyond Thimphu and Paro, so arrange this through your hotel or a tour operator."
+            ]
+          ]
+        },
+        {
+          "title": "Chimi Lhakhang & Punakha valley",
+          "cost": "₹5,000–9,000/day + SDF",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Walk through rice fields to <strong>Chimi Lhakhang</strong>, the fertility temple of the \"Divine Madman\"."
+            ],
+            [
+              "Afternoon",
+              "Hike up to <strong>Khamsum Yulley Namgyal Chorten</strong> for valley views, or try river rafting on the Mo Chhu (seasonal)."
+            ],
+            [
+              "Evening",
+              "A quiet evening in Punakha."
+            ]
+          ]
+        },
+        {
+          "title": "Back to Paro",
+          "cost": "₹5,000–9,000/day + SDF",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Drive back over Dochula to <strong>Paro</strong> (about 4–5 hours)."
+            ],
+            [
+              "Afternoon",
+              "Visit <strong>Rinpung Dzong</strong> and the National Museum above it."
+            ],
+            [
+              "Evening",
+              "Stroll Paro town and rest well before tomorrow's hike. Try a hot-stone bath (dotsho) at a farmhouse."
+            ]
+          ]
+        },
+        {
+          "title": "Tiger's Nest hike",
+          "cost": "₹5,000–9,000/day + SDF",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Hike to <strong>Paro Taktsang</strong> (Tiger's Nest), the monastery clinging to a cliff about 900 m above the valley. The round trip takes 4–6 hours; start early and go at your own pace."
+            ],
+            [
+              "Afternoon",
+              "Lunch at the cafeteria viewpoint on the way down, then visit the ancient Kyichu Lhakhang temple."
+            ],
+            [
+              "Evening",
+              "Celebrate the climb with a traditional dinner."
+            ]
+          ]
+        },
+        {
+          "title": "Chele La & departure",
+          "cost": "₹4,000–8,000/day + SDF",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "If your flight allows, drive up to <strong>Chele La</strong> pass (about 3,900 m) for prayer flags and views of Jomolhari; or browse Paro's handicraft shops."
+            ],
+            [
+              "Afternoon",
+              "Fly out of Paro, or drive back to Phuentsholing (about 4–5 hours) to cross into India."
+            ],
+            [
+              "Evening",
+              "Onward journey home from Bagdogra or Paro."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "title": "Bhutanese Food to Try",
+      "html": "<ul>\n<li><strong>Ema datshi</strong> — The national dish: chillies cooked in cheese. Seriously spicy.</li>\n<li><strong>Kewa datshi and shamu datshi</strong> — Potatoes or mushrooms in cheese sauce, milder versions of ema datshi.</li>\n<li><strong>Red rice</strong> — Nutty Bhutanese red rice served with most meals.</li>\n<li><strong>Momos</strong> — Dumplings with cheese, vegetable or meat filling.</li>\n<li><strong>Jasha maru</strong> — Spicy minced chicken stew.</li>\n<li><strong>Suja</strong> — Salty butter tea, an acquired taste.</li>\n</ul>\n<p><strong>For Indian travellers:</strong> vegetarian food is easy to find and most hotels can make dal, sabzi and roti. Ask for \"less chilli\" if you don't want it very hot.</p>"
+    },
+    {
+      "id": "best-time",
+      "title": "Best Time to Visit Bhutan",
+      "html": "<p><strong>Spring (March–May):</strong> rhododendrons in bloom, pleasant days and festivals such as the Paro Tshechu.</p>\n<p><strong>Autumn (September–November):</strong> clear skies and the best mountain views, plus the Thimphu Tshechu festival. This is peak season.</p>\n<p><strong>Winter (December–February):</strong> cold, especially at night, but clear; passes can close after snow.</p>\n<p><strong>Monsoon (June–August):</strong> lush and quiet, but rain and landslides can affect roads.</p>"
+    },
+    {
+      "id": "getting-around",
+      "title": "Getting Around Bhutan",
+      "html": "<p><strong>By air:</strong> Druk Air and Bhutan Airlines fly to Paro from Delhi, Kolkata, Bagdogra, Guwahati and other cities. Flights are weather-dependent.</p>\n<p><strong>By road:</strong> cross from Jaigaon (West Bengal) to Phuentsholing, then drive about 4–5 hours to Thimphu. Bagdogra is the nearest Indian airport.</p>\n<p><strong>Getting around:</strong> there are no trains, and roads are narrow and winding, so most visitors travel by hired car with driver. Allow plenty of time between towns.</p>"
+    },
+    {
+      "id": "essentials",
+      "title": "Travel Essentials",
+      "html": "<p><strong>Entry for Indians:</strong> Indian citizens don't need a visa. You get an <strong>entry permit</strong> on arrival at Paro or Phuentsholing with a valid passport or voter ID card, and a further route permit to travel beyond Thimphu and Paro. Indian visitors also pay a <strong>Sustainable Development Fee (SDF)</strong> per person per night (₹1,200 at the time of writing, with reductions for children), and usually need a licensed guide outside Thimphu and Paro. Book permits and hotels through a licensed operator or your hotel. Rules as of October 2026; always check the official website before you travel.</p>\n<p><strong>Money:</strong> Bhutanese ngultrum (Nu.), pegged 1:1 to the Indian rupee. Indian rupees are widely accepted, though larger notes are sometimes refused. ATMs exist in towns, but card acceptance is limited.</p>\n<p><strong>Daily budget (per person):</strong> roughly <strong>₹6,000–10,000 a day</strong> for a hotel share, car and driver, guide and food, plus the SDF.</p>\n<p><strong>SIM card:</strong> B-Mobile and TashiCell sell SIMs with your permit and ID.</p>\n<p><strong>Plugs:</strong> types D, G and M, 230V.</p>\n<p><strong>Etiquette:</strong> dress formally for dzongs and temples (long sleeves and long trousers or skirts; no caps), walk clockwise around chortens, and don't point at religious objects. Smoking in public places is prohibited and tobacco you bring in is taxed.</p>"
+    }
+  ],
+  "related": [
+    "nepal",
+    "india",
+    "sri-lanka",
+    "japan"
+  ],
+  "readNext": [],
+  "filmed": false
+}

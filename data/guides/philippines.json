@@ -1,0 +1,202 @@
+{
+  "slug": "philippines",
+  "title": "Philippines Travel Guide 2026: 3, 5 & 7-Day Itineraries",
+  "description": "3, 5 and 7-day Philippines itineraries: Manila, Bohol's Chocolate Hills, Panglao and El Nido, with Filipino food, a PHP budget and visa tips for Indians.",
+  "h1": "Philippines Travel Guide 2026",
+  "country": "Philippines",
+  "datePublished": "2026-10-06",
+  "dateModified": "2026-10-06",
+  "faq": [],
+  "badges": {
+    "budget": "₱3,000–5,500/day",
+    "best": "Dec–May",
+    "visa": "Visa-free short stay or e-visa (check)"
+  },
+  "videoKeywords": "philippines,manila,palawan,el nido,bohol",
+  "foodImage": {
+    "src": "/images/destinations/philippines-food.webp",
+    "alt": "Halo-halo, the Filipino shaved-ice dessert",
+    "caption": "Halo-halo, the Filipino shaved-ice dessert"
+  },
+  "sections": [
+    {
+      "id": "why-visit",
+      "title": "Why Visit Philippines?",
+      "html": "<p><strong>The Philippines</strong> is more than 7,000 islands of white-sand beaches, limestone lagoons, coral reefs and some of the friendliest people in Asia. English is widely spoken, island-hopping is the main event and costs are reasonable once you're there.</p>\n<p>A first trip usually combines <strong>Manila</strong> with the countryside and beaches of <strong>Bohol</strong> and the dramatic lagoons of <strong>El Nido, Palawan</strong>. Domestic flights make it easy to hop between islands.</p>"
+    },
+    {
+      "id": "itineraries",
+      "title": "Philippines Itineraries: 3, 5 or 7 Days",
+      "html": "<p>Pick 3, 5 or 7 days. Each longer plan builds on the shorter one: the first days stay the same and the extra days add more places. Costs are approximate per person per day; prices and timings change, so check before you book.</p>",
+      "after": "",
+      "plans": [
+        3,
+        5,
+        7
+      ],
+      "days": [
+        {
+          "title": "Manila: Intramuros & Binondo",
+          "cost": "₱3,000–5,000/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Arrive at Manila's Ninoy Aquino International Airport (NAIA). Traffic is heavy, so allow plenty of time and use Grab or an airport taxi."
+            ],
+            [
+              "Afternoon",
+              "Explore <strong>Intramuros</strong>, the old walled city: Fort Santiago and San Agustin Church (a UNESCO site). Rent a bamboo bike or ride a kalesa."
+            ],
+            [
+              "Evening",
+              "Food crawl through <strong>Binondo</strong>, the world's oldest Chinatown, or watch the sunset over Manila Bay."
+            ]
+          ]
+        },
+        {
+          "title": "Bohol: Chocolate Hills & tarsiers",
+          "cost": "₱3,500–5,500/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Fly to <strong>Bohol</strong> (Panglao airport, about 1.5 hours)."
+            ],
+            [
+              "Afternoon",
+              "Join a countryside tour: the <strong>Chocolate Hills</strong>, the tiny tarsiers at a conservation sanctuary (keep quiet and don't use flash), and a lunch cruise on the <strong>Loboc River</strong>."
+            ],
+            [
+              "Evening",
+              "Relax at <strong>Alona Beach</strong> in Panglao."
+            ]
+          ]
+        },
+        {
+          "title": "Panglao island hopping",
+          "cost": "₱3,500–6,000/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Early island-hopping trip for dolphin watching and snorkelling at <strong>Balicasag Island</strong>, known for turtles."
+            ],
+            [
+              "Afternoon",
+              "Stop at Virgin Island's sandbar, then relax at Dumaluan Beach."
+            ],
+            [
+              "Evening",
+              "Seafood dinner on Alona Beach. If your trip ends here, fly back to Manila tomorrow."
+            ]
+          ]
+        },
+        {
+          "title": "To El Nido, Palawan",
+          "cost": "₱3,500–6,500/day (excl. flights)",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Fly to <strong>El Nido</strong>, either direct to the small Lio airport or via Puerto Princesa followed by a 5–6 hour van ride."
+            ],
+            [
+              "Afternoon",
+              "Check in and walk around El Nido town and Las Cabanas beach."
+            ],
+            [
+              "Evening",
+              "Watch the sunset at Las Cabanas, then dinner in town. Pay the environmental fee and book tomorrow's island tour."
+            ]
+          ]
+        },
+        {
+          "title": "El Nido Tour A: lagoons",
+          "cost": "₱3,500–6,000/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Join <strong>Tour A</strong>: kayak or swim into the Big and Small Lagoons, surrounded by limestone cliffs. Lagoon access is limited daily, so book a day ahead."
+            ],
+            [
+              "Afternoon",
+              "Visit Secret Lagoon and Shimizu Island for snorkelling and lunch on the boat."
+            ],
+            [
+              "Evening",
+              "Rest; island hopping takes a lot of energy in the sun."
+            ]
+          ]
+        },
+        {
+          "title": "El Nido Tour C or Nacpan Beach",
+          "cost": "₱3,000–5,500/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Take <strong>Tour C</strong> to Hidden Beach and Matinloc Shrine, or rent a scooter or tricycle to <strong>Nacpan Beach</strong>, a long, quiet stretch of sand."
+            ],
+            [
+              "Afternoon",
+              "Swim, snorkel and enjoy a beachside lunch."
+            ],
+            [
+              "Evening",
+              "Final dinner in El Nido."
+            ]
+          ]
+        },
+        {
+          "title": "Back to Manila & departure",
+          "cost": "₱2,500–4,500/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Fly from El Nido to Manila."
+            ],
+            [
+              "Afternoon",
+              "If time allows, visit Rizal Park and the National Museum of Fine Arts (free), or the malls of Makati and BGC."
+            ],
+            [
+              "Evening",
+              "Head to NAIA, allowing extra time for Manila traffic."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "title": "Filipino Food to Try",
+      "html": "<ul>\n<li><strong>Adobo</strong> — Chicken or pork braised in vinegar, soy sauce and garlic; the unofficial national dish.</li>\n<li><strong>Sinigang</strong> — Sour tamarind soup with vegetables and pork or prawns.</li>\n<li><strong>Lechon</strong> — Whole roast pig with crackling skin, especially famous in Cebu.</li>\n<li><strong>Kare-kare</strong> — Oxtail and vegetables in peanut sauce with shrimp paste.</li>\n<li><strong>Pancit</strong> — Stir-fried noodles, often served at celebrations.</li>\n<li><strong>Halo-halo</strong> — Shaved ice with sweet beans, fruit, ube and leche flan: the ultimate dessert.</li>\n</ul>\n<p><strong>For Indian travellers:</strong> Filipino food is meat-heavy and vegetarian options are limited outside big cities. Manila (Makati, BGC) has several Indian restaurants; on the islands, tell restaurants clearly what you don't eat.</p>"
+    },
+    {
+      "id": "best-time",
+      "title": "Best Time to Visit Philippines",
+      "html": "<p><strong>Dry season (December–May):</strong> the best time for beaches, with January to April the driest and calmest. March to May is hot.</p>\n<p><strong>Wet season (June–November):</strong> rain and the risk of typhoons, which can cancel flights and boat trips. Travel is still possible but keep plans flexible.</p>\n<p><strong>Temperature:</strong> warm all year (about 26–33°C).</p>"
+    },
+    {
+      "id": "getting-around",
+      "title": "Getting Around Philippines",
+      "html": "<p><strong>Domestic flights:</strong> Philippine Airlines, Cebu Pacific and AirAsia connect Manila, Cebu, Bohol and Palawan. Book early and check baggage allowances.</p>\n<p><strong>Ferries and boats:</strong> link many islands; check weather advisories before travelling.</p>\n<p><strong>In cities:</strong> use Grab in Manila and Cebu. Jeepneys and tricycles are cheap local options; agree tricycle fares first.</p>\n<p><strong>Vans:</strong> shared vans connect Puerto Princesa and El Nido (about 5–6 hours).</p>"
+    },
+    {
+      "id": "essentials",
+      "title": "Travel Essentials",
+      "html": "<p><strong>Visa for Indians:</strong> at the time of writing, Indian tourists can enter the Philippines visa-free for a short stay, with a longer visa-free stay for those holding a valid visa or residence permit from countries such as the USA, Japan, Australia, Canada, Schengen states, Singapore or the UK. Others can apply for a Philippine e-visa online. Everyone must complete the free <strong>eTravel</strong> registration online within 72 hours before arrival. These rules have changed recently, so check the Philippine embassy website for the current length of stay. Rules as of October 2026; always check the official website before you travel.</p>\n<p><strong>Money:</strong> Philippine peso (₱). ₱1 is roughly ₹1.5. Cards work in cities, but carry cash for islands, tricycles and island tours; ATMs in El Nido can run out.</p>\n<p><strong>Daily budget (per person):</strong> a mid-range room share, food, local transport and an island tour come to about <strong>₱3,000–5,500 a day</strong>, plus domestic flights.</p>\n<p><strong>SIM card:</strong> Globe and Smart sell tourist SIMs at the airport; registration with your passport is required by law.</p>\n<p><strong>Plugs:</strong> types A, B and C, 220V. Indian round-pin plugs may not fit type A/B sockets, so bring a universal adapter.</p>\n<p><strong>Tips:</strong> use reef-safe sunscreen, don't touch coral, and keep plans flexible in the wet season.</p>"
+    }
+  ],
+  "related": [
+    "vietnam",
+    "bali",
+    "malaysia",
+    "thailand"
+  ],
+  "readNext": [],
+  "filmed": false
+}
