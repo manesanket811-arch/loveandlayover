@@ -66,12 +66,12 @@ const WANT = {
   'johor-causeway-hero': ['Johor–Singapore Causeway', 'Johor-Singapore Causeway', 'Woodlands Checkpoint', 'Johor Bahru skyline'],
   'singapore-hdb-hero': ['HDB flats', 'HDB estate', 'Pinnacle@Duxton', 'Tiong Bahru'],
   'clarke-quay-hero': ['Boat Quay', 'Clarke Quay at night', 'Singapore River', 'Clarke Quay'],
-  'sri-lanka-hero': ['Sigiriya', 'Nine Arch Bridge', 'Galle Fort'],
-  'sri-lanka-food': ['Kottu', 'Sri Lankan rice and curry', 'Hoppers', 'Sri Lankan cuisine'],
+  'sri-lanka-hero': ['Nine Arch Bridge', 'Sigiriya Rock', 'Galle Fort lighthouse', 'Sigiriya'],
+  'sri-lanka-food': ['Sri Lankan rice and curry', 'Rice and curry', 'Egg hopper', 'Hoppers', 'Kottu'],
   'maldives-hero': ['Maldives water villa', 'Maldives island', 'Maldives resort', 'Maldives beach'],
   'maldives-food': ['Mas huni', 'Garudhiya', 'Maldivian cuisine', 'Maldivian food'],
-  'dubai-hero': ['Burj Khalifa', 'Dubai skyline', 'Dubai Marina'],
-  'dubai-food': ['Shawarma', 'Luqaimat', 'Machboos', 'Emirati cuisine'],
+  'dubai-hero': ['Dubai Marina', 'Dubai skyline', 'Downtown Dubai', 'Burj Khalifa'],
+  'dubai-food': ['Luqaimat', 'Machboos', 'Emirati cuisine', 'Arabic coffee', 'Shawarma'],
   'australia-food': ['Pavlova dessert', 'Pavlova (food)', 'Meat pie', 'Lamington'],
 };
 
@@ -79,7 +79,7 @@ const CATEGORIES = ['Featured_pictures_on_Wikimedia_Commons', 'Quality_images', 
 const FREE = /^(CC0( 1\.0)?|CC BY(-SA)?( \d\.\d)?( [a-z]{2,3})?|Public domain|PD\b.*)$/i;
 
 // Titles that make poor hero/food shots
-const SKIP = /interior|ceiling|nave|vault|inflating|aircraft|grumman|hawkeye|portrait|map\b|diagram|logo|stamp|coin|sorrir|smil|geniet|journalist|restaurant|häusle|portland|löwen|relief|facade|takeout|shop|store|juice|mrt|station/i;
+const SKIP = /interior|ceiling|nave|vault|inflating|aircraft|grumman|hawkeye|portrait|map\b|diagram|logo|stamp|coin|sorrir|smil|geniet|journalist|restaurant|häusle|portland|löwen|relief|facade|takeout|shop|store|juice|mrt|station|philippines|box/i;
 
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 const stripHtml = (s = '') => s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
