@@ -384,20 +384,20 @@
     "query": "intitle:\"Boat Quay\" incategory:Quality_images"
   },
   "sri-lanka-hero": {
-    "title": "Sigiriya 02.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Sigiriya_02.jpg",
-    "artist": "Bernard Gagnon",
-    "license": "CC BY-SA 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "query": "intitle:\"Sigiriya\""
+    "title": "Demodara Nine Arch Bridge (35564604554).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Demodara_Nine_Arch_Bridge_(35564604554).jpg",
+    "artist": "V. Epiney",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "query": "intitle:\"Nine Arch Bridge\""
   },
   "sri-lanka-food": {
-    "title": "Kottu Roti.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Kottu_Roti.jpg",
-    "artist": "Chamal N",
-    "license": "CC BY-SA 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "query": "intitle:\"Kottu\""
+    "title": "Rice and curry 3.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Rice_and_curry_3.jpg",
+    "artist": "Ganesh Mohan T",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "query": "intitle:\"Rice and curry\""
   },
   "maldives-hero": {
     "title": "Swimming Pool in Maldives Island Resort.jpg",
@@ -416,19 +416,19 @@
     "query": "intitle:\"Mas huni\""
   },
   "dubai-hero": {
-    "title": "At the Top SKY @ Burj Khalifa @ Dubai (15698499388).jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:At_the_Top_SKY_@_Burj_Khalifa_@_Dubai_(15698499388).jpg",
+    "title": "Dubai Marina Yacht Club @ Yellow Boats Tour @ Dubai Marina (15870312765).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Dubai_Marina_Yacht_Club_@_Yellow_Boats_Tour_@_Dubai_Marina_(15870312765).jpg",
     "artist": "Guilhem Vellut from Annecy, France",
     "license": "CC BY 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-    "query": "intitle:\"Burj Khalifa\""
+    "query": "intitle:\"Dubai Marina\""
   },
   "dubai-food": {
-    "title": "Shawarma Rice from the Philippines.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Shawarma_Rice_from_the_Philippines.jpg",
-    "artist": "Ralff Nestor Nacor",
+    "title": "Karak & Luqaimat.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Karak_%26_Luqaimat.jpg",
+    "artist": "Iyhab1994",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "query": "intitle:\"Shawarma\""
+    "query": "intitle:\"Luqaimat\""
   }
 }
