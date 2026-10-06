@@ -78,7 +78,7 @@ const WANT = {
   'bhutan-food': ['Ema datshi', 'Bhutanese cuisine', 'Bhutanese red rice'],
   'hong-kong-hero': ['Victoria Harbour', 'Hong Kong skyline', 'Victoria Peak'],
   'hong-kong-food': ['Dim sum', 'Har gow', 'Egg tart'],
-  'philippines-hero': ['Big Lagoon', 'Chocolate Hills', 'Kayangan Lake', 'El Nido', 'Bacuit Bay'],
+  'philippines-hero': ['Chocolate Hills', 'Kayangan Lake', 'Bacuit Bay', 'El Nido, Palawan'],
   'philippines-food': ['Halo-halo', 'Chicken adobo', 'Sinigang', 'Lechon'],
   'australia-food': ['Pavlova dessert', 'Pavlova (food)', 'Meat pie', 'Lamington'],
 };
