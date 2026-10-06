@@ -66,6 +66,12 @@ const WANT = {
   'johor-causeway-hero': ['Johor–Singapore Causeway', 'Johor-Singapore Causeway', 'Woodlands Checkpoint', 'Johor Bahru skyline'],
   'singapore-hdb-hero': ['HDB flats', 'HDB estate', 'Pinnacle@Duxton', 'Tiong Bahru'],
   'clarke-quay-hero': ['Boat Quay', 'Clarke Quay at night', 'Singapore River', 'Clarke Quay'],
+  'sri-lanka-hero': ['Sigiriya', 'Nine Arch Bridge', 'Galle Fort'],
+  'sri-lanka-food': ['Kottu', 'Sri Lankan rice and curry', 'Hoppers', 'Sri Lankan cuisine'],
+  'maldives-hero': ['Maldives water villa', 'Maldives island', 'Maldives resort', 'Maldives beach'],
+  'maldives-food': ['Mas huni', 'Garudhiya', 'Maldivian cuisine', 'Maldivian food'],
+  'dubai-hero': ['Burj Khalifa', 'Dubai skyline', 'Dubai Marina'],
+  'dubai-food': ['Shawarma', 'Luqaimat', 'Machboos', 'Emirati cuisine'],
   'australia-food': ['Pavlova dessert', 'Pavlova (food)', 'Meat pie', 'Lamington'],
 };
 
