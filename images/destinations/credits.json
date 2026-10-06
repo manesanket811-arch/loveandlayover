@@ -430,5 +430,69 @@
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "query": "intitle:\"Luqaimat\""
+  },
+  "nepal-hero": {
+    "title": "Swayambhunath temple - an ancient religious architecture of Nepal.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Swayambhunath_temple_-_an_ancient_religious_architecture_of_Nepal.jpg",
+    "artist": "Nirmal Dulal",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "query": "intitle:\"Swayambhunath\" incategory:Featured_pictures_on_Wikimedia_Commons"
+  },
+  "nepal-food": {
+    "title": "Steamed Momos - KOLKATA.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Steamed_Momos_-_KOLKATA.jpg",
+    "artist": "TAPAS KUMAR HALDER",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "query": "intitle:\"Momos\" incategory:Quality_images"
+  },
+  "bhutan-hero": {
+    "title": "Paro Taktsang, Bhutan (edited).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Paro_Taktsang,_Bhutan_(edited).jpg",
+    "artist": "Original: Nina R from Africa Derivative work: UnpetitproleX",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "query": "intitle:\"Paro Taktsang\" incategory:Featured_pictures_on_Wikimedia_Commons"
+  },
+  "bhutan-food": {
+    "title": "Buff Ema datshi with Thingmo.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Buff_Ema_datshi_with_Thingmo.jpg",
+    "artist": "Satdeep Gill",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "query": "intitle:\"Ema datshi\""
+  },
+  "hong-kong-hero": {
+    "title": "International Commerce Centre on Victoria Harbour.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:International_Commerce_Centre_on_Victoria_Harbour.jpg",
+    "artist": "Wilfredor",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "query": "intitle:\"Victoria Harbour\" incategory:Featured_pictures_on_Wikimedia_Commons"
+  },
+  "hong-kong-food": {
+    "title": "Dim Sum Meals at Lung Dim Sum in Wan Chai.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Dim_Sum_Meals_at_Lung_Dim_Sum_in_Wan_Chai.jpg",
+    "artist": "Peachyeung316",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "query": "intitle:\"Dim sum\""
+  },
+  "philippines-hero": {
+    "title": "CTK armored van on the Philippine island of Palawan.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:CTK_armored_van_on_the_Philippine_island_of_Palawan.jpg",
+    "artist": "Photographer: Mosbatho",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "query": "intitle:\"Palawan\" incategory:Quality_images"
+  },
+  "philippines-food": {
+    "title": "Halo-halo at mama nang's halo-halo.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Halo-halo_at_mama_nang%27s_halo-halo.jpg",
+    "artist": "Chammy17",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "query": "intitle:\"Halo-halo\""
   }
 }
