@@ -72,6 +72,14 @@ const WANT = {
   'maldives-food': ['Mas huni', 'Garudhiya', 'Maldivian cuisine', 'Maldivian food'],
   'dubai-hero': ['Dubai Marina', 'Dubai skyline', 'Downtown Dubai', 'Burj Khalifa'],
   'dubai-food': ['Luqaimat', 'Machboos', 'Emirati cuisine', 'Arabic coffee', 'Shawarma'],
+  'nepal-hero': ['Boudhanath', 'Phewa Lake', 'Swayambhunath', 'Annapurna'],
+  'nepal-food': ['Dal bhat', 'Momo (food)', 'Momos', 'Newari cuisine'],
+  'bhutan-hero': ['Paro Taktsang', 'Tiger\'s Nest', 'Punakha Dzong'],
+  'bhutan-food': ['Ema datshi', 'Bhutanese cuisine', 'Bhutanese red rice'],
+  'hong-kong-hero': ['Victoria Harbour', 'Hong Kong skyline', 'Victoria Peak'],
+  'hong-kong-food': ['Dim sum', 'Har gow', 'Egg tart'],
+  'philippines-hero': ['El Nido', 'Chocolate Hills', 'Kayangan Lake', 'Palawan'],
+  'philippines-food': ['Halo-halo', 'Chicken adobo', 'Sinigang', 'Lechon'],
   'australia-food': ['Pavlova dessert', 'Pavlova (food)', 'Meat pie', 'Lamington'],
 };
 
