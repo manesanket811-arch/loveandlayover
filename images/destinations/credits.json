@@ -382,5 +382,53 @@
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "query": "intitle:\"Boat Quay\" incategory:Quality_images"
+  },
+  "sri-lanka-hero": {
+    "title": "Sigiriya 02.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Sigiriya_02.jpg",
+    "artist": "Bernard Gagnon",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "query": "intitle:\"Sigiriya\""
+  },
+  "sri-lanka-food": {
+    "title": "Kottu Roti.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Kottu_Roti.jpg",
+    "artist": "Chamal N",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "query": "intitle:\"Kottu\""
+  },
+  "maldives-hero": {
+    "title": "Swimming Pool in Maldives Island Resort.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Swimming_Pool_in_Maldives_Island_Resort.jpg",
+    "artist": "Priyaflorenceshah",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "query": "intitle:\"Maldives island\""
+  },
+  "maldives-food": {
+    "title": "Mas huni-roshi087.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Mas_huni-roshi087.JPG",
+    "artist": "Xavier Romero-Frias",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "query": "intitle:\"Mas huni\""
+  },
+  "dubai-hero": {
+    "title": "At the Top SKY @ Burj Khalifa @ Dubai (15698499388).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:At_the_Top_SKY_@_Burj_Khalifa_@_Dubai_(15698499388).jpg",
+    "artist": "Guilhem Vellut from Annecy, France",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "query": "intitle:\"Burj Khalifa\""
+  },
+  "dubai-food": {
+    "title": "Shawarma Rice from the Philippines.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Shawarma_Rice_from_the_Philippines.jpg",
+    "artist": "Ralff Nestor Nacor",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "query": "intitle:\"Shawarma\""
   }
 }
