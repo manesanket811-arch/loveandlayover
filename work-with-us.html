@@ -290,11 +290,7 @@
         <li><a href="mailto:theloveandlayover@gmail.com?subject=Media%20kit%20request%20-%20Love%20and%20Layovers"><span aria-hidden="true">📄</span>Request our media kit</a></li>
       </ul>
     </div>
-    <form class="form reveal" id="enquiryForm" action="https://formsubmit.co/theloveandlayover@gmail.com" method="POST" novalidate>
-      <input type="hidden" name="_subject" id="f-subject" value="Brand collaboration enquiry">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://www.loveandlayover.in/work-with-us.html?sent=1#enquire">
+    <form class="form reveal" id="enquiryForm" novalidate>
       <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required></div>
       <div class="field"><label for="f-brand">Brand / company</label><input id="f-brand" name="brand" autocomplete="organization" required></div>
       <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
@@ -358,32 +354,58 @@
 <script>
 (function () {
   'use strict';
-  // The form posts to FormSubmit, which emails the enquiry to us and sends the visitor
-  // back here with ?sent=1. This script only checks the fields before sending.
+  // Enquiries are emailed to us through Web3Forms (https://web3forms.com). The access key
+  // below is meant to be public; it only lets this form send to our inbox. Until a key is
+  // set, or if sending fails, the form opens the visitor's email app instead.
+  var WEB3FORMS_KEY = '';
+  var TO = 'theloveandlayover@gmail.com';
   var form = document.getElementById('enquiryForm');
   var note = document.getElementById('formNote');
+  var button = document.getElementById('f-submit');
   var v = function (id) { return document.getElementById(id).value.trim(); };
+  var track = function (method) { if (window.gtag) window.gtag('event', 'generate_lead', { method: method, brand_type: v('f-type') }); };
 
-  if (/[?&]sent=1/.test(location.search)) {
-    note.textContent = 'Thank you! Your enquiry has reached us and we will reply within 48 hours.';
+  function viaEmailApp(subject, body) {
+    window.location.href = 'mailto:' + TO + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    note.textContent = 'Your email app should open with the enquiry ready to send. If nothing happens, email us at ' + TO + ' or WhatsApp +65 8896 4156.';
     note.setAttribute('data-state', 'sent');
-    if (window.gtag) window.gtag('event', 'generate_lead', { method: 'enquiry_form' });
-    try { history.replaceState(null, '', location.pathname + '#enquire'); } catch (e) {}
+    track('enquiry_form_email_app');
   }
 
   form.addEventListener('submit', function (e) {
-    if (v('f-honey')) { e.preventDefault(); return; } // spam bots fill the hidden field
+    e.preventDefault();
+    if (v('f-honey')) return; // spam bots fill the hidden field
     var missing = ['f-name', 'f-brand', 'f-email', 'f-msg'].filter(function (id) { return !v(id); });
-    if (missing.length || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v('f-email'))) {
-      e.preventDefault();
+    var email = v('f-email');
+    if (missing.length || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       note.textContent = 'Please fill in your name, brand, a valid email and a short message.';
       note.removeAttribute('data-state');
       (document.getElementById(missing[0] || 'f-email')).focus();
       return;
     }
-    document.getElementById('f-subject').value = 'Brand collaboration: ' + v('f-brand');
-    document.getElementById('f-submit').disabled = true;
+    var subject = 'Brand collaboration: ' + v('f-brand');
+    var fields = { Name: v('f-name'), Brand: v('f-brand'), Email: email, Type: v('f-type'), Formats: v('f-formats') || '-', Message: v('f-msg') };
+    var body = Object.keys(fields).map(function (k) { return k + ': ' + fields[k]; }).join('\n');
+    if (!WEB3FORMS_KEY) { viaEmailApp(subject, body); return; }
+
+    button.disabled = true;
     note.textContent = 'Sending…';
+    note.removeAttribute('data-state');
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify(Object.assign({ access_key: WEB3FORMS_KEY, subject: subject, from_name: 'Love and Layovers website', replyto: email, email: email }, fields))
+    })
+      .then(function (r) { return r.json(); })
+      .then(function (res) {
+        if (!res.success) throw new Error(res.message || 'not sent');
+        form.reset();
+        note.textContent = 'Thank you! Your enquiry has reached us and we will reply within 48 hours.';
+        note.setAttribute('data-state', 'sent');
+        track('enquiry_form');
+      })
+      .catch(function () { viaEmailApp(subject, body); })
+      .then(function () { button.disabled = false; });
   });
 })();
 </script>
