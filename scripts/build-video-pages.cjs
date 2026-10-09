@@ -222,7 +222,9 @@ fs.mkdirSync(OUT_DIR, { recursive: true });
 for (const v of videos) {
   const title = cleanTitle(v.title);
   const lines = descriptionLines(v);
-  const metaDesc = (lines.join(' ') || `Watch "${title}" by Love and Layovers.`).slice(0, 155);
+  // Up to ~155 characters, cut at a word boundary
+  const fullDesc = lines.join(' ') || `Watch "${title}" by Love and Layovers.`;
+  const metaDesc = fullDesc.length <= 155 ? fullDesc : fullDesc.slice(0, 154).replace(/\s+\S*$/, '').replace(/[\s,;:—-]+$/, '') + '…';
   const related = relatedGuides(v);
   const more = videos.filter(o => o.id !== v.id && isShort(o) === isShort(v)).slice(0, 6);
   const day = seriesDay(v);
