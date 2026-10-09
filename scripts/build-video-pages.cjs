@@ -199,11 +199,13 @@ function videoLd(v, url) {
     contentUrl: watchUrl(v),
     embedUrl: `https://www.youtube.com/embed/${v.id}`,
     url,
-    ...(chapters(v).length ? { hasPart: chapters(v).map((c, i, all) => ({
+    // Google needs an endOffset on every Clip. We don't know the video's exact length,
+    // so the last chapter (usually the outro) stays on the page but not in the Clip list.
+    ...(chapters(v).length ? { hasPart: chapters(v).slice(0, -1).map((c, i, all) => ({
       '@type': 'Clip',
       name: c.label,
       startOffset: c.start,
-      ...(all[i + 1] ? { endOffset: all[i + 1].start } : {}),
+      endOffset: chapters(v)[i + 1].start,
       url: `https://www.youtube.com/watch?v=${v.id}&t=${c.start}s`,
     })) } : {}),
     publisher: { '@type': 'Organization', name: 'Love and Layovers', logo: { '@type': 'ImageObject', url: `${SITE}/public/images/brand/logo-512.png` } },
