@@ -301,8 +301,9 @@
       </div>
       <div class="field full"><label for="f-formats">Formats you're interested in <i>(optional)</i></label><input id="f-formats" name="formats" placeholder="e.g. Reels + Stories, a YouTube vlog, UGC"></div>
       <div class="field full"><label for="f-msg">About the collaboration</label><textarea id="f-msg" name="message" placeholder="Goals, location, timing — anything that helps us understand the idea." required></textarea></div>
-      <button class="btn btn-primary" type="submit">Send enquiry <span aria-hidden="true">→</span></button>
-      <p class="form-note" id="formNote" aria-live="polite">This opens your email app with your enquiry ready to send to theloveandlayover@gmail.com.</p>
+      <input type="text" name="_honey" id="f-honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+      <button class="btn btn-primary" type="submit" id="f-submit">Send enquiry <span aria-hidden="true">→</span></button>
+      <p class="form-note" id="formNote" aria-live="polite">We reply within 48 hours. Your details are only used to answer your enquiry.</p>
     </form>
   </div>
 </section>
@@ -333,7 +334,7 @@
     <div class="ftr-top">
       <a href="/" class="site-brand"><img src="/public/images/brand/logo-mark-light.svg" alt="" width="30" height="30">Love &amp; Layovers</a>
       <nav class="ftr-links" aria-label="Footer">
-        <a href="/destinations/">Destinations</a><a href="/blog.html">Blog</a><a href="/videos.html">Videos</a><a href="/videos/life-in-singapore.html">Life in Singapore</a><a href="/work-with-us.html">Work with us</a><a href="/about.html">About</a>
+        <a href="/destinations/">Destinations</a><a href="/blog.html">Blog</a><a href="/videos.html">Videos</a><a href="/videos/life-in-singapore.html">Life in Singapore</a><a href="/singapore-trip-cost-calculator.html">Trip cost calculator</a><a href="/work-with-us.html">Work with us</a><a href="/about.html">About</a>
       </nav>
       <div class="ftr-social">
         <a href="https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1" target="_blank" rel="noopener" aria-label="YouTube">▶ YouTube</a>
@@ -353,11 +354,24 @@
 <script>
 (function () {
   'use strict';
+  // Enquiries go straight to our inbox through FormSubmit (no account needed). If that
+  // fails for any reason, fall back to opening the visitor's email app so no lead is lost.
+  var TO = 'theloveandlayover@gmail.com';
+  var ENDPOINT = 'https://formsubmit.co/ajax/' + TO;
   var form = document.getElementById('enquiryForm');
   var note = document.getElementById('formNote');
+  var button = document.getElementById('f-submit');
+  var v = function (id) { return document.getElementById(id).value.trim(); };
+
+  function viaEmailApp(subject, body) {
+    window.location.href = 'mailto:' + TO + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    note.textContent = 'Your email app should open with the enquiry ready to send. If nothing happens, email us at ' + TO + ' or WhatsApp +65 8896 4156.';
+    note.setAttribute('data-state', 'sent');
+  }
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    var v = function (id) { return document.getElementById(id).value.trim(); };
+    if (v('f-honey')) return; // spam bots fill the hidden field
     var missing = ['f-name', 'f-brand', 'f-email', 'f-msg'].filter(function (id) { return !v(id); });
     var email = v('f-email');
     if (missing.length || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -367,19 +381,25 @@
       return;
     }
     var subject = 'Brand collaboration: ' + v('f-brand');
-    var body = [
-      'Name: ' + v('f-name'),
-      'Brand: ' + v('f-brand'),
-      'Email: ' + email,
-      'Type: ' + v('f-type'),
-      'Formats: ' + (v('f-formats') || '-'),
-      '',
-      v('f-msg')
-    ].join('\n');
-    window.location.href = 'mailto:theloveandlayover@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    note.textContent = 'Your email app should open with the enquiry ready — just press send. If nothing happens, email us at theloveandlayover@gmail.com.';
-    note.setAttribute('data-state', 'sent');
-    if (window.gtag) window.gtag('event', 'generate_lead', { method: 'enquiry_form', brand_type: v('f-type') });
+    var fields = { Name: v('f-name'), Brand: v('f-brand'), Email: email, Type: v('f-type'), Formats: v('f-formats') || '-', Message: v('f-msg') };
+    var body = Object.keys(fields).map(function (k) { return k + ': ' + fields[k]; }).join('\n');
+    var track = function (method) { if (window.gtag) window.gtag('event', 'generate_lead', { method: method, brand_type: v('f-type') }); };
+
+    button.disabled = true;
+    note.textContent = 'Sending…';
+    note.removeAttribute('data-state');
+    var payload = Object.assign({ _subject: subject, _replyto: email, _template: 'table', _captcha: 'false' }, fields);
+    fetch(ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(payload) })
+      .then(function (r) { return r.json(); })
+      .then(function (res) {
+        if (String(res.success) !== 'true') throw new Error(res.message || 'not sent');
+        form.reset();
+        note.textContent = 'Thank you! Your enquiry has reached us and we will reply within 48 hours.';
+        note.setAttribute('data-state', 'sent');
+        track('enquiry_form');
+      })
+      .catch(function () { viaEmailApp(subject, body); track('enquiry_form_email_app'); })
+      .then(function () { button.disabled = false; });
   });
 })();
 </script>
