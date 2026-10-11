@@ -2,6 +2,7 @@
 // images/destinations/) from images/destinations/credits.json.
 // Run by .github/workflows/fetch-destination-images.yml after fetching.
 const fs = require('fs');
+const { altFor } = require('./image-alts.cjs');
 const path = require('path');
 const chrome = require('./site-chrome.cjs');
 
@@ -19,7 +20,7 @@ const rows = Object.keys(credits).sort().map(key => {
   const c = credits[key];
   const license = c.licenseUrl ? `<a href="${esc(c.licenseUrl)}" rel="license noopener" target="_blank">${esc(c.license)}</a>` : esc(c.license);
   return `      <li>
-        <img src="/images/destinations/thumbs/${esc(key)}.webp" alt="" loading="lazy" width="160" height="100">
+        <img src="/images/destinations/thumbs/${esc(key)}.webp" alt="${esc(altFor(`/images/destinations/${key}.webp`) || key)}" loading="lazy" width="160" height="100">
         <div><strong>${esc(label(key))}</strong><br>
         <a href="${esc(c.page)}" rel="noopener" target="_blank">${esc(c.title)}</a> by ${esc(c.artist)}, ${license}, via Wikimedia Commons</div>
       </li>`;

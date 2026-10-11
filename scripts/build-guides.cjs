@@ -5,6 +5,7 @@
 const fs = require('fs');
 const path = require('path');
 const { header, footer, HEAD_LINKS, SCRIPT } = require('./site-chrome.cjs');
+const { altFor } = require('./image-alts.cjs');
 
 const ROOT = path.join(__dirname, '..');
 const SITE = 'https://www.loveandlayover.in';
@@ -111,7 +112,7 @@ function build(g) {
       // Our videos sit just before the itinerary
       toc.push(['watch', g.filmed ? `Our ${g.country} videos` : 'Our travel films']);
       const fallback = g.video
-        ? `<a class="trip-video" href="https://www.youtube.com/watch?v=${g.video.id}" target="_blank" rel="noopener"><div class="trip-video-thumb"><img src="https://i.ytimg.com/vi/${g.video.id}/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="tv-play" aria-hidden="true">▶</span></div><div class="trip-video-body"><b>${esc(g.video.name)}</b><span>Watch on YouTube →</span></div></a>`
+        ? `<a class="trip-video" href="https://www.youtube.com/watch?v=${g.video.id}" target="_blank" rel="noopener"><div class="trip-video-thumb"><img src="https://i.ytimg.com/vi/${g.video.id}/hqdefault.jpg" alt="${esc(g.video.name)}" loading="lazy" width="480" height="360"><span class="tv-play" aria-hidden="true">▶</span></div><div class="trip-video-body"><b>${esc(g.video.name)}</b><span>Watch on YouTube →</span></div></a>`
         : `<div class="watch-empty">${g.filmed ? `We film ${esc(g.country)} regularly. Browse the latest on our channel.` : `New travel films every week. Search our channel for ${esc(g.country)} or subscribe so you don't miss the next trip.`}</div>`;
       body.push(`<h2 id="watch">${g.filmed ? `Watch Our ${esc(g.country)} Videos` : 'Watch Our Travel Films'}</h2>
 <div class="watch-box">
@@ -158,10 +159,10 @@ function build(g) {
     if (!fs.existsSync(file)) return '';
     const t = (fs.readFileSync(file, 'utf8').match(/<title>([^<]+)<\/title>/) || [, href])[1].split(/\s[-—|:]\s|:\s/)[0];
     const og2 = (fs.readFileSync(file, 'utf8').match(/<meta property="og:image" content="https:\/\/www\.loveandlayover\.in([^"]+)"/) || [])[1];
-    return `<a class="post" href="${href}"><div class="post-img">${og2 ? `<img src="${og2}" alt="" loading="lazy" width="640" height="400">` : ''}</div><div class="post-body"><h3>${t}</h3></div></a>`;
+    return `<a class="post" href="${href}"><div class="post-img">${og2 ? `<img src="${og2}" alt="${esc(t)}" loading="lazy" width="640" height="400">` : ''}</div><div class="post-body"><h3>${t}</h3></div></a>`;
   }).join('');
 
-  const related = g.related.filter(s => CARD[s]).map(s => `<a class="dest-card" href="/destinations/${s}.html"><img class="photo" src="/images/destinations/thumbs/${s}-hero.webp" alt="" loading="lazy" width="640" height="800"><div class="txt"><img class="flag" src="${CARD[s].flag}" alt="" width="28" height="21" loading="lazy"><h3>${esc(CARD[s].name)}</h3><p>${CARD[s].line}</p></div></a>`).join('\n');
+  const related = g.related.filter(s => CARD[s]).map(s => `<a class="dest-card" href="/destinations/${s}.html"><img class="photo" src="/images/destinations/thumbs/${s}-hero.webp" alt="${esc(altFor(`/images/destinations/thumbs/${s}-hero.webp`))}" loading="lazy" width="640" height="800"><div class="txt"><img class="flag" src="${CARD[s].flag}" alt="${esc(altFor(CARD[s].flag))}" width="28" height="21" loading="lazy"><h3>${esc(CARD[s].name)}</h3><p>${CARD[s].line}</p></div></a>`).join('\n');
 
   const creditKeys = [`${g.slug}-hero`, g.foodImage ? g.foodImage.src.split('/').pop().replace('.webp', '') : null].filter(Boolean);
   const creditLine = creditKeys.map(credit).filter(Boolean).join(' · ');

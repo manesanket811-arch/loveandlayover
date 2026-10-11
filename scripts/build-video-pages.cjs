@@ -185,7 +185,7 @@ ${chrome.SCRIPT}
 }
 
 function card(v) {
-  return `<a class="vp-card" href="${pageUrl(v)}"><img src="${thumb(v)}" alt="" loading="lazy" width="480" height="270"><span>${esc(cleanTitle(v.title))}<small>${isShort(v) ? 'Short' : 'Video'} · ${esc(fmtDate(v.published))}</small></span></a>`;
+  return `<a class="vp-card" href="${pageUrl(v)}"><img src="${thumb(v)}" alt="${esc(cleanTitle(v.title))}" loading="lazy" width="480" height="270"><span>${esc(cleanTitle(v.title))}<small>${isShort(v) ? 'Short' : 'Video'} · ${esc(fmtDate(v.published))}</small></span></a>`;
 }
 
 function videoLd(v, url) {

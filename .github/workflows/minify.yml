@@ -1,0 +1,33 @@
+name: Minify CSS and JS
+
+# Rebuilds the minified css/*.css and js/*.js whenever their sources in src/ change.
+on:
+  push:
+    branches: [main]
+    paths: ['src/**', 'scripts/minify.cjs']
+  workflow_dispatch:
+
+jobs:
+  minify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install esbuild
+        run: npm install --no-save --no-package-lock esbuild@0.24
+
+      - name: Minify
+        run: node scripts/minify.cjs
+
+      - name: Commit minified files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add css js
+          git diff --staged --quiet || (git commit -m "chore: minify CSS and JS" && git pull --rebase && git push)

@@ -115,7 +115,7 @@
     document.getElementById('latestTitle').textContent = title;
     var img = new Image();
     img.src = 'https://i.ytimg.com/vi/' + encodeURIComponent(v.id) + '/hqdefault.jpg';
-    img.alt = ''; img.width = 480; img.height = 360;
+    img.alt = title; img.width = 480; img.height = 360;
     img.onerror = function () { img.remove(); };
     var thumb = document.getElementById('latestThumb');
     thumb.insertBefore(img, thumb.firstChild);
