@@ -8,7 +8,7 @@
 (function() {
   'use strict';
 
-  var CHANNEL_SUBSCRIBE = 'https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1';
+  var CHANNEL_SUBSCRIBE = 'https://www.youtube.com/@LoveAndLayover?sub_confirmation=1';
 
   var CSS = '' +
     '.ll-video{margin:32px 0;padding:20px;border-radius:14px;background:#fff;border:1px solid #e8e2d9;box-shadow:0 8px 24px rgba(10,22,40,.08)}' +

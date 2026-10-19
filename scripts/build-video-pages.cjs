@@ -9,7 +9,7 @@ const chrome = require('./site-chrome.cjs');
 
 const ROOT = path.join(__dirname, '..');
 const SITE = 'https://www.loveandlayover.in';
-const CHANNEL = 'https://www.youtube.com/@nikita_sanket_mane';
+const CHANNEL = 'https://www.youtube.com/@LoveAndLayover';
 const SUBSCRIBE = `${CHANNEL}?sub_confirmation=1`;
 const OUT_DIR = path.join(ROOT, 'videos');
 const SERIES_SLUG = 'life-in-singapore';
@@ -53,7 +53,8 @@ function chapters(v) {
 // Description lines minus comma-separated tag dumps ("reach, feed, foryoupage, ...") and,
 // when the video has chapters, minus the timestamp lines (shown as a chapter list instead)
 function descriptionLines(v) {
-  const text = v.fullDescription || v.description || '';
+  // Our channel handle changed; older descriptions still mention the old one
+  const text = (v.fullDescription || v.description || '').replace(/@nikita_sanket_mane/gi, '@LoveAndLayover');
   const hasChapters = chapters(v).length > 0;
   return text.split(/\n+/).map(l => l.trim()).filter(l => l && (l.match(/,/g) || []).length < 6)
     .filter(l => !hasChapters || (!STAMP.test(l) && !/^timestamps?:?$/i.test(l)));

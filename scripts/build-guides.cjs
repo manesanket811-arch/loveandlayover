@@ -9,8 +9,8 @@ const { altFor } = require('./image-alts.cjs');
 
 const ROOT = path.join(__dirname, '..');
 const SITE = 'https://www.loveandlayover.in';
-const SUBSCRIBE = 'https://www.youtube.com/@nikita_sanket_mane?sub_confirmation=1';
-const CHANNEL_SEARCH = (q) => `https://www.youtube.com/@nikita_sanket_mane/search?query=${encodeURIComponent(q)}`;
+const SUBSCRIBE = 'https://www.youtube.com/@LoveAndLayover?sub_confirmation=1';
+const CHANNEL_SEARCH = (q) => `https://www.youtube.com/@LoveAndLayover/search?query=${encodeURIComponent(q)}`;
 const DATA = path.join(ROOT, 'data', 'guides');
 const credits = JSON.parse(fs.readFileSync(path.join(ROOT, 'images', 'destinations', 'credits.json'), 'utf8'));
 
