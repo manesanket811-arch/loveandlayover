@@ -47,4 +47,10 @@
     var a = e.target.closest && e.target.closest('a[href*="wa.me/"]');
     if (a && window.gtag) window.gtag('event', 'whatsapp_click', { page_path: location.pathname });
   });
+
+  // Count clicks on Klook affiliate links (which product, from which page)
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[data-klook]');
+    if (a && window.gtag) window.gtag('event', 'affiliate_click', { partner: 'klook', item_id: a.getAttribute('data-klook'), page_path: location.pathname });
+  });
 })();

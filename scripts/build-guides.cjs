@@ -6,6 +6,7 @@ const fs = require('fs');
 const path = require('path');
 const { header, footer, HEAD_LINKS, SCRIPT } = require('./site-chrome.cjs');
 const { altFor } = require('./image-alts.cjs');
+const { DATA: KLOOK, klookBox } = require('./affiliates.cjs');
 
 const ROOT = path.join(__dirname, '..');
 const SITE = 'https://www.loveandlayover.in';
@@ -130,6 +131,9 @@ function build(g) {
         ? `<div class="plan-tabs" role="tablist" aria-label="Trip length">${s.plans.map((n, i) => `<button type="button" role="tab" id="itinerary-${n}" data-plan="${n}" aria-selected="${i === 0}">${n} days</button>`).join('')}</div>`
         : '';
       body.push(`<h2 id="${s.id}">${esc(s.title)}</h2>\n${fixAmp(s.html)}\n${tabs}<div class="days"${s.plans ? ` data-plans="${s.plans.join(',')}"` : ''}>\n${s.days.map((d, i) => dayCard(d, i, s.plans)).join('\n')}\n</div>${s.after ? '\n' + fixAmp(s.after) : ''}`);
+      // Klook tickets & tours, right after the plan (only for guides listed in data/klook.json)
+      const book = klookBox(KLOOK.guides[g.slug], { heading: `${g.country} tickets & tours we\u2019d book` });
+      if (book) { toc.push(['book', 'Tickets & tours']); body.push(book); }
       continue;
     }
     toc.push([s.id, s.title.replace(/\?$/, '').replace(/^Why Visit .*/, 'Why visit')]);
