@@ -278,6 +278,36 @@
         "th-pass",
         "bali-penida"
       ]
+    },
+    "singapore-in-december": {
+      "items": [
+        "sg-uss",
+        "sg-gardens",
+        "sg-safari",
+        "sg-pass"
+      ]
+    },
+    "singapore-honeymoon-itinerary": {
+      "items": [
+        "sg-gardens",
+        "sg-uss",
+        "sg-safari",
+        "sg-pass"
+      ]
+    },
+    "singapore-vs-thailand-vs-dubai": {
+      "items": [
+        "sg-pass",
+        "th-pass",
+        "ae-desert"
+      ]
+    },
+    "singapore-flights-from-india": {
+      "items": [
+        "sg-pass",
+        "sg-uss",
+        "sg-gardens"
+      ]
     }
   },
   "home": [
