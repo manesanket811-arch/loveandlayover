@@ -2,61 +2,291 @@
   "_readme": "Klook affiliate links. Every link gets ?aid=<aid> added at build time. To change a product, edit its url here and run: node scripts/build-guides.cjs && node scripts/apply-affiliates.cjs. Leave aid empty to remove every Klook box from the site.",
   "aid": "135467",
   "products": {
-    "sg-uss":        { "name": "Universal Studios Singapore tickets", "blurb": "Dated e-tickets for Sentosa's theme park. Book ahead for weekends and school holidays.", "url": "https://www.klook.com/activity/117-universal-studios-singapore/" },
-    "sg-gardens":    { "name": "Gardens by the Bay: Flower Dome & Cloud Forest", "blurb": "Entry to the two cooled conservatories. The Supertree light show outside is free.", "url": "https://www.klook.com/activity/127-gardens-by-the-bay-singapore/" },
-    "sg-safari":     { "name": "Singapore Night Safari", "blurb": "Evening wildlife park with the tram ride. Reserve your time slot after booking.", "url": "https://www.klook.com/activity/122-singapore-night-safari-singapore/" },
-    "sg-pass":       { "name": "Klook Pass Singapore", "blurb": "Bundle several attractions in one pass. Worth it if you plan three or more paid sights.", "url": "https://www.klook.com/activity/69622-klook-pass-singapore/" },
-    "my-petronas":   { "name": "PETRONAS Twin Towers Skybridge & observation deck", "blurb": "Timed entry to the bridge and level 86. Slots sell out, so book a few days ahead.", "url": "https://www.klook.com/activity/2750-petronas-twin-towers-kuala-lumpur/" },
-    "my-genting":    { "name": "Awana SkyWay cable car, Genting Highlands", "blurb": "The gondola up to Genting, with a free stop at Chin Swee Temple.", "url": "https://www.klook.com/activity/15075/" },
-    "my-bus":        { "name": "Singapore ⇄ Kuala Lumpur bus tickets", "blurb": "Compare coach operators, times and pick-up points on one page.", "url": "https://www.klook.com/activity/133537-kuala-lumpur-singapore-bus-by-causewaylink/" },
-    "th-safari":     { "name": "Safari World Bangkok", "blurb": "Drive-through Safari Park plus the Marine Park shows in one ticket.", "url": "https://www.klook.com/activity/365-safari-world-bangkok/" },
-    "th-pass":       { "name": "Klook Pass Bangkok & Pattaya", "blurb": "Several Bangkok and Pattaya attractions bundled into one pass.", "url": "https://www.klook.com/activity/221341-klook-pass-bangkok-pattaya/" },
-    "jp-jrpass":     { "name": "Japan Rail Pass (whole Japan)", "blurb": "Unlimited JR trains, including most bullet trains. Check if it pays off for your route first.", "url": "https://www.klook.com/activity/1420-7-day-whole-japan-rail-pass-jr-pass/" },
-    "jp-teamlab":    { "name": "teamLab Planets Tokyo", "blurb": "The walk-through digital art museum in Toyosu. Weekend slots sell out early.", "url": "https://www.klook.com/activity/25300/" },
-    "jp-usj":        { "name": "Universal Studios Japan, Osaka", "blurb": "Studio Pass for the date you choose. Express Passes are sold separately.", "url": "https://www.klook.com/activity/1579-universal-studios-japan-ticket-osaka/" },
-    "bali-penida":   { "name": "Nusa Penida day trip from Bali", "blurb": "Kelingking Beach, Angel's Billabong and snorkelling, with boat transfers.", "url": "https://www.klook.com/activity/15758-nusa-penida-full-day-trip-bali/" },
-    "bali-batur":    { "name": "Mount Batur sunrise trek", "blurb": "Early-morning guided hike with hotel pick-up and breakfast at the top.", "url": "https://www.klook.com/activity/7797-mount-batur-sunrise-trekking-bali/" },
-    "id-borobudur":  { "name": "Borobudur sunrise tour from Yogyakarta", "blurb": "Sunrise viewpoint followed by the temple, with transport arranged.", "url": "https://www.klook.com/activity/6457-borobudur-sunrise-tour-yogyakarta/" },
-    "vn-halong":     { "name": "Ha Long Bay day cruise from Hanoi", "blurb": "Caves, Ti Top Island and lunch on board, with transfers from Hanoi.", "url": "https://www.klook.com/activity/36511/" },
-    "vn-bana":       { "name": "Ba Na Hills & Golden Bridge, Da Nang", "blurb": "Cable car, the Golden Bridge and the French Village. Lunch options available.", "url": "https://www.klook.com/activity/13283-ba-na-hills-ticket-da-nang/" },
-    "kr-lotte":      { "name": "Lotte World, Seoul", "blurb": "Indoor and outdoor theme park in Jamsil. Bring your passport for foreigner tickets.", "url": "https://www.klook.com/activity/251-lotte-world-seoul/" },
-    "kr-everland":   { "name": "Everland day pass", "blurb": "Korea's biggest theme park, with shuttle-bus bundles from Seoul.", "url": "https://www.klook.com/activity/252-everland-seoul/" },
-    "hk-ngongping":  { "name": "Ngong Ping 360 cable car", "blurb": "Cable car to the Big Buddha on Lantau. Crystal Cabin queues are usually shorter.", "url": "https://www.klook.com/activity/45-ngong-ping-360-hong-kong/" },
-    "hk-pass":       { "name": "Klook Pass Hong Kong", "blurb": "Bundle Hong Kong attractions, with Disneyland as an optional add-on.", "url": "https://www.klook.com/activity/80363-klook-pass-hong-kong/" },
-    "ae-desert":     { "name": "Dubai desert safari with BBQ dinner", "blurb": "Dune drive, camp shows and dinner, with hotel pick-up.", "url": "https://www.klook.com/activity/13348-al-maha-desert-safari-tour-and-bbq-dinner-in-dubai/" },
-    "tr-balloon":    { "name": "Cappadocia hot air balloon flight", "blurb": "Sunrise flight with hotel pick-up. Flights can be cancelled for weather, so plan a spare morning.", "url": "https://www.klook.com/activity/11336-hot-air-balloon-flight-cappadocia/" },
-    "lk-sigiriya":   { "name": "Sigiriya & Dambulla day tour from Colombo", "blurb": "Private car or van day trip. Rock and guide fees are usually extra.", "url": "https://www.klook.com/activity/150077-from-colombo-to-sigiriya-dambulla-day-tour/" },
-    "ph-elnido":     { "name": "El Nido island-hopping tours", "blurb": "Compare Tours A to D for the lagoons and beaches around El Nido.", "url": "https://www.klook.com/destination/c365356-el-nido/" }
+    "sg-uss": {
+      "name": "Universal Studios Singapore tickets",
+      "blurb": "Dated e-tickets for Sentosa's theme park. Book ahead for weekends and school holidays.",
+      "url": "https://www.klook.com/activity/117-universal-studios-singapore/"
+    },
+    "sg-gardens": {
+      "name": "Gardens by the Bay: Flower Dome & Cloud Forest",
+      "blurb": "Entry to the two cooled conservatories. The Supertree light show outside is free.",
+      "url": "https://www.klook.com/activity/127-gardens-by-the-bay-singapore/"
+    },
+    "sg-safari": {
+      "name": "Singapore Night Safari",
+      "blurb": "Evening wildlife park with the tram ride. Reserve your time slot after booking.",
+      "url": "https://www.klook.com/activity/122-singapore-night-safari-singapore/"
+    },
+    "sg-pass": {
+      "name": "Klook Pass Singapore",
+      "blurb": "Bundle several attractions in one pass. Worth it if you plan three or more paid sights.",
+      "url": "https://www.klook.com/activity/69622-klook-pass-singapore/"
+    },
+    "my-petronas": {
+      "name": "PETRONAS Twin Towers Skybridge & observation deck",
+      "blurb": "Timed entry to the bridge and level 86. Slots sell out, so book a few days ahead.",
+      "url": "https://www.klook.com/activity/2750-petronas-twin-towers-kuala-lumpur/"
+    },
+    "my-genting": {
+      "name": "Awana SkyWay cable car, Genting Highlands",
+      "blurb": "The gondola up to Genting, with a free stop at Chin Swee Temple.",
+      "url": "https://www.klook.com/activity/15075/"
+    },
+    "my-bus": {
+      "name": "Singapore ⇄ Kuala Lumpur bus tickets",
+      "blurb": "Compare coach operators, times and pick-up points on one page.",
+      "url": "https://www.klook.com/activity/133537-kuala-lumpur-singapore-bus-by-causewaylink/"
+    },
+    "th-safari": {
+      "name": "Safari World Bangkok",
+      "blurb": "Drive-through Safari Park plus the Marine Park shows in one ticket.",
+      "url": "https://www.klook.com/activity/365-safari-world-bangkok/"
+    },
+    "th-pass": {
+      "name": "Klook Pass Bangkok & Pattaya",
+      "blurb": "Several Bangkok and Pattaya attractions bundled into one pass.",
+      "url": "https://www.klook.com/activity/221341-klook-pass-bangkok-pattaya/"
+    },
+    "jp-jrpass": {
+      "name": "Japan Rail Pass (whole Japan)",
+      "blurb": "Unlimited JR trains, including most bullet trains. Check if it pays off for your route first.",
+      "url": "https://www.klook.com/activity/1420-7-day-whole-japan-rail-pass-jr-pass/"
+    },
+    "jp-teamlab": {
+      "name": "teamLab Planets Tokyo",
+      "blurb": "The walk-through digital art museum in Toyosu. Weekend slots sell out early.",
+      "url": "https://www.klook.com/activity/25300/"
+    },
+    "jp-usj": {
+      "name": "Universal Studios Japan, Osaka",
+      "blurb": "Studio Pass for the date you choose. Express Passes are sold separately.",
+      "url": "https://www.klook.com/activity/1579-universal-studios-japan-ticket-osaka/"
+    },
+    "bali-penida": {
+      "name": "Nusa Penida day trip from Bali",
+      "blurb": "Kelingking Beach, Angel's Billabong and snorkelling, with boat transfers.",
+      "url": "https://www.klook.com/activity/15758-nusa-penida-full-day-trip-bali/"
+    },
+    "bali-batur": {
+      "name": "Mount Batur sunrise trek",
+      "blurb": "Early-morning guided hike with hotel pick-up and breakfast at the top.",
+      "url": "https://www.klook.com/activity/7797-mount-batur-sunrise-trekking-bali/"
+    },
+    "id-borobudur": {
+      "name": "Borobudur sunrise tour from Yogyakarta",
+      "blurb": "Sunrise viewpoint followed by the temple, with transport arranged.",
+      "url": "https://www.klook.com/activity/6457-borobudur-sunrise-tour-yogyakarta/"
+    },
+    "vn-halong": {
+      "name": "Ha Long Bay day cruise from Hanoi",
+      "blurb": "Caves, Ti Top Island and lunch on board, with transfers from Hanoi.",
+      "url": "https://www.klook.com/activity/36511/"
+    },
+    "vn-bana": {
+      "name": "Ba Na Hills & Golden Bridge, Da Nang",
+      "blurb": "Cable car, the Golden Bridge and the French Village. Lunch options available.",
+      "url": "https://www.klook.com/activity/13283-ba-na-hills-ticket-da-nang/"
+    },
+    "kr-lotte": {
+      "name": "Lotte World, Seoul",
+      "blurb": "Indoor and outdoor theme park in Jamsil. Bring your passport for foreigner tickets.",
+      "url": "https://www.klook.com/activity/251-lotte-world-seoul/"
+    },
+    "kr-everland": {
+      "name": "Everland day pass",
+      "blurb": "Korea's biggest theme park, with shuttle-bus bundles from Seoul.",
+      "url": "https://www.klook.com/activity/252-everland-seoul/"
+    },
+    "hk-ngongping": {
+      "name": "Ngong Ping 360 cable car",
+      "blurb": "Cable car to the Big Buddha on Lantau. Crystal Cabin queues are usually shorter.",
+      "url": "https://www.klook.com/activity/45-ngong-ping-360-hong-kong/"
+    },
+    "hk-pass": {
+      "name": "Klook Pass Hong Kong",
+      "blurb": "Bundle Hong Kong attractions, with Disneyland as an optional add-on.",
+      "url": "https://www.klook.com/activity/80363-klook-pass-hong-kong/"
+    },
+    "ae-desert": {
+      "name": "Dubai desert safari with BBQ dinner",
+      "blurb": "Dune drive, camp shows and dinner, with hotel pick-up.",
+      "url": "https://www.klook.com/activity/13348-al-maha-desert-safari-tour-and-bbq-dinner-in-dubai/"
+    },
+    "tr-balloon": {
+      "name": "Cappadocia hot air balloon flight",
+      "blurb": "Sunrise flight with hotel pick-up. Flights can be cancelled for weather, so plan a spare morning.",
+      "url": "https://www.klook.com/activity/11336-hot-air-balloon-flight-cappadocia/"
+    },
+    "lk-sigiriya": {
+      "name": "Sigiriya & Dambulla day tour from Colombo",
+      "blurb": "Private car or van day trip. Rock and guide fees are usually extra.",
+      "url": "https://www.klook.com/activity/150077-from-colombo-to-sigiriya-dambulla-day-tour/"
+    },
+    "ph-elnido": {
+      "name": "El Nido island-hopping tours",
+      "blurb": "Compare Tours A to D for the lagoons and beaches around El Nido.",
+      "url": "https://www.klook.com/destination/c365356-el-nido/"
+    }
   },
   "guides": {
-    "singapore":   ["sg-uss", "sg-gardens", "sg-safari", "sg-pass"],
-    "malaysia":    ["my-petronas", "my-genting", "my-bus"],
-    "thailand":    ["th-safari", "th-pass"],
-    "japan":       ["jp-jrpass", "jp-teamlab", "jp-usj"],
-    "bali":        ["bali-penida", "bali-batur"],
-    "indonesia":   ["id-borobudur"],
-    "vietnam":     ["vn-halong", "vn-bana"],
-    "south-korea": ["kr-lotte", "kr-everland"],
-    "hong-kong":   ["hk-ngongping", "hk-pass"],
-    "dubai":       ["ae-desert"],
-    "turkey":      ["tr-balloon"],
-    "sri-lanka":   ["lk-sigiriya"],
-    "philippines": ["ph-elnido"]
+    "singapore": [
+      "sg-uss",
+      "sg-gardens",
+      "sg-safari",
+      "sg-pass"
+    ],
+    "malaysia": [
+      "my-petronas",
+      "my-genting",
+      "my-bus"
+    ],
+    "thailand": [
+      "th-safari",
+      "th-pass"
+    ],
+    "japan": [
+      "jp-jrpass",
+      "jp-teamlab",
+      "jp-usj"
+    ],
+    "bali": [
+      "bali-penida",
+      "bali-batur"
+    ],
+    "indonesia": [
+      "id-borobudur"
+    ],
+    "vietnam": [
+      "vn-halong",
+      "vn-bana"
+    ],
+    "south-korea": [
+      "kr-lotte",
+      "kr-everland"
+    ],
+    "hong-kong": [
+      "hk-ngongping",
+      "hk-pass"
+    ],
+    "dubai": [
+      "ae-desert"
+    ],
+    "turkey": [
+      "tr-balloon"
+    ],
+    "sri-lanka": [
+      "lk-sigiriya"
+    ],
+    "philippines": [
+      "ph-elnido"
+    ]
   },
   "posts": {
-    "universal-studios-sentosa-guide": { "items": ["sg-uss", "sg-pass"], "before": "<h2 id=\"best-rides-and-shows\"" },
-    "places-to-visit-in-singapore":    { "items": ["sg-uss", "sg-gardens", "sg-safari", "sg-pass"] },
-    "singapore-first-timer-guide":     { "items": ["sg-pass", "sg-uss", "sg-gardens"] },
-    "singapore-5-day-itinerary":       { "items": ["sg-uss", "sg-gardens", "sg-safari", "sg-pass"] },
-    "singapore-budget-travel":         { "items": ["sg-pass", "sg-gardens"] },
-    "singapore-with-parents-and-kids": { "items": ["sg-uss", "sg-safari", "sg-pass"] },
-    "singapore-trip-cost-from-india":  { "items": ["sg-pass", "sg-uss", "sg-gardens"] },
-    "singapore-layover-guide":         { "items": ["sg-gardens", "sg-pass"] },
-    "singapore-malaysia-7-day-itinerary": { "items": ["sg-uss", "sg-gardens", "my-bus", "my-petronas", "my-genting"] },
-    "singapore-to-malaysia-by-bus-or-train": { "items": ["my-bus"] },
-    "japan-5-day-itinerary":           { "items": ["jp-jrpass", "jp-teamlab", "jp-usj"] },
-    "japan-10-day-itinerary":          { "items": ["jp-jrpass", "jp-teamlab", "jp-usj"] },
-    "vietnam-travel-guide":            { "items": ["vn-halong", "vn-bana"] },
-    "southeast-asia-budget-tips":      { "items": ["sg-pass", "th-pass", "bali-penida"] }
-  }
+    "universal-studios-sentosa-guide": {
+      "items": [
+        "sg-uss",
+        "sg-pass"
+      ],
+      "before": "<h2 id=\"best-rides-and-shows\""
+    },
+    "places-to-visit-in-singapore": {
+      "items": [
+        "sg-uss",
+        "sg-gardens",
+        "sg-safari",
+        "sg-pass"
+      ]
+    },
+    "singapore-first-timer-guide": {
+      "items": [
+        "sg-pass",
+        "sg-uss",
+        "sg-gardens"
+      ]
+    },
+    "singapore-5-day-itinerary": {
+      "items": [
+        "sg-uss",
+        "sg-gardens",
+        "sg-safari",
+        "sg-pass"
+      ]
+    },
+    "singapore-budget-travel": {
+      "items": [
+        "sg-pass",
+        "sg-gardens"
+      ]
+    },
+    "singapore-with-parents-and-kids": {
+      "items": [
+        "sg-uss",
+        "sg-safari",
+        "sg-pass"
+      ]
+    },
+    "singapore-trip-cost-from-india": {
+      "items": [
+        "sg-pass",
+        "sg-uss",
+        "sg-gardens"
+      ]
+    },
+    "singapore-layover-guide": {
+      "items": [
+        "sg-gardens",
+        "sg-pass"
+      ]
+    },
+    "singapore-malaysia-7-day-itinerary": {
+      "items": [
+        "sg-uss",
+        "sg-gardens",
+        "my-bus",
+        "my-petronas",
+        "my-genting"
+      ]
+    },
+    "singapore-to-malaysia-by-bus-or-train": {
+      "items": [
+        "my-bus"
+      ]
+    },
+    "japan-5-day-itinerary": {
+      "items": [
+        "jp-jrpass",
+        "jp-teamlab",
+        "jp-usj"
+      ]
+    },
+    "japan-10-day-itinerary": {
+      "items": [
+        "jp-jrpass",
+        "jp-teamlab",
+        "jp-usj"
+      ]
+    },
+    "vietnam-travel-guide": {
+      "items": [
+        "vn-halong",
+        "vn-bana"
+      ]
+    },
+    "southeast-asia-budget-tips": {
+      "items": [
+        "sg-pass",
+        "th-pass",
+        "bali-penida"
+      ]
+    }
+  },
+  "home": [
+    "sg-uss",
+    "sg-gardens",
+    "sg-safari",
+    "my-bus",
+    "jp-jrpass",
+    "bali-penida"
+  ],
+  "homeLink": "https://www.klook.com/"
 }

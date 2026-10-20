@@ -4,7 +4,7 @@
 // Usage: node scripts/apply-affiliates.cjs
 const fs = require('fs');
 const path = require('path');
-const { DATA, klookBox } = require('./affiliates.cjs');
+const { DATA, klookBox, klookHome } = require('./affiliates.cjs');
 
 const BLOG = path.join(__dirname, '..', 'blog');
 const MARKED = /\n?<!-- klook:start -->[\s\S]*?<!-- klook:end -->\n?/g;
@@ -28,4 +28,10 @@ for (const f of fs.readdirSync(BLOG).filter(f => f.endsWith('.html'))) {
   } else if (html !== before) removed++;
   if (html !== before) fs.writeFileSync(file, html);
 }
+// Homepage: refresh the Klook section in place (it lives between the markers)
+const INDEX = path.join(__dirname, '..', 'index.html');
+const home = fs.readFileSync(INDEX, 'utf8');
+const homeOut = home.replace(/<!-- klook:start -->[\s\S]*?<!-- klook:end -->/, () => `<!-- klook:start -->\n${klookHome()}\n<!-- klook:end -->`);
+if (homeOut !== home) fs.writeFileSync(INDEX, homeOut);
+
 console.log(`klook boxes: ${added} posts${removed ? `, removed from ${removed}` : ''}`);
