@@ -51,6 +51,6 @@
   // Count clicks on affiliate links: Klook (which product) and other partners like Wise
   document.addEventListener('click', function (e) {
     var a = e.target.closest && e.target.closest('a[data-klook], a[data-partner]');
-    if (a && window.gtag) window.gtag('event', 'affiliate_click', { partner: a.getAttribute('data-partner') || 'klook', item_id: a.getAttribute('data-klook') || a.getAttribute('data-partner'), page_path: location.pathname });
+    if (a && window.gtag) window.gtag('event', 'affiliate_click', { partner: a.getAttribute('data-partner') || 'klook', affiliate_item: a.getAttribute('data-klook') || a.getAttribute('data-partner'), page_path: location.pathname });
   });
 })();
