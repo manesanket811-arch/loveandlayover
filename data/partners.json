@@ -1,0 +1,4 @@
+{
+  "_readme": "Referral/affiliate links other than Klook. Any link on the site with data-partner=\"<key>\" gets its href set from here by scripts/apply-affiliates.cjs. When the Wise affiliate (Partnerize) link arrives, replace the wise url and re-run the script.",
+  "wise": "https://wise.com/invite/drhc/sanketgangadharm"
+}

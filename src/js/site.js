@@ -48,9 +48,9 @@
     if (a && window.gtag) window.gtag('event', 'whatsapp_click', { page_path: location.pathname });
   });
 
-  // Count clicks on Klook affiliate links (which product, from which page)
+  // Count clicks on affiliate links: Klook (which product) and other partners like Wise
   document.addEventListener('click', function (e) {
-    var a = e.target.closest && e.target.closest('a[data-klook]');
-    if (a && window.gtag) window.gtag('event', 'affiliate_click', { partner: 'klook', item_id: a.getAttribute('data-klook'), page_path: location.pathname });
+    var a = e.target.closest && e.target.closest('a[data-klook], a[data-partner]');
+    if (a && window.gtag) window.gtag('event', 'affiliate_click', { partner: a.getAttribute('data-partner') || 'klook', item_id: a.getAttribute('data-klook') || a.getAttribute('data-partner'), page_path: location.pathname });
   });
 })();
