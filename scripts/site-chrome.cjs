@@ -53,9 +53,18 @@ function footer() {
 }
 
 const HEAD_LINKS = '<link rel="stylesheet" href="/css/chrome.css?v=4">';
+// Google Analytics 4 (every page must have this, or its visits and clicks aren't counted)
+const GA_ID = 'G-5D7GNE6JQL';
+const GA = `<script defer src="https://www.googletagmanager.com/gtag/js?id=${GA_ID}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '${GA_ID}');
+</script>`;
 const SCRIPT = '<script src="/js/site.js?v=4"></script>\n<script src="/js/datadog.js" defer></script>';
 
-module.exports = { header, footer, HEAD_LINKS, SCRIPT, WHATSAPP };
+module.exports = { header, footer, HEAD_LINKS, SCRIPT, WHATSAPP, GA, GA_ID };
 
 // CLI: node scripts/site-chrome.cjs header <current> [cta] | footer
 if (require.main === module) {

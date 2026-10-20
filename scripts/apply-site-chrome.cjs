@@ -5,7 +5,7 @@
 // Usage: node scripts/apply-site-chrome.cjs [files…]   (default: all hand-written pages)
 const fs = require('fs');
 const path = require('path');
-const { header, footer, HEAD_LINKS, SCRIPT } = require('./site-chrome.cjs');
+const { header, footer, HEAD_LINKS, SCRIPT, GA, GA_ID } = require('./site-chrome.cjs');
 
 const ROOT = path.join(__dirname, '..');
 const REFRESH = '<link rel="stylesheet" href="/css/refresh.css?v=5">';
@@ -13,7 +13,7 @@ const REFRESH = '<link rel="stylesheet" href="/css/refresh.css?v=5">';
 const MODERN = new Set(['index.html', 'about.html', 'videos.html', 'blog.html', 'work-with-us.html', 'singapore-trip-cost-calculator.html']);
 
 function defaultFiles() {
-  const list = ['index.html', 'about.html', 'videos.html', 'blog.html', 'work-with-us.html', '404.html', 'singapore-trip-cost-calculator.html'];
+  const list = ['index.html', 'about.html', 'videos.html', 'blog.html', 'work-with-us.html', '404.html', 'singapore-trip-cost-calculator.html', 'credits.html'];
   for (const dir of ['destinations', 'blog']) {
     for (const f of fs.readdirSync(path.join(ROOT, dir))) if (f.endsWith('.html')) list.push(`${dir}/${f}`);
   }
@@ -42,6 +42,8 @@ function apply(file) {
 
   const links = (MODERN.has(file) || s.includes('/css/site.css')) ? HEAD_LINKS : `${HEAD_LINKS}\n${REFRESH}`;
   if (!s.includes('/css/chrome.css')) s = s.replace(/<\/head>/, `${links}\n</head>`);
+  // Make sure Google Analytics is on the page
+  if (!s.includes(GA_ID)) s = s.replace(/<\/head>/, `${GA}\n</head>`);
 
   s = s.replace(/<script src="\/js\/nav-toggle\.js"[^>]*><\/script>\n?/g, '');
   s = s.replace(/<script src="\/js\/datadog\.js" defer><\/script>\n?/g, '');

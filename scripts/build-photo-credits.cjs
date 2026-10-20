@@ -39,6 +39,7 @@ const html = `<!DOCTYPE html>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/css/modern-theme.css">
 ${chrome.HEAD_LINKS}
+${chrome.GA}
 <link rel="stylesheet" href="/css/refresh.css?v=5">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <style>
