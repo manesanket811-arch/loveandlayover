@@ -54,6 +54,34 @@
     if (a && window.gtag) window.gtag('event', 'affiliate_click', { partner: a.getAttribute('data-partner') || 'klook', affiliate_item: a.getAttribute('data-klook') || a.getAttribute('data-partner'), page_path: location.pathname });
   });
 
+  // ---------- Reading progress bar (posts and guides) and back-to-top button ----------
+  var article = document.querySelector('.post-layout, .article-wrapper, .article-content, .days, .day-box');
+  var tall = function () { return document.documentElement.scrollHeight > window.innerHeight * 3; };
+  if (article) {
+    var bar = document.createElement('div');
+    bar.className = 'read-progress'; bar.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(bar);
+  }
+  var topBtn = document.createElement('button');
+  topBtn.type = 'button'; topBtn.className = 'to-top'; topBtn.setAttribute('aria-label', 'Back to top');
+  topBtn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>';
+  topBtn.addEventListener('click', function () {
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    var skip = document.querySelector('.skip-link'); if (skip) skip.focus({ preventScroll: true });
+  });
+  document.body.appendChild(topBtn);
+  if (document.querySelector('.action-bar')) topBtn.classList.add('above-bar');
+  var ticking = false;
+  var onScrollUi = function () {
+    ticking = false;
+    var doc = document.documentElement, max = doc.scrollHeight - window.innerHeight;
+    if (bar) bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, window.scrollY / max) : 0) + ')';
+    topBtn.classList.toggle('show', tall() && window.scrollY > window.innerHeight * 1.5);
+  };
+  window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(onScrollUi); } }, { passive: true });
+  onScrollUi();
+
   // ---------- Site search ----------
   // The header button opens an overlay; /search-index.json is fetched the first time.
   // Shortcuts: "/" or Ctrl/Cmd+K to open, arrows to move, Enter to open, Esc to close.

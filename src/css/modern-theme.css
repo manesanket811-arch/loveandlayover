@@ -7,9 +7,9 @@
   /* Primary Colors — unified premium palette */
   --primary: #0a1628;
   --primary-light: #1a2840;
-  --accent: #d4691d;
+  --accent: #b5561a;
   --accent-light: #e07c2e;
-  --accent-dark: #b8541a;
+  --accent-dark: #96450f;
 
   /* Secondary Colors */
   --secondary: #1a9b8e;
@@ -294,10 +294,10 @@ header {
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-sm);
-  padding: 12px 32px;
-  border-radius: 8px;
+  padding: 13px 24px;
+  border-radius: 999px;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: .95rem;
   border: none;
   cursor: pointer;
   transition: all var(--transition-base);

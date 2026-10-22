@@ -19,7 +19,7 @@
     '.trip-video-thumb .tv-len{position:absolute;right:8px;bottom:8px;background:rgba(10,22,40,.85);color:#fff;font-size:.72rem;font-weight:700;padding:3px 7px;border-radius:6px}' +
     '.trip-video-body{padding:12px 14px 14px}' +
     '.trip-video-body b{display:block;font-size:.95rem;line-height:1.35}' +
-    '.trip-video-body span{display:block;margin-top:6px;font-size:.82rem;font-weight:600;color:#d4691d}';
+    '.trip-video-body span{display:block;margin-top:6px;font-size:.82rem;font-weight:600;color:#b5561a}';
 
   function isShort(v) { return v.duration === '< 1 min'; }
   function cleanTitle(t) {

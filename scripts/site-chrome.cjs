@@ -54,6 +54,10 @@ function footer() {
 }
 
 const HEAD_LINKS = '<link rel="stylesheet" href="/css/chrome.css?v=5">';
+// Self-hosted fonts (css/fonts.css). Preload the two files every page needs first.
+const FONTS = '<link rel="preload" href="/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>\n<link rel="preload" href="/fonts/fraunces-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>\n<link rel="stylesheet" href="/css/fonts.css?v=1">';
+// Matches the old Google Fonts tags (two preconnects + the stylesheet) so they can be swapped for FONTS
+const GOOGLE_FONTS = /(<link rel="preconnect" href="https:\/\/fonts\.googleapis\.com">\n?)?(<link rel="preconnect" href="https:\/\/fonts\.gstatic\.com" crossorigin>\n?)?<link href="https:\/\/fonts\.googleapis\.com\/css2\?[^"]*" rel="stylesheet">/;
 // Google Analytics 4 (every page must have this, or its visits and clicks aren't counted)
 const GA_ID = 'G-5D7GNE6JQL';
 const GA = `<script defer src="https://www.googletagmanager.com/gtag/js?id=${GA_ID}"></script>
@@ -65,7 +69,7 @@ const GA = `<script defer src="https://www.googletagmanager.com/gtag/js?id=${GA_
 </script>`;
 const SCRIPT = '<script src="/js/site.js?v=5"></script>\n<script src="/js/datadog.js" defer></script>';
 
-module.exports = { header, footer, HEAD_LINKS, SCRIPT, WHATSAPP, GA, GA_ID };
+module.exports = { header, footer, HEAD_LINKS, SCRIPT, WHATSAPP, GA, GA_ID, FONTS, GOOGLE_FONTS };
 
 // CLI: node scripts/site-chrome.cjs header <current> [cta] | footer
 if (require.main === module) {

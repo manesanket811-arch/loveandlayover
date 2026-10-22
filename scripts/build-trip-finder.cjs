@@ -5,7 +5,7 @@
 // Usage: node scripts/build-trip-finder.cjs
 const fs = require('fs');
 const path = require('path');
-const { header, footer, HEAD_LINKS, SCRIPT, GA } = require('./site-chrome.cjs');
+const { header, footer, HEAD_LINKS, SCRIPT, GA, FONTS } = require('./site-chrome.cjs');
 const { DATA: KLOOK, klookUrl } = require('./affiliates.cjs');
 
 const ROOT = path.join(__dirname, '..');
@@ -63,9 +63,7 @@ const page = `<!DOCTYPE html>
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,900;1,9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+${FONTS}
 ${ld({ '@context': 'https://schema.org', '@type': 'WebApplication', name: 'Trip Finder Quiz', url: URL_, description: desc, applicationCategory: 'TravelApplication', operatingSystem: 'Any', offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' }, creator: { '@type': 'Organization', '@id': `${SITE}/#organization`, name: 'Love and Layovers' } })}
 ${ld({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` }, { '@type': 'ListItem', position: 2, name: 'Destinations', item: `${SITE}/destinations/` }, { '@type': 'ListItem', position: 3, name: 'Trip finder quiz', item: URL_ }] })}
 ${GA}
@@ -126,8 +124,8 @@ ${HEAD_LINKS}
   .tf-facts b { display: block; margin-top: 2px; font-size: .9rem; line-height: 1.35; }
   .tf-cta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
   .tf-cta .btn { padding: 11px 16px; font-size: .88rem; white-space: normal; text-align: center; }
-  .btn-klook { background: #FF5722; color: #fff; }
-  .btn-klook:hover { background: #e64a19; color: #fff; }
+  .btn-klook { background: #c9410f; color: #fff; }
+  .btn-klook:hover { background: #a93a0d; color: #fff; }
   .tf-share { margin-top: 26px; padding: 20px; border-radius: 18px; background: var(--navy); color: #fff; display: flex; flex-wrap: wrap; align-items: center; gap: 14px; justify-content: space-between; }
   .tf-share p { margin: 0; font-weight: 600; }
   .tf-share .row { display: flex; flex-wrap: wrap; gap: 8px; }

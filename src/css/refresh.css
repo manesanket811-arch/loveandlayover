@@ -114,8 +114,12 @@ section.hero { background: radial-gradient(70% 120% at 85% 0%, rgba(240,165,89,.
 .follow-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(10,22,40,.18); }
 .follow-btn.yt { background: #ff0033; }
 .follow-btn.ig { background: linear-gradient(45deg, #f09433, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888); }
-.cta-box .follow-btn.yt { background: #fff; color: #d4691d !important; }
+.cta-box .follow-btn.yt { background: #fff; color: #b5561a !important; }
 .cta-box .follow-btn.ig { background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.6); }
 .follow-btns.stacked .follow-btn { font-size: .84rem; padding: 11px 12px; white-space: nowrap; gap: 6px; }
 .guide-sidebar h3 { font-size: 1rem; margin: 0 0 12px; }
 .guide-sidebar p { margin: 0; font-size: .9rem; color: var(--r-ink-soft); }
+
+/* Older posts set "padding: 50px 0" on the content wrapper, which removed the side margin on phones */
+.wrap.article-wrapper { padding-left: 24px; padding-right: 24px; }
+@media (max-width: 560px) { .wrap.article-wrapper { padding-left: 20px; padding-right: 20px; } }

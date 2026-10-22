@@ -4,7 +4,7 @@
 // Usage: node scripts/build-guides.cjs [slug…]   (default: every data file)
 const fs = require('fs');
 const path = require('path');
-const { header, footer, HEAD_LINKS, SCRIPT } = require('./site-chrome.cjs');
+const { header, footer, HEAD_LINKS, SCRIPT, FONTS } = require('./site-chrome.cjs');
 const { altFor } = require('./image-alts.cjs');
 const { DATA: KLOOK, klookBox } = require('./affiliates.cjs');
 
@@ -212,9 +212,7 @@ function build(g) {
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" as="image" href="${hero}" type="image/webp">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,900;1,9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+${FONTS}
 ${schema}
 <script defer src="https://www.googletagmanager.com/gtag/js?id=G-5D7GNE6JQL"></script>
 <script>

@@ -41,7 +41,7 @@ const html = `<!DOCTYPE html>
 ${chrome.HEAD_LINKS}
 ${chrome.GA}
 <link rel="stylesheet" href="/css/refresh.css?v=5">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+${chrome.FONTS}
 <style>
   .credits { max-width: 900px; margin: 0 auto; padding: 40px 24px 72px; }
   .credits h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 12px; }

@@ -5,7 +5,7 @@
 // Usage: node scripts/apply-site-chrome.cjs [files…]   (default: all hand-written pages)
 const fs = require('fs');
 const path = require('path');
-const { header, footer, HEAD_LINKS, SCRIPT, GA, GA_ID } = require('./site-chrome.cjs');
+const { header, footer, HEAD_LINKS, SCRIPT, GA, GA_ID, FONTS, GOOGLE_FONTS } = require('./site-chrome.cjs');
 
 const ROOT = path.join(__dirname, '..');
 const REFRESH = '<link rel="stylesheet" href="/css/refresh.css?v=5">';
@@ -43,6 +43,8 @@ function apply(file) {
   const links = (MODERN.has(file) || s.includes('/css/site.css')) ? HEAD_LINKS : `${HEAD_LINKS}\n${REFRESH}`;
   s = s.replace(/<link rel="stylesheet" href="\/css\/chrome\.css(\?v=\d+)?">/, HEAD_LINKS);
   if (!s.includes('/css/chrome.css')) s = s.replace(/<\/head>/, `${links}\n</head>`);
+  // Self-hosted fonts instead of Google Fonts
+  s = s.replace(GOOGLE_FONTS, FONTS);
   // Make sure Google Analytics is on the page
   if (!s.includes(GA_ID)) s = s.replace(/<\/head>/, `${GA}\n</head>`);
 
