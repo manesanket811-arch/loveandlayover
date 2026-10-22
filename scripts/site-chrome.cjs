@@ -21,6 +21,7 @@ function header(current = '', { cta = '/work-with-us.html' } = {}) {
   return `<header class="hdr" id="hdr">
   <div class="hdr-wrap hdr-in">
     <a href="/" class="site-brand" aria-label="Love and Layovers home"><img src="/public/images/brand/logo-mark.svg" alt="Love and Layovers logo" width="36" height="36">Love &amp; Layovers</a>
+    <button class="search-btn" id="searchBtn" type="button" aria-label="Search guides, posts and videos" aria-haspopup="dialog"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg><span class="search-btn-label">Search</span></button>
     <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav"><span></span><span></span><span></span></button>
     <nav class="site-nav" id="siteNav" aria-label="Main navigation">
 ${links}
@@ -36,7 +37,7 @@ function footer() {
     <div class="ftr-top">
       <a href="/" class="site-brand"><img src="/public/images/brand/logo-mark-light.svg" alt="Love and Layovers logo" width="30" height="30">Love &amp; Layovers</a>
       <nav class="ftr-links" aria-label="Footer">
-        <a href="/destinations/">Destinations</a><a href="/blog.html">Blog</a><a href="/videos.html">Videos</a><a href="/videos/life-in-singapore.html">Life in Singapore</a><a href="/singapore-trip-cost-calculator.html">Trip cost calculator</a><a href="/work-with-us.html">Work with us</a><a href="/about.html">About</a>
+        <a href="/destinations/">Destinations</a><a href="/blog.html">Blog</a><a href="/videos.html">Videos</a><a href="/videos/life-in-singapore.html">Life in Singapore</a><a href="/singapore-trip-cost-calculator.html">Trip cost calculator</a><a href="/trip-finder.html">Trip finder quiz</a><a href="/work-with-us.html">Work with us</a><a href="/about.html">About</a>
       </nav>
       <div class="ftr-social">
         <a href="https://www.youtube.com/@LoveAndLayover?sub_confirmation=1" target="_blank" rel="noopener" aria-label="YouTube">▶ YouTube</a>
@@ -52,7 +53,7 @@ function footer() {
 </footer>`;
 }
 
-const HEAD_LINKS = '<link rel="stylesheet" href="/css/chrome.css?v=4">';
+const HEAD_LINKS = '<link rel="stylesheet" href="/css/chrome.css?v=5">';
 // Google Analytics 4 (every page must have this, or its visits and clicks aren't counted)
 const GA_ID = 'G-5D7GNE6JQL';
 const GA = `<script defer src="https://www.googletagmanager.com/gtag/js?id=${GA_ID}"></script>
@@ -62,7 +63,7 @@ const GA = `<script defer src="https://www.googletagmanager.com/gtag/js?id=${GA_
   gtag('js', new Date());
   gtag('config', '${GA_ID}');
 </script>`;
-const SCRIPT = '<script src="/js/site.js?v=4"></script>\n<script src="/js/datadog.js" defer></script>';
+const SCRIPT = '<script src="/js/site.js?v=5"></script>\n<script src="/js/datadog.js" defer></script>';
 
 module.exports = { header, footer, HEAD_LINKS, SCRIPT, WHATSAPP, GA, GA_ID };
 

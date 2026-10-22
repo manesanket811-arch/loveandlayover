@@ -1,0 +1,880 @@
+{
+  "_readme": "Destination traits for the trip finder quiz (trip-finder.html, built by scripts/build-trip-finder.cjs). daily = rough mid-range cost per person per day in rupees, sharing a room (hotel, food, transport, a few paid sights). flights = rough return economy fare from Indian metros, booked ahead. best/avoid = month numbers (1 = Jan). vibes: beach, city, theme, nature, culture, luxury. who: couple, family, seniors, friends, solo. visa: easy (visa-free / on arrival / permit), evisa (online), full (agent, embassy or Schengen). reach: short (under ~5h), medium, long. Edit and re-run the build script.",
+  "destinations": {
+    "singapore": {
+      "daily": [
+        7000,
+        11000
+      ],
+      "flights": [
+        18000,
+        28000
+      ],
+      "best": [
+        2,
+        3,
+        4,
+        7,
+        8
+      ],
+      "avoid": [],
+      "vibes": [
+        "city",
+        "theme",
+        "luxury"
+      ],
+      "who": [
+        "family",
+        "seniors",
+        "couple",
+        "solo"
+      ],
+      "visa": "full",
+      "reach": "short",
+      "line": "Spotless, safe and easy, with theme parks, light shows and great Indian food"
+    },
+    "malaysia": {
+      "daily": [
+        3500,
+        6500
+      ],
+      "flights": [
+        15000,
+        25000
+      ],
+      "best": [
+        12,
+        1,
+        2,
+        3,
+        4
+      ],
+      "avoid": [],
+      "vibes": [
+        "city",
+        "nature",
+        "beach",
+        "culture"
+      ],
+      "who": [
+        "family",
+        "friends",
+        "couple"
+      ],
+      "visa": "easy",
+      "reach": "short",
+      "line": "Kuala Lumpur, Genting's cable car, Penang food and Langkawi beaches, visa-free"
+    },
+    "thailand": {
+      "daily": [
+        3500,
+        6000
+      ],
+      "flights": [
+        15000,
+        25000
+      ],
+      "best": [
+        11,
+        12,
+        1,
+        2
+      ],
+      "avoid": [
+        9,
+        10
+      ],
+      "vibes": [
+        "beach",
+        "city",
+        "culture"
+      ],
+      "who": [
+        "friends",
+        "couple",
+        "solo",
+        "family"
+      ],
+      "visa": "easy",
+      "reach": "short",
+      "line": "Islands, temples, night markets and the best value in Asia"
+    },
+    "bali": {
+      "daily": [
+        3500,
+        6500
+      ],
+      "flights": [
+        25000,
+        40000
+      ],
+      "best": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "avoid": [
+        1,
+        2
+      ],
+      "vibes": [
+        "beach",
+        "nature",
+        "culture"
+      ],
+      "who": [
+        "couple",
+        "friends",
+        "solo"
+      ],
+      "visa": "easy",
+      "reach": "medium",
+      "line": "Rice terraces, temples, cliff beaches and beautiful villas"
+    },
+    "indonesia": {
+      "daily": [
+        3000,
+        5500
+      ],
+      "flights": [
+        25000,
+        40000
+      ],
+      "best": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "avoid": [
+        1,
+        2
+      ],
+      "vibes": [
+        "culture",
+        "nature"
+      ],
+      "who": [
+        "solo",
+        "couple"
+      ],
+      "visa": "easy",
+      "reach": "medium",
+      "line": "Borobudur at sunrise, Yogyakarta's palaces and volcano views"
+    },
+    "vietnam": {
+      "daily": [
+        2500,
+        4500
+      ],
+      "flights": [
+        18000,
+        30000
+      ],
+      "best": [
+        2,
+        3,
+        4,
+        10,
+        11
+      ],
+      "avoid": [],
+      "vibes": [
+        "nature",
+        "culture",
+        "city",
+        "beach"
+      ],
+      "who": [
+        "friends",
+        "solo",
+        "couple"
+      ],
+      "visa": "evisa",
+      "reach": "short",
+      "line": "Ha Long Bay, Hoi An's lanterns, street food and great prices"
+    },
+    "japan": {
+      "daily": [
+        8000,
+        13000
+      ],
+      "flights": [
+        40000,
+        65000
+      ],
+      "best": [
+        3,
+        4,
+        5,
+        10,
+        11
+      ],
+      "avoid": [
+        6
+      ],
+      "vibes": [
+        "city",
+        "culture",
+        "theme",
+        "nature"
+      ],
+      "who": [
+        "couple",
+        "family",
+        "solo"
+      ],
+      "visa": "evisa",
+      "reach": "medium",
+      "line": "Cherry blossoms, bullet trains, temples and Universal Studios"
+    },
+    "south-korea": {
+      "daily": [
+        7000,
+        11000
+      ],
+      "flights": [
+        35000,
+        60000
+      ],
+      "best": [
+        4,
+        5,
+        9,
+        10
+      ],
+      "avoid": [
+        7,
+        8
+      ],
+      "vibes": [
+        "city",
+        "culture",
+        "theme",
+        "luxury"
+      ],
+      "who": [
+        "friends",
+        "couple",
+        "solo"
+      ],
+      "visa": "full",
+      "reach": "medium",
+      "line": "Seoul's palaces, K-culture, skincare shopping and theme parks"
+    },
+    "hong-kong": {
+      "daily": [
+        8000,
+        12000
+      ],
+      "flights": [
+        25000,
+        40000
+      ],
+      "best": [
+        10,
+        11,
+        12,
+        1,
+        2
+      ],
+      "avoid": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "vibes": [
+        "city",
+        "theme",
+        "luxury"
+      ],
+      "who": [
+        "family",
+        "couple"
+      ],
+      "visa": "easy",
+      "reach": "short",
+      "line": "Skyline views, dim sum, Disneyland and the Big Buddha"
+    },
+    "philippines": {
+      "daily": [
+        3500,
+        6500
+      ],
+      "flights": [
+        30000,
+        45000
+      ],
+      "best": [
+        12,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "avoid": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "vibes": [
+        "beach",
+        "nature"
+      ],
+      "who": [
+        "couple",
+        "friends"
+      ],
+      "visa": "easy",
+      "reach": "medium",
+      "line": "El Nido's lagoons, Bohol's hills and island hopping"
+    },
+    "dubai": {
+      "daily": [
+        8000,
+        14000
+      ],
+      "flights": [
+        15000,
+        25000
+      ],
+      "best": [
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "avoid": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "vibes": [
+        "luxury",
+        "city",
+        "theme",
+        "nature"
+      ],
+      "who": [
+        "family",
+        "seniors",
+        "couple",
+        "friends"
+      ],
+      "visa": "evisa",
+      "reach": "short",
+      "line": "The Burj Khalifa, desert safaris, huge malls and water parks"
+    },
+    "sri-lanka": {
+      "daily": [
+        3000,
+        5500
+      ],
+      "flights": [
+        12000,
+        22000
+      ],
+      "best": [
+        12,
+        1,
+        2,
+        3
+      ],
+      "avoid": [],
+      "vibes": [
+        "beach",
+        "nature",
+        "culture"
+      ],
+      "who": [
+        "couple",
+        "family",
+        "seniors"
+      ],
+      "visa": "easy",
+      "reach": "short",
+      "line": "Sigiriya, tea hills, safaris and golden beaches, close to home"
+    },
+    "maldives": {
+      "daily": [
+        12000,
+        25000
+      ],
+      "flights": [
+        15000,
+        30000
+      ],
+      "best": [
+        11,
+        12,
+        1,
+        2,
+        3,
+        4
+      ],
+      "avoid": [
+        6,
+        7,
+        8
+      ],
+      "vibes": [
+        "luxury",
+        "beach"
+      ],
+      "who": [
+        "couple"
+      ],
+      "visa": "easy",
+      "reach": "short",
+      "line": "Overwater villas, turquoise lagoons and reefs: the classic honeymoon"
+    },
+    "nepal": {
+      "daily": [
+        2500,
+        4500
+      ],
+      "flights": [
+        10000,
+        20000
+      ],
+      "best": [
+        3,
+        4,
+        10,
+        11
+      ],
+      "avoid": [
+        6,
+        7,
+        8
+      ],
+      "vibes": [
+        "nature",
+        "culture"
+      ],
+      "who": [
+        "friends",
+        "solo",
+        "family",
+        "seniors"
+      ],
+      "visa": "easy",
+      "reach": "short",
+      "line": "Himalayan views, Pokhara's lakes and Kathmandu's temples, no visa needed"
+    },
+    "bhutan": {
+      "daily": [
+        7000,
+        11000
+      ],
+      "flights": [
+        20000,
+        35000
+      ],
+      "best": [
+        3,
+        4,
+        5,
+        9,
+        10,
+        11
+      ],
+      "avoid": [
+        6,
+        7,
+        8
+      ],
+      "vibes": [
+        "nature",
+        "culture"
+      ],
+      "who": [
+        "couple",
+        "seniors",
+        "family"
+      ],
+      "visa": "easy",
+      "reach": "short",
+      "line": "Peaceful valleys, cliff monasteries and Tiger's Nest"
+    },
+    "turkey": {
+      "daily": [
+        6000,
+        10000
+      ],
+      "flights": [
+        40000,
+        60000
+      ],
+      "best": [
+        4,
+        5,
+        9,
+        10
+      ],
+      "avoid": [],
+      "vibes": [
+        "culture",
+        "nature",
+        "city"
+      ],
+      "who": [
+        "couple",
+        "friends"
+      ],
+      "visa": "evisa",
+      "reach": "medium",
+      "line": "Istanbul's bazaars and Cappadocia's hot air balloons"
+    },
+    "egypt": {
+      "daily": [
+        5000,
+        8000
+      ],
+      "flights": [
+        35000,
+        55000
+      ],
+      "best": [
+        10,
+        11,
+        12,
+        1,
+        2,
+        3,
+        4
+      ],
+      "avoid": [
+        6,
+        7,
+        8
+      ],
+      "vibes": [
+        "culture"
+      ],
+      "who": [
+        "family",
+        "friends",
+        "solo"
+      ],
+      "visa": "evisa",
+      "reach": "medium",
+      "line": "The pyramids, Luxor's temples and a Nile cruise"
+    },
+    "france": {
+      "daily": [
+        10000,
+        16000
+      ],
+      "flights": [
+        50000,
+        80000
+      ],
+      "best": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "avoid": [],
+      "vibes": [
+        "city",
+        "culture",
+        "luxury"
+      ],
+      "who": [
+        "couple",
+        "family"
+      ],
+      "visa": "full",
+      "reach": "long",
+      "line": "Paris, cafés, the Louvre and the Eiffel Tower lit up at night"
+    },
+    "italy": {
+      "daily": [
+        9000,
+        14000
+      ],
+      "flights": [
+        50000,
+        80000
+      ],
+      "best": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "avoid": [],
+      "vibes": [
+        "culture",
+        "city",
+        "beach"
+      ],
+      "who": [
+        "couple",
+        "family",
+        "seniors"
+      ],
+      "visa": "full",
+      "reach": "long",
+      "line": "Rome, Venice, Tuscany and the best pizza and gelato of your life"
+    },
+    "spain": {
+      "daily": [
+        8500,
+        13000
+      ],
+      "flights": [
+        50000,
+        80000
+      ],
+      "best": [
+        4,
+        5,
+        9,
+        10
+      ],
+      "avoid": [],
+      "vibes": [
+        "city",
+        "culture",
+        "beach"
+      ],
+      "who": [
+        "friends",
+        "couple"
+      ],
+      "visa": "full",
+      "reach": "long",
+      "line": "Barcelona, Madrid, tapas and sunny beaches"
+    },
+    "portugal": {
+      "daily": [
+        7000,
+        11000
+      ],
+      "flights": [
+        55000,
+        85000
+      ],
+      "best": [
+        4,
+        5,
+        9,
+        10
+      ],
+      "avoid": [],
+      "vibes": [
+        "city",
+        "beach",
+        "culture"
+      ],
+      "who": [
+        "couple",
+        "friends",
+        "solo"
+      ],
+      "visa": "full",
+      "reach": "long",
+      "line": "Lisbon's trams, Porto's riverside and the Algarve coast"
+    },
+    "germany": {
+      "daily": [
+        9000,
+        14000
+      ],
+      "flights": [
+        50000,
+        80000
+      ],
+      "best": [
+        5,
+        6,
+        9,
+        10,
+        12
+      ],
+      "avoid": [],
+      "vibes": [
+        "city",
+        "culture",
+        "nature"
+      ],
+      "who": [
+        "couple",
+        "family",
+        "friends"
+      ],
+      "visa": "full",
+      "reach": "long",
+      "line": "Berlin, Munich, fairy-tale castles and Christmas markets"
+    },
+    "greece": {
+      "daily": [
+        7500,
+        12000
+      ],
+      "flights": [
+        50000,
+        80000
+      ],
+      "best": [
+        5,
+        6,
+        9,
+        10
+      ],
+      "avoid": [],
+      "vibes": [
+        "beach",
+        "culture"
+      ],
+      "who": [
+        "couple",
+        "friends"
+      ],
+      "visa": "full",
+      "reach": "long",
+      "line": "Santorini sunsets, island hopping and ancient Athens"
+    },
+    "iceland": {
+      "daily": [
+        16000,
+        25000
+      ],
+      "flights": [
+        70000,
+        100000
+      ],
+      "best": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        2,
+        3
+      ],
+      "avoid": [],
+      "vibes": [
+        "nature"
+      ],
+      "who": [
+        "couple",
+        "friends"
+      ],
+      "visa": "full",
+      "reach": "long",
+      "line": "Waterfalls, glaciers and the Northern Lights"
+    },
+    "australia": {
+      "daily": [
+        10000,
+        15000
+      ],
+      "flights": [
+        50000,
+        80000
+      ],
+      "best": [
+        10,
+        11,
+        12,
+        1,
+        2,
+        3,
+        4
+      ],
+      "avoid": [],
+      "vibes": [
+        "nature",
+        "beach",
+        "city"
+      ],
+      "who": [
+        "family",
+        "couple"
+      ],
+      "visa": "full",
+      "reach": "long",
+      "line": "Sydney's harbour, the Great Barrier Reef and wildlife"
+    },
+    "mexico": {
+      "daily": [
+        6000,
+        10000
+      ],
+      "flights": [
+        90000,
+        130000
+      ],
+      "best": [
+        11,
+        12,
+        1,
+        2,
+        3,
+        4
+      ],
+      "avoid": [],
+      "vibes": [
+        "culture",
+        "beach"
+      ],
+      "who": [
+        "friends",
+        "solo",
+        "couple"
+      ],
+      "visa": "full",
+      "reach": "long",
+      "line": "Mexico City, ancient ruins, tacos and Caribbean beaches"
+    },
+    "peru": {
+      "daily": [
+        5000,
+        8500
+      ],
+      "flights": [
+        110000,
+        160000
+      ],
+      "best": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "avoid": [],
+      "vibes": [
+        "nature",
+        "culture"
+      ],
+      "who": [
+        "friends",
+        "solo",
+        "couple"
+      ],
+      "visa": "full",
+      "reach": "long",
+      "line": "Machu Picchu, Cusco and the Andes"
+    }
+  }
+}

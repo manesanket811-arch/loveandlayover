@@ -41,6 +41,7 @@ function apply(file) {
   else s = s.replace(/<\/main>/, `</main>\n\n${footer()}`);
 
   const links = (MODERN.has(file) || s.includes('/css/site.css')) ? HEAD_LINKS : `${HEAD_LINKS}\n${REFRESH}`;
+  s = s.replace(/<link rel="stylesheet" href="\/css\/chrome\.css(\?v=\d+)?">/, HEAD_LINKS);
   if (!s.includes('/css/chrome.css')) s = s.replace(/<\/head>/, `${links}\n</head>`);
   // Make sure Google Analytics is on the page
   if (!s.includes(GA_ID)) s = s.replace(/<\/head>/, `${GA}\n</head>`);
