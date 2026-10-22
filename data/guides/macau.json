@@ -1,0 +1,202 @@
+{
+  "slug": "macau",
+  "title": "Macau Travel Guide 2026: 3, 5 & 7-Day Itineraries",
+  "description": "Macau in 3, 5 or 7 days: Ruins of St. Paul's, Senado Square, Taipa, Cotai and egg tarts, plus Hong Kong, with an MOP budget and entry rules.",
+  "h1": "Macau Travel Guide 2026",
+  "country": "Macau",
+  "datePublished": "2026-10-22",
+  "dateModified": "2026-10-22",
+  "faq": [],
+  "badges": {
+    "budget": "MOP 1,000–1,600/day",
+    "best": "Oct–Dec",
+    "visa": "Visa-free up to 30 days"
+  },
+  "videoKeywords": "macau,macao,hong kong,cotai",
+  "foodImage": {
+    "src": "/images/destinations/macau-food.webp",
+    "alt": "Portuguese egg tarts, Macau's most famous snack",
+    "caption": "Portuguese egg tarts, Macau's most famous snack"
+  },
+  "sections": [
+    {
+      "id": "why-visit",
+      "title": "Why Visit Macau?",
+      "html": "<p><strong>Macau</strong> blends 400 years of Portuguese heritage with Chinese temples and the glitz of the Cotai Strip: cobbled squares and pastel churches by day, light shows and giant resorts by night. Indians can usually visit <strong>visa-free</strong>, and it's an easy hop from <strong>Hong Kong</strong> by ferry or the sea bridge.</p>\n<p>Three days covers the UNESCO-listed historic centre, <strong>Taipa Village</strong>, <strong>Coloane</strong> and the Cotai resorts. Our 5- and 7-day plans continue to Hong Kong, the most popular way to combine the two.</p>"
+    },
+    {
+      "id": "itineraries",
+      "title": "Macau Itineraries: 3, 5 or 7 Days",
+      "html": "<p>Pick 3, 5 or 7 days. Each longer plan builds on the shorter one: the first days stay the same and the extra days add more places. Costs are approximate per person per day; prices and timings change, so check before you book.</p>",
+      "after": "",
+      "plans": [
+        3,
+        5,
+        7
+      ],
+      "days": [
+        {
+          "title": "Historic centre & Senado Square",
+          "cost": "MOP 900–1,500/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Arrive by ferry or bridge bus from Hong Kong (or fly into Macau) and check in."
+            ],
+            [
+              "Afternoon",
+              "Walk the <strong>Historic Centre of Macau</strong> (UNESCO): <strong>Senado Square</strong>, the <strong>Ruins of St. Paul's</strong> and Monte Fort above them."
+            ],
+            [
+              "Evening",
+              "Evening lights around the Grand Lisboa and a Macanese dinner."
+            ]
+          ]
+        },
+        {
+          "title": "A-Ma Temple, Macau Tower & Cotai",
+          "cost": "MOP 1,000–1,700/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Visit <strong>A-Ma Temple</strong>, Macau's oldest, and the Mandarin's House."
+            ],
+            [
+              "Afternoon",
+              "Go up <strong>Macau Tower</strong> for views (or try the famous bungy jump)."
+            ],
+            [
+              "Evening",
+              "Explore the <strong>Cotai Strip</strong>: gondolas at The Venetian, the mini Eiffel Tower at The Parisian and the Wynn Palace fountain show."
+            ]
+          ]
+        },
+        {
+          "title": "Taipa Village & Coloane",
+          "cost": "MOP 900–1,500/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Wander <strong>Taipa Village</strong>: Rua do Cunha's snack shops and the pastel Taipa Houses."
+            ],
+            [
+              "Afternoon",
+              "Ride a bus to quiet <strong>Coloane Village</strong> for the original <strong>Lord Stow's egg tarts</strong> and the seaside chapel."
+            ],
+            [
+              "Evening",
+              "Night out at Studio City or a show in Cotai."
+            ]
+          ]
+        },
+        {
+          "title": "Ferry to Hong Kong",
+          "cost": "MOP/HK$ 1,100–1,800/day (incl. travel)",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Take the TurboJET ferry (about 1 hour) or the bridge bus to Hong Kong."
+            ],
+            [
+              "Afternoon",
+              "Explore <strong>Tsim Sha Tsui</strong> and ride the <strong>Star Ferry</strong> across Victoria Harbour."
+            ],
+            [
+              "Evening",
+              "Watch the <strong>Symphony of Lights</strong> show from the waterfront promenade."
+            ]
+          ]
+        },
+        {
+          "title": "Victoria Peak & Central",
+          "cost": "HK$1,000–1,600/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Ride the Peak Tram to <strong>Victoria Peak</strong> for the famous skyline view."
+            ],
+            [
+              "Afternoon",
+              "Explore Central, the Mid-Levels escalator and the Man Mo Temple."
+            ],
+            [
+              "Evening",
+              "Dinner and markets in Mong Kok or the Temple Street Night Market."
+            ]
+          ]
+        },
+        {
+          "title": "Big Buddha on Lantau",
+          "cost": "HK$1,100–1,700/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Take the <strong>Ngong Ping 360</strong> cable car to the <strong>Tian Tan Buddha</strong> and Po Lin Monastery (vegetarian lunch at the monastery)."
+            ],
+            [
+              "Afternoon",
+              "Visit the stilt-house fishing village of <strong>Tai O</strong>."
+            ],
+            [
+              "Evening",
+              "Relaxed evening back in the city."
+            ]
+          ]
+        },
+        {
+          "title": "Disneyland or shopping, then departure",
+          "cost": "HK$1,000–1,800/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Spend the day at <strong>Hong Kong Disneyland</strong>, or shop in Causeway Bay."
+            ],
+            [
+              "Afternoon",
+              "Pick up egg rolls and souvenirs."
+            ],
+            [
+              "Evening",
+              "Fly home from Hong Kong International Airport. See our <a href=\"/destinations/hong-kong.html\">Hong Kong guide</a> for more."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "title": "Food to Try in Macau",
+      "html": "<ul>\n<li><strong>Portuguese egg tart</strong> — Flaky pastry with a caramelised custard top; Lord Stow's in Coloane is the original.</li>\n<li><strong>Pork chop bun</strong> — Macau's favourite snack: a fried pork chop in a crusty bun.</li>\n<li><strong>Minchi</strong> — Macanese minced meat and potato with rice, a home-style classic.</li>\n<li><strong>African chicken</strong> — Spicy grilled chicken with a peri-peri style sauce.</li>\n<li><strong>Serradura</strong> — Layered cream and biscuit \"sawdust\" pudding.</li>\n<li><strong>Almond cookies and egg rolls</strong> — The classic gifts from Rua do Cunha and the streets near St. Paul's.</li>\n</ul>\n<p><strong>For Indian travellers:</strong> Vegetarians should try the Buddhist vegetarian meals at temples and look for vegetable dim sum. Macau and Hong Kong both have Indian restaurants, and the big Cotai resorts have international food courts.</p>"
+    },
+    {
+      "id": "best-time",
+      "title": "Best Time to Visit Macau",
+      "html": "<p><strong>Autumn (October–December):</strong> the best time, with dry, sunny, comfortable weather.</p>\n<p><strong>Spring (March–April):</strong> mild but sometimes misty.</p>\n<p><strong>Summer (May–September):</strong> hot and humid, with typhoons possible; most attractions are indoors, so it still works.</p>\n<p><strong>Winter (January–February):</strong> cool; Lunar New Year brings decorations and big crowds.</p>"
+    },
+    {
+      "id": "getting-around",
+      "title": "Getting Around Macau",
+      "html": "<p><strong>Getting there from India:</strong> the easiest route is to fly to Hong Kong and take the <strong>TurboJET ferry</strong> (about 1 hour) or a shuttle bus over the <strong>Hong Kong–Zhuhai–Macau Bridge</strong> (about 45 minutes). Macau International Airport also has connections from Southeast Asian hubs.</p>\n<p><strong>Around Macau:</strong> it's small and walkable. Public buses are cheap; many hotels run <strong>free shuttle buses</strong> between the ferry terminals, the border and Cotai. The Light Rail links Taipa and Cotai.</p>\n<p><strong>Taxis:</strong> metered and reasonably priced, but scarce at peak times; carry your hotel name in Chinese.</p>"
+    },
+    {
+      "id": "essentials",
+      "title": "Travel Essentials",
+      "html": "<p><strong>Entry for Indians:</strong> Indian passport holders can usually visit Macau <strong>visa-free for up to 30 days</strong> with a passport valid for at least 6 months. If you travel through Hong Kong, you also need Hong Kong's free <strong>pre-arrival registration</strong> for Indians before you fly. Rules as of October 2026; always check the official website before you travel.</p>\n<p><strong>Money:</strong> Macanese pataca (MOP). 1 MOP is about ₹10.6. Hong Kong dollars are widely accepted at roughly the same value (change is often given in MOP). Cards work in hotels and malls; carry cash for snack shops.</p>\n<p><strong>Daily budget (per person):</strong> a mid-range hotel share, food, transport and sightseeing come to about <strong>MOP 1,000–1,600 a day</strong>; hotel prices jump at weekends.</p>\n<p><strong>SIM card:</strong> CTM and other operators sell tourist SIMs; a Hong Kong–Macau combo eSIM is easiest if you visit both.</p>\n<p><strong>Plugs:</strong> type G (UK three-pin), 220V. Bring an adapter for Indian plugs.</p>\n<p><strong>Etiquette and safety:</strong> Macau is very safe. Casinos have a minimum age of 21, and photography is not allowed on gaming floors.</p>"
+    }
+  ],
+  "related": [
+    "hong-kong",
+    "taiwan",
+    "singapore",
+    "vietnam"
+  ],
+  "readNext": [],
+  "filmed": false
+}

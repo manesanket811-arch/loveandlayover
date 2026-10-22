@@ -126,6 +126,31 @@
       "name": "El Nido island-hopping tours",
       "blurb": "Compare Tours A to D for the lagoons and beaches around El Nido.",
       "url": "https://www.klook.com/destination/c365356-el-nido/"
+    },
+    "kh-angkor": {
+      "name": "Angkor Wat sunrise tour",
+      "blurb": "Guided sunrise at Angkor Wat, then Bayon and Ta Prohm. The Angkor Pass is usually extra.",
+      "url": "https://www.klook.com/activity/20738-angkor-wat-sunrise-tour-siem-reap/"
+    },
+    "tw-101": {
+      "name": "Taipei 101 Observatory",
+      "blurb": "Tickets for the 89th-floor observatory, with fast-track and 101st-floor options.",
+      "url": "https://www.klook.com/activity/1659-taipei-101-taipei/"
+    },
+    "qa-desert": {
+      "name": "Doha desert safari & Inland Sea",
+      "blurb": "Dune bashing, a camel ride and the spot where the dunes meet the sea at Khor Al Udaid.",
+      "url": "https://www.klook.com/activity/6534-desert-safari-day-tour-doha/"
+    },
+    "ge-kazbegi": {
+      "name": "Kazbegi, Gudauri & Ananuri day trip",
+      "blurb": "Day tour from Tbilisi along the Georgian Military Road to Gergeti Trinity Church.",
+      "url": "https://www.klook.com/activity/29507-day-trip-to-kazbegi-gudauri-gergeti-and-ananuri/"
+    },
+    "mo-tower": {
+      "name": "Macau Tower observation deck",
+      "blurb": "Views from levels 58 and 61; the bungy jump is booked separately.",
+      "url": "https://www.klook.com/activity/506-macau-tower-macau/"
     }
   },
   "guides": {
@@ -179,6 +204,23 @@
     ],
     "philippines": [
       "ph-elnido"
+    ],
+    "cambodia": [
+      "kh-angkor"
+    ],
+    "taiwan": [
+      "tw-101"
+    ],
+    "qatar": [
+      "qa-desert"
+    ],
+    "georgia": [
+      "ge-kazbegi"
+    ],
+    "macau": [
+      "mo-tower",
+      "hk-ngongping",
+      "hk-pass"
     ]
   },
   "posts": {

@@ -1,0 +1,202 @@
+{
+  "slug": "oman",
+  "title": "Oman Travel Guide 2026: 3, 5 & 7-Day Itineraries",
+  "description": "Oman in 3, 5 or 7 days: Muscat's Grand Mosque, Wadi Shab, Ras al Jinz turtles, Wahiba Sands and Nizwa, with an OMR budget and e-visa tips.",
+  "h1": "Oman Travel Guide 2026",
+  "country": "Oman",
+  "datePublished": "2026-10-22",
+  "dateModified": "2026-10-22",
+  "faq": [],
+  "badges": {
+    "budget": "OMR 40–70/day",
+    "best": "Oct–Mar",
+    "visa": "e-Visa (online)"
+  },
+  "videoKeywords": "oman,muscat,wadi,nizwa",
+  "foodImage": {
+    "src": "/images/destinations/oman-food.webp",
+    "alt": "A shared platter of Omani rice with grilled meat",
+    "caption": "A shared platter of Omani rice with grilled meat"
+  },
+  "sections": [
+    {
+      "id": "why-visit",
+      "title": "Why Visit Oman?",
+      "html": "<p><strong>Oman</strong> is Arabia at its most natural: turquoise wadis you can swim in, golden dunes, mountain villages, forts and sea turtles, with a calm, friendly feel. Muscat is only 2½–3½ hours from most Indian cities, and Oman has a large, long-standing Indian community, with Hindu temples and Indian food everywhere.</p>\n<p>A first trip combines <strong>Muscat</strong> with a coastal road trip to <strong>Wadi Shab</strong> and the turtles at <strong>Ras al Jinz</strong>, a night in the <strong>Wahiba Sands</strong> desert and the old fort town of <strong>Nizwa</strong>.</p>"
+    },
+    {
+      "id": "itineraries",
+      "title": "Oman Itineraries: 3, 5 or 7 Days",
+      "html": "<p>Pick 3, 5 or 7 days. Each longer plan builds on the shorter one: the first days stay the same and the extra days add more places. Costs are approximate per person per day; prices and timings change, so check before you book.</p>",
+      "after": "",
+      "plans": [
+        3,
+        5,
+        7
+      ],
+      "days": [
+        {
+          "title": "Muttrah Corniche & Souq",
+          "cost": "OMR 35–60/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Arrive in Muscat and check in near Qurum or Muttrah."
+            ],
+            [
+              "Afternoon",
+              "Explore the maze-like <strong>Muttrah Souq</strong> (frankincense, silver, halwa) and see Al Alam Palace from outside."
+            ],
+            [
+              "Evening",
+              "Walk the <strong>Muttrah Corniche</strong> at sunset, with dhows in the harbour and forts on the hills."
+            ]
+          ]
+        },
+        {
+          "title": "Grand Mosque & Royal Opera House",
+          "cost": "OMR 35–60/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Visit the <strong>Sultan Qaboos Grand Mosque</strong> (non-Muslim visiting hours are usually Saturday to Thursday mornings; dress modestly, women cover their hair)."
+            ],
+            [
+              "Afternoon",
+              "Tour the <strong>Royal Opera House</strong>, then the Bait Al Zubair museum."
+            ],
+            [
+              "Evening",
+              "Relax at Qurum beach or dine at the Opera Galleria."
+            ]
+          ]
+        },
+        {
+          "title": "Bimmah Sinkhole & Wadi Shab",
+          "cost": "OMR 40–70/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Drive the coast road to the turquoise <strong>Bimmah Sinkhole</strong> for a swim."
+            ],
+            [
+              "Afternoon",
+              "Hike and swim through <strong>Wadi Shab</strong>, ending at a hidden waterfall cave (wear water shoes)."
+            ],
+            [
+              "Evening",
+              "On a 3-day trip return to Muscat; on longer trips continue to Sur and see turtles nesting at <strong>Ras al Jinz</strong> (book the guided night visit)."
+            ]
+          ]
+        },
+        {
+          "title": "Wadi Bani Khalid & Wahiba Sands",
+          "cost": "OMR 50–90/day (incl. desert camp)",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Swim in the green pools of <strong>Wadi Bani Khalid</strong>."
+            ],
+            [
+              "Afternoon",
+              "Drive into the <strong>Wahiba Sands</strong> with a 4×4 for dune bashing and a camel ride."
+            ],
+            [
+              "Evening",
+              "Sunset on the dunes and a night under the stars at a desert camp."
+            ]
+          ]
+        },
+        {
+          "title": "Nizwa Fort & souq",
+          "cost": "OMR 40–70/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Visit <strong>Nizwa Fort</strong> and its round tower (Friday mornings bring the famous goat market)."
+            ],
+            [
+              "Afternoon",
+              "Browse the souq for pottery and dates, then see the abandoned mud-brick village of Birkat Al Mouz."
+            ],
+            [
+              "Evening",
+              "Stay in Nizwa or a heritage guesthouse."
+            ]
+          ]
+        },
+        {
+          "title": "Jebel Akhdar or Jebel Shams",
+          "cost": "OMR 45–80/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Drive up the <strong>Jebel Akhdar</strong> (\"green mountain\"; a 4×4 is required at the checkpoint) to terraced villages and rose gardens."
+            ],
+            [
+              "Afternoon",
+              "Or go to <strong>Jebel Shams</strong> to see \"Oman's Grand Canyon\" and walk the Balcony Walk."
+            ],
+            [
+              "Evening",
+              "Cool mountain evening, then head back towards Muscat."
+            ]
+          ]
+        },
+        {
+          "title": "Muscat & departure",
+          "cost": "OMR 30–55/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Visit a Muscat beach or the <strong>Shri Shiva (Motishwar) temple</strong>, one of the oldest Hindu temples in the region."
+            ],
+            [
+              "Afternoon",
+              "Final shopping for frankincense, halwa and dates."
+            ],
+            [
+              "Evening",
+              "Fly home from Muscat."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "title": "Food to Try in Oman",
+      "html": "<ul>\n<li><strong>Shuwa</strong> — Lamb or goat marinated in spices and slow-cooked underground for a day or more, a festival dish.</li>\n<li><strong>Majboos</strong> — Spiced rice with meat or fish, similar to biryani.</li>\n<li><strong>Omani halwa</strong> — Rich, sticky sweet made with sugar, ghee, rose water and saffron.</li>\n<li><strong>Kahwa and dates</strong> — Cardamom-spiced coffee served with dates: the symbol of Omani hospitality.</li>\n<li><strong>Mishkak</strong> — Grilled meat skewers from street stalls.</li>\n<li><strong>Fresh seafood</strong> — Kingfish, lobster and tuna along the coast.</li>\n</ul>\n<p><strong>For Indian travellers:</strong> Indian food is everywhere in Oman, with Kerala, Gujarati and North Indian restaurants in every town, so vegetarian meals are easy.</p>"
+    },
+    {
+      "id": "best-time",
+      "title": "Best Time to Visit Oman",
+      "html": "<p><strong>October–March:</strong> the best time, with warm days of 25–30°C, ideal for wadis, desert camps and road trips.</p>\n<p><strong>April–May and September:</strong> hot; swim in wadis early in the day.</p>\n<p><strong>Summer (June–August):</strong> very hot in Muscat and the interior. The exception is <strong>Salalah</strong> in the south, which turns green during the khareef monsoon (July–September) and is popular with Gulf visitors.</p>"
+    },
+    {
+      "id": "getting-around",
+      "title": "Getting Around Oman",
+      "html": "<p><strong>Flights from India:</strong> direct flights link Muscat with many Indian cities, taking about 2½–3½ hours.</p>\n<p><strong>Road trips:</strong> renting a car is the best way to see Oman. Roads are excellent and signs are in English. You need an International Driving Permit with your Indian licence; rent a 4×4 for the desert and Jebel Akhdar.</p>\n<p><strong>In Muscat:</strong> use taxis or ride apps (Otaxi, OmanTaxi). Buses are limited.</p>\n<p><strong>Tours:</strong> day tours cover Wadi Shab, the desert and Nizwa if you don't want to drive.</p>"
+    },
+    {
+      "id": "essentials",
+      "title": "Travel Essentials",
+      "html": "<p><strong>Entry for Indians:</strong> Indians need a visa: apply for the <strong>e-visa</strong> only on the official Royal Oman Police portal (evisa.rop.gov.om) before travelling. Indians holding certain valid foreign visas or residence permits (such as from the US, UK, Schengen countries, Canada, Australia or Japan) may be able to enter visa-free for short stays. Oman launched a new free 14-day tourist visa in 2026, but India wasn't on the published list at the time of writing. Rules as of October 2026; always check the official website before you travel.</p>\n<p><strong>Money:</strong> Omani rial (OMR), one of the strongest currencies in the world. 1 OMR is about ₹220. Cards work widely; carry cash for villages and souqs.</p>\n<p><strong>Daily budget (per person):</strong> a mid-range hotel share, food, fuel and sightseeing come to about <strong>OMR 40–70 a day</strong>, plus car hire and the desert camp.</p>\n<p><strong>SIM card:</strong> Omantel, Ooredoo and Vodafone Oman sell tourist SIMs at the airport with your passport.</p>\n<p><strong>Plugs:</strong> type G (UK three-pin), 240V. Bring an adapter for Indian plugs.</p>\n<p><strong>Etiquette and safety:</strong> Oman is very safe and polite. Dress modestly away from the beach, ask before photographing people, and never enter wadis when rain or flash floods are forecast.</p>"
+    }
+  ],
+  "related": [
+    "dubai",
+    "qatar",
+    "sri-lanka",
+    "maldives"
+  ],
+  "readNext": [],
+  "filmed": false
+}

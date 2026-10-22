@@ -1,0 +1,202 @@
+{
+  "slug": "taiwan",
+  "title": "Taiwan Travel Guide 2026: 3, 5 & 7-Day Itineraries",
+  "description": "Taiwan in 3, 5 or 7 days: Taipei 101, night markets, Jiufen, Shifen lanterns, hot springs and Sun Moon Lake, with an NT$ budget and visa tips.",
+  "h1": "Taiwan Travel Guide 2026",
+  "country": "Taiwan",
+  "datePublished": "2026-10-22",
+  "dateModified": "2026-10-22",
+  "faq": [],
+  "badges": {
+    "budget": "NT$3,000–5,000/day",
+    "best": "Oct–Dec, Mar–Apr",
+    "visa": "Visa needed (free TAC with some visas)"
+  },
+  "videoKeywords": "taiwan,taipei,jiufen,sun moon lake",
+  "foodImage": {
+    "src": "/images/destinations/taiwan-food.webp",
+    "alt": "Taiwanese beef noodle soup at a Taipei noodle shop",
+    "caption": "Taiwanese beef noodle soup at a Taipei noodle shop"
+  },
+  "sections": [
+    {
+      "id": "why-visit",
+      "title": "Why Visit Taiwan?",
+      "html": "<p><strong>Taiwan</strong> is one of Asia's most underrated trips: safe, friendly and spotless, with legendary night markets, hot springs, mountain lakes, temples and the skyline of <strong>Taipei 101</strong>. Public transport is excellent, so it's easy for first-timers and families.</p>\n<p>It's also one of the easiest places in East Asia for <strong>vegetarians</strong>, thanks to its many Buddhist vegetarian restaurants. A first trip combines <strong>Taipei</strong> with day trips to <strong>Jiufen</strong> and <strong>Shifen</strong>, plus <strong>Sun Moon Lake</strong> on longer itineraries.</p>"
+    },
+    {
+      "id": "itineraries",
+      "title": "Taiwan Itineraries: 3, 5 or 7 Days",
+      "html": "<p>Pick 3, 5 or 7 days. Each longer plan builds on the shorter one: the first days stay the same and the extra days add more places. Costs are approximate per person per day; prices and timings change, so check before you book.</p>",
+      "after": "",
+      "plans": [
+        3,
+        5,
+        7
+      ],
+      "days": [
+        {
+          "title": "Taipei 101 & Elephant Mountain",
+          "cost": "NT$2,500–4,500/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Arrive at Taoyuan Airport and take the Airport MRT into Taipei (about 40 minutes)."
+            ],
+            [
+              "Afternoon",
+              "Go up <strong>Taipei 101</strong> for views over the city, then explore the Xinyi shopping district."
+            ],
+            [
+              "Evening",
+              "Hike the steps of <strong>Elephant Mountain</strong> for sunset over Taipei 101, then the <strong>Raohe Night Market</strong>."
+            ]
+          ]
+        },
+        {
+          "title": "Temples, Ximending & Shilin",
+          "cost": "NT$2,500–4,500/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Visit <strong>Longshan Temple</strong> and the grand <strong>Chiang Kai-shek Memorial Hall</strong> (watch the changing of the guard)."
+            ],
+            [
+              "Afternoon",
+              "See the treasures of the <strong>National Palace Museum</strong>, or wander lively Ximending."
+            ],
+            [
+              "Evening",
+              "Eat your way around the huge <strong>Shilin Night Market</strong>."
+            ]
+          ]
+        },
+        {
+          "title": "Jiufen, Shifen & the Pingxi line",
+          "cost": "NT$3,000–5,000/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Take a tour or train to <strong>Shifen</strong>: write wishes on a sky lantern by the railway tracks and see Shifen Waterfall."
+            ],
+            [
+              "Afternoon",
+              "Continue to the hillside town of <strong>Jiufen</strong>, with lantern-lit lanes and tea houses overlooking the sea."
+            ],
+            [
+              "Evening",
+              "Stay for the lanterns at dusk, then return to Taipei."
+            ]
+          ]
+        },
+        {
+          "title": "Beitou hot springs & Yangmingshan",
+          "cost": "NT$3,000–5,000/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Visit the <strong>Beitou</strong> hot-spring area: Thermal Valley and the Hot Spring Museum."
+            ],
+            [
+              "Afternoon",
+              "Soak in a public or private hot-spring bath, or hike in <strong>Yangmingshan National Park</strong>."
+            ],
+            [
+              "Evening",
+              "Sunset at Tamsui by the river, with its old fort and street snacks."
+            ]
+          ]
+        },
+        {
+          "title": "High-speed rail to Sun Moon Lake",
+          "cost": "NT$3,500–6,000/day (incl. travel)",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Take the <strong>High Speed Rail</strong> to Taichung (under an hour), then a bus to <strong>Sun Moon Lake</strong>."
+            ],
+            [
+              "Afternoon",
+              "Cruise across the lake by boat and visit the Wenwu Temple."
+            ],
+            [
+              "Evening",
+              "Quiet lakeside evening; stay overnight at the lake."
+            ]
+          ]
+        },
+        {
+          "title": "Sun Moon Lake & Taichung",
+          "cost": "NT$3,000–5,000/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Cycle part of the lakeside path or ride the <strong>ropeway</strong> for views."
+            ],
+            [
+              "Afternoon",
+              "Head back to <strong>Taichung</strong> and see the colourful Rainbow Village."
+            ],
+            [
+              "Evening",
+              "Dinner at the <strong>Fengjia Night Market</strong>, one of Taiwan's biggest."
+            ]
+          ]
+        },
+        {
+          "title": "Back to Taipei & departure",
+          "cost": "NT$2,500–4,500/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "High Speed Rail back to Taipei or straight to Taoyuan Airport."
+            ],
+            [
+              "Afternoon",
+              "Last shopping for pineapple cakes, tea and bubble tea kits."
+            ],
+            [
+              "Evening",
+              "Fly home, usually connecting through a Southeast Asian hub or Hong Kong."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "title": "Food to Try in Taiwan",
+      "html": "<ul>\n<li><strong>Beef noodle soup</strong> — Taiwan's comfort dish: braised beef in a rich broth with chewy noodles.</li>\n<li><strong>Xiaolongbao</strong> — Soup dumplings; most dumpling restaurants have vegetable and mushroom versions.</li>\n<li><strong>Bubble tea</strong> — Invented in Taiwan: milk tea with chewy tapioca pearls.</li>\n<li><strong>Scallion pancake</strong> — Flaky, crispy street snack that's usually vegetarian.</li>\n<li><strong>Stinky tofu</strong> — Fermented tofu, fried or in a spicy broth: love it or hate it.</li>\n<li><strong>Mango shaved ice and pineapple cake</strong> — The best dessert in summer, and the classic gift to take home.</li>\n</ul>\n<p><strong>For Indian travellers:</strong> Look for the character 素 (su), which means vegetarian. Taiwan has thousands of Buddhist vegetarian restaurants and buffets, many with no onion or garlic, which suits Jain travellers too. Taipei also has Indian restaurants.</p>"
+    },
+    {
+      "id": "best-time",
+      "title": "Best Time to Visit Taiwan",
+      "html": "<p><strong>Autumn (October–December):</strong> the best time, with comfortable temperatures and clear skies.</p>\n<p><strong>Spring (March–April):</strong> pleasant weather and cherry and plum blossoms in the mountains.</p>\n<p><strong>Plum rain (May–June):</strong> frequent showers.</p>\n<p><strong>Summer (July–September):</strong> hot and humid, with typhoons possible; keep plans flexible.</p>\n<p><strong>Winter (January–February):</strong> cool and damp in Taipei, but good for hot springs; Lunar New Year makes trains busy.</p>"
+    },
+    {
+      "id": "getting-around",
+      "title": "Getting Around Taiwan",
+      "html": "<p><strong>Flights from India:</strong> most trips connect through Bangkok, Singapore, Kuala Lumpur or Hong Kong; new direct flights from India have been announced, so check current routes.</p>\n<p><strong>In Taipei:</strong> the MRT is clean, cheap and easy. Get an <strong>EasyCard</strong> for the metro, buses, trains and convenience stores.</p>\n<p><strong>Around the island:</strong> the <strong>High Speed Rail</strong> runs from Taipei to Kaohsiung in about 1½ hours; regular trains reach the east coast. Buses connect to Sun Moon Lake.</p>\n<p><strong>Taxis:</strong> plentiful and metered; Uber also works in big cities.</p>"
+    },
+    {
+      "id": "essentials",
+      "title": "Travel Essentials",
+      "html": "<p><strong>Entry for Indians:</strong> Indians need permission to visit. If you hold a <strong>valid</strong> visa or residence permit from the US, UK, Canada, Australia, New Zealand, Japan, South Korea or a Schengen country, you can usually apply online for a free <strong>Travel Authorization Certificate</strong> for short stays. Otherwise apply for a visitor visa through the <strong>Taipei Economic and Cultural Center (TECC)</strong> in India. Rules as of October 2026; always check the official website before you travel.</p>\n<p><strong>Money:</strong> New Taiwan dollar (NT$, TWD). NT$100 is about ₹270. Cards work in most hotels and malls; night markets and small eateries are often cash only.</p>\n<p><strong>Daily budget (per person):</strong> a mid-range hotel share, food, transport and sightseeing come to about <strong>NT$3,000–5,000 a day</strong>, plus the High Speed Rail.</p>\n<p><strong>SIM card:</strong> Chunghwa Telecom, Taiwan Mobile and FarEasTone sell tourist SIMs at the airport with your passport.</p>\n<p><strong>Plugs:</strong> types A and B (flat pins), <strong>110V</strong>. Indian plugs won't fit: bring an adapter, and check that your chargers support 110V (most phone and laptop chargers do).</p>\n<p><strong>Etiquette and safety:</strong> Taiwan is one of the safest places in Asia. Queue neatly, keep quiet on the MRT (no eating or drinking), and remove shoes in homes and some temples. Taroko Gorge was damaged by a 2024 earthquake, so check which trails are open.</p>"
+    }
+  ],
+  "related": [
+    "japan",
+    "hong-kong",
+    "south-korea",
+    "macau"
+  ],
+  "readNext": [],
+  "filmed": false
+}

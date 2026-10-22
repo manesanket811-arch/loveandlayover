@@ -65,6 +65,24 @@ const PHOTOS = {
   'turkey-food': 'A plate of sultan kebab',
   'universal-studios-singapore-hero': 'The Universal Studios globe on Sentosa, Singapore',
   'vietnam-hero': 'Limestone islands in Ha Long Bay, Vietnam',
+  'azerbaijan-hero': 'The Flame Towers above Baku, Azerbaijan',
+  'azerbaijan-food': 'Azerbaijani plov, the saffron rice dish served at celebrations',
+  'georgia-hero': 'Gergeti Trinity Church on a green hill below the Caucasus, Georgia',
+  'georgia-food': "Khachapuri, Georgia's cheese-filled bread",
+  'kazakhstan-hero': 'Charyn Canyon, Kazakhstan',
+  'kazakhstan-food': 'Baursak, fried dough puffs served with tea in Kazakhstan',
+  'uzbekistan-hero': 'A tiled madrasa on the Registan in Samarkand, Uzbekistan',
+  'uzbekistan-food': 'Uzbek samsa, flaky pastries baked in a tandoor',
+  'cambodia-hero': 'Angkor Wat reflected in a lotus pond, Cambodia',
+  'cambodia-food': "Fish amok, Cambodia's coconut curry steamed in banana leaf",
+  'taiwan-hero': 'Taipei 101 rising above the Taipei skyline, Taiwan',
+  'taiwan-food': 'Taiwanese beef noodle soup at a Taipei noodle shop',
+  'qatar-hero': 'The West Bay skyline of Doha at night, Qatar',
+  'qatar-food': 'Machboos, the spiced rice dish of the Gulf',
+  'oman-food': 'A shared platter of Omani rice with grilled meat',
+  'oman-hero': 'Nizwa Fort and the minaret of the Friday Mosque, Oman',
+  'macau-hero': "The Ruins of St. Paul's, Macau",
+  'macau-food': "Portuguese egg tarts, Macau's most famous snack",
 };
 
 const FLAGS = {
@@ -72,6 +90,7 @@ const FLAGS = {
   in: 'India', tr: 'Turkey', it: 'Italy', gr: 'Greece', fr: 'France', es: 'Spain', pt: 'Portugal', de: 'Germany',
   is: 'Iceland', mx: 'Mexico', pe: 'Peru', eg: 'Egypt', au: 'Australia', lk: 'Sri Lanka', mv: 'Maldives',
   ae: 'United Arab Emirates', np: 'Nepal', bt: 'Bhutan', hk: 'Hong Kong', ph: 'Philippines',
+  az: 'Azerbaijan', ge: 'Georgia', kz: 'Kazakhstan', uz: 'Uzbekistan', kh: 'Cambodia', tw: 'Taiwan', qa: 'Qatar', om: 'Oman', mo: 'Macau',
 };
 
 const OTHER = {

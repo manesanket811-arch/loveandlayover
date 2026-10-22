@@ -163,7 +163,7 @@ ${header('destinations')}
 
 <section class="wrap tf">
   <div class="tf-card" id="tf" aria-live="polite">
-    <noscript><p>The quiz needs JavaScript. Browse all <a href="/destinations/">28 destination guides</a> instead.</p></noscript>
+    <noscript><p>The quiz needs JavaScript. Browse all <a href="/destinations/">37 destination guides</a> instead.</p></noscript>
   </div>
 </section>
 </main>

@@ -1,0 +1,202 @@
+{
+  "slug": "georgia",
+  "title": "Georgia Travel Guide 2026: 3, 5 & 7-Day Itineraries",
+  "description": "Georgia in 3, 5 or 7 days: Tbilisi, Mtskheta, Kazbegi, Kakheti wine country and Batumi, with a GEL budget and e-visa rules for Indians.",
+  "h1": "Georgia Travel Guide 2026",
+  "country": "Georgia",
+  "datePublished": "2026-10-22",
+  "dateModified": "2026-10-22",
+  "faq": [],
+  "badges": {
+    "budget": "GEL 150–250/day",
+    "best": "May–Jun, Sep–Oct",
+    "visa": "e-Visa, or visa-free with a US/UK/Schengen visa"
+  },
+  "videoKeywords": "georgia,tbilisi,kazbegi,batumi",
+  "foodImage": {
+    "src": "/images/destinations/georgia-food.webp",
+    "alt": "Khachapuri, Georgia's cheese-filled bread",
+    "caption": "Khachapuri, Georgia's cheese-filled bread"
+  },
+  "sections": [
+    {
+      "id": "why-visit",
+      "title": "Why Visit Georgia?",
+      "html": "<p><strong>Georgia</strong> packs snowy Caucasus peaks, hilltop monasteries, 8,000 years of winemaking and one of the friendliest food cultures in the world into a small, affordable country. Direct flights from Delhi take about five hours, and many Indian couples now pick it over Europe for honeymoons and snow trips.</p>\n<p>Most first trips combine the old streets and sulphur baths of <strong>Tbilisi</strong>, the mountain views around <strong>Kazbegi</strong> and <strong>Gudauri</strong>, and the wine villages of <strong>Kakheti</strong>, with the Black Sea resort of <strong>Batumi</strong> on longer trips.</p>"
+    },
+    {
+      "id": "itineraries",
+      "title": "Georgia Itineraries: 3, 5 or 7 Days",
+      "html": "<p>Pick 3, 5 or 7 days. Each longer plan builds on the shorter one: the first days stay the same and the extra days add more places. Costs are approximate per person per day; prices and timings change, so check before you book.</p>",
+      "after": "",
+      "plans": [
+        3,
+        5,
+        7
+      ],
+      "days": [
+        {
+          "title": "Tbilisi Old Town & Narikala",
+          "cost": "GEL 130–220/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Arrive and check in around the Old Town or Rustaveli Avenue."
+            ],
+            [
+              "Afternoon",
+              "Ride the cable car up to <strong>Narikala Fortress</strong> and the Mother of Georgia statue, then walk down through the Old Town's wooden balconies."
+            ],
+            [
+              "Evening",
+              "Soak in a private room at the domed <strong>Abanotubani sulphur baths</strong>, then cross the lit-up Peace Bridge."
+            ]
+          ]
+        },
+        {
+          "title": "Mtskheta & Tbilisi's modern side",
+          "cost": "GEL 140–230/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Day trip to <strong>Mtskheta</strong>, the old capital: <strong>Jvari Monastery</strong> on the hilltop and Svetitskhoveli Cathedral (UNESCO)."
+            ],
+            [
+              "Afternoon",
+              "Back in Tbilisi, browse the <strong>Dry Bridge</strong> flea market and walk Rustaveli Avenue."
+            ],
+            [
+              "Evening",
+              "Supper at a supra-style restaurant, or a drink at the Fabrika hostel courtyard."
+            ]
+          ]
+        },
+        {
+          "title": "Kazbegi & the Georgian Military Road",
+          "cost": "GEL 160–260/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Drive north past the <strong>Ananuri Fortress</strong> on its turquoise reservoir."
+            ],
+            [
+              "Afternoon",
+              "Stop at the <strong>Gudauri viewpoint</strong> (Friendship Monument; paragliding in season), then hike or ride a 4×4 to <strong>Gergeti Trinity Church</strong> under Mount Kazbek."
+            ],
+            [
+              "Evening",
+              "Return to Tbilisi, or stay overnight in Stepantsminda for sunrise views."
+            ]
+          ]
+        },
+        {
+          "title": "Kakheti wine country & Sighnaghi",
+          "cost": "GEL 150–250/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Drive about 2 hours east to <strong>Kakheti</strong>, Georgia's wine region."
+            ],
+            [
+              "Afternoon",
+              "Visit a family winery to see wine made in clay <strong>qvevri</strong> jars, then explore hilltop <strong>Sighnaghi</strong>, the \"city of love\", and its town walls."
+            ],
+            [
+              "Evening",
+              "Sunset over the Alazani Valley; return to Tbilisi or stay in Sighnaghi."
+            ]
+          ]
+        },
+        {
+          "title": "Uplistsikhe & Tbilisi's neighbourhoods",
+          "cost": "GEL 130–220/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Visit the ancient cave town of <strong>Uplistsikhe</strong> near Gori."
+            ],
+            [
+              "Afternoon",
+              "Explore <strong>Fabrika</strong> and the Sololaki district's painted entrance halls, or the Georgian National Museum."
+            ],
+            [
+              "Evening",
+              "Ride the funicular up <strong>Mtatsminda Park</strong> for night views over the city."
+            ]
+          ]
+        },
+        {
+          "title": "Train to Batumi on the Black Sea",
+          "cost": "GEL 150–240/day (incl. travel)",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Take the morning train from Tbilisi to <strong>Batumi</strong> (about 5 hours)."
+            ],
+            [
+              "Afternoon",
+              "Walk the seaside boulevard and see the moving <strong>Ali and Nino</strong> statue."
+            ],
+            [
+              "Evening",
+              "Dinner by the Alphabetic Tower and the dancing fountains."
+            ]
+          ]
+        },
+        {
+          "title": "Batumi & departure",
+          "cost": "GEL 120–200/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Visit the <strong>Batumi Botanical Garden</strong> above the sea."
+            ],
+            [
+              "Afternoon",
+              "Take the Argo cable car for views, then a last Adjarian khachapuri."
+            ],
+            [
+              "Evening",
+              "Fly out from Batumi, or take the train back to Tbilisi for your flight."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "title": "Food to Try in Georgia",
+      "html": "<ul>\n<li><strong>Khachapuri</strong> — Cheese-filled bread; the boat-shaped <em>Adjarian</em> version comes with butter and an egg in the middle.</li>\n<li><strong>Khinkali</strong> — Big twisted dumplings; eat them by hand and sip the broth first. Mushroom, potato and cheese fillings are vegetarian.</li>\n<li><strong>Badrijani nigvzit</strong> — Fried aubergine rolls filled with spiced walnut paste: vegetarian and delicious.</li>\n<li><strong>Lobio</strong> — Spiced red bean stew baked in a clay pot, often with cornbread (mchadi).</li>\n<li><strong>Pkhali</strong> — Minced spinach, beetroot or beans with walnuts and herbs.</li>\n<li><strong>Churchkhela</strong> — Walnuts dipped in thickened grape juice: the classic road-trip snack.</li>\n</ul>\n<p><strong>For Indian travellers:</strong> Georgia is easy for vegetarians thanks to its many walnut, bean and vegetable dishes (Orthodox fasting food). Tbilisi and Batumi have Indian restaurants too.</p>"
+    },
+    {
+      "id": "best-time",
+      "title": "Best Time to Visit Georgia",
+      "html": "<p><strong>Late spring (May–June):</strong> green valleys, wildflowers and pleasant city weather.</p>\n<p><strong>Autumn (September–October):</strong> the grape harvest (rtveli) in Kakheti and golden mountains: our favourite time.</p>\n<p><strong>Summer (July–August):</strong> hot in Tbilisi, ideal in the mountains and on the Black Sea.</p>\n<p><strong>Winter (December–March):</strong> snow and skiing at <strong>Gudauri</strong>, popular with Indian travellers; the Kazbegi road can close in heavy snow.</p>"
+    },
+    {
+      "id": "getting-around",
+      "title": "Getting Around Georgia",
+      "html": "<p><strong>Flights from India:</strong> direct flights from Delhi take about 5 hours; from other cities, connect through the Gulf or Istanbul. Check current routes when you book.</p>\n<p><strong>In Tbilisi:</strong> the metro and buses are cheap with a Metromoney card or a contactless bank card. Bolt and Yandex Go taxis are inexpensive.</p>\n<p><strong>Day trips:</strong> shared tours and private drivers cover Kazbegi, Kakheti and Mtskheta. Minibuses (marshrutkas) are cheapest but less comfortable.</p>\n<p><strong>Tbilisi–Batumi:</strong> comfortable trains take about 5 hours; book a day or two ahead in summer.</p>"
+    },
+    {
+      "id": "essentials",
+      "title": "Travel Essentials",
+      "html": "<p><strong>Entry for Indians:</strong> Indians holding a <strong>valid</strong> visa or residence permit from the US, UK, a Schengen country and some other countries can usually enter Georgia visa-free; check the current list. Everyone else needs the <strong>e-visa</strong> from the official portal (evisa.gov.ge), which takes about a week; there's no visa on arrival. New 2026 rules have been reported on mandatory travel insurance. Rules as of October 2026; always check the official website before you travel.</p>\n<p><strong>Money:</strong> Georgian lari (GEL). 1 GEL is about ₹31. Cards work widely in Tbilisi and Batumi; carry some cash for villages and markets.</p>\n<p><strong>Daily budget (per person):</strong> a mid-range hotel share, food, local transport and sightseeing come to about <strong>GEL 150–250 a day</strong>, plus day tours.</p>\n<p><strong>SIM card:</strong> Magti, Silknet and Cellfie sell tourist SIMs at the airport and in town with your passport.</p>\n<p><strong>Plugs:</strong> types C and F, 220V. Indian two-pin plugs usually fit; bring an adapter for three-pin chargers.</p>\n<p><strong>Etiquette and safety:</strong> Georgia is very safe and welcoming. Cover shoulders and knees in churches (women usually cover their hair; scarves are often provided). Don't try to visit the breakaway regions of Abkhazia or South Ossetia.</p>"
+    }
+  ],
+  "related": [
+    "azerbaijan",
+    "turkey",
+    "kazakhstan",
+    "uzbekistan"
+  ],
+  "readNext": [],
+  "filmed": false
+}

@@ -1,0 +1,202 @@
+{
+  "slug": "qatar",
+  "title": "Qatar Travel Guide 2026: 3, 5 & 7-Day Itineraries",
+  "description": "Qatar in 3, 5 or 7 days: Doha's Corniche, Museum of Islamic Art, Souq Waqif, a desert safari to the Inland Sea and Zubarah, with a QAR budget.",
+  "h1": "Qatar Travel Guide 2026",
+  "country": "Qatar",
+  "datePublished": "2026-10-22",
+  "dateModified": "2026-10-22",
+  "faq": [],
+  "badges": {
+    "budget": "QAR 400–700/day",
+    "best": "Nov–Mar",
+    "visa": "Visa-free up to 30 days"
+  },
+  "videoKeywords": "qatar,doha,souq waqif,desert",
+  "foodImage": {
+    "src": "/images/destinations/qatar-food.webp",
+    "alt": "Machboos, the spiced rice dish of the Gulf",
+    "caption": "Machboos, the spiced rice dish of the Gulf"
+  },
+  "sections": [
+    {
+      "id": "why-visit",
+      "title": "Why Visit Qatar?",
+      "html": "<p><strong>Qatar</strong> makes a perfect short break or stopover from India: a dramatic skyline on the Corniche, world-class museums, a traditional souq, and a desert where dunes roll straight into the sea. Flights take about 3½–4½ hours from most Indian cities, and Indians can visit <strong>visa-free</strong> for short stays.</p>\n<p>It's calmer and more compact than Dubai. Spend most of your time in <strong>Doha</strong>, with a day in the desert at <strong>Khor Al Udaid</strong> (the Inland Sea) and longer trips adding the north coast and <strong>Al Zubarah</strong>, a UNESCO site.</p>"
+    },
+    {
+      "id": "itineraries",
+      "title": "Qatar Itineraries: 3, 5 or 7 Days",
+      "html": "<p>Pick 3, 5 or 7 days. Each longer plan builds on the shorter one: the first days stay the same and the extra days add more places. Costs are approximate per person per day; prices and timings change, so check before you book.</p>",
+      "after": "",
+      "plans": [
+        3,
+        5,
+        7
+      ],
+      "days": [
+        {
+          "title": "Corniche & Museum of Islamic Art",
+          "cost": "QAR 350–600/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Arrive at Hamad International Airport and take the metro into Doha."
+            ],
+            [
+              "Afternoon",
+              "Visit the <strong>Museum of Islamic Art</strong> (designed by I. M. Pei) and its park with skyline views."
+            ],
+            [
+              "Evening",
+              "Wander <strong>Souq Waqif</strong>: spices, perfumes, the falcon souq and dinner in the lanes."
+            ]
+          ]
+        },
+        {
+          "title": "National Museum & The Pearl",
+          "cost": "QAR 400–650/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "See the <strong>National Museum of Qatar</strong>, shaped like a desert rose."
+            ],
+            [
+              "Afternoon",
+              "Walk the restored <strong>Msheireb</strong> downtown, then the waterfront <strong>Corniche</strong>; take a traditional dhow ride at sunset."
+            ],
+            [
+              "Evening",
+              "Evening at <strong>The Pearl</strong> and the colourful Qanat Quartier."
+            ]
+          ]
+        },
+        {
+          "title": "Desert safari & the Inland Sea",
+          "cost": "QAR 450–750/day (incl. safari)",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Join a 4×4 <strong>desert safari</strong> south of Doha with dune bashing at Sealine."
+            ],
+            [
+              "Afternoon",
+              "Reach <strong>Khor Al Udaid</strong>, where the dunes meet the sea, a UNESCO-listed nature reserve. Try sandboarding or a camel ride."
+            ],
+            [
+              "Evening",
+              "Return to Doha, or stay at a desert camp."
+            ]
+          ]
+        },
+        {
+          "title": "Katara & Lusail",
+          "cost": "QAR 400–650/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Explore <strong>Katara Cultural Village</strong>: the amphitheatre, mosques and beach."
+            ],
+            [
+              "Afternoon",
+              "Visit <strong>Lusail</strong>: the World Cup stadium area and the Place Vendôme mall."
+            ],
+            [
+              "Evening",
+              "Evening on <strong>Lusail Boulevard</strong> or Lusail Marina."
+            ]
+          ]
+        },
+        {
+          "title": "Al Zubarah & the north",
+          "cost": "QAR 400–650/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Drive north to the <strong>Al Zubarah Fort</strong> and archaeological site (UNESCO)."
+            ],
+            [
+              "Afternoon",
+              "Kayak through the <strong>Al Thakira mangroves</strong>."
+            ],
+            [
+              "Evening",
+              "Seafood or Kerala dinner back in Doha."
+            ]
+          ]
+        },
+        {
+          "title": "Beach or museum day",
+          "cost": "QAR 400–700/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Relax at a beach club or on a day trip to Banana Island Resort."
+            ],
+            [
+              "Afternoon",
+              "Or visit the <strong>3-2-1 Qatar Olympic and Sports Museum</strong> and Doha's malls."
+            ],
+            [
+              "Evening",
+              "Final evening at Souq Waqif with karak chai."
+            ]
+          ]
+        },
+        {
+          "title": "Shopping & departure",
+          "cost": "QAR 300–550/day",
+          "note": "",
+          "periods": [
+            [
+              "Morning",
+              "Shop for dates, oud and spices at the souq."
+            ],
+            [
+              "Afternoon",
+              "See the giant <strong>Lamp Bear</strong> statue and the indoor garden at Hamad Airport before your flight."
+            ],
+            [
+              "Evening",
+              "Fly home: direct flights reach most Indian metros in 3½–4½ hours."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "title": "Food to Try in Qatar",
+      "html": "<ul>\n<li><strong>Machboos</strong> — Spiced rice with chicken, lamb or fish, the national dish.</li>\n<li><strong>Harees</strong> — Slow-cooked wheat and meat porridge, popular during Ramadan.</li>\n<li><strong>Luqaimat</strong> — Crispy dumplings with date syrup.</li>\n<li><strong>Balaleet</strong> — Sweet saffron vermicelli topped with an omelette, eaten at breakfast.</li>\n<li><strong>Karak chai</strong> — Strong, sweet spiced tea, a favourite brought from the subcontinent.</li>\n<li><strong>Fresh seafood and mezze</strong> — Grilled hammour, hummus, moutabal and fresh bread.</li>\n</ul>\n<p><strong>For Indian travellers:</strong> Qatar is very easy for Indian travellers: there are hundreds of Indian restaurants (Kerala, North Indian, South Indian and pure-veg) in Doha.</p>"
+    },
+    {
+      "id": "best-time",
+      "title": "Best Time to Visit Qatar",
+      "html": "<p><strong>Winter (November–March):</strong> the best time, with warm, sunny days around 20–28°C, perfect for the desert and outdoor festivals.</p>\n<p><strong>April and October:</strong> getting hot but still manageable in the mornings and evenings.</p>\n<p><strong>Summer (May–September):</strong> extremely hot, often 40–45°C with high humidity; plan indoor sights and visit the desert only at dawn or dusk.</p>\n<p><strong>Ramadan:</strong> dates change each year; eating in public in the daytime is restricted, but evenings are festive.</p>"
+    },
+    {
+      "id": "getting-around",
+      "title": "Getting Around Qatar",
+      "html": "<p><strong>Flights from India:</strong> many direct flights connect Doha with Indian cities, taking about 3½–4½ hours. It's also a popular stopover on the way to Europe.</p>\n<p><strong>In Doha:</strong> the clean, modern <strong>Doha Metro</strong> (Red, Gold and Green lines) is cheap and connects the airport, Souq Waqif, Katara and Lusail. Get a Travel Card.</p>\n<p><strong>Taxis:</strong> Karwa taxis and Uber are easy and fairly priced.</p>\n<p><strong>Desert and north:</strong> book a licensed tour, or rent a car (with an International Driving Permit) for Zubarah and the mangroves.</p>"
+    },
+    {
+      "id": "essentials",
+      "title": "Travel Essentials",
+      "html": "<p><strong>Entry for Indians:</strong> Indian passport holders can usually enter Qatar <strong>visa-free for up to 30 days</strong>. You need a passport valid for at least 6 months, a confirmed return ticket and, in the past, a hotel booking made through the official Discover Qatar website. Requirements such as hotel bookings, insurance and extensions have changed over time, so check the Ministry of Interior and Hayya websites before you travel. Rules as of October 2026; always check the official website before you travel.</p>\n<p><strong>Money:</strong> Qatari riyal (QAR). 1 QAR is about ₹23. Cards are accepted almost everywhere.</p>\n<p><strong>Daily budget (per person):</strong> a mid-range hotel share, food, transport and sightseeing come to about <strong>QAR 400–700 a day</strong>, plus a desert safari.</p>\n<p><strong>SIM card:</strong> Ooredoo and Vodafone Qatar sell tourist SIMs and eSIMs at the airport.</p>\n<p><strong>Plugs:</strong> type G (UK three-pin), 240V. Bring an adapter for Indian plugs.</p>\n<p><strong>Etiquette and safety:</strong> Qatar is very safe. Cover shoulders and knees in souqs, museums and malls, and don't drink alcohol in public (only in licensed hotels). Public displays of affection are frowned upon.</p>"
+    }
+  ],
+  "related": [
+    "dubai",
+    "oman",
+    "turkey",
+    "maldives"
+  ],
+  "readNext": [],
+  "filmed": false
+}

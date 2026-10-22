@@ -875,6 +875,312 @@
       "visa": "full",
       "reach": "long",
       "line": "Machu Picchu, Cusco and the Andes"
+    },
+    "azerbaijan": {
+      "daily": [
+        6000,
+        10000
+      ],
+      "flights": [
+        25000,
+        45000
+      ],
+      "best": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "avoid": [],
+      "vibes": [
+        "city",
+        "culture",
+        "nature"
+      ],
+      "who": [
+        "couple",
+        "friends",
+        "family"
+      ],
+      "visa": "evisa",
+      "reach": "medium",
+      "line": "Baku's Flame Towers and Old City, mud volcanoes and mountain cable cars, Europe-like but closer"
+    },
+    "georgia": {
+      "daily": [
+        4500,
+        8000
+      ],
+      "flights": [
+        30000,
+        50000
+      ],
+      "best": [
+        5,
+        6,
+        9,
+        10,
+        12,
+        1,
+        2
+      ],
+      "avoid": [],
+      "vibes": [
+        "nature",
+        "culture",
+        "city"
+      ],
+      "who": [
+        "couple",
+        "friends",
+        "family"
+      ],
+      "visa": "evisa",
+      "reach": "medium",
+      "line": "Snowy Caucasus peaks, hilltop churches, Tbilisi's old town and wine country"
+    },
+    "kazakhstan": {
+      "daily": [
+        5000,
+        8500
+      ],
+      "flights": [
+        25000,
+        45000
+      ],
+      "best": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        12,
+        1,
+        2
+      ],
+      "avoid": [],
+      "vibes": [
+        "nature",
+        "city"
+      ],
+      "who": [
+        "friends",
+        "couple",
+        "family"
+      ],
+      "visa": "easy",
+      "reach": "medium",
+      "line": "Almaty's mountains, alpine lakes, Charyn Canyon and Shymbulak's snow, visa-free"
+    },
+    "uzbekistan": {
+      "daily": [
+        4000,
+        7000
+      ],
+      "flights": [
+        20000,
+        35000
+      ],
+      "best": [
+        4,
+        5,
+        9,
+        10
+      ],
+      "avoid": [
+        7,
+        8
+      ],
+      "vibes": [
+        "culture",
+        "city"
+      ],
+      "who": [
+        "seniors",
+        "couple",
+        "solo",
+        "family",
+        "friends"
+      ],
+      "visa": "evisa",
+      "reach": "short",
+      "line": "Silk Road cities of turquoise domes: Samarkand, Bukhara and Khiva"
+    },
+    "cambodia": {
+      "daily": [
+        4500,
+        8000
+      ],
+      "flights": [
+        28000,
+        45000
+      ],
+      "best": [
+        11,
+        12,
+        1,
+        2
+      ],
+      "avoid": [
+        4,
+        5
+      ],
+      "vibes": [
+        "culture",
+        "nature"
+      ],
+      "who": [
+        "couple",
+        "solo",
+        "friends",
+        "seniors"
+      ],
+      "visa": "easy",
+      "reach": "medium",
+      "line": "Angkor Wat at sunrise, jungle temples and Phnom Penh, great value"
+    },
+    "taiwan": {
+      "daily": [
+        8000,
+        13500
+      ],
+      "flights": [
+        35000,
+        55000
+      ],
+      "best": [
+        10,
+        11,
+        12,
+        3,
+        4
+      ],
+      "avoid": [
+        7,
+        8,
+        9
+      ],
+      "vibes": [
+        "city",
+        "culture",
+        "nature"
+      ],
+      "who": [
+        "family",
+        "couple",
+        "solo"
+      ],
+      "visa": "full",
+      "reach": "medium",
+      "line": "Night markets, Taipei 101, hot springs and lakes; very vegetarian-friendly"
+    },
+    "qatar": {
+      "daily": [
+        9000,
+        16000
+      ],
+      "flights": [
+        18000,
+        30000
+      ],
+      "best": [
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "avoid": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "vibes": [
+        "luxury",
+        "city",
+        "culture",
+        "nature"
+      ],
+      "who": [
+        "family",
+        "seniors",
+        "couple"
+      ],
+      "visa": "easy",
+      "reach": "short",
+      "line": "Doha's museums and souqs, the Corniche and dunes that meet the sea"
+    },
+    "oman": {
+      "daily": [
+        8500,
+        15000
+      ],
+      "flights": [
+        15000,
+        28000
+      ],
+      "best": [
+        10,
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "avoid": [
+        6,
+        7,
+        8
+      ],
+      "vibes": [
+        "nature",
+        "beach",
+        "culture"
+      ],
+      "who": [
+        "couple",
+        "family",
+        "friends"
+      ],
+      "visa": "evisa",
+      "reach": "short",
+      "line": "Swimmable wadis, golden dunes, forts and turtle beaches, close to India"
+    },
+    "macau": {
+      "daily": [
+        10000,
+        16500
+      ],
+      "flights": [
+        25000,
+        40000
+      ],
+      "best": [
+        10,
+        11,
+        12
+      ],
+      "avoid": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "vibes": [
+        "luxury",
+        "city",
+        "culture",
+        "theme"
+      ],
+      "who": [
+        "couple",
+        "family"
+      ],
+      "visa": "easy",
+      "reach": "short",
+      "line": "Portuguese old town, egg tarts and Cotai's glitz, an easy add-on to Hong Kong"
     }
   }
 }

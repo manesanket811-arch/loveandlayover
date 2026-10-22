@@ -55,6 +55,6 @@ ${items.map(([k, p]) => `      <a class="kh-pick" href="${esc(klookUrl(p.url))}"
   </div>
 </section>`;
 }
-const PLACE = { sg: 'Singapore', my: 'Malaysia', th: 'Thailand', jp: 'Japan', bali: 'Bali', id: 'Indonesia', vn: 'Vietnam', kr: 'South Korea', hk: 'Hong Kong', ae: 'Dubai', tr: 'Turkey', lk: 'Sri Lanka', ph: 'Philippines' };
+const PLACE = { sg: 'Singapore', my: 'Malaysia', th: 'Thailand', jp: 'Japan', bali: 'Bali', id: 'Indonesia', vn: 'Vietnam', kr: 'South Korea', hk: 'Hong Kong', ae: 'Dubai', tr: 'Turkey', lk: 'Sri Lanka', ph: 'Philippines', kh: 'Cambodia', tw: 'Taiwan', qa: 'Qatar', ge: 'Georgia', mo: 'Macau' };
 
 module.exports = { DATA, klookBox, klookHome, klookUrl };
