@@ -83,21 +83,21 @@ const WANT = {
   'australia-food': ['Pavlova dessert', 'Pavlova (food)', 'Meat pie', 'Lamington'],
   // Central Asia, Caucasus, Gulf and more of East/Southeast Asia
   'azerbaijan-hero': ['Flame Towers', 'Baku skyline', 'Baku Old City', 'Heydar Aliyev Center'],
-  'azerbaijan-food': ['Plov', 'Dushbara', 'Qutab', 'Azerbaijani cuisine'],
+  'azerbaijan-food': ['Azerbaijani plov', 'Shah plov', 'Azerbaijani cuisine', 'Azerbaijani dolma', 'Pakhlava'],
   'georgia-hero': ['Gergeti Trinity Church', 'Tbilisi Old Town', 'Ananuri', 'Tbilisi skyline'],
   'georgia-food': ['Khachapuri', 'Adjarian khachapuri', 'Khinkali', 'Georgian cuisine'],
   'kazakhstan-hero': ['Big Almaty Lake', 'Kaindy Lake', 'Charyn Canyon', 'Almaty skyline'],
-  'kazakhstan-food': ['Beshbarmak', 'Baursak', 'Kazakh cuisine', 'Shashlik'],
+  'kazakhstan-food': ['Beshbarmak', 'Baursak', 'Kazakh cuisine', 'Kazakhstan food', 'Lagman'],
   'uzbekistan-hero': ['Registan', 'Samarkand Registan', 'Bukhara Kalyan', 'Khiva Itchan Kala'],
   'uzbekistan-food': ['Plov Uzbek', 'Uzbek plov', 'Samsa', 'Uzbek bread'],
   'cambodia-hero': ['Angkor Wat', 'Angkor Wat sunrise', 'Bayon', 'Ta Prohm'],
   'cambodia-food': ['Fish amok', 'Amok trey', 'Cambodian cuisine', 'Lok lak'],
   'taiwan-hero': ['Taipei 101', 'Jiufen', 'Sun Moon Lake', 'Taroko Gorge'],
-  'taiwan-food': ['Beef noodle soup', 'Xiaolongbao', 'Bubble tea', 'Taiwanese cuisine'],
-  'qatar-hero': ['Doha skyline', 'Doha Corniche', 'Museum of Islamic Art Doha', 'Souq Waqif'],
+  'taiwan-food': ['Taiwanese beef noodle soup', 'Taiwan beef noodle', 'Xiaolongbao', 'Taiwanese cuisine', 'Bubble tea'],
+  'qatar-hero': ['Museum of Islamic Art, Doha', 'Doha skyline', 'West Bay Doha', 'Doha Corniche', 'Doha'],
   'qatar-food': ['Machboos', 'Luqaimat', 'Karak tea', 'Qatari cuisine'],
   'oman-hero': ['Sultan Qaboos Grand Mosque', 'Wadi Shab', 'Nizwa Fort', 'Muttrah Corniche'],
-  'oman-food': ['Shuwa', 'Omani halwa', 'Omani cuisine', 'Kahwa'],
+  'oman-food': ['Omani halwa', 'Omani cuisine', 'Halwa Oman', 'Omani coffee', 'Dates and coffee'],
   'macau-hero': ['Ruins of St. Paul', 'Senado Square', 'Macau Tower', 'Macau skyline'],
   'macau-food': ['Portuguese egg tart', 'Pork chop bun', 'Macanese cuisine', 'Egg tart'],
 };
@@ -106,7 +106,7 @@ const CATEGORIES = ['Featured_pictures_on_Wikimedia_Commons', 'Quality_images', 
 const FREE = /^(CC0( 1\.0)?|CC BY(-SA)?( \d\.\d)?( [a-z]{2,3})?|Public domain|PD\b.*)$/i;
 
 // Titles that make poor hero/food shots
-const SKIP = /interior|ceiling|nave|vault|inflating|aircraft|grumman|hawkeye|portrait|map\b|diagram|logo|stamp|coin|sorrir|smil|geniet|journalist|restaurant|häusle|portland|löwen|relief|facade|takeout|shop|store|juice|mrt|station|philippines|box|van\b|armored|truck|bus\b/i;
+const SKIP = /interior|ceiling|nave|vault|inflating|aircraft|grumman|hawkeye|portrait|map\b|diagram|logo|stamp|coin|sorrir|smil|geniet|journalist|restaurant|häusle|portland|löwen|relief|facade|takeout|shop|store|juice|mrt|station|philippines|box|van\b|armored|truck|bus\b|minar|delhi|nigeria|mariupol|paris|sichuan|szechuan/i;
 
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 const stripHtml = (s = '') => s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
