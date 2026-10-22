@@ -87,17 +87,17 @@ const WANT = {
   'georgia-hero': ['Gergeti Trinity Church', 'Tbilisi Old Town', 'Ananuri', 'Tbilisi skyline'],
   'georgia-food': ['Khachapuri', 'Adjarian khachapuri', 'Khinkali', 'Georgian cuisine'],
   'kazakhstan-hero': ['Big Almaty Lake', 'Kaindy Lake', 'Charyn Canyon', 'Almaty skyline'],
-  'kazakhstan-food': ['Beshbarmak', 'Baursak', 'Kazakh cuisine', 'Kazakhstan food', 'Lagman'],
+  'kazakhstan-food': ['Baursak', 'Kazakh cuisine', 'Beshbarmak dish', 'Lagman', 'Manti dumplings', 'Samsa'],
   'uzbekistan-hero': ['Registan', 'Samarkand Registan', 'Bukhara Kalyan', 'Khiva Itchan Kala'],
   'uzbekistan-food': ['Plov Uzbek', 'Uzbek plov', 'Samsa', 'Uzbek bread'],
   'cambodia-hero': ['Angkor Wat', 'Angkor Wat sunrise', 'Bayon', 'Ta Prohm'],
   'cambodia-food': ['Fish amok', 'Amok trey', 'Cambodian cuisine', 'Lok lak'],
   'taiwan-hero': ['Taipei 101', 'Jiufen', 'Sun Moon Lake', 'Taroko Gorge'],
   'taiwan-food': ['Taiwanese beef noodle soup', 'Taiwan beef noodle', 'Xiaolongbao', 'Taiwanese cuisine', 'Bubble tea'],
-  'qatar-hero': ['Museum of Islamic Art, Doha', 'Doha skyline', 'West Bay Doha', 'Doha Corniche', 'Doha'],
+  'qatar-hero': ['Doha skyline', 'Doha skyline at night', 'West Bay, Doha', 'Doha West Bay', 'Museum of Islamic Art, Doha', 'Katara Cultural Village', 'Doha Corniche'],
   'qatar-food': ['Machboos', 'Luqaimat', 'Karak tea', 'Qatari cuisine'],
   'oman-hero': ['Sultan Qaboos Grand Mosque', 'Wadi Shab', 'Nizwa Fort', 'Muttrah Corniche'],
-  'oman-food': ['Omani halwa', 'Omani cuisine', 'Halwa Oman', 'Omani coffee', 'Dates and coffee'],
+  'oman-food': ['Omani halwa', 'Omani cuisine', 'Omani food', 'Arabic coffee and dates', 'Dates (fruit)', 'Kahwa'],
   'macau-hero': ['Ruins of St. Paul', 'Senado Square', 'Macau Tower', 'Macau skyline'],
   'macau-food': ['Portuguese egg tart', 'Pork chop bun', 'Macanese cuisine', 'Egg tart'],
 };
@@ -106,7 +106,7 @@ const CATEGORIES = ['Featured_pictures_on_Wikimedia_Commons', 'Quality_images', 
 const FREE = /^(CC0( 1\.0)?|CC BY(-SA)?( \d\.\d)?( [a-z]{2,3})?|Public domain|PD\b.*)$/i;
 
 // Titles that make poor hero/food shots
-const SKIP = /interior|ceiling|nave|vault|inflating|aircraft|grumman|hawkeye|portrait|map\b|diagram|logo|stamp|coin|sorrir|smil|geniet|journalist|restaurant|häusle|portland|löwen|relief|facade|takeout|shop|store|juice|mrt|station|philippines|box|van\b|armored|truck|bus\b|minar|delhi|nigeria|mariupol|paris|sichuan|szechuan/i;
+const SKIP = /interior|ceiling|nave|vault|inflating|aircraft|grumman|hawkeye|portrait|map\b|diagram|logo|stamp|coin|sorrir|smil|geniet|journalist|restaurant|häusle|portland|löwen|relief|facade|takeout|shop|store|juice|mrt|station|philippines|box|van\b|armored|truck|bus\b|minar|delhi|nigeria|mariupol|paris|sichuan|szechuan|\brock\b|beshbarmag|mountain|wedding|marriage/i;
 
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 const stripHtml = (s = '') => s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
