@@ -81,6 +81,25 @@ const WANT = {
   'philippines-hero': ['Chocolate Hills', 'Kayangan Lake', 'Bacuit Bay', 'El Nido, Palawan'],
   'philippines-food': ['Halo-halo', 'Chicken adobo', 'Sinigang', 'Lechon'],
   'australia-food': ['Pavlova dessert', 'Pavlova (food)', 'Meat pie', 'Lamington'],
+  // Central Asia, Caucasus, Gulf and more of East/Southeast Asia
+  'azerbaijan-hero': ['Flame Towers', 'Baku skyline', 'Baku Old City', 'Heydar Aliyev Center'],
+  'azerbaijan-food': ['Plov', 'Dushbara', 'Qutab', 'Azerbaijani cuisine'],
+  'georgia-hero': ['Gergeti Trinity Church', 'Tbilisi Old Town', 'Ananuri', 'Tbilisi skyline'],
+  'georgia-food': ['Khachapuri', 'Adjarian khachapuri', 'Khinkali', 'Georgian cuisine'],
+  'kazakhstan-hero': ['Big Almaty Lake', 'Kaindy Lake', 'Charyn Canyon', 'Almaty skyline'],
+  'kazakhstan-food': ['Beshbarmak', 'Baursak', 'Kazakh cuisine', 'Shashlik'],
+  'uzbekistan-hero': ['Registan', 'Samarkand Registan', 'Bukhara Kalyan', 'Khiva Itchan Kala'],
+  'uzbekistan-food': ['Plov Uzbek', 'Uzbek plov', 'Samsa', 'Uzbek bread'],
+  'cambodia-hero': ['Angkor Wat', 'Angkor Wat sunrise', 'Bayon', 'Ta Prohm'],
+  'cambodia-food': ['Fish amok', 'Amok trey', 'Cambodian cuisine', 'Lok lak'],
+  'taiwan-hero': ['Taipei 101', 'Jiufen', 'Sun Moon Lake', 'Taroko Gorge'],
+  'taiwan-food': ['Beef noodle soup', 'Xiaolongbao', 'Bubble tea', 'Taiwanese cuisine'],
+  'qatar-hero': ['Doha skyline', 'Doha Corniche', 'Museum of Islamic Art Doha', 'Souq Waqif'],
+  'qatar-food': ['Machboos', 'Luqaimat', 'Karak tea', 'Qatari cuisine'],
+  'oman-hero': ['Sultan Qaboos Grand Mosque', 'Wadi Shab', 'Nizwa Fort', 'Muttrah Corniche'],
+  'oman-food': ['Shuwa', 'Omani halwa', 'Omani cuisine', 'Kahwa'],
+  'macau-hero': ['Ruins of St. Paul', 'Senado Square', 'Macau Tower', 'Macau skyline'],
+  'macau-food': ['Portuguese egg tart', 'Pork chop bun', 'Macanese cuisine', 'Egg tart'],
 };
 
 const CATEGORIES = ['Featured_pictures_on_Wikimedia_Commons', 'Quality_images', null];
