@@ -494,5 +494,149 @@
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "query": "intitle:\"Halo-halo\""
+  },
+  "azerbaijan-hero": {
+    "title": "Flame towers.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flame_towers.jpg",
+    "artist": "KeuleKeulmann",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "query": "intitle:\"Flame Towers\""
+  },
+  "azerbaijan-food": {
+    "title": "Qutab Minar, details, New Delhi, India 02.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Qutab_Minar,_details,_New_Delhi,_India_02.jpg",
+    "artist": "Yann",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "query": "intitle:\"Qutab\" incategory:Quality_images"
+  },
+  "georgia-hero": {
+    "title": "Gergeti Trinity Church, Mountain pasture, Georgia.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Gergeti_Trinity_Church,_Mountain_pasture,_Georgia.jpg",
+    "artist": "Vyacheslav Argenberg",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "query": "intitle:\"Gergeti Trinity Church\" incategory:Quality_images"
+  },
+  "georgia-food": {
+    "title": "Mini Khachapuri.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Mini_Khachapuri.jpg",
+    "artist": "Eka Samkharadze",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "query": "intitle:\"Khachapuri\""
+  },
+  "kazakhstan-hero": {
+    "title": "Charyn Canyon, Kazakhstan 01.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Charyn_Canyon,_Kazakhstan_01.jpg",
+    "artist": "Bgag",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "query": "intitle:\"Charyn Canyon\" incategory:Quality_images"
+  },
+  "kazakhstan-food": {
+    "title": "Shashlik Mariupol.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Shashlik_Mariupol.JPG",
+    "artist": "MOs810",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "query": "intitle:\"Shashlik\" incategory:Quality_images"
+  },
+  "uzbekistan-hero": {
+    "title": "Registan, Samarkand (8590116140).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Registan,_Samarkand_(8590116140).jpg",
+    "artist": "Aleksandr Zykov from Russia",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "query": "intitle:\"Registan\""
+  },
+  "uzbekistan-food": {
+    "title": "'Parmuda'-uzbek samsa-01.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:%27Parmuda%27-uzbek_samsa-01.jpg",
+    "artist": "Shuhrataxmedov",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "query": "intitle:\"Samsa\""
+  },
+  "cambodia-hero": {
+    "title": "Angkor Wat with its reflection (cropped).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Angkor_Wat_with_its_reflection_(cropped).jpg",
+    "artist": "Satdeep Gill",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "query": "intitle:\"Angkor Wat\" incategory:Featured_pictures_on_Wikimedia_Commons"
+  },
+  "cambodia-food": {
+    "title": "Fish Amok.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Fish_Amok.jpg",
+    "artist": "Marie",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "query": "intitle:\"Fish amok\""
+  },
+  "taiwan-hero": {
+    "title": "Taipei Taiwan Taipei-101-Tower-01.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Taipei_Taiwan_Taipei-101-Tower-01.jpg",
+    "artist": "CEphoto, Uwe Aranas",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "query": "intitle:\"Taipei 101\" incategory:Featured_pictures_on_Wikimedia_Commons"
+  },
+  "taiwan-food": {
+    "title": "Spicy beef & noodle soup, Szechuan, Trois Fois Plus de Piment, Paris 002.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Spicy_beef_%26_noodle_soup,_Szechuan,_Trois_Fois_Plus_de_Piment,_Paris_002.jpg",
+    "artist": "Guilhem Vellut from Paris, France",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "query": "intitle:\"Beef noodle soup\""
+  },
+  "qatar-hero": {
+    "title": "Souq Waqif, Doha, Catar, 2013-08-05, DD 107.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Souq_Waqif,_Doha,_Catar,_2013-08-05,_DD_107.JPG",
+    "artist": "Diego Delso",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "query": "intitle:\"Souq Waqif\" incategory:Featured_pictures_on_Wikimedia_Commons"
+  },
+  "qatar-food": {
+    "title": "Machboos (cropped).JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Machboos_(cropped).JPG",
+    "artist": "Miansari66",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "query": "intitle:\"Machboos\""
+  },
+  "oman-hero": {
+    "title": "Nizwa Fort and Minaret of Friday Mosque.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Nizwa_Fort_and_Minaret_of_Friday_Mosque.JPG",
+    "artist": "Martin Falbisoner",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "query": "intitle:\"Nizwa Fort\" incategory:Featured_pictures_on_Wikimedia_Commons"
+  },
+  "oman-food": {
+    "title": "Shuwa Arab traditional marriage rite - Northern Nigeria - 2026 (18).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Shuwa_Arab_traditional_marriage_rite_-_Northern_Nigeria_-_2026_(18).jpg",
+    "artist": "Zaynab05",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "query": "intitle:\"Shuwa\""
+  },
+  "macau-hero": {
+    "title": "Ruins Of St Paul (157820823).jpeg",
+    "page": "https://commons.wikimedia.org/wiki/File:Ruins_Of_St_Paul_(157820823).jpeg",
+    "artist": "Mike",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "query": "intitle:\"Ruins of St. Paul\""
+  },
+  "macau-food": {
+    "title": "Portuguese egg tart.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Portuguese_egg_tart.jpg",
+    "artist": "Jason Goh",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "query": "intitle:\"Portuguese egg tart\""
   }
 }
