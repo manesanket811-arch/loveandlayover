@@ -536,12 +536,12 @@
     "query": "intitle:\"Charyn Canyon\" incategory:Quality_images"
   },
   "kazakhstan-food": {
-    "title": "Beshbarmak rock.JPG",
-    "page": "https://commons.wikimedia.org/wiki/File:Beshbarmak_rock.JPG",
-    "artist": "Kupr31",
-    "license": "CC BY-SA 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "query": "intitle:\"Beshbarmak\""
+    "title": "Kazakh Baursak.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Kazakh_Baursak.jpg",
+    "artist": "Kurmanbek",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "query": "intitle:\"Baursak\""
   },
   "uzbekistan-hero": {
     "title": "Registan, Samarkand (8590116140).jpg",
@@ -592,12 +592,12 @@
     "query": "intitle:\"Taiwanese beef noodle soup\""
   },
   "qatar-hero": {
-    "title": "Souq Waqif, Doha, Catar, 2013-08-05, DD 107.JPG",
-    "page": "https://commons.wikimedia.org/wiki/File:Souq_Waqif,_Doha,_Catar,_2013-08-05,_DD_107.JPG",
-    "artist": "Diego Delso",
-    "license": "CC BY-SA 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "query": "intitle:\"Doha\" incategory:Featured_pictures_on_Wikimedia_Commons"
+    "title": "Doha skyline at night, near Museum of Islamic art (43162846111).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Doha_skyline_at_night,_near_Museum_of_Islamic_art_(43162846111).jpg",
+    "artist": "Šarūnas Burdulis from Hanover, USA",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "query": "intitle:\"Doha skyline\""
   },
   "qatar-food": {
     "title": "Machboos (cropped).JPG",
@@ -616,12 +616,12 @@
     "query": "intitle:\"Nizwa Fort\" incategory:Featured_pictures_on_Wikimedia_Commons"
   },
   "oman-food": {
-    "title": "Shuwa Arab traditional marriage rite - Northern Nigeria - 2026 (18).jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Shuwa_Arab_traditional_marriage_rite_-_Northern_Nigeria_-_2026_(18).jpg",
-    "artist": "Zaynab05",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "query": "intitle:\"Shuwa\""
+    "title": "Traditional Omani Food.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Traditional_Omani_Food.jpg",
+    "artist": "Erkan Pinar",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "query": "intitle:\"Omani food\""
   },
   "macau-hero": {
     "title": "Ruins Of St Paul (157820823).jpeg",
