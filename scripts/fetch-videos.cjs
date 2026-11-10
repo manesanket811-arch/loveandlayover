@@ -294,6 +294,11 @@ async function main() {
   }
 
   const videos = [...byId.values()].sort((a, b) => b.published.localeCompare(a.published));
+  // Our channel handle changed: older descriptions still mention the old one, so store the new one
+  const OLD_HANDLE = /@nikita_sanket_mane/gi;
+  for (const v of videos) for (const k of ['title', 'description', 'fullDescription']) {
+    if (typeof v[k] === 'string') v[k] = v[k].replace(OLD_HANDLE, '@LoveAndLayover');
+  }
   fs.writeFileSync(DATA_FILE, JSON.stringify(videos, null, 2) + '\n');
   console.log(`${xml ? 'Feed' : 'Channel pages'} gave ${entries.length} entries (${fresh} new); videos-data.json now holds ${videos.length} videos`);
 }
