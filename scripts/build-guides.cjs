@@ -195,7 +195,7 @@ function build(g) {
 <title>${esc(g.title)}</title>
 <meta name="description" content="${esc(g.description)}">
 <link rel="canonical" href="${url}">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="${esc(g.title)}">
 <meta property="og:description" content="${esc(g.description)}">

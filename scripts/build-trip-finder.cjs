@@ -47,7 +47,7 @@ const page = `<!DOCTYPE html>
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${URL_}">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Where should you travel next? Take the quiz">
 <meta property="og:description" content="${esc(desc)}">
