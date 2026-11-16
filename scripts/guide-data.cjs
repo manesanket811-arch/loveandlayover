@@ -74,4 +74,29 @@ function loadGuides() {
   }).sort((a, b) => order.indexOf(a.region) - order.indexOf(b.region) || (b.filmed - a.filmed) || a.name.localeCompare(b.name));
 }
 
-module.exports = { ROOT, INR, rupeeRange, rupees, fmt, monthsOf, loadGuides, VISA, REGION };
+
+// Main city per guide for the live weather and exchange-rate box: [city, lat, lon, ISO currency]
+// (no currency for India and Bhutan, whose ngultrum is pegged to the rupee)
+const CITY = {
+  malaysia: ['Kuala Lumpur', 3.139, 101.687, 'MYR'], singapore: ['Singapore', 1.352, 103.82, 'SGD'],
+  azerbaijan: ['Baku', 40.409, 49.867, 'AZN'], bali: ['Denpasar', -8.65, 115.216, 'IDR'],
+  bhutan: ['Thimphu', 27.472, 89.639, ''], cambodia: ['Siem Reap', 13.362, 103.86, 'USD'],
+  dubai: ['Dubai', 25.205, 55.271, 'AED'], georgia: ['Tbilisi', 41.716, 44.783, 'GEL'],
+  'hong-kong': ['Hong Kong', 22.319, 114.169, 'HKD'], india: ['New Delhi', 28.614, 77.209, ''],
+  indonesia: ['Yogyakarta', -7.797, 110.37, 'IDR'], japan: ['Tokyo', 35.676, 139.65, 'JPY'],
+  kazakhstan: ['Almaty', 43.238, 76.946, 'KZT'], macau: ['Macau', 22.199, 113.544, 'MOP'],
+  maldives: ['Malé', 4.175, 73.509, 'USD'], nepal: ['Kathmandu', 27.717, 85.324, 'NPR'],
+  oman: ['Muscat', 23.588, 58.383, 'OMR'], philippines: ['Manila', 14.599, 120.984, 'PHP'],
+  qatar: ['Doha', 25.285, 51.531, 'QAR'], 'south-korea': ['Seoul', 37.567, 126.978, 'KRW'],
+  'sri-lanka': ['Colombo', 6.927, 79.861, 'LKR'], taiwan: ['Taipei', 25.033, 121.565, 'TWD'],
+  thailand: ['Bangkok', 13.756, 100.502, 'THB'], uzbekistan: ['Tashkent', 41.299, 69.24, 'UZS'],
+  vietnam: ['Hanoi', 21.028, 105.834, 'VND'], france: ['Paris', 48.857, 2.352, 'EUR'],
+  germany: ['Berlin', 52.52, 13.405, 'EUR'], greece: ['Athens', 37.984, 23.728, 'EUR'],
+  iceland: ['Reykjavík', 64.147, -21.942, 'ISK'], italy: ['Rome', 41.903, 12.496, 'EUR'],
+  portugal: ['Lisbon', 38.722, -9.139, 'EUR'], spain: ['Madrid', 40.417, -3.704, 'EUR'],
+  mexico: ['Mexico City', 19.433, -99.133, 'MXN'], peru: ['Cusco', -13.532, -71.968, 'PEN'],
+  australia: ['Sydney', -33.869, 151.209, 'AUD'], egypt: ['Cairo', 30.044, 31.236, 'EGP'],
+  turkey: ['Istanbul', 41.008, 28.978, 'TRY'],
+};
+
+module.exports = { CITY, ROOT, INR, rupeeRange, rupees, fmt, monthsOf, loadGuides, VISA, REGION };

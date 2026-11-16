@@ -125,7 +125,7 @@
 </script>
 <link rel="stylesheet" href="/css/site.css?v=1">
 <link rel="stylesheet" href="/css/article.css?v=2">
-<link rel="stylesheet" href="/css/guide.css?v=3">
+<link rel="stylesheet" href="/css/guide.css?v=4">
 <link rel="stylesheet" href="/css/chrome.css?v=5">
 </head>
 <body>
@@ -167,6 +167,12 @@
   <div><small>Best time</small><b>Oct–Dec</b></div>
   <div><small>Visa for Indians</small><b>Visa-free up to 30 days</b></div>
   <div><small>Itinerary</small><b>3, 5 or 7 days</b><span>Day by day, with costs</span></div>
+</div>
+
+<div class="live" id="live" data-lat="22.199" data-lon="113.544" data-cur="MOP" hidden>
+  <div class="live-w" hidden><small>Right now in Macau</small><b data-w></b><span data-w2></span></div>
+  <div class="live-r" hidden><small>Rupee rate today</small><b data-r></b><span data-r2></span></div>
+  <p class="live-src">Live weather by <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a><span data-fx-src hidden> · <a href="https://www.exchangerate-api.com" target="_blank" rel="noopener">Rates by Exchange Rate API</a></span></p>
 </div>
 
 <h2 id="why-visit">Why Visit Macau?</h2>
@@ -343,6 +349,7 @@
 <script src="/js/site.js?v=5"></script>
 <script src="/js/datadog.js" defer></script>
 <script src="/js/trip-videos.js" defer></script>
+<script src="/js/live-info.js" defer></script>
 <script>
   // Trip-length tabs: show the first N days (all days stay in the page for readers without JS)
   (function () {

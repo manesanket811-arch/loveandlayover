@@ -7,7 +7,7 @@ const path = require('path');
 const { header, footer, HEAD_LINKS, SCRIPT, FONTS } = require('./site-chrome.cjs');
 const { altFor } = require('./image-alts.cjs');
 const { DATA: KLOOK, klookBox } = require('./affiliates.cjs');
-const { rupees } = require('./guide-data.cjs');
+const { rupees, CITY } = require('./guide-data.cjs');
 
 const ROOT = path.join(__dirname, '..');
 const SITE = 'https://www.loveandlayover.in';
@@ -92,6 +92,12 @@ function build(g) {
   <div><small>Best time</small><b>${esc(g.badges.best || 'Year-round')}</b></div>
   <div><small>Visa for Indians</small><b>${esc(g.badges.visa || 'Check before travel')}</b></div>
   <div><small>Itinerary</small><b>${days && days.plans ? days.plans.join(', ').replace(/, (\d+)$/, ' or $1') + ' days' : `${days ? days.days.length : 0}-day plan`}</b><span>Day by day, with costs</span></div>
+</div>`);
+  const city = CITY[g.slug];
+  if (city) body.push(`<div class="live" id="live" data-lat="${city[1]}" data-lon="${city[2]}" data-cur="${city[3]}" hidden>
+  <div class="live-w" hidden><small>Right now in ${esc(city[0])}</small><b data-w></b><span data-w2></span></div>
+  <div class="live-r" hidden><small>Rupee rate today</small><b data-r></b><span data-r2></span></div>
+  <p class="live-src">Live weather by <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a><span data-fx-src hidden> · <a href="https://www.exchangerate-api.com" target="_blank" rel="noopener">Rates by Exchange Rate API</a></span></p>
 </div>`);
 
   for (const s of g.sections) {
@@ -209,7 +215,7 @@ ${schema}
 </script>
 <link rel="stylesheet" href="/css/site.css?v=1">
 <link rel="stylesheet" href="/css/article.css?v=2">
-<link rel="stylesheet" href="/css/guide.css?v=3">
+<link rel="stylesheet" href="/css/guide.css?v=4">
 ${HEAD_LINKS}
 </head>
 <body>
@@ -266,6 +272,7 @@ ${footer()}
 
 ${SCRIPT}
 <script src="/js/trip-videos.js" defer></script>
+<script src="/js/live-info.js" defer></script>
 ${days && days.plans && days.plans.length > 1 ? `<script>
   // Trip-length tabs: show the first N days (all days stay in the page for readers without JS)
   (function () {
