@@ -1,4 +1,5 @@
 {
-  "_readme": "Referral/affiliate links other than Klook. Any link on the site with data-partner=\"<key>\" gets its href set from here by scripts/apply-affiliates.cjs. When the Wise affiliate (Partnerize) link arrives, replace the wise url and re-run the script.",
-  "wise": "https://wise.com/invite/drhc/sanketgangadharm"
+  "_readme": "Referral/affiliate links other than Klook. Any link on the site with data-partner=\"<key>\" gets its href set from here by scripts/apply-affiliates.cjs. When the Wise affiliate (Partnerize) link arrives, replace the wise url and re-run the script. \"whatsappChannel\": the WhatsApp Channel link (https://whatsapp.com/channel/...). While empty, no channel buttons appear; after setting it, rebuild pages (apply-site-chrome, build-guides, build-posts, build-video-pages, apply-affiliates).",
+  "wise": "https://wise.com/invite/drhc/sanketgangadharm",
+  "whatsappChannel": ""
 }

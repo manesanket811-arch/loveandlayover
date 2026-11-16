@@ -4,7 +4,7 @@
 // Usage: node scripts/build-guides.cjs [slug…]   (default: every data file)
 const fs = require('fs');
 const path = require('path');
-const { header, footer, HEAD_LINKS, SCRIPT, FONTS } = require('./site-chrome.cjs');
+const { header, footer, HEAD_LINKS, SCRIPT, FONTS, waChannelBtn } = require('./site-chrome.cjs');
 const { altFor } = require('./image-alts.cjs');
 const { DATA: KLOOK, klookBox } = require('./affiliates.cjs');
 const { rupees, CITY } = require('./guide-data.cjs');
@@ -146,7 +146,7 @@ function build(g) {
   <div class="row">
     <a class="btn btn-yt" href="${SUBSCRIBE}" target="_blank" rel="noopener"><span aria-hidden="true">▶</span> Subscribe on YouTube</a>
     <a class="btn btn-ig" href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener">Follow on Instagram</a>
-  </div>
+${waChannelBtn() ? `    ${waChannelBtn()}\n` : ''}  </div>
 </div>
 <p class="updated">Prices, visa rules and opening details change often. Figures here are approximate as of October 2026, so please check official websites before you book.</p>`);
 

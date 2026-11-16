@@ -50,4 +50,15 @@ for (const f of pages) {
   if (out !== html) fs.writeFileSync(file, out);
 }
 console.log(`partner links: ${partnerLinks}`);
+
+// WhatsApp Channel buttons on hand-written pages (between <!-- wachannel:start/end --> markers);
+// generated pages get theirs from waChannelBtn() in site-chrome.cjs
+const { waChannelBtn } = require('./site-chrome.cjs');
+const WA_BTN = { 'index.html': waChannelBtn(), 'links.html': waChannelBtn('WhatsApp Channel', 'wa') };
+for (const [f, btn] of Object.entries(WA_BTN)) {
+  const file = path.join(ROOT, f);
+  const html = fs.readFileSync(file, 'utf8');
+  const out = html.replace(/<!-- wachannel:start -->[\s\S]*?<!-- wachannel:end -->/, `<!-- wachannel:start -->${btn}<!-- wachannel:end -->`);
+  if (out !== html) fs.writeFileSync(file, out);
+}
 console.log(`klook boxes: ${added} posts${removed ? `, removed from ${removed}` : ''}`);

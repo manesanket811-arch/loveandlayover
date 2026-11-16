@@ -10,7 +10,7 @@
 // faq ([question, answer] pairs, optional).
 const fs = require('fs');
 const path = require('path');
-const { header, footer, HEAD_LINKS, SCRIPT, GA, FONTS } = require('./site-chrome.cjs');
+const { header, footer, HEAD_LINKS, SCRIPT, GA, FONTS, waChannelBtn } = require('./site-chrome.cjs');
 const { altFor } = require('./image-alts.cjs');
 
 const ROOT = path.join(__dirname, '..');
@@ -167,7 +167,7 @@ ${faq.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${a}</p></details
   <div class="row">
     <a class="btn btn-yt" href="https://www.youtube.com/@LoveAndLayover?sub_confirmation=1" target="_blank" rel="noopener"><span aria-hidden="true">▶</span> Subscribe on YouTube</a>
     <a class="btn btn-ig" href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener">Follow on Instagram</a>
-  </div>
+${waChannelBtn() ? `    ${waChannelBtn()}\n` : ''}  </div>
 </div>
 <p class="updated">Prices and opening details change often. Figures here are approximate as of ${MONTHS[+mo - 1]} ${y}, so please check official websites before you book.</p>
   </article>
