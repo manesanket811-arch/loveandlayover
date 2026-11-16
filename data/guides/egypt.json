@@ -5,12 +5,13 @@
   "h1": "Egypt Travel Guide 2026",
   "country": "Egypt",
   "datePublished": "2026-01-01",
-  "dateModified": "2026-10-02",
+  "dateModified": "2026-11-16",
   "faq": [],
   "badges": {
-    "budget": "EGP 400-700/day",
+    "budget": "EGP 3,000–4,500/day",
     "best": "Oct-Apr",
-    "visa": "e-Visa (apply online)"
+    "visa": "e-Visa (apply online)",
+    "visaType": "evisa"
   },
   "videoKeywords": "egypt",
   "foodImage": {
@@ -27,7 +28,7 @@
     {
       "id": "itineraries",
       "title": "3-Day Egypt Itinerary",
-      "html": "<p>A 3-day plan with morning, afternoon and evening ideas and an approximate daily cost per person. Use it as a starting point and adjust to your pace.</p>",
+      "html": "<p>A 3-day plan with morning, afternoon and evening ideas and an approximate daily cost per person. Use it as a starting point and adjust to your pace. The daily budget at the top of this guide includes a mid-range hotel shared by two; the day-by-day costs below cover food, local transport and entry fees, with your hotel extra.</p>",
       "after": "",
       "days": [
         {
@@ -46,7 +47,7 @@
               "Koshari dinner - Egyptian national dish (EGP 30-50). Nile River sunset cruise (EGP 150-300, includes dinner and traditional music). Evening walk through Cairo's bustling streets. Hibiscus tea at local cafe (EGP 10)."
             ]
           ],
-          "cost": "EGP 650-1050/day",
+          "cost": "EGP 1,800–2,800/day",
           "note": ""
         },
         {
@@ -65,7 +66,7 @@
               "Dinner at upscale restaurant with Nile views (EGP 200-400) or casual eatery (EGP 50-100). Visit bazaars for souvenirs. Experience Cairo nightlife or relax at hotel."
             ]
           ],
-          "cost": "EGP 500-850/day",
+          "cost": "EGP 1,500–2,400/day",
           "note": ""
         },
         {
@@ -84,7 +85,7 @@
               "Nile sunset felucca sailing (EGP 100-200). Traditional sailboat experience on ancient river. Dinner at Luxor restaurant (EGP 80-150). Evening rest or explore Luxor town bazaars."
             ]
           ],
-          "cost": "EGP 1000-1500/day",
+          "cost": "EGP 2,500–3,800/day",
           "note": ""
         }
       ]
@@ -107,7 +108,7 @@
     {
       "id": "essentials",
       "title": "Travel Essentials",
-      "html": "<h3>Visa &amp; Entry</h3>\n<p><strong>Visa for Indians:</strong> apply for an Egypt e-Visa on the official visa2egypt.gov.eg portal before you travel (a single-entry tourist e-Visa is about US$25). A visa on arrival is generally only available to Indians who hold a valid US, UK or Schengen visa. Your passport must be valid for at least 6 months. Rules as of October 2026; always check the official website before you apply.</p>\n<h3>Currency & Money</h3>\n<p><strong>Egyptian Pound (EGP).</strong> Exchange rate: 1 USD ≈ 30 EGP. ATMs widespread. Tipping customary (10-15% at restaurants, backsheesh for services).</p>\n<h3>Budget Breakdown (per day, budget traveler)</h3>\n<ul>\n<li>Accommodation: EGP 150-300 (hostels, budget hotels)</li>\n<li>Food: EGP 100-200 (street food, local restaurants)</li>\n<li>Transport: EGP 50-100 (metro, taxis, local)</li>\n<li>Activities: EGP 100-250 (museums, sites, guides)</li>\n<li><strong>Total: EGP 400-850/day (~$13-28 USD)</strong></li>\n</ul>\n<h3>Important Notes</h3>\n<ul>\n<li>Tap water not potable - drink bottled or filtered water.</li>\n<li>Ramadan affects restaurant hours and local customs - respect fasting.</li>\n<li>Dress modestly, especially outside tourist areas.</li>\n<li>Guide helpful for ancient sites - provides context and history.</li>\n<li>Haggling expected in bazaars - part of cultural experience.</li>\n</ul>"
+      "html": "<h3>Visa &amp; Entry</h3>\n<p><strong>Visa for Indians:</strong> apply for an Egypt e-Visa on the official visa2egypt.gov.eg portal before you travel (a single-entry tourist e-Visa is about US$25). A visa on arrival is generally only available to Indians who hold a valid US, UK or Schengen visa. Your passport must be valid for at least 6 months. Rules as of October 2026; always check the official website before you apply.</p>\n<h3>Currency & Money</h3>\n<p><strong>Egyptian Pound (EGP).</strong> Exchange rate: 1 USD ≈ 30 EGP. ATMs widespread. Tipping customary (10-15% at restaurants, backsheesh for services).</p>\n<h3>Budget Breakdown (per day, budget traveler)</h3>\n<ul>\n<li>Accommodation: EGP 150-300 (hostels, budget hotels)</li>\n<li>Food: EGP 100-200 (street food, local restaurants)</li>\n<li>Transport: EGP 50-100 (metro, taxis, local)</li>\n<li>Activities: EGP 100-250 (museums, sites, guides)</li>\n<li><strong>Total: EGP 400-850/day (~$13-28 USD)</strong></li>\n</ul>\n<h3>Important Notes</h3>\n<ul>\n<li>Tap water not potable - drink bottled or filtered water.</li>\n<li>Ramadan affects restaurant hours and local customs - respect fasting.</li>\n<li>Dress modestly, especially outside tourist areas.</li>\n<li>Guide helpful for ancient sites - provides context and history.</li>\n<li>Haggling expected in bazaars - part of cultural experience.</li>\n</ul>\n<p><strong>Prices change quickly:</strong> the Egyptian pound has lost value fast in recent years, so local-currency prices rise often. Treat the figures in this guide as rough and check current prices before you go.</p>"
     }
   ],
   "related": [

@@ -5,12 +5,13 @@
   "h1": "South Korea Travel Guide 2026",
   "country": "South Korea",
   "datePublished": "2026-01-01",
-  "dateModified": "2026-10-06",
+  "dateModified": "2026-11-16",
   "faq": [],
   "badges": {
-    "budget": "₩40,000–60,000/day",
+    "budget": "₩110,000–170,000/day",
     "best": "Apr–May, Sep–Oct",
-    "visa": "Tourist visa required"
+    "visa": "Tourist visa required",
+    "visaType": "visa"
   },
   "videoKeywords": "korea,seoul",
   "sections": [
@@ -22,7 +23,7 @@
     {
       "id": "itineraries",
       "title": "South Korea Itineraries: 3, 5 or 7 Days",
-      "html": "<p>Pick 3, 5 or 7 days. Each longer plan builds on the shorter one: the first days stay the same and the extra days add more places. Costs are approximate per person per day; prices and timings change, so check before you book.</p>",
+      "html": "<p>Pick 3, 5 or 7 days. Each longer plan builds on the shorter one: the first days stay the same and the extra days add more places. Costs are approximate per person per day; prices and timings change, so check before you book. The daily budget at the top of this guide includes a mid-range hotel shared by two; the day-by-day costs below cover food, local transport and entry fees, with your hotel extra.</p>",
       "after": "",
       "days": [
         {

@@ -5,12 +5,13 @@
   "h1": "Turkey Travel Guide 2026",
   "country": "Turkey",
   "datePublished": "2026-01-01",
-  "dateModified": "2026-10-02",
+  "dateModified": "2026-11-16",
   "faq": [],
   "badges": {
-    "budget": "TRY 800-1400/day",
+    "budget": "TRY 2,800–4,600/day",
     "best": "Apr-May, Sep-Oct",
-    "visa": "e-Visa with a US/UK/Schengen visa, otherwise visa"
+    "visa": "e-Visa with a US/UK/Schengen visa, otherwise visa",
+    "visaType": "evisa"
   },
   "videoKeywords": "turkey",
   "foodImage": {
@@ -27,7 +28,7 @@
     {
       "id": "itineraries",
       "title": "3-Day Turkey Itinerary",
-      "html": "<p>A 3-day plan with morning, afternoon and evening ideas and an approximate daily cost per person. Use it as a starting point and adjust to your pace.</p>",
+      "html": "<p>A 3-day plan with morning, afternoon and evening ideas and an approximate daily cost per person. Use it as a starting point and adjust to your pace. The daily budget at the top of this guide includes a mid-range hotel shared by two; the day-by-day costs below cover food, local transport and entry fees, with your hotel extra.</p>",
       "after": "",
       "days": [
         {
@@ -46,7 +47,7 @@
               "Bosphorus sunset cruise (TRY 150-250, includes dinner). See European and Asian sides. Dinner at waterfront restaurant (TRY 100-250). Turkish coffee and dessert. Explore Galata district nightlife."
             ]
           ],
-          "cost": "TRY 700-1300/day",
+          "cost": "TRY 1,800–3,000/day",
           "note": ""
         },
         {
@@ -65,7 +66,7 @@
               "Turkish dinner at guesthouse - kebabs, pide, mezze (TRY 100-200). Watch sunset from hillside cafe (free seating, TRY 20-50 for drinks). Evening hammam (Turkish bath) optional (TRY 150-300)."
             ]
           ],
-          "cost": "TRY 1500-2500/day",
+          "cost": "TRY 3,500–5,500/day",
           "note": ""
         },
         {
@@ -84,7 +85,7 @@
               "Dinner overlooking Aegean Sea (TRY 150-300). Fresh seafood - grilled fish, mussels. Turkish wine tasting (TRY 50-100 per bottle). Sunset beach walk or return travel."
             ]
           ],
-          "cost": "TRY 800-1300/day",
+          "cost": "TRY 1,800–3,000/day",
           "note": ""
         }
       ]
@@ -107,7 +108,7 @@
     {
       "id": "essentials",
       "title": "Travel Essentials",
-      "html": "<h3>Visa &amp; Entry</h3>\n<p><strong>Visa for Indians:</strong> if you hold a valid US, UK, Schengen or Irish visa or residence permit, you can apply for a Turkish e-Visa online at evisa.gov.tr (use only the official site). Otherwise, apply for a regular visa through the Turkish visa centre in India. Rules as of October 2026; always check the official website before you apply.</p>\n<h3>Currency & Money</h3>\n<p><strong>Turkish Lira (TRY).</strong> Exchange rate: 1 USD ≈ 32 TRY. ATMs widely available. Tipping customary (10-15% at restaurants).</p>\n<h3>Budget Breakdown (per day, budget traveler)</h3>\n<ul>\n<li>Accommodation: TRY 200-400 (hostels, budget hotels)</li>\n<li>Food: TRY 200-400 (street food, casual restaurants, mezze)</li>\n<li>Transport: TRY 100-200 (metro, taxis, buses)</li>\n<li>Activities: TRY 200-400 (museums, tours, attractions)</li>\n<li><strong>Total: TRY 700-1400/day (~$22-44 USD)</strong></li>\n</ul>\n<h3>Important Notes</h3>\n<ul>\n<li>Hot air balloon rides book in advance - popular and limited spots.</li>\n<li>Bargaining expected in bazaars - friendly negotiation is normal.</li>\n<li>Turkish hospitality warm and welcoming - locals appreciate politeness.</li>\n<li>Ramadan affects dining hours and local customs - respect fasting.</li>\n<li>Tap water generally potable in cities but bottled water safer.</li>\n</ul>"
+      "html": "<h3>Visa &amp; Entry</h3>\n<p><strong>Visa for Indians:</strong> if you hold a valid US, UK, Schengen or Irish visa or residence permit, you can apply for a Turkish e-Visa online at evisa.gov.tr (use only the official site). Otherwise, apply for a regular visa through the Turkish visa centre in India. Rules as of October 2026; always check the official website before you apply.</p>\n<h3>Currency & Money</h3>\n<p><strong>Turkish Lira (TRY).</strong> Exchange rate: 1 USD ≈ 32 TRY. ATMs widely available. Tipping customary (10-15% at restaurants).</p>\n<h3>Budget Breakdown (per day, budget traveler)</h3>\n<ul>\n<li>Accommodation: TRY 200-400 (hostels, budget hotels)</li>\n<li>Food: TRY 200-400 (street food, casual restaurants, mezze)</li>\n<li>Transport: TRY 100-200 (metro, taxis, buses)</li>\n<li>Activities: TRY 200-400 (museums, tours, attractions)</li>\n<li><strong>Total: TRY 700-1400/day (~$22-44 USD)</strong></li>\n</ul>\n<h3>Important Notes</h3>\n<ul>\n<li>Hot air balloon rides book in advance - popular and limited spots.</li>\n<li>Bargaining expected in bazaars - friendly negotiation is normal.</li>\n<li>Turkish hospitality warm and welcoming - locals appreciate politeness.</li>\n<li>Ramadan affects dining hours and local customs - respect fasting.</li>\n<li>Tap water generally potable in cities but bottled water safer.</li>\n</ul>\n<p><strong>Prices change quickly:</strong> the Turkish lira has lost value fast in recent years, so local-currency prices rise often. Treat the figures in this guide as rough and check current prices before you go.</p>"
     }
   ],
   "related": [

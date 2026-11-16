@@ -7,6 +7,7 @@ const path = require('path');
 const { header, footer, HEAD_LINKS, SCRIPT, FONTS } = require('./site-chrome.cjs');
 const { altFor } = require('./image-alts.cjs');
 const { DATA: KLOOK, klookBox } = require('./affiliates.cjs');
+const { rupees } = require('./guide-data.cjs');
 
 const ROOT = path.join(__dirname, '..');
 const SITE = 'https://www.loveandlayover.in';
@@ -14,9 +15,6 @@ const SUBSCRIBE = 'https://www.youtube.com/@LoveAndLayover?sub_confirmation=1';
 const CHANNEL_SEARCH = (q) => `https://www.youtube.com/@LoveAndLayover/search?query=${encodeURIComponent(q)}`;
 const DATA = path.join(ROOT, 'data', 'guides');
 const credits = JSON.parse(fs.readFileSync(path.join(ROOT, 'images', 'destinations', 'credits.json'), 'utf8'));
-
-// Rough rupee rates for the "≈ ₹" budget hints. Update now and then; shown as approximate.
-const INR = { 'A$': 55, 'S$': 65, RM: 19.5, EUR: 95, '€': 95, IDR: 0.0053, EGP: 1.75, ISK: 0.62, '¥': 0.57, MXN: 4.5, PEN: 23, '₩': 0.062, '฿': 2.5, TRY: 2.1, '₫': 0.0034, LKR: 0.28, 'US$': 85, AED: 23, NPR: 0.625, 'HK$': 10.8, '₱': 1.5, AZN: 50, GEL: 31, KZT: 0.17, UZS: 0.0068, 'NT$': 2.7, QAR: 23, OMR: 220, MOP: 10.6, '₹': 1 };
 
 const esc = (s = '') => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const fixAmp = (h = '') => h.replace(/&(?![a-zA-Z]+;|#\d+;|#x[0-9a-f]+;)/gi, '&amp;');
@@ -28,18 +26,6 @@ const home = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
 const CARD = {};
 for (const m of home.matchAll(/<a class="dest"[^>]*href="\/destinations\/([\w-]+)\.html"[^>]*>[\s\S]*?<img class="flag" src="([^"]+)"[\s\S]*?<h3>([^<]+)<\/h3><p>([^<]*)<\/p>/g)) {
   CARD[m[1]] = { flag: m[2], name: m[3], line: m[4] };
-}
-
-function rupees(budget) {
-  const m = budget.match(/^\s*(A\$|S\$|US\$|HK\$|NT\$|NPR|₱|RM|EUR|€|IDR|EGP|ISK|¥|MXN|PEN|₩|฿|TRY|₫|LKR|AED|AZN|GEL|KZT|UZS|QAR|OMR|MOP|₹)?\s*([\d.,]+)\s*([kKmM])?\s*[–-]\s*([\d.,]+)\s*([kKmM])?/);
-  if (!m) return null;
-  const cur = m[1] || '₹';
-  const num = (n, s) => parseFloat(n.replace(/,/g, '')) * (s ? (/k/i.test(s) ? 1e3 : 1e6) : 1);
-  const lo = num(m[2], m[3] || m[5]), hi = num(m[4], m[5]);
-  if (cur === '₹') return null;
-  const r = (v) => { const x = v * INR[cur]; const step = x >= 10000 ? 500 : 100; return Math.round(x / step) * step; };
-  const f = (v) => '₹' + r(v).toLocaleString('en-IN');
-  return `≈ ${f(lo)}–${f(hi).slice(1)}`;
 }
 
 function credit(key) {

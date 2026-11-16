@@ -28,7 +28,7 @@ function typeOf(url) {
   if (url.includes('/destinations/') && !url.endsWith('/destinations/')) return 'Guide';
   if (url.includes('/blog/')) return 'Post';
   if (url.includes('/videos/')) return 'Video';
-  if (/calculator|trip-finder/.test(url)) return 'Tool';
+  if (/calculator|trip-finder|visa-checker/.test(url)) return 'Tool';
   return 'Page';
 }
 

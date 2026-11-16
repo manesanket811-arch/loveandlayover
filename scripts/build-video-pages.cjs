@@ -6,6 +6,8 @@
 const fs = require('fs');
 const path = require('path');
 const chrome = require('./site-chrome.cjs');
+const { loadGuides, fmt, VISA } = require('./guide-data.cjs');
+const { DATA: KLOOK, klookUrl } = require('./affiliates.cjs');
 
 const ROOT = path.join(__dirname, '..');
 const SITE = 'https://www.loveandlayover.in';
@@ -109,6 +111,30 @@ function relatedGuides(v, limit = 4) {
     .map(x => x.g);
 }
 
+// "Plan this trip" card: the destination this video is about, with its budget, best
+// time, visa label and (where we have them) one or two Klook picks
+const DEST = Object.fromEntries(loadGuides().map(d => [d.slug, d]));
+function planBox(related) {
+  const g = related.find(x => x.isDestination);
+  const d = g && DEST[g.url.replace(/^\/destinations\/|\.html$/g, '')];
+  if (!d) return '';
+  const budget = d.inr ? `${fmt(d.inr.lo)}–${fmt(d.inr.hi).slice(1)}/day` : d.budget;
+  const picks = KLOOK.aid ? (KLOOK.guides[d.slug] || []).slice(0, 2).map(k => [k, KLOOK.products[k]]).filter(([, p]) => p) : [];
+  return `<section class="vp-plan" aria-label="Plan this trip">
+  <a class="vp-plan-img" href="/destinations/${d.slug}.html" tabindex="-1" aria-hidden="true"><img src="${d.thumb}" alt="" loading="lazy" width="640" height="400"></a>
+  <div class="vp-plan-body">
+    <p class="vp-plan-kicker">Plan this trip</p>
+    <h2>${esc(d.name)}: free guide &amp; itinerary</h2>
+    <ul class="vp-plan-facts"><li><b>Budget</b> ${esc(budget)}</li><li><b>Best time</b> ${esc(d.best.replace(/\s*\(.*\)/, ''))}</li><li><b>Visa</b> ${esc(VISA[d.visaType].label)}</li></ul>
+    <div class="vp-plan-cta">
+      <a class="btn btn-primary" href="/destinations/${d.slug}.html#itineraries" data-plan="guide">See the ${d.plans ? d.plans.join(', ').replace(/, (\d+)$/, ' & $1') : d.days}-day plan →</a>
+${picks.map(([k, p]) => `      <a class="btn btn-secondary" href="${esc(klookUrl(p.url))}" target="_blank" rel="sponsored noopener" data-klook="${esc(k)}">${esc(p.name)}</a>`).join('\n')}
+    </div>
+${picks.length ? '    <p class="vp-plan-note">Klook links are affiliate links: we may earn a small commission at no extra cost to you.</p>' : ''}
+  </div>
+</section>`;
+}
+
 // ---------- shared layout ----------
 function layout({ title, description, canonical, image, head = '', body }) {
   return `<!DOCTYPE html>
@@ -162,6 +188,17 @@ ${chrome.FONTS}
   .vp-card img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; display: block; background: #eee; }
   .vp-card span { display: block; padding: 10px 12px 12px; font-size: .88rem; font-weight: 600; line-height: 1.35; }
   .vp-card small { display: block; color: var(--grey-500, #6b7280); font-weight: 500; margin-top: 4px; }
+  .vp-plan { display: grid; grid-template-columns: 240px minmax(0, 1fr); margin: 28px 0 8px; background: #fff; border: 1px solid var(--grey-200, #e5e7eb); border-radius: 18px; overflow: hidden; box-shadow: 0 8px 24px rgba(10,22,40,.06); }
+  .vp-plan-img img { width: 100%; height: 100%; object-fit: cover; display: block; min-height: 180px; }
+  .vp-plan-body { padding: 20px 22px; }
+  .vp-plan-kicker { margin: 0; font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); }
+  .vp-plan-body h2 { margin: 4px 0 10px; font-size: 1.35rem; }
+  .vp-plan-facts { list-style: none; display: flex; flex-wrap: wrap; gap: 6px 18px; padding: 0; margin: 0 0 14px; font-size: .9rem; }
+  .vp-plan-facts b { display: block; font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; color: var(--grey-500, #6b7280); }
+  .vp-plan-cta { display: flex; flex-wrap: wrap; gap: 8px; }
+  .vp-plan-cta .btn { padding: 11px 16px; font-size: .86rem; white-space: normal; text-align: center; }
+  .vp-plan-note { margin: 10px 0 0; font-size: .76rem; color: var(--grey-500, #6b7280); }
+  @media (max-width: 640px) { .vp-plan { grid-template-columns: minmax(0, 1fr); } .vp-plan-img img { min-height: 0; aspect-ratio: 16 / 9; } .vp-plan-cta .btn { flex: 1 1 100%; justify-content: center; } }
   .vp-chapters { list-style: none; padding: 0; margin: 0 0 8px; display: grid; gap: 6px; }
   .vp-chapters a { display: flex; gap: 14px; align-items: baseline; padding: 10px 14px; border: 1px solid var(--grey-200, #e5e7eb); border-radius: 10px; background: #fff; color: var(--primary, #0a1628); font-weight: 600; font-size: .95rem; }
   .vp-chapters a:hover { border-color: var(--accent); color: var(--accent); }
@@ -254,9 +291,10 @@ ${chapters(v).length ? `<h2>Chapters</h2>
   });
 </script>` : ''}
 ${lines.length ? `<div class="vp-desc">${lines.map(l => `<p>${esc(l)}</p>`).join('\n')}</div>` : ''}
+${planBox(related)}
 ${related.length ? `<h2>Plan your own trip</h2>
 <ul class="vp-guides">${related.map(g => `<li><a href="${g.url}">${esc(g.title)} →</a></li>`).join('')}</ul>` : `<h2>Plan your own trip</h2>
-<ul class="vp-guides"><li><a href="/destinations/">Browse all destination guides →</a></li><li><a href="/blog.html">Read the travel blog →</a></li></ul>`}
+<ul class="vp-guides"><li><a href="/destinations/">Browse all destination guides →</a></li><li><a href="/trip-finder.html">Take the trip finder quiz →</a></li><li><a href="/blog.html">Read the travel blog →</a></li></ul>`}
 ${more.length ? `<h2>More ${isShort(v) ? 'Shorts' : 'videos'}</h2>
 <div class="vp-grid">${more.map(card).join('\n')}</div>` : ''}
 `;

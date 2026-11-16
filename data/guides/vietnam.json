@@ -5,12 +5,13 @@
   "h1": "Vietnam Travel Guide 2026",
   "country": "Vietnam",
   "datePublished": "2026-01-01",
-  "dateModified": "2026-10-06",
+  "dateModified": "2026-11-16",
   "faq": [],
   "badges": {
-    "budget": "₫500,000–800,000/day",
+    "budget": "₫800,000–1,300,000/day",
     "best": "Oct–Apr",
-    "visa": "e-Visa (up to 90 days)"
+    "visa": "e-Visa (up to 90 days)",
+    "visaType": "evisa"
   },
   "videoKeywords": "vietnam,hanoi,ha long",
   "sections": [
@@ -22,7 +23,7 @@
     {
       "id": "itineraries",
       "title": "Vietnam Itineraries: 3, 5 or 7 Days",
-      "html": "<p>Pick 3, 5 or 7 days. Each longer plan builds on the shorter one: the first days stay the same and the extra days add more places. Costs are approximate per person per day; prices and timings change, so check before you book.</p>",
+      "html": "<p>Pick 3, 5 or 7 days. Each longer plan builds on the shorter one: the first days stay the same and the extra days add more places. Costs are approximate per person per day; prices and timings change, so check before you book. The daily budget at the top of this guide includes a mid-range hotel shared by two; the day-by-day costs below cover food, local transport and entry fees, with your hotel extra.</p>",
       "after": "",
       "days": [
         {

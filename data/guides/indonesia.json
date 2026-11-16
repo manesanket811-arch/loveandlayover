@@ -10,7 +10,8 @@
   "badges": {
     "budget": "IDR 600k-1M/day",
     "best": "Apr-Oct",
-    "visa": "Visa on arrival or e-VoA"
+    "visa": "Visa on arrival or e-VoA",
+    "visaType": "arrival"
   },
   "videoKeywords": "indonesia,bali",
   "foodImage": {

@@ -5,12 +5,13 @@
   "h1": "Japan Travel Guide 2026",
   "country": "Japan",
   "datePublished": "2026-01-01",
-  "dateModified": "2026-10-06",
+  "dateModified": "2026-11-16",
   "faq": [],
   "badges": {
-    "budget": "¥6,000–10,000/day",
+    "budget": "¥14,000–22,000/day",
     "best": "Mar–May, Sep–Nov",
-    "visa": "required for Indians (eVISA)"
+    "visa": "required for Indians (eVISA)",
+    "visaType": "evisa"
   },
   "videoKeywords": "japan,tokyo,kyoto,osaka",
   "sections": [
@@ -22,7 +23,7 @@
     {
       "id": "itineraries",
       "title": "Japan Itineraries: 3, 5 or 7 Days",
-      "html": "<p>Pick 3, 5 or 7 days. Each longer plan builds on the shorter one: the first days stay the same and the extra days add more places. Costs are approximate per person per day; prices and timings change, so check before you book.</p>",
+      "html": "<p>Pick 3, 5 or 7 days. Each longer plan builds on the shorter one: the first days stay the same and the extra days add more places. Costs are approximate per person per day; prices and timings change, so check before you book. The daily budget at the top of this guide includes a mid-range hotel shared by two; the day-by-day costs below cover food, local transport and entry fees, with your hotel extra.</p>",
       "after": "<p><strong>Extend to Kyoto?</strong> Take the Shinkansen from Tokyo to Kyoto (2 hours, ¥13,320). Kyoto offers temples, geisha districts (Gion), bamboo forests, and traditional culture.</p>",
       "days": [
         {

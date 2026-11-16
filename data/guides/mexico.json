@@ -5,12 +5,13 @@
   "h1": "Mexico Travel Guide 2026",
   "country": "Mexico",
   "datePublished": "2026-01-01",
-  "dateModified": "2026-10-02",
+  "dateModified": "2026-11-16",
   "faq": [],
   "badges": {
-    "budget": "MXN 1000-1800/day",
+    "budget": "MXN 1,400–2,200/day",
     "best": "Nov-Apr",
-    "visa": "Visa needed (unless you hold a US/UK/Schengen visa)"
+    "visa": "Visa needed (unless you hold a US/UK/Schengen visa)",
+    "visaType": "visa"
   },
   "videoKeywords": "mexico",
   "foodImage": {
@@ -27,7 +28,7 @@
     {
       "id": "itineraries",
       "title": "3-Day Mexico Itinerary",
-      "html": "<p>A 3-day plan with morning, afternoon and evening ideas and an approximate daily cost per person. Use it as a starting point and adjust to your pace.</p>",
+      "html": "<p>A 3-day plan with morning, afternoon and evening ideas and an approximate daily cost per person. Use it as a starting point and adjust to your pace. The daily budget at the top of this guide includes a mid-range hotel shared by two; the day-by-day costs below cover food, local transport and entry fees, with your hotel extra.</p>",
       "after": "",
       "days": [
         {
