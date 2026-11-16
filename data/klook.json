@@ -350,6 +350,29 @@
         "sg-uss",
         "sg-gardens"
       ]
+    },
+    "bali-vs-thailand": {
+      "items": [
+        "bali-penida",
+        "bali-batur",
+        "th-safari",
+        "th-pass"
+      ],
+      "before": "<h2 id=\"which-one-for-which-trip\""
+    },
+    "dubai-with-family": {
+      "items": [
+        "ae-desert"
+      ],
+      "before": "<h2 id=\"how-much-it-costs\""
+    },
+    "japan-trip-cost-from-india": {
+      "items": [
+        "jp-jrpass",
+        "jp-teamlab",
+        "jp-usj"
+      ],
+      "before": "<h2 id=\"ways-to-spend-less\""
     }
   },
   "home": [

@@ -312,7 +312,7 @@ ${groups.map(t => `    <button class="chipbtn" type="button" data-v="${t}" aria-
   <div class="vlist" id="vlist">
 ${rows}
   </div>
-  <p class="vnote"><strong>Always double-check.</strong> These notes are for Indian passport holders travelling as tourists and were last reviewed in ${MONTHS[new Date().getUTCMonth()]} ${new Date().getUTCFullYear()}. Visa rules change without notice, so confirm on the official government or embassy website before you book flights. Holding a valid US, UK or Schengen visa often unlocks easier entry elsewhere.</p>
+  <p class="vnote"><strong>Always double-check.</strong> These notes are for Indian passport holders travelling as tourists and were last reviewed in ${MONTHS[new Date().getUTCMonth()]} ${new Date().getUTCFullYear()}. Visa rules change without notice, so confirm on the official government or embassy website before you book flights. Holding a valid US, UK or Schengen visa often unlocks easier entry elsewhere. Planning by visa? Read our list of <a href="/blog/visa-free-countries-for-indians.html">visa-free and visa-on-arrival countries for Indians</a>.</p>
 
   <div class="vfaq">
     <h2>Visa FAQs for Indian travellers</h2>
