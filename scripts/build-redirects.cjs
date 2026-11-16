@@ -56,3 +56,30 @@ Taking you there now… If nothing happens, <a href="/destinations/">browse all 
 `;
 fs.writeFileSync(path.join(ROOT, 'itinerary-builder.html'), page);
 console.log(`itinerary-builder.html: forwards to ${Object.keys(guides).length} guides`);
+
+// Other pages removed in 2026 that Google or old links may still request
+const MOVED = {
+  'faq.html': ['/destinations/', 'Our travel FAQs now live inside each destination guide.'],
+  'resources.html': ['/trip-finder.html', 'Our travel tools have moved: try the trip finder and the trip cost calculator.'],
+  'newsletter.html': ['/', 'This page has moved.'],
+  'testimonials.html': ['/work-with-us.html', 'This page has moved.'],
+};
+for (const [file, [to, note]] of Object.entries(MOVED)) {
+  fs.writeFileSync(path.join(ROOT, file), `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page moved | Love and Layovers</title>
+<link rel="canonical" href="https://www.loveandlayover.in${to}">
+<script>location.replace(${JSON.stringify(to)});</script>
+<meta http-equiv="refresh" content="0; url=${to}">
+<style>body{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;background:#fefaf5;color:#0a1628;display:grid;place-items:center;min-height:100vh;margin:0;padding:24px;text-align:center}a{color:#b5561a;font-weight:700}</style>
+</head>
+<body>
+<p>${note}<br>Taking you there now… If nothing happens, <a href="${to}">continue here</a>.</p>
+</body>
+</html>
+`);
+}
+console.log(`moved pages: ${Object.keys(MOVED).join(', ')}`);

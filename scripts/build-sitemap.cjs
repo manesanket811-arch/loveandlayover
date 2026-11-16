@@ -9,7 +9,7 @@ const { execFileSync } = require('child_process');
 
 const ROOT = path.join(__dirname, '..');
 const SITE = 'https://www.loveandlayover.in';
-const SKIP = new Set(['404.html', 'itinerary-builder.html']);
+const SKIP = new Set(['404.html', 'itinerary-builder.html', 'faq.html', 'resources.html', 'newsletter.html', 'testimonials.html', 'googlea392d90b0eaf0e6a.html']);
 
 function pages() {
   const list = fs.readdirSync(ROOT).filter(f => f.endsWith('.html'));
