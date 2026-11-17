@@ -38,7 +38,7 @@
 <link rel="me" href="https://www.instagram.com/loveandlayover">
 <link rel="me" href="https://www.youtube.com/@LoveAndLayover">
 
-<link rel="preload" as="image" href="/assets/self/couple-hero.webp" type="image/webp">
+<link rel="preload" as="image" href="/assets/self/slides/couple-8.webp" type="image/webp">
 <link rel="preload" href="/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/fraunces-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/css/fonts.css?v=1">
@@ -175,9 +175,17 @@
   .story-who { display: flex; align-items: center; gap: 8px; margin-top: 10px; color: #fff; font-size: .86rem; font-weight: 700; text-shadow: 0 1px 6px rgba(0,0,0,.35); }
   .story-who .av { width: 30px; height: 30px; border-radius: 50%; border: 2px solid #fff; background: #fff url(/assets/self/avatar.webp) center / cover; box-shadow: 0 0 0 2px #e1306c; flex: none; }
   .story-who .where { font-weight: 500; opacity: .85; }
-  .hero-visual .float-new { top: 27%; }
+  .hero-grid { grid-template-columns: 1fr 1fr; }
+  .hero-visual { aspect-ratio: 4 / 5; max-width: 600px; }
+  .hero-photo { width: 88%; height: 100%; }
+  .hero-visual .float-new { top: 27%; left: -2%; }
+  .hero-visual .float-guides { bottom: 12%; }
+  @media (max-width: 960px) { .hero-grid { grid-template-columns: 1fr; } .hero-visual { max-width: 500px; } }
+  /* Boarding pass in the "Come along" section */
+  .follow-pass { max-width: 560px; margin: 0 auto 34px; transform: rotate(-2deg); filter: drop-shadow(0 18px 30px rgba(10,22,40,.22)); }
+  .follow-pass img { width: 100%; height: auto; display: block; }
   @media (max-width: 600px) {
-    .hero-visual .float-new { top: auto; bottom: 25%; left: -3%; max-width: 205px; padding: 9px 11px; }
+    .hero-visual .float-new { top: auto; bottom: 4%; left: -3%; max-width: 205px; padding: 9px 11px; }
     .hero-visual .float-guides { top: 15%; bottom: auto; right: -3%; padding: 9px 11px; }
     .hero-visual .float-card b { font-size: .8rem; }
     .hero-visual .float-guides .big { font-size: 1.5rem; }
@@ -241,8 +249,7 @@
     </div>
 
     <div class="hero-visual" aria-hidden="true">
-      <div class="hero-photo" id="heroSlides" data-slides='[["couple-1","60% 55%"],["couple-2","55% 62%"],["couple-3","50% 70%"],["couple-4","50% 28%"],["couple-5","50% 78%"],["couple-6","50% 30%"],["couple-7","50% 62%"],["couple-8","50% 76%"]]'><img class="on" src="/assets/self/couple-hero.webp" alt="Sanket and Nikita, travel and lifestyle creators in Singapore" width="640" height="800" fetchpriority="high"><div class="story-top"><div class="story-bars"></div><div class="story-who"><span class="av"></span>loveandlayover <span class="where">Singapore</span></div></div></div>
-      <div class="hero-art hero-pass"><img src="/public/images/boarding-pass.webp" alt="Love and Layovers boarding pass: Nikita and Sanket, India to Singapore, new video every week" width="1100" height="244" loading="lazy"></div>
+      <div class="hero-photo" id="heroSlides" data-slides='[["couple-1","60% 55%"],["couple-2","55% 62%"],["couple-3","50% 70%"],["couple-4","50% 28%"],["couple-5","50% 78%"],["couple-6","50% 30%"],["couple-7","50% 62%"]]'><img class="on" src="/assets/self/slides/couple-8.webp" alt="Sanket and Nikita at Jewel Changi Airport, Singapore" width="760" height="1350" style="object-position:50% 76%" fetchpriority="high"><div class="story-top"><div class="story-bars"></div><div class="story-who"><span class="av"></span>loveandlayover <span class="where">Singapore</span></div></div></div>
       <a class="float-card float-new" id="heroLatest" href="/videos.html" tabindex="-1">
         <span class="thumb"></span>
         <span><small>New on YouTube</small><b>Fresh travel vlogs every week</b></span>
@@ -592,6 +599,7 @@
 <!-- ===== Follow ===== -->
 <section class="follow">
   <div class="wrap reveal">
+    <div class="follow-pass"><img src="/public/images/boarding-pass.webp" alt="Love and Layovers boarding pass: Nikita and Sanket, India to Singapore, new video every week" width="1100" height="244" loading="lazy" decoding="async"></div>
     <span class="kicker">Come along</span>
     <h2>New adventures every week — don't miss the next one.</h2>
     <p>Daily vlogs on YouTube, behind-the-scenes on Instagram, and free guides right here.</p>
