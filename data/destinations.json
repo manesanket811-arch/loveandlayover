@@ -1,0 +1,227 @@
+{
+  "_readme": "One entry per destination guide: region (asia, europe, americas, more), flag image, display name and a one-line description. Read by scripts/guide-data.cjs, build-guides.cjs and build-trip-finder.cjs. Add an entry here when you add a guide.",
+  "destinations": {
+    "singapore": {
+      "region": "asia",
+      "flag": "/images/flags/sg.svg",
+      "name": "Singapore",
+      "line": "Hawker food, Marina Bay & easy layovers"
+    },
+    "japan": {
+      "region": "asia",
+      "flag": "/images/flags/jp.svg",
+      "name": "Japan",
+      "line": "Tokyo, Kyoto & Mt. Fuji"
+    },
+    "thailand": {
+      "region": "asia",
+      "flag": "/images/flags/th.svg",
+      "name": "Thailand",
+      "line": "Bangkok streets to Phuket beaches"
+    },
+    "malaysia": {
+      "region": "asia",
+      "flag": "/images/flags/my.svg",
+      "name": "Malaysia",
+      "line": "KL, Genting & Penang food"
+    },
+    "bali": {
+      "region": "asia",
+      "flag": "/images/flags/id.svg",
+      "name": "Bali",
+      "line": "Temples, rice terraces & sunsets"
+    },
+    "vietnam": {
+      "region": "asia",
+      "flag": "/images/flags/vn.svg",
+      "name": "Vietnam",
+      "line": "Hanoi, Ha Long Bay & pho"
+    },
+    "south-korea": {
+      "region": "asia",
+      "flag": "/images/flags/kr.svg",
+      "name": "South Korea",
+      "line": "Seoul palaces & street food"
+    },
+    "india": {
+      "region": "asia",
+      "flag": "/images/flags/in.svg",
+      "name": "India",
+      "line": "Taj Mahal, Delhi & Rajasthan"
+    },
+    "indonesia": {
+      "region": "asia",
+      "flag": "/images/flags/id.svg",
+      "name": "Indonesia",
+      "line": "Borobudur & Yogyakarta"
+    },
+    "sri-lanka": {
+      "region": "asia",
+      "flag": "/images/flags/lk.svg",
+      "name": "Sri Lanka",
+      "line": "Sigiriya, tea hills & beaches"
+    },
+    "maldives": {
+      "region": "asia",
+      "flag": "/images/flags/mv.svg",
+      "name": "Maldives",
+      "line": "Lagoons, reefs & island resorts"
+    },
+    "dubai": {
+      "region": "asia",
+      "flag": "/images/flags/ae.svg",
+      "name": "Dubai",
+      "line": "Burj Khalifa, souks & desert"
+    },
+    "nepal": {
+      "region": "asia",
+      "flag": "/images/flags/np.svg",
+      "name": "Nepal",
+      "line": "Himalayas, temples & Pokhara"
+    },
+    "bhutan": {
+      "region": "asia",
+      "flag": "/images/flags/bt.svg",
+      "name": "Bhutan",
+      "line": "Dzongs & Tiger's Nest"
+    },
+    "hong-kong": {
+      "region": "asia",
+      "flag": "/images/flags/hk.svg",
+      "name": "Hong Kong",
+      "line": "Skyline, dim sum & the Peak"
+    },
+    "philippines": {
+      "region": "asia",
+      "flag": "/images/flags/ph.svg",
+      "name": "Philippines",
+      "line": "El Nido lagoons & Bohol"
+    },
+    "azerbaijan": {
+      "region": "asia",
+      "flag": "/images/flags/az.svg",
+      "name": "Azerbaijan",
+      "line": "Baku, fire temple & mountains"
+    },
+    "georgia": {
+      "region": "asia",
+      "flag": "/images/flags/ge.svg",
+      "name": "Georgia",
+      "line": "Tbilisi, Kazbegi & wine country"
+    },
+    "kazakhstan": {
+      "region": "asia",
+      "flag": "/images/flags/kz.svg",
+      "name": "Kazakhstan",
+      "line": "Almaty, Shymbulak & mountain lakes"
+    },
+    "uzbekistan": {
+      "region": "asia",
+      "flag": "/images/flags/uz.svg",
+      "name": "Uzbekistan",
+      "line": "Samarkand, Bukhara & Khiva"
+    },
+    "cambodia": {
+      "region": "asia",
+      "flag": "/images/flags/kh.svg",
+      "name": "Cambodia",
+      "line": "Angkor Wat & Phnom Penh"
+    },
+    "taiwan": {
+      "region": "asia",
+      "flag": "/images/flags/tw.svg",
+      "name": "Taiwan",
+      "line": "Taipei 101, night markets & lakes"
+    },
+    "qatar": {
+      "region": "asia",
+      "flag": "/images/flags/qa.svg",
+      "name": "Qatar",
+      "line": "Doha, souqs & desert safaris"
+    },
+    "oman": {
+      "region": "asia",
+      "flag": "/images/flags/om.svg",
+      "name": "Oman",
+      "line": "Wadis, dunes & Muscat"
+    },
+    "macau": {
+      "region": "asia",
+      "flag": "/images/flags/mo.svg",
+      "name": "Macau",
+      "line": "Egg tarts, old town & Cotai"
+    },
+    "turkey": {
+      "region": "more",
+      "flag": "/images/flags/tr.svg",
+      "name": "Turkey",
+      "line": "Istanbul & Cappadocia balloons"
+    },
+    "italy": {
+      "region": "europe",
+      "flag": "/images/flags/it.svg",
+      "name": "Italy",
+      "line": "Rome, Venice & Tuscany"
+    },
+    "greece": {
+      "region": "europe",
+      "flag": "/images/flags/gr.svg",
+      "name": "Greece",
+      "line": "Athens & Santorini sunsets"
+    },
+    "france": {
+      "region": "europe",
+      "flag": "/images/flags/fr.svg",
+      "name": "France",
+      "line": "Paris, cafés & the Louvre"
+    },
+    "spain": {
+      "region": "europe",
+      "flag": "/images/flags/es.webp",
+      "name": "Spain",
+      "line": "Barcelona, Madrid & tapas"
+    },
+    "portugal": {
+      "region": "europe",
+      "flag": "/images/flags/pt.svg",
+      "name": "Portugal",
+      "line": "Lisbon trams & Porto wine"
+    },
+    "germany": {
+      "region": "europe",
+      "flag": "/images/flags/de.svg",
+      "name": "Germany",
+      "line": "Berlin, Munich & castles"
+    },
+    "iceland": {
+      "region": "europe",
+      "flag": "/images/flags/is.svg",
+      "name": "Iceland",
+      "line": "Northern Lights & waterfalls"
+    },
+    "mexico": {
+      "region": "americas",
+      "flag": "/images/flags/mx.webp",
+      "name": "Mexico",
+      "line": "Mexico City & ancient ruins"
+    },
+    "peru": {
+      "region": "americas",
+      "flag": "/images/flags/pe.svg",
+      "name": "Peru",
+      "line": "Machu Picchu & Cusco"
+    },
+    "egypt": {
+      "region": "more",
+      "flag": "/images/flags/eg.svg",
+      "name": "Egypt",
+      "line": "Pyramids & the Nile"
+    },
+    "australia": {
+      "region": "more",
+      "flag": "/images/flags/au.svg",
+      "name": "Australia",
+      "line": "Sydney & the Great Barrier Reef"
+    }
+  }
+}

@@ -183,6 +183,8 @@
   @media (max-width: 960px) { .hero-grid { grid-template-columns: 1fr; } .hero-visual { max-width: 500px; } }
   /* Boarding pass in the "Come along" section */
   .follow-pass { max-width: 560px; margin: 0 auto 34px; transform: rotate(-2deg); filter: drop-shadow(0 18px 30px rgba(10,22,40,.22)); }
+  .dest-cta { text-align: center; margin-top: 20px; padding: 0 0 72px; }
+  .dest-cta p { margin-top: 12px; font-size: .92rem; color: var(--muted); }
   .follow-pass img { width: 100%; height: auto; display: block; }
   @media (max-width: 600px) {
     .hero-visual .float-new { top: auto; bottom: 4%; left: -3%; max-width: 205px; padding: 9px 11px; }
@@ -440,63 +442,10 @@
 <!-- month:end -->
 
 <!-- ===== Destinations ===== -->
-<section class="section" id="destinations">
+<section class="dest-cta" id="destinations" aria-label="Destination guides">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <div>
-        <span class="kicker">Destination guides</span>
-        <h2>Where to next?</h2>
-        <p>Day-by-day itineraries, real costs and the food we'd go back for — from Bali to Iceland, with new places added all the time.</p>
-      </div>
-      <div class="filters" role="group" aria-label="Filter destinations by region">
-        <button class="filter" type="button" data-region="all" aria-pressed="true">All</button>
-        <button class="filter" type="button" data-region="asia" aria-pressed="false">Asia</button>
-        <button class="filter" type="button" data-region="europe" aria-pressed="false">Europe</button>
-        <button class="filter" type="button" data-region="americas" aria-pressed="false">Americas</button>
-        <button class="filter" type="button" data-region="more" aria-pressed="false">Africa &amp; Oceania</button>
-      </div>
-    </div>
-
-    <div class="dest-grid reveal" id="destGrid" data-filter="all">
-      <a class="dest" data-region="asia" href="/destinations/singapore.html" style="--g:linear-gradient(150deg,#d4691d,#7a2e12)" data-bg="/images/destinations/thumbs/singapore-hero.webp"><img class="flag" src="/images/flags/sg.svg" alt="Flag of Singapore" width="36" height="27"><span class="tag">Our home</span><h3>Singapore</h3><p>Hawker food, Marina Bay &amp; easy layovers</p><span class="go">3, 5 &amp; 7-day plans →</span></a>
-      <a class="dest" data-region="asia" href="/destinations/japan.html" style="--g:linear-gradient(150deg,#e11d48,#5b1027)" data-bg="/images/destinations/thumbs/japan-hero.webp"><img class="flag" src="/images/flags/jp.svg" alt="Flag of Japan" width="36" height="27"><h3>Japan</h3><p>Tokyo, Kyoto &amp; Mt. Fuji</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="asia" href="/destinations/thailand.html" style="--g:linear-gradient(150deg,#0ea5a4,#0b3b4c)" data-bg="/images/destinations/thumbs/thailand-hero.webp"><img class="flag" src="/images/flags/th.svg" alt="Flag of Thailand" width="36" height="27"><h3>Thailand</h3><p>Bangkok streets to Phuket beaches</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="asia" href="/destinations/malaysia.html" style="--g:linear-gradient(150deg,#1d4ed8,#7f1d1d)" data-bg="/images/destinations/thumbs/malaysia-hero.webp"><img class="flag" src="/images/flags/my.svg" alt="Flag of Malaysia" width="36" height="27"><h3>Malaysia</h3><p>KL, Genting &amp; Penang food</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="asia" href="/destinations/bali.html" style="--g:linear-gradient(150deg,#16a34a,#0f3d2a)" data-bg="/images/destinations/thumbs/bali-hero.webp"><img class="flag" src="/images/flags/id.svg" alt="Flag of Indonesia" width="36" height="27"><h3>Bali</h3><p>Temples, rice terraces &amp; sunsets</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="asia" href="/destinations/vietnam.html" style="--g:linear-gradient(150deg,#dc2626,#4c1212)" data-bg="/images/destinations/thumbs/vietnam-hero.webp"><img class="flag" src="/images/flags/vn.svg" alt="Flag of Vietnam" width="36" height="27"><h3>Vietnam</h3><p>Hanoi, Ha Long Bay &amp; pho</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="asia" href="/destinations/south-korea.html" style="--g:linear-gradient(150deg,#4f46e5,#1e1b4b)" data-bg="/images/destinations/thumbs/south-korea-hero.webp"><img class="flag" src="/images/flags/kr.svg" alt="Flag of South Korea" width="36" height="27"><h3>South Korea</h3><p>Seoul palaces &amp; street food</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="asia" href="/destinations/india.html" style="--g:linear-gradient(150deg,#f59e0b,#7c2d12)" data-bg="/images/destinations/thumbs/india-hero.webp"><img class="flag" src="/images/flags/in.svg" alt="Flag of India" width="36" height="27"><h3>India</h3><p>Taj Mahal, Delhi &amp; Rajasthan</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="asia" href="/destinations/indonesia.html" style="--g:linear-gradient(150deg,#b45309,#3b1d0a)" data-bg="/images/destinations/thumbs/indonesia-hero.webp"><img class="flag" src="/images/flags/id.svg" alt="Flag of Indonesia" width="36" height="27"><h3>Indonesia</h3><p>Borobudur &amp; Yogyakarta</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="asia" href="/destinations/sri-lanka.html" style="--g:linear-gradient(150deg,#0f766e,#3b1d0a)" data-bg="/images/destinations/thumbs/sri-lanka-hero.webp"><img class="flag" src="/images/flags/lk.svg" alt="Flag of Sri Lanka" width="36" height="27"><h3>Sri Lanka</h3><p>Sigiriya, tea hills &amp; beaches</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="asia" href="/destinations/maldives.html" style="--g:linear-gradient(150deg,#0891b2,#0c2a4a)" data-bg="/images/destinations/thumbs/maldives-hero.webp"><img class="flag" src="/images/flags/mv.svg" alt="Flag of Maldives" width="36" height="27"><h3>Maldives</h3><p>Lagoons, reefs &amp; island resorts</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="asia" href="/destinations/dubai.html" style="--g:linear-gradient(150deg,#b45309,#1e1b4b)" data-bg="/images/destinations/thumbs/dubai-hero.webp"><img class="flag" src="/images/flags/ae.svg" alt="Flag of United Arab Emirates" width="36" height="27"><h3>Dubai</h3><p>Burj Khalifa, souks &amp; desert</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="asia" href="/destinations/nepal.html" style="--g:linear-gradient(150deg,#b91c1c,#1e3a8a)" data-bg="/images/destinations/thumbs/nepal-hero.webp"><img class="flag" src="/images/flags/np.svg" alt="Flag of Nepal" width="36" height="27"><h3>Nepal</h3><p>Himalayas, temples &amp; Pokhara</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="asia" href="/destinations/bhutan.html" style="--g:linear-gradient(150deg,#ea580c,#7c2d12)" data-bg="/images/destinations/thumbs/bhutan-hero.webp"><img class="flag" src="/images/flags/bt.svg" alt="Flag of Bhutan" width="36" height="27"><h3>Bhutan</h3><p>Dzongs &amp; Tiger's Nest</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="asia" href="/destinations/hong-kong.html" style="--g:linear-gradient(150deg,#dc2626,#111827)" data-bg="/images/destinations/thumbs/hong-kong-hero.webp"><img class="flag" src="/images/flags/hk.svg" alt="Flag of Hong Kong" width="36" height="27"><h3>Hong Kong</h3><p>Skyline, dim sum &amp; the Peak</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="asia" href="/destinations/philippines.html" style="--g:linear-gradient(150deg,#2563eb,#0f766e)" data-bg="/images/destinations/thumbs/philippines-hero.webp"><img class="flag" src="/images/flags/ph.svg" alt="Flag of Philippines" width="36" height="27"><h3>Philippines</h3><p>El Nido lagoons &amp; Bohol</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="asia" href="/destinations/azerbaijan.html" style="--g:linear-gradient(150deg,#0e7490,#1e1b4b)" data-bg="/images/destinations/thumbs/azerbaijan-hero.webp"><img class="flag" src="/images/flags/az.svg" alt="Flag of Azerbaijan" width="36" height="27"><h3>Azerbaijan</h3><p>Baku, fire temple &amp; mountains</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="asia" href="/destinations/georgia.html" style="--g:linear-gradient(150deg,#b91c1c,#1f2937)" data-bg="/images/destinations/thumbs/georgia-hero.webp"><img class="flag" src="/images/flags/ge.svg" alt="Flag of Georgia" width="36" height="27"><h3>Georgia</h3><p>Tbilisi, Kazbegi &amp; wine country</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="asia" href="/destinations/kazakhstan.html" style="--g:linear-gradient(150deg,#0284c7,#0c4a6e)" data-bg="/images/destinations/thumbs/kazakhstan-hero.webp"><img class="flag" src="/images/flags/kz.svg" alt="Flag of Kazakhstan" width="36" height="27"><h3>Kazakhstan</h3><p>Almaty, Shymbulak &amp; mountain lakes</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="asia" href="/destinations/uzbekistan.html" style="--g:linear-gradient(150deg,#0d9488,#1e3a8a)" data-bg="/images/destinations/thumbs/uzbekistan-hero.webp"><img class="flag" src="/images/flags/uz.svg" alt="Flag of Uzbekistan" width="36" height="27"><h3>Uzbekistan</h3><p>Samarkand, Bukhara &amp; Khiva</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="asia" href="/destinations/cambodia.html" style="--g:linear-gradient(150deg,#b45309,#7c2d12)" data-bg="/images/destinations/thumbs/cambodia-hero.webp"><img class="flag" src="/images/flags/kh.svg" alt="Flag of Cambodia" width="36" height="27"><h3>Cambodia</h3><p>Angkor Wat &amp; Phnom Penh</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="asia" href="/destinations/taiwan.html" style="--g:linear-gradient(150deg,#dc2626,#1e3a8a)" data-bg="/images/destinations/thumbs/taiwan-hero.webp"><img class="flag" src="/images/flags/tw.svg" alt="Flag of Taiwan" width="36" height="27"><h3>Taiwan</h3><p>Taipei 101, night markets &amp; lakes</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="asia" href="/destinations/qatar.html" style="--g:linear-gradient(150deg,#7f1d1d,#451a03)" data-bg="/images/destinations/thumbs/qatar-hero.webp"><img class="flag" src="/images/flags/qa.svg" alt="Flag of Qatar" width="36" height="27"><h3>Qatar</h3><p>Doha, souqs &amp; desert safaris</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="asia" href="/destinations/oman.html" style="--g:linear-gradient(150deg,#b91c1c,#14532d)" data-bg="/images/destinations/thumbs/oman-hero.webp"><img class="flag" src="/images/flags/om.svg" alt="Flag of Oman" width="36" height="27"><h3>Oman</h3><p>Wadis, dunes &amp; Muscat</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="asia" href="/destinations/macau.html" style="--g:linear-gradient(150deg,#047857,#0f172a)" data-bg="/images/destinations/thumbs/macau-hero.webp"><img class="flag" src="/images/flags/mo.svg" alt="Flag of Macau" width="36" height="27"><h3>Macau</h3><p>Egg tarts, old town &amp; Cotai</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="more" href="/destinations/turkey.html" style="--g:linear-gradient(150deg,#e11d48,#450a0a)" data-bg="/images/destinations/thumbs/turkey-hero.webp"><img class="flag" src="/images/flags/tr.svg" alt="Flag of Turkey" width="36" height="27"><h3>Turkey</h3><p>Istanbul &amp; Cappadocia balloons</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="europe" href="/destinations/italy.html" style="--g:linear-gradient(150deg,#059669,#7f1d1d)" data-bg="/images/destinations/thumbs/italy-hero.webp"><img class="flag" src="/images/flags/it.svg" alt="Flag of Italy" width="36" height="27"><h3>Italy</h3><p>Rome, Venice &amp; Tuscany</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="europe" href="/destinations/greece.html" style="--g:linear-gradient(150deg,#0284c7,#0c2a4a)" data-bg="/images/destinations/thumbs/greece-hero.webp"><img class="flag" src="/images/flags/gr.svg" alt="Flag of Greece" width="36" height="27"><h3>Greece</h3><p>Athens &amp; Santorini sunsets</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="europe" href="/destinations/france.html" style="--g:linear-gradient(150deg,#2563eb,#831843)" data-bg="/images/destinations/thumbs/france-hero.webp"><img class="flag" src="/images/flags/fr.svg" alt="Flag of France" width="36" height="27"><h3>France</h3><p>Paris, cafés &amp; the Louvre</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="europe" href="/destinations/spain.html" style="--g:linear-gradient(150deg,#ea580c,#7f1d1d)" data-bg="/images/destinations/thumbs/spain-hero.webp"><img class="flag" src="/images/flags/es.webp" alt="Flag of Spain" width="36" height="27"><h3>Spain</h3><p>Barcelona, Madrid &amp; tapas</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="europe" href="/destinations/portugal.html" style="--g:linear-gradient(150deg,#15803d,#7f1d1d)" data-bg="/images/destinations/thumbs/portugal-hero.webp"><img class="flag" src="/images/flags/pt.svg" alt="Flag of Portugal" width="36" height="27"><h3>Portugal</h3><p>Lisbon trams &amp; Porto wine</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="europe" href="/destinations/germany.html" style="--g:linear-gradient(150deg,#475569,#111827)" data-bg="/images/destinations/thumbs/germany-hero.webp"><img class="flag" src="/images/flags/de.svg" alt="Flag of Germany" width="36" height="27"><h3>Germany</h3><p>Berlin, Munich &amp; castles</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="europe" href="/destinations/iceland.html" style="--g:linear-gradient(150deg,#06b6d4,#0f172a)" data-bg="/images/destinations/thumbs/iceland-hero.webp"><img class="flag" src="/images/flags/is.svg" alt="Flag of Iceland" width="36" height="27"><h3>Iceland</h3><p>Northern Lights &amp; waterfalls</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="americas" href="/destinations/mexico.html" style="--g:linear-gradient(150deg,#16a34a,#7f1d1d)" data-bg="/images/destinations/thumbs/mexico-hero.webp"><img class="flag" src="/images/flags/mx.webp" alt="Flag of Mexico" width="36" height="27"><h3>Mexico</h3><p>Mexico City &amp; ancient ruins</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="americas" href="/destinations/peru.html" style="--g:linear-gradient(150deg,#b91c1c,#422006)" data-bg="/images/destinations/thumbs/peru-hero.webp"><img class="flag" src="/images/flags/pe.svg" alt="Flag of Peru" width="36" height="27"><h3>Peru</h3><p>Machu Picchu &amp; Cusco</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="more" href="/destinations/egypt.html" style="--g:linear-gradient(150deg,#d97706,#451a03)" data-bg="/images/destinations/thumbs/egypt-hero.webp"><img class="flag" src="/images/flags/eg.svg" alt="Flag of Egypt" width="36" height="27"><h3>Egypt</h3><p>Pyramids &amp; the Nile</p><span class="go">Read guide →</span></a>
-      <a class="dest" data-region="more" href="/destinations/australia.html" style="--g:linear-gradient(150deg,#0369a1,#172554)" data-bg="/images/destinations/thumbs/australia-hero.webp"><img class="flag" src="/images/flags/au.svg" alt="Flag of Australia" width="36" height="27"><h3>Australia</h3><p>Sydney &amp; the Great Barrier Reef</p><span class="go">Read guide →</span></a>
-    </div>
-    <div class="dest-foot reveal"><a href="/destinations/" class="btn btn-ghost">Browse all destinations <span aria-hidden="true">→</span></a></div>
+    <a class="btn btn-primary" href="/destinations/">Browse all destinations <span aria-hidden="true">→</span></a>
+    <p>Day-by-day plans, costs in rupees and visa tips for every place we cover.</p>
   </div>
 </section>
 
@@ -604,35 +553,6 @@
 <script>
 (function () {
   'use strict';
-  // Destination photos: load when the grid nears the viewport
-  var destGrid = document.getElementById('destGrid');
-  var loadBgs = function () {
-    destGrid.querySelectorAll('[data-bg]').forEach(function (c) {
-      c.style.setProperty('--img', 'url("' + c.getAttribute('data-bg') + '")');
-      c.removeAttribute('data-bg');
-    });
-  };
-  if ('IntersectionObserver' in window) {
-    var bgObs = new IntersectionObserver(function (entries) {
-      if (entries.some(function (e) { return e.isIntersecting; })) { loadBgs(); bgObs.disconnect(); }
-    }, { rootMargin: '600px 0px' });
-    bgObs.observe(destGrid);
-  } else {
-    loadBgs();
-  }
-
-  // Destination filter
-  var filters = document.querySelectorAll('.filter');
-  var cards = document.querySelectorAll('#destGrid .dest');
-  filters.forEach(function (f) {
-    f.addEventListener('click', function () {
-      var region = f.getAttribute('data-region');
-      filters.forEach(function (x) { x.setAttribute('aria-pressed', x === f ? 'true' : 'false'); });
-      document.getElementById('destGrid').setAttribute('data-filter', region);
-      cards.forEach(function (c) { c.hidden = region !== 'all' && c.getAttribute('data-region') !== region; });
-    });
-  });
-
   // Latest videos from the YouTube sync (videos-data.json)
   var isShort = function (v) { return v.duration === '< 1 min'; };
   var clean = function (t) { return t.replace(/#[\p{L}\p{N}_]+/gu, '').replace(/\s*\|\s*$/, '').replace(/\s{2,}/g, ' ').trim() || t; };

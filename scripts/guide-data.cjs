@@ -48,19 +48,25 @@ const VISA = {
 };
 const REGION = { asia: 'Asia', europe: 'Europe', americas: 'Americas', more: 'Africa & Oceania' };
 
+// Region, flag, name and one-line description per guide (data/destinations.json).
+// Text comes back HTML-escaped, ready to put in a page.
+function destinations() {
+  const h = (t) => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  const d = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'destinations.json'), 'utf8')).destinations;
+  const out = {};
+  for (const [slug, x] of Object.entries(d)) out[slug] = { region: x.region, flag: x.flag, name: h(x.name), line: h(x.line) };
+  return out;
+}
+
 function loadGuides() {
-  const home = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
-  const card = {};
-  for (const m of home.matchAll(/<a class="dest" data-region="(\w+)" href="\/destinations\/([\w-]+)\.html"[^>]*>[\s\S]*?<img class="flag" src="([^"]+)"[\s\S]*?<h3>([^<]+)<\/h3><p>([^<]*)<\/p>/g)) {
-    card[m[2]] = { region: m[1], flag: m[3], line: m[5] };
-  }
+  const card = destinations();
   const traits = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'trip-finder.json'), 'utf8')).destinations;
   const dir = path.join(ROOT, 'data', 'guides');
   const order = ['asia', 'europe', 'americas', 'more'];
   return fs.readdirSync(dir).filter(f => f.endsWith('.json')).map(f => {
     const g = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
     const c = card[g.slug];
-    if (!c) throw new Error(`${g.slug}: add a destination card to the homepage (index.html) first`);
+    if (!c) throw new Error(`${g.slug}: add an entry to data/destinations.json first`);
     const it = (g.sections || []).find(s => s.id === 'itineraries') || {};
     const t = traits[g.slug] || {};
     return {
@@ -99,4 +105,4 @@ const CITY = {
   turkey: ['Istanbul', 41.008, 28.978, 'TRY'],
 };
 
-module.exports = { CITY, ROOT, INR, rupeeRange, rupees, fmt, monthsOf, loadGuides, VISA, REGION };
+module.exports = { CITY, destinations, ROOT, INR, rupeeRange, rupees, fmt, monthsOf, loadGuides, VISA, REGION };

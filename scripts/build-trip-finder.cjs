@@ -15,9 +15,8 @@ const TRAITS = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'trip-finder.j
 const esc = (s = '') => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 // Flags come from the homepage destination cards (same as the guides)
-const home = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
 const FLAG = {};
-for (const m of home.matchAll(/<a class="dest"[^>]*href="\/destinations\/([\w-]+)\.html"[^>]*>[\s\S]*?<img class="flag" src="([^"]+)"/g)) FLAG[m[1]] = m[2];
+for (const [slug, d] of Object.entries(require('./guide-data.cjs').destinations())) FLAG[slug] = d.flag;
 
 const dests = [];
 for (const [slug, t] of Object.entries(TRAITS)) {

@@ -21,12 +21,8 @@ const fixAmp = (h = '') => h.replace(/&(?![a-zA-Z]+;|#\d+;|#x[0-9a-f]+;)/gi, '&a
 const plain = (h = '') => h.replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').replace(/ ([,.;:!?)])/g, '$1').trim();
 const ld = (o) => `<script type="application/ld+json">\n${JSON.stringify(o, null, 2)}\n</script>`;
 
-// Flags and one-line descriptions come from the homepage destination cards
-const home = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
-const CARD = {};
-for (const m of home.matchAll(/<a class="dest"[^>]*href="\/destinations\/([\w-]+)\.html"[^>]*>[\s\S]*?<img class="flag" src="([^"]+)"[\s\S]*?<h3>([^<]+)<\/h3><p>([^<]*)<\/p>/g)) {
-  CARD[m[1]] = { flag: m[2], name: m[3], line: m[4] };
-}
+// Flags and one-line descriptions come from data/destinations.json
+const CARD = require('./guide-data.cjs').destinations();
 
 function credit(key) {
   const c = credits[key];
