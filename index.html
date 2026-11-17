@@ -609,7 +609,7 @@
       var days = videos.map(seriesDay).filter(function (d) { return d !== null; });
       if (days.length) {
         var latest = Math.max.apply(null, days);
-        document.getElementById('seriesDay').textContent = 'Day ' + latest + ' of 30';
+        document.getElementById('seriesDay').textContent = latest >= 30 ? 'Complete · all 30 days' : 'Day ' + latest + ' of 30';
         requestAnimationFrame(function () { document.getElementById('seriesBar').style.width = Math.min(100, latest / 30 * 100) + '%'; });
       }
 
