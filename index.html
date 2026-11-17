@@ -559,7 +559,7 @@
   var thumb = function (v) { return 'https://i.ytimg.com/vi/' + encodeURIComponent(v.id) + '/hqdefault.jpg'; };
   var page = function (v) { return '/videos/' + encodeURIComponent(v.id) + '.html'; };
   var seriesDay = function (v) {
-    var m = v.title.match(/\b(\d{1,2})\s*\/\s*30\b/) || String(v.fullDescription || v.description || '').match(/\bday (\d{1,2}) of (?:my|our) daily vlog series/i);
+    var m = v.title.match(/(?:^|\D)(\d{1,2})\s*\/\s*30\b/) || String(v.fullDescription || v.description || '').match(/\bday (\d{1,2}) of (?:my|our) daily vlog series/i);
     return m ? parseInt(m[1], 10) : null;
   };
 

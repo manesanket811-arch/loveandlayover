@@ -62,9 +62,9 @@ function descriptionLines(v) {
     .filter(l => !hasChapters || (!STAMP.test(l) && !/^timestamps?:?$/i.test(l)));
 }
 
-// Day number in the 30-day series ("day 19/30", "Vlog 14/30", "9/30")
+// Day number in the 30-day series ("day 19/30", "Vlog 14/30", "9/30", "day24/30")
 function seriesDay(v) {
-  const m = v.title.match(/\b(\d{1,2})\s*\/\s*30\b/)
+  const m = v.title.match(/(?:^|\D)(\d{1,2})\s*\/\s*30\b/)
     || `${v.fullDescription || v.description || ''}`.match(/\bday (\d{1,2}) of (?:my|our) daily vlog series/i);
   return m ? parseInt(m[1], 10) : null;
 }
