@@ -316,7 +316,7 @@ ${more.length ? `<h2>More ${isShort(v) ? 'Shorts' : 'videos'}</h2>
   const body = `
 <nav class="vp-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/videos.html">Videos</a> › Life in Singapore</nav>
 <h1>Life in Singapore — Our 30-Day Vlog Series</h1>
-<p class="vp-meta">${series.length} episode${series.length === 1 ? '' : 's'} so far · a new one every day</p>
+<p class="vp-meta">${series.length} episode${series.length === 1 ? '' : 's'} so far</p>
 <p>Our everyday life as an Indian couple living in Singapore — morning routines, small dates, rainy chai evenings, festivals and weekend plans. Start from the latest episode or binge them in order below.</p>
 ${latest ? `<div class="vp-player${isShort(latest) ? ' is-short' : ''}" style="margin-top:20px">
   <iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(latest.id)}" title="${esc(latest.title)}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -338,7 +338,7 @@ ${latest ? `<div class="vp-player${isShort(latest) ? ' is-short' : ''}" style="m
   };
   fs.writeFileSync(path.join(OUT_DIR, `${SERIES_SLUG}.html`), layout({
     title: 'Life in Singapore: 30-Day Couple Vlog | Love and Layovers',
-    description: 'Daily vlogs of an Indian couple living in Singapore: routines, dates, food and festivals. Watch all episodes of our 30-day series in order.',
+    description: 'Vlogs of an Indian couple living in Singapore: routines, dates, food and festivals. Watch all episodes of our 30-day series in order.',
     canonical: `/videos/${SERIES_SLUG}.html`,
     image: latest ? thumb(latest) : `${SITE}/public/images/banner.png`,
     head: ldScript(ld),
