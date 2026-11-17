@@ -293,6 +293,27 @@ async function main() {
     });
   }
 
+  // The feed only covers the latest 15 uploads, so a video renamed later on YouTube
+  // (e.g. adding "day 29/30") would keep its old title here. Refresh the titles of
+  // the other videos from YouTube's public oEmbed endpoint (title only, no key).
+  const inFeed = new Set(entries.map(e => e.id));
+  let renamed = 0;
+  if (!process.env.FEED_FILE) {
+    for (const v of byId.values()) {
+      if (inFeed.has(v.id)) continue;
+      try {
+        const { status, body } = await get(`https://www.youtube.com/oembed?format=json&url=${encodeURIComponent('https://www.youtube.com/watch?v=' + v.id)}`);
+        const t = status === 200 ? (JSON.parse(body).title || '').trim() : '';
+        if (t && t !== v.title) {
+          console.log(`Renamed on YouTube: ${v.id} "${v.title}" → "${t}"`);
+          v.title = t; v.keywords = extractKeywords(t); v.series = v.type = determineSeries(t);
+          renamed++;
+        }
+      } catch (e) { /* keep the stored title */ }
+      await sleep(150);
+    }
+  }
+
   const videos = [...byId.values()].sort((a, b) => b.published.localeCompare(a.published));
   // Our channel handle changed: older descriptions still mention the old one, so store the new one
   const OLD_HANDLE = /@nikita_sanket_mane/gi;
@@ -300,7 +321,7 @@ async function main() {
     if (typeof v[k] === 'string') v[k] = v[k].replace(OLD_HANDLE, '@LoveAndLayover');
   }
   fs.writeFileSync(DATA_FILE, JSON.stringify(videos, null, 2) + '\n');
-  console.log(`${xml ? 'Feed' : 'Channel pages'} gave ${entries.length} entries (${fresh} new); videos-data.json now holds ${videos.length} videos`);
+  console.log(`${xml ? 'Feed' : 'Channel pages'} gave ${entries.length} entries (${fresh} new), ${renamed} older titles refreshed; videos-data.json now holds ${videos.length} videos`);
 }
 
 main().catch(err => {
