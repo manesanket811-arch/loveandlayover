@@ -158,6 +158,13 @@
 
 
 <link rel="stylesheet" href="/css/site.css?v=1">
+<style>
+  /* Hero photo slideshow: photos crossfade in a random order with a slow zoom */
+  .hero-photo img { position: absolute; inset: 0; opacity: 0; transition: opacity 1.6s ease; }
+  .hero-photo img.on { opacity: 1; animation: heroZoom 9s ease-out both; }
+  @keyframes heroZoom { from { transform: scale(1.08); } to { transform: scale(1); } }
+  @media (prefers-reduced-motion: reduce) { .hero-photo img { transition-duration: .01s; } .hero-photo img.on { animation: none; } }
+</style>
 <link rel="stylesheet" href="/css/chrome.css?v=5">
 <style>
   .start-here { padding: 8px 0 8px; }
@@ -215,7 +222,7 @@
     </div>
 
     <div class="hero-visual" aria-hidden="true">
-      <div class="hero-photo"><img src="/assets/self/couple-hero.webp" alt="Sanket and Nikita, travel and lifestyle creators in Singapore" width="640" height="800" fetchpriority="high"></div>
+      <div class="hero-photo" id="heroSlides" data-slides='[["couple-1","60% 55%"],["couple-2","55% 62%"],["couple-3","50% 70%"],["couple-4","50% 28%"],["couple-5","50% 78%"],["couple-6","50% 30%"],["couple-7","50% 62%"],["couple-8","50% 76%"]]'><img class="on" src="/assets/self/couple-hero.webp" alt="Sanket and Nikita, travel and lifestyle creators in Singapore" width="640" height="800" fetchpriority="high"></div>
       <div class="hero-art hero-pass"><img src="/public/images/boarding-pass.webp" alt="Love and Layovers boarding pass: Nikita and Sanket, India to Singapore, new video every week" width="1100" height="244" loading="lazy"></div>
       <a class="float-card float-new" id="heroLatest" href="/videos.html" tabindex="-1">
         <span class="thumb"></span>
@@ -711,5 +718,34 @@
 })();
 </script>
 
+<script>
+  // Hero slideshow: after the page has loaded, add our photos and crossfade through
+  // them in a random order. Pauses when the tab is hidden; each photo is loaded
+  // before it fades in, so there's never a blank frame.
+  (function () {
+    var box = document.getElementById('heroSlides'); if (!box) return;
+    var list; try { list = JSON.parse(box.getAttribute('data-slides')); } catch (e) { return; }
+    var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function start() {
+      for (var i = list.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), t = list[i]; list[i] = list[j]; list[j] = t; }
+      var imgs = [box.querySelector('img')];
+      list.forEach(function (s) {
+        var im = new Image(); im.alt = ''; im.decoding = 'async'; im.width = 760; im.height = 1140;
+        im.style.objectPosition = s[1]; im.dataset.src = '/assets/self/slides/' + s[0] + '.webp';
+        box.appendChild(im); imgs.push(im);
+      });
+      var cur = 0, timer;
+      function next() {
+        var n = (cur + 1) % imgs.length, im = imgs[n];
+        var go = function () { imgs[cur].classList.remove('on'); im.classList.add('on'); cur = n; timer = setTimeout(next, reduce ? 8000 : 5000); };
+        if (!im.src) { im.onload = go; im.onerror = function () { imgs.splice(n, 1); timer = setTimeout(next, 100); }; im.src = im.dataset.src; }
+        else go();
+      }
+      timer = setTimeout(next, 4000);
+      document.addEventListener('visibilitychange', function () { clearTimeout(timer); if (!document.hidden) timer = setTimeout(next, 3000); });
+    }
+    if (document.readyState === 'complete') start(); else window.addEventListener('load', start);
+  })();
+</script>
 </body>
 </html>
