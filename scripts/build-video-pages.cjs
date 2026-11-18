@@ -100,7 +100,16 @@ for (const dir of ['destinations', 'blog']) {
   }
 }
 
+// Videos about jobs and work passes link to our career guides first (and get no
+// "Plan this trip" box, which is for travel videos)
+const JOB_GUIDES = ['/blog/how-to-get-a-job-in-singapore.html', '/blog/living-in-singapore-as-an-indian.html'];
+const isJobVideo = (v) => /\b(jobs?|employment pass|work (visa|pass)|career|call cent(er|re)|tech job|ep rule|s pass)\b/i.test(v.title);
+
 function relatedGuides(v, limit = 4) {
+  if (isJobVideo(v)) {
+    const first = JOB_GUIDES.map(u => guides.find(g => g.url === u)).filter(Boolean);
+    return first.length ? first.slice(0, limit) : [];
+  }
   // Series episodes are filmed in Singapore even when the title doesn't say so
   const text = `${v.title} ${v.fullDescription || v.description || ''} ${seriesDay(v) !== null ? 'singapore' : ''}`.toLowerCase();
   return guides
@@ -291,7 +300,7 @@ ${chapters(v).length ? `<h2>Chapters</h2>
   });
 </script>` : ''}
 ${lines.length ? `<div class="vp-desc">${lines.map(l => `<p>${esc(l)}</p>`).join('\n')}</div>` : ''}
-${planBox(related)}
+${isJobVideo(v) ? '' : planBox(related)}
 ${related.length ? `<h2>Plan your own trip</h2>
 <ul class="vp-guides">${related.map(g => `<li><a href="${g.url}">${esc(g.title)} →</a></li>`).join('')}</ul>` : `<h2>Plan your own trip</h2>
 <ul class="vp-guides"><li><a href="/destinations/">Browse all destination guides →</a></li><li><a href="/trip-finder.html">Take the trip finder quiz →</a></li><li><a href="/blog.html">Read the travel blog →</a></li></ul>`}
