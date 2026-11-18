@@ -1,0 +1,44 @@
+{
+  "slug": "driving-in-singapore",
+  "title": "Driving in Singapore with an Indian Licence",
+  "description": "Can you drive in Singapore with an Indian licence? The 12-month rule, converting your licence, the Basic Theory Test, and why most people skip a car.",
+  "h1": "Driving in Singapore with an Indian Licence",
+  "crumb": "Driving in Singapore",
+  "read": 6,
+  "hero": "johor-causeway-hero",
+  "dek": "The 12-month rule, converting your licence, the Basic Theory Test, and why most people skip owning a car.",
+  "videoKeywords": "car,drive,transport",
+  "about": [
+    {
+      "@type": "Country",
+      "name": "Singapore"
+    },
+    {
+      "@type": "Thing",
+      "name": "Driving licence"
+    }
+  ],
+  "related": [
+    "first-30-days-in-singapore",
+    "singapore-to-malaysia-by-bus-or-train",
+    "good-salary-in-singapore"
+  ],
+  "published": "2026-11-18",
+  "modified": "2026-11-18",
+  "body": "<p class=\"lead\">Singapore drives on the left, just like India, so driving here feels familiar. But owning a car is famously expensive, and there are rules about how long you can use your Indian licence. Here's what you need to know.</p>\n<div class=\"note\"><b>As of November 2026</b>Rules change, and this is a general guide from our experience, not legal, tax or immigration advice. Always confirm with the Singapore Police Force (Traffic Police) for your own case.</div>\n<h2>Can you drive with your Indian licence?</h2>\n<p>Yes, for a limited time. Long-term pass holders such as Employment Pass holders can generally use a valid foreign licence for the first 12 months, with an International Driving Permit or an official English translation if needed. After that, you need a Singapore driving licence. If you drive for work, or hold a work permit, the period can be shorter, so check the Traffic Police's rules for your pass.</p>\n\n<h2>How to convert your Indian licence</h2>\n<ol>\n<li><strong>Pass the Basic Theory Test (BTT)</strong> at a driving centre. Study the official handbook: it covers Singapore road rules and signs, which differ from India.</li>\n<li><strong>Get your documents ready:</strong> passport, work pass, your Indian licence, and an endorsement or verification letter for the licence from the High Commission of India, as listed on the Traffic Police's checklist for Indian licences.</li>\n<li><strong>Apply for conversion</strong> online or by appointment with the Traffic Police, and pay the fee.</li>\n</ol>\n<p>Check the Traffic Police website for the current document checklist before you start, since requirements are updated from time to time.</p>\n\n<h2>Should you buy a car?</h2>\n<p>For most people, no. Singapore limits the number of cars with the Certificate of Entitlement (COE), which alone often costs more than the car itself, so a regular family car can cost many times what it would in India. Add road tax, insurance, parking and ERP road charges, and a car becomes one of the biggest expenses you can have here.</p>\n<p>Most Indians we know don't own a car. Instead they use:</p>\n<ul>\n<li><strong>MRT and buses:</strong> cheap, frequent and air-conditioned</li>\n<li><strong>Grab, Gojek and taxis</strong> for late nights, airport runs and shopping</li>\n<li><strong>Car-sharing and rentals</strong> by the hour or day, for weekend trips</li>\n</ul>\n\n<h2>Driving to Malaysia</h2>\n<p>Many people rent a car to drive to Johor Bahru or further into Malaysia. You'll need the right documents for the car and border, and the Causeway can be very busy on weekends and holidays. For the bus and train options, see <a href=\"/blog/singapore-to-malaysia-by-bus-or-train.html\">Singapore to Malaysia by bus or train</a>.</p>",
+  "faq": [
+    [
+      "Can I drive in Singapore with an Indian driving licence?",
+      "Long-term pass holders such as Employment Pass holders can generally use a valid foreign licence for the first 12 months, with an International Driving Permit or English translation if needed. After that, convert to a Singapore licence."
+    ],
+    [
+      "How do I convert an Indian driving licence in Singapore?",
+      "Pass the Basic Theory Test, prepare your documents including a verification or endorsement letter from the High Commission of India, then apply for conversion with the Traffic Police."
+    ],
+    [
+      "Is it worth buying a car in Singapore?",
+      "For most people, no. The Certificate of Entitlement (COE), road tax, insurance and parking make cars very expensive, and public transport and ride-hailing are excellent."
+    ]
+  ],
+  "h1Html": "Driving in Singapore with an <em style=\"font-style:italic;color:#f0a559\">Indian Licence</em>"
+}

@@ -8,15 +8,34 @@
     {
       "id": "moving",
       "kicker": "Moving to Singapore",
-      "title": "Moving to & living in Singapore",
-      "intro": "Jobs, work passes, salaries, renting and settling in, from an Indian couple who made the move.",
+      "title": "Moving to Singapore from India",
+      "intro": "Jobs, work passes, salary, renting and your first month, from an Indian couple who made the move.",
       "posts": [
         "/blog/moving-to-singapore-from-india.html",
         "/blog/how-to-get-a-job-in-singapore.html",
+        "/blog/singapore-work-culture-and-interview-tips.html",
         "/blog/good-salary-in-singapore.html",
         "/blog/renting-a-flat-in-singapore.html",
         "/blog/first-30-days-in-singapore.html",
-        "/blog/living-in-singapore-as-an-indian.html"
+        "/blog/dependants-pass-singapore.html",
+        "/blog/singapore-pr-for-indians.html"
+      ]
+    },
+    {
+      "id": "living",
+      "kicker": "Living in Singapore",
+      "title": "Life in Singapore as an Indian",
+      "intro": "Money, tax, healthcare, schools, groceries and the rules, everything for settling in.",
+      "posts": [
+        "/blog/living-in-singapore-as-an-indian.html",
+        "/blog/send-money-from-singapore-to-india.html",
+        "/blog/nri-guide-for-indians-in-singapore.html",
+        "/blog/healthcare-in-singapore-for-expats.html",
+        "/blog/schools-for-indian-kids-in-singapore.html",
+        "/blog/bringing-parents-to-singapore.html",
+        "/blog/indian-groceries-in-singapore.html",
+        "/blog/singapore-rules-and-fines.html",
+        "/blog/driving-in-singapore.html"
       ]
     },
     {
@@ -468,6 +487,127 @@
       "title": "Trip Finder Quiz",
       "desc": "Six questions on budget, days and style, and we match you with destinations.",
       "meta": "Interactive",
+      "date": "Nov 2026"
+    },
+    "/blog/send-money-from-singapore-to-india.html": {
+      "img": "/images/destinations/thumbs/merlion-hero.webp",
+      "alt": "The Merlion at Marina Bay, Singapore",
+      "chips": [
+        "Money"
+      ],
+      "title": "How to Send Money from Singapore to India",
+      "desc": "Wise, banks and remittance apps compared, NRE vs NRO, and tips to get more rupees.",
+      "meta": "7 min read",
+      "date": "Nov 2026"
+    },
+    "/blog/nri-guide-for-indians-in-singapore.html": {
+      "img": "/images/destinations/thumbs/clarke-quay-hero.webp",
+      "alt": "Boat Quay shophouses along the Singapore River",
+      "chips": [
+        "Tax & banking"
+      ],
+      "title": "NRI Guide for Indians in Singapore",
+      "desc": "NRI status, taxes, NRE and NRO accounts, ITR filing and a first-year checklist.",
+      "meta": "9 min read",
+      "date": "Nov 2026"
+    },
+    "/blog/singapore-pr-for-indians.html": {
+      "img": "/images/destinations/thumbs/gardens-by-the-bay-hero.webp",
+      "alt": "Supertree Grove at Gardens by the Bay, Singapore",
+      "chips": [
+        "PR"
+      ],
+      "title": "Singapore PR for Indians: How It Works",
+      "desc": "Who can apply, the ICA process, what helps, and National Service and CPF to plan for.",
+      "meta": "8 min read",
+      "date": "Nov 2026"
+    },
+    "/blog/singapore-rules-and-fines.html": {
+      "img": "/images/destinations/thumbs/singapore-food.webp",
+      "alt": "A bowl of laksa noodle soup",
+      "chips": [
+        "Rules"
+      ],
+      "title": "Singapore Rules and Fines You Should Know",
+      "desc": "MRT eating, vaping, smoking, littering, trays and the rules that surprise newcomers.",
+      "meta": "7 min read",
+      "date": "Nov 2026"
+    },
+    "/blog/dependants-pass-singapore.html": {
+      "img": "/images/destinations/thumbs/jewel-changi-hero.webp",
+      "alt": "The Rain Vortex waterfall at Jewel Changi Airport",
+      "chips": [
+        "Family"
+      ],
+      "title": "Dependant's Pass in Singapore: The Complete Guide",
+      "desc": "Eligibility, the S$6,000 rule, documents, timelines and working on a DP.",
+      "meta": "8 min read",
+      "date": "Nov 2026"
+    },
+    "/blog/bringing-parents-to-singapore.html": {
+      "img": "/images/destinations/thumbs/singapore-zoo-hero.webp",
+      "alt": "An Asian elephant at Singapore Zoo",
+      "chips": [
+        "Family"
+      ],
+      "title": "Bringing Your Parents to Singapore",
+      "desc": "Visit visa or Long-Term Visit Pass, insurance and tips for a comfortable stay.",
+      "meta": "6 min read",
+      "date": "Nov 2026"
+    },
+    "/blog/schools-for-indian-kids-in-singapore.html": {
+      "img": "/images/destinations/thumbs/sentosa-hero.webp",
+      "alt": "Palawan Beach on Sentosa, Singapore",
+      "chips": [
+        "Family"
+      ],
+      "title": "Schools for Indian Kids in Singapore",
+      "desc": "CBSE and IB schools, international school fees and getting into local schools.",
+      "meta": "8 min read",
+      "date": "Nov 2026"
+    },
+    "/blog/indian-groceries-in-singapore.html": {
+      "img": "/images/destinations/thumbs/little-india-hero.webp",
+      "alt": "Sri Veeramakaliamman Temple in Little India, Singapore",
+      "chips": [
+        "Food"
+      ],
+      "title": "Where to Buy Indian Groceries in Singapore",
+      "desc": "Mustafa, Tekka, Little India, supermarkets and online delivery.",
+      "meta": "6 min read",
+      "date": "Nov 2026"
+    },
+    "/blog/healthcare-in-singapore-for-expats.html": {
+      "img": "/images/destinations/thumbs/gardens-by-the-bay-hero.webp",
+      "alt": "Supertree Grove at Gardens by the Bay, Singapore",
+      "chips": [
+        "Health"
+      ],
+      "title": "Healthcare in Singapore for Indian Expats",
+      "desc": "Doctor and hospital costs, employer insurance and covering your family.",
+      "meta": "7 min read",
+      "date": "Nov 2026"
+    },
+    "/blog/driving-in-singapore.html": {
+      "img": "/images/destinations/thumbs/johor-causeway-hero.webp",
+      "alt": "The Johor–Singapore Causeway",
+      "chips": [
+        "Transport"
+      ],
+      "title": "Driving in Singapore with an Indian Licence",
+      "desc": "The 12-month rule, converting your licence and why most people skip a car.",
+      "meta": "6 min read",
+      "date": "Nov 2026"
+    },
+    "/blog/singapore-work-culture-and-interview-tips.html": {
+      "img": "/images/destinations/thumbs/singapore-hero.webp",
+      "alt": "ArtScience Museum and the Marina Bay skyline, Singapore",
+      "chips": [
+        "Jobs"
+      ],
+      "title": "Singapore Work Culture and Interview Tips",
+      "desc": "Hours, leave, contracts, interviews and salary negotiation, compared with India.",
+      "meta": "8 min read",
       "date": "Nov 2026"
     }
   }

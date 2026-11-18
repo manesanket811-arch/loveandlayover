@@ -1,0 +1,44 @@
+{
+  "slug": "healthcare-in-singapore-for-expats",
+  "title": "Healthcare in Singapore for Indians: Costs & Insurance",
+  "description": "How healthcare works for foreigners in Singapore: GP and polyclinic costs, hospitals and A&E, employer insurance, cover for family and parents.",
+  "h1": "Healthcare in Singapore for Indian Expats",
+  "crumb": "Healthcare in Singapore",
+  "read": 7,
+  "hero": "gardens-by-the-bay-hero",
+  "dek": "Doctors, hospitals and costs for foreigners, what employer insurance covers, and how to protect your family.",
+  "videoKeywords": "singapore,life,daily",
+  "about": [
+    {
+      "@type": "Country",
+      "name": "Singapore"
+    },
+    {
+      "@type": "Thing",
+      "name": "Healthcare"
+    }
+  ],
+  "related": [
+    "first-30-days-in-singapore",
+    "bringing-parents-to-singapore",
+    "good-salary-in-singapore"
+  ],
+  "published": "2026-11-18",
+  "modified": "2026-11-18",
+  "body": "<p class=\"lead\">Singapore's healthcare is among the best in the world, but as a foreigner you pay full, non-subsidised rates. Here's how it works, what it costs, and how to make sure you and your family are covered.</p>\n<div class=\"note\"><b>As of November 2026</b>Rules change, and this is a general guide from our experience, not legal, tax or immigration advice. Always confirm with your insurer, your employer's HR team and the clinic or hospital for your own case.</div>\n<h2>How the system works</h2>\n<ul>\n<li><strong>GP clinics:</strong> your first stop for most illnesses. There are clinics in every neighbourhood, many open late.</li>\n<li><strong>Polyclinics:</strong> government clinics. Foreigners pay non-resident rates, so they're not always cheaper than a private GP.</li>\n<li><strong>Public hospitals</strong> (e.g. SGH, NUH, Tan Tock Seng) and <strong>private hospitals</strong> (e.g. Mount Elizabeth, Gleneagles): for specialists, surgery and inpatient care.</li>\n<li><strong>A&amp;E (emergency):</strong> at hospitals, for genuine emergencies. Call <strong>995</strong> for an ambulance.</li>\n</ul>\n\n<h2>What it costs (approximate)</h2>\n<div class=\"table-wrap\">\n<table>\n<tr><th>Service</th><th>Typical cost for foreigners</th></tr>\n<tr><td>GP consultation</td><td>About S$50–125, plus medicine</td></tr>\n<tr><td>Polyclinic consultation</td><td>Non-resident rates, often similar to a private GP</td></tr>\n<tr><td>A&amp;E visit (public hospital)</td><td>Often S$130–200+ before tests and treatment</td></tr>\n<tr><td>Private hospital stay</td><td>Hundreds to over a thousand dollars a night, plus doctor and procedure fees</td></tr>\n</table>\n</div>\n<p>Prices vary widely, so ask the clinic upfront. Foreigners don't get MediShield Life or MediSave, which is why insurance matters so much.</p>\n\n<h2>Employer insurance: check what it covers</h2>\n<p>Most employers provide group medical insurance. Check:</p>\n<ul>\n<li><strong>Outpatient GP visits:</strong> often at panel clinics with little or no payment.</li>\n<li><strong>Hospitalisation and surgery limits</strong></li>\n<li><strong>Specialists and dental:</strong> dental is often limited or not covered.</li>\n<li><strong>Your spouse and children:</strong> many policies cover only the employee unless you pay to add family.</li>\n<li><strong>Maternity:</strong> often excluded or capped, which matters if you're planning a baby here.</li>\n</ul>\n<div class=\"tip\"><b>Fill the gaps</b>If your family isn't covered, buy an individual or family health plan soon after you arrive. Pre-existing conditions may be excluded, so the earlier the better. For visiting parents, buy travel insurance with medical cover before they fly.</div>\n\n<h2>Medicines</h2>\n<ul>\n<li>Pharmacies like Guardian and Watsons sell common over-the-counter medicines; stronger ones need a doctor's prescription.</li>\n<li>When moving or travelling, carry personal medicines in their original packaging with a prescription. Some medicines, especially controlled ones, need approval from the Health Sciences Authority (HSA) before you bring them in.</li>\n</ul>\n\n<h2>Sick leave</h2>\n<p>If you're unwell, see a doctor and get a medical certificate (MC). It's the standard way to take sick leave in Singapore, and most employers ask for one.</p>\n<p>More on settling in: our <a href=\"/blog/first-30-days-in-singapore.html\">first 30 days checklist</a> and <a href=\"/blog/moving-to-singapore-from-india.html\">complete guide to moving to Singapore from India</a>.</p>",
+  "faq": [
+    [
+      "Is healthcare free for foreigners in Singapore?",
+      "No. Foreigners pay non-subsidised rates and don't get MediShield Life. Most rely on employer insurance and private health insurance."
+    ],
+    [
+      "How much does a doctor visit cost in Singapore?",
+      "A GP consultation typically costs about S$50–125 for foreigners, plus medicine. A&E visits at public hospitals often start around S$130–200."
+    ],
+    [
+      "Does employer insurance cover my family in Singapore?",
+      "Not always. Many group policies cover only the employee unless family is added. Check with HR and buy a family plan if needed."
+    ]
+  ],
+  "h1Html": "<em style=\"font-style:italic;color:#f0a559\">Healthcare</em> in Singapore for Indian Expats"
+}
