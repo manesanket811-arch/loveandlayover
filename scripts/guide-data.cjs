@@ -7,7 +7,7 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 
 // Rough rupee rates for the "≈ ₹" budget hints. Update now and then; shown as approximate.
-const INR = { 'A$': 55, 'S$': 65, RM: 19.5, EUR: 95, '€': 95, IDR: 0.0053, EGP: 1.75, ISK: 0.62, '¥': 0.57, MXN: 4.5, PEN: 23, '₩': 0.062, '฿': 2.5, TRY: 2.1, '₫': 0.0034, LKR: 0.28, 'US$': 85, AED: 23, NPR: 0.625, 'HK$': 10.8, '₱': 1.5, AZN: 50, GEL: 31, KZT: 0.17, UZS: 0.0068, 'NT$': 2.7, QAR: 23, OMR: 220, MOP: 10.6, '₹': 1 };
+const INR = { 'A$': 55, 'S$': 70, RM: 19.5, EUR: 95, '€': 95, IDR: 0.0053, EGP: 1.75, ISK: 0.62, '¥': 0.57, MXN: 4.5, PEN: 23, '₩': 0.062, '฿': 2.5, TRY: 2.1, '₫': 0.0034, LKR: 0.28, 'US$': 85, AED: 23, NPR: 0.625, 'HK$': 10.8, '₱': 1.5, AZN: 50, GEL: 31, KZT: 0.17, UZS: 0.0068, 'NT$': 2.7, QAR: 23, OMR: 220, MOP: 10.6, '₹': 1 };
 
 // "S$95–150/day" -> [6200, 9800] in rupees (null if it can't be read)
 function rupeeRange(budget = '') {
@@ -20,7 +20,7 @@ function rupeeRange(budget = '') {
   return { cur, lo: r(lo), hi: r(hi) };
 }
 const fmt = (v) => '₹' + v.toLocaleString('en-IN');
-// "≈ ₹6,200–9,800" for foreign-currency budgets, null for rupee ones
+// "≈ ₹6,700–10,500" for foreign-currency budgets, null for rupee ones
 function rupees(budget) {
   const r = rupeeRange(budget);
   if (!r || r.cur === '₹') return null;
