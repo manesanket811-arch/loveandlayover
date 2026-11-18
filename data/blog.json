@@ -1,0 +1,475 @@
+{
+  "_readme": "Blog listing (blog.html), built by scripts/build-blog.cjs. Each section lists post URLs in display order; card text and images are in \"posts\". Add new posts here, then run node scripts/build-blog.cjs.",
+  "start": [
+    "/blog/moving-to-singapore-from-india.html",
+    "/blog/singapore-first-timer-guide.html"
+  ],
+  "sections": [
+    {
+      "id": "moving",
+      "kicker": "Moving to Singapore",
+      "title": "Moving to & living in Singapore",
+      "intro": "Jobs, work passes, salaries, renting and settling in, from an Indian couple who made the move.",
+      "posts": [
+        "/blog/moving-to-singapore-from-india.html",
+        "/blog/how-to-get-a-job-in-singapore.html",
+        "/blog/good-salary-in-singapore.html",
+        "/blog/renting-a-flat-in-singapore.html",
+        "/blog/first-30-days-in-singapore.html",
+        "/blog/living-in-singapore-as-an-indian.html"
+      ]
+    },
+    {
+      "id": "visit-singapore",
+      "kicker": "Visiting Singapore",
+      "title": "Singapore travel guides",
+      "intro": "Itineraries, food, costs and tips for a trip to the city we call home.",
+      "posts": [
+        "/blog/singapore-first-timer-guide.html",
+        "/blog/places-to-visit-in-singapore.html",
+        "/blog/singapore-5-day-itinerary.html",
+        "/blog/singapore-trip-cost-from-india.html",
+        "/blog/singapore-honeymoon-itinerary.html",
+        "/blog/singapore-with-parents-and-kids.html",
+        "/blog/singapore-in-december.html",
+        "/blog/universal-studios-sentosa-guide.html",
+        "/blog/singapore-food-guide.html",
+        "/blog/indian-restaurants-singapore.html",
+        "/blog/singapore-budget-travel.html",
+        "/blog/singapore-layover-guide.html",
+        "/blog/singapore-malaysia-7-day-itinerary.html",
+        "/blog/singapore-to-malaysia-by-bus-or-train.html"
+      ]
+    },
+    {
+      "id": "asia",
+      "kicker": "Asia & beyond",
+      "title": "More trips from India",
+      "intro": "Japan, Thailand, Vietnam, Bali, Dubai and the rest of Asia, with costs in rupees.",
+      "posts": [
+        "/blog/japan-10-day-itinerary.html",
+        "/blog/japan-5-day-itinerary.html",
+        "/blog/japan-trip-cost-from-india.html",
+        "/blog/bali-vs-thailand.html",
+        "/blog/thailand-food-guide.html",
+        "/blog/vietnam-travel-guide.html",
+        "/blog/dubai-with-family.html",
+        "/blog/singapore-vs-thailand-vs-dubai.html",
+        "/blog/southeast-asia-budget-tips.html"
+      ]
+    },
+    {
+      "id": "plan",
+      "kicker": "Plan smarter",
+      "title": "Visas, flights & planning tools",
+      "intro": "Visa rules for Indian passports, flight tips and free tools to plan and budget your trip.",
+      "posts": [
+        "/blog/visa-free-countries-for-indians.html",
+        "/blog/singapore-visa-for-indians.html",
+        "/blog/singapore-flights-from-india.html",
+        "/singapore-trip-cost-calculator.html",
+        "/visa-checker.html",
+        "/trip-finder.html"
+      ]
+    }
+  ],
+  "posts": {
+    "/blog/moving-to-singapore-from-india.html": {
+      "img": "/images/destinations/thumbs/gardens-by-the-bay-hero.webp",
+      "alt": "Supertree Grove at Gardens by the Bay",
+      "chips": [
+        "Start here"
+      ],
+      "title": "Moving to Singapore from India: The Complete Guide",
+      "desc": "Step by step: job, work pass, salary, flat, first month, money and family.",
+      "meta": "8 min read",
+      "date": "Nov 2026"
+    },
+    "/blog/how-to-get-a-job-in-singapore.html": {
+      "img": "/images/destinations/thumbs/singapore-hero.webp",
+      "alt": "Singapore skyline at Marina Bay",
+      "chips": [
+        "Jobs"
+      ],
+      "title": "How to Get a Job in Singapore from India",
+      "desc": "Employment Pass salary rules for 2026–27, COMPASS, job hunting from India and how much you need to earn.",
+      "meta": "16 min read",
+      "date": "Nov 2026"
+    },
+    "/blog/good-salary-in-singapore.html": {
+      "img": "/images/destinations/thumbs/clarke-quay-hero.webp",
+      "alt": "Clarke Quay riverside in Singapore",
+      "chips": [
+        "Salary"
+      ],
+      "title": "What's a Good Salary in Singapore?",
+      "desc": "Take-home pay, rent and savings at S$4,000 to S$12,000 a month, single or with family.",
+      "meta": "9 min read",
+      "date": "Nov 2026"
+    },
+    "/blog/renting-a-flat-in-singapore.html": {
+      "img": "/images/destinations/thumbs/singapore-hdb-hero.webp",
+      "alt": "HDB flats in Singapore",
+      "chips": [
+        "Housing"
+      ],
+      "title": "Renting a Flat in Singapore: HDB vs Condo",
+      "desc": "Rent prices, deposits, agent fees, rules for foreigners and scams, from our S$3,000 condo.",
+      "meta": "11 min read",
+      "date": "Nov 2026"
+    },
+    "/blog/first-30-days-in-singapore.html": {
+      "img": "/images/destinations/thumbs/jewel-changi-hero.webp",
+      "alt": "The Rain Vortex at Jewel Changi Airport",
+      "chips": [
+        "Checklist"
+      ],
+      "title": "Your First 30 Days in Singapore",
+      "desc": "SIM, transport, pass card, Singpass, bank, sending money home and rules to know.",
+      "meta": "10 min read",
+      "date": "Nov 2026"
+    },
+    "/blog/living-in-singapore-as-an-indian.html": {
+      "img": "/images/destinations/thumbs/singapore-hdb-hero.webp",
+      "alt": "Pinnacle@Duxton public housing towers, Singapore",
+      "chips": [
+        "Living here"
+      ],
+      "title": "Living in Singapore as an Indian",
+      "desc": "Work passes, monthly costs, renting, banking, schools and finding a bit of home.",
+      "meta": "5 min read",
+      "date": "Oct 2026"
+    },
+    "/blog/singapore-first-timer-guide.html": {
+      "img": "/images/destinations/thumbs/merlion-hero.webp",
+      "alt": "The Merlion at Marina Bay",
+      "chips": [
+        "Start here"
+      ],
+      "title": "Singapore First-Timer Guide",
+      "desc": "Visa, best time, where to stay, getting around, budget and must-dos for your first trip.",
+      "meta": "Guide",
+      "date": "Oct 2026"
+    },
+    "/blog/places-to-visit-in-singapore.html": {
+      "img": "/images/destinations/thumbs/gardens-by-the-bay-hero.webp",
+      "alt": "Supertree Grove at Gardens by the Bay",
+      "chips": [
+        "Sightseeing"
+      ],
+      "title": "Best Places to Visit in Singapore",
+      "desc": "20 sights grouped by area, with what's free, what's paid, MRT stops and a 3-day plan.",
+      "meta": "7 min read",
+      "date": "Oct 2026"
+    },
+    "/blog/singapore-5-day-itinerary.html": {
+      "img": "/assets/self/couple-hero.webp",
+      "alt": "Sanket and Nikita in a Singapore café",
+      "pos": "50% 35%",
+      "chips": [
+        "Singapore",
+        "Itinerary"
+      ],
+      "title": "The Complete 5-Day Singapore Itinerary",
+      "desc": "Marina Bay, Gardens by the Bay, Chinatown, Sentosa and Orchard Road — perfect for first-time visitors.",
+      "meta": "8 min read",
+      "date": "May 2026"
+    },
+    "/blog/singapore-trip-cost-from-india.html": {
+      "img": "/images/destinations/thumbs/jewel-changi-hero.webp",
+      "alt": "The Rain Vortex at Jewel Changi Airport",
+      "chips": [
+        "Budget"
+      ],
+      "title": "Singapore Trip Cost from India (2026)",
+      "desc": "Flights, visa, hotels, food and tickets: budget, mid-range and comfort plans in rupees.",
+      "meta": "6 min read",
+      "date": "Oct 2026"
+    },
+    "/blog/singapore-honeymoon-itinerary.html": {
+      "img": "/images/destinations/thumbs/sentosa-hero.webp",
+      "alt": "Beach on Sentosa Island, Singapore",
+      "chips": [
+        "Honeymoon"
+      ],
+      "title": "Singapore Honeymoon Itinerary",
+      "desc": "Five romantic days: skyline views, Sentosa sunsets, where to stay and a budget for two.",
+      "meta": "6 min read",
+      "date": "Oct 2026"
+    },
+    "/blog/singapore-with-parents-and-kids.html": {
+      "img": "/images/destinations/thumbs/singapore-zoo-hero.webp",
+      "alt": "An elephant at Singapore Zoo",
+      "chips": [
+        "Family"
+      ],
+      "title": "Singapore with Parents or Kids",
+      "desc": "Easy attractions, a relaxed 5-day plan, veg food and getting around with seniors.",
+      "meta": "4 min read",
+      "date": "Oct 2026"
+    },
+    "/blog/singapore-in-december.html": {
+      "img": "/images/destinations/thumbs/gardens-by-the-bay-hero.webp",
+      "alt": "Supertree Grove at Gardens by the Bay",
+      "chips": [
+        "Season"
+      ],
+      "title": "Singapore in December",
+      "desc": "Weather, Christmas lights, New Year fireworks, prices and a rain-proof 5-day plan.",
+      "meta": "6 min read",
+      "date": "Oct 2026"
+    },
+    "/blog/universal-studios-sentosa-guide.html": {
+      "img": "/images/destinations/thumbs/universal-studios-singapore-hero.webp",
+      "alt": "The Universal Studios globe at night",
+      "chips": [
+        "Sentosa"
+      ],
+      "title": "Universal Studios Singapore & Sentosa Guide",
+      "desc": "Tickets, best rides, getting there, beaches, shows and a 1–2 day plan.",
+      "meta": "6 min read",
+      "date": "Oct 2026"
+    },
+    "/blog/singapore-food-guide.html": {
+      "img": "/images/destinations/singapore-food.webp",
+      "alt": "A bowl of laksa",
+      "chips": [
+        "Singapore",
+        "Food"
+      ],
+      "title": "Ultimate Singapore Food Guide",
+      "desc": "Must-try dishes, hawker centres, restaurants and a food tour — with costs and neighbourhoods.",
+      "meta": "6 min read",
+      "date": "May 2026"
+    },
+    "/blog/indian-restaurants-singapore.html": {
+      "img": "/images/destinations/thumbs/little-india-hero.webp",
+      "alt": "Temple sculptures in Little India, Singapore",
+      "chips": [
+        "Food"
+      ],
+      "title": "Best Indian Restaurants in Singapore",
+      "desc": "Banana-leaf thalis, Mumbai street food, biryani and fine dining, plus veg and Jain tips.",
+      "meta": "6 min read",
+      "date": "Oct 2026"
+    },
+    "/blog/singapore-budget-travel.html": {
+      "img": "/assets/self/nikita-about.webp",
+      "alt": "Nikita on Sentosa beach at blue hour",
+      "pos": "50% 45%",
+      "chips": [
+        "Singapore",
+        "Budget"
+      ],
+      "title": "How to Visit Singapore on a Budget",
+      "desc": "Budget breakdown, free activities, cheap eats and money-saving tips for budget travellers.",
+      "meta": "7 min read",
+      "date": "May 2026"
+    },
+    "/blog/singapore-layover-guide.html": {
+      "img": "/public/images/banner-1200.webp",
+      "alt": "Illustration of a couple at Changi Airport",
+      "chips": [
+        "Singapore",
+        "Layovers"
+      ],
+      "title": "Singapore Layover Guide (6h–48h)",
+      "desc": "How to make the most of a 6, 12, 24 or 48-hour stopover — with Changi Airport tips.",
+      "meta": "5 min read",
+      "date": "May 2026"
+    },
+    "/blog/singapore-malaysia-7-day-itinerary.html": {
+      "img": "/images/destinations/thumbs/clarke-quay-hero.webp",
+      "alt": "Boat Quay on the Singapore River",
+      "chips": [
+        "Itinerary"
+      ],
+      "title": "7-Day Singapore and Malaysia Itinerary",
+      "desc": "Marina Bay, Sentosa, Kuala Lumpur, Batu Caves and Genting, with no backtracking.",
+      "meta": "4 min read",
+      "date": "Oct 2026"
+    },
+    "/blog/singapore-to-malaysia-by-bus-or-train.html": {
+      "img": "/images/destinations/thumbs/johor-causeway-hero.webp",
+      "alt": "The Johor–Singapore Causeway",
+      "chips": [
+        "Transport"
+      ],
+      "title": "Singapore to Malaysia by Bus or Train",
+      "desc": "Johor Bahru in five minutes or KL in a day: every option, costs and border tips.",
+      "meta": "4 min read",
+      "date": "Oct 2026"
+    },
+    "/blog/japan-10-day-itinerary.html": {
+      "img": "/images/destinations/thumbs/japan-hero.webp",
+      "alt": "Kiyomizu-dera temple in Kyoto in autumn",
+      "chips": [
+        "Japan",
+        "Itinerary"
+      ],
+      "title": "Perfect 10-Day Japan Itinerary",
+      "desc": "Tokyo, Kyoto, Mt. Fuji and Osaka day by day — transport, costs in JPY, neighbourhoods, temples and food.",
+      "meta": "12 min read",
+      "date": "June 2026"
+    },
+    "/blog/japan-5-day-itinerary.html": {
+      "img": "/images/destinations/thumbs/japan-hero.webp",
+      "alt": "Kiyomizu-dera temple in Kyoto",
+      "pos": "0% 50%",
+      "chips": [
+        "Japan",
+        "Itinerary"
+      ],
+      "title": "Japan 5-Day Itinerary: Tokyo to Mt. Fuji",
+      "desc": "Tokyo highlights, a Mt. Fuji day trip, budget breakdown and what to eat.",
+      "meta": "5 min read",
+      "date": "May 2026"
+    },
+    "/blog/japan-trip-cost-from-india.html": {
+      "img": "/images/destinations/thumbs/japan-hero.webp",
+      "alt": "Kiyomizu-dera temple in Kyoto, Japan, in autumn",
+      "chips": [
+        "Budget"
+      ],
+      "title": "Japan Trip Cost from India",
+      "desc": "A 7-day budget in rupees: flights, visa, hotels, food and whether the JR Pass is worth it.",
+      "meta": "7 min read",
+      "date": "Nov 2026"
+    },
+    "/blog/bali-vs-thailand.html": {
+      "img": "/images/destinations/thumbs/bali-hero.webp",
+      "alt": "Green rice terraces in Bali",
+      "chips": [
+        "Compare"
+      ],
+      "title": "Bali vs Thailand for Indians",
+      "desc": "Visa, daily costs in rupees, flights, food and the best months for each.",
+      "meta": "8 min read",
+      "date": "Nov 2026"
+    },
+    "/blog/thailand-food-guide.html": {
+      "img": "/images/destinations/thumbs/thailand-hero.webp",
+      "alt": "Wat Arun temple in Bangkok",
+      "chips": [
+        "Thailand",
+        "Food"
+      ],
+      "title": "Thailand Food Guide 2026",
+      "desc": "Street food must-tries, Bangkok markets, budget dining and the best neighbourhoods to eat.",
+      "meta": "8 min read",
+      "date": "June 2026"
+    },
+    "/blog/vietnam-travel-guide.html": {
+      "img": "/images/destinations/thumbs/vietnam-hero.webp",
+      "alt": "Ha Long Bay in Vietnam",
+      "chips": [
+        "Vietnam",
+        "Itinerary"
+      ],
+      "title": "Vietnam Travel Guide: Best Itinerary & Budget Tips",
+      "desc": "Hanoi, Ha Long Bay and Ho Chi Minh City — food, attractions and real travel costs.",
+      "meta": "4 min read",
+      "date": "May 2026"
+    },
+    "/blog/dubai-with-family.html": {
+      "img": "/images/destinations/thumbs/dubai-hero.webp",
+      "alt": "Yachts and towers at Dubai Marina",
+      "chips": [
+        "Family"
+      ],
+      "title": "Dubai with Family: 5-Day Itinerary",
+      "desc": "A relaxed plan for kids and grandparents, with visa tips, costs and Indian food.",
+      "meta": "8 min read",
+      "date": "Nov 2026"
+    },
+    "/blog/singapore-vs-thailand-vs-dubai.html": {
+      "img": "/images/destinations/thumbs/merlion-hero.webp",
+      "alt": "The Merlion and Marina Bay skyline",
+      "chips": [
+        "Compare"
+      ],
+      "title": "Singapore vs Thailand vs Dubai",
+      "desc": "Your first trip abroad? Visa, flights, daily costs, food and who each one suits.",
+      "meta": "6 min read",
+      "date": "Oct 2026"
+    },
+    "/blog/southeast-asia-budget-tips.html": {
+      "img": "/images/destinations/thumbs/bali-hero.webp",
+      "alt": "Green rice terraces in Bali",
+      "chips": [
+        "Southeast Asia",
+        "Budget"
+      ],
+      "title": "Southeast Asia Budget Travel",
+      "desc": "Save on food, transport and stays across Thailand, Vietnam, Indonesia and more.",
+      "meta": "10 min read",
+      "date": "June 2026"
+    },
+    "/blog/visa-free-countries-for-indians.html": {
+      "img": "/images/destinations/thumbs/maldives-hero.webp",
+      "alt": "A resort pool overlooking the sea in the Maldives",
+      "chips": [
+        "Visa"
+      ],
+      "title": "Visa-Free Countries for Indians",
+      "desc": "Visa-free, on-arrival and e-visa countries with entry rules, best months and daily costs.",
+      "meta": "9 min read",
+      "date": "Nov 2026"
+    },
+    "/blog/singapore-visa-for-indians.html": {
+      "img": "/images/destinations/thumbs/merlion-hero.webp",
+      "alt": "The Merlion at Marina Bay, Singapore",
+      "chips": [
+        "Visa"
+      ],
+      "title": "Singapore Visa for Indians: Step-by-Step Guide",
+      "desc": "Documents, photo rules, fees, processing time and the free SG Arrival Card.",
+      "meta": "4 min read",
+      "date": "Oct 2026"
+    },
+    "/blog/singapore-flights-from-india.html": {
+      "img": "/images/destinations/thumbs/jewel-changi-hero.webp",
+      "alt": "The Rain Vortex at Jewel Changi Airport",
+      "chips": [
+        "Flights"
+      ],
+      "title": "Flights to Singapore from India",
+      "desc": "Flight times from your city, typical fares, airlines and how to book cheaper.",
+      "meta": "5 min read",
+      "date": "Oct 2026"
+    },
+    "/singapore-trip-cost-calculator.html": {
+      "img": "/images/destinations/thumbs/singapore-hero.webp",
+      "alt": "Singapore skyline at Marina Bay",
+      "chips": [
+        "Tool"
+      ],
+      "title": "Singapore Trip Cost Calculator (in ₹)",
+      "desc": "Pick your nights, group and style to get an instant rupee estimate with flights, visa and hotel.",
+      "meta": "Interactive",
+      "date": "Oct 2026"
+    },
+    "/visa-checker.html": {
+      "img": "/images/destinations/thumbs/georgia-hero.webp",
+      "alt": "Mountain church in Georgia",
+      "chips": [
+        "Tool"
+      ],
+      "title": "Visa Checker for Indian Passports",
+      "desc": "Visa-free, on arrival, e-visa or visa needed: check any country we cover.",
+      "meta": "Interactive",
+      "date": "Nov 2026"
+    },
+    "/trip-finder.html": {
+      "img": "/images/destinations/thumbs/iceland-hero.webp",
+      "alt": "Waterfall in Iceland",
+      "chips": [
+        "Tool"
+      ],
+      "title": "Trip Finder Quiz",
+      "desc": "Six questions on budget, days and style, and we match you with destinations.",
+      "meta": "Interactive",
+      "date": "Nov 2026"
+    }
+  }
+}
