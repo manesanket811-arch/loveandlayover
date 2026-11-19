@@ -5,11 +5,11 @@
   "h1": "Malaysia Travel Guide 2026",
   "country": "Malaysia",
   "datePublished": "2026-10-01",
-  "dateModified": "2026-10-02",
+  "dateModified": "2026-11-19",
   "faq": [
     [
       "Do Indians need a visa for Malaysia?",
-      "Indian passport holders can currently visit Malaysia visa-free for up to 30 days for tourism; the scheme has been extended to 31 December 2026. You still need to fill in the free Malaysia Digital Arrival Card (MDAC) within 3 days before arrival. Rules change, so check the Malaysian immigration website before you fly."
+      "Until 31 December 2026, Indian passport holders can visit Malaysia visa-free for up to 30 days. From 1 January 2027 you need a visa approved before arrival, applied for on the official MyVISA portal from 1 December 2026. You also need the free Malaysia Digital Arrival Card (MDAC) within 3 days before arrival."
     ],
     [
       "How many days are enough for Malaysia?",
@@ -37,8 +37,8 @@
   "badges": {
     "budget": "RM200–400/day",
     "best": "Dec–Apr",
-    "visa": "30 days visa-free for Indians",
-    "visaType": "free"
+    "visa": "Visa-free to 31 Dec 2026; visa from 1 Jan 2027",
+    "visaType": "evisa"
   },
   "videoKeywords": "malaysia,genting,kuala lumpur,penang,langkawi,malacca,melaka,batu caves,putrajaya",
   "foodImage": {
@@ -50,7 +50,7 @@
     {
       "id": "why-visit",
       "title": "Why Visit Malaysia?",
-      "html": "<p><strong>Malaysia</strong> packs a lot into one easy, affordable trip: the glittering skyline of Kuala Lumpur, Hindu cave temples, cool misty highlands, colonial Malacca, the street art and hawker food of Penang, and the duty-free beaches of Langkawi. Malay, Chinese and Indian cultures live side by side, so the food is some of the best in Asia, and Indian travellers will find dosa, banana leaf rice and Tamil spoken all over the country.</p>\n<p>It’s also one of the simplest international trips from India: short flights, visa-free entry for Indians, English widely spoken and prices that stretch a rupee budget. From Singapore, where we live, it’s a quick flight, a bus ride or even a train across the causeway.</p>"
+      "html": "<p><strong>Malaysia</strong> packs a lot into one easy, affordable trip: the glittering skyline of Kuala Lumpur, Hindu cave temples, cool misty highlands, colonial Malacca, the street art and hawker food of Penang, and the duty-free beaches of Langkawi. Malay, Chinese and Indian cultures live side by side, so the food is some of the best in Asia, and Indian travellers will find dosa, banana leaf rice and Tamil spoken all over the country.</p>\n<p>It’s also one of the simplest international trips from India: short flights, an easy online visa process (visa-free until the end of 2026), English widely spoken and prices that stretch a rupee budget. From Singapore, where we live, it’s a quick flight, a bus ride or even a train across the causeway.</p>"
     },
     {
       "id": "itineraries",
@@ -174,7 +174,7 @@
     {
       "id": "essentials",
       "title": "Travel Essentials",
-      "html": "<p><strong>Visa for Indians:</strong> visa-free entry for up to 30 days for tourism (extended to 31 December 2026). Fill in the free <strong>Malaysia Digital Arrival Card (MDAC)</strong> online within 3 days before arrival. Carry a return ticket and hotel booking. Always check the latest rules before you fly.</p>\n<p><strong>Money:</strong> Malaysian Ringgit (RM / MYR). RM1 is roughly ₹19–20. Cards work in malls, hotels and many restaurants; carry cash for hawker stalls, markets and Batu Caves. Money changers in malls often beat airport rates.</p>\n<p><strong>SIM card:</strong> CelcomDigi, Maxis (Hotlink) and U Mobile sell tourist prepaid SIMs at the airport, typically RM20–50 for a week or more of data. eSIMs work well too.</p>\n<p><strong>Plugs:</strong> Type G (three square pins, UK-style), 240V. Bring an adapter for Indian plugs.</p>\n<p><strong>Apps:</strong> Grab (rides and food), Touch ’n Go eWallet, Google Maps, MyRapid (KL transit) and Klook for attraction tickets.</p>\n<p><strong>Accommodation:</strong> hostels RM50–100, mid-range hotels RM150–300, and good-value 4–5 star hotels from around RM350 a night in KL.</p>\n<p><strong>Cultural tips:</strong> Malaysia is a Muslim-majority country. Dress modestly at mosques and temples (robes and sarongs are usually provided), remove shoes before entering, and use your right hand to give and receive. Public displays of affection are frowned upon.</p>"
+      "html": "<p><strong>Visa for Indians:</strong> visa-free entry for up to 30 days continues until 31 December 2026. From <strong>1 January 2027</strong>, Indian passport holders need a visa approved before arrival, applied for on the official MyVISA portal (malaysiavisa.imi.gov.my), with applications open from 1 December 2026. Every visitor must also fill in the free <strong>Malaysia Digital Arrival Card (MDAC)</strong> online within 3 days before arrival. See our <a href=\"/blog/malaysia-visa-for-indians-2027.html\">Malaysia visa guide for 2027</a>.</p>\n<p><strong>Money:</strong> Malaysian Ringgit (RM / MYR). RM1 is roughly ₹19–20. Cards work in malls, hotels and many restaurants; carry cash for hawker stalls, markets and Batu Caves. Money changers in malls often beat airport rates.</p>\n<p><strong>SIM card:</strong> CelcomDigi, Maxis (Hotlink) and U Mobile sell tourist prepaid SIMs at the airport, typically RM20–50 for a week or more of data. eSIMs work well too.</p>\n<p><strong>Plugs:</strong> Type G (three square pins, UK-style), 240V. Bring an adapter for Indian plugs.</p>\n<p><strong>Apps:</strong> Grab (rides and food), Touch ’n Go eWallet, Google Maps, MyRapid (KL transit) and Klook for attraction tickets.</p>\n<p><strong>Accommodation:</strong> hostels RM50–100, mid-range hotels RM150–300, and good-value 4–5 star hotels from around RM350 a night in KL.</p>\n<p><strong>Cultural tips:</strong> Malaysia is a Muslim-majority country. Dress modestly at mosques and temples (robes and sarongs are usually provided), remove shoes before entering, and use your right hand to give and receive. Public displays of affection are frowned upon.</p>"
     }
   ],
   "related": [

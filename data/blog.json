@@ -83,6 +83,7 @@
       "title": "Visas, flights & planning tools",
       "intro": "Visa rules for Indian passports, flight tips and free tools to plan and budget your trip.",
       "posts": [
+        "/blog/malaysia-visa-for-indians-2027.html",
         "/blog/visa-free-countries-for-indians.html",
         "/blog/singapore-visa-for-indians.html",
         "/blog/singapore-flights-from-india.html",
@@ -607,6 +608,17 @@
       ],
       "title": "Singapore Work Culture and Interview Tips",
       "desc": "Hours, leave, contracts, interviews and salary negotiation, compared with India.",
+      "meta": "8 min read",
+      "date": "Nov 2026"
+    },
+    "/blog/malaysia-visa-for-indians-2027.html": {
+      "img": "/images/destinations/thumbs/malaysia-hero.webp",
+      "alt": "Petronas Twin Towers in Kuala Lumpur, Malaysia",
+      "chips": [
+        "Visa news"
+      ],
+      "title": "Malaysia Visa for Indians from 1 January 2027",
+      "desc": "Visa-free entry ends on 31 December 2026. Who needs a visa, how to apply and what it means for your trip.",
       "meta": "8 min read",
       "date": "Nov 2026"
     }
