@@ -1,9 +1,5 @@
 {
-  "_readme": "Blog listing (blog.html), built by scripts/build-blog.cjs. Each section lists post URLs in display order; card text and images are in \"posts\". Add new posts here, then run node scripts/build-blog.cjs.",
-  "start": [
-    "/blog/moving-to-singapore-from-india.html",
-    "/blog/singapore-first-timer-guide.html"
-  ],
+  "_readme": "Blog listing (blog.html), built by scripts/build-blog.cjs. \"featured\" = lead story + 3 side stories; \"trending\" adds a Trending badge; each section lists post URLs in display order; card text and images are in \"posts\". Add new posts here, then run node scripts/build-blog.cjs.",
   "sections": [
     {
       "id": "moving",
@@ -622,5 +618,14 @@
       "meta": "8 min read",
       "date": "Nov 2026"
     }
-  }
+  },
+  "featured": [
+    "/blog/malaysia-visa-for-indians-2027.html",
+    "/blog/moving-to-singapore-from-india.html",
+    "/blog/how-to-get-a-job-in-singapore.html",
+    "/blog/singapore-first-timer-guide.html"
+  ],
+  "trending": [
+    "/blog/malaysia-visa-for-indians-2027.html"
+  ]
 }

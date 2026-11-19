@@ -32,10 +32,10 @@ for (const f of fs.readdirSync(DATA).filter(f => f.endsWith('.json'))) {
 }
 
 // Card image and title for "Keep planning": posts built here use their own data,
-// other pages are read from the blog listing.
-const blog = fs.readFileSync(path.join(ROOT, 'blog.html'), 'utf8');
+// other pages come from the blog listing data (data/blog.json).
+const BLOG = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'blog.json'), 'utf8')).posts;
 const LISTED = {};
-for (const m of blog.matchAll(/<a class="post" href="\/blog\/([\w-]+)\.html"[^>]*>\s*<div class="post-img"><img src="([^"]+)"[\s\S]*?<h3>([^<]+)<\/h3>/g)) LISTED[m[1]] = { img: m[2], title: unesc(m[3]) };
+for (const [href, c] of Object.entries(BLOG)) { const m = href.match(/^\/blog\/([\w-]+)\.html$/); if (m) LISTED[m[1]] = { img: c.img, title: c.title }; }
 function card(slug) {
   const p = posts[slug];
   let c = p ? { img: `/images/destinations/thumbs/${p.hero}.webp`, title: p.h1 } : LISTED[slug];
