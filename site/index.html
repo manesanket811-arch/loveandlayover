@@ -276,6 +276,95 @@
 </section>
 
 <!-- ===== Videos ===== -->
+<section class="sg-now" aria-label="Singapore right now">
+  <style>
+    .sg-now { padding: 34px 0 0; }
+    .sg-now .now-grid { display: grid; grid-template-columns: 1fr 1fr 1.6fr; gap: 14px; }
+    .sg-now .now-card { background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 18px 20px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+    .sg-now .now-label { font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+    .sg-now .now-time { font-family: var(--serif); font-size: clamp(1.9rem, 3.4vw, 2.5rem); font-weight: 900; line-height: 1.05; color: var(--ink); font-variant-numeric: tabular-nums; }
+    .sg-now .now-time small { font-family: inherit; font-size: .45em; font-weight: 700; color: var(--muted); margin-left: 4px; }
+    .sg-now .now-sub { font-size: .85rem; color: var(--ink-soft); }
+    .sg-now .now-wx { flex-direction: row; align-items: center; gap: 16px; background: linear-gradient(135deg, #eef6ff, #fff8ec); }
+    .sg-now .wx-icon { font-size: 2.8rem; line-height: 1; }
+    .sg-now .wx-main { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+    .sg-now .wx-temp { font-family: var(--serif); font-size: clamp(1.9rem, 3.4vw, 2.5rem); font-weight: 900; line-height: 1.05; color: var(--ink); }
+    .sg-now .wx-temp span { font-family: var(--sans, inherit); font-size: .42em; font-weight: 700; color: var(--ink-soft); margin-left: 6px; }
+    .sg-now .wx-meta { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: .82rem; color: var(--ink-soft); }
+    .sg-now .wx-credit { font-size: .7rem; color: var(--muted); }
+    .sg-now .wx-credit a { color: inherit; text-decoration: underline; }
+    @media (max-width: 860px) {
+      .sg-now .now-grid { grid-template-columns: 1fr 1fr; }
+      .sg-now .now-wx { grid-column: 1 / -1; }
+    }
+    @media (max-width: 420px) { .sg-now .now-card { padding: 14px 16px; } .sg-now .wx-icon { font-size: 2.3rem; } }
+  </style>
+  <div class="wrap">
+    <div class="now-grid">
+      <div class="now-card"><span class="now-label">🇸🇬 Singapore</span><span class="now-time" id="tSG">--:--</span><span class="now-sub" id="dSG">&nbsp;</span></div>
+      <div class="now-card"><span class="now-label">🇮🇳 India</span><span class="now-time" id="tIN">--:--</span><span class="now-sub" id="dIN">2½ hours behind Singapore</span></div>
+      <div class="now-card now-wx" id="sgWx" aria-live="polite">
+        <span class="wx-icon" id="wxIcon" aria-hidden="true">🌤️</span>
+        <span class="wx-main">
+          <span class="now-label">Weather in Singapore today</span>
+          <span class="wx-temp" id="wxTemp">--°C<span id="wxSky">Loading…</span></span>
+          <span class="wx-meta" id="wxMeta"></span>
+          <span class="wx-credit">Live from <a href="https://open-meteo.com/" target="_blank" rel="noopener nofollow">Open-Meteo</a></span>
+        </span>
+      </div>
+    </div>
+  </div>
+  <script>
+  (function () {
+    function fmt(tz, opts) { return new Intl.DateTimeFormat('en-GB', Object.assign({ timeZone: tz }, opts)).format(new Date()); }
+    function tick() {
+      var t = { hour: 'numeric', minute: '2-digit', hour12: true };
+      var d = { weekday: 'short', day: 'numeric', month: 'short' };
+      var parts = function (tz) { var s = fmt(tz, t).toUpperCase(); var m = s.match(/^(.*?)\s?(AM|PM)$/); return m ? m[1] + '<small>' + m[2] + '</small>' : s; };
+      document.getElementById('tSG').innerHTML = parts('Asia/Singapore');
+      document.getElementById('tIN').innerHTML = parts('Asia/Kolkata');
+      document.getElementById('dSG').textContent = fmt('Asia/Singapore', d);
+      document.getElementById('dIN').textContent = fmt('Asia/Kolkata', d) + ' · 2½ hrs behind';
+    }
+    tick(); setInterval(tick, 15000);
+
+    function sky(c, day) {
+      if (c === 0) return [day ? '☀️' : '🌙', 'Clear'];
+      if (c <= 2) return [day ? '🌤️' : '🌙', 'Partly cloudy'];
+      if (c === 3) return ['☁️', 'Cloudy'];
+      if (c === 45 || c === 48) return ['🌫️', 'Hazy'];
+      if (c >= 51 && c <= 57) return ['🌦️', 'Drizzle'];
+      if ((c >= 61 && c <= 67) || (c >= 80 && c <= 82)) return ['🌧️', 'Rain'];
+      if (c >= 95) return ['⛈️', 'Thunderstorms'];
+      return ['🌡️', ''];
+    }
+    function show(w) {
+      var c = w.current, dy = w.daily, s = sky(c.weather_code, c.is_day);
+      document.getElementById('wxIcon').textContent = s[0];
+      document.getElementById('wxTemp').innerHTML = Math.round(c.temperature_2m) + '°C<span>' + s[1] + '</span>';
+      var meta = ['Feels like ' + Math.round(c.apparent_temperature) + '°C',
+        'High ' + Math.round(dy.temperature_2m_max[0]) + '° · Low ' + Math.round(dy.temperature_2m_min[0]) + '°',
+        'Humidity ' + Math.round(c.relative_humidity_2m) + '%'];
+      if (dy.precipitation_probability_max && dy.precipitation_probability_max[0] != null) meta.push('Rain chance ' + dy.precipitation_probability_max[0] + '%');
+      document.getElementById('wxMeta').innerHTML = meta.map(function (m) { return '<span>' + m + '</span>'; }).join('');
+    }
+    var KEY = 'wx:sg-home', url = 'https://api.open-meteo.com/v1/forecast?latitude=1.2897&longitude=103.8501' +
+      '&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,is_day' +
+      '&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Asia%2FSingapore&forecast_days=1';
+    try { var c = JSON.parse(sessionStorage.getItem(KEY)); if (c && Date.now() - c.t < 15 * 60e3) return show(c.v); } catch (e) {}
+    if (!window.fetch) return;
+    fetch(url).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).then(function (w) {
+      if (!w.current || typeof w.current.temperature_2m !== 'number') throw new Error('no data');
+      try { sessionStorage.setItem(KEY, JSON.stringify({ t: Date.now(), v: w })); } catch (e) {}
+      show(w);
+    }).catch(function () {
+      document.getElementById('wxTemp').innerHTML = '31°C<span>Typical day</span>';
+      document.getElementById('wxMeta').innerHTML = '<span>Live weather is unavailable right now. Singapore is usually 25–32°C, humid, with afternoon showers.</span>';
+    });
+  })();
+  </script>
+</section>
+
 <!-- news:start -->
 <section class="home-news" aria-labelledby="homeNewsTitle">
   <style>
