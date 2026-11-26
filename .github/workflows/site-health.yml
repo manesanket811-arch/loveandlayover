@@ -1,0 +1,53 @@
+name: Site health check
+
+# Weekly check for broken links, missing anchors and images, dead partner links (Klook,
+# Wise, WhatsApp, YouTube) and JavaScript errors on every page. If anything is broken,
+# opens (or updates) a GitHub issue labelled "site-health"; closes it when all is well.
+
+on:
+  schedule:
+    - cron: '17 1 * * 1'   # Mondays 09:17 Singapore time
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install browser
+        run: |
+          npm install --no-save --no-package-lock playwright@1.49.1
+          npx playwright install --with-deps chromium
+
+      - name: Check the site
+        id: check
+        continue-on-error: true
+        env:
+          CHECK_BROWSER: '1'
+        run: node scripts/check-site.cjs
+
+      - name: Report
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create site-health --color d73a4a --description "Found by the weekly site health check" --force >/dev/null 2>&1 || true
+          open=$(gh issue list --label site-health --state open --json number --jq '.[0].number' || true)
+          if [ "${{ steps.check.outcome }}" = "failure" ]; then
+            if [ -n "$open" ]; then
+              gh issue comment "$open" --body-file site-health-report.md
+            else
+              gh issue create --title "Site health check found problems" --label site-health --body-file site-health-report.md
+            fi
+            exit 1
+          elif [ -n "$open" ]; then
+            gh issue close "$open" --comment "Fixed: this week's check found no problems."
+          fi

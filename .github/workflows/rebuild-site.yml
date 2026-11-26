@@ -1,0 +1,49 @@
+name: Rebuild site
+
+# Rebuilds every generated page (menus and footers, guides, blog, news, sitemap, search…)
+# whenever data or build scripts change on main, so nothing goes out of sync.
+# Commits made by GitHub Actions don't re-trigger this workflow.
+
+on:
+  push:
+    branches: [main]
+    paths: ['data/**', 'scripts/**', 'videos-data.json', 'images/destinations/credits.json']
+  workflow_dispatch:
+
+concurrency:
+  group: rebuild-site
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # build-sitemap reads each page's last commit date
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Rebuild everything
+        run: node scripts/build-all.cjs
+
+      - name: Commit changes
+        run: |
+          git add -A
+          if git diff --staged --quiet; then
+            echo "Everything already up to date"
+            exit 0
+          fi
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "chore: rebuild generated pages"
+          for i in 1 2 3; do
+            git pull --rebase && git push && exit 0
+            sleep 5
+          done
+          exit 1
