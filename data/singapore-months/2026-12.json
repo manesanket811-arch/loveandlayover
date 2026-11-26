@@ -1,0 +1,32 @@
+{
+  "month": "2026-12",
+  "updated": "2026-11-26",
+  "intro": "December is Singapore's most festive month: Orchard Road lit up for Christmas, festive carnivals at Gardens by the Bay and Sentosa, and New Year's Eve fireworks over Marina Bay. It's also the rainy season and peak travel time, so book early.",
+  "events": [
+    { "name": "Orchard Road Christmas Light-Up", "start": "2026-11-17", "end": "2027-01-03", "where": "Orchard Road", "cost": "Free", "desc": "The whole shopping street lit up, with festive mall displays and a free street party on Christmas Eve.", "tags": ["Free", "Festive"], "top": true },
+    { "name": "Christmas Train Show", "start": "2026-11-20", "end": "2027-01-03", "where": "Gardens by the Bay", "cost": "Check official site", "desc": "A festive model-train display at Gardens by the Bay.", "tags": ["Family", "Festive"] },
+    { "name": "Ralph Lauren Holiday Experience and ice rink", "start": "2026-11-20", "end": "2026-12-26", "where": "Marina Bay Sands Event Plaza", "cost": "Check official site", "desc": "A festive ice rink by the bay, open 10am–10pm daily.", "tags": ["Festive", "Family"] },
+    { "name": "Christmas Wonderland", "start": "2026-11-27", "end": "2027-01-03", "where": "Gardens by the Bay", "cost": "From about S$9 (advance, off-peak); about S$13 on super-peak dates", "desc": "Singapore's biggest festive carnival: light displays, a 20-metre elf treehouse, Santa's Mission Control, rides and festive food. Super-peak dates are 4–6, 11–13 and 18–27 December.", "tags": ["Festive", "Family"], "top": true },
+    { "name": "Season of Joy, A Universal Christmas and Christmas Glowcean", "start": "2026-11-27", "end": "2027-01-03", "where": "Resorts World Sentosa", "cost": "Attraction tickets", "desc": "Festive shows and decorations across Resorts World Sentosa, a Christmas makeover at Universal Studios Singapore and a festive glow at the Singapore Oceanarium.", "tags": ["Family", "Festive"], "top": true },
+    { "name": "Singapore Comic Con", "start": "2026-12-04", "end": "2026-12-06", "where": "Singapore Expo", "cost": "Ticketed", "desc": "Comics, games, cosplay and celebrity panels.", "tags": ["Pop culture"] },
+    { "name": "PGL CS2 Major playoffs", "start": "2026-12-10", "end": "2026-12-13", "where": "Singapore Indoor Stadium", "cost": "Ticketed", "desc": "The first Counter-Strike 2 Major in Southeast Asia.", "tags": ["Esports"] },
+    { "name": "Christmas Eve street party", "start": "2026-12-24", "end": "2026-12-24", "where": "Orchard Road", "cost": "Free", "desc": "Orchard Road's Christmas Eve celebration under the lights.", "tags": ["Free", "Festive"] },
+    { "name": "ONE Countdown 2027 and Marina Bay fireworks", "start": "2026-12-31", "end": "2026-12-31", "where": "Marina Bay, The Kallang, Siloso Beach, Clarke Quay and heartland sites", "cost": "Free (some ticketed parties)", "desc": "Four-part fireworks over Marina Bay from 10.30pm to midnight, with countdown parties across the island.", "tags": ["Free", "New Year"], "top": true }
+  ],
+  "holidays": [{ "date": "2026-12-25", "name": "Christmas Day (public holiday)" }],
+  "tips": [
+    "Book Christmas Wonderland on an off-peak weekday (27 Nov–3 Dec or 7–10 Dec) for cheaper tickets.",
+    "On 31 December, arrive at Marina Bay by 8–9pm and expect MRT crowd control.",
+    "Indian passport holders can visit Malaysia visa-free only until 31 December 2026; from 1 January 2027 a visa is needed."
+  ],
+  "related": [
+    { "title": "Singapore in December 2026: What to Do", "url": "/blog/singapore-in-december.html" },
+    { "title": "Christmas and New Year in Singapore 2026", "url": "/blog/christmas-new-year-singapore-2026.html" }
+  ],
+  "sources": [
+    { "title": "Visit Singapore: Christmas Light Up, Orchard Road 2026", "url": "https://www.visitsingapore.com/whats-happening/all-happenings/events/christmas-light-up/" },
+    { "title": "Visit Singapore: Celebrate Christmas in Singapore 2026", "url": "https://www.visitsingapore.com/whats-happening/all-happenings/festivals/christmas/" },
+    { "title": "Eventful SG: Christmas in Singapore 2026", "url": "https://www.eventful-sg.com/blog/posts/christmas-singapore-2026-light-ups-markets" },
+    { "title": "Mothership: Where to go for countdown fireworks", "url": "https://mothership.sg/2026/11/where-to-go-for-countdown-fireworks-singapore/" }
+  ]
+}

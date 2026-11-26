@@ -114,6 +114,11 @@
   @media (max-width: 860px) { .nlead { grid-template-columns: 1fr; } .nlead-img { min-height: 220px; } .nlead-body { padding: 24px; } }
   .nmeta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: .8rem; color: var(--muted); }
   .ntopic { font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #fff; background: var(--navy); padding: 4px 9px; border-radius: 999px; }
+  .nmonth { display: grid; grid-template-columns: auto 1fr auto; gap: 14px; align-items: center; margin-top: 18px; background: #fff8ec; border: 1px solid #f1d7b0; border-radius: 18px; padding: 16px 20px; font-size: 1.4rem; transition: box-shadow .25s; }
+  .nmonth:hover { box-shadow: var(--shadow); }
+  .nmonth b { display: block; font-size: 1rem; color: var(--ink); }
+  .nmonth small { display: block; font-size: .85rem; color: var(--ink-soft); }
+  .nmonth > span:last-child { color: var(--accent); font-weight: 800; font-size: 1.1rem; }
   .nfilters { display: flex; gap: 8px; flex-wrap: wrap; margin: 40px 0 18px; }
   .nfilter { padding: 8px 15px; border-radius: 999px; border: 1px solid var(--line); background: #fff; font: inherit; font-size: .88rem; font-weight: 600; color: var(--ink-soft); cursor: pointer; }
   .nfilter[aria-pressed="true"] { background: var(--navy); border-color: var(--navy); color: #fff; }
@@ -166,6 +171,8 @@
       <span class="nlead-body"><span class="nmeta"><span class="ntopic">Visas &amp; passes</span><time datetime="2026-11-26">26 Nov 2026</time></span><b>What's Changing in 2027 for Indians in Singapore</b><span class="ndek">Work pass salaries, a new tech pass, the Malaysia visa and a new border train: every change in one place, with what to do about each.</span><span class="nread">Read the full update →</span></span>
     </a>
 
+    <a class="nmonth" href="/singapore-this-month.html"><span>📅</span><span><b>What's on in Singapore this month</b><small>Events, festivals, holidays and tips, updated every month</small></span><span aria-hidden="true">→</span></a>
+
     <div class="nfilters" role="group" aria-label="Filter news by topic">
       <button class="nfilter" type="button" data-topic="all" aria-pressed="true">All news</button>
       <button class="nfilter" type="button" data-topic="Visas &amp; passes" aria-pressed="false">Visas &amp; passes</button>
@@ -201,7 +208,7 @@
     <div class="ftr-top">
       <a href="/" class="site-brand"><img src="/public/images/brand/logo-mark-light.svg" alt="Love and Layovers logo" width="30" height="30">Love &amp; Layovers</a>
       <nav class="ftr-links" aria-label="Footer">
-        <a href="/destinations/">Destinations</a><a href="/blog.html">Blog</a><a href="/singapore-news.html">Singapore news</a><a href="/blog/moving-to-singapore-from-india.html">Moving to Singapore</a><a href="/videos.html">Videos</a><a href="/videos/life-in-singapore.html">Life in Singapore</a><a href="/singapore-salary-calculator.html">Salary &amp; EP calculator</a><a href="/singapore-trip-cost-calculator.html">Trip cost calculator</a><a href="/trip-finder.html">Trip finder quiz</a><a href="/visa-checker.html">Visa checker</a><a href="/work-with-us.html">Work with us</a><a href="/about.html">About</a>
+        <a href="/destinations/">Destinations</a><a href="/blog.html">Blog</a><a href="/singapore-news.html">Singapore news</a><a href="/singapore-this-month.html">This month in Singapore</a><a href="/blog/moving-to-singapore-from-india.html">Moving to Singapore</a><a href="/videos.html">Videos</a><a href="/videos/life-in-singapore.html">Life in Singapore</a><a href="/singapore-salary-calculator.html">Salary &amp; EP calculator</a><a href="/singapore-trip-cost-calculator.html">Trip cost calculator</a><a href="/trip-finder.html">Trip finder quiz</a><a href="/visa-checker.html">Visa checker</a><a href="/work-with-us.html">Work with us</a><a href="/about.html">About</a>
       </nav>
       <div class="ftr-social">
         <a href="https://www.youtube.com/@LoveAndLayover?sub_confirmation=1" target="_blank" rel="noopener" aria-label="YouTube">▶ YouTube</a>

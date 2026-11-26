@@ -91,6 +91,11 @@ ${GA}
   @media (max-width: 860px) { .nlead { grid-template-columns: 1fr; } .nlead-img { min-height: 220px; } .nlead-body { padding: 24px; } }
   .nmeta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: .8rem; color: var(--muted); }
   .ntopic { font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #fff; background: var(--navy); padding: 4px 9px; border-radius: 999px; }
+  .nmonth { display: grid; grid-template-columns: auto 1fr auto; gap: 14px; align-items: center; margin-top: 18px; background: #fff8ec; border: 1px solid #f1d7b0; border-radius: 18px; padding: 16px 20px; font-size: 1.4rem; transition: box-shadow .25s; }
+  .nmonth:hover { box-shadow: var(--shadow); }
+  .nmonth b { display: block; font-size: 1rem; color: var(--ink); }
+  .nmonth small { display: block; font-size: .85rem; color: var(--ink-soft); }
+  .nmonth > span:last-child { color: var(--accent); font-weight: 800; font-size: 1.1rem; }
   .nfilters { display: flex; gap: 8px; flex-wrap: wrap; margin: 40px 0 18px; }
   .nfilter { padding: 8px 15px; border-radius: 999px; border: 1px solid var(--line); background: #fff; font: inherit; font-size: .88rem; font-weight: 600; color: var(--ink-soft); cursor: pointer; }
   .nfilter[aria-pressed="true"] { background: var(--navy); border-color: var(--navy); color: #fff; }
@@ -128,6 +133,8 @@ ${header('news')}
       <span class="nlead-img"><img src="${lead.big}" alt="${esc(altFor(lead.thumb))}" width="1200" height="760" fetchpriority="high"></span>
       <span class="nlead-body"><span class="nmeta"><span class="ntopic">${esc(lead.newsTopic || 'Singapore')}</span><time datetime="${lead.updated}">${updatedTag(lead)}</time></span><b>${esc(lead.h1)}</b><span class="ndek">${esc(lead.dek)}</span><span class="nread">Read the full update →</span></span>
     </a>
+
+    <a class="nmonth" href="/singapore-this-month.html"><span>📅</span><span><b>What's on in Singapore this month</b><small>Events, festivals, holidays and tips, updated every month</small></span><span aria-hidden="true">→</span></a>
 
     <div class="nfilters" role="group" aria-label="Filter news by topic">
       <button class="nfilter" type="button" data-topic="all" aria-pressed="true">All news</button>
@@ -192,7 +199,7 @@ if (/<!-- news:start -->[\s\S]*?<!-- news:end -->/.test(home)) {
     @media (max-width: 860px) { .home-news .hn-grid { grid-template-columns: 1fr; } }
   </style>
   <div class="wrap">
-    <div class="hn-head"><h2 id="homeNewsTitle">Latest Singapore news</h2><a class="hn-all" href="/singapore-news.html">All news →</a></div>
+    <div class="hn-head"><h2 id="homeNewsTitle">Latest Singapore news</h2><span><a class="hn-all" href="/singapore-this-month.html">What's on this month</a> · <a class="hn-all" href="/singapore-news.html">All news →</a></span></div>
     <div class="hn-grid">
 ${news.slice(0, 3).map(n => `      <a class="hn" href="${n.url}"><small>${esc(n.newsTopic || 'Singapore')}</small><b>${esc(n.h1)}</b><span>${updatedTag(n)}</span></a>`).join('\n')}
     </div>

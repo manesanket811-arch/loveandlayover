@@ -1,0 +1,51 @@
+name: Monthly Singapore events page
+
+# Rebuilds "Things to do in Singapore this month" (singapore-this-month.html and
+# singapore-events/YYYY-MM.html) from data/singapore-months/. Runs daily just after
+# midnight Singapore time, so the page switches to the new month on the 1st and picks
+# up any month data added since. Commits only when something changed.
+# The month data itself is researched and added by a monthly scheduled Claude task.
+
+on:
+  schedule:
+    - cron: '7 16 * * *'   # 00:07 Singapore time (UTC+8)
+  workflow_dispatch:
+
+concurrency:
+  group: monthly-events
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # build-sitemap reads each page's last commit date
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Build monthly events pages
+        run: node scripts/build-month-events.cjs
+
+      - name: Commit if the page changed
+        run: |
+          if git diff --quiet -- singapore-this-month.html singapore-events; then
+            echo "No change"
+            exit 0
+          fi
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add singapore-this-month.html singapore-events
+          git commit -m "chore: update monthly Singapore events page"
+          node scripts/build-sitemap.cjs
+          node scripts/build-search-index.cjs
+          git add sitemap.xml search-index.json
+          git diff --staged --quiet || git commit -m "chore: refresh sitemap and search index"
+          git pull --rebase
+          git push

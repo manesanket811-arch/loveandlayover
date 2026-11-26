@@ -13,7 +13,8 @@ const SKIP = new Set(['404.html', 'itinerary-builder.html', 'faq.html', 'resourc
 
 function pages() {
   const list = fs.readdirSync(ROOT).filter(f => f.endsWith('.html'));
-  for (const dir of ['destinations', 'blog']) {
+  for (const dir of ['destinations', 'blog', 'singapore-events']) {
+    if (!fs.existsSync(path.join(ROOT, dir))) continue;
     for (const f of fs.readdirSync(path.join(ROOT, dir))) if (f.endsWith('.html')) list.push(`${dir}/${f}`);
   }
   return list.filter(f => !SKIP.has(f) && !/<meta name="robots" content="noindex/i.test(fs.readFileSync(path.join(ROOT, f), 'utf8')));
