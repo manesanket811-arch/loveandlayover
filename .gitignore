@@ -88,3 +88,5 @@ local-test/
 test-data/
 *.pid
 site-health-report.md
+gsc-report*.json
+*.gsc.json
