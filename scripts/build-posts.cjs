@@ -77,7 +77,7 @@ function build(p) {
   if (faq.length) toc.push(['faq', 'FAQs']);
 
   const posting = {
-    '@context': 'https://schema.org', '@type': 'BlogPosting', headline: p.h1, description: p.description, image: og,
+    '@context': 'https://schema.org', '@type': p.news ? 'NewsArticle' : 'BlogPosting', headline: p.h1, description: p.description, image: og,
     datePublished: p.published, dateModified: modified,
     author: [{ '@type': 'Person', '@id': `${SITE}/#sanket`, name: 'Sanket Mane' }, { '@type': 'Person', '@id': `${SITE}/#nikita`, name: 'Nikita' }],
     publisher: { '@type': 'Organization', '@id': `${SITE}/#organization`, name: 'Love and Layovers', logo: { '@type': 'ImageObject', url: `${SITE}/public/images/brand/logo-512.png` } },
@@ -85,7 +85,7 @@ function build(p) {
   };
   const crumbs = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
-    { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE}/blog.html` },
+    p.news ? { '@type': 'ListItem', position: 2, name: 'Singapore News', item: `${SITE}/singapore-news.html` } : { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE}/blog.html` },
     { '@type': 'ListItem', position: 3, name: p.h1, item: url }] };
   const faqLd = faq.length ? ld({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: strip(a) } })) }) + '\n' : '';
 
@@ -137,15 +137,15 @@ ${HEAD_LINKS}
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
-${header('blog')}
+${header(p.news ? 'news' : 'blog')}
 
 <main id="main">
 <section class="post-hero" style="background-image: url('${img}')">
   <div class="wrap">
-    <nav class="post-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/blog.html">Blog</a> › ${esc(p.crumb || p.h1)}</nav>
+    <nav class="post-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> › ${p.news ? '<a href="/singapore-news.html">Singapore News</a>' : '<a href="/blog.html">Blog</a>'} › ${esc(p.crumb || p.h1)}</nav>
     <h1>${p.h1Html || esc(p.h1)}</h1>
     <p class="dek">${p.dek}</p>
-    <div class="post-meta-row"><span>${p.read || 5} min read</span><span>Updated ${MONTHS[+mo - 1]} ${y}</span><span>By Sanket &amp; Nikita, living in Singapore</span></div>
+    <div class="post-meta-row">${p.news ? `<span>News · ${esc(p.newsTopic || 'Singapore')}</span>` : ''}<span>${p.read || 5} min read</span><span>Updated ${p.news ? `${+modified.split('-')[2]} ` : ''}${MONTHS[+mo - 1]} ${y}</span><span>By Sanket &amp; Nikita, living in Singapore</span></div>
   </div>
   <span class="post-photo-credit">Photo: <a href="${esc(c.page)}" rel="noopener" target="_blank">${esc(String(c.artist).slice(0, 40))}</a>, ${esc(c.license)}</span>
 </section>

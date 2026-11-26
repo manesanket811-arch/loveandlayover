@@ -14,6 +14,22 @@ const esc = (s = '') => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').r
 const PREVIEW = 4; // cards per section in the "All" view
 const MONTHS = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
 
+// "Singapore news" section, built from posts marked "news": true (newest first).
+// News posts are removed from the other sections so each appears once.
+const { altFor } = require('./image-alts.cjs');
+const NEWS = fs.readdirSync(path.join(ROOT, 'data', 'posts')).filter(f => f.endsWith('.json'))
+  .map(f => JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'posts', f), 'utf8'))).filter(p => p.news)
+  .sort((a, b) => (b.modified || b.published).localeCompare(a.modified || a.published) || (b.priority || 0) - (a.priority || 0));
+if (NEWS.length) {
+  const SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const hrefs = NEWS.map(p => `/blog/${p.slug}.html`);
+  for (const p of NEWS) {
+    const h = `/blog/${p.slug}.html`, img = `/images/destinations/thumbs/${p.hero}.webp`, [y, m] = p.published.split('-');
+    data.posts[h] = Object.assign({ img, alt: altFor(img), title: p.h1, desc: p.dek, meta: `${p.read || 5} min read` }, data.posts[h] || {}, { chips: [p.newsTopic || 'News'], date: `${SHORT[+m - 1]} ${y}` });
+  }
+  for (const s of data.sections) s.posts = s.posts.filter(h => !hrefs.includes(h));
+  data.sections.unshift({ id: 'news', kicker: 'Singapore news', title: 'Latest Singapore news', intro: 'Visa and work pass changes, Malaysia and JB travel, transport and events, and what they mean for you.', posts: hrefs, link: '/singapore-news.html' });
+}
 for (const s of data.sections) for (const h of s.posts) if (!data.posts[h]) throw new Error(`blog.json: no card for ${h}`);
 for (const h of data.featured || []) if (!data.posts[h]) throw new Error(`blog.json: featured ${h} has no card`);
 
@@ -71,7 +87,7 @@ const total = new Set(data.sections.flatMap(s => s.posts)).size;
 const sections = data.sections.map(s => `  <section class="sec" id="${s.id}" data-sec="${s.id}" aria-labelledby="${s.id}-t">
     <div class="sec-head">
       <div><span class="kicker">${esc(s.kicker)}</span><h2 id="${s.id}-t">${esc(s.title)}</h2><p>${esc(s.intro)}</p></div>
-      <a class="sec-all" href="?topic=${s.id}" data-topic="${s.id}">View all ${s.posts.length} <span aria-hidden="true">→</span></a>
+      ${s.link ? `<a class="sec-all sec-link" href="${s.link}">All news <span aria-hidden="true">→</span></a>` : `<a class="sec-all" href="?topic=${s.id}" data-topic="${s.id}">View all ${s.posts.length} <span aria-hidden="true">→</span></a>`}
     </div>
     <div class="cards">
 ${s.posts.map((h, i) => card(h, i)).join('\n')}
@@ -344,7 +360,7 @@ ${SCRIPT}
   }
 
   tabs.forEach(function (t) { t.addEventListener('click', function () { go(t.dataset.topic, true); }); });
-  document.querySelectorAll('.sec-all').forEach(function (a) { a.addEventListener('click', function (e) { e.preventDefault(); go(a.dataset.topic, true); }); });
+  document.querySelectorAll('.sec-all:not(.sec-link)').forEach(function (a) { a.addEventListener('click', function (e) { e.preventDefault(); go(a.dataset.topic, true); }); });
   q.addEventListener('input', function () {
     render();
     clearTimeout(timer);

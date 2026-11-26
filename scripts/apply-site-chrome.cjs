@@ -13,7 +13,7 @@ const REFRESH = '<link rel="stylesheet" href="/css/refresh.css?v=5">';
 const MODERN = new Set(['index.html', 'about.html', 'videos.html', 'blog.html', 'work-with-us.html', 'singapore-trip-cost-calculator.html']);
 
 function defaultFiles() {
-  const list = ['index.html', 'about.html', 'videos.html', 'blog.html', 'work-with-us.html', '404.html', 'singapore-trip-cost-calculator.html', 'credits.html'];
+  const list = ['index.html', 'about.html', 'videos.html', 'blog.html', 'singapore-news.html', 'work-with-us.html', '404.html', 'singapore-trip-cost-calculator.html', 'credits.html'];
   for (const dir of ['destinations', 'blog']) {
     for (const f of fs.readdirSync(path.join(ROOT, dir))) if (f.endsWith('.html')) list.push(`${dir}/${f}`);
   }
@@ -25,6 +25,7 @@ function section(file) {
   if (file.startsWith('blog')) return 'blog';
   if (file.startsWith('videos')) return 'videos';
   if (file === 'about.html') return 'about';
+  if (file === 'singapore-news.html') return 'news';
   if (file === 'work-with-us.html') return 'work';
   return '';
 }
@@ -36,7 +37,8 @@ function apply(file) {
   let s = raw.toString('utf8').replace(/^﻿/, '');
   const before = s;
 
-  s = s.replace(/<header\b[^>]*>[\s\S]*?<\/header>/, header(section(file)));
+  const sec = file.startsWith('blog/') && s.includes('"@type": "NewsArticle"') ? 'news' : section(file);
+  s = s.replace(/<header\b[^>]*>[\s\S]*?<\/header>/, header(sec));
   if (/<footer\b/.test(s)) s = s.replace(/<footer\b[^>]*>[\s\S]*?<\/footer>/, footer());
   else s = s.replace(/<\/main>/, `</main>\n\n${footer()}`);
 

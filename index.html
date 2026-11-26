@@ -220,6 +220,7 @@
       <a href="/destinations/">Destinations</a>
       <a href="/videos.html">Videos</a>
       <a href="/blog.html">Blog</a>
+      <a href="/singapore-news.html">News</a>
       <a href="/about.html">About</a>
       <a href="/work-with-us.html" class="site-cta">Work with us</a>
     </nav>
@@ -275,6 +276,33 @@
 </section>
 
 <!-- ===== Videos ===== -->
+<!-- news:start -->
+<section class="home-news" aria-labelledby="homeNewsTitle">
+  <style>
+    .home-news { padding: 40px 0 8px; }
+    .home-news .hn-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 16px; }
+    .home-news h2 { font-size: clamp(1.4rem, 2.6vw, 1.9rem); font-weight: 900; display: flex; align-items: center; gap: 10px; }
+    .home-news h2::before { content: ''; width: 9px; height: 9px; border-radius: 50%; background: #dc2626; box-shadow: 0 0 0 4px rgba(220,38,38,.15); }
+    .home-news .hn-all { font-weight: 700; color: var(--accent); white-space: nowrap; }
+    .home-news .hn-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .home-news .hn { display: flex; flex-direction: column; gap: 8px; background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 18px; transition: box-shadow .25s, transform .25s; }
+    .home-news .hn:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
+    .home-news .hn small { font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+    .home-news .hn b { font-size: 1.02rem; line-height: 1.35; color: var(--ink); }
+    .home-news .hn span { font-size: .82rem; color: var(--muted); margin-top: auto; }
+    @media (max-width: 860px) { .home-news .hn-grid { grid-template-columns: 1fr; } }
+  </style>
+  <div class="wrap">
+    <div class="hn-head"><h2 id="homeNewsTitle">Latest Singapore news</h2><a class="hn-all" href="/singapore-news.html">All news →</a></div>
+    <div class="hn-grid">
+      <a class="hn" href="/blog/singapore-changes-2027-for-indians.html"><small>Visas &amp; passes</small><b>What's Changing in 2027 for Indians in Singapore</b><span>26 Nov 2026</span></a>
+      <a class="hn" href="/blog/rts-link-johor-bahru-singapore.html"><small>Transport</small><b>JB–Singapore RTS Link: Opening Date, Fares and What to Know</b><span>26 Nov 2026</span></a>
+      <a class="hn" href="/blog/christmas-new-year-singapore-2026.html"><small>Events</small><b>Christmas and New Year in Singapore 2026: What's On</b><span>26 Nov 2026</span></a>
+    </div>
+  </div>
+</section>
+<!-- news:end -->
+
 <section class="start-here" aria-labelledby="startHere">
   <div class="wrap">
     <h2 id="startHere">New here? Start here</h2>
@@ -532,7 +560,7 @@
     <div class="ftr-top">
       <a href="/" class="site-brand"><img src="/public/images/brand/logo-mark-light.svg" alt="Love and Layovers logo" width="30" height="30">Love &amp; Layovers</a>
       <nav class="ftr-links" aria-label="Footer">
-        <a href="/destinations/">Destinations</a><a href="/blog.html">Blog</a><a href="/blog/moving-to-singapore-from-india.html">Moving to Singapore</a><a href="/videos.html">Videos</a><a href="/videos/life-in-singapore.html">Life in Singapore</a><a href="/singapore-trip-cost-calculator.html">Trip cost calculator</a><a href="/trip-finder.html">Trip finder quiz</a><a href="/visa-checker.html">Visa checker</a><a href="/work-with-us.html">Work with us</a><a href="/about.html">About</a>
+        <a href="/destinations/">Destinations</a><a href="/blog.html">Blog</a><a href="/singapore-news.html">Singapore news</a><a href="/blog/moving-to-singapore-from-india.html">Moving to Singapore</a><a href="/videos.html">Videos</a><a href="/videos/life-in-singapore.html">Life in Singapore</a><a href="/singapore-trip-cost-calculator.html">Trip cost calculator</a><a href="/trip-finder.html">Trip finder quiz</a><a href="/visa-checker.html">Visa checker</a><a href="/work-with-us.html">Work with us</a><a href="/about.html">About</a>
       </nav>
       <div class="ftr-social">
         <a href="https://www.youtube.com/@LoveAndLayover?sub_confirmation=1" target="_blank" rel="noopener" aria-label="YouTube">▶ YouTube</a>
