@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.deployment-retry.outputs.page_url }}
     steps:
       - uses: actions/checkout@v6
         with:
@@ -41,4 +41,14 @@ jobs:
           path: site   # only the site/ folder is published
 
       - id: deployment
+        uses: actions/deploy-pages@v5
+        continue-on-error: true
+
+      # GitHub occasionally can't find the just-uploaded files for a few seconds; wait and try once more
+      - name: Retry deploy after a short wait
+        if: steps.deployment.outcome == 'failure'
+        run: sleep 30
+
+      - id: deployment-retry
+        if: steps.deployment.outcome == 'failure'
         uses: actions/deploy-pages@v5
