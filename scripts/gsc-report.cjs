@@ -79,6 +79,8 @@ const shortUrl = (u) => u.replace(/^https?:\/\/(www\.)?loveandlayover\.in/, '') 
     q(start, end, ['page']), q(pStart, pEnd, ['page']), q(start, end, ['query', 'page'], 5000),
     q(start, end, ['country'], 10), q(start, end, ['device'], 5),
   ]);
+  const byClicks = (a, b) => b.clicks - a.clicks || b.impressions - a.impressions;
+  queries.sort(byClicks); pages.sort(byClicks);
   const T = tot[0] || { clicks: 0, impressions: 0, ctr: 0, position: 0 }, P = ptot[0] || { clicks: 0, impressions: 0, ctr: 0, position: 0 };
   const prevQ = new Map(pqueries.map(r => [r.keys[0], r])), prevP = new Map(ppages.map(r => [r.keys[0], r]));
 
