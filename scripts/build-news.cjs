@@ -38,8 +38,9 @@ const briefingHtml = briefings.length ? `
     <section class="brief" id="briefing" aria-labelledby="briefTitle">
       <div class="brief-head"><h2 id="briefTitle">Daily Singapore briefing</h2><time datetime="${briefings[0].date}">${longDay(briefings[0].date)}</time></div>
       <ol class="brief-list">
-${briefings[0].items.map(i => `        <li data-topic="${esc(i.topic || 'Singapore')}"><span class="ntopic">${esc(i.topic || 'Singapore')}</span><b>${esc(i.headline)}</b><p>${esc(i.summary)}</p><span class="brief-src">Source: ${ext(i.url, i.source)}${i.related ? ` · <a href="${esc(i.related)}">Our guide →</a>` : ''}</span></li>`).join('\n')}
+${briefings[0].items.map(i => `        <li data-topic="${esc(i.topic || 'Singapore')}"><span class="ntopic">${esc(i.topic || 'Singapore')}</span><b>${esc(i.headline)}</b><p>${esc(i.summary)}</p><button class="brief-more" type="button" hidden>Read more</button><span class="brief-src">Source: ${ext(i.url, i.source)}${i.related ? ` · <a href="${esc(i.related)}">Our guide →</a>` : ''}</span></li>`).join('\n')}
       </ol>
+      <p class="brief-swipe">Swipe for more →</p>
 ${briefings.length > 1 ? `      <details class="brief-earlier"><summary>Earlier briefings</summary>
 ${briefings.slice(1).map(b => `        <h3>${longDay(b.date)}</h3><ul>${b.items.map(i => `<li>${esc(i.headline)} <span class="brief-src">(${ext(i.url, i.source)})</span></li>`).join('')}</ul>`).join('\n')}
       </details>
@@ -133,18 +134,29 @@ ${GA}
   .brief-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; border-bottom: 1px solid var(--line); padding-bottom: 12px; }
   .brief-head h2 { font-size: clamp(1.3rem, 2.4vw, 1.7rem); font-weight: 900; }
   .brief-head time { font-weight: 700; color: var(--accent); }
-  .brief-list { list-style: none; margin: 0; padding: 0; counter-reset: b; }
-  .brief-list li { display: grid; gap: 6px; padding: 16px 0; border-bottom: 1px dashed var(--line); justify-items: start; }
-  .brief-list li:last-child { border-bottom: 0; }
-  .brief-list b { font-size: 1.08rem; line-height: 1.35; color: var(--ink); }
-  .brief-list p { color: var(--ink-soft); font-size: .95rem; margin: 0; }
-  .brief-src { font-size: .82rem; color: var(--muted); }
+  .brief-list { list-style: none; margin: 18px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 14px; }
+  .brief-list li { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; background: var(--cream, #fefaf5); border: 1px solid var(--line); border-radius: 18px; padding: 16px; min-height: 230px; transition: box-shadow .25s, transform .25s; }
+  .brief-list li:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
+  .brief-list .ntopic { font-size: .66rem; padding: 3px 8px; }
+  .brief-list b { font-size: 1rem; line-height: 1.3; color: var(--ink); }
+  .brief-list p { color: var(--ink-soft); font-size: .86rem; line-height: 1.45; margin: 0; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+  .brief-list li.open p { -webkit-line-clamp: unset; overflow: visible; }
+  .brief-more { background: none; border: 0; padding: 0; font: inherit; font-size: .8rem; font-weight: 700; color: var(--ink); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+  .brief-src { font-size: .78rem; color: var(--muted); margin-top: auto; }
   .brief-src a { color: var(--accent); font-weight: 600; }
+  @media (max-width: 640px) {
+    .brief-list { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-left: 18px; gap: 12px; margin: 16px -18px 0; padding: 2px 18px 10px; scrollbar-width: none; }
+    .brief-list::-webkit-scrollbar { display: none; }
+    .brief-list li { flex: 0 0 78%; scroll-snap-align: start; min-height: 0; }
+    .brief-list li:hover { transform: none; }
+  }
+  .nh .brief-swipe { display: none; font-size: .78rem; color: var(--muted); margin-top: 4px; }
+  @media (max-width: 640px) { .nh .brief-swipe { display: block; } }
   .brief-earlier { margin-top: 8px; border-top: 1px solid var(--line); padding-top: 12px; }
   .brief-earlier summary { cursor: pointer; font-weight: 700; color: var(--ink); }
   .brief-earlier h3 { font-size: .95rem; margin: 14px 0 6px; color: var(--accent); }
   .brief-earlier ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: .92rem; color: var(--ink-soft); }
-  .brief-note { margin-top: 14px; font-size: .8rem; color: var(--muted); }
+  .nh .brief-note { margin-top: 14px; font-size: .8rem; color: var(--muted); max-width: none; }
   @media (max-width: 640px) { .brief { padding: 20px 18px; border-radius: 20px; } }
   .nempty { color: var(--muted); padding: 30px 0; text-align: center; }
   .nband { background: #e8f8ee; border: 1px solid #c7ecd5; border-radius: 24px; padding: 32px; margin: 48px 0 72px; display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: center; }
@@ -195,6 +207,14 @@ ${footer()}
 
 ${SCRIPT}
 <script>
+(function () {
+  [].forEach.call(document.querySelectorAll('.brief-list li'), function (li) {
+    var p = li.querySelector('p'), b = li.querySelector('.brief-more');
+    if (!p || !b || p.scrollHeight <= p.clientHeight + 2) return;
+    b.hidden = false;
+    b.addEventListener('click', function () { var o = li.classList.toggle('open'); b.textContent = o ? 'Show less' : 'Read more'; });
+  });
+})();
 (function () {
   var btns = [].slice.call(document.querySelectorAll('.nfilter')), items = [].slice.call(document.querySelectorAll('.nitem'));
   var lead = document.querySelector('.nlead'), empty = document.getElementById('nempty');

@@ -135,18 +135,29 @@
   .brief-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; border-bottom: 1px solid var(--line); padding-bottom: 12px; }
   .brief-head h2 { font-size: clamp(1.3rem, 2.4vw, 1.7rem); font-weight: 900; }
   .brief-head time { font-weight: 700; color: var(--accent); }
-  .brief-list { list-style: none; margin: 0; padding: 0; counter-reset: b; }
-  .brief-list li { display: grid; gap: 6px; padding: 16px 0; border-bottom: 1px dashed var(--line); justify-items: start; }
-  .brief-list li:last-child { border-bottom: 0; }
-  .brief-list b { font-size: 1.08rem; line-height: 1.35; color: var(--ink); }
-  .brief-list p { color: var(--ink-soft); font-size: .95rem; margin: 0; }
-  .brief-src { font-size: .82rem; color: var(--muted); }
+  .brief-list { list-style: none; margin: 18px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 14px; }
+  .brief-list li { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; background: var(--cream, #fefaf5); border: 1px solid var(--line); border-radius: 18px; padding: 16px; min-height: 230px; transition: box-shadow .25s, transform .25s; }
+  .brief-list li:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
+  .brief-list .ntopic { font-size: .66rem; padding: 3px 8px; }
+  .brief-list b { font-size: 1rem; line-height: 1.3; color: var(--ink); }
+  .brief-list p { color: var(--ink-soft); font-size: .86rem; line-height: 1.45; margin: 0; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+  .brief-list li.open p { -webkit-line-clamp: unset; overflow: visible; }
+  .brief-more { background: none; border: 0; padding: 0; font: inherit; font-size: .8rem; font-weight: 700; color: var(--ink); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+  .brief-src { font-size: .78rem; color: var(--muted); margin-top: auto; }
   .brief-src a { color: var(--accent); font-weight: 600; }
+  @media (max-width: 640px) {
+    .brief-list { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-left: 18px; gap: 12px; margin: 16px -18px 0; padding: 2px 18px 10px; scrollbar-width: none; }
+    .brief-list::-webkit-scrollbar { display: none; }
+    .brief-list li { flex: 0 0 78%; scroll-snap-align: start; min-height: 0; }
+    .brief-list li:hover { transform: none; }
+  }
+  .nh .brief-swipe { display: none; font-size: .78rem; color: var(--muted); margin-top: 4px; }
+  @media (max-width: 640px) { .nh .brief-swipe { display: block; } }
   .brief-earlier { margin-top: 8px; border-top: 1px solid var(--line); padding-top: 12px; }
   .brief-earlier summary { cursor: pointer; font-weight: 700; color: var(--ink); }
   .brief-earlier h3 { font-size: .95rem; margin: 14px 0 6px; color: var(--accent); }
   .brief-earlier ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: .92rem; color: var(--ink-soft); }
-  .brief-note { margin-top: 14px; font-size: .8rem; color: var(--muted); }
+  .nh .brief-note { margin-top: 14px; font-size: .8rem; color: var(--muted); max-width: none; }
   @media (max-width: 640px) { .brief { padding: 20px 18px; border-radius: 20px; } }
   .nempty { color: var(--muted); padding: 30px 0; text-align: center; }
   .nband { background: #e8f8ee; border: 1px solid #c7ecd5; border-radius: 24px; padding: 32px; margin: 48px 0 72px; display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: center; }
@@ -186,11 +197,12 @@
     <section class="brief" id="briefing" aria-labelledby="briefTitle">
       <div class="brief-head"><h2 id="briefTitle">Daily Singapore briefing</h2><time datetime="2026-11-26">Thu 26 Nov 2026</time></div>
       <ol class="brief-list">
-        <li data-topic="Rules"><span class="ntopic">Rules</span><b>IC address stickers will show your full NRIC number from 1 December</b><p>From 1 December, anyone who updates their address with ICA will get a sticker showing their full NRIC number instead of a partial one. Existing stickers don't need to be replaced. ICA says the government is moving away from partial NRIC numbers because they can't identify people reliably.</p><span class="brief-src">Source: <a href="https://www.straitstimes.com/singapore/full-nric-number-to-be-displayed-on-address-stickers-from-dec-1-ica" target="_blank" rel="noopener nofollow">The Straits Times ↗</a> · <a href="/blog/singapore-pr-for-indians.html">Our guide →</a></span></li>
-        <li data-topic="Jobs &amp; money"><span class="ntopic">Jobs &amp; money</span><b>Singapore could face 10–20% US tariffs; DPM Gan defends CPF</b><p>Deputy Prime Minister Gan Kim Yong said talks with the US could still end in tariffs of 10–20%, with about S$9.4 billion of exports at stake. A US trade report had criticised Singapore's savings policies, including CPF. Mr Gan said he was surprised and that CPF is vital for an ageing society.</p><span class="brief-src">Source: <a href="https://www.channelnewsasia.com/singapore/us-singapore-trump-tariffs-cpf-scheme-dpm-gan-6584361" target="_blank" rel="noopener nofollow">CNA ↗</a></span></li>
-        <li data-topic="Transport"><span class="ntopic">Transport</span><b>13 motorcyclists caught without a licence or insurance at Tuas Checkpoint</b><p>More than 220 riders were stopped in a joint check on 12 November, and 13 had no valid licence or insurance. Police warned that foreign-registered vehicles can be refused entry if riders don't follow Singapore's rules, worth knowing if you drive or ride across from Johor.</p><span class="brief-src">Source: <a href="https://www.straitstimes.com/singapore/13-unlicensed-uninsured-motorcyclists-caught-after-checks-at-tuas-checkpoint" target="_blank" rel="noopener nofollow">The Straits Times ↗</a> · <a href="/blog/singapore-to-malaysia-by-bus-or-train.html">Our guide →</a></span></li>
-        <li data-topic="Singapore"><span class="ntopic">Singapore</span><b>Fire at a Little India shophouse; about 25 people evacuated</b><p>A fire broke out in a shophouse on Chander Road on the morning of 26 November and spread to the unit next door. About 25 people were evacuated and no injuries were reported. SCDF is investigating the cause.</p><span class="brief-src">Source: <a href="https://www.straitstimes.com/singapore/25-evacuated-after-fire-breaks-out-at-little-india-shophouse-no-injuries-reported" target="_blank" rel="noopener nofollow">The Straits Times ↗</a></span></li>
+        <li data-topic="Rules"><span class="ntopic">Rules</span><b>IC address stickers will show your full NRIC number from 1 December</b><p>From 1 December, anyone who updates their address with ICA will get a sticker showing their full NRIC number instead of a partial one. Existing stickers don't need to be replaced. ICA says the government is moving away from partial NRIC numbers because they can't identify people reliably.</p><button class="brief-more" type="button" hidden>Read more</button><span class="brief-src">Source: <a href="https://www.straitstimes.com/singapore/full-nric-number-to-be-displayed-on-address-stickers-from-dec-1-ica" target="_blank" rel="noopener nofollow">The Straits Times ↗</a> · <a href="/blog/singapore-pr-for-indians.html">Our guide →</a></span></li>
+        <li data-topic="Jobs &amp; money"><span class="ntopic">Jobs &amp; money</span><b>Singapore could face 10–20% US tariffs; DPM Gan defends CPF</b><p>Deputy Prime Minister Gan Kim Yong said talks with the US could still end in tariffs of 10–20%, with about S$9.4 billion of exports at stake. A US trade report had criticised Singapore's savings policies, including CPF. Mr Gan said he was surprised and that CPF is vital for an ageing society.</p><button class="brief-more" type="button" hidden>Read more</button><span class="brief-src">Source: <a href="https://www.channelnewsasia.com/singapore/us-singapore-trump-tariffs-cpf-scheme-dpm-gan-6584361" target="_blank" rel="noopener nofollow">CNA ↗</a></span></li>
+        <li data-topic="Transport"><span class="ntopic">Transport</span><b>13 motorcyclists caught without a licence or insurance at Tuas Checkpoint</b><p>More than 220 riders were stopped in a joint check on 12 November, and 13 had no valid licence or insurance. Police warned that foreign-registered vehicles can be refused entry if riders don't follow Singapore's rules, worth knowing if you drive or ride across from Johor.</p><button class="brief-more" type="button" hidden>Read more</button><span class="brief-src">Source: <a href="https://www.straitstimes.com/singapore/13-unlicensed-uninsured-motorcyclists-caught-after-checks-at-tuas-checkpoint" target="_blank" rel="noopener nofollow">The Straits Times ↗</a> · <a href="/blog/singapore-to-malaysia-by-bus-or-train.html">Our guide →</a></span></li>
+        <li data-topic="Singapore"><span class="ntopic">Singapore</span><b>Fire at a Little India shophouse; about 25 people evacuated</b><p>A fire broke out in a shophouse on Chander Road on the morning of 26 November and spread to the unit next door. About 25 people were evacuated and no injuries were reported. SCDF is investigating the cause.</p><button class="brief-more" type="button" hidden>Read more</button><span class="brief-src">Source: <a href="https://www.straitstimes.com/singapore/25-evacuated-after-fire-breaks-out-at-little-india-shophouse-no-injuries-reported" target="_blank" rel="noopener nofollow">The Straits Times ↗</a></span></li>
       </ol>
+      <p class="brief-swipe">Swipe for more →</p>
       <p class="brief-note">A quick daily round-up of Singapore news that matters to Indians, summarised by us with links to the original reports.</p>
     </section>
 
@@ -255,6 +267,14 @@
 <script src="/js/site.js?v=5"></script>
 <script src="/js/datadog.js" defer></script>
 <script>
+(function () {
+  [].forEach.call(document.querySelectorAll('.brief-list li'), function (li) {
+    var p = li.querySelector('p'), b = li.querySelector('.brief-more');
+    if (!p || !b || p.scrollHeight <= p.clientHeight + 2) return;
+    b.hidden = false;
+    b.addEventListener('click', function () { var o = li.classList.toggle('open'); b.textContent = o ? 'Show less' : 'Read more'; });
+  });
+})();
 (function () {
   var btns = [].slice.call(document.querySelectorAll('.nfilter')), items = [].slice.call(document.querySelectorAll('.nitem'));
   var lead = document.querySelector('.nlead'), empty = document.getElementById('nempty');
