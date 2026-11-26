@@ -198,6 +198,14 @@
 <style>
   .start-here { padding: 8px 0 8px; }
   .start-here h2 { font-size: 1.35rem; font-weight: 900; margin-bottom: 14px; }
+  .create-mini { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 20px 0 6px; }
+  .create-mini div { display: grid; grid-template-columns: auto 1fr; column-gap: 10px; align-items: center; padding: 11px 13px; border-radius: 14px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); }
+  .create-mini span { grid-row: span 2; font-size: 1.25rem; line-height: 1; }
+  .create-mini b { font-size: .9rem; color: #fff; line-height: 1.25; }
+  .create-mini small { font-size: .74rem; color: rgba(255,255,255,.6); line-height: 1.3; }
+  @media (max-width: 560px) { .create-mini { gap: 8px; } .create-mini div { padding: 10px 11px; } .create-mini small { display: none; } .create-mini b { font-size: .82rem; } }
+  .brand-channels { margin-top: 16px; font-size: .8rem; color: rgba(255,255,255,.6); line-height: 1.7; }
+  .brand-channels a { color: rgba(255,255,255,.85); text-decoration: underline; text-underline-offset: 3px; }
   .start-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
   .start-grid a { display: grid; grid-template-columns: auto 1fr; column-gap: 12px; align-items: center; background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 14px 16px; transition: transform .2s ease, border-color .2s ease; }
   .start-grid a:hover { transform: translateY(-3px); border-color: var(--accent); }
@@ -258,6 +266,7 @@
     .ns-clock b { display: inline-flex; align-items: center; gap: 6px; margin-top: 3px; font-size: .74rem; font-weight: 700; letter-spacing: .04em; color: rgba(255,255,255,.8); white-space: nowrap; }
     .flag { width: 18px; height: 12px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(255,255,255,.35); flex: 0 0 auto; }
     .ns-sep { width: 1px; align-self: stretch; margin: 4px 0; background: rgba(255,255,255,.2); }
+    .ns-wx[hidden] { display: none !important; }
     .ns-wx { grid-column: 1 / -1; display: flex; align-items: center; gap: 10px; border-top: 1px solid rgba(255,255,255,.18); padding-top: 10px; }
     .ns-wx-body { display: flex; flex-direction: column; gap: 7px; }
     .ns-wx-text { display: flex; align-items: baseline; gap: 10px; line-height: 1.1; }
@@ -315,7 +324,7 @@
             <figcaption><span class="dig">--:--</span><b><svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="6.67" fill="#FF9933"/><rect y="6.67" width="30" height="6.66" fill="#fff"/><rect y="13.33" width="30" height="6.67" fill="#138808"/><circle cx="15" cy="10" r="2.6" fill="none" stroke="#000080" stroke-width=".7"/><circle cx="15" cy="10" r=".6" fill="#000080"/></svg>India</b></figcaption>
           </figure>
       
-          <div class="ns-wx" aria-live="polite">
+          <div class="ns-wx" id="nsWx" aria-live="polite" hidden>
             <span class="wx-anim" id="wxAnim" aria-hidden="true"></span>
             <span class="ns-wx-body">
               <span class="ns-wx-text"><span class="ns-temp"><span id="wxT">--</span>°C</span><b id="wxSky">Loading weather…</b></span>
@@ -398,6 +407,7 @@
     function show(w) {
       var c = w.current, dy = w.daily, k = kind(c.weather_code), wet = k === 'rain' || k === 'storm';
       if (dy.sunrise && dy.sunset) { sun.rise = +dy.sunrise[0].slice(11, 13) + dy.sunrise[0].slice(14, 16) / 60; sun.set = +dy.sunset[0].slice(11, 13) + dy.sunset[0].slice(14, 16) / 60; }
+      document.getElementById('nsWx').hidden = false;
       phase(); panel.dataset.wet = wet ? '1' : '0';
       setMode(wet ? 'rain' : panel.dataset.phase === 'night' ? 'stars' : 'motes');
       icon(k, c.is_day === 1);
@@ -420,7 +430,7 @@
       if (!w.current || typeof w.current.temperature_2m !== 'number') throw new Error('no data');
       try { sessionStorage.setItem(KEY, JSON.stringify({ t: Date.now(), v: w })); } catch (e) {}
       show(w);
-    }).catch(function () { document.getElementById('wxSky').textContent = 'Weather unavailable'; });
+    }).catch(function () { /* keep just the clocks */ });
   })();
   </script>
       <span class="eyebrow"><span class="dot" aria-hidden="true"></span>Travel &amp; lifestyle creators · Singapore</span>
@@ -428,7 +438,7 @@
       <p class="hero-lead">We're Sanket &amp; Nikita — content creators filming travel, food and everyday life for a 45K+ community. We turn every trip into films and Reels, then into free, budget-honest guides so your next trip is easier than our first.</p>
       <div class="hero-cta">
         <a href="/destinations/" class="btn btn-primary">Explore free guides <span aria-hidden="true">→</span></a>
-        <a href="#create" class="btn btn-ghost">What we create</a>
+        <a href="#work-with-us" class="btn btn-ghost">What we create</a>
       </div>
       <div class="trust">
         <div class="trust-logos" aria-hidden="true">
@@ -485,6 +495,9 @@
     .home-news .hn-brief b { font-size: .78rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #dc2626; }
     .home-news .hn-brief span { color: var(--ink); font-weight: 600; line-height: 1.4; }
     .home-news .hn-brief em { font-style: normal; font-weight: 700; color: var(--accent); font-size: .9rem; }
+    .home-news .hn-wa { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; font-size: .9rem; font-weight: 600; color: var(--ink-soft); }
+    .home-news .hn-wa b { color: #128c4b; }
+    .home-news .hn-wa:hover b { text-decoration: underline; }
     @media (max-width: 860px) { .home-news .hn-grid { grid-template-columns: 1fr; } }
   </style>
   <div class="wrap">
@@ -495,6 +508,7 @@
       <a class="hn" href="/blog/rts-link-johor-bahru-singapore.html"><small>Transport</small><b>JB–Singapore RTS Link: Opening Date, Fares and What to Know</b><span>26 Nov 2026</span></a>
       <a class="hn" href="/blog/christmas-new-year-singapore-2026.html"><small>Events</small><b>Christmas and New Year in Singapore 2026: What's On</b><span>26 Nov 2026</span></a>
     </div>
+    <a class="hn-wa" href="https://whatsapp.com/channel/0029VbE9NJG6buMD4hFaTo0E" target="_blank" rel="noopener" data-wa-channel><span aria-hidden="true">💬</span> Get the daily Singapore briefing on our <b>WhatsApp Channel</b> →</a>
   </div>
 </section>
 <!-- news:end -->
@@ -503,8 +517,8 @@
   <div class="wrap">
     <h2 id="startHere">New here? Start here</h2>
     <div class="start-grid">
-      <a href="/about.html"><span aria-hidden="true">👋</span><b>Meet Sanket &amp; Nikita</b><small>Who we are and what we create</small></a>
-      <a href="/singapore-trip-cost-calculator.html"><span aria-hidden="true">🧮</span><b>Trip cost calculator</b><small>Your Singapore budget in rupees</small></a>
+      <a href="/blog/moving-to-singapore-from-india.html"><span aria-hidden="true">🏙️</span><b>Moving to Singapore</b><small>Jobs, visas, rent and costs from India</small></a>
+      <a href="/singapore-salary-calculator.html"><span aria-hidden="true">💰</span><b>Salary &amp; EP calculator</b><small>Will your offer qualify and what's left</small></a>
       <a href="/destinations/"><span aria-hidden="true">🌏</span><b>Free travel guides</b><small>Asia, Europe &amp; beyond, 3/5/7-day plans</small></a>
       <a href="/trip-finder.html"><span aria-hidden="true">🧭</span><b>Where should I go?</b><small>6-question trip finder quiz</small></a>
     </div>
@@ -549,82 +563,10 @@
   </div>
 </section>
 
-<!-- ===== What we create ===== -->
-<section class="section" id="create">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div>
-        <span class="kicker">Content creators</span>
-        <h2>What we create</h2>
-        <p>Travel is where it started — but we film everything that makes life feel a little more special: food, cafés, wellness, experiences and the little everyday moments.</p>
-      </div>
-      <a href="/work-with-us.html" class="link-arrow">Work with us <span aria-hidden="true">→</span></a>
-    </div>
-
-    <div class="create-grid reveal">
-      <article class="create-card">
-        <span class="create-icon" aria-hidden="true">🎬</span>
-        <h3>Travel films &amp; vlogs</h3>
-        <p>Cinematic trip films, honest day trips and our Life in Singapore vlog series on YouTube.</p>
-        <span class="create-eg">Genting SkyWay · Apple Marina Bay Sands</span>
-      </article>
-      <article class="create-card">
-        <span class="create-icon" aria-hidden="true">📱</span>
-        <h3>Reels &amp; Shorts</h3>
-        <p>Snappy, scroll-stopping vertical videos made for Instagram Reels and YouTube Shorts.</p>
-        <span class="create-eg">Mini-vlogs · 30-day series</span>
-      </article>
-      <article class="create-card">
-        <span class="create-icon" aria-hidden="true">🍜</span>
-        <h3>Food &amp; café features</h3>
-        <p>Restaurant, café and dessert features that make people book a table that weekend.</p>
-        <span class="create-eg">Kailash Parbat · Bikanerwala · Tomacado</span>
-      </article>
-      <article class="create-card">
-        <span class="create-icon" aria-hidden="true">🌿</span>
-        <h3>Wellness &amp; lifestyle</h3>
-        <p>Spa, self-care, fashion and lifestyle stories told the way we'd tell a friend.</p>
-        <span class="create-eg">KOMO Wellness · Sunnystep · Pratha</span>
-      </article>
-      <article class="create-card">
-        <span class="create-icon" aria-hidden="true">🏨</span>
-        <h3>Stays &amp; experiences</h3>
-        <p>Resorts, theme parks, tours and attractions — experienced first, then filmed honestly.</p>
-        <span class="create-eg">Serrano Resort · Imagica · Funvee · Scentopia</span>
-      </article>
-      <article class="create-card">
-        <span class="create-icon" aria-hidden="true">📸</span>
-        <h3>Brand stories &amp; UGC</h3>
-        <p>Product stories, launches and photo/video content your brand can reuse on its own channels.</p>
-        <span class="create-eg">Instagram · YouTube · your channels</span>
-      </article>
-    </div>
-
-    <div class="channels reveal">
-      <a class="channel" href="https://www.youtube.com/@LoveAndLayover?sub_confirmation=1" target="_blank" rel="noopener">
-        <span class="channel-icon yt" aria-hidden="true">▶</span>
-        <span><b>@LoveAndLayover</b><small>YouTube · travel films &amp; vlogs</small></span>
-      </a>
-      <a class="channel" href="https://www.instagram.com/nikita.lagaskar" target="_blank" rel="noopener">
-        <span class="channel-icon ig" aria-hidden="true">◎</span>
-        <span><b>@nikita.lagaskar</b><small>Instagram · lifestyle &amp; dining</small></span>
-      </a>
-      <a class="channel" href="https://www.instagram.com/mi.punekar_" target="_blank" rel="noopener">
-        <span class="channel-icon ig" aria-hidden="true">◎</span>
-        <span><b>@mi.punekar_</b><small>Instagram · culture &amp; roots</small></span>
-      </a>
-      <a class="channel" href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener">
-        <span class="channel-icon ig" aria-hidden="true">◎</span>
-        <span><b>@loveandlayover</b><small>Instagram · travel together</small></span>
-      </a>
-    </div>
-  </div>
-</section>
-
 <!-- ===== Where to go this month ===== -->
 <!-- month:start -->
 <section class="section month-picks" id="this-month" aria-labelledby="monthTitle">
-  <style>.month-picks{padding-top:56px;padding-bottom:8px}.mp-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.mp-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;color:var(--ink);transition:transform .25s ease,box-shadow .25s ease}.mp-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.mp-img{aspect-ratio:16/10;background:var(--sand);overflow:hidden}.mp-img img{width:100%;height:100%;object-fit:cover}.mp-body{padding:14px 16px 16px}.mp-body h3{display:flex;align-items:center;gap:8px;font-size:1.12rem;font-weight:900}.mp-body h3 img{width:24px;height:18px;border-radius:3px;flex:none}.mp-body p{margin-top:4px;font-size:.86rem;color:var(--ink-soft);line-height:1.4}.mp-meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:10px;font-size:.8rem;font-weight:700}.mp-meta .vt{padding:3px 8px;border-radius:999px;font-size:.7rem}.vt.free{background:#dcf5e6;color:#0b5d2e}.vt.arrival{background:#e0f0fb;color:#0b4a75}.vt.evisa{background:#fdf0d5;color:#7a4a00}.vt.visa{background:#f3e8e2;color:#7a2e12}@media (max-width:1000px){.mp-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:520px){.mp-grid{grid-template-columns:minmax(0,1fr)}}</style>
+  <style>.month-picks{padding-top:56px;padding-bottom:8px}.mp-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.mp-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;color:var(--ink);transition:transform .25s ease,box-shadow .25s ease}.mp-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.mp-img{aspect-ratio:16/10;background:var(--sand);overflow:hidden}.mp-img img{width:100%;height:100%;object-fit:cover}.mp-body{padding:14px 16px 16px}.mp-body h3{display:flex;align-items:center;gap:8px;font-size:1.12rem;font-weight:900}.mp-body h3 img{width:24px;height:18px;border-radius:3px;flex:none}.mp-body p{margin-top:4px;font-size:.86rem;color:var(--ink-soft);line-height:1.4}.mp-meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:10px;font-size:.8rem;font-weight:700}.mp-meta .vt{padding:3px 8px;border-radius:999px;font-size:.7rem}.vt.free{background:#dcf5e6;color:#0b5d2e}.vt.arrival{background:#e0f0fb;color:#0b4a75}.vt.evisa{background:#fdf0d5;color:#7a4a00}.vt.visa{background:#f3e8e2;color:#7a2e12}@media (max-width:1000px){.mp-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:640px){.mp-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:24px;gap:12px;margin:0 -24px;padding:2px 24px 10px;scrollbar-width:none}.mp-grid::-webkit-scrollbar{display:none}.mp-card{flex:0 0 74%;scroll-snap-align:start}.mp-card:hover{transform:none}.mp-swipe{display:block}}.mp-swipe{display:none;margin-top:6px;font-size:.8rem;color:var(--muted)}</style>
   <div class="wrap">
     <div class="sec-head reveal">
       <div>
@@ -635,6 +577,7 @@
       <a href="/destinations/?best=1" class="link-arrow">All destinations for this month <span aria-hidden="true">→</span></a>
     </div>
     <div class="mp-grid reveal" id="mpGrid"></div>
+    <p class="mp-swipe">Swipe for more →</p>
     <noscript><p><a href="/destinations/">Browse all destination guides</a></p></noscript>
   </div>
   <script type="application/json" id="mp-data">[{"s":"malaysia","n":"Malaysia","f":"/images/flags/my.svg","i":"/images/destinations/thumbs/malaysia-hero.webp","l":"KL, Genting &amp; Penang food","m":[12,1,2,3,4],"v":"evisa","vl":"e-Visa","r":"asia","b":"₹3,900–7,800/day"},{"s":"singapore","n":"Singapore","f":"/images/flags/sg.svg","i":"/images/destinations/thumbs/singapore-hero.webp","l":"Hawker food, Marina Bay &amp; easy layovers","m":[2,3,4,7,8],"v":"visa","vl":"Visa needed","r":"asia","b":"₹6,700–10,500/day"},{"s":"azerbaijan","n":"Azerbaijan","f":"/images/flags/az.svg","i":"/images/destinations/thumbs/azerbaijan-hero.webp","l":"Baku, fire temple &amp; mountains","m":[4,5,6,9,10],"v":"evisa","vl":"e-Visa","r":"asia","b":"₹6,000–10,000/day"},{"s":"bali","n":"Bali","f":"/images/flags/id.svg","i":"/images/destinations/thumbs/bali-hero.webp","l":"Temples, rice terraces &amp; sunsets","m":[4,5,6,7,8,9,10],"v":"arrival","vl":"Visa on arrival","r":"asia","b":"₹3,200–5,300/day"},{"s":"bhutan","n":"Bhutan","f":"/images/flags/bt.svg","i":"/images/destinations/thumbs/bhutan-hero.webp","l":"Dzongs &amp; Tiger's Nest","m":[3,4,5,9,10,11],"v":"free","vl":"Visa-free","r":"asia","b":"₹6,000–10,000/day"},{"s":"cambodia","n":"Cambodia","f":"/images/flags/kh.svg","i":"/images/destinations/thumbs/cambodia-hero.webp","l":"Angkor Wat &amp; Phnom Penh","m":[11,12,1,2],"v":"arrival","vl":"Visa on arrival","r":"asia","b":"₹4,300–7,700/day"},{"s":"dubai","n":"Dubai","f":"/images/flags/ae.svg","i":"/images/destinations/thumbs/dubai-hero.webp","l":"Burj Khalifa, souks &amp; desert","m":[11,12,1,2,3],"v":"evisa","vl":"e-Visa","r":"asia","b":"₹9,200–16,000/day"},{"s":"georgia","n":"Georgia","f":"/images/flags/ge.svg","i":"/images/destinations/thumbs/georgia-hero.webp","l":"Tbilisi, Kazbegi &amp; wine country","m":[5,6,9,10,12,1,2],"v":"evisa","vl":"e-Visa","r":"asia","b":"₹4,700–7,800/day"},{"s":"hong-kong","n":"Hong Kong","f":"/images/flags/hk.svg","i":"/images/destinations/thumbs/hong-kong-hero.webp","l":"Skyline, dim sum &amp; the Peak","m":[10,11,12,1,2],"v":"free","vl":"Visa-free","r":"asia","b":"₹8,600–15,000/day"},{"s":"indonesia","n":"Indonesia","f":"/images/flags/id.svg","i":"/images/destinations/thumbs/indonesia-hero.webp","l":"Borobudur &amp; Yogyakarta","m":[4,5,6,7,8,9,10],"v":"arrival","vl":"Visa on arrival","r":"asia","b":"₹3,200–5,300/day"},{"s":"japan","n":"Japan","f":"/images/flags/jp.svg","i":"/images/destinations/thumbs/japan-hero.webp","l":"Tokyo, Kyoto &amp; Mt. Fuji","m":[3,4,5,10,11],"v":"evisa","vl":"e-Visa","r":"asia","b":"₹8,000–12,500/day"},{"s":"kazakhstan","n":"Kazakhstan","f":"/images/flags/kz.svg","i":"/images/destinations/thumbs/kazakhstan-hero.webp","l":"Almaty, Shymbulak &amp; mountain lakes","m":[5,6,7,8,9,12,1,2],"v":"free","vl":"Visa-free","r":"asia","b":"₹5,100–8,500/day"},{"s":"macau","n":"Macau","f":"/images/flags/mo.svg","i":"/images/destinations/thumbs/macau-hero.webp","l":"Egg tarts, old town &amp; Cotai","m":[10,11,12],"v":"free","vl":"Visa-free","r":"asia","b":"₹10,500–17,000/day"},{"s":"maldives","n":"Maldives","f":"/images/flags/mv.svg","i":"/images/destinations/thumbs/maldives-hero.webp","l":"Lagoons, reefs &amp; island resorts","m":[11,12,1,2,3,4],"v":"arrival","vl":"Visa on arrival","r":"asia","b":"₹13,000–25,500/day"},{"s":"nepal","n":"Nepal","f":"/images/flags/np.svg","i":"/images/destinations/thumbs/nepal-hero.webp","l":"Himalayas, temples &amp; Pokhara","m":[3,4,10,11],"v":"free","vl":"Visa-free","r":"asia","b":"₹2,500–4,400/day"},{"s":"oman","n":"Oman","f":"/images/flags/om.svg","i":"/images/destinations/thumbs/oman-hero.webp","l":"Wadis, dunes &amp; Muscat","m":[10,11,12,1,2,3],"v":"evisa","vl":"e-Visa","r":"asia","b":"₹8,800–15,500/day"},{"s":"philippines","n":"Philippines","f":"/images/flags/ph.svg","i":"/images/destinations/thumbs/philippines-hero.webp","l":"El Nido lagoons &amp; Bohol","m":[12,1,2,3,4,5],"v":"free","vl":"Visa-free","r":"asia","b":"₹4,500–8,300/day"},{"s":"qatar","n":"Qatar","f":"/images/flags/qa.svg","i":"/images/destinations/thumbs/qatar-hero.webp","l":"Doha, souqs &amp; desert safaris","m":[11,12,1,2,3],"v":"free","vl":"Visa-free","r":"asia","b":"₹9,200–16,000/day"},{"s":"south-korea","n":"South Korea","f":"/images/flags/kr.svg","i":"/images/destinations/thumbs/south-korea-hero.webp","l":"Seoul palaces &amp; street food","m":[4,5,9,10],"v":"visa","vl":"Visa needed","r":"asia","b":"₹6,800–10,500/day"},{"s":"sri-lanka","n":"Sri Lanka","f":"/images/flags/lk.svg","i":"/images/destinations/thumbs/sri-lanka-hero.webp","l":"Sigiriya, tea hills &amp; beaches","m":[12,1,2,3],"v":"evisa","vl":"e-Visa","r":"asia","b":"₹4,200–7,000/day"},{"s":"taiwan","n":"Taiwan","f":"/images/flags/tw.svg","i":"/images/destinations/thumbs/taiwan-hero.webp","l":"Taipei 101, night markets &amp; lakes","m":[10,11,12,3,4],"v":"visa","vl":"Visa needed","r":"asia","b":"₹8,100–13,500/day"},{"s":"thailand","n":"Thailand","f":"/images/flags/th.svg","i":"/images/destinations/thumbs/thailand-hero.webp","l":"Bangkok streets to Phuket beaches","m":[11,12,1,2],"v":"free","vl":"Visa-free","r":"asia","b":"₹3,800–6,300/day"},{"s":"uzbekistan","n":"Uzbekistan","f":"/images/flags/uz.svg","i":"/images/destinations/thumbs/uzbekistan-hero.webp","l":"Samarkand, Bukhara &amp; Khiva","m":[4,5,9,10],"v":"evisa","vl":"e-Visa","r":"asia","b":"₹4,100–6,800/day"},{"s":"vietnam","n":"Vietnam","f":"/images/flags/vn.svg","i":"/images/destinations/thumbs/vietnam-hero.webp","l":"Hanoi, Ha Long Bay &amp; pho","m":[2,3,4,10,11],"v":"evisa","vl":"e-Visa","r":"asia","b":"₹2,700–4,400/day"},{"s":"france","n":"France","f":"/images/flags/fr.svg","i":"/images/destinations/thumbs/france-hero.webp","l":"Paris, cafés &amp; the Louvre","m":[4,5,6,9,10],"v":"visa","vl":"Visa needed","r":"europe","b":"₹10,000–15,500/day"},{"s":"germany","n":"Germany","f":"/images/flags/de.svg","i":"/images/destinations/thumbs/germany-hero.webp","l":"Berlin, Munich &amp; castles","m":[5,6,9,10,12],"v":"visa","vl":"Visa needed","r":"europe","b":"₹9,000–14,000/day"},{"s":"greece","n":"Greece","f":"/images/flags/gr.svg","i":"/images/destinations/thumbs/greece-hero.webp","l":"Athens &amp; Santorini sunsets","m":[5,6,9,10],"v":"visa","vl":"Visa needed","r":"europe","b":"₹7,600–12,000/day"},{"s":"iceland","n":"Iceland","f":"/images/flags/is.svg","i":"/images/destinations/thumbs/iceland-hero.webp","l":"Northern Lights &amp; waterfalls","m":[6,7,8,9,10,2,3],"v":"visa","vl":"Visa needed","r":"europe","b":"₹15,500–25,000/day"},{"s":"italy","n":"Italy","f":"/images/flags/it.svg","i":"/images/destinations/thumbs/italy-hero.webp","l":"Rome, Venice &amp; Tuscany","m":[4,5,6,9,10],"v":"visa","vl":"Visa needed","r":"europe","b":"₹9,000–14,000/day"},{"s":"portugal","n":"Portugal","f":"/images/flags/pt.svg","i":"/images/destinations/thumbs/portugal-hero.webp","l":"Lisbon trams &amp; Porto wine","m":[4,5,9,10],"v":"visa","vl":"Visa needed","r":"europe","b":"₹7,100–11,000/day"},{"s":"spain","n":"Spain","f":"/images/flags/es.webp","i":"/images/destinations/thumbs/spain-hero.webp","l":"Barcelona, Madrid &amp; tapas","m":[4,5,9,10],"v":"visa","vl":"Visa needed","r":"europe","b":"₹8,600–13,000/day"},{"s":"mexico","n":"Mexico","f":"/images/flags/mx.webp","i":"/images/destinations/thumbs/mexico-hero.webp","l":"Mexico City &amp; ancient ruins","m":[11,12,1,2,3,4],"v":"visa","vl":"Visa needed","r":"americas","b":"₹6,300–9,900/day"},{"s":"peru","n":"Peru","f":"/images/flags/pe.svg","i":"/images/destinations/thumbs/peru-hero.webp","l":"Machu Picchu &amp; Cusco","m":[5,6,7,8,9,10],"v":"visa","vl":"Visa needed","r":"americas","b":"₹5,100–8,300/day"},{"s":"australia","n":"Australia","f":"/images/flags/au.svg","i":"/images/destinations/thumbs/australia-hero.webp","l":"Sydney &amp; the Great Barrier Reef","m":[10,11,12,1,2,3,4],"v":"visa","vl":"Visa needed","r":"more","b":"₹9,900–15,000/day"},{"s":"egypt","n":"Egypt","f":"/images/flags/eg.svg","i":"/images/destinations/thumbs/egypt-hero.webp","l":"Pyramids &amp; the Nile","m":[10,11,12,1,2,3,4],"v":"evisa","vl":"e-Visa","r":"more","b":"₹5,300–7,900/day"},{"s":"turkey","n":"Turkey","f":"/images/flags/tr.svg","i":"/images/destinations/thumbs/turkey-hero.webp","l":"Istanbul &amp; Cappadocia balloons","m":[4,5,9,10],"v":"evisa","vl":"e-Visa","r":"more","b":"₹5,900–9,700/day"}]</script>
@@ -708,16 +651,22 @@
       <div>
         <span class="kicker">For brands</span>
         <h2>Stories your audience actually trusts.</h2>
-        <p>We create authentic travel and lifestyle content across YouTube and Instagram for a 45K+ community — the kind that turns curiosity into bookings.</p>
-        <ul class="formats" aria-label="Collaboration formats">
-          <li>Instagram Reels</li><li>Stories</li><li>Dedicated YouTube vlogs</li><li>YouTube integrations</li><li>Shorts</li><li>UGC photo &amp; video</li><li>Event &amp; launch coverage</li>
-        </ul>
+        <p>We create authentic travel and lifestyle content across YouTube and Instagram for a 45K+ community — the kind that turns curiosity into bookings. Travel is where it started, but we film everything that makes life feel a little more special.</p>
+        <div class="create-mini" aria-label="What we create">
+          <div><span aria-hidden="true">🎬</span><b>Travel films &amp; vlogs</b><small>Genting SkyWay · Apple Marina Bay Sands</small></div>
+          <div><span aria-hidden="true">📱</span><b>Reels &amp; Shorts</b><small>Mini-vlogs · 30-day series</small></div>
+          <div><span aria-hidden="true">🍜</span><b>Food &amp; café features</b><small>Kailash Parbat · Bikanerwala · Tomacado</small></div>
+          <div><span aria-hidden="true">🌿</span><b>Wellness &amp; lifestyle</b><small>KOMO Wellness · Sunnystep · Pratha</small></div>
+          <div><span aria-hidden="true">🏨</span><b>Stays &amp; experiences</b><small>Serrano Resort · Imagica · Funvee · Scentopia</small></div>
+          <div><span aria-hidden="true">📸</span><b>Brand stories &amp; UGC</b><small>Photo &amp; video for your own channels</small></div>
+        </div>
         <ol class="steps">
           <li><div><b>Reach out</b><span>Share your brand and goals — we reply within 48 hours.</span></div></li>
           <li><div><b>Plan the story</b><span>We co-design a concept that feels native to our audience.</span></div></li>
           <li><div><b>Create &amp; publish</b><span>Filmed, edited and published, with performance reporting.</span></div></li>
         </ol>
         <a href="/work-with-us.html" class="btn btn-light">Start a collaboration <span aria-hidden="true">→</span></a>
+        <p class="brand-channels">Our channels: <a href="https://www.youtube.com/@LoveAndLayover" target="_blank" rel="noopener">YouTube @LoveAndLayover</a> · <a href="https://www.instagram.com/loveandlayover" target="_blank" rel="noopener">@loveandlayover</a> · <a href="https://www.instagram.com/nikita.lagaskar" target="_blank" rel="noopener">@nikita.lagaskar</a> · <a href="https://www.instagram.com/mi.punekar_" target="_blank" rel="noopener">@mi.punekar_</a></p>
       </div>
       <div class="logo-wall" aria-label="Brands we've worked with">
         <div class="logo-tile"><img width="447" height="447" src="/assets/brands/komowellness.png" alt="KOMO Wellness" loading="lazy"></div>

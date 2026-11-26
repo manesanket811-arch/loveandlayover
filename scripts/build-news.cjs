@@ -7,7 +7,7 @@
 // Usage: node scripts/build-news.cjs   (after build-posts)
 const fs = require('fs');
 const path = require('path');
-const { header, footer, HEAD_LINKS, SCRIPT, GA, FONTS, waChannelBtn } = require('./site-chrome.cjs');
+const { header, footer, HEAD_LINKS, SCRIPT, GA, FONTS, waChannelBtn, WA_CHANNEL } = require('./site-chrome.cjs');
 const { altFor } = require('./image-alts.cjs');
 
 const { REPO, SITE_DIR: ROOT } = require('./paths.cjs');  // ROOT = the published site folder
@@ -259,6 +259,9 @@ if (/<!-- news:start -->[\s\S]*?<!-- news:end -->/.test(home)) {
     .home-news .hn-brief b { font-size: .78rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #dc2626; }
     .home-news .hn-brief span { color: var(--ink); font-weight: 600; line-height: 1.4; }
     .home-news .hn-brief em { font-style: normal; font-weight: 700; color: var(--accent); font-size: .9rem; }
+    .home-news .hn-wa { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; font-size: .9rem; font-weight: 600; color: var(--ink-soft); }
+    .home-news .hn-wa b { color: #128c4b; }
+    .home-news .hn-wa:hover b { text-decoration: underline; }
     @media (max-width: 860px) { .home-news .hn-grid { grid-template-columns: 1fr; } }
   </style>
   <div class="wrap">
@@ -267,7 +270,7 @@ ${briefings.length ? `    <a class="hn-brief" href="/singapore-news.html#briefin
 ` : ''}    <div class="hn-grid">
 ${news.slice(0, 3).map(n => `      <a class="hn" href="${n.url}"><small>${esc(n.newsTopic || 'Singapore')}</small><b>${esc(n.h1)}</b><span>${updatedTag(n)}</span></a>`).join('\n')}
     </div>
-  </div>
+${WA_CHANNEL ? `    <a class="hn-wa" href="${WA_CHANNEL}" target="_blank" rel="noopener" data-wa-channel><span aria-hidden="true">💬</span> Get the daily Singapore briefing on our <b>WhatsApp Channel</b> →</a>\n` : ''}  </div>
 </section>
 <!-- news:end -->`;
   home = home.replace(/<!-- news:start -->[\s\S]*?<!-- news:end -->/, strip);
