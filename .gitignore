@@ -1,92 +1,29 @@
-# Environment variables
+# Secrets and keys
 .env
-.env.local
-.env.*.local
+.env.*
+*.pem
+*.key
+credentials.json
 
-# AWS
-.aws-sam/
-sam-tests/
-*.samcli
-samconfig.toml
+# Node
+node_modules/
+npm-debug.log
 
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-env/
-venv/
-ENV/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# IDE
+# Editors and OS
 .vscode/
 .idea/
 *.swp
-*.swo
-*~
 .DS_Store
+Thumbs.db
 
-# Node (if adding frontend build)
-node_modules/
-npm-debug.log
-yarn-error.log
-
-# Credentials (IMPORTANT!)
-*.pem
-*.key
-*.pub
-credentials.json
-aws-credentials
-
-# Temporary files
+# Temporary and local files
 *.tmp
 *.bak
-*.backup
 *.log
-temp/
+*.pid
 tmp/
 
-# Git
-.git/
-.gitconfig
-
-# OS
-Thumbs.db
-.DS_Store
-
-# Build outputs
-dist/
-build/
-*.zip
-
-# SAM outputs
-.aws-sam/
-samconfig.toml
-
-# Backups
-backups/
-*.sql.bak
-
-# Local testing
-local-test/
-test-data/
-*.pid
+# Private or generated reports (never commit: the repo is public)
 site-health-report.md
 gsc-report*.json
 *.gsc.json
