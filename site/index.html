@@ -290,10 +290,16 @@
     .home-news .hn small { font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
     .home-news .hn b { font-size: 1.02rem; line-height: 1.35; color: var(--ink); }
     .home-news .hn span { font-size: .82rem; color: var(--muted); margin-top: auto; }
+    .home-news .hn-brief { display: grid; gap: 4px; margin-bottom: 14px; background: #fff8ec; border: 1px solid #f1d7b0; border-radius: 16px; padding: 14px 18px; transition: box-shadow .25s; }
+    .home-news .hn-brief:hover { box-shadow: var(--shadow); }
+    .home-news .hn-brief b { font-size: .78rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #dc2626; }
+    .home-news .hn-brief span { color: var(--ink); font-weight: 600; line-height: 1.4; }
+    .home-news .hn-brief em { font-style: normal; font-weight: 700; color: var(--accent); font-size: .9rem; }
     @media (max-width: 860px) { .home-news .hn-grid { grid-template-columns: 1fr; } }
   </style>
   <div class="wrap">
     <div class="hn-head"><h2 id="homeNewsTitle">Latest Singapore news</h2><span><a class="hn-all" href="/singapore-this-month.html">What's on this month</a> · <a class="hn-all" href="/singapore-news.html">All news →</a></span></div>
+    <a class="hn-brief" href="/singapore-news.html#briefing"><b>Daily briefing · 26 Nov 2026</b><span>IC address stickers will show your full NRIC number from 1 December · Singapore could face 10–20% US tariffs; DPM Gan defends CPF</span><em>Read today's briefing →</em></a>
     <div class="hn-grid">
       <a class="hn" href="/blog/singapore-changes-2027-for-indians.html"><small>Visas &amp; passes</small><b>What's Changing in 2027 for Indians in Singapore</b><span>26 Nov 2026</span></a>
       <a class="hn" href="/blog/rts-link-johor-bahru-singapore.html"><small>Transport</small><b>JB–Singapore RTS Link: Opening Date, Fares and What to Know</b><span>26 Nov 2026</span></a>

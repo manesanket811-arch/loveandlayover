@@ -131,6 +131,23 @@
   .nitem b { font-size: 1.15rem; line-height: 1.3; color: var(--ink); }
   .ndek { color: var(--ink-soft); font-size: .93rem; }
   @media (max-width: 640px) { .nitem { grid-template-columns: 1fr; } .nitem img { width: 100%; height: 170px; } .nitem-body { padding: 0 6px 6px; } }
+  .brief { margin-top: 26px; background: #fff; border: 1px solid var(--line); border-radius: 26px; padding: 26px 30px; box-shadow: var(--shadow-sm); }
+  .brief-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; border-bottom: 1px solid var(--line); padding-bottom: 12px; }
+  .brief-head h2 { font-size: clamp(1.3rem, 2.4vw, 1.7rem); font-weight: 900; }
+  .brief-head time { font-weight: 700; color: var(--accent); }
+  .brief-list { list-style: none; margin: 0; padding: 0; counter-reset: b; }
+  .brief-list li { display: grid; gap: 6px; padding: 16px 0; border-bottom: 1px dashed var(--line); justify-items: start; }
+  .brief-list li:last-child { border-bottom: 0; }
+  .brief-list b { font-size: 1.08rem; line-height: 1.35; color: var(--ink); }
+  .brief-list p { color: var(--ink-soft); font-size: .95rem; margin: 0; }
+  .brief-src { font-size: .82rem; color: var(--muted); }
+  .brief-src a { color: var(--accent); font-weight: 600; }
+  .brief-earlier { margin-top: 8px; border-top: 1px solid var(--line); padding-top: 12px; }
+  .brief-earlier summary { cursor: pointer; font-weight: 700; color: var(--ink); }
+  .brief-earlier h3 { font-size: .95rem; margin: 14px 0 6px; color: var(--accent); }
+  .brief-earlier ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: .92rem; color: var(--ink-soft); }
+  .brief-note { margin-top: 14px; font-size: .8rem; color: var(--muted); }
+  @media (max-width: 640px) { .brief { padding: 20px 18px; border-radius: 20px; } }
   .nempty { color: var(--muted); padding: 30px 0; text-align: center; }
   .nband { background: #e8f8ee; border: 1px solid #c7ecd5; border-radius: 24px; padding: 32px; margin: 48px 0 72px; display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: center; }
   .nband h2 { font-size: clamp(1.3rem, 2.4vw, 1.7rem); font-weight: 900; margin-bottom: 6px; }
@@ -165,6 +182,17 @@
     <span class="live">Latest updates</span>
     <h1>Singapore <em>news</em> for Indians</h1>
     <p>Visa and work pass changes, Malaysia and Johor Bahru travel, transport and events: what's new in Singapore, and what it means for you. Updated as things change.</p>
+
+    <section class="brief" id="briefing" aria-labelledby="briefTitle">
+      <div class="brief-head"><h2 id="briefTitle">Daily Singapore briefing</h2><time datetime="2026-11-26">Thu 26 Nov 2026</time></div>
+      <ol class="brief-list">
+        <li data-topic="Rules"><span class="ntopic">Rules</span><b>IC address stickers will show your full NRIC number from 1 December</b><p>From 1 December, anyone who updates their address with ICA will get a sticker showing their full NRIC number instead of a partial one. Existing stickers don't need to be replaced. ICA says the government is moving away from partial NRIC numbers because they can't identify people reliably.</p><span class="brief-src">Source: <a href="https://www.straitstimes.com/singapore/full-nric-number-to-be-displayed-on-address-stickers-from-dec-1-ica" target="_blank" rel="noopener nofollow">The Straits Times ↗</a> · <a href="/blog/singapore-pr-for-indians.html">Our guide →</a></span></li>
+        <li data-topic="Jobs &amp; money"><span class="ntopic">Jobs &amp; money</span><b>Singapore could face 10–20% US tariffs; DPM Gan defends CPF</b><p>Deputy Prime Minister Gan Kim Yong said talks with the US could still end in tariffs of 10–20%, with about S$9.4 billion of exports at stake. A US trade report had criticised Singapore's savings policies, including CPF. Mr Gan said he was surprised and that CPF is vital for an ageing society.</p><span class="brief-src">Source: <a href="https://www.channelnewsasia.com/singapore/us-singapore-trump-tariffs-cpf-scheme-dpm-gan-6584361" target="_blank" rel="noopener nofollow">CNA ↗</a></span></li>
+        <li data-topic="Transport"><span class="ntopic">Transport</span><b>13 motorcyclists caught without a licence or insurance at Tuas Checkpoint</b><p>More than 220 riders were stopped in a joint check on 12 November, and 13 had no valid licence or insurance. Police warned that foreign-registered vehicles can be refused entry if riders don't follow Singapore's rules, worth knowing if you drive or ride across from Johor.</p><span class="brief-src">Source: <a href="https://www.straitstimes.com/singapore/13-unlicensed-uninsured-motorcyclists-caught-after-checks-at-tuas-checkpoint" target="_blank" rel="noopener nofollow">The Straits Times ↗</a> · <a href="/blog/singapore-to-malaysia-by-bus-or-train.html">Our guide →</a></span></li>
+        <li data-topic="Singapore"><span class="ntopic">Singapore</span><b>Fire at a Little India shophouse; about 25 people evacuated</b><p>A fire broke out in a shophouse on Chander Road on the morning of 26 November and spread to the unit next door. About 25 people were evacuated and no injuries were reported. SCDF is investigating the cause.</p><span class="brief-src">Source: <a href="https://www.straitstimes.com/singapore/25-evacuated-after-fire-breaks-out-at-little-india-shophouse-no-injuries-reported" target="_blank" rel="noopener nofollow">The Straits Times ↗</a></span></li>
+      </ol>
+      <p class="brief-note">A quick daily round-up of Singapore news that matters to Indians, summarised by us with links to the original reports.</p>
+    </section>
 
     <a class="nlead" href="/blog/singapore-changes-2027-for-indians.html">
       <span class="nlead-img"><img src="/images/destinations/singapore-hero.webp" alt="ArtScience Museum and the Marina Bay skyline, Singapore" width="1200" height="760" fetchpriority="high"></span>

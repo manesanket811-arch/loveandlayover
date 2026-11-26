@@ -26,6 +26,27 @@ if (!news.length) throw new Error('no news posts (set "news": true in data/posts
 const topics = [...new Set(news.map(n => n.newsTopic || 'Singapore'))];
 const updatedTag = (n) => n.modified && n.modified !== n.published ? `Updated ${day(n.modified)}` : day(n.published);
 
+// Daily briefings: data/news-daily/YYYY-MM-DD.json = { date, items: [{ topic, headline, summary, source, url, related? }] }
+// The newest is shown at the top of the news page; the six before it under "Earlier briefings".
+const BDIR = path.join(REPO, 'data', 'news-daily');
+const briefings = (fs.existsSync(BDIR) ? fs.readdirSync(BDIR) : []).filter(f => /^\d{4}-\d{2}-\d{2}\.json$/.test(f)).sort().reverse().slice(0, 7)
+  .map(f => JSON.parse(fs.readFileSync(path.join(BDIR, f), 'utf8'))).filter(b => b.items && b.items.length);
+const WEEKDAY = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+const longDay = (iso) => `${WEEKDAY[new Date(iso + 'T12:00:00Z').getUTCDay()]} ${day(iso)}`;
+const ext = (url, label) => `<a href="${esc(url)}" target="_blank" rel="noopener nofollow">${esc(label)} ↗</a>`;
+const briefingHtml = briefings.length ? `
+    <section class="brief" id="briefing" aria-labelledby="briefTitle">
+      <div class="brief-head"><h2 id="briefTitle">Daily Singapore briefing</h2><time datetime="${briefings[0].date}">${longDay(briefings[0].date)}</time></div>
+      <ol class="brief-list">
+${briefings[0].items.map(i => `        <li data-topic="${esc(i.topic || 'Singapore')}"><span class="ntopic">${esc(i.topic || 'Singapore')}</span><b>${esc(i.headline)}</b><p>${esc(i.summary)}</p><span class="brief-src">Source: ${ext(i.url, i.source)}${i.related ? ` · <a href="${esc(i.related)}">Our guide →</a>` : ''}</span></li>`).join('\n')}
+      </ol>
+${briefings.length > 1 ? `      <details class="brief-earlier"><summary>Earlier briefings</summary>
+${briefings.slice(1).map(b => `        <h3>${longDay(b.date)}</h3><ul>${b.items.map(i => `<li>${esc(i.headline)} <span class="brief-src">(${ext(i.url, i.source)})</span></li>`).join('')}</ul>`).join('\n')}
+      </details>
+` : ''}      <p class="brief-note">A quick daily round-up of Singapore news that matters to Indians, summarised by us with links to the original reports.</p>
+    </section>
+` : '';
+
 const [lead, ...rest] = news;
 const item = (n) => `      <a class="nitem" href="${n.url}" data-topic="${esc(n.newsTopic || 'Singapore')}">
         <img src="${n.thumb}" alt="${esc(altFor(n.thumb))}" loading="lazy" width="320" height="200">
@@ -108,6 +129,23 @@ ${GA}
   .nitem b { font-size: 1.15rem; line-height: 1.3; color: var(--ink); }
   .ndek { color: var(--ink-soft); font-size: .93rem; }
   @media (max-width: 640px) { .nitem { grid-template-columns: 1fr; } .nitem img { width: 100%; height: 170px; } .nitem-body { padding: 0 6px 6px; } }
+  .brief { margin-top: 26px; background: #fff; border: 1px solid var(--line); border-radius: 26px; padding: 26px 30px; box-shadow: var(--shadow-sm); }
+  .brief-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; border-bottom: 1px solid var(--line); padding-bottom: 12px; }
+  .brief-head h2 { font-size: clamp(1.3rem, 2.4vw, 1.7rem); font-weight: 900; }
+  .brief-head time { font-weight: 700; color: var(--accent); }
+  .brief-list { list-style: none; margin: 0; padding: 0; counter-reset: b; }
+  .brief-list li { display: grid; gap: 6px; padding: 16px 0; border-bottom: 1px dashed var(--line); justify-items: start; }
+  .brief-list li:last-child { border-bottom: 0; }
+  .brief-list b { font-size: 1.08rem; line-height: 1.35; color: var(--ink); }
+  .brief-list p { color: var(--ink-soft); font-size: .95rem; margin: 0; }
+  .brief-src { font-size: .82rem; color: var(--muted); }
+  .brief-src a { color: var(--accent); font-weight: 600; }
+  .brief-earlier { margin-top: 8px; border-top: 1px solid var(--line); padding-top: 12px; }
+  .brief-earlier summary { cursor: pointer; font-weight: 700; color: var(--ink); }
+  .brief-earlier h3 { font-size: .95rem; margin: 14px 0 6px; color: var(--accent); }
+  .brief-earlier ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: .92rem; color: var(--ink-soft); }
+  .brief-note { margin-top: 14px; font-size: .8rem; color: var(--muted); }
+  @media (max-width: 640px) { .brief { padding: 20px 18px; border-radius: 20px; } }
   .nempty { color: var(--muted); padding: 30px 0; text-align: center; }
   .nband { background: #e8f8ee; border: 1px solid #c7ecd5; border-radius: 24px; padding: 32px; margin: 48px 0 72px; display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: center; }
   .nband h2 { font-size: clamp(1.3rem, 2.4vw, 1.7rem); font-weight: 900; margin-bottom: 6px; }
@@ -128,7 +166,7 @@ ${header('news')}
     <span class="live">Latest updates</span>
     <h1>Singapore <em>news</em> for Indians</h1>
     <p>Visa and work pass changes, Malaysia and Johor Bahru travel, transport and events: what's new in Singapore, and what it means for you. Updated as things change.</p>
-
+${briefingHtml}
     <a class="nlead" href="${lead.url}">
       <span class="nlead-img"><img src="${lead.big}" alt="${esc(altFor(lead.thumb))}" width="1200" height="760" fetchpriority="high"></span>
       <span class="nlead-body"><span class="nmeta"><span class="ntopic">${esc(lead.newsTopic || 'Singapore')}</span><time datetime="${lead.updated}">${updatedTag(lead)}</time></span><b>${esc(lead.h1)}</b><span class="ndek">${esc(lead.dek)}</span><span class="nread">Read the full update →</span></span>
@@ -196,11 +234,17 @@ if (/<!-- news:start -->[\s\S]*?<!-- news:end -->/.test(home)) {
     .home-news .hn small { font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
     .home-news .hn b { font-size: 1.02rem; line-height: 1.35; color: var(--ink); }
     .home-news .hn span { font-size: .82rem; color: var(--muted); margin-top: auto; }
+    .home-news .hn-brief { display: grid; gap: 4px; margin-bottom: 14px; background: #fff8ec; border: 1px solid #f1d7b0; border-radius: 16px; padding: 14px 18px; transition: box-shadow .25s; }
+    .home-news .hn-brief:hover { box-shadow: var(--shadow); }
+    .home-news .hn-brief b { font-size: .78rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #dc2626; }
+    .home-news .hn-brief span { color: var(--ink); font-weight: 600; line-height: 1.4; }
+    .home-news .hn-brief em { font-style: normal; font-weight: 700; color: var(--accent); font-size: .9rem; }
     @media (max-width: 860px) { .home-news .hn-grid { grid-template-columns: 1fr; } }
   </style>
   <div class="wrap">
     <div class="hn-head"><h2 id="homeNewsTitle">Latest Singapore news</h2><span><a class="hn-all" href="/singapore-this-month.html">What's on this month</a> · <a class="hn-all" href="/singapore-news.html">All news →</a></span></div>
-    <div class="hn-grid">
+${briefings.length ? `    <a class="hn-brief" href="/singapore-news.html#briefing"><b>Daily briefing · ${day(briefings[0].date)}</b><span>${briefings[0].items.slice(0, 2).map(i => esc(i.headline)).join(' · ')}</span><em>Read today's briefing →</em></a>
+` : ''}    <div class="hn-grid">
 ${news.slice(0, 3).map(n => `      <a class="hn" href="${n.url}"><small>${esc(n.newsTopic || 'Singapore')}</small><b>${esc(n.h1)}</b><span>${updatedTag(n)}</span></a>`).join('\n')}
     </div>
   </div>
@@ -209,4 +253,4 @@ ${news.slice(0, 3).map(n => `      <a class="hn" href="${n.url}"><small>${esc(n.
   home = home.replace(/<!-- news:start -->[\s\S]*?<!-- news:end -->/, strip);
   fs.writeFileSync(INDEX, home);
 }
-console.log(`singapore-news.html: ${news.length} stories (${topics.join(', ')}); homepage strip ${home.includes('home-news') ? 'updated' : 'skipped (no markers)'}`);
+console.log(`singapore-news.html: ${briefings.length ? `briefing ${briefings[0].date} (${briefings[0].items.length} items), ` : ''}${news.length} stories (${topics.join(', ')}); homepage strip ${home.includes('home-news') ? 'updated' : 'skipped (no markers)'}`);
