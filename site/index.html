@@ -231,6 +231,194 @@
 
 <!-- ===== Hero ===== -->
 <section class="hero">
+  <div class="wrap now-wrap">
+    <div class="now-strip" id="nowPanel" data-phase="night" aria-label="Singapore right now" role="group">
+      <canvas class="now-sky" id="nowSky" aria-hidden="true"></canvas>
+      <span class="ns-live"><i></i>Live</span>
+      <figure class="ns-clock" data-off="480">
+        <svg viewBox="0 0 100 100" role="img" aria-label="Singapore time"><circle class="face" cx="50" cy="50" r="47"/><g class="ticks"></g><line class="hand h" x1="50" y1="50" x2="50" y2="28" stroke-width="7"/><line class="hand m" x1="50" y1="50" x2="50" y2="16" stroke-width="5"/><line class="hand sec" x1="50" y1="60" x2="50" y2="12"/><circle class="pin" cx="50" cy="50" r="5"/></svg>
+        <figcaption><span class="dig">--:--</span><b>🇸🇬 Singapore</b></figcaption>
+      </figure>
+      <span class="ns-sep" aria-hidden="true"></span>
+      <figure class="ns-clock" data-off="330">
+        <svg viewBox="0 0 100 100" role="img" aria-label="India time"><circle class="face" cx="50" cy="50" r="47"/><g class="ticks"></g><line class="hand h" x1="50" y1="50" x2="50" y2="28" stroke-width="7"/><line class="hand m" x1="50" y1="50" x2="50" y2="16" stroke-width="5"/><line class="hand sec" x1="50" y1="60" x2="50" y2="12"/><circle class="pin" cx="50" cy="50" r="5"/></svg>
+        <figcaption><span class="dig">--:--</span><b>🇮🇳 India</b></figcaption>
+      </figure>
+      <span class="ns-sep" aria-hidden="true"></span>
+      <div class="ns-wx" aria-live="polite">
+        <span class="wx-anim" id="wxAnim" aria-hidden="true"></span>
+        <span class="ns-wx-text"><span class="ns-temp"><span id="wxT">--</span>°C</span><b id="wxSky">Loading weather…</b></span>
+        <span class="ns-wx-more" id="wxMore"></span>
+      </div>
+    </div>
+  </div>
+  <style>
+    .now-wrap { position: relative; z-index: 2; margin-top: -26px; margin-bottom: 30px; }
+    .now-strip { position: relative; overflow: hidden; isolation: isolate; display: flex; align-items: center; gap: 16px; width: fit-content; max-width: 100%; padding: 9px 20px 9px 14px; border-radius: 20px; color: #fff; box-shadow: 0 14px 34px rgba(10,22,40,.22); background: var(--sky, linear-gradient(120deg,#060b1f,#111c45 55%,#2a2160)); transition: background 2s ease; }
+    .now-strip[data-phase="dawn"]  { --sky: linear-gradient(120deg,#2b2f6b 0%,#a8558f 55%,#f2a65a 100%); }
+    .now-strip[data-phase="day"]   { --sky: linear-gradient(120deg,#0d4f9c 0%,#2f80d1 55%,#69b8ee 100%); }
+    .now-strip[data-phase="dusk"]  { --sky: linear-gradient(120deg,#1d2257 0%,#7a3b7d 55%,#e8774a 100%); }
+    .now-strip[data-phase="night"] { --sky: linear-gradient(120deg,#060b1f 0%,#111c45 55%,#2a2160 100%); }
+    .now-strip[data-wet="1"] { --sky: linear-gradient(120deg,#1a2438 0%,#33435f 55%,#55657f 100%); }
+    .now-strip::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(255,255,255,.14), transparent 60%); pointer-events: none; }
+    .now-sky { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; }
+    .ns-live { display: inline-flex; align-items: center; gap: 6px; font-size: .62rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.85); }
+    .ns-live i { width: 7px; height: 7px; border-radius: 50%; background: #3ee28a; animation: nowPing 2s infinite; }
+    @keyframes nowPing { 0% { box-shadow: 0 0 0 0 rgba(62,226,138,.7); } 70%, 100% { box-shadow: 0 0 0 8px rgba(62,226,138,0); } }
+    .ns-clock { margin: 0; display: flex; align-items: center; gap: 9px; flex: 0 0 auto; }
+    .ns-clock svg { width: 36px; height: 36px; filter: drop-shadow(0 3px 6px rgba(0,0,0,.3)); }
+    .ns-clock .face { fill: rgba(255,255,255,.96); }
+    .ns-clock .tick { stroke: #0a1628; stroke-linecap: round; }
+    .ns-clock .hand { stroke: #0a1628; stroke-linecap: round; }
+    .ns-clock .sec { stroke: #e8743b; stroke-width: 2.5; }
+    .ns-clock .pin { fill: #e8743b; }
+    .ns-clock figcaption { display: flex; flex-direction: column; line-height: 1.15; }
+    .ns-clock .dig { font-family: var(--serif); font-size: 1.12rem; font-weight: 900; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .ns-clock .dig .s { opacity: .55; font-size: .72em; }
+    .ns-clock .dig small { font-size: .62em; font-weight: 700; opacity: .8; margin-left: 2px; }
+    .ns-clock b { font-size: .66rem; font-weight: 700; letter-spacing: .04em; color: rgba(255,255,255,.75); white-space: nowrap; }
+    .ns-sep { width: 1px; align-self: stretch; margin: 4px 0; background: rgba(255,255,255,.2); }
+    .ns-wx { display: flex; align-items: center; gap: 10px; flex: 0 0 auto; }
+    .ns-wx-text { display: flex; flex-direction: column; line-height: 1.15; }
+    .ns-temp { font-family: var(--serif); font-size: 1.12rem; font-weight: 900; white-space: nowrap; }
+    .ns-wx-text b { font-size: .66rem; font-weight: 700; color: rgba(255,255,255,.75); white-space: nowrap; }
+    .ns-wx-more { display: flex; gap: 6px; }
+    .ns-wx-more span { font-size: .72rem; font-weight: 600; padding: 4px 9px; border-radius: 999px; background: rgba(255,255,255,.13); border: 1px solid rgba(255,255,255,.16); white-space: nowrap; }
+    .ns-wx-more span:empty { display: none; }
+    /* Animated weather icon (drawn at 92px, shown small) */
+    .wx-anim { position: relative; width: 92px; height: 92px; flex: 0 0 auto; zoom: .42; }
+    @supports not (zoom: 1) { .wx-anim { transform: scale(.42); margin: -27px; } }
+    .wx-anim > * { position: absolute; }
+    .wx-sun { width: 50px; height: 50px; left: 21px; top: 21px; border-radius: 50%; background: radial-gradient(circle at 40% 40%, #fff6c4, #ffc23d 60%, #ff9f1a); box-shadow: 0 0 30px rgba(255,194,61,.8); }
+    .wx-sun::before { content: ''; position: absolute; inset: -16px; border-radius: 50%; background: repeating-conic-gradient(from 0deg, rgba(255,214,102,.95) 0 6deg, transparent 6deg 30deg); -webkit-mask: radial-gradient(circle, transparent 33px, #000 34px, #000 40px, transparent 41px); mask: radial-gradient(circle, transparent 33px, #000 34px, #000 40px, transparent 41px); animation: wxSpin 18s linear infinite; }
+    .wx-moon { width: 50px; height: 50px; left: 26px; top: 18px; border-radius: 50%; box-shadow: -13px 7px 0 0 #f4f1de; filter: drop-shadow(0 0 14px rgba(244,241,222,.6)); animation: wxFloat 6s ease-in-out infinite; }
+    .wx-cloud { width: 66px; height: 26px; left: 14px; top: 44px; border-radius: 20px; background: #fff; animation: wxDrift 7s ease-in-out infinite; }
+    .wx-cloud::before, .wx-cloud::after { content: ''; position: absolute; background: inherit; border-radius: 50%; }
+    .wx-cloud::before { width: 30px; height: 30px; left: 9px; top: -15px; }
+    .wx-cloud::after { width: 38px; height: 38px; left: 25px; top: -22px; }
+    .wx-anim.grey .wx-cloud { background: #d9dfe8; }
+    .wx-anim.has-orb .wx-sun, .wx-anim.has-orb .wx-moon { transform: translate(-14px,-12px) scale(.82); }
+    .wx-drop { width: 3px; height: 14px; top: 74px; border-radius: 2px; background: linear-gradient(#bfe3ff, rgba(191,227,255,0)); animation: wxRain 1s linear infinite; }
+    .wx-bolt { left: 40px; top: 66px; width: 0; height: 0; border-left: 8px solid transparent; border-right: 8px solid transparent; border-top: 20px solid #ffd84d; filter: drop-shadow(0 0 8px #ffd84d); animation: wxFlash 2.4s infinite; }
+    @keyframes wxSpin { to { transform: rotate(360deg); } }
+    @keyframes wxFloat { 50% { transform: translateY(-5px); } }
+    @keyframes wxDrift { 50% { transform: translateX(6px); } }
+    @keyframes wxRain { from { transform: translateY(-6px); opacity: 0; } 30% { opacity: 1; } to { transform: translateY(16px); opacity: 0; } }
+    @keyframes wxFlash { 0%, 86%, 100% { opacity: 0; } 88%, 94% { opacity: 1; } 91% { opacity: .3; } }
+    @media (max-width: 1100px) { .ns-wx-more span:nth-child(n+2) { display: none; } }
+    @media (max-width: 760px) { .ns-wx-more { display: none; } }
+    @media (max-width: 560px) {
+      .now-wrap { margin-top: -14px; margin-bottom: 18px; }
+      .ns-wx-text b { display: none; }
+      .now-strip { width: 100%; justify-content: space-between; gap: 8px; padding: 8px 12px; border-radius: 16px; }
+      .ns-live { display: none; }
+      .ns-clock { gap: 7px; }
+      .ns-clock svg { width: 28px; height: 28px; }
+      .ns-clock .dig, .ns-temp { font-size: .98rem; }
+      .ns-clock .dig .s { display: none; }
+      .ns-wx { gap: 4px; }
+      .wx-anim { zoom: .36; }
+    }
+    @media (max-width: 360px) { .ns-clock svg { display: none; } }
+    @media (prefers-reduced-motion: reduce) { .now-strip *, .now-strip *::before, .now-strip *::after { animation: none !important; } }
+  </style>
+  <script>
+  (function () {
+    var panel = document.getElementById('nowPanel'); if (!panel) return;
+    var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var zoned = function (offMin) { return new Date(Date.now() + offMin * 60000); };
+    var pad = function (n) { return (n < 10 ? '0' : '') + n; };
+    var clocks = [].map.call(panel.querySelectorAll('.ns-clock'), function (f) {
+      var html = '';
+      for (var i = 0; i < 12; i++) { var a = i * 30 * Math.PI / 180, r1 = i % 3 === 0 ? 33 : 37;
+        html += '<line class="tick" x1="' + (50 + r1 * Math.sin(a)).toFixed(2) + '" y1="' + (50 - r1 * Math.cos(a)).toFixed(2) + '" x2="' + (50 + 42 * Math.sin(a)).toFixed(2) + '" y2="' + (50 - 42 * Math.cos(a)).toFixed(2) + '" stroke-width="' + (i % 3 === 0 ? 5 : 3) + '"/>'; }
+      f.querySelector('.ticks').innerHTML = html;
+      return { off: +f.dataset.off, h: f.querySelector('.h'), m: f.querySelector('.m'), s: f.querySelector('.sec'), dig: f.querySelector('.dig'), last: -1 };
+    });
+    function drawClocks() {
+      clocks.forEach(function (c) {
+        var d = zoned(c.off), s = d.getUTCSeconds() + (reduce ? 0 : d.getUTCMilliseconds() / 1000), m = d.getUTCMinutes() + s / 60, h = d.getUTCHours() % 12 + m / 60;
+        c.h.setAttribute('transform', 'rotate(' + h * 30 + ' 50 50)');
+        c.m.setAttribute('transform', 'rotate(' + m * 6 + ' 50 50)');
+        c.s.setAttribute('transform', 'rotate(' + s * 6 + ' 50 50)');
+        var sec = d.getUTCSeconds();
+        if (sec !== c.last) { c.last = sec; var H = d.getUTCHours();
+          c.dig.innerHTML = (H % 12 || 12) + ':' + pad(d.getUTCMinutes()) + '<span class="s">:' + pad(sec) + '</span><small>' + (H < 12 ? 'AM' : 'PM') + '</small>'; }
+      });
+    }
+    var sun = { rise: 7.0, set: 19.1 };
+    function phase() {
+      var d = zoned(480), t = d.getUTCHours() + d.getUTCMinutes() / 60;
+      var p = t >= sun.rise - .7 && t < sun.rise + .8 ? 'dawn' : t >= sun.rise + .8 && t < sun.set - .9 ? 'day' : t >= sun.set - .9 && t < sun.set + .6 ? 'dusk' : 'night';
+      if (panel.dataset.phase !== p) panel.dataset.phase = p;
+      return t;
+    }
+    // Animated sky behind the strip: stars at night, rain when wet, light motes by day
+    var cv = document.getElementById('nowSky'), cx = cv.getContext && cv.getContext('2d'), W = 0, H = 0, parts = [], mode = 'stars', running = true;
+    function size() { var r = panel.getBoundingClientRect(), dpr = Math.min(window.devicePixelRatio || 1, 2); W = r.width; H = r.height; cv.width = W * dpr; cv.height = H * dpr; if (cx) cx.setTransform(dpr, 0, 0, dpr, 0, 0); seed(); }
+    function seed() { parts = []; var n = mode === 'rain' ? Math.round(W / 7) : mode === 'stars' ? Math.round(W / 9) : Math.round(W / 26);
+      for (var i = 0; i < n; i++) parts.push({ x: Math.random() * W, y: Math.random() * H, z: Math.random(), p: Math.random() * 6.28 }); }
+    function frame(ts) {
+      if (cx && running) {
+        cx.clearRect(0, 0, W, H);
+        for (var i = 0; i < parts.length; i++) { var q = parts[i];
+          if (mode === 'stars') { var a = .25 + .75 * Math.abs(Math.sin(q.p + ts / (900 + q.z * 1400)));
+            cx.fillStyle = 'rgba(255,255,255,' + (a * (.3 + q.z * .6)).toFixed(3) + ')'; cx.beginPath(); cx.arc(q.x, q.y, .4 + q.z * 1, 0, 6.28); cx.fill(); }
+          else if (mode === 'rain') { q.y += 3 + q.z * 4; q.x -= .8; if (q.y > H) { q.y = -12; q.x = Math.random() * (W + 30); }
+            cx.strokeStyle = 'rgba(200,225,255,' + (.18 + q.z * .3).toFixed(3) + ')'; cx.lineWidth = .7 + q.z * .6; cx.beginPath(); cx.moveTo(q.x, q.y); cx.lineTo(q.x - 1.5, q.y + 6 + q.z * 5); cx.stroke(); }
+          else { q.x += .12 + q.z * .25; q.y += Math.sin(q.p + ts / 2500) * .08; if (q.x > W + 10) { q.x = -10; q.y = Math.random() * H; }
+            cx.fillStyle = 'rgba(255,255,255,' + (.07 + q.z * .14).toFixed(3) + ')'; cx.beginPath(); cx.arc(q.x, q.y, 1.2 + q.z * 2.6, 0, 6.28); cx.fill(); }
+        }
+      }
+      drawClocks();
+      if (!reduce) requestAnimationFrame(frame);
+    }
+    function setMode(m) { if (m !== mode) { mode = m; seed(); } }
+    if ('IntersectionObserver' in window) new IntersectionObserver(function (e) { running = e[0].isIntersecting; }).observe(panel);
+    window.addEventListener('resize', size);
+    size(); phase(); setMode(panel.dataset.phase === 'night' ? 'stars' : 'motes');
+    if (reduce) { frame(0); setInterval(drawClocks, 1000); } else requestAnimationFrame(frame);
+    setInterval(function () { phase(); if (panel.dataset.wet !== '1') setMode(panel.dataset.phase === 'night' ? 'stars' : 'motes'); }, 60000);
+
+    function kind(c) { if (c === 0) return 'clear'; if (c <= 2) return 'partly'; if (c === 3) return 'cloudy'; if (c === 45 || c === 48) return 'fog'; if (c >= 95) return 'storm'; if (c >= 51) return 'rain'; return 'cloudy'; }
+    var WORDS = { clear: 'Clear', partly: 'Partly cloudy', cloudy: 'Cloudy', fog: 'Hazy', rain: 'Rain', storm: 'Thunderstorms' };
+    function icon(k, day) {
+      var el = document.getElementById('wxAnim'), drops = '', orb = day ? '<span class="wx-sun"></span>' : '<span class="wx-moon"></span>';
+      for (var i = 0; i < 5; i++) drops += '<span class="wx-drop" style="left:' + (24 + i * 10) + 'px;animation-delay:' + (i * .19).toFixed(2) + 's"></span>';
+      el.className = 'wx-anim' + (k === 'partly' ? ' has-orb' : '') + (/rain|storm|cloudy|fog/.test(k) ? ' grey' : '');
+      el.innerHTML = k === 'clear' ? orb : k === 'partly' ? orb + '<span class="wx-cloud"></span>' : k === 'rain' ? '<span class="wx-cloud"></span>' + drops : k === 'storm' ? '<span class="wx-cloud"></span>' + drops + '<span class="wx-bolt"></span>' : '<span class="wx-cloud"></span>';
+    }
+    function countUp(el, to) {
+      if (reduce) { el.textContent = to; return; }
+      var t0 = performance.now(), from = Math.max(to - 10, 0);
+      (function step(t) { var k = Math.min((t - t0) / 800, 1), e = 1 - Math.pow(1 - k, 3); el.textContent = Math.round(from + (to - from) * e); if (k < 1) requestAnimationFrame(step); })(t0);
+    }
+    function show(w) {
+      var c = w.current, dy = w.daily, k = kind(c.weather_code), wet = k === 'rain' || k === 'storm';
+      if (dy.sunrise && dy.sunset) { sun.rise = +dy.sunrise[0].slice(11, 13) + dy.sunrise[0].slice(14, 16) / 60; sun.set = +dy.sunset[0].slice(11, 13) + dy.sunset[0].slice(14, 16) / 60; }
+      phase(); panel.dataset.wet = wet ? '1' : '0';
+      setMode(wet ? 'rain' : panel.dataset.phase === 'night' ? 'stars' : 'motes');
+      icon(k, c.is_day === 1);
+      countUp(document.getElementById('wxT'), Math.round(c.temperature_2m));
+      document.getElementById('wxSky').textContent = WORDS[k] + ' · feels ' + Math.round(c.apparent_temperature) + '°';
+      var rain = dy.precipitation_probability_max && dy.precipitation_probability_max[0];
+      document.getElementById('wxMore').innerHTML = '<span>↑ ' + Math.round(dy.temperature_2m_max[0]) + '° ↓ ' + Math.round(dy.temperature_2m_min[0]) + '°</span>' +
+        (rain != null ? '<span>☔ ' + rain + '% rain</span>' : '') + '<span>💧 ' + Math.round(c.relative_humidity_2m) + '%</span>';
+      size();
+    }
+    var KEY = 'wx3:sg-home', url = 'https://api.open-meteo.com/v1/forecast?latitude=1.2897&longitude=103.8501' +
+      '&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,is_day' +
+      '&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunrise,sunset&timezone=Asia%2FSingapore&forecast_days=1';
+    var cached = null; try { cached = JSON.parse(sessionStorage.getItem(KEY)); } catch (e) {}
+    if (cached && Date.now() - cached.t < 15 * 60e3) return show(cached.v);
+    if (!window.fetch) return;
+    fetch(url).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).then(function (w) {
+      if (!w.current || typeof w.current.temperature_2m !== 'number') throw new Error('no data');
+      try { sessionStorage.setItem(KEY, JSON.stringify({ t: Date.now(), v: w })); } catch (e) {}
+      show(w);
+    }).catch(function () { document.getElementById('wxSky').textContent = 'Weather unavailable'; });
+  })();
+  </script>
   <div class="wrap hero-grid">
     <div>
       <span class="eyebrow"><span class="dot" aria-hidden="true"></span>Travel &amp; lifestyle creators · Singapore</span>
@@ -276,308 +464,6 @@
 </section>
 
 <!-- ===== Videos ===== -->
-<section class="sg-now" aria-label="Singapore right now">
-  <style>
-    .sg-now { padding: 36px 0 4px; }
-    .now-panel { position: relative; overflow: hidden; border-radius: 28px; color: #fff; isolation: isolate; box-shadow: 0 24px 60px rgba(10,22,40,.28); background: var(--sky, linear-gradient(160deg,#0b1430,#1b2a5c 55%,#3a2d6b)); transition: background 2s ease; }
-    .now-panel[data-phase="dawn"]  { --sky: linear-gradient(160deg,#2b2f6b 0%,#a8558f 48%,#f2a65a 100%); }
-    .now-panel[data-phase="day"]   { --sky: linear-gradient(160deg,#0d4f9c 0%,#2f80d1 52%,#69b8ee 100%); }
-    .now-panel[data-phase="dusk"]  { --sky: linear-gradient(160deg,#1d2257 0%,#7a3b7d 50%,#e8774a 100%); }
-    .now-panel[data-phase="night"] { --sky: linear-gradient(160deg,#060b1f 0%,#111c45 55%,#2a2160 100%); }
-    .now-panel[data-wet="1"] { --sky: linear-gradient(160deg,#1a2438 0%,#33435f 55%,#55657f 100%); }
-    .now-sky { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; }
-    .now-panel::after { content: ''; position: absolute; inset: 0; z-index: -1; background: radial-gradient(120% 80% at 85% -10%, rgba(255,255,255,.18), transparent 60%); pointer-events: none; }
-    .now-inner { display: grid; grid-template-columns: minmax(0,1.05fr) minmax(0,1fr); gap: 28px; padding: 30px 32px; }
-    .now-inner > div { min-width: 0; }
-    .now-kicker { display: inline-flex; align-items: center; gap: 8px; font-size: .72rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.8); margin: 0; }
-    .now-kicker i { width: 8px; height: 8px; border-radius: 50%; background: #3ee28a; box-shadow: 0 0 0 0 rgba(62,226,138,.7); animation: nowPing 2s infinite; }
-    @keyframes nowPing { 70% { box-shadow: 0 0 0 10px rgba(62,226,138,0); } 100% { box-shadow: 0 0 0 0 rgba(62,226,138,0); } }
-    .now-greet { font-family: var(--serif); font-size: clamp(1.6rem, 3vw, 2.3rem); font-weight: 900; line-height: 1.1; margin: 10px 0 22px; color: #fff; }
-    .now-greet em { font-style: italic; font-weight: 600; color: #ffd28a; }
-    .clocks { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 14px; }
-    .clock { margin: 0; display: flex; align-items: center; gap: 14px; padding: 14px; border-radius: 20px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
-    .clock svg { width: 86px; height: 86px; flex: 0 0 auto; filter: drop-shadow(0 6px 14px rgba(0,0,0,.3)); }
-    .clock .face { fill: rgba(255,255,255,.95); }
-    .clock .tick { stroke: #0a1628; stroke-linecap: round; }
-    .clock .hand { stroke: #0a1628; stroke-linecap: round; }
-    .clock .sec { stroke: #e8743b; stroke-width: 1.6; }
-    .clock .pin { fill: #e8743b; }
-    .clock figcaption { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
-    .clock figcaption b { font-size: .74rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.75); }
-    .clock .dig { font-family: var(--serif); font-size: clamp(1.25rem, 2vw, 1.75rem); font-weight: 900; font-variant-numeric: tabular-nums; line-height: 1.1; white-space: nowrap; }
-    .clock .dig small { font-size: .5em; font-weight: 700; opacity: .75; margin-left: 3px; }
-    .clock .dig .s { opacity: .55; font-size: .62em; }
-    .clock figcaption span:last-child { font-size: .8rem; color: rgba(255,255,255,.72); }
-    .call-home { margin: 16px 0 0; display: inline-flex; align-items: center; gap: 10px; font-size: .9rem; font-weight: 600; padding: 10px 16px; border-radius: 14px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.16); }
-    .call-home:empty { display: none; }
-    .wx-now { display: flex; align-items: center; gap: 18px; }
-    .wx-anim { position: relative; width: 92px; height: 92px; flex: 0 0 auto; }
-    .wx-anim > * { position: absolute; }
-    .wx-sun { width: 50px; height: 50px; left: 21px; top: 21px; border-radius: 50%; background: radial-gradient(circle at 40% 40%, #fff6c4, #ffc23d 60%, #ff9f1a); box-shadow: 0 0 30px rgba(255,194,61,.8); }
-    .wx-sun::before { content: ''; position: absolute; inset: -16px; border-radius: 50%; background: repeating-conic-gradient(from 0deg, rgba(255,214,102,.9) 0 6deg, transparent 6deg 30deg); -webkit-mask: radial-gradient(circle, transparent 33px, #000 34px, #000 40px, transparent 41px); mask: radial-gradient(circle, transparent 33px, #000 34px, #000 40px, transparent 41px); animation: wxSpin 18s linear infinite; }
-    .wx-moon { width: 46px; height: 46px; left: 23px; top: 20px; border-radius: 50%; box-shadow: -11px 6px 0 0 #f4f1de; filter: drop-shadow(0 0 14px rgba(244,241,222,.6)); animation: wxFloat 6s ease-in-out infinite; }
-    .wx-cloud { width: 66px; height: 26px; left: 14px; top: 44px; border-radius: 20px; background: #fff; box-shadow: 0 8px 18px rgba(0,0,0,.18); animation: wxDrift 7s ease-in-out infinite; }
-    .wx-cloud::before, .wx-cloud::after { content: ''; position: absolute; background: #fff; border-radius: 50%; }
-    .wx-cloud::before { width: 30px; height: 30px; left: 9px; top: -15px; }
-    .wx-cloud::after { width: 38px; height: 38px; left: 25px; top: -22px; }
-    .wx-anim.grey .wx-cloud, .wx-anim.grey .wx-cloud::before, .wx-anim.grey .wx-cloud::after { background: #d9dfe8; }
-    .wx-anim.has-sun .wx-sun, .wx-anim.has-moon .wx-moon { transform: translate(-14px,-12px) scale(.82); }
-    .wx-drop { width: 2px; height: 12px; top: 74px; border-radius: 2px; background: linear-gradient(#bfe3ff, rgba(191,227,255,0)); animation: wxRain 1s linear infinite; }
-    .wx-bolt { left: 40px; top: 66px; width: 0; height: 0; border-left: 7px solid transparent; border-right: 7px solid transparent; border-top: 18px solid #ffd84d; filter: drop-shadow(0 0 8px #ffd84d); animation: wxFlash 2.4s infinite; }
-    @keyframes wxSpin { to { transform: rotate(360deg); } }
-    @keyframes wxFloat { 50% { transform: translateY(-5px); } }
-    @keyframes wxDrift { 50% { transform: translateX(6px); } }
-    @keyframes wxRain { from { transform: translateY(-6px); opacity: 0; } 30% { opacity: 1; } to { transform: translateY(16px); opacity: 0; } }
-    @keyframes wxFlash { 0%, 86%, 100% { opacity: 0; } 88%, 94% { opacity: 1; } 91% { opacity: .3; } }
-    .wx-temp { font-family: var(--serif); font-size: clamp(2.6rem, 5vw, 3.6rem); font-weight: 900; line-height: 1; letter-spacing: -.02em; }
-    .wx-temp sup { font-size: .42em; font-weight: 700; vertical-align: .9em; margin-left: 2px; }
-    .wx-sky { font-weight: 700; font-size: 1.05rem; margin-top: 4px; }
-    .wx-feels { font-size: .85rem; color: rgba(255,255,255,.75); }
-    .wx-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 0; padding: 0; list-style: none; }
-    .wx-chips li { font-size: .8rem; font-weight: 600; padding: 6px 11px; border-radius: 999px; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.16); }
-    .sun-arc { margin-top: 16px; }
-    .sun-arc svg { width: 100%; height: auto; display: block; overflow: visible; }
-    .sun-arc .track { fill: none; stroke: rgba(255,255,255,.28); stroke-width: 1.5; stroke-dasharray: 3 5; }
-    .sun-arc .done { fill: none; stroke: #ffd28a; stroke-width: 2.5; stroke-linecap: round; }
-    .sun-arc .orb { fill: #ffd28a; filter: drop-shadow(0 0 6px #ffc23d); }
-    .sun-arc .lbl { display: flex; justify-content: space-between; font-size: .74rem; color: rgba(255,255,255,.75); margin-top: 2px; }
-    .hours { display: flex; gap: 8px; overflow-x: auto; margin-top: 14px; padding-bottom: 4px; scroll-snap-type: x proximity; scrollbar-width: none; }
-    .hours::-webkit-scrollbar { display: none; }
-    .hr { flex: 0 0 58px; scroll-snap-align: start; display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 4px 8px; border-radius: 14px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12); font-size: .76rem; opacity: 0; transform: translateY(8px); animation: hrIn .5s ease forwards; }
-    .hr.now { background: rgba(255,255,255,.22); border-color: rgba(255,255,255,.35); }
-    .hr b { font-size: .92rem; }
-    .hr i { font-style: normal; font-size: 1.15rem; line-height: 1; }
-    .hr .rain { width: 22px; height: 26px; border-radius: 4px; background: rgba(255,255,255,.12); position: relative; overflow: hidden; }
-    .hr .rain span { position: absolute; left: 0; right: 0; bottom: 0; background: linear-gradient(#9fd4ff, #4aa3f0); border-radius: 4px; }
-    .hr small { font-size: .66rem; color: rgba(255,255,255,.75); }
-    @keyframes hrIn { to { opacity: 1; transform: none; } }
-    .wx-credit { font-size: .68rem; color: rgba(255,255,255,.6); margin-top: 10px; }
-    .wx-credit a { color: inherit; text-decoration: underline; }
-    @media (max-width: 920px) { .now-inner { grid-template-columns: minmax(0,1fr); gap: 22px; } }
-    @media (max-width: 560px) {
-      .now-inner { padding: 22px 18px; }
-      .clocks { gap: 10px; }
-      .clock { flex-direction: column; align-items: flex-start; gap: 10px; padding: 12px; }
-      .clock svg { width: 64px; height: 64px; }
-      .wx-anim { width: 76px; height: 76px; transform: scale(.85); transform-origin: left center; }
-    }
-    @media (prefers-reduced-motion: reduce) { .now-panel *, .now-panel *::before, .now-panel *::after { animation: none !important; } .hr { opacity: 1; transform: none; } }
-  </style>
-  <div class="wrap">
-    <div class="now-panel" id="nowPanel" data-phase="night">
-      <canvas class="now-sky" id="nowSky" aria-hidden="true"></canvas>
-      <div class="now-inner">
-        <div>
-          <p class="now-kicker"><i></i>Live from Singapore</p>
-          <h2 class="now-greet" id="nowGreet">Hello from <em>Singapore</em></h2>
-          <div class="clocks">
-            <figure class="clock" data-off="480">
-              <svg viewBox="0 0 100 100" role="img" aria-label="Singapore time"><circle class="face" cx="50" cy="50" r="48"/><g class="ticks"></g><line class="hand h" x1="50" y1="50" x2="50" y2="27" stroke-width="4.5"/><line class="hand m" x1="50" y1="50" x2="50" y2="15" stroke-width="3"/><line class="hand sec" x1="50" y1="60" x2="50" y2="10"/><circle class="pin" cx="50" cy="50" r="3"/></svg>
-              <figcaption><b>🇸🇬 Singapore</b><span class="dig">--:--</span><span class="date">&nbsp;</span></figcaption>
-            </figure>
-            <figure class="clock" data-off="330">
-              <svg viewBox="0 0 100 100" role="img" aria-label="India time"><circle class="face" cx="50" cy="50" r="48"/><g class="ticks"></g><line class="hand h" x1="50" y1="50" x2="50" y2="27" stroke-width="4.5"/><line class="hand m" x1="50" y1="50" x2="50" y2="15" stroke-width="3"/><line class="hand sec" x1="50" y1="60" x2="50" y2="10"/><circle class="pin" cx="50" cy="50" r="3"/></svg>
-              <figcaption><b>🇮🇳 India</b><span class="dig">--:--</span><span class="date">2½ hrs behind</span></figcaption>
-            </figure>
-          </div>
-          <p class="call-home" id="callHome"></p>
-        </div>
-        <div aria-live="polite">
-          <div class="wx-now">
-            <div class="wx-anim" id="wxAnim" aria-hidden="true"></div>
-            <div>
-              <div class="wx-temp"><span id="wxT">--</span><sup>°C</sup></div>
-              <div class="wx-sky" id="wxSky">Checking the sky…</div>
-              <div class="wx-feels" id="wxFeels"></div>
-            </div>
-          </div>
-          <ul class="wx-chips" id="wxChips"></ul>
-          <div class="sun-arc" id="sunArc" hidden>
-            <svg viewBox="0 0 300 54"><path class="track" d="M6 50 Q150 -30 294 50"/><path class="done" id="arcDone" d="M6 50 Q150 -30 294 50"/><circle class="orb" id="arcOrb" r="6" cx="6" cy="50"/></svg>
-            <div class="lbl"><span id="sunRise">Sunrise</span><span id="sunMid"></span><span id="sunSet">Sunset</span></div>
-          </div>
-          <div class="hours" id="wxHours" aria-label="Next 12 hours"></div>
-          <p class="wx-credit">Live weather from <a href="https://open-meteo.com/" target="_blank" rel="noopener nofollow">Open-Meteo</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script>
-  (function () {
-    var panel = document.getElementById('nowPanel'); if (!panel) return;
-    var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'], MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    var zoned = function (offMin) { return new Date(Date.now() + offMin * 60000); }; // read with getUTC*
-    var pad = function (n) { return (n < 10 ? '0' : '') + n; };
-
-    // Clock faces: ticks, then smooth hands
-    var clocks = [].map.call(panel.querySelectorAll('.clock'), function (f) {
-      var g = f.querySelector('.ticks'), html = '';
-      for (var i = 0; i < 60; i++) { var big = i % 5 === 0, a = i * 6 * Math.PI / 180, r1 = big ? 38 : 42;
-        html += '<line class="tick" x1="' + (50 + r1 * Math.sin(a)).toFixed(2) + '" y1="' + (50 - r1 * Math.cos(a)).toFixed(2) + '" x2="' + (50 + 45 * Math.sin(a)).toFixed(2) + '" y2="' + (50 - 45 * Math.cos(a)).toFixed(2) + '" stroke-width="' + (big ? 2.2 : .8) + '"/>'; }
-      g.innerHTML = html;
-      return { off: +f.dataset.off, h: f.querySelector('.h'), m: f.querySelector('.m'), s: f.querySelector('.sec'), dig: f.querySelector('.dig'), date: f.querySelector('.date'), last: -1 };
-    });
-    function drawClocks() {
-      clocks.forEach(function (c, idx) {
-        var d = zoned(c.off), ms = d.getUTCMilliseconds(), s = d.getUTCSeconds() + (reduce ? 0 : ms / 1000), m = d.getUTCMinutes() + s / 60, h = d.getUTCHours() % 12 + m / 60;
-        c.h.setAttribute('transform', 'rotate(' + h * 30 + ' 50 50)');
-        c.m.setAttribute('transform', 'rotate(' + m * 6 + ' 50 50)');
-        c.s.setAttribute('transform', 'rotate(' + s * 6 + ' 50 50)');
-        var sec = d.getUTCSeconds();
-        if (sec !== c.last) {
-          c.last = sec; var H = d.getUTCHours(), h12 = H % 12 || 12;
-          c.dig.innerHTML = h12 + ':' + pad(d.getUTCMinutes()) + '<span class="s">:' + pad(sec) + '</span><small>' + (H < 12 ? 'AM' : 'PM') + '</small>';
-          c.date.textContent = DAYS[d.getUTCDay()] + ' ' + d.getUTCDate() + ' ' + MON[d.getUTCMonth()] + (idx ? ' · 2½ hrs behind' : '');
-        }
-      });
-    }
-
-    // "Good time to call home?" from the time in India
-    function callHome() {
-      var d = zoned(330), h = d.getUTCHours(), t = (h % 12 || 12) + ':' + pad(d.getUTCMinutes()) + (h < 12 ? ' am' : ' pm');
-      var msg = h >= 7 && h < 22 ? '📞 Good time to call home: it\u2019s ' + t + ' in India' : h >= 22 || h < 1 ? '🌙 Getting late in India (' + t + '): maybe a text instead' : '😴 It\u2019s ' + t + ' in India: family\u2019s probably asleep';
-      var el = document.getElementById('callHome'); if (el && el.textContent !== msg) el.textContent = msg;
-    }
-    callHome(); setInterval(callHome, 30000);
-
-    // Time of day in Singapore drives the sky colour and the greeting
-    var sun = { rise: 7.0, set: 19.1 };
-    function phase() {
-      var d = zoned(480), t = d.getUTCHours() + d.getUTCMinutes() / 60;
-      var p = t >= sun.rise - .7 && t < sun.rise + .8 ? 'dawn' : t >= sun.rise + .8 && t < sun.set - .9 ? 'day' : t >= sun.set - .9 && t < sun.set + .6 ? 'dusk' : 'night';
-      if (panel.dataset.phase !== p) panel.dataset.phase = p;
-      var g = t < 5 ? 'Late night' : t < 12 ? 'Good morning' : t < 17 ? 'Good afternoon' : t < 21 ? 'Good evening' : 'Good night';
-      document.getElementById('nowGreet').innerHTML = g + ' from <em>Singapore</em>';
-      return t;
-    }
-
-    // Animated sky: stars at night, rain when wet, drifting light motes by day
-    var cv = document.getElementById('nowSky'), cx = cv.getContext && cv.getContext('2d'), W = 0, H = 0, parts = [], mode = 'stars', running = true;
-    function size() { var r = panel.getBoundingClientRect(), dpr = Math.min(window.devicePixelRatio || 1, 2); W = r.width; H = r.height; cv.width = W * dpr; cv.height = H * dpr; cx && cx.setTransform(dpr, 0, 0, dpr, 0, 0); seed(); }
-    function seed() {
-      parts = []; var n = mode === 'rain' ? Math.round(W / 6) : mode === 'stars' ? Math.round(W * H / 4200) : Math.round(W / 22);
-      for (var i = 0; i < n; i++) parts.push({ x: Math.random() * W, y: Math.random() * H, z: Math.random(), p: Math.random() * 6.28 });
-    }
-    var shoot = null;
-    function frame(ts) {
-      if (cx && running) {
-        cx.clearRect(0, 0, W, H);
-        for (var i = 0; i < parts.length; i++) {
-          var q = parts[i];
-          if (mode === 'stars') {
-            var a = .25 + .75 * Math.abs(Math.sin(q.p + ts / (900 + q.z * 1400)));
-            cx.fillStyle = 'rgba(255,255,255,' + (a * (.35 + q.z * .65)).toFixed(3) + ')';
-            cx.beginPath(); cx.arc(q.x, q.y, .5 + q.z * 1.2, 0, 6.28); cx.fill();
-          } else if (mode === 'rain') {
-            q.y += 7 + q.z * 9; q.x -= 1.5; if (q.y > H) { q.y = -20; q.x = Math.random() * (W + 40); }
-            cx.strokeStyle = 'rgba(200,225,255,' + (.18 + q.z * .3).toFixed(3) + ')'; cx.lineWidth = .8 + q.z;
-            cx.beginPath(); cx.moveTo(q.x, q.y); cx.lineTo(q.x - 2.5, q.y + 10 + q.z * 8); cx.stroke();
-          } else {
-            q.y -= .15 + q.z * .35; q.x += Math.sin(q.p + ts / 3000) * .25; if (q.y < -10) { q.y = H + 10; q.x = Math.random() * W; }
-            cx.fillStyle = 'rgba(255,255,255,' + (.06 + q.z * .14).toFixed(3) + ')';
-            cx.beginPath(); cx.arc(q.x, q.y, 1.5 + q.z * 3.5, 0, 6.28); cx.fill();
-          }
-        }
-        if (mode === 'stars') {
-          if (!shoot && Math.random() < .004) shoot = { x: Math.random() * W * .6 + W * .3, y: Math.random() * H * .3, l: 0 };
-          if (shoot) { shoot.l += 1; var sx = shoot.x - shoot.l * 9, sy = shoot.y + shoot.l * 4;
-            var grad = cx.createLinearGradient(sx, sy, sx + 70, sy - 31); grad.addColorStop(0, 'rgba(255,255,255,.9)'); grad.addColorStop(1, 'rgba(255,255,255,0)');
-            cx.strokeStyle = grad; cx.lineWidth = 1.6; cx.beginPath(); cx.moveTo(sx, sy); cx.lineTo(sx + 70, sy - 31); cx.stroke();
-            if (shoot.l > 40) shoot = null; }
-        }
-      }
-      drawClocks();
-      if (!reduce) requestAnimationFrame(frame);
-    }
-    function setMode(m) { if (m !== mode) { mode = m; seed(); } }
-    if ('IntersectionObserver' in window) new IntersectionObserver(function (e) { running = e[0].isIntersecting; }).observe(panel);
-    window.addEventListener('resize', size);
-    size(); phase(); setMode(panel.dataset.phase === 'night' ? 'stars' : 'motes');
-    if (reduce) { frame(0); setInterval(drawClocks, 1000); } else requestAnimationFrame(frame);
-    setInterval(function () { phase(); if (panel.dataset.wet !== '1') setMode(panel.dataset.phase === 'night' ? 'stars' : 'motes'); }, 60000);
-
-    // Weather
-    function kind(c) {
-      if (c === 0) return 'clear'; if (c <= 2) return 'partly'; if (c === 3) return 'cloudy'; if (c === 45 || c === 48) return 'fog';
-      if (c >= 95) return 'storm'; if (c >= 51) return 'rain'; return 'cloudy';
-    }
-    var WORDS = { clear: 'Clear skies', partly: 'Partly cloudy', cloudy: 'Cloudy', fog: 'Hazy', rain: 'Rain', storm: 'Thunderstorms' };
-    function emoji(k, day) { return { clear: day ? '☀️' : '🌙', partly: day ? '⛅' : '☁️', cloudy: '☁️', fog: '🌫️', rain: '🌧️', storm: '⛈️' }[k]; }
-    function icon(k, day) {
-      var el = document.getElementById('wxAnim'), h = '', drops = '';
-      for (var i = 0; i < 5; i++) drops += '<span class="wx-drop" style="left:' + (24 + i * 10) + 'px;animation-delay:' + (i * .19).toFixed(2) + 's"></span>';
-      var orb = day ? '<span class="wx-sun"></span>' : '<span class="wx-moon"></span>';
-      if (k === 'clear') h = orb; else if (k === 'partly') h = orb + '<span class="wx-cloud"></span>';
-      else if (k === 'rain') h = '<span class="wx-cloud"></span>' + drops; else if (k === 'storm') h = '<span class="wx-cloud"></span>' + drops + '<span class="wx-bolt"></span>';
-      else h = '<span class="wx-cloud"></span>';
-      el.className = 'wx-anim' + (k === 'partly' ? (day ? ' has-sun' : ' has-moon') : '') + (k === 'rain' || k === 'storm' || k === 'cloudy' || k === 'fog' ? ' grey' : '');
-      el.innerHTML = h;
-    }
-    function countUp(el, to) {
-      if (reduce) { el.textContent = to; return; }
-      var t0 = performance.now(), from = Math.max(to - 12, 0);
-      (function step(t) { var k = Math.min((t - t0) / 900, 1), e = 1 - Math.pow(1 - k, 3); el.textContent = Math.round(from + (to - from) * e); if (k < 1) requestAnimationFrame(step); })(t0);
-    }
-    var hhmm = function (iso) { var p = iso.slice(11, 16).split(':'), H = +p[0]; return (H % 12 || 12) + ':' + p[1] + (H < 12 ? ' am' : ' pm'); };
-    function show(w) {
-      var c = w.current, dy = w.daily, hr = w.hourly, k = kind(c.weather_code), day = c.is_day === 1;
-      if (dy.sunrise && dy.sunset) { sun.rise = +dy.sunrise[0].slice(11, 13) + dy.sunrise[0].slice(14, 16) / 60; sun.set = +dy.sunset[0].slice(11, 13) + dy.sunset[0].slice(14, 16) / 60; }
-      var t = phase(), wet = k === 'rain' || k === 'storm';
-      panel.dataset.wet = wet ? '1' : '0';
-      setMode(wet ? 'rain' : panel.dataset.phase === 'night' ? 'stars' : 'motes');
-      icon(k, day);
-      countUp(document.getElementById('wxT'), Math.round(c.temperature_2m));
-      document.getElementById('wxSky').textContent = WORDS[k];
-      document.getElementById('wxFeels').textContent = 'Feels like ' + Math.round(c.apparent_temperature) + '°C';
-      var chips = ['↑ ' + Math.round(dy.temperature_2m_max[0]) + '°  ↓ ' + Math.round(dy.temperature_2m_min[0]) + '°', '💧 ' + Math.round(c.relative_humidity_2m) + '% humidity'];
-      if (dy.precipitation_probability_max && dy.precipitation_probability_max[0] != null) chips.push('☔ ' + dy.precipitation_probability_max[0] + '% rain today');
-      if (dy.uv_index_max && dy.uv_index_max[0] != null) chips.push('UV ' + Math.round(dy.uv_index_max[0]) + (dy.uv_index_max[0] >= 8 ? ' · very high' : ''));
-      document.getElementById('wxChips').innerHTML = chips.map(function (x) { return '<li>' + x + '</li>'; }).join('');
-      // Sun arc
-      if (dy.sunrise && dy.sunset) {
-        var arc = document.getElementById('sunArc'), path = document.getElementById('arcDone'), orbEl = document.getElementById('arcOrb');
-        var f = Math.max(0, Math.min(1, (t - sun.rise) / (sun.set - sun.rise))), len = path.getTotalLength();
-        arc.hidden = false; path.style.strokeDasharray = len; path.style.strokeDashoffset = len;
-        var pt = path.getPointAtLength(len * f); orbEl.setAttribute('cx', pt.x); orbEl.setAttribute('cy', pt.y);
-        if (t < sun.rise || t > sun.set) orbEl.style.opacity = .35;
-        requestAnimationFrame(function () { path.style.transition = reduce ? 'none' : 'stroke-dashoffset 1.6s ease'; path.style.strokeDashoffset = len * (1 - f); });
-        document.getElementById('sunRise').textContent = '🌅 ' + hhmm(dy.sunrise[0]);
-        document.getElementById('sunSet').textContent = hhmm(dy.sunset[0]) + ' 🌇';
-        var left = (sun.set - t);
-        document.getElementById('sunMid').textContent = t < sun.rise ? 'Sun rises soon' : left > 0 ? Math.floor(left) + 'h ' + Math.round((left % 1) * 60) + 'm of daylight left' : 'Sun has set';
-      }
-      // Next 12 hours
-      if (hr && hr.time) {
-        var now = zoned(480).toISOString().slice(0, 13), start = Math.max(0, hr.time.findIndex(function (x) { return x.slice(0, 13) >= now; })), out = '';
-        for (var i = start; i < Math.min(start + 12, hr.time.length); i++) {
-          var H = +hr.time[i].slice(11, 13), pr = hr.precipitation_probability ? hr.precipitation_probability[i] || 0 : 0, isDay = H >= Math.floor(sun.rise) && H < Math.ceil(sun.set);
-          out += '<div class="hr' + (i === start ? ' now' : '') + '" style="animation-delay:' + ((i - start) * 45) + 'ms"><small>' + (i === start ? 'Now' : (H % 12 || 12) + (H < 12 ? 'am' : 'pm')) + '</small><i>' + emoji(kind(hr.weather_code[i]), isDay) + '</i><b>' + Math.round(hr.temperature_2m[i]) + '°</b><span class="rain" title="' + pr + '% chance of rain"><span style="height:' + pr + '%"></span></span><small>' + pr + '%</small></div>';
-        }
-        document.getElementById('wxHours').innerHTML = out;
-      }
-    }
-    var KEY = 'wx2:sg-home', url = 'https://api.open-meteo.com/v1/forecast?latitude=1.2897&longitude=103.8501' +
-      '&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,is_day' +
-      '&hourly=temperature_2m,precipitation_probability,weather_code' +
-      '&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunrise,sunset,uv_index_max' +
-      '&timezone=Asia%2FSingapore&forecast_days=2';
-    var cached = null; try { cached = JSON.parse(sessionStorage.getItem(KEY)); } catch (e) {}
-    if (cached && Date.now() - cached.t < 15 * 60e3) return show(cached.v);
-    if (!window.fetch) return;
-    fetch(url).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).then(function (w) {
-      if (!w.current || typeof w.current.temperature_2m !== 'number') throw new Error('no data');
-      try { sessionStorage.setItem(KEY, JSON.stringify({ t: Date.now(), v: w })); } catch (e) {}
-      show(w);
-    }).catch(function () {
-      document.getElementById('wxSky').textContent = 'Live weather unavailable';
-      document.getElementById('wxFeels').textContent = 'Singapore is usually 25–32°C and humid, with afternoon showers.';
-      document.getElementById('wxT').textContent = '--';
-    });
-  })();
-  </script>
-</section>
-
 <!-- news:start -->
 <section class="home-news" aria-labelledby="homeNewsTitle">
   <style>
