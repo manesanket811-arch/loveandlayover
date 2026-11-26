@@ -7,7 +7,7 @@ name: Rebuild site
 on:
   push:
     branches: [main]
-    paths: ['data/**', 'scripts/**', 'videos-data.json', 'images/destinations/credits.json']
+    paths: ['data/**', 'scripts/**', 'site/videos-data.json', 'site/images/destinations/credits.json']
   workflow_dispatch:
 
 concurrency:

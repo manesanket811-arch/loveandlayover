@@ -7,7 +7,7 @@ const fs = require('fs');
 const path = require('path');
 const { header, footer, HEAD_LINKS, SCRIPT, GA, GA_ID, FONTS, GOOGLE_FONTS } = require('./site-chrome.cjs');
 
-const ROOT = path.join(__dirname, '..');
+const { REPO, SITE_DIR: ROOT } = require('./paths.cjs');  // ROOT = the published site folder
 const REFRESH = '<link rel="stylesheet" href="/css/refresh.css?v=5">';
 // Pages already built on css/site.css don't need the refresh layer
 const MODERN = new Set(['index.html', 'about.html', 'videos.html', 'blog.html', 'work-with-us.html', 'singapore-trip-cost-calculator.html']);

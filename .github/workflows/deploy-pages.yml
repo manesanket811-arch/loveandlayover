@@ -36,14 +36,9 @@ jobs:
 
       - uses: actions/configure-pages@v6
 
-      - name: Collect site files
-        run: |
-          mkdir _site
-          rsync -a --exclude='.git' --exclude='.github' --exclude='_site' --exclude='.gitignore' --exclude='node_modules' ./ _site/
-
       - uses: actions/upload-pages-artifact@v5
         with:
-          path: _site
+          path: site   # only the site/ folder is published
 
       - id: deployment
         uses: actions/deploy-pages@v5

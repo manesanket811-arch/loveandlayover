@@ -7,8 +7,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const ROOT = path.join(__dirname, '..');
-const DATA = path.join(ROOT, 'data', 'guides');
+const { REPO, SITE_DIR: ROOT } = require('./paths.cjs');  // ROOT = the published site folder
+const DATA = path.join(REPO, 'data', 'guides');
 
 // slug -> itinerary lengths offered (null when the guide has a single plan)
 const guides = {};

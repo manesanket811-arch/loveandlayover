@@ -37,5 +37,5 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add images/destinations credits.html
+          git add site/images/destinations site/credits.html
           git diff --staged --quiet || (git commit -m "chore: fetch destination images from Wikimedia Commons" && git pull --rebase && git push)

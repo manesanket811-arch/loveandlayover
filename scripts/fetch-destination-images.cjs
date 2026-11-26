@@ -11,7 +11,7 @@ const fs = require('fs');
 const path = require('path');
 const sharp = require('sharp');
 
-const OUT = path.join(__dirname, '..', 'images', 'destinations');
+const OUT = path.join(__dirname, '..', 'site', 'images', 'destinations');
 const CREDITS = path.join(OUT, 'credits.json');
 const API = 'https://commons.wikimedia.org/w/api.php';
 const UA = 'LoveAndLayoversSite/1.0 (https://www.loveandlayover.in; theloveandlayover@gmail.com)';

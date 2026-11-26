@@ -5,7 +5,7 @@ const fs = require('fs');
 const path = require('path');
 const { altFor } = require('./image-alts.cjs');
 
-const ROOT = path.join(__dirname, '..');
+const { REPO, SITE_DIR: ROOT } = require('./paths.cjs');  // ROOT = the published site folder
 const unescape = (s) => s.replace(/&amp;/g, '&').replace(/&#39;/g, "'").replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
 const attr = (s) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
 

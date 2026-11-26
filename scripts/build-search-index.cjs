@@ -5,7 +5,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const ROOT = path.join(__dirname, '..');
+const { REPO, SITE_DIR: ROOT } = require('./paths.cjs');  // ROOT = the published site folder
 const SITE = 'https://www.loveandlayover.in';
 
 const decode = (s = '') => s

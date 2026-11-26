@@ -6,7 +6,7 @@ const fs = require('fs');
 const path = require('path');
 const { DATA, klookBox, klookHome } = require('./affiliates.cjs');
 
-const BLOG = path.join(__dirname, '..', 'blog');
+const BLOG = path.join(__dirname, '..', 'site', 'blog');
 const MARKED = /\n?<!-- klook:start -->[\s\S]*?<!-- klook:end -->\n?/g;
 // Where the box goes when a post doesn't say: before the FAQs, else the follow box,
 // else the closing call-to-action, else the end of the article.
@@ -29,14 +29,14 @@ for (const f of fs.readdirSync(BLOG).filter(f => f.endsWith('.html'))) {
   if (html !== before) fs.writeFileSync(file, html);
 }
 // Homepage: refresh the Klook section in place (it lives between the markers)
-const INDEX = path.join(__dirname, '..', 'index.html');
+const INDEX = path.join(__dirname, '..', 'site', 'index.html');
 const home = fs.readFileSync(INDEX, 'utf8');
 const homeOut = home.replace(/<!-- klook:start -->[\s\S]*?<!-- klook:end -->/, () => `<!-- klook:start -->\n${klookHome()}\n<!-- klook:end -->`);
 if (homeOut !== home) fs.writeFileSync(INDEX, homeOut);
 
 // Other partners (data/partners.json): refresh every link marked data-partner="<key>"
 const PARTNERS = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'partners.json'), 'utf8'));
-const ROOT = path.join(__dirname, '..');
+const { REPO, SITE_DIR: ROOT } = require('./paths.cjs');  // ROOT = the published site folder
 const pages = ['links.html', 'index.html', 'about.html', ...fs.readdirSync(BLOG).map(f => 'blog/' + f)].filter(f => f.endsWith('.html'));
 let partnerLinks = 0;
 for (const f of pages) {

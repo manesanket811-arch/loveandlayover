@@ -8,10 +8,10 @@ const path = require('path');
 const { header, footer, HEAD_LINKS, SCRIPT, GA, FONTS } = require('./site-chrome.cjs');
 const { DATA: KLOOK, klookUrl } = require('./affiliates.cjs');
 
-const ROOT = path.join(__dirname, '..');
+const { REPO, SITE_DIR: ROOT } = require('./paths.cjs');  // ROOT = the published site folder
 const SITE = 'https://www.loveandlayover.in';
 const URL_ = `${SITE}/trip-finder.html`;
-const TRAITS = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'trip-finder.json'), 'utf8')).destinations;
+const TRAITS = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'trip-finder.json'), 'utf8')).destinations;
 const esc = (s = '') => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 // Flags come from the homepage destination cards (same as the guides)
@@ -20,7 +20,7 @@ for (const [slug, d] of Object.entries(require('./guide-data.cjs').destinations(
 
 const dests = [];
 for (const [slug, t] of Object.entries(TRAITS)) {
-  const g = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'guides', `${slug}.json`), 'utf8'));
+  const g = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'guides', `${slug}.json`), 'utf8'));
   const it = g.sections.find(s => s.id === 'itineraries') || {};
   const visa = g.badges.visa || '';
   const k = (KLOOK.guides[slug] || [])[0];

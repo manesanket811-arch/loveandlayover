@@ -7,9 +7,9 @@ const fs = require('fs');
 const path = require('path');
 const { header, footer, HEAD_LINKS, SCRIPT, GA, FONTS, waChannelBtn } = require('./site-chrome.cjs');
 
-const ROOT = path.join(__dirname, '..');
+const { REPO, SITE_DIR: ROOT } = require('./paths.cjs');  // ROOT = the published site folder
 const SITE = 'https://www.loveandlayover.in';
-const data = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'blog.json'), 'utf8'));
+const data = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'blog.json'), 'utf8'));
 const esc = (s = '') => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const PREVIEW = 4; // cards per section in the "All" view
 const MONTHS = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
@@ -17,8 +17,8 @@ const MONTHS = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', '
 // "Singapore news" section, built from posts marked "news": true (newest first).
 // News posts are removed from the other sections so each appears once.
 const { altFor } = require('./image-alts.cjs');
-const NEWS = fs.readdirSync(path.join(ROOT, 'data', 'posts')).filter(f => f.endsWith('.json'))
-  .map(f => JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'posts', f), 'utf8'))).filter(p => p.news)
+const NEWS = fs.readdirSync(path.join(REPO, 'data', 'posts')).filter(f => f.endsWith('.json'))
+  .map(f => JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'posts', f), 'utf8'))).filter(p => p.news)
   .sort((a, b) => (b.modified || b.published).localeCompare(a.modified || a.published) || (b.priority || 0) - (a.priority || 0));
 if (NEWS.length) {
   const SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -40,7 +40,7 @@ for (const s of data.sections) for (const h of s.posts) if (!sectionOf[h]) secti
 // Sortable date: the post's published date when we build it, else its listing month
 function dateOf(h) {
   const m = h.match(/^\/blog\/([\w-]+)\.html$/);
-  const f = m && path.join(ROOT, 'data', 'posts', `${m[1]}.json`);
+  const f = m && path.join(REPO, 'data', 'posts', `${m[1]}.json`);
   if (f && fs.existsSync(f)) {
     const p = JSON.parse(fs.readFileSync(f, 'utf8'));
     if (p.published) return p.published;

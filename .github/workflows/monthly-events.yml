@@ -35,17 +35,17 @@ jobs:
 
       - name: Commit if the page changed
         run: |
-          if git diff --quiet -- singapore-this-month.html singapore-events; then
+          if git diff --quiet -- site/singapore-this-month.html site/singapore-events; then
             echo "No change"
             exit 0
           fi
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add singapore-this-month.html singapore-events
+          git add site/singapore-this-month.html site/singapore-events
           git commit -m "chore: update monthly Singapore events page"
           node scripts/build-sitemap.cjs
           node scripts/build-search-index.cjs
-          git add sitemap.xml search-index.json
+          git add site/sitemap.xml site/search-index.json
           git diff --staged --quiet || git commit -m "chore: refresh sitemap and search index"
           git pull --rebase
           git push

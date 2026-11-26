@@ -7,7 +7,7 @@ const path = require('path');
 const esbuild = require('esbuild');
 
 const ROOT = path.join(__dirname, '..');
-const JOBS = [['src/css', 'css', '.css', 'css'], ['src/js', 'js', '.js', 'js']];
+const JOBS = [['src/css', 'site/css', '.css', 'css'], ['src/js', 'site/js', '.js', 'js']];
 
 let before = 0, after = 0;
 for (const [from, to, ext, loader] of JOBS) {

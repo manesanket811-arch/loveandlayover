@@ -15,7 +15,7 @@ const FEED_URLS = [
   `https://www.youtube.com/feeds/videos.xml?playlist_id=UU${CHANNEL_ID.slice(2)}`,
 ];
 const UA = 'Mozilla/5.0 (compatible; LoveAndLayoversBot/1.0; +https://www.loveandlayover.in)';
-const DATA_FILE = path.join(__dirname, '..', 'videos-data.json');
+const DATA_FILE = path.join(__dirname, '..', 'site', 'videos-data.json');
 
 function get(url) {
   return new Promise((resolve, reject) => {

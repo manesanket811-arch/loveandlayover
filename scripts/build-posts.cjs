@@ -13,9 +13,9 @@ const path = require('path');
 const { header, footer, HEAD_LINKS, SCRIPT, GA, FONTS, waChannelBtn } = require('./site-chrome.cjs');
 const { altFor } = require('./image-alts.cjs');
 
-const ROOT = path.join(__dirname, '..');
+const { REPO, SITE_DIR: ROOT } = require('./paths.cjs');  // ROOT = the published site folder
 const SITE = 'https://www.loveandlayover.in';
-const DATA = path.join(ROOT, 'data', 'posts');
+const DATA = path.join(REPO, 'data', 'posts');
 const credits = JSON.parse(fs.readFileSync(path.join(ROOT, 'images', 'destinations', 'credits.json'), 'utf8'));
 
 const esc = (s = '') => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -33,7 +33,7 @@ for (const f of fs.readdirSync(DATA).filter(f => f.endsWith('.json'))) {
 
 // Card image and title for "Keep planning": posts built here use their own data,
 // other pages come from the blog listing data (data/blog.json).
-const BLOG = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'blog.json'), 'utf8')).posts;
+const BLOG = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'blog.json'), 'utf8')).posts;
 const LISTED = {};
 for (const [href, c] of Object.entries(BLOG)) { const m = href.match(/^\/blog\/([\w-]+)\.html$/); if (m) LISTED[m[1]] = { img: c.img, title: c.title }; }
 function card(slug) {

@@ -9,11 +9,11 @@ const { altFor } = require('./image-alts.cjs');
 const { DATA: KLOOK, klookBox } = require('./affiliates.cjs');
 const { rupees, CITY } = require('./guide-data.cjs');
 
-const ROOT = path.join(__dirname, '..');
+const { REPO, SITE_DIR: ROOT } = require('./paths.cjs');  // ROOT = the published site folder
 const SITE = 'https://www.loveandlayover.in';
 const SUBSCRIBE = 'https://www.youtube.com/@LoveAndLayover?sub_confirmation=1';
 const CHANNEL_SEARCH = (q) => `https://www.youtube.com/@LoveAndLayover/search?query=${encodeURIComponent(q)}`;
-const DATA = path.join(ROOT, 'data', 'guides');
+const DATA = path.join(REPO, 'data', 'guides');
 const credits = JSON.parse(fs.readFileSync(path.join(ROOT, 'images', 'destinations', 'credits.json'), 'utf8'));
 
 const esc = (s = '') => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');

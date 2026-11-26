@@ -10,13 +10,13 @@ const path = require('path');
 const { header, footer, HEAD_LINKS, SCRIPT, GA, FONTS, waChannelBtn } = require('./site-chrome.cjs');
 const { altFor } = require('./image-alts.cjs');
 
-const ROOT = path.join(__dirname, '..');
+const { REPO, SITE_DIR: ROOT } = require('./paths.cjs');  // ROOT = the published site folder
 const SITE = 'https://www.loveandlayover.in';
 const esc = (s = '') => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const day = (iso) => { const [y, m, d] = iso.split('-'); return `${+d} ${MONTHS[+m - 1]} ${y}`; };
 
-const dir = path.join(ROOT, 'data', 'posts');
+const dir = path.join(REPO, 'data', 'posts');
 const news = fs.readdirSync(dir).filter(f => f.endsWith('.json'))
   .map(f => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')))
   .filter(p => p.news)

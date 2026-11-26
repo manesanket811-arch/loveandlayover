@@ -4,7 +4,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const ROOT = path.join(__dirname, '..');
+const { REPO, SITE_DIR: ROOT } = require('./paths.cjs');  // ROOT = the published site folder
 
 // Rough rupee rates for the "≈ ₹" budget hints. Update now and then; shown as approximate.
 const INR = { 'A$': 55, 'S$': 70, RM: 19.5, EUR: 95, '€': 95, IDR: 0.0053, EGP: 1.75, ISK: 0.62, '¥': 0.57, MXN: 4.5, PEN: 23, '₩': 0.062, '฿': 2.5, TRY: 2.1, '₫': 0.0034, LKR: 0.28, 'US$': 85, AED: 23, NPR: 0.625, 'HK$': 10.8, '₱': 1.5, AZN: 50, GEL: 31, KZT: 0.17, UZS: 0.0068, 'NT$': 2.7, QAR: 23, OMR: 220, MOP: 10.6, '₹': 1 };
@@ -52,7 +52,7 @@ const REGION = { asia: 'Asia', europe: 'Europe', americas: 'Americas', more: 'Af
 // Text comes back HTML-escaped, ready to put in a page.
 function destinations() {
   const h = (t) => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-  const d = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'destinations.json'), 'utf8')).destinations;
+  const d = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'destinations.json'), 'utf8')).destinations;
   const out = {};
   for (const [slug, x] of Object.entries(d)) out[slug] = { region: x.region, flag: x.flag, name: h(x.name), line: h(x.line) };
   return out;
@@ -60,8 +60,8 @@ function destinations() {
 
 function loadGuides() {
   const card = destinations();
-  const traits = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'trip-finder.json'), 'utf8')).destinations;
-  const dir = path.join(ROOT, 'data', 'guides');
+  const traits = JSON.parse(fs.readFileSync(path.join(REPO, 'data', 'trip-finder.json'), 'utf8')).destinations;
+  const dir = path.join(REPO, 'data', 'guides');
   const order = ['asia', 'europe', 'americas', 'more'];
   return fs.readdirSync(dir).filter(f => f.endsWith('.json')).map(f => {
     const g = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));

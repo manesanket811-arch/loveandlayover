@@ -7,7 +7,7 @@ const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
 
-const ROOT = path.join(__dirname, '..');
+const { REPO, SITE_DIR: ROOT } = require('./paths.cjs');  // ROOT = the published site folder
 const SITE = 'https://www.loveandlayover.in';
 const SKIP = new Set(['404.html', 'itinerary-builder.html', 'faq.html', 'resources.html', 'newsletter.html', 'testimonials.html', 'googlea392d90b0eaf0e6a.html']);
 
@@ -22,7 +22,7 @@ function pages() {
 
 function lastmod(file) {
   try {
-    const d = execFileSync('git', ['log', '-1', '--format=%cs', '--', file], { cwd: ROOT, encoding: 'utf8' }).trim();
+    const d = execFileSync('git', ['log', '-1', '--follow', '--diff-filter=AM', '--format=%cs', '--', file], { cwd: ROOT, encoding: 'utf8' }).trim();
     if (d) return d;
   } catch (e) { /* not a git checkout */ }
   return fs.statSync(path.join(ROOT, file)).mtime.toISOString().slice(0, 10);

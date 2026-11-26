@@ -8,7 +8,7 @@ const fs = require('fs');
 const path = require('path');
 const http = require('http');
 
-const ROOT = path.join(__dirname, '..');
+const { REPO, SITE_DIR: ROOT } = require('./paths.cjs');  // ROOT = the published site folder
 const SITE = 'www.loveandlayover.in';
 const REDIRECT_PAGES = new Set(['itinerary-builder.html', 'faq.html', 'resources.html', 'newsletter.html', 'testimonials.html', 'googlea392d90b0eaf0e6a.html']);
 const errors = [], warnings = [];
@@ -112,7 +112,7 @@ async function checkBrowser() {
     ...(E.length ? ['### Problems', ...E.slice(0, 100).map(e => `- ${e}`), E.length > 100 ? `- …and ${E.length - 100} more` : '', ''] : []),
     ...(W.length ? ['### Warnings (often temporary or bot-blocking)', ...W.slice(0, 30).map(w => `- ${w}`), ''] : []),
   ].filter(l => l !== undefined).join('\n');
-  fs.writeFileSync(path.join(ROOT, 'site-health-report.md'), report + '\n');
+  fs.writeFileSync(path.join(REPO, 'site-health-report.md'), report + '\n');
   console.log(report);
   process.exit(E.length ? 1 : 0);
 })();

@@ -6,7 +6,7 @@ const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 
-const REPO = path.join(__dirname, '..');
+const REPO = path.join(__dirname, '..', 'site');  // logo files live in the published site folder
 const OUT = path.join(REPO, 'public/images/brand');
 fs.mkdirSync(OUT, { recursive: true });
 

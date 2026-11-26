@@ -29,5 +29,5 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add css js
+          git add site/css site/js
           git diff --staged --quiet || (git commit -m "chore: minify CSS and JS" && git pull --rebase && git push)
