@@ -8,6 +8,7 @@
       "intro": "Jobs, work passes, salary, renting and your first month, from an Indian couple who made the move.",
       "posts": [
         "/blog/moving-to-singapore-from-india.html",
+        "/singapore-salary-calculator.html",
         "/blog/how-to-get-a-job-in-singapore.html",
         "/blog/singapore-work-culture-and-interview-tips.html",
         "/blog/good-salary-in-singapore.html",
@@ -616,6 +617,17 @@
       "title": "Malaysia Visa for Indians from 1 January 2027",
       "desc": "Visa-free entry ends on 31 December 2026. Who needs a visa, how to apply and what it means for your trip.",
       "meta": "8 min read",
+      "date": "Nov 2026"
+    },
+    "/singapore-salary-calculator.html": {
+      "img": "/images/destinations/thumbs/clarke-quay-hero.webp",
+      "alt": "Boat Quay shophouses along the Singapore River",
+      "chips": [
+        "Tool"
+      ],
+      "title": "Singapore Salary & EP Calculator",
+      "desc": "EP eligibility for 2026 and 2027, take-home pay, family passes and savings, in S$ and rupees.",
+      "meta": "Interactive",
       "date": "Nov 2026"
     }
   },
