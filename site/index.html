@@ -237,24 +237,26 @@
       <span class="ns-live"><i></i>Live</span>
       <figure class="ns-clock" data-off="480">
         <svg viewBox="0 0 100 100" role="img" aria-label="Singapore time"><circle class="face" cx="50" cy="50" r="47"/><g class="ticks"></g><line class="hand h" x1="50" y1="50" x2="50" y2="28" stroke-width="7"/><line class="hand m" x1="50" y1="50" x2="50" y2="16" stroke-width="5"/><line class="hand sec" x1="50" y1="60" x2="50" y2="12"/><circle class="pin" cx="50" cy="50" r="5"/></svg>
-        <figcaption><span class="dig">--:--</span><b>🇸🇬 Singapore</b></figcaption>
+        <figcaption><span class="dig">--:--</span><b><svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="10" fill="#EF3340"/><rect y="10" width="30" height="10" fill="#fff"/><circle cx="7.6" cy="5" r="3.6" fill="#fff"/><circle cx="9.1" cy="5" r="3.4" fill="#EF3340"/><g fill="#fff"><circle cx="11.1" cy="2.6" r=".75"/><circle cx="13" cy="3.9" r=".75"/><circle cx="12.3" cy="6.2" r=".75"/><circle cx="9.9" cy="6.2" r=".75"/><circle cx="9.2" cy="3.9" r=".75"/></g></svg>Singapore</b></figcaption>
       </figure>
       <span class="ns-sep" aria-hidden="true"></span>
       <figure class="ns-clock" data-off="330">
         <svg viewBox="0 0 100 100" role="img" aria-label="India time"><circle class="face" cx="50" cy="50" r="47"/><g class="ticks"></g><line class="hand h" x1="50" y1="50" x2="50" y2="28" stroke-width="7"/><line class="hand m" x1="50" y1="50" x2="50" y2="16" stroke-width="5"/><line class="hand sec" x1="50" y1="60" x2="50" y2="12"/><circle class="pin" cx="50" cy="50" r="5"/></svg>
-        <figcaption><span class="dig">--:--</span><b>🇮🇳 India</b></figcaption>
+        <figcaption><span class="dig">--:--</span><b><svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="6.67" fill="#FF9933"/><rect y="6.67" width="30" height="6.66" fill="#fff"/><rect y="13.33" width="30" height="6.67" fill="#138808"/><circle cx="15" cy="10" r="2.6" fill="none" stroke="#000080" stroke-width=".7"/><circle cx="15" cy="10" r=".6" fill="#000080"/></svg>India</b></figcaption>
       </figure>
-      <span class="ns-sep" aria-hidden="true"></span>
+      <span class="ns-sep s2" aria-hidden="true"></span>
       <div class="ns-wx" aria-live="polite">
         <span class="wx-anim" id="wxAnim" aria-hidden="true"></span>
-        <span class="ns-wx-text"><span class="ns-temp"><span id="wxT">--</span>°C</span><b id="wxSky">Loading weather…</b></span>
-        <span class="ns-wx-more" id="wxMore"></span>
+        <span class="ns-wx-body">
+          <span class="ns-wx-text"><span class="ns-temp"><span id="wxT">--</span>°C</span><b id="wxSky">Loading weather…</b></span>
+          <span class="ns-wx-more" id="wxMore"></span>
+        </span>
       </div>
     </div>
   </div>
   <style>
     .now-wrap { position: relative; z-index: 2; margin-top: -26px; margin-bottom: 30px; }
-    .now-strip { position: relative; overflow: hidden; isolation: isolate; display: flex; align-items: center; gap: 16px; width: fit-content; max-width: 100%; padding: 9px 20px 9px 14px; border-radius: 20px; color: #fff; box-shadow: 0 14px 34px rgba(10,22,40,.22); background: var(--sky, linear-gradient(120deg,#060b1f,#111c45 55%,#2a2160)); transition: background 2s ease; }
+    .now-strip { position: relative; overflow: hidden; isolation: isolate; display: flex; align-items: center; gap: 20px; width: fit-content; max-width: 100%; padding: 14px 24px 14px 18px; border-radius: 24px; color: #fff; box-shadow: 0 14px 34px rgba(10,22,40,.22); background: var(--sky, linear-gradient(120deg,#060b1f,#111c45 55%,#2a2160)); transition: background 2s ease; }
     .now-strip[data-phase="dawn"]  { --sky: linear-gradient(120deg,#2b2f6b 0%,#a8558f 55%,#f2a65a 100%); }
     .now-strip[data-phase="day"]   { --sky: linear-gradient(120deg,#0d4f9c 0%,#2f80d1 55%,#69b8ee 100%); }
     .now-strip[data-phase="dusk"]  { --sky: linear-gradient(120deg,#1d2257 0%,#7a3b7d 55%,#e8774a 100%); }
@@ -266,28 +268,30 @@
     .ns-live i { width: 7px; height: 7px; border-radius: 50%; background: #3ee28a; animation: nowPing 2s infinite; }
     @keyframes nowPing { 0% { box-shadow: 0 0 0 0 rgba(62,226,138,.7); } 70%, 100% { box-shadow: 0 0 0 8px rgba(62,226,138,0); } }
     .ns-clock { margin: 0; display: flex; align-items: center; gap: 9px; flex: 0 0 auto; }
-    .ns-clock svg { width: 36px; height: 36px; filter: drop-shadow(0 3px 6px rgba(0,0,0,.3)); }
+    .ns-clock > svg { width: 50px; height: 50px; filter: drop-shadow(0 3px 6px rgba(0,0,0,.3)); }
     .ns-clock .face { fill: rgba(255,255,255,.96); }
     .ns-clock .tick { stroke: #0a1628; stroke-linecap: round; }
     .ns-clock .hand { stroke: #0a1628; stroke-linecap: round; }
     .ns-clock .sec { stroke: #e8743b; stroke-width: 2.5; }
     .ns-clock .pin { fill: #e8743b; }
     .ns-clock figcaption { display: flex; flex-direction: column; line-height: 1.15; }
-    .ns-clock .dig { font-family: var(--serif); font-size: 1.12rem; font-weight: 900; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .ns-clock .dig { font-family: var(--serif); font-size: 1.45rem; font-weight: 900; font-variant-numeric: tabular-nums; white-space: nowrap; }
     .ns-clock .dig .s { opacity: .55; font-size: .72em; }
     .ns-clock .dig small { font-size: .62em; font-weight: 700; opacity: .8; margin-left: 2px; }
-    .ns-clock b { font-size: .66rem; font-weight: 700; letter-spacing: .04em; color: rgba(255,255,255,.75); white-space: nowrap; }
+    .ns-clock b { display: inline-flex; align-items: center; gap: 6px; margin-top: 3px; font-size: .74rem; font-weight: 700; letter-spacing: .04em; color: rgba(255,255,255,.8); white-space: nowrap; }
+    .flag { width: 18px; height: 12px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(255,255,255,.35); flex: 0 0 auto; }
     .ns-sep { width: 1px; align-self: stretch; margin: 4px 0; background: rgba(255,255,255,.2); }
-    .ns-wx { display: flex; align-items: center; gap: 10px; flex: 0 0 auto; }
-    .ns-wx-text { display: flex; flex-direction: column; line-height: 1.15; }
-    .ns-temp { font-family: var(--serif); font-size: 1.12rem; font-weight: 900; white-space: nowrap; }
-    .ns-wx-text b { font-size: .66rem; font-weight: 700; color: rgba(255,255,255,.75); white-space: nowrap; }
-    .ns-wx-more { display: flex; gap: 6px; }
-    .ns-wx-more span { font-size: .72rem; font-weight: 600; padding: 4px 9px; border-radius: 999px; background: rgba(255,255,255,.13); border: 1px solid rgba(255,255,255,.16); white-space: nowrap; }
+    .ns-wx { display: flex; align-items: center; gap: 12px; flex: 0 0 auto; }
+    .ns-wx-body { display: flex; flex-direction: column; gap: 7px; }
+    .ns-wx-text { display: flex; align-items: baseline; gap: 10px; line-height: 1.1; }
+    .ns-temp { font-family: var(--serif); font-size: 1.75rem; font-weight: 900; white-space: nowrap; }
+    .ns-wx-text b { font-size: .85rem; font-weight: 700; color: rgba(255,255,255,.85); white-space: nowrap; }
+    .ns-wx-more { display: flex; flex-wrap: wrap; gap: 6px; }
+    .ns-wx-more span { font-size: .74rem; font-weight: 600; padding: 4px 9px; border-radius: 999px; background: rgba(255,255,255,.13); border: 1px solid rgba(255,255,255,.16); white-space: nowrap; }
     .ns-wx-more span:empty { display: none; }
     /* Animated weather icon (drawn at 92px, shown small) */
-    .wx-anim { position: relative; width: 92px; height: 92px; flex: 0 0 auto; zoom: .42; }
-    @supports not (zoom: 1) { .wx-anim { transform: scale(.42); margin: -27px; } }
+    .wx-anim { position: relative; width: 92px; height: 92px; flex: 0 0 auto; zoom: .62; }
+    @supports not (zoom: 1) { .wx-anim { transform: scale(.62); margin: -17px; } }
     .wx-anim > * { position: absolute; }
     .wx-sun { width: 50px; height: 50px; left: 21px; top: 21px; border-radius: 50%; background: radial-gradient(circle at 40% 40%, #fff6c4, #ffc23d 60%, #ff9f1a); box-shadow: 0 0 30px rgba(255,194,61,.8); }
     .wx-sun::before { content: ''; position: absolute; inset: -16px; border-radius: 50%; background: repeating-conic-gradient(from 0deg, rgba(255,214,102,.95) 0 6deg, transparent 6deg 30deg); -webkit-mask: radial-gradient(circle, transparent 33px, #000 34px, #000 40px, transparent 41px); mask: radial-gradient(circle, transparent 33px, #000 34px, #000 40px, transparent 41px); animation: wxSpin 18s linear infinite; }
@@ -305,21 +309,23 @@
     @keyframes wxDrift { 50% { transform: translateX(6px); } }
     @keyframes wxRain { from { transform: translateY(-6px); opacity: 0; } 30% { opacity: 1; } to { transform: translateY(16px); opacity: 0; } }
     @keyframes wxFlash { 0%, 86%, 100% { opacity: 0; } 88%, 94% { opacity: 1; } 91% { opacity: .3; } }
-    @media (max-width: 1100px) { .ns-wx-more span:nth-child(n+2) { display: none; } }
-    @media (max-width: 760px) { .ns-wx-more { display: none; } }
+    @media (max-width: 1100px) { .ns-wx-more span:nth-child(n+4) { display: none; } }
+    @media (max-width: 860px) { .now-strip { flex-wrap: wrap; row-gap: 12px; } .ns-wx { flex-basis: 100%; } .ns-sep.s2 { display: none; } .ns-wx-more span:nth-child(n+4) { display: inline-block; } }
     @media (max-width: 560px) {
       .now-wrap { margin-top: -14px; margin-bottom: 18px; }
-      .ns-wx-text b { display: none; }
-      .now-strip { width: 100%; justify-content: space-between; gap: 8px; padding: 8px 12px; border-radius: 16px; }
+      .now-strip { width: 100%; gap: 10px 12px; padding: 12px 14px; border-radius: 18px; justify-content: space-between; }
       .ns-live { display: none; }
-      .ns-clock { gap: 7px; }
-      .ns-clock svg { width: 28px; height: 28px; }
-      .ns-clock .dig, .ns-temp { font-size: .98rem; }
+      .ns-clock { gap: 8px; }
+      .ns-clock > svg { width: 38px; height: 38px; }
+      .ns-clock .dig { font-size: 1.15rem; }
       .ns-clock .dig .s { display: none; }
-      .ns-wx { gap: 4px; }
-      .wx-anim { zoom: .36; }
+      .ns-wx { border-top: 1px solid rgba(255,255,255,.18); padding-top: 10px; gap: 8px; }
+      .ns-temp { font-size: 1.45rem; }
+      .ns-wx-more span { font-size: .7rem; padding: 3px 8px; }
+      .ns-wx-more span:nth-child(4) { display: none; }
+      .wx-anim { zoom: .5; }
     }
-    @media (max-width: 360px) { .ns-clock svg { display: none; } }
+    @media (max-width: 360px) { .ns-clock > svg { width: 30px; height: 30px; } .ns-clock .dig { font-size: 1.02rem; } }
     @media (prefers-reduced-motion: reduce) { .now-strip *, .now-strip *::before, .now-strip *::after { animation: none !important; } }
   </style>
   <script>
@@ -401,14 +407,18 @@
       icon(k, c.is_day === 1);
       countUp(document.getElementById('wxT'), Math.round(c.temperature_2m));
       document.getElementById('wxSky').textContent = WORDS[k] + ' · feels ' + Math.round(c.apparent_temperature) + '°';
-      var rain = dy.precipitation_probability_max && dy.precipitation_probability_max[0];
-      document.getElementById('wxMore').innerHTML = '<span>↑ ' + Math.round(dy.temperature_2m_max[0]) + '° ↓ ' + Math.round(dy.temperature_2m_min[0]) + '°</span>' +
-        (rain != null ? '<span>☔ ' + rain + '% rain</span>' : '') + '<span>💧 ' + Math.round(c.relative_humidity_2m) + '%</span>';
+      var rain = dy.precipitation_probability_max && dy.precipitation_probability_max[0], uv = dy.uv_index_max && dy.uv_index_max[0];
+      var chips = ['↑ ' + Math.round(dy.temperature_2m_max[0]) + '° ↓ ' + Math.round(dy.temperature_2m_min[0]) + '°'];
+      if (rain != null) chips.push('☔ ' + rain + '% rain');
+      chips.push('💧 ' + Math.round(c.relative_humidity_2m) + '% humidity');
+      if (c.wind_speed_10m != null) chips.push('🍃 ' + Math.round(c.wind_speed_10m) + ' km/h');
+      if (uv != null) chips.push('☀ UV ' + Math.round(uv) + (uv >= 11 ? ' extreme' : uv >= 8 ? ' very high' : uv >= 6 ? ' high' : ''));
+      document.getElementById('wxMore').innerHTML = chips.map(function (x) { return '<span>' + x + '</span>'; }).join('');
       size();
     }
-    var KEY = 'wx3:sg-home', url = 'https://api.open-meteo.com/v1/forecast?latitude=1.2897&longitude=103.8501' +
-      '&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,is_day' +
-      '&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunrise,sunset&timezone=Asia%2FSingapore&forecast_days=1';
+    var KEY = 'wx4:sg-home', url = 'https://api.open-meteo.com/v1/forecast?latitude=1.2897&longitude=103.8501' +
+      '&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,is_day,wind_speed_10m' +
+      '&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunrise,sunset,uv_index_max&timezone=Asia%2FSingapore&forecast_days=1';
     var cached = null; try { cached = JSON.parse(sessionStorage.getItem(KEY)); } catch (e) {}
     if (cached && Date.now() - cached.t < 15 * 60e3) return show(cached.v);
     if (!window.fetch) return;
