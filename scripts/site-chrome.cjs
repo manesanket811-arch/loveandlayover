@@ -64,7 +64,7 @@ ${WA_CHANNEL ? `        <a href="${WA_CHANNEL}" target="_blank" rel="noopener" d
 </footer>`;
 }
 
-const HEAD_LINKS = '<link rel="stylesheet" href="/css/chrome.css?v=5">';
+const HEAD_LINKS = '<link rel="stylesheet" href="/css/chrome.css?v=6">';
 // Self-hosted fonts (css/fonts.css). Preload the two files every page needs first.
 const FONTS = '<link rel="preload" href="/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>\n<link rel="preload" href="/fonts/fraunces-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>\n<link rel="stylesheet" href="/css/fonts.css?v=1">';
 // Matches the old Google Fonts tags (two preconnects + the stylesheet) so they can be swapped for FONTS
@@ -78,7 +78,7 @@ const GA = `<script defer src="https://www.googletagmanager.com/gtag/js?id=${GA_
   gtag('js', new Date());
   gtag('config', '${GA_ID}');
 </script>`;
-const SCRIPT = '<script src="/js/site.js?v=5"></script>\n<script src="/js/datadog.js" defer></script>';
+const SCRIPT = '<script src="/js/site.js?v=6"></script>\n<script src="/js/datadog.js" defer></script>';
 
 module.exports = { header, footer, HEAD_LINKS, SCRIPT, WHATSAPP, WA_CHANNEL, waChannelBtn, GA, GA_ID, FONTS, GOOGLE_FONTS };
 
