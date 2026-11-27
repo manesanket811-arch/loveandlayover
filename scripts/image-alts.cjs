@@ -96,7 +96,6 @@ const FLAGS = {
 const OTHER = {
   '/public/images/brand/logo-mark.svg': 'Love and Layovers logo',
   '/public/images/brand/logo-mark-light.svg': 'Love and Layovers logo',
-  '/assets/self/couple-hero.webp': 'Sanket and Nikita, travel and lifestyle creators in Singapore',
   '/assets/self/nikita-about.webp': 'Nikita',
   '/assets/self/avatar.webp': 'Sanket and Nikita',
   '/public/images/banner-1200.webp': 'Love and Layovers: Singapore travel and lifestyle',
