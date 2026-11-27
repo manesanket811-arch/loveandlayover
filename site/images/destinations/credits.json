@@ -638,5 +638,13 @@
     "license": "CC0",
     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "query": "intitle:\"Portuguese egg tart\""
+  },
+  "bintan-hero": {
+    "title": "Plaza Lagoi Bintan.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Plaza_Lagoi_Bintan.jpg",
+    "artist": "Jpatokal",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "query": "intitle:\"Lagoi Bintan\""
   }
 }

@@ -28,6 +28,7 @@ const WANT = {
   'india-food': ['Thali', 'Indian cuisine', 'Masala dosa'],
   'indonesia-hero': ['Borobudur', 'Mount Bromo', 'Prambanan'],
   'indonesia-food': ['Nasi goreng', 'Rendang', 'Gado-gado'],
+  'bintan-hero': ['Bintan Island beach', 'Lagoi Bintan', 'Bintan Island', 'Bintan Resorts'],
   'bali-hero': ['Tegallalang rice terrace', 'Pura Ulun Danu Bratan', 'Bali rice terraces'],
   'bali-food': ['Babi guling', 'Balinese cuisine', 'Nasi campur'],
   'turkey-hero': ['Göreme', 'Cappadocia', 'Hagia Sophia'],

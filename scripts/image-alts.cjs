@@ -28,6 +28,7 @@ const PHOTOS = {
   'india-hero': 'The Taj Mahal in Agra, India',
   'india-food': 'A spicy anda (egg) curry',
   'indonesia-hero': 'Mount Bromo volcano at sunrise in Java, Indonesia',
+  'bintan-hero': 'Crystal Pavilion at Plaza Lagoi, Bintan',
   'indonesia-food': 'Indonesian gado-gado with peanut sauce',
   'italy-hero': 'The Colosseum in Rome',
   'italy-food': 'A vegetarian pizza',

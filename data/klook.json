@@ -151,6 +151,16 @@
       "name": "Macau Tower observation deck",
       "blurb": "Views from levels 58 and 61; the bungy jump is booked separately.",
       "url": "https://www.klook.com/activity/506-macau-tower-macau/"
+    },
+    "bintan-ferry": {
+      "name": "Bintan ferry tickets",
+      "blurb": "Bintan Resort Ferries from Tanah Merah to Bandar Bentan Telani. Book ahead for weekends.",
+      "url": "https://www.klook.com/"
+    },
+    "bintan-spa": {
+      "name": "Full-body massage at D'Bintan Salon Day Spa",
+      "blurb": "The Lagoi spa we loved. A perfect way to end a Bintan weekend.",
+      "url": "https://www.klook.com/activity/115385-full-body-massage-at-d-bintan-salon-day-spa/"
     }
   },
   "guides": {
@@ -373,6 +383,13 @@
         "jp-usj"
       ],
       "before": "<h2 id=\"ways-to-spend-less\""
+    },
+    "bintan-trip-from-singapore": {
+      "items": [
+        "bintan-ferry",
+        "bintan-spa"
+      ],
+      "before": "<h2 id=\"a-2-day-bintan-itinerary\""
     }
   },
   "home": [

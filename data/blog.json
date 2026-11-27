@@ -63,6 +63,7 @@
       "title": "More trips from India",
       "intro": "Japan, Thailand, Vietnam, Bali, Dubai and the rest of Asia, with costs in rupees.",
       "posts": [
+        "/blog/bintan-trip-from-singapore.html",
         "/blog/japan-10-day-itinerary.html",
         "/blog/japan-5-day-itinerary.html",
         "/blog/japan-trip-cost-from-india.html",
@@ -629,6 +630,18 @@
       "desc": "EP eligibility for 2026 and 2027, take-home pay, family passes and savings, in S$ and rupees.",
       "meta": "Interactive",
       "date": "Nov 2026"
+    },
+    "/blog/bintan-trip-from-singapore.html": {
+      "img": "/images/destinations/thumbs/bintan-hero.webp",
+      "alt": "Crystal Pavilion at Plaza Lagoi, Bintan",
+      "chips": [
+        "New",
+        "Weekend trip"
+      ],
+      "title": "Bintan Trip from Singapore: Our 2-Day Guide",
+      "desc": "Ferry, visa for Indians, Lagoi stay, local taxi, places and total cost.",
+      "meta": "9 min read",
+      "date": "Nov 2026"
     }
   },
   "featured": [
@@ -638,6 +651,7 @@
     "/blog/singapore-first-timer-guide.html"
   ],
   "trending": [
-    "/blog/malaysia-visa-for-indians-2027.html"
+    "/blog/malaysia-visa-for-indians-2027.html",
+    "/blog/bintan-trip-from-singapore.html"
   ]
 }
