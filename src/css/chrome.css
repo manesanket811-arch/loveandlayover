@@ -215,5 +215,7 @@ img.m-fade.loaded { opacity: 1; }
   img.m-fade { opacity: 1; transition: none; }
   .btn::after, a.site-cta::after { display: none; }
 }
-.logo-wall.is-marquee { display: block !important; grid-template-columns: none !important; }
+.logo-wall.is-marquee, .partners.is-marquee { display: block !important; grid-template-columns: none !important; }
+.lm-track .partner { flex: 0 0 340px; }
+@media (max-width: 560px) { .lm-track .partner { flex-basis: 280px; } }
 .logo-wall.is-marquee .logo-more { display: inline-block; margin-top: 16px; padding: 10px 16px; height: auto; border-radius: 12px; }

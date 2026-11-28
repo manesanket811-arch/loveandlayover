@@ -255,13 +255,35 @@
 
   if (reduce) return;
 
+  // Partner brands: turn a grid into two rows gliding in opposite directions
+  // (homepage logo wall and the About page partner cards). Pauses on hover.
+  [['.logo-wall', '.logo-tile', '.logo-more', 7], ['.partners', '.partner', null, 9]].forEach(function (cfg) {
+    var wall = document.querySelector(cfg[0]);
+    if (!wall) return;
+    var items = [].slice.call(wall.querySelectorAll(cfg[1])), more = cfg[2] && wall.querySelector(cfg[2]);
+    if (items.length < 4) return;
+    var half = Math.ceil(items.length / 2), box = document.createElement('div');
+    box.className = 'logo-marquee';
+    [items.slice(0, half), items.slice(half)].forEach(function (set, r) {
+      var row = document.createElement('div'), track = document.createElement('div');
+      row.className = 'lm-row' + (r ? ' rev' : ''); track.className = 'lm-track';
+      track.style.setProperty('--lm-dur', (set.length * cfg[3]) + 's');
+      set.concat(set.map(function (t) { var c = t.cloneNode(true); c.setAttribute('aria-hidden', 'true'); return c; })).forEach(function (t) { track.appendChild(t); });
+      row.appendChild(track); box.appendChild(row);
+    });
+    wall.textContent = ''; wall.appendChild(box); if (more) wall.appendChild(more);
+    wall.classList.add('is-marquee');
+    // items inside the moving rows load straight away and skip the fade-in
+    [].forEach.call(box.querySelectorAll('img'), function (img) { img.loading = 'eager'; img.classList.remove('m-fade'); });
+  });
+
   // Staggered scroll reveals for common blocks below the first screen
   if ('IntersectionObserver' in window) {
     var SEL = 'main h2, main .card, main .post, main .dcard, main .mp-card, main .nitem, main .hn, main .stat, main .start-grid > a, ' +
               'main .create-mini > div, main .brief-list > li, main .cost-card, main .table-wrap, main .post-faq details, main .klook-box, main .partner, main .tile, main .step';
     var vh = window.innerHeight, seen = [], parents = [], counts = [];
     [].forEach.call(document.querySelectorAll(SEL), function (el) {
-      if (el.closest('.reveal, .m-rv, .hero, .now-strip, header, footer, nav, [data-no-motion]')) return;
+      if (el.closest('.reveal, .m-rv, .hero, .now-strip, .logo-marquee, header, footer, nav, [data-no-motion]')) return;
       if (el.getBoundingClientRect().top < vh * 0.9) return;   // already on screen: leave it alone
       var ox = getComputedStyle(el.parentNode).overflowX;
       if (ox === 'auto' || ox === 'scroll') return;            // inside a sideways swipe row: leave it alone
@@ -292,27 +314,6 @@
       });
     }, { threshold: 0.6 });
     counters.forEach(function (el) { cio.observe(el); });
-  }
-
-  // Partner logos: turn the logo grid into two gliding rows
-  var wall = document.querySelector('.logo-wall');
-  if (wall) {
-    var tiles = [].slice.call(wall.querySelectorAll('.logo-tile')), more = wall.querySelector('.logo-more');
-    if (tiles.length >= 4) {
-      var half = Math.ceil(tiles.length / 2), box = document.createElement('div');
-      box.className = 'logo-marquee';
-      [tiles.slice(0, half), tiles.slice(half)].forEach(function (set, r) {
-        var row = document.createElement('div'), track = document.createElement('div');
-        row.className = 'lm-row' + (r ? ' rev' : ''); track.className = 'lm-track';
-        track.style.setProperty('--lm-dur', (set.length * 7) + 's');
-        set.concat(set.map(function (t) { var c = t.cloneNode(true); c.setAttribute('aria-hidden', 'true'); return c; })).forEach(function (t) { track.appendChild(t); });
-        row.appendChild(track); box.appendChild(row);
-      });
-      wall.textContent = ''; wall.appendChild(box); if (more) wall.appendChild(more);
-      // logos inside the moving rows load straight away and skip the fade-in
-      [].forEach.call(box.querySelectorAll('img'), function (img) { img.loading = 'eager'; img.classList.remove('m-fade'); });
-      wall.classList.add('is-marquee');
-    }
   }
 
   if (!fine) return;
